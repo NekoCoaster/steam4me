@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+<title>Signalling Gantlet Track in MSTS - at The Steam4me Site</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Signalling Gantlet Track in MSTS</font>
+                        <br>by Yuri Sos</h2>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                             <p>The signalling of Gantlet and/or dual gauge track has not been achievable in MSTS in the past. However with the recent discovery of using speed posts to add track nodes to crossovers (see <a href="make_xover.html">Creating a Diamond Crossover complete with Track Node</a> by Jeffrey Kraus-Yao), we can now apply that thinking to both gantlet track and to dual gauge situations.</p>
+
+<p>Crossover nodes are used by MSTS signalling to control access to a track by a train in order to prevent collisions between Player and AI trains. Crossover nodes are automatically placed, being integral to special crossover track sections (e.g. default and Xtracks diamond crossing pieces) and when these track pieces are laid, two crossover nodes are installed at the same position with one crossover node per track.</p>
+
+<p>However, the track database can be manually edited to add crossover nodes and by converting track interactives (e.g. speed posts, deer hazards) placed by Route Editor (RE), the difficult part of selecting which track vector and calculating distance from start of track vector is done by Route Editor.</p>
+
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "procedure">
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">The Procedure</h2>
+			<div class="entry">
+
+                        <p>One of the disadvantages of using speedpost items to place nodes on positions other than isolated diamond crossings is that they can sometimes not jump across 2 tracks or, more frequently jump across more than two tracks: their unpredicatability in areas other than isolated diamond crossings can make placing them problematic.</p>
+
+                        <p>It's probably better to use the deer hazard as at least you can be sure of its placement.  You will need to use one deer hazard for each proposed node.</p>
+
+                        <p>Let's work through an example which should explain the process enabling you to adapt it to your own route construction.
+
+                        <p>The example I'm going to use is the bridge at Como in the <a href="../routes/Mi3.html">Main Illawarra v3 route</a>.  In Route Editor, you'll find this bridge at tile 1288+10303 (x=50, z=-200).  The line is double-track on both sides of the bridge but narrows to gantlet track over the bridge - gantlet track is where one track overlaps, but doesn't cross over another track, thus.....</p>
+
+                        <p><img src="images/gantlet_01.jpg" border="0"></p>
+
+                        <p>Here's the area in Activity Editor.....</p>
+
+                        <p><img src="images/gantlet_01a.jpg" border="2"></p>
+
+                        <p>Go into Route Editor, click Object Selector (or press F5) and place your deer hazard.  Once you've placed your deer hazard, click Modify button (F2), right-click on the deer hazard and make a note of the "x" and "z" co-ordinates: this will become important later.</p>
+
+                        <p><img src="images/gantlet_02.jpg" border="0"></p>
+
+                        <p>Repeat, placing deer hazards on both lines at the beginning and end of the gantlet track, recording the co-ordinates as you go along.</p>
+
+                        <p>Here are the north-side deer hazards placed.</p>
+
+                        <p><img src="images/gantlet_03a.jpg" border="0"></p>
+
+                        <p>Here are the south-side deer hazards placed.</p>
+
+                        <p><img src="images/gantlet_03b.jpg" border="0"></p>
+
+                        <p>These are the co-ordinates I've recorded:<br></p>
+
+                        <table border=2>
+                        <tr>
+                           <td>North-side Down Mainline</td>
+                           <td>x = 129.2695, z = -48.8050</td>
+                        </tr>
+                        <tr>
+                           <td>North-side Up Mainline</td>
+                           <td>x = 126.8827, z = -47.7954</td>
+                        </tr>
+                        <tr>
+                           <td>South-side Down Mainline</td>
+                           <td>x = 113.9810, z = -375.7926</td>
+                        </tr>
+                        <tr>
+                           <td>South-side Up Mainline</td>
+                           <td>x = 116.0796, z = -375.0337</td>
+                        </tr>
+                        </table>
+
+                        <p>(For my international readers, Australian railway systems use the terms UP and DOWN to refer to the direction of central station - UP is towards the central station, DOWN is away from the central station.)</p>
+
+                        <p>What we are going to do is link North-side Down Mainline with South-side Up Mainline and North-side Up Mainline with South-side Down Mainline, thus providing the crossover linkage.</p>
+
+                        <p>Now open the tdb and tit files in a Unicode-aware editor such as <a href="context.html">ConTEXT</a> and search for <b>Hazzard</b> (sic).  You will find four items matching your four placements in RE: they will not necessarily be together.  In this route, I find Hazzard Items at TrItems 150, 151, 2848, 2849. We need to sort out which is which otherwise the nodes won't work properly.  The co-ordinates in the .tdb and .tit are close, but don't exactly match the co-ordinates as shown in the pop-up window in RE (the discrepancy is only 3 cm!).  Nevertheless, you will be able to discern which hazard belongs to which TrItem.</p>
+
+                        <p><img src="images/gantlet_04.jpg" border="0"></p>
+
+                        <p>Examining the location parameters reveals the following:</p>
+
+                        <p>North-side Down Mainline - TrItem ( 150 )
+                        <br>North-side Up   Mainline - TrItem ( 151 )</p>
+
+                        <p>South-side Up Mainline - TrItem ( 2849 )
+                        <br>South-side Down Mainline - TrItem ( 2848 )</p>
+
+                        <p>To achieve the crossover links, we will need to link 150 - 2849  and 151 - 2848: thus.....</p>
+
+                        <p><img src="images/gantlet_06.jpg" border="2"></p>
+
+                        <p>Convert the HazzardItems to Crossover Items by replacing as follows:</p>
+                        
+                        <ul>
+                           <li>Change HazzardItem to CrossoverItem : in four places in the two files (total eight changes);</p>
+                               <br>&nbsp;
+                           </li>
+                            <li>Change the "6" in the TrItemSData line to a "2": in four places in the two files (total eight changes);
+                               <br>&nbsp;
+                            </li>
+                            <li>Delete the complete line containing TrItemPData: in four places in the two files (total eight line deletions);
+                               <br>&nbsp;
+                            </li>
+                            <li>Add line CrossoverTrItemData: in four places in the two files ; the first parameter of the CrossoverTrItemData element is the TrItemId of the other pair of the crossing. The second parameter is a track shape. Choose the number of a crossing track and it will use the ClearanceDist defined for that track shape in the global tsection.dat file. Also place this track shape somewhere on your route so that Route Riter will produce a correct list of track shapes used by your route (in this example 39833 refers to an Xtracks crossover shape A1tXover11_3d.s).
+
+                               <p>Make sure that<br><font size = "-1"></p>
+                                  <ul><li>TrItem ( 150 ) has the line CrossoverTrItemData ( 2849 39833)</li>
+                                      <li>TrItem ( 151 ) has the line CrossoverTrItemData ( 2848 39833 )</li>
+                                      <li>TrItem ( 2848 ) has the line CrossoverTrItemData ( 151 39833 )</li>
+                                      <li>TrItem ( 2849 ) has the line CrossoverTrItemData ( 150 39833)</li></ul></font>
+
+                                      <p>Make sure these changes are made to BOTH the .tdb and .tit files.</p>
+                            </li>
+                         </ul>
+
+                         <p>Here's the final appearance in Activity Editor (compare it with the screenshot above) - note that you have now got four nodes (black dots) protecting the narrowed track.</p>
+
+                         <p><img src="images/gantlet_05.jpg" border="2"></p>
+
+                         <p>Save, quit and let's try out the gantlet track.</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="test">
+		</div>
+
+    <!--- end cause --->
+
+
+    <!--- sol hard --->
+
+		<div class="post">
+			<h2 class="title">Test Your Installation</h2>
+			<div class="entry">
+
+                        <p>Here I've created an activity with the Kiha as the player train starting at Como station and heading north over the bridge, the AI GP38-2s are heading southwards from Oatley Station.
+
+<p>The first image shows the view from the Kiha as it approaches the end of the bridge.  The GP38s have arrived and are waiting at the signal.
+<p><img src="images/gantlet_08.jpg" border="0">
+
+<p>The Kihas have cleared the bridge, but have not yet cleared the junction.  The signal for the GP38s remains at red.
+<p><img src="images/gantlet_09.jpg" border="0">
+
+<p>Once the Kihas have cleared the junction, the signal clears and the GP38s can now make their way across the bridge.
+<p><img src="images/gantlet_10.jpg" border="0"></p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="finis">
+		</div>
+
+    <!--- end sol hard --->
+
+    <!--- sol easy --->
+
+		<div class="post">
+			<h2 class="title">Conclusion</h2>
+			<div class="entry">
+
+                        <p>You can now protect tracks with the use of crossing nodes in situations such as gantlet track, double slips or sections of dual gauge track: this must surely be a boon to route builders building in mixed gauge areas - I can think of South Australia,  Brisbane Metro area, Switzerland and America's Colorado narrow gauge systems where this ability to run trains on both standard gauge and narrow gauge without collision will be a great enhancement.</p>
+                        
+                        <p>As I've just said, this technique can be applied to double-slips; <a href=fix_dbl_slips.html>click here</a> to read the procedure in detail.</p>
+
+                        <p>Hope this helps.</p>
+
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="#">
+		</div>
+
+    <!--- end sol easy --->
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#procedure">The Procedure</a>
+                 <br><a href="#test">Testing</a>
+                 <br><a href="#finis">Conclusion</a>
+
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 31 March 2009, 13 March 2010</center></p>
+</div>
+</body>
+</html>

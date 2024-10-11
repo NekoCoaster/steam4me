@@ -1,0 +1,206 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created on: 3/29/2007 -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <title>BEGINNERS GUIDE TO RETEXTURING MSTS LOCOMOTIVE MODELS: Page 3</title>
+  <meta name="author" content="Sean Lim aka Trackdancer">
+<link rel="StyleSheet" type="text/css" href="trackdancer.css">
+</head>
+<body>
+<!-- TITLE -->
+<div id="boxtitle">
+BEGINNERS GUIDE TO RETEXTURING MSTS LOCOMOTIVE MODELS: Page 3
+</div>
+<div id="boxmenu">
+Menu<br><br>
+<div id="menuitems">
+<a href="../index.html" style="color: #696969; text-decoration: none;font-weight: bold;">Steam4me Main Tutorial Index</a><br><br>
+<a href="main.html" style="color: #696969; text-decoration: none;font-weight: bold;">SECTION INDEX</a><br><br>
+<a href="tutorial1.html" style="color: #696969; text-decoration: none;">How to weather locomotive textures tutorial.</a><br><br>
+<a href="tutorial2a.html" style="color: #696969; text-decoration: none;">How to re-texture MSTS locomotive models - a Comprehensive Guide</a><br><br>
+<a href="tutorial3.html" style="color: #696969; text-decoration: none;">A Beginner's Guide to avoiding problems building models with TSM</a><br><br>
+<a href="tutorial4.html" style="color: #696969; text-decoration: none;">Building an Arch using TSM.</a><br><br>
+</div>
+</div>
+<!-- Validation -->		
+<img src="resources/fig/valid-html401-blue.gif" border="0" width="88" height="31" alt="Valid HTML 4.01 Transitional" style="position: absolute; left: 10px; top: 280px;">
+<!-- SideBar -->
+<div id="sidebar">
+<b>Quick Links:</b><br><br>
+<a href="tutorial2a.html#part1" class="part">Part 1 - Introduction</a><br>
+<a href="tutorial2a.html#part2" class="part">Part 2 - The project</a><br>
+<a href="tutorial2a.html#part3" class="part">Part 3 - What you will need</a><br>
+<a href="tutorial2b.html#part4" class="part">Part 4 - The subject of the repaint</a><br>
+<a href="tutorial2b.html#part5" class="part">Part 5 - Installing the SD45 model</a><br>
+<a href="tutorial2b.html#part6" class="part">Part 6 - Creating a custom SD45</a><br>
+<a href="tutorial2c.html#part7" class="part">Part 7 - Converting the ACE files</a><br>
+<a href="tutorial2d.html#part8" class="part">Part 8 - Figuring out the mapping</a><br>
+<a href="tutorial2e.html#part9" class="part">Part 9 - Color considerations</a><br>
+<a href="tutorial2e.html#part10" class="part">Part 10 - Entering RGB colors</a><br>
+<a href="tutorial2f.html#part11" class="part">Part 11 - Color sampling from a photo</a><br>
+<a href="tutorial2g.html#part12" class="part">Part 12 - Masks, layers and transparency</a><br>
+<a href="tutorial2h.html#part13" class="part">Part 13 - Painting the main hull</a><br>
+<a href="tutorial2i.html#part14" class="part">Part 14 - Rendering the details</a><br>
+<a href="tutorial2j.html#part15" class="part">Part 15 - Finishing Touches</a><br>
+</div>
+<!-- MAIN CONTENT -->
+<div id="boxcontent">
+<a name="part7"></a><div class="subtitle">PART 7 - Converting the ACE files into texture files for the purpose of repainting.</div>
+<p>James Hunt's SD45 model uses 5 texture maps. There are 6 ace files associated with the model. Using TGAtools2 convert the files to their source formats so that you may begin the process of repainting the model. It is best to save the new source texture files in the same folder as the model files until your project is completed.</p>
+
+<blockquote><div class="subtitle">Texture Conversion Tools</div>
+<ul>
+	<li>You use TGAtools2 to convert ACE files to editable texture files in the BMP or TGA formats.</li>
+	<lI>You use TGAtools2 or (preferably) MakeAceWin to convert BMP and TGA files into ACE files.</li>
+	<li>Read the directions that came with the 2 programs for instructions on usage.</li>
+</ul></blockquote>
+
+<table summary="" border="1" width="525"  cellspacing="0" cellpadding="4">
+	<tr>
+		<th width="25%" style="background-color: #DCDCDC;">Ace File:</th>
+		<th width="25%" style="background-color: #DCDCDC;">Source Format:</th>
+		<th width="50%" style="background-color: #DCDCDC;">Description:</th>
+	</tr>
+	<tr>
+		<td valign="top">chain.ace</td>
+		<td valign="top">chain.<b>tga</b></td>
+		<td valign="top">Used for the chains - this converts to a tga file with 1-bit alpha.<br><em>You do not need to alter this file.</em></td>
+	</tr>
+	<tr>
+		<td valign="top">loco.ace</td>
+		<td valign="top">loco.<b>bmp</b></td>
+		<td valign="top">Used for the details display within the MSTS interface</td>
+	</tr>
+	<tr>
+		<td valign="top">sfsd45-1.ace</td>
+		<td valign="top">sfsd45-1.<b>bmp</b></td>
+		<td valign="top">Used for main hull textures</td>
+	</tr>
+	<tr>
+		<td valign="top">sfsd45-2.ace</td>
+		<td valign="top">sfsd45-2.<b>bmp</b></td>
+		<td valign="top">Used for main hull textures</td>
+	</tr>
+	<tr>
+		<td valign="top">sfsd45-3.ace</td>
+		<td valign="top">sfsd45-3.<b>bmp</b></td>
+		<td valign="top">Used for underchassis and details</td>
+	</tr>
+	<tr>
+		<td valign="top">windows.ace</td>
+		<td valign="top">windows.<b>tga</b></td>
+		<td valign="top">Used for the glass on the cab - this converts to a tga file with 8-bit alpha.<br><em>You do not need to alter this file.</em></td>
+	</tr>	
+</table>
+
+<br><br>
+
+<div style="text-align: center"><img src="resources/fig/tutor01.jpg" border="0" width="480" height="160" alt="The SD45 model's 3 main texture maps"></div><br><br>
+
+<div class="subtitle">Alpha Channels</div>
+<p>Alpha channels are special mask channels that can be embedded into TGA format graphic files. The alpha channel is used to determine if the areas masked are transparent or translucent. It is important to understand the difference between these two types of TGA files. If you are familiar with the graphic formats used in MSTS move on with this tutorial, otherwise you should refer to the <a href="reference1.html">Graphics and Materials Reference Page</a> for a quick primer.</p>
+
+<div class="subtitle">ACE Files</div>
+<p>Ace-files are unique to MSTS and are used for all the graphics associated with the simulator. Ace-files cannot be edited directly. They must be converted back to their source format, either a BMP or a TGA. When converting from TGAs or BMPs to ACE format, refer to the following chart for guidelines. The chart assumes that you are using MakeAceWin.</p>
+
+<table summary="" border="1" width="525"  cellspacing="0" cellpadding="4">
+	<tr>
+		<th width="20%" style="background-color: #DCDCDC;">Source:</th>
+		<th width="20%" style="background-color: #DCDCDC;">Compression:</th>
+		<th width="20%" style="background-color: #DCDCDC;">Intended Use:</th>
+		<th width="40%" style="background-color: #DCDCDC;">Notes:</th>
+	</tr>
+	<tr>
+		<td valign="top">BMP</td>
+		<td valign="top">Zlib</td>
+		<td valign="top">Trains</td>
+		<td valign="top">Always compress the ace-files. </td>
+	</tr>
+	<tr>
+		<td valign="top">BMP</td>
+		<td valign="top">Zlib</td>
+		<td valign="top">Close Scenery</td>
+		<td valign="top">Always compress the ace-files.</td>
+	</tr>
+	<tr>
+		<td valign="top">BMP</td>
+		<td valign="top">DXT</td>
+		<td valign="top">Far Scenery</td>
+		<td valign="top">This is the default compression used by TSM. So never let TSM convert texture files for you.</td>
+	</tr>
+	<tr>
+		<td valign="top">TGA no alpha</td>
+		<td valign="top">Zlib</td>
+		<td valign="top">Trains</td>
+		<td valign="top">Always compress the ace-files.</td>
+	</tr>
+	<tr>
+		<td valign="top">TGA no alpha</td>
+		<td valign="top">Zlib</td>
+		<td valign="top">Close Scenery</td>
+		<td valign="top">Always compress the ace-files.</td>
+	</tr>
+	<tr>
+		<td valign="top">TGA no alpha</td>
+		<td valign="top">DXT</td>
+		<td valign="top">Far Scenery</td>
+		<td valign="top">This is the default compression used by TSM. So never let TSM convert texture files for you.</td>
+	</tr>
+	<tr>
+		<td valign="top">TGA 1 bit alpha</td>
+		<td valign="top">Zlib</td>
+		<td valign="top">Trains</td>
+		<td valign="top">check alpha is 1 bit ... box</td>
+	</tr>
+	<tr>
+		<td valign="top">TGA 1 bit alpha</td>
+		<td valign="top">Zlib</td>
+		<td valign="top">Close Scenery</td>
+		<td valign="top">check alpha is 1 bit ... box</td>
+	</tr>
+	<tr>
+		<td valign="top">TGA 1 bit alpha</td>
+		<td valign="top">DXT</td>
+		<td valign="top">Far Scenery</td>
+		<td valign="top">check alpha is 1 bit ... box</td>
+	</tr>
+	<tr>
+		<td valign="top">TGA 8 bit alpha</td>
+		<td valign="top">Zlib</td>
+		<td valign="top">Trains</td>
+		<td valign="top">uncheck alpha is 1 bit ... box</td>
+	</tr>
+	<tr>
+		<td valign="top">TGA 8 bit alpha</td>
+		<td valign="top">Zlib</td>
+		<td valign="top">Close Scenery</td>
+		<td valign="top">uncheck alpha is 1 bit ... box</td>
+	</tr>
+	<tr>
+		<td valign="top">TGA 8 bit alpha</td>
+		<td valign="top">DXT</td>
+		<td valign="top">Far Scenery</td>
+		<td valign="top">uncheck alpha is 1 bit ... box</td>
+	</tr>
+	<tr>
+		<th valign="top" style="background-color: #DCDCDC;">Rule of Thumb #1:</th>
+		<td valign="top" colspan="3">Zlib compression should be your default setting. Always compress your ACE-files.</td>
+	</tr>
+	<tr>
+		<th valign="top" style="background-color: #DCDCDC;">Rule of Thumb #2:</th>
+		<td valign="top" colspan="3">DXT compression adversely affects the finish quality of textures in MSTS, but is very efficient and files sizes are minimal. Reserve this compression type for distant scenery objects, trees and vegetation where sharpness of imagery is not a big consideration.</td>
+	</tr>
+	<tr>
+		<th valign="top" style="background-color: #DCDCDC;">Rule of Thumb #3:</th>
+		<td valign="top" colspan="3">"Do not use compression" is reserved for <b>very rare</b> instances where details are so fine that compressing the texture will degrade the final results.</td>
+	</tr>
+</table>
+<br><br>
+[ <a href="#top">Top of Page</a> ]&nbsp;[ <a href="tutorial2b.html">Prev</a> ]&nbsp;[ <a href="tutorial2d.html">Next</a> ]
+<!-- FOOTER -->
+<hr>
+<p class="small">Copyrights © 2004-2007, Sean Lim. All Rights Reserved. Hosted courtesy of steam4me with permission.</p>
+</div>			
+</body>
+</html>

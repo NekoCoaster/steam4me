@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>Sound Source Placement Error Causes MSTS to Crash - at The Steam4me Site</title>
+   
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Sound Source Placement Error Causes MSTS to Crash</font>
+                        <br>by Lukas A Lusser ("Swissie")</h2>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                             <p>.WS files (in the Route\World folder that contain values for the x- and z- coordinates in the Position line that are outside the range -1024 to +1024 will cause the simulation to crash without warning.</p>
+
+                             <h3>Introduction</h3>
+
+                             <p>Lately I accidentally noticed a bug in MSTS Route Building which I have never seen mentioned here before. First, I was just mildly amused about seeing yet another bug - until I noticed I might well have stumbled across one of the main culprits of sudden and unexplained crashes in the sim and RE.</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "detail">
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- first --->
+
+		<div class="post">
+			<h2 class="title">The Detail</h2>
+			<div class="entry">
+
+                        <p>When I wanted to equip the sidings on one of the narrow gauge routes with SoundSources, i.e. ambient sounds you hear in the outside views, I got a bit lazy and just hovered over one of the tiles, and pointed my mouse as far as it would go to place SoundSources along the track, both on the actual world file (tile) I was hovering over, and on the adjacent tiles.</p>
+
+                        <p>When I accidentally right-clicked my mouse, the properties tab of the SoundSource I had just placed showed up, and one of the figures in the window for the coordinates caught my eyes:</p>
+                        <p><img src="images/swissies_sound_01.jpg" alt=""></p>
+
+                        <p>Now we know that while the y-coordinate gives you the elevation of an object above sea level, the x- and z-coordinates give you the location of an object in relation to the tile it is placed on. With tiles being 2048x2048 metres in size, an x and z coordinate can range anywhere between -1024 and +1024 metres. However, I see an illegal value of 1074.219 for my sound source.</p>
+                        <p>The reason is fairly obvious when I turn on the terrain grid, with the blue line condfirming my assumption that the marked SoundSource is actually on an adjacent tile. Namely, as I am hovering over tile w-012322+014157.w, the SoundSource is on w-012323+014157.w.</p>
+
+                        <p><img src="images/swissies_sound_02.jpg"" alt="">
+
+                        <p>Now, I have repeatedly placed simple scenery objects on either side of a tile boundary while sitting firmly on only one of the involved tiles,  and when it comes to .w file entries for scenery items, MSTS has always correctly calculated the coordinates of objects that ended up on adjacent tiles. <b>However</b> this is not the case with SoundSources, which get saved in .ws (world sound) files instead.</p>
+
+                        <p>After saving my changes (newly placed SoundSources) to the route, I still got the illegal coordinate showing up in the tab, and a quick look at the w-012323+014157.ws file told me that the SoundSource got saved - with the illegal value the x-coordinate acquired when I placed it "across the blue line".</p>
+
+                        <p><img src="images/swissies_sound_03.jpg" border=1 alt=""></p>
+
+                        <p>It then occured to me that I had probably corrupted various SoundSource entries over the past days, as I had been placing sounds in the same way (hovering over one spot and putting them as far as possible) all along the 60 miles of track. A quick look into some .ws files, and yes, I immediately found other illegal coordinates, sometimes even up in the 1400 / 1500 metre range instead of the allowed maximum of 1024 metres.</P>
+
+                        <p>It then also struck me like the proverbial bolt of lightning that over the past few days I had repeatedly crashed - both the RE and the Sim - in those areas where I had installed sounds. Incidentally, these crashes suddenly started appearing way more often than before, namely:</p>
+
+                        <ul>
+                            <li>in RE when "flying" along the line and crossing the spots where MSTS RE loads objects on the upcoming tiles ahead, and </li>
+                            <li>in the sim when using the #4 camera that pans along the train, where MSTS also started hanging, with my drive frantically grinding trying to load some object.</li>
+                        </ul>
+
+                        <p><b>Sorry to shout but: Of course the obvious is true - the principal reason for these crashes was nothing else but the illegal values in one or both of the x &amp; z coordinates of some SoundSources the sim tried in vain to load - or release from memory?</b></p>
+</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="conclusion">
+		</div>
+
+    <!--- end first --->
+
+
+    <!---  --->
+
+		<div class="post">
+			<h2 class="title">Conclusion</h2>
+			<div class="entry">
+
+                         <p>After I had manually edited all .ws files and deleted any SoundSource with an illegal value, my crashes were immediately reduced to the (much lower) levels I had before adding the sounds, and the particular problems when flying over the terrain in RE and when using the #4 camera view immediately dropped to zero!</b><br><br>After some more research in my Routes folder, and spending a few evenings going through &amp; correcting all .ws files of another route which repeatedly gave me unexplained crashes, I feel confident enough to claim:</p>
+
+                         <ol>
+                             <li>Illegal values for x and z coordinates in .ws files are a major cause for sudden MSTS crashes;<br>&nbsp;</li>
+                             <li>Fixing these files by deleting the entries with illegal values does immediately improve the stability of the route; <br>&nbsp;</li>
+                             <li>The fix for this is now incorporated into Route_Riter: you will need v6.4.76 or higher, available from <a href="../Route_Riter/index.html">the Route Riter Home Page</a>.</p>
+
+                             <p>Route Riter 6.4.76 or higher now gives you the option in "Check Route" to either use Route_Riter to fix Soundsource entries or just to notate them so that they can be fixed later using TsUtils. Route Riter 6.4.76 or higher contains a button on the TsUtils screen which runs the CVRT option in a mode which only corrects Soundsource entries.</p>
+
+                             <p>Use the TSUtil-function "Modify Route for new tsection.dat {CVRT}"  (this description is a little bit misleading as this function has more features than "only adapt for new tsection.dat").</p>
+
+                             <p>When Route Riter requests you to specify an "Original global tsection.dat"', specify the current global "tsection.dat"' (.../global/tsection.dat) s that no (unneeded) changes are made; however, changes to the soundsource-definitions are still performed.  Route Riter automatically replaces the world/sound-files with the corrected files containing the new definitions. So don't forget a Backup.</p>
+
+                             <p>Note however, that there are some instances where TsUtils can not correct the Soundsource entry so you can later run the Check Route option a second time and use RR to finally fix all of these Soundsource entries.<br>&nbsp;</li>
+
+                             <li>Whatever you do, be it manually or with a tool: Leave the entries for SoundRegions (track-related sounds) alone, as I have not seen a single SoundRegion entry with an illegal value, and as messing with these is dangerous because they are interactive objects which are referenced in the .tdb and .tit files as well!</li>
+                         </ol>
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="region">
+		</div>
+
+    <!--- end sol hard --->
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#detail">Detail</a>
+                 <br><a href="#conclusion">Conclusion</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 25 December 2006, 20 Feb 2007, 15 March 2010</center></p>
+</div>
+</body>
+</html>

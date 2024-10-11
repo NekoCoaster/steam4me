@@ -1,0 +1,1426 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+    <title>Deciphering and understanding the .SMS files in MSTS - at The Steam4me Site</title>
+
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Deciphering and understanding the .SMS files in MSTS</font></h2>
+                        <h2>by Ralf Hagen</h2>
+			            <h3>Version 1.0; 20 June 2002
+                        <br>(translated from German by Yuri Sos 10 Oct 2002)</h3>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                             <p><i><font color="#CC33CC">"Kuju Entertainment once built a Locomotive Simulator which met everyone’s wishes,&nbsp; ran stably under Windows, Linux and Solaris and had outstanding documentation.&nbsp; When Microsoft wanted to release the product, the simulator had to be adapted to the well-known "look and feel" of Microsoft.</i></p>
+
+                             <p><i>The result is what we see today in Train Simulator."</font></i></blockquote>
+
+                             <p>All jokes aside, the .SMS files are the most poorly documented configuration files in Microsoft Train Simulator (MSTS).  SMS officially means "Sound Management System", but without proper documentation these files can rather be regarded as the "S&amp;M" thing.  What follows are the parts I have been able to decipher (incomplete, I know).</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "install">
+		</div>
+
+    <!--- end end overview --->
+
+
+    <!--- end end overview --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">.SMS files</h2>
+			<div class="entry">
+
+                        <p><ul>
+                               <li><b>Locomotives:</b> there are two SMS files for each locomotive: xxxcab.sms for the sounds within the loco cab and xxxeng.sms for the sounds audible from outside the loco;</li>
+                               <li><b>Rail motors and passenger cars</b> have xxxpas.sms for the passenger view (key 5);</li>
+                               <li><b>All wagons</b> require xxxwag.sms for external sounds.</li>
+                           </ul>
+                        </p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="structure">
+		</div>
+
+    <!--- end cause --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Structure of the SMS file</h2>
+			<div class="entry">
+
+                 <h3>Header</h3>
+
+                 <p>To create an SMS file, one needs a header and an enclosure. The header is</p>
+                 
+                 <p><b><font color="#006600">SIMISA@@@@@@@@@@JINX0x1t______</b></p>
+
+                 <p><b>Tr_SMS ( )</font></b></p>
+
+                 <p>All instructions are enclosed within the brackets of Tr_SMS.</p>
+
+                 <p>You can place comments using the following commands:</font></font>
+                 <p><b><font color="#006600">Skip ( )</font></font></b></font>
+                 <p>Or</font></font>
+                 <p><b><font color="#006600">Comment ( )</font></font></b></font>
+                 <p>or</font></font>
+                 <p><b><font color="#006600">#</font></font></b></font>
+
+                 <p>Please comment your files frequently and clearly.&nbsp;  While even some of the default files are unfortunately incorrectly commented, we’re lucky nonetheless to have any comments at all.</p>
+
+                 <h3>Scalability Group (SL)</h3>
+
+                 <p>The Tr_SMS is divided into three parts, the Scalability Groups. The Keyword is thus (guess!) <b><font color="#006600">ScalabilityGroup().</font></b>
+
+                 <p>And in it all the sounds of an SL must be contained.</p>
+
+                 <p>The Scalability Groups, the three of which are SL5, 3 and 1, determine which sounds are played during which sound attitude of the TS: SL5 high, SL3 medium and SL1 low.</p>
+
+                 <p>For the sake of clarity place comments describing the Streams contained in a Scalablity Group BEFORE the Scalability Groups themselves.&nbsp; A good series of comments of an SL looks like this:</p>
+
+                 <p><b><font color="#006600">Skip ( ** SL 5 sounds&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;** )
+
+                 <br>Skip ( **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- One One shot Steam audio stream&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;** )
+                 
+                 <br>Skip ( ** - Two looping audio streams, playing an pitch shifting loops by Speed {wheel rot} **)
+
+                 <br>Skip ( **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- One Whistle audio stream&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;** )
+
+                 <br>Skip ( **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- One Bell Toggle audio stream&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&&bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;** )
+
+                 <br>Skip ( **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- One Injector 1 audio stream&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;** )
+
+                 <br>Skip ( **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- One Injector 2 audio stream&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;** )
+
+                 <br>Skip ( **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- One Sander audio stream&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;** )
+
+                 <br>Skip ( **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- One TBrake audio stream&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;** )
+
+                 <br>Skip ( **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- One Water Trough Loop audio stream&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;** )
+
+                 <br>Skip ( **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- One Fire box Loop audio stream&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;** )
+
+                 <br>Skip ( **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- One Fire box shovelling stream&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;** )
+
+                 <br>Skip ( **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- One Control audio stream with individual Control sounds&nbsp;&nbsp; **)
+
+                 <br>Skip ( **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- One Coupling audio stream&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**)</font</b></p>
+
+                 <p>These are the comments of SL5 of the G&ouml;lsdorf 380 as they should actually be written. For each Stream (s.u.) there is a Skip line in the same order as the Streams.</p>
+
+                 <p>We now still come to the SL header. The meaning of some of the entries is still unclear to me.</p>
+
+                <p>The header of a typical cab.sms file looks like this:</p>
+
+                <p><b><font color="#006600">Activation (
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CabCam ()
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Distance (100)
+                <br>&nbsp;
+
+                <br>Deactivation
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ExternalCam ()
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PassengerCam ()
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Distance (100)
+                <br>&nbsp;)
+
+                <br>Stereo ()</font></b></P>
+                
+                <p>...and an eng.sms file looks like this:</P>
+
+                <p><b><font color="#006600">Activation (
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ExternalCam ()
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Distance (1000)
+                <br>)
+
+                <br>Deactivation
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CabCam ()
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PassengerCam ()
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Distance (1000)
+                <br>)</font></b>
+
+                <p>... a pas.sms file:</p>
+
+                <p><b><font color="#006600">Activation (
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PassengerCam()
+                <br>)
+                <br>Deactivation (
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ExternalCam()
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CabCam()
+                <br>)
+                <br>Stereo()</font></b></p>
+
+                <p>...and a wag.sms file:</p>
+
+                <p><b><font color="#006600">Activation (
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ExternalCam ()
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Distance (55)
+                <br>&nbsp;)
+
+                <br>Deactivation (
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PassengerCam ()
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CabCam ()
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Distance (55)
+                <br>&nbsp;)</font></b></p>
+
+                <p>I will try to explain and document the entries; I'd welcome anyone explaining these items from a different perspective:</p>
+
+            <ul>
+                <li><font color="#CC33CC">Activation ()</font> and <font color="#CC33CC">Deactivation ()</font> indicate when the sounds can be heard in the various camera views (external, cab, passenger below);</li>
+                <li><font color="#CC33CC">ExternalCam ()</font> is the External View (Keypress 2 3 4);</li>
+                <li><font color="#CC33CC">CabCam ()</font> in the cab (Keypress 1);</li>
+                <li><font color="#CC33CC">PassengerCam ()</font> in the passenger view (Keypress 5);</li>
+            </ul>
+
+            <p>Example: to hear the crossing bells at a level crossing from inside the loco cab, you would move cabcam() from deactivation () to activation() in crossing.sms (which controls sounds at level crossings) thus (before in green, after in blue):</p>
+
+            <ul>
+                <li><b><font color="#009900">Activation (</font></font></b>
+                <br><b><font color="#009900">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ExternalCam ()</font></b></li>
+            </ul>
+            </ul>
+
+<b><font color="#009900">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Distance&nbsp;&nbsp;&nbsp; ( 100 )</font></font></b>
+<br><b><font color="#009900">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+)</font></font></b>
+<br><b><font color="#009900">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Deactivation (</font></font></b>
+<br><b><font color="#009900">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+PassengerCam ()</font></font></b>
+<br><b><font color="#009900">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+CabCam&nbsp;&nbsp; ()</font></font></b>
+<br><b><font color="#009900">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Distance&nbsp;&nbsp;&nbsp;&nbsp; ( 100 )</font></font></b>
+<br><b><font color="#009900">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+)</font></font></b></font>
+<p><b><font color="#009900">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font><font color="#3333FF">Activation (</font></font></b>
+<ul>
+<ul><b><font color="#3333FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ExternalCam ()</font></font></b></ul>
+</ul>
+<b><font color="#3333FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+CabCam&nbsp;&nbsp; ()</font></font></b>
+<br><b><font color="#3333FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Distance&nbsp;&nbsp;&nbsp; ( 100 )</font></font></b>
+<br><b><font color="#3333FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+)</font></font></b>
+<br><b><font color="#3333FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Deactivation (</font></font></b>
+<br><b><font color="#3333FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+PassengerCam ()</font></font></b>
+<br><b><font color="#3333FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Distance&nbsp;&nbsp;&nbsp;&nbsp; ( 100 )</font></font></b>
+<br><b><font color="#3333FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+)</font></font></b></ul>
+            <ul>
+                <li><font color="#CC33CC">Distance ()</font> indicates up to what distance from the car the sound is able to be heard; for example one can hear the locomotive still up to a certain distance in the external view, even if one is at the other end of the train;
+                </li>
+                <li><font color="#CC33CC">Stereo ()</font> means that the required .wav file is a stereo file. (see below .wav files). The stereo () parameter must be set thus with empty brackets. If stereo () is not set, mono files are expected.  If one reverses the files (stereo () in the .sms file and mono files or vice versa) the files will be played at the wrong speed (mono instead of stereo at half speed and stereo, if mono is expected, at double speed).  And the sound is grotesque because the conversion does not happen cleanly.
+                </li>
+            </ul>
+
+            <p>In regards to other header instructions, please run some experiments and send me the results.&nbsp; As I said, some are wild assumptions. One can however use the above headers as a template as they have originated from the 380\Sound Folder.</p>
+
+            <p>Enough of the header, now we come to the actual sounds. These are in the section entitled</p>
+
+            <h3>Streams ( )</h3>
+
+            <p>Streams() is relatively simple: place the number of streams after the bracket (similar to Lights() in an .Eng/.Wag file) and to it the individual Streams introduced by Stream().</p>
+
+            <h3>Stream ()</h3>
+
+            <p>Now things are getting interesting, at last we're getting to the actual sounds. A simple stream looks like this:</p>
+
+            <p><b><font color="#006600">Stream(
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Skip( **** Whistle sounds. **** )
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Priority( 6 )
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Triggers( 2
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;...>
+            <br>)</font></b>
+
+            <p>First a comment, a description of the sound, is placed in Skip(); in the example here the whistle of the 380. The next line indicates a priority.  I haven’t experimented with this yet, but I’d guess the higher the number the the better (a Stream with Priority(6) will override one with Priority(5)). The actual sounds are then blended in the Trigger () section.  Either/or logic applies here: one stream – one sound. If one wants to have several sounds play at the same time (horn and Bell or flowing transitions in the engine noises (PowerCruise)), one must also define several Streams.</p>
+
+            <h3>Triggers ()</h3>
+
+            <p>Same structure as Streams () and Lights (): the number of triggers followed by each individual trigger. Here there are two triggers: Discrete_Trigger and Variable_Trigger.</p>
+
+            <p>Example of Discrete_Trigger:</p>
+
+            <p><b><font color="#006600">Discrete_Trigger ( 8
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;StartLoopRelease ( 1 File( "a380_whistle1.wav" -1
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SelectionMethod ( SequentialSelection )
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)
+            <br>)
+            <br>Discrete_Trigger ( 9
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ReleaseLoopReleaseWithJump ()
+            <br>)</font></b>
+
+            <p>Discrete_Trigger requires an event in order to be released. These events are numbered. A table is in the <a href="#appendix">appendix</a> of this document. The methods to play back a sound will be clarified below.&nbsp; In the example, the first entry does becomes something if the horn is actuated (Discrete_Trigger 8), and the second does something else when the horn is released (Discrete_Trigger 9).</p>
+
+            <p>Simple, yes? Well then, let’s move onto more complicated issues.</p>
+
+            <h3>Variable_Trigger und Initial_Trigger</h3>
+
+            <p>The relevant section in the 380cab.sms looks like this:</p>
+
+<p><b><font color="#006600">Triggers ( 3</font></font></b>
+<br><b><font color="#006600">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Initial_Trigger (</font></font></b>
+<br><b><font color="#006600">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+StartLoop (</font></font></b>
+<br><b><font color="#006600">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1 File ( "a380_power_cruise0.wav" -1 )</font></font></b>
+<br><b><font color="#006600">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SelectionMethod ( SequentialSelection )</font></font></b>
+<br><b><font color="#006600">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+)</font></font></b>
+<br><b><font color="#006600">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+)</font></font></b>
+<br><b><font color="#006600">&nbsp; Variable_Trigger
+(</font></font></b>
+<br><b><font color="#006600">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Speed_Inc_Past 2.0</font></font></b>
+<br><b><font color="#006600">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ReleaseLoopRelease ()</font></font></b>
+<br><b><font color="#006600">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+)</font></font></b>
+<br><b><font color="#006600">&nbsp; Variable_Trigger
+(</font></font></b>
+<br><b><font color="#006600">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Speed_Dec_Past 2.0</font></font></b>
+<br><b><font color="#006600">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+StartLoop ( 1 File ( "a380_power_cruise0.wav" -1 )</font></font></b>
+<br><b><font color="#006600">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SelectionMethod ( SequentialSelection )</font></font></b>
+<br><b><font color="#006600">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+)</font></font></b>
+<br><b><font color="#006600">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+)</font></font></b>
+<br><b><font color="#006600">)</font></font></b>
+<br><b><font color="#006600">VolumeCurve (</font></font></b>
+<br><b><font color="#006600">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SpeedControlled</font></font></b>
+<br><b><font color="#006600">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+CurvePoints ( 4</font></font></b>
+<br><b><font color="#006600">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.0, 0.25</font></font></b>
+<br><b><font color="#006600">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.4, 0.2</font></font></b>
+<br><b><font color="#006600">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1.6, 0.1</font></font></b>
+<br><b><font color="#006600">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2.0, 0.0</font></font></b>
+<br><b><font color="#006600">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+)</font></font></b>
+<br><b><font color="#006600">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Granularity ( 0.01 )</font></font></b>
+<br><b><font color="#006600">)</font></font></b></font>
+
+            <p>Anyone still with me? Great!</p>
+
+            <p>First of all we have here an</p>
+
+            <p><b><font color="#CC33CC">Initial_Trigger:</font></b>&nbsp; this is quite simple to explain. All other triggers are released by events.&nbsp; An Initial_Trigger becomes active without an associated event.&nbsp;&nbsp; Undisturbed, the resultant sound is repeated over and over.</font></font>
+
+            <p>A <b><font color="#CC33CC">Variable_Trigger</font></b> needs an event to activate it, this is however certainly a variable.</font>
+
+            <br>Details of variables follow below.</font></font>
+
+            <p>Let’s content ourselves with this one variable:
+
+<b>Speed</b> is obvious – the speed of trains in MSTS. For the Variable_Trigger there are two other events apart from the variables: Inc_Past and Dec_Past, Inc for Increase and Dec for Decrease Past means "as soon as is over/under".</p>
+
+            <p>Thus In the example above: Speed_Inc_Past 2.0  means "as soon as the rising speed is or climbs over 2.0, do something".  Likewise Speed_Dec_Past 2.0 means  "as soon as the falling speed here is less than 2.0, do something else".</p>
+
+            <p><b><font color="#CC33CC">Random_Trigger </font></b>is released intermittently, for example it is used in steam locomotives in generating the "Shoveling sound".&nbsp; I have not yet investigated this further.</p>
+
+            <p><b><font color="#CC33CC">Dist_Travelled_Trigger</font></b>&nbsp; depends on the distance travelled, probably in meters or feet. Is used in wag.sms, may well be the reason why some trains still have movement sounds even while stationary. Here I have not yet investigated this extensively.</p>
+
+            <!--- variables --->
+
+            <h3>Variables</h3>
+
+            <ul>
+                <li><b><font color="#CC33CC">Speed</font></b> is obvious, the speed of the train in MSTS in metres/second as we have already determined above;
+                </li>
+
+                <li><b><font color="#CC33CC">Distance</font></b> may well be the distance to the train in meters: I haven't experimented here yet;
+                </li>
+
+                <li><b><font color="#CC33CC">Variable1</font></b> should be have been useful, but unfortunately appears of no use at all.&nbsp; It is the wheel rotation in m/s and depends on the diameter of the wheel and also almost certainly the number of animation frames in the model: I have not yet deciphered the format of this variable;
+                </li>
+
+                <li><b><font color="#CC33CC">Variable2</font></b> is a measure for the number of revolutions of the train and/or its load resulting in very "remarkable" behaviour in Steam locos.&nbsp; Hence it also remains unused;
+                </li>
+
+                <li><b><font color="#CC33CC">Variable3</font></b> in steam locos is certainly the “Shovel Rate” in x100 pound per hour (ie 1 = 100 pounds coal shovelled).&nbsp; In Diesels it is a measure for the dynamic brake and goes from 0.0 to 1.0,&nbsp; 0.0 being off,&nbsp; 0.5 50% and 1.0 is 100% applied.
+                </li>
+            </ul>
+
+            <!--- curves --->
+
+            <h3>Curves</h3>
+            
+            <p>As you can see in the example with Variable_Triggers, the Curve is placed in the Stream() section directly after the Triggers ().&nbsp; There are two Curves: VolumeCurve and FrequencyCurve.&nbsp; Here we venture some little way into that wide open field of acoustics: a sound consists of an air oscillation and has two characteristics, frequency and amplitude.&nbsp; And to complicate matters, distorted noise results from mixture of different oscillations. In MSTS we need both sizes as well: the frequency provides the pitch (eg standard tuning tone A is. 440 cycles/oscillations per second); the amplitude indicates the volume.&nbsp; VolumeCurve and FrequencyCurve are provided to enable you change these two characteristics.</p>
+
+            <p>Each of these curves can be dependent on one of the two variables (x-axis): Speedcontrolled or Variable2Controlled.</p>
+
+            <p>Here is the format of a simple VolumeCurve:</p>
+
+<p><b><font color="#006600">VolumeCurve (</font></font></b>
+<br><b><font color="#006600">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SpeedControlled</font></font></b>
+<br><b><font color="#006600">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+CurvePoints ( 4</font></font></b>
+<br><b><font color="#006600">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.0, 0.25</font></font></b>
+<br><b><font color="#006600">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.4, 0.2</font></font></b>
+<br><b><font color="#006600">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1.6, 0.1</font></font></b>
+<br><b><font color="#006600">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2.0, 0.0</font></font></b>
+<br><b><font color="#006600">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+)</font></font></b>
+<br><b><font color="#006600">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Granularity ( 0.01 )</font></font></b>
+<br><b><font color="#006600">)</font></font></b></font>
+
+
+            <p>First of all the curve between the brackets of </font><font color="#CC33CC">VolumeCurve ()</font><font color="#000000"> or </font><font color="#CC33CC">FrequencyCurve ()</font><font color="#000000"> is played (see below for details of which is played).&nbsp; This determines the y-axis.&nbsp; Next the x-axis is determined by </font><font color="#CC33CC">SpeedControlled</font><font color="#000000"> or </font><font color="#CC33CC">Variable2Controlled </font><font color="#000000">(for example).&nbsp;&nbsp; Next the points of the curve are placed within the brackets of </font><font color="#CC33CC">CurvePoints ()</font><font color="#000000">.&nbsp;&nbsp; The number of points is defined (in the above example 4) in a format is similar to Streams, Triggers, Lights, Then the points themselves are listed in the format x, y.&nbsp; After the last point the bracket of CurvePoints
+is simply closed.</p>
+
+            <p>The next specification is the </font><font color="#CC33CC">Granularity ()</font><font color="#000000">. This indicates the incrementation with which the computer calculates the x-values.</p>
+
+            <p>This is perhaps confusing at first sight for people who are not familiar with mathematics, but the answer is simple. If we draw a curve, we first need some values which we transfer as points into a coordinate system.&nbsp; If we do that, then we can already see how the curve will look and then we can draw a curve which goes through these points.</p>
+
+            <p>A computer cannot draw; instead it determines the function and creates for itself a value table. The Granularity indicates now in which x-steps the computer calculates for each x value and then a y-value from the smallest to the largest x-value. The computer calculates thus in the above curve the y-values for x = 0,00, 0,01, 0,02, 0,03…, 1,96, 1,97, 1,98, 1,99, 2.00.</p>
+
+            <h3>Volume and Frequency</h3>
+
+            <p>In the previous section we saw that we could alter Volume and Frequency.&nbsp; This section will now concern us with "how".</p>
+
+            <h3>Volume:</h3>
+
+            <p>The Volume-Value supposedly goes from 0 to 1 however people have already successfully experimented with values over 1.&nbsp; I think that the Volume-Value indicates, with which volume in fractions of the original volume of the wav File, the file is played, thus with 0.5 half so loud, with 1.0 at original volume and with 2.0 at double volume.</p>
+
+            <h3>Frequency</h3>
+
+            <p>This is where things get a little complicated.
+            <br>Here's a FrequencyCurve from the default gp38cab.sms:</p>
+
+            <p><b><font color="#006600">CurvePoints ( 8
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.000 12025
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.150 12025
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.450 13000
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.500 13000
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.501 12025
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.550 12025
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.850 13000
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.000 13000
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</font></b>
+            
+            <p>At first the y-values seem confusing. Once you know that MSTS requires .wav files with a Sampling Rate of 11.025kHz or 11025Hz, the y-values become much clearer: everything above 11025 heightens the sound in relation to the original .wav file, everything below deepens it.&nbsp; More experimentation is needed here because not all values offer a satisfactory sound - there are limits.</p>
+
+            <h3>Play Commands (looped or simple)</h3>
+
+            <p>So far we have discovered how we alter .wav file as we play it:&nbsp; what's still missing is the art and science of how to play it.</p>
+
+            <p>MSTS understands the following commands:</p>
+            <ul>
+                <li><b><font color="#CC33CC">PlayOneShot ()</b>
+                    <br>Example:
+                    <p><b><font color="#009900">PlayOneShot ( 1 File ( "a380_reverserf.wav" -1
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SelectionMethod ( SequentialSelection ) )</font></font></b></p>
+                    <p>This command plays the .wav file from beginning to end once.</p>
+                </li>
+                <li><b><font color="#CC33CC">StartLoop ()</font></b>
+                    <br>Example:
+                    <p><b><font color="#009900">StartLoop ( 1 File ( "a380_power_cruise0.wav" -1 )</b>
+                    <br><b><font color="#009900">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SelectionMethod ( SequentialSelection ) )</font></b></p>
+                    <p>This command starts a loop in which the .wav file is played&nbsp; over and over again.&nbsp; This command is used with .wav Files without Cue Markers (see under .wav files) since it does not need markers for the loop.</p>
+                </li>
+                <li><b><font color="#CC33CC">ReleaseLoopRelease ()</font></b></li>
+                    <br><font color="#000000">Terminates a loop begun with StartLoop.</font></font>
+                    <br></font>&nbsp;
+                </li>
+                <li><b><font color="#CC33CC">StartLoopRelease ()</font></b></li>
+                    <br>Example:
+                       <b><font color="#009900">StartLoopRelease ( 1 File( "a380_whistle1.wav" -1&nbsp; )
+                       <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SelectionMethod ( SequentialSelection ) )</font></b>
+
+                    <p>This command commences playing a loop in which the .wav file is played up to the last Cue-Marker then loops back to the first Cue Marker and so on. The whistle and sanders in locomotives provide good examples.</p>
+                </li>
+                <li><b><font color="#CC33CC">ReleaseLoopReleaseWithJump()</font></b>
+                    <br>Terminates a loop begun with StartLoopRelease.&nbsp; If this command didn't exist, the loop would keep running infinitely. Comment: At the moment, it seems that ReleaseLoopRelease() and ReleaseLoopReleaseWithJump() have the same function. Nevertheless one should use the appropriate commands for later (enhanced?) MSTS versions. How the commands are used is explained in the next section.
+                 </li>
+            </ul>
+
+
+            <h3>Play Commands (Play File)</h3>
+
+            <p>The last commands to examine are the playing commands themselves.&nbsp; File() and FileList() are listed in loadstr.hdr (a file in the /Utils/ffedit folder) where all the configuration commands are listed by MSTS (but unfortunately the commands are not explained); I haven't seen FileList() used anywhere yet.&nbsp; File() command is placed within the Playing Commands StartLoop, StartLoopRelease or PlayOneShot.</p>
+            
+            <p>The format of these commands is the uniform:</font></font></font>
+<p><b><font color="#009900">StartLoopRelease (</font></font></b>
+<br><b><font color="#009900">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1</font></font></b>
+<br><b><font color="#009900">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+File( "a380_sandf.wav" -1&nbsp; )</font></font></b>
+<br><b><font color="#009900">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SelectionMethod ( SequentialSelection )</font></font></b>
+<br><b><font color="#009900">)</font></font></b></font>
+
+            <p>Within the bracket is the number of files, followed by the list of files themselves.&nbsp; "-1" means to play the loop from first to last Marker, at least that's what it does for me.&nbsp; Omitting the "-1" the file is played only up to the first marker, then recommences from the beginning; values starting at "-2" create a sound error.&nbsp; Other users report a computer lock-up when anything except "-1" is used.</p>
+
+            <p>Finally, the SelectionMethod command is listed.&nbsp; There are two options: SequentialSelection plays all files in order.&nbsp; RandomSelection selects one file at a time at random. Obviously, if one file is to be played the SelectionMethod is the same; that is not the case in this example:</p>
+<p><b><font color="#009900">PlayOneShot ( 3</font></font></b>
+<br><b><font color="#009900">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+File ( "a380_airb_auto1.wav" -1 )</font></font></b>
+<br><b><font color="#009900">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+File ( "a380_airb_auto2.wav" -1 )</font></font></b>
+<br><b><font color="#009900">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+File ( "a380_airb_auto3.wav" -1 )</font></font></b>
+<br><b><font color="#009900">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SelectionMethod ( RandomSelection )</font></font></b>
+<br><b><font color="#009900">)</font></font></b></font>
+<p>Here the computer selects one of the three named
+files and plays it.</font>
+
+            <h3>Programming of .sms Files (and all source texts in general)</h3>
+            
+            <p>So that you can step through everything that is done in an .sms file, I recommend that you take good heed of the following guidelines:</p>
+            <ul>
+                <li>always type the complete expression immediately when programming bracketed terms, thus e.g..</li>
+
+<br><font color="#009900">PlayOneShot (</font></font>
+<br><font color="#009900">)</font></font>
+<br>and then insert the contents of the bracket:&nbsp;
+it is very easy to omit a bracket or to lose sight of the whole expression;</font>
+<br></font>&nbsp;
+
+<li>format the expressions in such a way that one always can see which bracket belongs where and where an expression starts and stops, for example:</font></li>
+
+<br><font color="#009900">Instruction(</font></font>
+<br><font color="#009900">&nbsp;&nbsp;&nbsp;&nbsp;
+SubInstruction(</font></font>
+<br><font color="#009900">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+DoNothingLoop ()</font></font>
+<br><font color="#009900">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+DoSomethingLoop(</font></font>
+<br><font color="#009900">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SubSubInstruction()</font></font>
+<br><font color="#009900">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+)</font></font>
+<br><font color="#009900">&nbsp;&nbsp;&nbsp;&nbsp;
+)</font></font>
+<br><font color="#009900">&nbsp;&nbsp;&nbsp;&nbsp;
+AnotherSubInstruction(</font></font>
+<br><font color="#009900">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+AnotherSubSubInstruction()</font></font>
+<br><font color="#009900">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+YetAnotherSubSubInstruction()</font></font>
+<br><font color="#009900">&nbsp;&nbsp;&nbsp;&nbsp;
+)</font></font>
+<br><font color="#009900">)</font></font>
+
+<p>Here one can see clearly which part belongs to which Instruction and where an instruction stops and another begins.&nbsp;&nbsp; Since MSTS wants to "phone home" with any missing or incorrectly set bracket without reason, you do yourself an immense favour in error debugging if set out your file thus;</p>
+
+
+        <li>comment, comment, comment!<br>Did I mention you should write lots of comments?</li>
+
+<br></font>&nbsp;
+
+            <ul>
+                 <li>for each SL Group, list the Streams contained within it in correct order and give each Strean its own line (in the case of engine sounds (power cruise) which are written in two overlapping streams, place comments for both streams together to avoid creating "holes" in the streams);</li>
+
+
+                 <li>insert a comment line with each Stream as to what the Stream does;</li>
+
+                 <li>Follow the standard MSTS .wav file nomenclature format of <b>type_function.wav</b>&nbsp; (e.g. gp_sand.wav) for inside (Stereo) files and <b>x_type_function.wav (</b>e.g. x_a380_whistle1.wav) for outside (Mono) files;</li>
+
+                 <li>remain consistent with your naming of files; <b>not</b>  like this:&nbsp; gp_horn.wav, gp38_sander.wav and&nbsp; x_diesel_horn.wav, but rather same names for file of same type.</li>
+            </ul>
+</ul>
+
+            <h3>.wav-Files</font></h3>
+
+            <p>If you want to provide your own sounds within MSTS, you need not only a good .SMS file , but most importantly a good recording. For this one needs first of all a good Wave Editor, and the best ones cost money.  There are good Wave Editors such as Ulead Media Studio; good shareware editors include the popular GoldWave (<a href="www.goldwave.com" target="_blank">http:www.goldwave.com).</a></p>
+
+            <p>For a file to be useful in MSTS, it must adhere to the following formats:</p>
+            <ul>
+                <li>External Sounds:
+                    <ul>
+                        <li>x_type_function.wav</li>
+                        <li>Sampling Rate 11,025 Hz</li>
+                        <li>16bit Mono Signed</li>
+                    </ul></li>
+                <li>Internal Sounds:
+                    <ul>
+                        <li>type_function.wav</li>
+                        <li>Sampling Rate 11,025 Hz</li>
+                        <li>16bit Stereo Signed</li>
+                    </ul></li>
+            </ul>
+
+            <p>If the file is to be used in a StartLoopRelease() / ReleaseLoopReleaseWithJump() loop, it also needs to contain Cue-Markers.</p>
+
+            <h3>Cue-Markers in .wav Files</font></h3>
+
+            <p>If you sound the horn in a locomotive, you can operate it very for much shorter or longer times than suggested by the size of the original .wav file. This is accomplished by using Cue-Markers. Cue markers are inserted by Wave editors and are identified with an ID and a name. In Wave Editors, the ID starts with 00000, the name is simply Marker (original MSTS wavs have the name format <b>Marker mm:ss:hh,</b> the default name assigned by Ulead Media Studio).</p>
+
+            <p><i>So why keep it simple when more complicated systems work?</i>" Using ID 00000 in a .wav file will cause MSTS to crash.&nbsp; Therefore when working on the .wav files, place the first marker at the beginning where it is not relevant.  Once you have <b>completely</b> finished your wave editing, delete the 00000 marker.</p>
+
+            <p><b>CAUTION</b>: During re-editing .wav files, the editor always sets a the first marker to 00000 if none is there.&nbsp; Thus always set a marker at the very beginning if you are planning on further editing.</p>
+
+            <p>The marker 00001 is now the starting point for the loop (this is comparable to the repeat music symbol "||:"&nbsp; in a sheet of music).</p>
+
+            <p>Next are the central markers in an arbitrary quantity (any number of markers from 1 to 16 can be used).&nbsp; This relates to the fact that MSTS plays a file with ReleaseLoopReleaseWithJump up to a central marker, then jumps then to the final marker. Completely I have not completely tested that yet (and/or to no correct result came).</p>
+
+            <p>At the end an EndMarker is placed (this corresponds to ":||" repeat signal on music sheets) and, if StartEvent is set, lets the file being played jump again to the start marker 00001.&nbsp;&nbsp; If ReleaseEvent is set, the file being rendered jumps to this marker, and everything beyond this marker is played.</p>
+
+            <p>The trick is then to set all markers in such a way that the same frequencies lie close together so that one can set the marker sections one behind the other at will, without hearing a jump on playback.</p>
+
+            <p>A .wav file is thus composed of</p>
+            <ul>
+                <li>a starting piece of sound, for example the rising note of a horn;</li>
+                <li>a StartMarker;</li>
+                <li>several arbitrarily connectable central markers in the center section;</li>
+                <li>an EndMarker;</li>
+                <li>an end piece of sound, for example the fading away notes of a horn.</li>
+            </ul>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="link2">
+		</div>
+
+    <!--- end cause --->
+
+    <!--- conclusion --->
+
+		<div class="post">
+			<h2 class="title">Conclusion</h2>
+			<div class="entry">
+
+                        <p>So here you have the total wonder of .SMS files. A blank heading has been placed where I wasn't able to decipher its meaning.  If you do discover something new or wish to correct anything in this  document, please email me on <a href="mailto: aranea-diademata@gmx.net">aranea-diademata@gmx.net</a>.</p>
+
+                        <p>The documentation should be the starting point for a (hopefully) blossoming German (<i>and international - YS</i>) Freeware-Sound-Scene.&nbsp; With this documentation in hand one should go now at once through the original .SMS files and repeatedly try to understand them. Tip: Text markers in different colors truly work miracles in order to mark Streams and to make the whole thing clear(er).</p>
+
+                        <p>It is disappointing that that the people of Kuju did not adhere to formatting (actually derived from good programming practice); however, as you examine the the original files, you realise how important it is to adhere to it.</p>
+
+                        <p>This file is an ongoing living document.  In parts this document is only a few days old but I wanted to publish this incomplete document so that a starting point for Freeware sounds is there. If you have suggestions or questions, please write to me at my email address at <a href="mailto: aranea-diademata@gmx.net">aranea-diademata@gmx.net</a>.</p>
+
+                        <p>I am trying to to convince Sebastian Frey to establish a Sound forum. If it is established, you will find it at <a href="http://train-simulator.sebastianfrey.de/" target="_blank">http://train-simulator. sebastianfrey.de/.</a></p>
+
+                        <p>Have lots of fun creating and providing sounds!</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="acknowledge">
+		</div>
+
+    <!--- end conclusion --->
+
+
+    <!--- acknowledge --->
+
+		<div class="post">
+			<h2 class="title">Acknowledgements</h2>
+			<div class="entry">
+
+                        <p>This document could not have been written without the invaluable assistance of the following people:</p>
+                        <ul>
+                            <li>atze:  for his advice;</li>
+                            <li>beekay - for his advice;</li>
+                            <li>Blade - for his advice on Scalability Levels;</li>
+                            <li>knopi - for his dedication and advice;</li>
+                            <li>MadMike - for his advice especially with Cue-Markers and his dedication;</li>
+                            <li>Manfred - for his Sampling-Rate advice;</li>
+                            <li>Volker_Bollig - for his advice;</li>
+                            <li>The Sound Designer-Forum at <b>train-sim.com</b>, where much has already been deciphered, especially the variables and Cue-Marker-IDs;</li>
+                            <li>The Forum and Chat at <a href="http://train-simulator.sebastianfrey.de/" target="_blank">http://train-simulator.sebastianfrey.de/</a> for many great tips, good humour and motivation.</li>
+                        </ul>
+                        </p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="copyright">
+		</div>
+
+    <!--- end acknowledge --->
+
+    <!--- copyright --->
+
+		<div class="post">
+			<h2 class="title">Copyright Notice</h2>
+			<div class="entry">
+
+                        <p><ul><li>This document is &copy; 2002 Ralf Hagen.<br>&nbsp;</li>
+                               <li>Alteration or changes to this document, inclusion in other archives only with my prior permission.<br>&nbsp;</li>
+                               <li>A pre-condition for publication is that I am to be informed about proposed location of the offer. This permission is at any time revocable by me.<br>&nbsp;</li>
+                               <li>This file is Freeware. Commercial sale is not permitted (or placement in Download Archives) until a fee of &euro;1500.00 is paid.<br>&nbsp;</li>
+                           </ul>
+                        </p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="appendix">
+		</div>
+
+    <!--- end copyright --->
+
+    <!--- appendix --->
+
+		<div class="post">
+			<h2 class="title">Appendix</h2>
+			<div class="entry">
+
+                        <p>Discrete_Trigger Table
+                        <br>No guarantees of data accuracy!</p>
+
+                        <table BORDER BGCOLOR="#FFFFCC" >
+                            <tr ALIGN=CENTER VALIGN=CENTER>
+                                <td><center>Number</font></center></td>
+                                <td><center>Meaning</font></center></td>
+                            </tr>
+
+                            <tr>
+                                <td><center>1</font></center></td>
+                                <td><center>~</font></center></td>
+                            </tr>
+                            <tr>
+                                <td><center>2</font></center></td>
+                                <td><center>~</font></center></td>
+                            </tr>
+
+<tr>
+<td>
+<center>3</font></center>
+</td>
+
+<td>
+<center>~</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>4</font></center>
+</td>
+
+<td>
+<center>Sander On</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>5</font></center>
+</td>
+
+<td>
+<center>Sander Off</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>6</font></center>
+</td>
+
+<td>
+<center>Windscreen</font>
+<br>Wiper On</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>7</font></center>
+</td>
+
+<td>
+<center>Windscreen</font>
+<br>Wiper Off</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>8</font></center>
+</td>
+
+<td>
+<center>Horn On</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>9</font></center>
+</td>
+
+<td>
+<center>Horn Off</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>10</font></center>
+</td>
+
+<td>
+<center>Bell On</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>11</font></center>
+</td>
+
+<td>
+<center>Bell Off</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>12</font></center>
+</td>
+
+<td>
+<center>Compressor On</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>13</font></center>
+</td>
+
+<td>
+<center>Compressor Off</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>14</font></center>
+</td>
+
+<td>
+<center>Train brake applied (brake sounds)</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>15</font></center>
+</td>
+
+<td>
+<center>Reverser Forwards</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>16</font></center>
+</td>
+
+<td>
+<center>Reverser Reverse</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>17</font></center>
+</td>
+
+<td>
+<center>Brake Handle forwards (Train brake)</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>18</font></center>
+</td>
+
+<td>
+<center>Brake Handle forwards (Loco brake)</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>19</font></center>
+</td>
+
+<td>
+<center>~</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>20</font></center>
+</td>
+
+<td>
+<center>Dynamic Brake Handle forwards</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>21</font></center>
+</td>
+
+<td>
+<center>Release locomotive brake</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>22</font></center>
+</td>
+
+<td>
+<center>Apply locomotive&nbsp; brake</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>23</font></center>
+</td>
+
+<td>
+<center>~</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>24</font></center>
+</td>
+
+<td>
+<center>~</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>25</font></center>
+</td>
+
+<td>
+<center>Vigilance Alarm tracer (??)</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>26</font></center>
+</td>
+
+<td>
+<center>Operate Sander (toggles)</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>27</font></center>
+</td>
+
+<td>
+<center>Steam Ejector 2 on</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>28</font></center>
+</td>
+
+<td>
+<center>Steam Ejector 2 off</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>29</font></center>
+</td>
+
+<td>
+<center>~</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>30</font></center>
+</td>
+
+<td>
+<center>Steam Ejector 1 on</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>31</font></center>
+</td>
+
+<td>
+<center>Steam Ejector 1 off</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>32</font></center>
+</td>
+
+<td>
+<center>~</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>33</font></center>
+</td>
+
+<td>
+<center>Auxiliary blower Toggle</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>34</font></center>
+</td>
+
+<td>
+<center>Cylinder Cocks Toggle</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>35</font></center>
+</td>
+
+<td>
+<center>~</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>36</font></center>
+</td>
+
+<td>
+<center>Firebox Door open/close toggle</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>37</font></center>
+</td>
+
+<td>
+<center>Light switch toggle</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>38</font></center>
+</td>
+
+<td>
+<center>Water Scoop</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>39</font></center>
+</td>
+
+<td>
+<center>~</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>40</font></center>
+</td>
+
+<td>
+<center>Firebox door open</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>41</font></center>
+</td>
+
+<td>
+<center>Firebox door close</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>42</font></center>
+</td>
+
+<td>
+<center>~</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>43</font></center>
+</td>
+
+<td>
+<center>~</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>44</font></center>
+</td>
+
+<td>
+<center>Central heating Steam Valve</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>45</font></center>
+</td>
+
+<td>
+<center>Pantograph Up</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>46</font></center>
+</td>
+
+<td>
+<center>Pantograph Down</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>47</font></center>
+</td>
+
+<td>
+<center>Pantograph toggle</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>48</font></center>
+</td>
+
+<td>
+<center>Econtrol???</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>49</font></center>
+</td>
+
+<td>
+<center>~</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>50</font></center>
+</td>
+
+<td>
+<center>~</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>51</font></center>
+</td>
+
+<td>
+<center>Locomotive Brake Operate? (EB Brake)</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>52</font></center>
+</td>
+
+<td>
+<center>~</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>53</font></center>
+</td>
+
+<td>
+<center>Apply train brake, normal application</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>54</font></center>
+</td>
+
+<td>
+<center>Apply trainbrake, emergency</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>55</font></center>
+</td>
+
+<td>
+<center>~</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>56</font></center>
+</td>
+
+<td>
+<center>Vigilance Alarm On</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>57</font></center>
+</td>
+
+<td>
+<center>Vigilance Alarm Reset ("Z" key)</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>58</font></center>
+</td>
+
+<td>
+<center>Couple</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>59</font></center>
+</td>
+
+<td>
+<center>Couple</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>60</font></center>
+</td>
+
+<td>
+<center>Couple</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>61</font></center>
+</td>
+
+<td>
+<center>Uncouple</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>62</font></center>
+</td>
+
+<td>
+<center>&nbsp;Uncouple</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>63</font></center>
+</td>
+
+<td>
+<center>&nbsp;Uncouple</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>64</font></center>
+</td>
+
+<td>
+<center>~</font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>65</font></center>
+</td>
+
+<td>
+<center>~</font></center>
+</td>
+</tr>
+</table></center>
+
+                        </p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="#">
+		</div>
+
+    <!--- end appendix --->
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#cause">Cause Of Problem</a>
+                 <br><a href="#conclusion">Conclusion</a>
+                 <br><a href="#acknowledge">Acknowledgements</a>
+                 <br><a href="#copyright">Copyright Notice</a>
+                 <br><a href="#appendix">Appendix</a>
+
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 28 Oct 2002, 15 March 2010</center></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>A Coach made with Gmax Chapter 12 - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <meta name="Author" content="Richard Osborne">
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+        <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">A Coach Made With GMax</font>
+                        <br>by Richard Osborne</h2>
+                        <p></p>
+			<h2 class="title">Chapter 12: More about hierarchies</h2>
+ 			   <div class="entry">
+
+                   <p>I'll try to explain hierarchies as applied to rolling stock & locomotives. Look again at the diagram for a bogie coach.</p>
+
+                   <P><IMG SRC="images/ro_gmax_12_01.jpg" BORDER="0" WIDTH="600" HEIGHT="203" ALIGN="bottom" ALT=""></P>
+
+                   <P>The principle is Wheels11 or 21 in front of the bogie pivot, wheels12 or 22 on the bogie pivot, wheels13 or 23 behind the bogie pivot relative to forward motion. They must run 11 - 23; 1-4 or they'll turn backwards. I've normally used wheels12 or 22 behind the pivot, it works but if I were pedantic I'd use 13 & 23. The sequence tells MSTS to move the wheels laterally as the bogie swings. TSM leads you to believe that a third bogie is possible - it isn't.</p>
+
+                   <P>If we apply this to a steam locomotive the same sequence must be used; again the diagrams are from the right, the way TSM shows the side view. Take the most complicated first, <b>a 4-6-4, or 2-3-2</b> if you're on the Continent. Wheels11 - wheels23 are animated by MSTS, driving wheels1 - 4 must be animated manually.</p>
+
+                   <P><IMG SRC="images/ro_gmax_12_02.jpg" BORDER="0" WIDTH="499" HEIGHT="67" ALIGN="bottom" ALT=""></p>
+                   
+                   <P>The linking here will be:</p>
+                   <ul>
+                       <li>wheels11 & wheels13 linked to bogie1</li>
+                       <li>bogie1 linked to main</li>
+                       <li>wheels1, wheels2, wheels3 linked to main</li>
+                       <li>wheels21 & wheels 23 linked to bogie 2</li>
+                       <li>bogie2 linked to main.</li>
+                   </ul>
+
+                   <p>A <b>pony truck</b>, bissel if you're French, obviously only has one axle. A <b>trailing truck</b>, as in a Pacific, will have that axle behind the pivot. The wheels will be wheels23. Although, technically, a pony truck isn't a bogie MSTS will be looking for bogie1 or bogie2; in truth it doesn't know very much about steam locomotives. Many locomotives had radial axleboxes, ignore that & give those locos a bogie. If you don't want it to show make it very small or give it a transparent texture. It must be in the list & have its pivot in the right place to function.</p>
+
+                   <P><IMG SRC="images/ro_gmax_12_03.jpg" BORDER="0" WIDTH="499" HEIGHT="63" ALIGN="bottom" ALT=""></P>
+
+                   <p>The linking here will be:</p>
+
+                   <ul>
+                       <li>wheels11 & wheels13 linked to bogie1</li>
+                       <li>bogie1 linked to main</li>
+                       <li>wheels1, wheels2, wheels3 linked to main</li>
+                       <li>wheels23 linked to bogie 2</li>
+                       <li>bogie2 linked to main.</li>
+                   </ul>
+
+                   <p><b>Pony trucks at both ends</b>, a Prairie in this case, will use wheels11 & wheels23.</p>
+                   
+                   <P><IMG SRC="images/ro_gmax_12_04.jpg" BORDER="0" WIDTH="499" HEIGHT="64" ALIGN="bottom" ALT=""></p>
+
+                   <P>The linking here will be:</p>
+                   <ul>
+                      <li>wheels11 linked to bogie1</li>
+                      <li>bogie1 linked to main</li>
+                      <li>wheels1, wheels2, wheels3 linked to main<</li>
+                      <li>wheels23 linked to bogie 2</li>
+                      <li>bogie2 linked to main.</li>
+                   </ul>
+
+                   <p>A <b>4-6-0</b>, for instance, will only have bogie1; no reference will be made to bogie2.</p>
+
+                   <P><IMG SRC="images/ro_gmax_12_05.jpg" BORDER="0" WIDTH="499" HEIGHT="62" ALIGN="bottom" ALT=""></p>
+
+                   <P>The linking here will be:</p>
+                   <ul>
+                       <li>wheels11 & wheels13 linked to bogie1</li>
+                       <li>bogie1 linked to main</li>
+                       <li>wheels1, wheels2, wheels3 linked to main</li>
+                   </ul>
+
+                   <p>Conversely an <b>0-4-4</b> will only have a trailing bogie.</p>
+
+                   <P><IMG SRC="images/ro_gmax_12_06.jpg" BORDER="0" WIDTH="499" HEIGHT="63" ALIGN="bottom" ALT=""></p>
+
+                   <P>The linking here will be:</p>
+                   <ul>
+                       <li>wheels1, wheels2 linked to main</li>
+                       <li>wheels21 & wheels23 linked to bogie 2</li>
+                       <li>bogie2 linked to main.</li>
+                   </ul>
+
+                   <p><b>Diesel & electric locos</b> have their own problems. Most designers seem to treat them as a coach with wheels11 etc. Although this is fine it has a major problem - the wheels don't spin or slide, they're not driven. It's better to make them wheels1, wheels2 etc. & animate them. BUT that gives us a problem, MSTS only allows up to wheels5 - for 10 coupled steam locos. A sensible compromise is to mix driven & undriven wheels, making an A1A - A1A instead of a Co - Co. For a Bo - Bo use wheels1 - 4 animated manually.</p>
+
+                   <P><IMG SRC="images/ro_gmax_12_07.jpg" BORDER="0" WIDTH="499" HEIGHT="64" ALIGN="bottom" ALT=""></p>
+
+                   <P>The linking here will be:-</p>
+
+                   <ul>
+                       <li>wheels1, wheels12 & wheels2 linked to bogie1</li>
+                       <li>bogie1 linked to main</li>
+                       <li>wheels3, wheels22 & wheels4 linked to bogie 2</li>
+                       <li>bogie2 linked to main.</li>
+                   </ul>
+
+                   <p>Two other special cases for coach models, the first a <b>12-wheeled coach</b> example;
+rare in Britain but common in the USA.</p>
+
+                   <P><IMG SRC="images/ro_gmax_12_08.jpg" BORDER="0" WIDTH="499" HEIGHT="64" ALIGN="bottom" ALT=""></p>
+
+                   <P>The linking here will be:</p>
+                   <ul>
+                       <li>wheels11, wheels12 & wheels13 linked to bogie1</li>
+                       <li>bogie1 linked to main</Li>
+                       <li>wheels21, wheels22 & wheels 23 linked to bogie 2</li>
+                       <li>bogie2 linked to main.</li>
+                   </ul>
+
+                   <p>The other is for a <b>6 wheeled coach</b>, common enough in Britain during the 19th century & still used on the Continent. It's only worth making a bogie for a long vehicle, a 6 wheeled tender doesn't have much sideways movement for the centre axle. The trick is to pivot the bogie on the leading axle, leaving the centre wheel to move sideways. Again make the bogie transparent.  Make sure you leave sufficient room for the centre wheels to move without fouling the centre axleguards. You can't judge the side movement until you run the coach over tight curves or turnouts; another reason for looking at your model in MSTS
+while it's still 'work in progress'.</p>
+
+                   <p><IMG SRC="images/ro_gmax_12_09.jpg" BORDER="0" WIDTH="499" HEIGHT="62" ALIGN="bottom" ALT=""></p>
+
+                   <p>The linking here will be:</p>
+                   <uL>
+                       <li>wheels12 & wheels13 linked to bogie1</li>
+                       <li>bogie1 linked to main</li>
+                       <li>wheels22 linked to main.</li>
+                   </ul>
+
+                   <p>Some designers have bogies on 4 wheeled stock; absolutely no need - the wheels don't move sideways relative to the body; just link the wheels to main. Wheels must be in sequence - I've used wheels11, wheels12; wheels11, wheels21; wheels11, wheels23.</p>
+
+                   <P>Of course there are extreme cases, wagons with 4 bogies, articulated locos, locos nicknamed 'Centipede' etc. Most of these would be compounds of 2 or 3 models in MSTS - well outside the scope of this tutorial.</p>
+
+
+
+                     </div>
+			 	<p class="meta"><span class="posted"><a href="#">Return to top of page</a></span><a href="ro_gmax_13.html" class="permalink">Go On To Chapter 13</a></p>
+
+             </div>
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Chapters</h2>
+<ol>
+<li><a href="ro_gmax_00.html">Overview</a></li>
+<li><a href="ro_gmax_02.html">Getting started</a></li>
+<li><a href="ro_gmax_03.html">First Texturing</a></li>
+<li><a href="ro_gmax_04.html">Modelling For Real</a></h3></li>
+<li><a href="ro_gmax_05.html">Texturing The Body</a></h3></li>
+<li><a href="ro_gmax_06.html">Alpha Channels</a></h3></li>
+<li><a href="ro_gmax_07.html">Wheels and Bogies</a></h3></li>
+<li><a href="ro_gmax_08.html">Interiors</a></h3></li>
+<li><a href="ro_gmax_09.html">Export to MSTS</a></h3></li>
+<li><a href="ro_gmax_10.html">Texturing tricks and losing polygons</a></h3></li>
+<li><a href="ro_gmax_11.html">More Tricks and Tips</a></h3>
+<li><a href="#">More about hierarchies</a></h3>    
+</ol>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 24 August 2004, 19 March 2010</center></p>
+</div>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <title>A Steam Loco for MSTS sing 3DCanvas Chapter 9 - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../../index.html">Home</a></li>
+		<li class="current_page_item"><a href="../index.html">Tutorials</a></li>
+		<li><a href="../../msts_errors.html">Error Messages</a></li>
+		<li><a href="../../steam/index.html">Steam</a></li>
+		<li><a href="../../electric/index.html">Electric</a></li>
+		<li><a href="../../passenger/index.html">Passenger</a></li>
+		<li><a href="../../diesel/index.html">Diesel</a></li>
+		<li><a href="../../freight/index.html">Freight</a></li>
+		<li ><a href="../../vans/index.html">Vans</a></li>
+		<li ><a href="../../routes/index.html">Routes</a></li>
+		<li><a href="../../utilities/index.html">Utilities</a></li>
+		<li><a href="../../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../../images/S4M_Banner_left.png"  height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../../images/S4M_Banner_Tutorials.png"  height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">A Steam Loco for MSTS Using 3DCanvas</font>
+                        <br>by Paul "decapod" Gausden</h2>
+                        <p></p>
+			<h2 class="title">Chapter 9 - Yet More Details</h2>
+ 			   <div class="entry">
+
+                   <p>It is starting to get to the stage where adding the detail objects is becoming repetitive:</p>
+                   <ul><li>Build the object</li>
+                       <li>drag the group to a parent for relative positioning</li>
+                       <li>when correct drag the object into its final group</li>
+                       <li>remove faces and optimise</li>
+                       <li>texture The only bits that change seem to be the build object part.</li>
+                   </ul>
+
+                   <p>There are not many more techniques I make use of to build pieces. In general, if it is simple to build, then it is likely to be relatively efficient. I will describe a few more, but may leave out a few simple pieces I have already added.</p>
+
+
+                        </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "check"</a>
+		</div>
+
+    <!--- end cause --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Smoke Box Door</h2>
+			<div class="entry">
+
+                   <p>These can be relatively high poly count items for something that doesn't show up much. Mainly because of the curves involved. I usually (these days) build mine from a cone primitive.</p>
+
+                   <ol>
+                   <li>scale the cone so the base is the same size as the door and the height is about 1.5 times the depth you need for the final door.</p>
+
+                   <p><img SRC="images/l9a2.jpg" height=278 width=542></p></li>
+
+                   <li>change the cone latitude to 3 on the Open/Source right click menu for the cone.
+                   <p><img SRC="images/l9a1.jpg" height=99 width=208></p></li>
+
+                   <li>Right click drag the centrepoint down until the object is the required height.
+                   <p><img SRC="images/l9a3.jpg" height=241 width=459></p></li>
+
+                   <li>Cut and paste the cone into the boiler group and rotate it 90 degrees around the x-axis. Then position the group correctly at the front of the Boiler.
+                   <p><img SRC="images/l9a4.jpg" height=513 width=436></p></li>
+
+                   <li>remember to remove the back face and drag the door object into the boiler group.<br>&nbsp;</li>
+
+                   <li>add the texture.</li></ol>
+
+                        </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "check"</a>
+		</div>
+
+    <!--- end cause --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Smoke Box Base</h2>
+			<div class="entry">
+
+                   <p>This object needs to be built using an extrude object in 3DC.</p>
+
+                   <ol><li>Use the extrude object tool as before. This time, as the object is symmetrical I will only be building half of it. The centre line must be absolutely vertical (same X coordinate for points).</p>
+
+                   <p><img SRC="images/l9a5.jpg" height=480 width=640></p></li>
+
+                   <li>Once the object is built, scale it to the correct size and shift rotate it to the correct orientation.<br>&nbsp;</li>
+
+                   <li>Tun the Mirror object operation on the object, mirroring along the Z-axis (when using world coordinates). This may take a couple of goes as you may have to flip the object first if the mirror happens on the wrong side of the object.<br>&nbsp;</li>
+
+                   <li>Finally check the size is OK, drag the new object group into the boiler group and position correctly. Then once you are happy with this, drag the extrude object into the boiler group itself.
+
+                   <p><img SRC="images/l9a6.jpg" height=263 width=421></p.</li></oL>
+
+                        </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "check"</a>
+		</div>
+
+    <!--- end cause --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Safety Valve Covers - (similar to funnel and dome)</h2>
+			<div class="entry">
+
+
+                   <ol>
+                       <li>Starting with a cube scaled to 0.4 x 0.05 x 0.4, chamfer the four small vertical edges (with a small shift adjustment afterwards) to get an approximate shape to build from.
+
+                       <p><img SRC="images/l9a7.jpg" height=281 width=363></p></li>
+
+                       <Li>Select the lower face and use the flare extrude plugin (parameters 0.12, 0.12, 2, 1) for the lower curve (now remove the lower face as it is hidden).<br>&nbsp;</li>
+
+                       <Li>Select the upper face and use the flare extrude plugin (parameters 0.05, 0.05, 2, 1) for the first upper curve.<br>&nbsp;</li>
+
+                       <Li>Select the upper face and use the flare extrude plugin (parameters 0.05, -0.08, 2, 1) for the second upper curve.
+                       <p><img SRC="images/l9a8.jpg" height=324 width=466></p></li>
+
+                       <Li>Position this object in the boiler group.<br>&nbsp;</li>
+
+                       <Li>Scale a 7 or 8 sided cylinder to about 0.06 x 0.04 x 0.06 and remove the lower face.<br>&nbsp;</li>
+
+                       <Li>Copy and paste this object back onto itself 3 times (to create 3 child groups)<br>&nbsp;</li>
+
+                       <Li>For thest child groups, by changing either the x or z coordinates or both coordinates to about 0.09 and the rest to 0.0 you can arrange the objects into a square.<br>&nbsp;</li>
+
+                       <Li>I then merged all the objects into a single object and centred the object, then positioned it as a child of the SV cover.
+
+                       <p><img SRC="images/l9a9.jpg" height=236 width=361></p></li>
+
+                       <Li>The cover and valves were then dragged into the boiler group and textured (poetic licence brass colour - was probably green) The valve levers were build from a cube with all but the left and right faces removed (an operation that happens many times when building locos).<br>&nbsp;</li>
+
+                       <Li>This cube is scaled to 0.000001, 0.05, 0.3 (or thereabouts) and optimised - this effectively welds the two faces of the flat object back to back, reducing the number of points.<br>&nbsp;</li>
+
+                       <Li>The rear *edge* of this object can now be extruded by 0.3, right mouse dragged down slightly and the edge shrunk slightly by dragging over the Y panel of the edit control.<br>&nbsp;</li>
+
+                       <Li>The rear edge is then extruded again by 0.15 and this time needs shifting up slightly. Make sure the faces on both sides of the object have been extended.</p>
+
+                       <Li>Copy and paste the object onto itself and set the new group X coordinate to the appropriate width (width of valve tops), Y and Z are zero.<br>&nbsp;</li>
+
+                       <Li>Merge the two objects and position on the model (in the same group as the boiler).
+
+                           <p><img SRC="images/l9a10.jpg" height=279 width=356></p></li>
+                   </ol>
+
+                   <p><b>Hint 1</b> - the Centre object operation helps make the positioning easier (X coordinate relative to the boiler should be 0.0)</p>
+
+                   <p><b>Hint 2</b> - When chosing a group to put an object into, make sure the texture used is the same as all other objects in a group.</p>
+                   
+                   <p>After 30+ groups and about 150 objects, I am still able to export this model with the optimised 6 LOD's because of this.</p>
+
+                        </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "check"</a>
+		</div>
+
+    <!--- end cause --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Handrails</h2>
+			<div class="entry">
+
+                   <p>These are made from 5 sided cylinders with the ends removed.</p>
+
+                   <p>Hint - shift rotate and scale the 16 sided cylinder first before changing the number of faces. Also a good idea to use the centre object operation after you have changed the number of faces. The fixing points are made from 6 sided cylinders (slightly larger diameter than the rail) with one end removed. The fixings are made a child group of the bar and positioned (for a horizontal rail) with X and Y as 0.0 and with Z at one end. The fixing is then shifted so the bar is near the top, but the fixing centre has not moved. You can now copy and paste this fixing as many times as needed onto the handrail object and position exactly with the Z coordinate. I usually merge all the fixings and rail into a single object before positioning the handrail on the model.</p>
+
+                   <p><img SRC="images/l9a11.jpg" height=277 width=307></p>
+
+                   <p>Now this doesn't look particularly round! You need to run the Crease operation and drag the slider down till the viewport shows a smooth object. <b>Beware </b>- if you do some more operations on this rail, the smoothing may be lost. Make sure you do a final check before exporting. Canvas 6 has a crease level defined for each object (which you must set) which retains smoothing through operations.</p>
+
+                   <p><img SRC="images/l9a12.jpg" height=371 width=422></p>
+
+                        </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "check"</a>
+		</div>
+
+    <!--- end cause --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Bits</h2>
+			<div class="entry">
+
+                        <p>Here is a small pic of a few other bits I've added - the steps are just squashed cubes with *all* hidden faces removed - the ones on the tank ends only have 3 faces.</p>
+
+                        <p><img SRC="images/l9a13.jpg" height=600 width=582></p>
+
+                        <p>The handrails were made using the technique as above - it is quite long winded, I'll definitely be doing a plugin to generate these at some point soon. (I had also forgotten to chamfer the front two vertical edges of the tank in the earlier parts) I have also been running her in the sim, taking a close look at the details and tweaking the texture mappings etc. Getting it looking right is definitely the most time consuming task. Here she is looking very shiny - the SFM is the simplest option to do this with, Canvas can be a bit fiddly to get right. Once again, group organisation and naming is the key to success here.</p>
+
+                        </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "check"</a>
+		</div>
+
+    <!--- end cause --->
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <p><h3>Part 1 - Below the footplate</h3>
+                        <blockquote>
+                          <p><a href="steam3DC.html#start">0 - Beginners and reading</a></p>
+                          <p><a href="chap_1.html">Chapter 1 - Wheels</a></p>
+                          <p><a href="chap_2.html">Chptr 2 - Round Wheels</a></p>
+                          <p><a href="chap_3.html">Chptr 3 - Complex footplate shape</a></p>
+                          <p><a href="chap_4.html">Chptr 4 - Pistons and Valve gear</a></p>
+                          <p><a href="chap_5.html">Chptr 5 - Complex animations</a></p>
+                        </blockquote>
+
+                        <h3>Part 2 - Above the footplate</h3>
+
+                        <blockquote>
+                          <p><a href="chap_6.html">Chptr 6 - Boiler, Funnel and Dome</a></p>
+                          <p><a href="chap_7.html">Chptr 7 - More Bodywork and Texturing</a></p>
+                          <p><a href="chap_8.html">Chptr 8 - Detailing</a></p>
+                          <p><a href="#">Chptr 9 - More Detailing</a></p>
+                          <p>&nbsp;</p>
+                        </blockquote></p>
+
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 2002-2003, 22 April 2010</center></p>
+</div>
+</body>
+</html>
+

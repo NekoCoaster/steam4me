@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+    <title>MSTS Activity Editor "Loses" AI/Static Consists - at the steam4me Site</title>
+    
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+   <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="tutorials/index.html">Tutorials</a></li>
+		<li class="current_page_item"><a href="msts_errors.html">Error Messages</a></li>
+		<li><a href="steam/index.html">Steam</a></li>
+		<li><a href="electric/index.html">Electric</a></li>
+		<li><a href="passenger/index.html">Passenger</a></li>
+		<li><a href="diesel/index.html">Diesel</a></li>
+		<li><a href="freight/index.html">Freight</a></li>
+		<li><a href="vans/index.html">Vans</a></li>
+		<li><a href="routes/index.html">Routes</a></li>
+		<li><a href="utilities/index.html">Utilities</a></li>
+		<li><a href="Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+	</font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="images/S4M_Banner_left.png"  height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="images/S4M_Banner_Error.png"  height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- keyboard3 --->
+
+		<div class="post">
+			<h2 class="title">MSTS Activity Editor "Loses" AI/Static Consists
+                        <br />Repair Method If You're Using Windows 7</h2>
+			<div class="entry">
+				<p>MSTS Activity Editor "Loses" AI/Static Consists - they exist, but they don't show up in the AE.  This error is caused by corrupt registry keys.</p>
+
+				<p><a href=msts_errors.html#ae_missing>Click here for advice on repairing your registry settings if you're using Windows XP.</a></p>
+				
+				<p>Read on here if you're using Windows 7.</p>
+
+				<p>
+				<ol>
+                                    <li>Click <b>Start | Run </b> Type in "regedit" Ok:
+                                        <br /><br /><img src="images/msts_w7_ae_fix1.jpg" alt="" border="1"></p>
+                                    </li>
+                                    <li>Type in <b>"regedit"</b> and click Ok:
+                                        <br /><br /><img src="images/msts_w7_ae_fix2.jpg" alt="" border="0"></p>
+                                    </li>
+                                    <li>First make a back-up: Click <b>File | Export</b>; select "All" radio button, then enter a filename and click "ok" (arrows 1, 2, 3 below);
+                                        <br /><br /><img src="images/msts_w7_ae_fix0.jpg" alt="" border="0"></p>
+                                    </li>
+                                    <li>There are at least three places that contain the reigistry keys we will need to delete:  Click <b>Edit | Find</b> Type in <b>"hwrender"</b> and click OK:
+                                        <br /><br /><img src="images/msts_w7_ae_fix3.jpg" alt="" border="0"></p>
+                                    </li>
+                                    <li>The first location is within the HK_Current_User folder:
+                                        <br /><br /><img src="images/msts_w7_ae_fix4.jpg" alt="" border="0"></p>
+                                    </li>
+                                    <li>In the right-hand window, click, then shift-click to select all registry keys starting with <b>"AE_"</b>.  Right-click and select "Delete".
+                                        <br /><br /><img src="images/msts_w7_ae_fix5.jpg" alt="" border="0"></p>
+                                    </li>
+                                    <li>Answer "Yes":
+                                        <br /><br /><img src="images/msts_w7_ae_fix6.jpg" alt="" border="0"></p>
+                                    </li>
+                                    <li>Press "F3" or <b>Edit | Find Next</b> from the menu bar:  the next locations are in <b>HK_Local_Machine</b> and <b>HK_Users</b> (there may be two different keys within HK_Users). Each time, in the right-hand window, click, then shift-click to select all registry keys starting with <b>"AE_"</b>.  Right-click and select <b>Delete | Yes</b>.
+                                        <br />Press "F3" or <b>Edit | Find Next</b> from the menu bar until you see this message:
+                                        <br /><br /><img src="images/msts_w7_ae_fix7.jpg" alt="" border="0"></p>
+                                    </li>
+                                    <li>Click "ok" then close the Regedit window (click on red "x").  The AE registry keys will be regenerated next time you start Activity Editor.
+                                    </li></p>
+                                </ol>
+
+			</div>
+			<p class="meta"><span class="posted"></span><a href="#" class="permalink">Top Of Page</a></p></p>
+			<a NAME = "traindb">
+		</div>
+
+<!--- end keyboard2 --->
+
+
+	<!-- end #content -->
+	</div>
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents/Keywords</h2>
+                 <p> <a href="msts_errors.html#keyboard1">Keyboard Nonresponsive #1</a>
+                 <br><a href="msts_errors.html#keyboard2">Keyboard Nonresponsive #2</a>
+                 <br><a href="msts_errors.html#ae_16bit">Activity Editor (AE) Lock Up</a>
+                 <br><a href="msts_errors.html#ae_missing">AE Missing Consists (Win XP)</a>
+                 <br><a href="#">AE Missing Consists (Win 7)</a>                 
+                 <p><a href="msts_errors.html#traindb">Error Reading Train Database</a>
+                 <br><a href="msts_errors.html#twi">Train World Initialization Failed</a>
+                 <br><a href="msts_errors.html#uid200">Can't Add Car To World</a>
+                 <br><a href="msts_errors.html#path">Unable to Save Path</a>
+                 <br><a href="msts_errors.html#batch">Xcopy Is Not Recognised</a>
+                 <p><a href="msts_errors.html#regload">Region Load Error</a>
+                 <br><a href="msts_errors.html#palette">Failed to Load Material Palette</a>
+                 <br><a href="msts_errors.html#gui">Failed to load gui_font&lt;IDS_FONT_2/&gt;</a>
+                 <br><a href=tutorials/fix_sd402.html>Sd40-2 Shape File Error</a>
+                 <p><a href="msts_errors.html#unpack">Activity Unpack Fix</a>
+                 <br><a href="msts_errors.html#init_am">Initialize Activity Manager</a>
+                 <br><a href="msts_errors.html#damage">Package Damaged</a>
+                 <p><a href="msts_errors.html#rigid">Rigidbody</a>
+                 <br><a href="msts_errors.html#act_header">Load Activity Header</a>
+                 <br><a href="msts_errors.html#reqfile">Required File Missing</a>
+                 <br><a href="msts_errors.html#heading">Initialise Heading Tape</a>
+                 <br><a href="msts_errors.html#picformat32">Picformat32.ocx missing</a>
+                 <br><a href="tutorials/matrix3x3.html">Matrix 3x3 Errors</a>
+                 <br><a href="tutorials/end_end_vector.html">End_End_Vector Error</a>
+                 <p><a href="msts_errors.html#sluggish">Sluggish Movement in RE</a>
+                 <br><a href="msts_errors.html#snd_place">Sound Placement Crashes Sim</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br>Updated: 5 May 2011
+        <br>This website is hosted by <a href="http://www.ventraip.com.au">VentraIP.com.au</a>
+
+<hr WIDTH="100%">
+</p>
+</div>
+</body>
+</html>

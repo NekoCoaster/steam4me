@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>Improve the Quality of MSTS Sounds - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li ><a href="../vans/index.html">Vans</a></li>		
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">A Simple Way to Improve the Quality of Sounds in MSTS</font>
+                        <br>by by Stuart "scefhwil" Williamson
+                        <br><a href="#update">Update by Carlo Santucci (July 2006)</a></h2>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                            <p>The sounds a locomotive plays are defined in the .sms files that the .eng file of the locomotive points to. Sometimes, they are to be found in a subfolder "Sound" in the folder containing the locomotive, sometimes the .eng points to the sounds of another locomotive, or to a common sound folder shared by various engines (which is called "aliasing").</p>
+
+                            <p>The .sms files also define the number and type of sounds (.wav files) that play with each setting of the sound quality sliders (called "Quantity Of Sounds" in Options | Sound).</p>
+
+                            <p><img SRC="images/sound_sliders.jpg" ></p>
+
+                            <ul>
+                                <li>ScalabiltyGroup ( 5 ): the sounds that are available to be played when the slider is at maximum</li>
+                                <li>ScalabiltyGroup ( 3 ): the sounds that are available to be played when the slider is at medium</li>
+
+                                <li>ScalabiltyGroup ( 1 ): the sounds that are available to be played when the slider is at minimum</li>
+                                <li>ScalabiltyGroup ( 0 ): the sounds that are available to be playe the locomotive is used in an AI train (computer controlled traffic in activities), regardless of slider setting.</li>
+                            </ul>
+                            
+                            <p>These settings were designed to enable playing of sounds in lower-end computers.</p>
+
+                            <p>Since discovering the Sound Test Interface some of the 'innerds' of the Sound Management System (sms) have been exposed, and we users can benefit.</p>
+
+                            <p>Did you know that regardless of your sound card (&pound;5 or &pound;100) the same resource setup is used? The main implication of this is that by default the sim uses 40 3D and 20 2D streams/voices/buffers (whatever the correct terminology is)ie the ability to play independant sound simultaneously. (Note: If your sound card suppords hardware accelaration then these buffers are used in preference over software ones).</p>
+
+                            <p>That means max 60 simultaneous sound for all. Seems a lot? Well maybe for the default sounds but if you are using any of the loco/coach/wagon sounds I have been involved in developing then not. Player loco takes up 11, each coach 3, (10 coach train = 41), an AI loco 3, wagons in a passing train 2 each (20 wagon traffic = 43). Add to these background, environment, and track sounds, 60 ain't enough and sounds have to be dropped.</p>
+
+                            <p>Well you can have more! If your sound set up is at High and performs ok then try the following. Go to the Global folder and <b>make a backup copy</b> of soundcfg.dat. Open the original one for editing (unicode stuff applies). Look for this line near the bottom</p>
+
+                            <p><b>SoundSystem ( 5, 40, 20, 31457280 )</b></p>
+
+                            <p>The 5 is the scalability (quality) level, 40 sets the 3D buffers, the 20 sets the 2D buffers. Leave the 20 as it is as the cabview sounds all require 2D buffers. Increase the 40. I have been using 200 for a good few weeks without any problems and no noticeable loss in performance. My line is
+
+                            <p><b>SoundSystem ( 5, 200, 20, 31457280 )</b>
+
+                            <p>I don't know how many simultaneous sounds my sound card can play but it is more than 60 for sure. Maybe it's less than 200, but I can't tell.</p>
+
+
+
+                            <p>Give it a go. Of course your PC spec will be different to mine so I can't guarantee anything, but I do only have a 1.33 Athlon, 512 Mb RAM and a &pound;10 5.1 CMedia chip based sound card. If things go funny go back to the default settings.</p>
+
+                            <p>I have deliberately avoided making a specific claim about improvement because the degree will depend on a number of factors.&nbsp; If you are using sounds that are (in terms of the sms complexity) closer to the default setup then benefits will be less. It may also be sound card dependant, but as I only have one, cheap, sound card I can't make much of a judgement. Personally I have found it a great improvement. I can have my player loco sat in a station and have both a frieght and a passenger train pass by. I can hear noises from each loco, coach and wagon. This would not be the case with the default setup.</p>
+
+                            <p>I have only said to increase the level 5 sounds to 200 because I reckon that if you aren't able (or choosing) to run the sims sounds at their highest level anyway then why try to improve them. If you look at the default sms's you will see that as a rule SG5 has more streams defined than SG3 which has more than SG1 which has more than SG0. (Note: SG2 and SG4 aren't used by MSTS). But, that said, there should be an improvement in terms of more simultaneous sounds being played for all the SG levels.</p>
+
+                            <p>You might also notice that by default the only difference between the SG levels is the last number in the SoundSystem() line. This specifies the amount of memory allocated to the sms system. From my observations so far in the Sound Test Interface the 30Mb (ish?) specified for SG5 is more than enough. But I have a highly aliased sound setup (ie no duplication of wav files occurs) so my observations may not be representative. I have happily run my system with 64Mb allocated to SG5 and had no stability or performance problems.</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "update">
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Important Update By Carlo Santucci (first mentioned July 2006 on UKTS)</h2>
+			<div class="entry">
+
+                        <p>There needs to be a couple of modifications to the soundcfg.dat file as a result of Carlo's studies.</p>
+
+                        <p>The second parameter in the SoundSystem line defines the amount of 3D sounds available (by 3D it is not meant stereo, but that they are sounds that change intensity depending from distance and having Doppler effect - in general external sounds - ), while the third parameter defines the amount of 2D (stereo) sounds available.</p>
+
+                        <p>Now in general you will have more external sounds than internal ones (think at a case of a long train where each wagon has maybe 2 or 3 external sounds). So it is advisable that 3D sounds are defined in quite bigger quantity that 2D sounds. In general you won't notice difference because 100 3D sounds is already an important amount, but it's more precise having the opposite.</p>
+
+                        <p>You won't ever need more than 100 2D (Stereo cabview or passengerview) sounds (this is Carlo's experience).</p>
+
+                        <p>The fourth parameter (amount of memory allocated) needs to be zero - this forces dynamic allocation/deallocation of sound memory which gives vastly improved results.  This adjustment will also eliminate the error of MSTS crashing in an Activity safter a Save or after pressing F11.</p>
+
+                        <p>So the appropriate line needs to read</p>
+
+                        <h3>SoundSystem ( 5, 400, 100, 0 )</h3>
+
+                        <p>for best results.</p>
+                        
+                        <p><a href="files/santucci_soundcfg.zip">Click here to download a ZIP file (1.33 KB (1,364 bytes)) containing Carlo's modified soundcgf.dat</a>.  Drag and drop this file into your MSTS\Global folder.</p>
+
+
+                        </p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+
+		</div>
+
+    <!--- end cause --->
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <p> <a href="#update">Important Update</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 13 Oct 2002, 14 Jan 2003, 16 March 2010</center></p>
+</div>
+</body>
+</html>

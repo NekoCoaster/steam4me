@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>Exporting a Freight Car from TSM to MSTS - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Exporting a Freight Car from TSM to MSTS</font>
+                        <br>by Paul DeVerter</h2>
+                        <br><h3>A Port City Car Co. Project
+                        <br>Copyright &copy; 2004</h3>
+                   <p></p>
+              <h2 class="title">Overview</h2>
+              <div class="entry">
+
+                   <p>The instructions found in Train Sim Modeler for exporting a freight car that you have just made to MSTS were written for Version 1.  They are found in Tutorial 2: A Two Axle Wagon, Section 4: Export to MS Train Simulator, p 170.  When the interface was changed for V1.1, the instructions were not updated, and should not be followed.</p>
+
+                   <p>The purpose of this tutorial is to record what needs to be done using the new and much simpler interface.  Once you have finished your freight car (and I think these same instructions will work for carriages and locomotives), here is what you do.</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "process">
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- placement --->
+
+		<div class="post">
+			<h2 class="title">The Process</h2>
+			<div class="entry">
+
+                   <p>
+                      <ol>
+                          <li>After your .dst file is completed, and while still in TSM go to <b>Menu | File | Project Properties</b> and fill out the form by completing the long name, short name, check Freight for the type of vehicle, and insert a number in Animation Frames greater than 1, and here I used 2.  I've found 7 and 9 also work.  If you do not raise it above 1, the wheels will not turn - they just slide along.  Why 2?  I don't know, except Tim Muir told me so, and it works.  Notice that the Short Name can be longer than 8 characters, but I do not know what the limit may be.  I have set this up for TrialBoxCar.  It has 2 bogies, each with 2 axles or wheel sets.</P>
+
+                          <p><img src="images/go_round11.jpg" width="652" height="436" alt="" border="0"></P>
+
+                          <p>Do not worry about the Locomotive Type; just ignore this box, since you can't get it to go blank anyway.  After you have done this click OK, and you are ready for the next step.</p></li>
+
+                          <li>Now go to <b>File | Create Train Simulator Object</b> and look at the blanks.  You will find the Target and Filename already filled out.  The Route and Class are grayed out. The Folder will get you to the TRAINSET when you press the little box at the end.  Here youneed to insert the name of the proposed Folder in which the Freight car will be
+
+                              <p><img src="images/go_round12.jpg" width="408" height="434" alt="" border="0"></p>
+
+                              <p>placed.  You can do this from this window, or you can use Window Explorer and do it the hard way.  Just make certain that the path to the desired Folder is shown in this box.</p>
+
+                              <p>Check all of the boxes shown, although I am not certain that you need to put anything in the New Sound and Cab Files box for a Freight car.  TSM will generate automatically a generic wag file for you - much easier than the prior Version method.  Now click on Continue.  This will result in TSM generating an ace file from your bmp or tga texture file(s); an s file, an sd file, and the wag file, all of which will be placed in the designated Folder.  You will soon see the Conversion Report window.</p></li>
+
+                          <li>The Conversion Report is contained in ConvReport.txt, a text file, and is a great record of what files have been generated and where they are located.  The original is found in the Abacus Train Simulator Folder.  You may copy it, and place it also in the same file as your working file where you keep the dst file for the project.  If you don't copy it, it will be overwritten the next time you create another Train Simulator Object.  It shows you the name it has generated for the ace file, as well as what it was generated from.  Also the names and locations of the s, sd, and wag files.  Here is what it looks like:</p>
+
+                              <p><img src="images/go_round14.jpg" width="568" height="300" alt="" border="0"></p></li>
+
+                          <li>The next thing to do is to go into the Consist Editor (found in the Activity Editor) and create a new consist including your new Freight car.
+
+                              <p><img src="images/go_round15.jpg" width="609" height="571" alt="" border="0"></p>
+
+                              <p>Now you do not see any couplers protruding from the TrialBoxCar, because I did not put any on the car yet.  I first wanted to see if it looked all right and if the wheels actually turned as they are supposed to.  Also to see if the trucks swiveled properly as the car goes around curves.  So, here is a photo of the project in the Simulator:</p>
+
+                              <p><img src="images/go_round16.jpg" width="429" height="265" alt="" border="0"></p>
+
+                              <p>Now we have a few problems.  Since there are no couplers, the cars are too close together.  And the bounding box is clear down at track level.  So these will have to be corrected in the sd file.  But we did learn that the wheels roll and the trucks swivel, so we are well on our way.</p></li>
+                              </ol></p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="credits">
+		</div>
+
+    <!--- end placement --->
+
+
+    <!--- sol hard --->
+
+		<div class="post">
+			<h2 class="title">Credits and Thanks</h2>
+			<div class="entry">
+
+                   <p>I was thoroughly confused by the process needed to export my first model in 2002, but Tim Muir came to my rescue, and told me what worked for him.  I just recently decided to build another freight car, and had to resurrect the procedure, so decided to write it down so that I wouldn't lose it again.</p>
+
+                   <p>Beta Testers: Ted Ahner</p>
+
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="morecars">
+		</div>
+
+    <!--- end sol hard --->
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#process">The Process</a>
+                 <br><a href="#credits">Credits And Thanks</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 8 December 2004, 28 April 2010</center></p>
+</div>
+</body>
+</html>

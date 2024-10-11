@@ -1,0 +1,291 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>3D Canvas Tutorial - Inventive Uses For The Pipe Builder Plugin - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li ><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png"  height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png"  height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Inventive Uses For The Pipe Builder Plugin</font>
+                        <br>by Paul "Decapod" Gausden</h2>
+                        <h3>Copyright &copy; 2004</h3>
+                        <p></p>
+			<h2 class="title">1. Locomotive Spring Hangers</h2>
+ 			   <div class="entry">
+
+                        <ul>
+                            <li>Add a cube to the scene.</li>
+                            <li>Divide the two lower edges into two (max/min Z) and join the two new points with the edge operation.</li>
+                            <li>Drag the new edge down slightly with the right mouse button
+
+                            <p><img SRC="images/3dc_sh1.jpg"></p></li>
+
+                            <li>Extrude the new edge and extend down.
+
+                            <p><img SRC="images/3dc_sh2.jpg" NOSAVE height=264 width=308></p></li>
+
+                            <li>Resize the whole object to about 0.03 wider and 0.03 shorter than the spring object.
+
+                            <p><img SRC="images/3dc_sh3.jpg" NOSAVE height=284 width=326></p></li>
+
+                            <li>Select the edges at both ends and run the pipe builder plugin - 4 sides, 0.025 diameter.  Position over the spring... et voila!   Relatively low poly (48 each) due to the lack of ends.
+
+                            <p>Incidentally, if you need covered ends on a pipe built with the plugin, the Solidify operation does the trick.
+                            
+                            <p><img SRC="images/3dc_sh4.jpg" NOSAVE height=273 width=392></p></li>
+                            </ul>
+
+                            <p>Comment:  "Very handy tip Paul. From the information you have given I can see many uses in addition to Train models - Bicycle frames,
+Candlelabra, any types of hose, chains etc" (Brentton Smith)</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+
+		</div>
+
+
+    <!--- end end overview --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">2. Ladder with Curved Top</h2>
+			<div class="entry">
+
+                        <p><table CELLPADDING=10 WIDTH="100%" border=1>
+                        <tr>
+                            <td><img src="images/3dc_lad_01.jpg" width="331" height="272" alt="" border="0"></td>
+                            <td VALIGN=CENTER>
+                            <ul>
+                                <li>Start with a default Cylinder</li>
+                                <li>use a rotational shift operation of 90 degrees to put it on its side.</li>
+                                <li>Use the multi-select tool on the right with the Ctrl + Alt keys held down to delete all the points *below* the centre line.</li>
+                                <li>This leaves half a cylinder (see image left).</li>
+                            </ul>
+                            </td>
+                        </tr>
+
+<tr>
+<td><img src="images/3dc_lad_02.jpg" width="341" height="320" alt="" border="0">
+</td>
+
+<td VALIGN=CENTER>
+<ul>
+<li>
+Add a default Cube.
+<br>&nbsp;</li>
+<li>Select the half cylinder object and run my "3DC Butt Objects" plugin.
+Select the cube from the tree view and Centre on X and Z, Maximum Y
+(There are other methods of doing this, but I find this quickest).
+<br>&nbsp;</li>
+<li>Merge the two objects into 1 with the Merge tool on the right.
+<br>&nbsp;</li>
+<li>Run the Weld to Range plugin to make sure there are no double points.
+<br>&nbsp;</li>
+<li>We now have a single object (see image left).</li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td><img src="images/3dc_lad_03.jpg" width="247" height="428" alt="" border="0">
+</td>
+
+<td VALIGN=CENTER>
+<ul>
+<li>
+Scale the object to the right dimensions (usually 
+about 0.4 in X & Z directions, about 0.7 Y).
+<br>&nbsp;</li>
+<li>
+In select face mode, right mouse drag the lower face to give the full length of the ladder.</li>
+<br>&nbsp;</li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/3dc_lad_04.jpg" width="357" height="542" alt="" border="0">
+</td>
+<td VALIGN=CENTER>
+<ul>
+<li>
+Hold down the Ctrl key and select the edges that make up both 
+sides of the ladder.
+<br>&nbsp;
+</li>
+
+<li>
+Run the Pipe Builder - I used 5 sides, 0.04 diameter.
+<br>&nbsp;
+</li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/3dc_lad_05.jpg" width="458" height="486" alt="" border="0">
+</td>
+
+<td VALIGN=CENTER>
+<ul>
+<li>
+There should now be 2 pipe objects in a single sub group - drag this 
+out of the way.
+<br>&nbsp;
+</li>
+
+<li>
+Reverse the process of extending the lower surface so it is now 
+at the position of the first rung.
+<br>&nbsp;
+</li>
+<li>
+14) Use the extrude operation, using the rung separation 
+value (about 0.3).
+<br>&nbsp;
+</li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/3dc_lad_06.jpg" width="413" height="478" alt="" border="0">
+</td>
+
+<td VALIGN=CENTER>
+<ul>
+<li>
+Select all the rung edges and run pipe builder (here I used 
+5 sides and 0.03 as values).
+<br>&nbsp;
+</li>
+<li>
+Delete the first object.
+<br>&nbsp;
+</li>
+<li>
+Some of the rungs were formed inside out - I needed to select 
+each in turn and run the invert operation.
+<br>&nbsp;
+</li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/3dc_lad_07.jpg" width="255" height="254" alt="" border="0">
+</td>
+
+<td VALIGN=CENTER>
+<ul>
+<li>
+Using the hierarchy, drag the "rung" pipe group 
+into the "sides" pipe group so it becomes a sub-group.
+<br>&nbsp;
+</li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/3dc_lad_08.jpg" width="311" height="580" alt="" border="0">
+</td>
+
+<td VALIGN=CENTER>
+<ul>
+<li>
+Change the position property of the rung group to XYZ of 0,0,0.
+<br>&nbsp;
+</li>
+</ul>
+</td>
+</tr>
+</table></p>
+
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+
+		</div>
+
+    <!--- end cause --->
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+               </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 7 May 2004, 16 August 2004, 19 April 2010</center></p>
+</div>
+</body>
+</html>

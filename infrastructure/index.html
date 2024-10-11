@@ -1,0 +1,595 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+      <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+      <title>Australian Infrastructure for MSTS at The steam4me Site</title>
+
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <link href="../style.css" rel="stylesheet" type="text/css" media="screen">
+      <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+      <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li><a href="../tutorials/index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li class="current_page_item"><a href="#">Infrastructure</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>>
+	</ul>
+	</font>
+</div>
+<div id="splash">
+<table width="100%" bgcolor="#333957">
+<tr>
+    <td align="left"><a href="http://steam4me.net"><img src="../images/S4M_Banner_left.png" nosave="" height="60" border="0"></a>
+    </td>
+    <td align="right"><img src="../images/S4M_Banner_Infrastructure.png" nosave="" height="60">
+    </td>
+</tr>
+</table>
+</div>
+<hr>
+<div id="page">
+	<div id="content">
+
+
+  <!-- newsitem -->
+
+		<div class="post">
+			<h2 class="title">Overview</h2>
+			<h2 class="title">16-July-2017
+                        <br><a href="">Infrastructure files are back!</a></h2>
+			<div class="entry">
+			<p>After a break of a couple of years, I found an old archived hard drive with an IDE interface.  I then resurrected a ten year old PC with that interface (most modern PCs only have SATA interfaces) so this took quite some time.  Work has now completed on bringing all the files back to this section. This section is now complete.</p>
+		    </div>
+			<p class="meta"><span class="posted">Posted on Friday 20 Nov 2015</span> <a href="" class="permalink"></a></p>
+		</div>
+
+
+  <!-- newsitem -->
+
+
+
+  <!-- newsitem -->
+
+		<div class="post">
+			<h2 class="title">20-Nov-2015
+                        <br><a href="">Infrastructure files are coming back!</a></h2>
+			<div class="entry">
+			<p> Infrastructure Section being rebuilt with the new page format: most links should work whilst "UNDER CONSTRUCTION" even if some images don't appear.  Files with visible thumbnail images will link to pages that have been updated recently.</p>
+		    </div>
+			<p class="meta"><span class="posted">Posted on Friday 20 Nov 2015</span> <a href="" class="permalink"></a></p>
+		</div>
+
+
+  <!-- newsitem -->
+
+  <!-- newsitem -->
+
+<div class="post">
+     <h2 class="title">12 April 2003</h2>
+     <div class="entry">
+     <h2>INTRODUCTION</h2>
+
+     While working on a route I started to find some "issues" with existing shapes for route development:
+
+     <ol>
+         <li>a lack of constant nomenclature meant that something like "factory3" (for example) could be anything from a small country warehouse to a large industrial complex;
+         <br>&nbsp;
+         </li>
+
+         <li> the .ACE files didn't necessarily have the same or even vaguely similar names to the .S and .SD files (eg "ukcrossgate.s" looks for "levelcrossing.ace") .&nbsp; After a couple of weeks, it became impossible to remember the filenames, necessitating running the .S file through SFM to uncompress it, then looking within the .S file at the names of the ACE files required for that model shape&nbsp; - most unsatisfactory;
+         <br>&nbsp;
+         </li>
+
+         <li>  no consistency on where to find the data required for adding the item to a .REF file; and
+         <br>&nbsp;
+          </li>
+
+          <li>no consistency of including, naming or placing readme.txt files, so an UNZIP could over-write a previous readme.txt which had been placed anywhere from \Microsoft<nobr> </nobr>Games\  to \Routes\MyRoute.
+          </li>
+     </ol>
+
+     <p>I therefore developed a standard which I'm using on all structures and infrastructure items at this site.&nbsp; I will still be using an installer, but the end-user will still need to move shape and texture files as well add the model's details to the .REF file, but this procedure will be made as consistent and simple as possible.</p>
+
+     <p> Every model on this page will open into a folder within the "Routes" folder of MSTS.&nbsp; This folder will be known as "<b>AU_AddOns </b>" and each model will install into its own folder underneath.&nbsp; Each model's .S, .SD, .ACE, readme, add_to_ref files will be consistently and clearly named so that you can identify all the components of the model;&nbsp; all WILL begin with AU_,
+something I introduced when this overall web site was initiated.&nbsp;
+
+     <p>See the image below for an example.
+     <center>
+     <p><img src="images/struc_01a.jpg" nosave="" height="520" width="350"></p></center>
+
+     <p>The "readme.txt"  and the "add_to_ref.txt"  will remain in the folder, shapes and textures will be in their own folders.&nbsp; This means if you need to re-install a model, or you wish to acknowledge the copyright owner in the route you will be distributing, you will have no trouble in finding this information.
+
+     <p>The readme.txt file will contain a folder map of what files go where as well as the classification and the name you will find it under when you click on <b>Placement | More </b> in RE (which brings up the "Object Selector" pane shown below).
+     <center><img src="images/struc_02.jpg" nosave="" height="443" width="330"></center>
+
+     <p>  I hope that this will assist the route builders in keeping track of their Australian model add-ons.
+
+<center>
+<h3>DOWNLOAD INSTRUCTIONS </h3></center>
+
+     <ol>
+         <li>Click on the Image beside the name of the model you are interested in; </li>
+         <br>&nbsp;
+         <li>the page that opens gives you a picture, a brief description and a link to download an .EXE file:&nbsp; download the .EXE file to a folder of your choice, perhaps "My Downloads".&nbsp; Then browse to the folder with Windows Explorer and double-click on the file to commence its installation.&nbsp; Click on "Next" or "Ok" to commence the installation and read the readme.txt printed on the screen;
+         <br>&nbsp; </li>
+
+         <li>&nbsp;you will then need to copy the shapes to the route's Shapes folder and the textures to the Texture folder.&nbsp; The add_to_ref file contains the fragment of code that needs to be added to the route's .REF file.&nbsp; Thereafter it's a simple matter to find the model in the <b>Placement | More  </b>section of Route Editor.
+         </li>
+         </ol>
+     </div>
+     <p class="meta"><span class="posted">Posted on 12-April-2003</span><a href="#" class="permalink">Return to top of page</a></p>
+</div>
+  <!-- newsitem -->
+
+<a name="sta">
+
+      <!--- vic carisbrook --->
+
+		<div class="post">
+                  <h2 class="title"><a href="carisbrook.html">Victoria - Carisbrook Station</a></h2>
+			<div class="entry">
+
+                  <div align="right"><a href="carisbrook.html"><img src="images/thumbs/carib_RSt.jpg" width="150" border="0" align="RIGHT"></a></div>
+
+                  <p><b>Carisbrook  Railway Station and Goods shed (VIC)</b>
+                  <br>3d model and textures by Russell Beer
+                  <br></p>
+
+                        </div>
+			<p class="meta"><span class="posted"><a href="#">Return to top of page</a></span><a href="carisbrook.html" class="permalink">Read More</a></p>
+			<a name="">
+		</a></div>
+
+    <!--- end vic carisbrook --->
+
+      <!--- vic gordon --->
+
+		<div class="post">
+                  <h2 class="title"><a href="gordon.html">Victoria - Gordon Station</a></h2>
+			<div class="entry">
+
+                  <div align="right"><a href="gordon.html"><img src="images/thumbs/gordon_t.jpg" width="150" border="0" align="RIGHT"></a></div>
+
+                  <p><b>Gordon Railway Station (VIC)</b>
+                  <br>3d model and textures by Russell Beer
+                  <br></p>
+
+                        </div>
+			<p class="meta"><span class="posted"><a href="#">Return to top of page</a></span><a href="gordon.html" class="permalink">Read More</a></p>
+			<a name="">
+		</a></div>
+
+    <!--- end vic Gordon --->
+    
+      <!--- vic talbot  --->
+
+		<div class="post">
+                  <h2 class="title"><a href="talbot.html">Victoria - Talbot Small Goods Sheds</a></h2>
+			<div class="entry">
+
+                  <div align="right"><a href="talbot.html"><img src="images/thumbs/TalbotGS_t.jpg" width="150" border="0" align="RIGHT"></a></div>
+
+                  <p><b>Talbot's Goods sheds (VIC)</b>
+                  <br>3d model and textures by Russell Beer
+                  <br>Two versions - with & without signs
+                  <br></p>
+
+                        </div>
+			<p class="meta"><span class="posted"><a href="#">Return to top of page</a></span><a href="talbot.html" class="permalink">Read More</a></p>
+			<a name="">
+		</a></div>
+
+    <!--- end vic talbot --->
+
+      <!--- vic med sig box  --->
+
+		<div class="post">
+                  <h2 class="title"><a href="VRmedSB.html">Victoria - Medium Sized Signal Box</a></h2>
+			<div class="entry">
+
+                  <div align="right"><a href="VRmedSB.html"><img src="images/thumbs/VRmedSB_t.jpg" width="150" border="0" align="RIGHT"></a></div>
+
+                  <p><b>Medium Sized Signal Box (VIC)</b>
+                  <br>3d model and textures by Russell Beer
+                  <br>Generic tall medium sized signal Box
+                  <br>Ballarat East Medium Sized Signal Box
+                  <br>&nbsp;
+                  <br>&nbsp;</p>
+
+                        </div>
+			<p class="meta"><span class="posted"><a href="#">Return to top of page</a></span><a href="VRmedSB.html" class="permalink">Read More</a></p>
+			<a name="">
+		</a></div>
+
+    <!--- end vic med sig box  --->
+    
+      <!--- vic lgr sig box  --->
+
+		<div class="post">
+                  <h2 class="title"><a href="VRlgeSB.html">Victoria - Large Size Signal Box</a></h2>
+			<div class="entry">
+
+                  <div align="right"><a href="VRlgeSB.html"><img src="images/thumbs/AU_vrBAL1_01_t.jpg" width="150" border="0" align="RIGHT"></a></div>
+
+                  <p><b>Large Signal Box (VIC)</b>
+                  <br>3d model and textures by Russell Beer
+                  <br>Ballarat "A" Large Signal Box
+                  </p>
+
+                        </div>
+			<p class="meta"><span class="posted"><a href="#">Return to top of page</a></span><a href="VRlgeSB.html" class="permalink">Read More</a></p>
+			<a name="">
+		</a></div>
+
+    <!--- end vic lge sig box  --->
+
+      <!--- nsw a4 --->
+
+		<div class="post">
+                  <h2 class="title"><a href="nsw_a4.html">New South Wales - Type A4 Railway Station</a></h2>
+			<div class="entry">
+
+                  <div align="right"><a href="nsw_a4.html"><img src="images/thumbs/nsw_a4_t.jpg" border="0" align="RIGHT"></a></div>
+
+                  <p><b>A4 type Country Railway Station (NSW)</b>
+                  <br>3d model and textures by Michael Thompson
+                  <br>&nbsp;
+                  <br>&nbsp;</p>
+
+                        </div>
+			<p class="meta"><span class="posted"><a href="#">Return to top of page</a></span><a href="nsw_a4.html" class="permalink">Read More</a></p>
+			<a name="">
+		</a></div>
+
+    <!--- end nsw a4--->
+    
+      <!--- nsw a8 --->
+
+		<div class="post">
+                  <h2 class="title"><a href="nsw_a8.html">New South Wales - Type A8 Railway Station</a></h2>
+			<div class="entry">
+
+                  <div align="right"><a href="nsw_a8.html"><img src="images/thumbs/nsw_a8_t.jpg" border="0" align="RIGHT"></a></div>
+
+                  <p><b>A4 type Suburban Railway Station (NSW)</b>
+                  <br>3d model and textures by Michael Thompson
+                  <br>&nbsp;
+                  <br>&nbsp;</p>
+
+                        </div>
+			<p class="meta"><span class="posted"><a href="#">Return to top of page</a></span><a href="nsw_a8.html" class="permalink">Read More</a></p>
+			<a name="">
+		</a></div>
+
+    <!--- end nsw a4--->
+
+      <!--- nsw pc2 --->
+
+		<div class="post">
+                  <h2 class="title"><a href="nsw_pc2.html">New South Wales - Type PC2 Railway Station</a></h2>
+			<div class="entry">
+
+                  <div align="right"><a href="nsw_pc2.html"><img src="images/thumbs/nsw_pc2_t.jpg" border="0" align="RIGHT"></a></div>
+
+                  <p><b>PC2 type Country Railway Station (NSW)</b>
+                  <br>3d model and textures by Michael Thompson
+                  <br>&nbsp;
+                  <br>&nbsp;</p>
+
+                        </div>
+			<p class="meta"><span class="posted"><a href="#">Return to top of page</a></span><a href="nsw_pc2.html" class="permalink">Read More</a></p>
+			<a name="">
+		</a></div>
+
+    <!--- end nsw pc2--->
+
+      <!--- nsw sig box --->
+
+		<div class="post">
+                  <h2 class="title"><a href="nsw_sb1912.html">New South Wales - 1912 Elevated Signal Box</a></h2>
+			<div class="entry">
+
+                  <div align="right"><a href="nsw_sb1912.html"><img src="images/thumbs/nsw_sb1912t.jpg" border="0" align="RIGHT"></a></div>
+
+                  <p><b>1912 Elevated Signal Box</b>
+                  <br>3d models and textures by Michael Thompson
+                  <br>&nbsp;</p>
+
+                        </div>
+			<p class="meta"><span class="posted"><a href="#">Return to top of page</a></span><a href="nsw_sb1912.html" class="permalink">Read More</a></p>
+			<a name="">
+		</a></div>
+
+    <!--- end nsw sig bo --->
+
+      <!--- nsw fettler --->
+
+		<div class="post">
+                  <h2 class="title"><a href="fettler.html">New South Wales - Fettler's Shed</a></h2>
+			<div class="entry">
+
+                  <div align="right"><a href="fettler.html"><img src="images/thumbs/fettler_t.jpg" border="0" align="RIGHT"></a></div>
+
+                  <p><b>Fettler's Shed (NSW)</b>
+                  <br>3d model by Gavin Woolf
+                  <br>textures by Michael Thompson
+                  <br></p>
+
+                        </div>
+			<p class="meta"><span class="posted"><a href="#">Return to top of page</a></span><a href="fettler.html" class="permalink">Read More</a></p>
+			<a name="">
+		</a></div>
+
+    <!--- end nsw fettler --->
+    
+      <!--- nsw signs posts --->
+
+		<div class="post">
+                  <h2 class="title"><a href="nsw_signs.html">New South Wales - Speed limit and mile posts</a></h2>
+			<div class="entry">
+
+                  <div align="right"><a href="nsw_signs.html"><img src="images/thumbs/nsw_post_t.jpg" border="0" align="RIGHT"></a></div>
+
+                  <p><b>Speed limit and mile posts (NSW)</b>
+                  <br>3d models and textures by Peter Newell
+                  <br>&nbsp;
+                  <br>&nbsp;</p>
+
+                        </div>
+			<p class="meta"><span class="posted"><a href="#">Return to top of page</a></span><a href="nsw_signs.html" class="permalink">Read More</a></p>
+			<a name="">
+		</a></div>
+
+    <!--- end nsw signs--->
+
+    <a name="other">
+    <a name="veg">
+
+ <!--- dry grass --->
+
+		<div class="post">
+                  <h2 class="title"><a href="drygrass.html">Dry Grass Texture</a></h2>
+			<div class="entry">
+
+                  <div align="right"><a href="drygrass.html"><img src="images/thumbs/CDGrassT.jpg" border="0" align="RIGHT"></a></div>
+
+                  <p><b>Dry Grass Texture</b>
+                  <br>3d models and textures by Chris Nelson
+                  <br>&nbsp;</p>
+
+                        </div>
+			<p class="meta"><span class="posted"><a href="#">Return to top of page</a></span><a href="drygrass.html" class="permalink">Read More</a></p>
+			<a name="">
+		</a></div>
+
+    <!--- end dry grass--->
+
+ <!--- wattle --->
+
+		<div class="post">
+                  <h2 class="title"><a href="wattle01.html">Golden Wattle Tree</a></h2>
+			<div class="entry">
+
+                  <div align="right"><a href="wattle01.html"><img src="images/wattle_01.jpg" width="150" border="0" align="RIGHT"></a></div>
+
+                  <p><b>Golden Wattle Tree</b>
+                  <br>Textures by Christopher Sos
+                  <br>&nbsp;</p>
+
+                        </div>
+			<p class="meta"><span class="posted"><a href="#">Return to top of page</a></span><a href="wattle01.html" class="permalink">Read More</a></p>
+			<a name="">
+		</a></div>
+
+    <!--- end wattle--->
+    
+     <!--- palm --->
+
+		<div class="post">
+                  <h2 class="title"><a href="palm01.html">Canary Island Palm (~12m)</a></h2>
+			<div class="entry">
+
+                  <div align="right"><a href="palm01.html"><img src="images/palm01.jpg" width="150" border="0" align="RIGHT"></a></div>
+
+                  <p><b>Canary Island Palm Tree</b>
+                  <br>Textures by Yuri Sos
+                  <br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;</p>
+
+                        </div>
+			<p class="meta"><span class="posted"><a href="#">Return to top of page</a></span><a href="palm01.html" class="permalink">Read More</a></p>
+			<a name="">
+		</a></div>
+
+    <!--- end palm--->
+    
+     <!--- gum 1 --->
+
+		<div class="post">
+                  <h2 class="title"><a href="gumtree01.html">Australian Eucalypts (Set #1)</a></h2>
+			<div class="entry">
+
+                  <div align="right"><a href="gumtree01.html"><img src="images/gum_01.jpg" width="150" border="0" align="RIGHT"></a></div>
+
+                  <p><b>Australian Eucalypt Trees Set #1</b>
+                  <br>Four varieties
+                  <br>3d model and textures by James Hart
+                  <br>&nbsp;<br>&nbsp;<br>&nbsp;</p>
+
+                        </div>
+			<p class="meta"><span class="posted"><a href="#">Return to top of page</a></span><a href="gumtree01.html" class="permalink">Read More</a></p>
+			<a name="">
+		</a></div>
+
+    <!--- end gum1--->
+     <!--- gum2 --->
+
+		<div class="post">
+                  <h2 class="title"><a href="gumtree02.html">Australian Eucalypts (Set #2)</a></h2>
+			<div class="entry">
+
+                  <div align="right"><a href="gumtree02.html"><img src="images/gum_02.jpg" width="150" border="0" align="RIGHT"></a></div>
+
+                  <p><b>Australian Eucalypt Trees Set #2</b>
+                  <br>Eight varieties
+                  <br>Textures by Michael Thompson
+                  <br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;</p>
+
+                        </div>
+			<p class="meta"><span class="posted"><a href="#">Return to top of page</a></span><a href="palm01.html" class="permalink">Read More</a></p>
+			<a name="">
+		</a></div>
+
+    <!--- end gum2--->
+     <!--- fern --->
+
+		<div class="post">
+                  <h2 class="title"><a href="fern.html">Australian Tree Fern</a></h2>
+			<div class="entry">
+
+                  <div align="right"><a href="fern.html"><img src="images/thumbs/tree_fern_t.jpg" width="150" border="0" align="RIGHT"></a></div>
+
+                  <p><b>Australian Fern Tree</b>
+                  <br>Textures by Yuri Sos
+                  <br>&nbsp;<br>&nbsp;</p>
+
+                        </div>
+			<p class="meta"><span class="posted"><a href="#">Return to top of page</a></span><a href="fern.html" class="permalink">Read More</a></p>
+			<a name="">
+		</a></div>
+
+    <!--- end fern--->
+    <a name="stock">
+
+     <!--- kangaroo --->
+
+		<div class="post">
+                  <h2 class="title"><a href="kangaroos.html">Australian Kangaroos (Static)</a></h2>
+			<div class="entry">
+
+                  <div align="right"><a href="kangaroos.html"><img src="images/thumbs/kanga_t.jpg" width="150" border="0" align="RIGHT"></a></div>
+
+                  <p><b>Australian Kangaroos</b>
+                  <br>2d model and Textures by Paul Gausden
+                  <br>&nbsp;<br>&nbsp;</p>
+
+                        </div>
+			<p class="meta"><span class="posted"><a href="#">Return to top of page</a></span><a href="kangaroos.html" class="permalink">Read More</a></p>
+			<a name="">
+		</a></div>
+
+    <!--- end kangaroo--->
+    
+     <!--- kanghaz --->
+
+		<div class="post">
+                  <h2 class="title"><a href="kanghaz.html">Australian Kangaroos (Animated)</a></h2>
+			<div class="entry">
+
+                  <div align="right"><a href="kanghaz.html"><img src="images/thumbs/kanghaz_t.jpg" width="150" border="0" align="RIGHT"></a></div>
+
+                  <p><b>Australian Kangaroos (Animated)</b>
+                  <br>3d models, Textures and animation by Paul Gausden
+                  <br>&nbsp;<br>&nbsp;</p>
+
+                        </div>
+			<p class="meta"><span class="posted"><a href="#">Return to top of page</a></span><a href="kanghaz.html" class="permalink">Read More</a></p>
+			<a name="">
+		</a></div>
+
+    <!--- end kanghaz--->
+
+     <!--- birds01 --->
+
+		<div class="post">
+                  <h2 class="title"><a href="birds01.html">Australian Birds </a></h2>
+			<div class="entry">
+
+                  <div align="right"><a href="birds01.html"><img src="images/thumbs/birds01t.jpg" width="150" border="0" align="RIGHT"></a></div>
+
+                  <p><b>Australian Birds Vol 1</b>
+                  <br>2d model and Textures by Paul Gausden
+                  <br>Three varieties - cockatoos, galahs and crows - static and flying</p>
+
+                        </div>
+			<p class="meta"><span class="posted"><a href="#">Return to top of page</a></span><a href="birds01.html" class="permalink">Read More</a></p>
+			<a name="">
+		</a></div>
+
+    <!--- end birds01--->
+     <!--- emus --->
+
+		<div class="post">
+                  <h2 class="title"><a href="emus.html">Australian Emus </a></h2>
+			<div class="entry">
+
+                  <div align="right"><a href="emus.html"><img src="images/thumbs/emu_t.jpg" width="150" border="0" align="RIGHT"></a></div>
+
+                  <p><b>Australian Emus</b>
+                  <br>2d model and Textures by Paul Gausden
+                  <br>Two varieties</p>
+
+                        </div>
+			<p class="meta"><span class="posted"><a href="#">Return to top of page</a></span><a href="emus.html" class="permalink">Read More</a></p>
+			<a name="">
+		</a></div>
+
+    <!--- end emus--->
+  </a></div>
+
+
+	<!-- end #content -->
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+
+				<h2>Scenery Objects</h2>
+
+                   <p><a href="#sta">Stations etc</a>
+                   <br><a href="#other">Other Buildings</a>
+                   <br><a href="#veg">Vegetation</a>
+                   <br><a href="#stock">Livestock</a></p>
+
+				<h2>Utilities</h2>
+
+                   <p> <a href="../routes/xtracks.html">Xtracks</a>
+                   <br><a href="../routes/newroads.html">Newroads</a>
+                   <br><a href="..Routes/via_metrica.html">Via Metrica</a>
+                   <br><a href="../Route_Riter/index.html">Route_Riter</a>
+
+                
+	</p></div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2010 <a href="http://steam4me.net">steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>
+        <br><center>Updated: 12-April-2003, 16 January 2014, 20-Nov-2015, 14-Jul-2017</center></p>
+</div>
+</body>
+</html>

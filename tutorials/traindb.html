@@ -1,0 +1,311 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <meta name="Author" content="Yuri Sos">
+   <meta name="GENERATOR" content="ConTEXT  v0.98">
+   <meta name="Description" content="Improving MSTS: Increasing memory that can be used by MSTS">
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+
+   <title>Banish The "Error Reading Train Database File" Message - at the steam4me site</title>
+
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title"><title>Banish The "Error Reading Train Database File" Message</title>
+</font>
+                        <br>by Yuri Sos</h2>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                        <p>Don't you just hate this message?
+
+                        <p><img src="images/dbe0.jpg" width="808" height="635" alt="" border="0"></p>
+
+                        <p>It usually doesn't interfere with running MSTS, and you can click "Yes" to continue (so it's generally a non-fatal error), but every time you start or stop an activity or open the Activity Editor you're confronted with this message.  The activities that use this item of rolling stock usually can't be run either.</p>
+
+                        <p>I get 2-3 emails a week asking me where this error came from and how to get rid of it.</p>
+
+                        <p>The glib one-line answer is "<i>this error message means that there is a consist asking for a non-existent piece of rollingstock.</i>"</p>
+
+                        <p>Well, that's really helpful isn't it?</p>
+
+                        <p>I'm going to show you how to track down and eliminate these errors using Mike Simpson's incredible Swiss-Army knife fix-everything program, <b><a href="../Route_Riter/index.html">Route Riter</a> (versions 7.0.50 or higher).</b>.</p>
+
+<a NAME="setup"></a>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "start">
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Getting Started</h2>
+			<div class="entry">
+
+                            <p>Open Route_Riter (v7.0.50 or higher).</p>
+
+                            <p>Now the very first thing you should do is click the buttons indicated below in sequence.  Route_Riter will then check and adjust the case on all your consists and WAG files to make sure they all appear correctly in the sim.  Windows XP SP2 and higher is now very finicky about the case of the files:  Just click the buttons 1-5 and you've sorted all your case errors.  This might take some time, depending on the size of your MSTS Trainset folder.</p>
+
+                            <p><img src="images/dbe1a.jpg" width="780" height="647" alt="Route Riter - Select Quick Consist Check" border="0"></p>
+
+                            <p>Once that's done, click on the <b>Activities/Stock</b> tab (arrow #1 in the image below).
+                               <br>Click on the <b>Quick consist check</b> button (arrow #2 in the image below).</p>
+
+                               <p><img src="images/dbe1.jpg" width="780" height="535" alt="Route Riter - Select Quick Consist Check" border="0"></p>
+
+                               <p>Route_Riter will quickly check all the consist and then present you with a screen that looks like this:</p>
+
+                               <p><img src="images/dbe2.jpg" width="780" height="638" alt="Quick Consist Result Grid" border="0"></p>
+
+                               <p>What may not be immediately apparent is that there are three screens, screen #3 above - the "Consists and Associated Rolling Stock" screen - usually covering the other two (#1 being the main Route_Riter screen, #2 the Report Screen).  This top screen is an Excel-like grid showing all the consists with their component items of rolling stock.  The columns can be sorted by clicking on the column header.</p>
+
+                               <p>The bottom window of this screen displays names of consists with missing items of rollingstock.</p>
+
+                               <p>The other screen (smaller and thus initially hidden underneath) is a typical Route_Riter report screen (#2 above) which looks something like this:</p>
+
+                               <p><img src="images/dbe3.jpg" width="675" height="306" alt="Quick Consist Report Screen" border="0"></p>
+
+                               <p>As you can see,there are other errors apart from missing rolling stock - errors such as misplaced rolling stock and typographical errors.  Now that we have the Route_Riter reports, we can quickly and simply repair the three types of errors (misplaced, missing, typos) in the Consists.  Let's look at each one in turn.</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="misplaced">
+		</div>
+
+    <!--- end cause --->
+
+
+    <!--- misplaced --->
+
+		<div class="post">
+			<h2 class="title">Misplaced items of Rolling Stock</h2>
+			<div class="entry">
+
+                            <p>Route Riter v7.0.52 or newer now checks the consists as it populates the display grid.  If it finds a consist where the ENG or WAG file exists but is in the wrong folder, it presents you with the following screen, offering to repair the error automatically:</p>
+
+                            <p><img src="images/dbe101.jpg" width="641" height="126" alt="Replace Rolling Stock Dialogue Box" border="0"></p>
+
+                            <p>Answer Yes/No and it continues checking the consists.  When it finishes checking the consist the Report Screen reflects the repairs that have already been undertaken.</p>
+
+                            <p><img src="images/dbe3.jpg" width="675" height="306" alt="Quick Consist Report Screen" border="0"></p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="missing">
+		</div>
+
+    <!--- end misplaced --->
+
+    <!--- missing --->
+
+		<div class="post">
+			<h2 class="title">MISSING items of Rolling Stock</h2>
+			<div class="entry">
+
+                             <p>On the Report Screen, a typical error message has the format:</p>
+                             <p><b>"Missing - Folder_Name\filename.wag (or .eng) From Consist_filename.con"</b>.</p>
+
+                             <p>This means that Route_Riter has been unable to find a filename.wag (or.eng) ANYWHERE on your system and that either the folder or the WAG or both are absent from your MSTS installation.</p>
+
+                             <p>In the report above, an example is <b>"Missing - AU_sarPass\GBV.wag From AU_sar526_5car.con"</b>.</p>
+
+                             <p>Translating this message: Route_Riter has been unable to find the <b>"GBV"</b> item of rolling stock ANYWHERE on your system and that either the folder or the WAG or both are absent from your MSTS installation.</p>
+
+                             <p>To quote Bob the Builder "Can we fix it? YES WE CAN!"</p>
+
+                             <p>Go back to the "Consists and Associated Rolling Stock" screen.  Missing Items are shown in their own box with the name of the Consist and the ENG or WAG file name in Cyan, thus:</p>
+
+                             <p><img src="images/dbe6.jpg" width="864" height="548" alt="Consists" border="0"></p>
+
+                             <p>You now need to find the consist in the upper window: you can either scroll through the list or use the Search box at lower right.   Enter the filename in whole or part (even if not at beginning of filename, eg 526 will find 526tender, sar526engine, etc), and press "Enter".  To search for next file click "Next" or press "F3".  Case of search string doesn't matter.</p>
+
+                             <p>When you find the missing shape, it will be highlighted in red (unless the indicator bar is covering the item you are looking for - simply move it down and you will see the item in red):</p>
+
+                             <p><img src="images/dbe106.jpg" width="864" height="283" alt="Consists" border="0"></p>
+
+                             <p>If you click on "Change Sheet Format", it's easier to see the component parts of the consist you're looking at:</p>
+
+                             <p><img src="images/dbe7.jpg" width="864" height="548" alt="Consists" border="0"></p>
+
+                             <p><b>Left-click to select, then right-click</b> once on the item highlighted in red - AU_sarPass\GBV.wag in the example above - and after a few seconds a "Replace Rolling Stock Item" screen appears.  I immediately click on "Path" to sort the folders and scroll down to the folder I need and select the carriage I want to use instead of the missing "GBV".</p>
+
+                             <p><img src="images/dbe8.jpg" width="661" height="582" alt="Replace Rolling Stock Screen" border="0"></p>
+
+                             <ol>
+                                <li>Click on the item of rolling stock you wish to use;</li>
+                                <li>(Optional) Check the box to change any instances of GBV to the one we've selected;</li>
+                                <li>Click "Ok".</li>
+                                <li>A message appears saying "Modified Consist Activated";</li>
+                                <li>Click "Exit" to close this screen.</li>
+                             </ol>
+
+                             <p>Now when you return to the "Consists and Associated Rolling Stock" screen, you will see that the corrected wagon is highlighted in Green.</p>
+
+                             <p><img src="images/dbe9.jpg" width="866" height="533" alt="Corrected Consist" border="0"></p>
+
+                             <p>Note that the corrected ENG/WAG file appears on this screen at the top of the rolling stock list for that consist: don't worry, Route_Riter has correctly placed the new item in the same place in the consist as the one it replaced - in this case at the end of the train.  The image below shows the consist inside ConTEXT with the brake van where it should be at the end of the train.</p>
+
+                             <p><img src="images/dbe10.jpg" width="613" height="660" alt="Corrected Consist in ConTEXT" border="0"></p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+                        <a NAME="misc"></a>
+
+		</div>
+
+    <!--- end missing --->
+
+    <!--- misplaced --->
+
+		<div class="post">
+			<h2 class="title">Miscellaneous errors</h2>
+			<div class="entry">
+
+                            <p><b>Typographical errors</b> are the most common cause of errors in this category.</p>
+
+                            <p><img src="images/dbe3.jpg" width="675" height="306" alt="Quick Consist Report Screen" border="0"></p>
+
+                            <p>In the report screen above you will see the line</p>
+                            <p><b>Consist AU_8048le has an incorrect TrainCfg entry of A_8048le</b></p>
+
+                            <p>This error usually occurs when someone has edited the .CON file incorrectly.  Repair is simple: the consists are located in the Trains\Consists folder of your MSTS installation.  Open the affected consist file (AU_8048le.con in the example above) with a Unicode-aware Editor such as Wordpad or the excellent freeware <a href="context.html">ConTEXT Text Editor</a>.</p>
+<p>The TrainCfg line <b>must</b> match exactly the Consists filename - in this case it doesn't (<b>A_8048le</b> instead of <b>AU_8048le</b>):</p>
+
+<p><img src="images/dbe4.jpg" width="671" height="426" alt="ConTEXT screen" border="0"></p>
+
+<p>Correct the Traincfg line so that it reads exactly as the filename (and yes, CASE is important) as below, then save the file, thus eliminating that error:</p>
+
+<p><img src="images/dbe5.jpg" width="671" height="265" alt="ConTEXT screen consist corrected" border="0"></p>
+
+<p>Another typo that is easy to overlook - has the file been working until you edited it?  Check that you haven't inadvertently added a line feed at the beginning of your file (easy to do if you hit <b>Enter</B> twice when selecting a file to edit). Thanks to René Mikkelsen for this tip.</p>
+
+<p><img src="images/dbe5a.jpg" alt="Additional line feed at start of Eng file" border="0"></p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a NAME="end"></a>
+		</div>
+
+    <!--- end misplaced --->
+
+    <!--- Conclusion --->
+
+		<div class="post">
+			<h2 class="title">Conclusion</h2>
+			<div class="entry">
+
+                            <p>Finally, run the "Fix CON Files" option (number 3 in the image at top of this page) to ensure that any changes keep the case correct and that say you replace <b>LNER_BrakeVan</b> with <b>LNER Brake Van</b> then the Fix .con will ensure it is encased in quotes.</p>
+
+      			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a NAME="appendix"></a>
+		</div>
+
+    <!--- end Conclusion --->
+
+
+    <!--- appendix --->
+
+		<div class="post">
+			<h2 class="title">Appendix</h2>
+			<div class="entry">
+
+                            <p>I set up my MSTS for this tutorial by by creating a couple of consists of loco plus carriages.  I then copied the contents of the carriages folder to another folder, deleted one WAG file, then deleted the old folder. I also altered a line in another Consist file, thus setting up my MSTS  to demonstrate examples of the three most common errors:</p>
+                            <ol>
+                               <li>an item of rolling stock that is present in your MSTS installation, but in a different folder to that expected; </li>
+                               <li>an item of rolling stock that is not present in your MSTS installation; and</li>
+                               <li>a miscellaneous category such as a typographical error</li>
+                            </ol>
+
+                            <p>In other words, two consists that contained a piece of rollingstock that no longer existed as well as an item/items that was/were now found in another folder.  These are the two most common errors with consists.</p>
+
+      			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a NAME="end"></a>
+		</div>
+
+    <!--- end Conclusion --->
+
+    <!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#start">Getting Started</a>
+                 <br><a href="#misplaced">Misplaced Stock</a>
+                 <br><a href="#missing">Missing Stock</a>
+                 <br><a href="#misc">Miscellaneous Errors</a>
+                 <br><a href="#end">Conclusion</a>
+                 <br><a href="#appendix">Appendix</a>                              
+
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 28 August 2007, 19 March 2010, 17 Jan 2014</center></p>
+</div>
+</body>
+</html>
+

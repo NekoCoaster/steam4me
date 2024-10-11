@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>Adjusting Level Of Detail (LOD) In Train Sim Modeler - at The Steam4me Site</title>
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Adjusting Level Of Detail (LOD) In Train Sim Modeler</font>
+                        <br>by Alan Heath</h2>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                             <p>To demonstrate how simple this technique is, we are going to produce a basic house shape, then apply Level Of Detail (LOD) to that shape.</p>
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "start">
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- sol hard --->
+
+		<div class="post">
+                  <h2 class="title">Start With A Model</h2>
+			<div class="entry">
+
+                           <p>Start with a blank project in TSM.</p>
+
+                           <p>Make a box with the dimensions Width (X)=10, Height (Y)=15, Depth (Z)=15, set origin at bottom.  You should now see a oblong box on screen.</p>
+
+                           <p>Make another box: Width=10 Height=5 Depth=15, set the origin Y position to 15, origin at bottom.  You should now see a separate part above the old box.</p>
+
+                           <p>Select point Mode (F8), then select "Select" mode (F11).  In the "Front" view select the top two "Points".</
+
+                           <p>Press (S) to goto Scale mode, constrain the Y axis (Y) and scale the points until they meet.  You should see a rough house shape with a roof.</p>
+
+                           <p>Make another box, set the origin at the bottom, origin X position to -1.75, origin Y position to 17, origin Z position to 1.75. Width=1, Height=4, depth=1.  You should see a house with a roof and a chimney now.</p>
+
+                           <p><img SRC="images/lod1.jpg" NOSAVE height=525 width=700></center></P>
+
+                           <p>We now have a basic model of a house.</p>
+
+       		</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+                 	<A Name="define">
+		</div>
+
+    <!--- end sol hard --->
+
+    <!--- sol hard --->
+
+		<div class="post">
+                  <h2 class="title">Defining The Levels Of Detail (LODs).</h2>
+			<div class="entry">
+
+                      <p>At this point you would normally apply textures.  Always apply textures before defining LOD.</p>
+
+                      <p>I usually combine the shapes, but in this tutorial I am going to save the parts separately.&nbsp; I saved the parts as Box for the biggest box, Box1 for the roof box, Box3 for the Chimney part.</p>
+
+                      <p>From the menu select <b>Object | Properties.</b> Now Enter a value of 75, this refer's to the object being visible for up to 75 meters.&nbsp; Don't touch the Object Name!&nbsp;&nbsp; Press OK.</p>
+
+                      <p><img SRC="images/lod4.jpg" NOSAVE BORDER=0 height=134 width=382></p>
+
+                      <p>Now select from the menu, Click <b>Object | Add Object</b>.&nbsp; You should get another properties pop-up, enter your next distance level here, 150. Press OK.</p>
+
+                      <p><img SRC="images/lod5.jpg" NOSAVE height=135 width=380></p>
+
+                      <p>You have a blank screen, don't worry, select from menu <b>Part | Load</b>&nbsp; Select Box.</p>
+
+                      <p>Again select <b>Part | Load</b>&nbsp; Select Box1.</p>
+
+                      <p><img SRC="images/lod2.jpg" NOSAVE height=525 width=700></p>
+
+                      <p>You should see your house with no chimney.&nbsp; This shape will be visible beyond 75m through to the 150m which you set in the Properties.</p>
+
+                      <p>You have made 1 Level Of Detail:&nbsp; not loading the chimney box has reduced polygons and parts.</p>
+
+                      <p>Now select <b>Object | Add Object</b>, set to 750m. &nbsp; Press OK</p>
+
+                      <p><img SRC="images/lod6.jpg" NOSAVE height=132 width=380></p>
+
+                      <p>From menu select <b>Part | Load&nbsp;</b>.  Select Box.</p>
+
+                      <p>You now see just a box.&nbsp; That's it:&nbsp; you've defined three LOD; beyond 750m your object will vanish.</p>
+
+                      <p><img SRC="images/lod3.jpg" NOSAVE height=525 width=700></p>
+
+                      <p><b>Note:</b>&nbsp; You can cycle through the LODs by using SHIFT+(N) for Next and SHIFT+(P) for previous. (CTRL)+(HOME) returns you to the main object.</p>
+
+       		</div>
+        	<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end sol hard --->
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#start">Start With A Model</a>
+                 <br><a href="#define">Defining the LODs</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 7 Mar 2003, 1 April 2010</center></p>
+</div>
+</body>
+</html>
+

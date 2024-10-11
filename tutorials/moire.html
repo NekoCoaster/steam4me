@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>Getting Rid of Moir&eacute; Pattern by Altering the Shape File in MSTS - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Getting Rid of Moir&eacute; Pattern by Altering the Shape File</font>
+                        <br>by Scott Miller</h2>
+ 			   <div class="entry">
+
+                        <p>A moir&eacute; pattern is an interference pattern created, for example, when two grids are overlaid at an angle, or when they have slightly different mesh sizes - see <a href="http://www.mathematik.com/Moire/">this illustration of the Moir&eacute; effect from Mathematik.com.</a></p>
+
+                        <p>In MSTS, you will commonly see this effect on small repeating patterns such as this brick wall below:</p>
+
+                        <p><img src="images/brickwall_before.jpg" width="669" height="502" alt="" border="0"></p>
+
+                        <p>There are two ways to minimise this effect:</p>
+                        <ol>
+                            <li>You can reduce the effect somewhat by using my AceIt utility (packaged with Route_Riter): select the "Use Mipmaps" option when creating the ACE file.
+                            <br>&nbsp;</li>
+
+                            <li>Ultimately however, altering the error bias will optimise the shape: use a setting of -1, which appears to work well accross the board.
+
+                            <ul>
+                                <li>Open an uncompressed version of the .S file in the Unicode-aware editor of your choice;</li>
+                                <li>Search for "textures" (arrow #1 below);</li>
+                                <li>The value(s) you need to change is in the third position in a texture definition (arrow#2 below);</li>
+                                <li>change the -3 to a -1 (arrow #3);
+
+                                <p>So......
+
+                                <p><img src="images/moire_01.jpg" width="629" height="446" alt="" border="0"></p>
+
+                                <p>becomes</p>
+
+                                <p><img src="images/moire_02.jpg" width="629" height="446" alt="" border="0"></p>
+                                </li>
+                            </ul>
+
+                        <li>Save, quit (and recompress with Route_Riter, Zipper, Shape File Manager).</li>
+                        </ol>
+
+<p>Once this is done, the appearance improves dramatically.</p>
+
+        <p><img src="images/brickwall_after.jpg" width="669" height="459" alt="" border="0"></p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "link1">
+		</div>
+
+    <!--- end end overview --->
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 26-July-2006, 12 April 2010</center></p>
+</div>
+</body>
+</html>
+

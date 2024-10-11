@@ -1,0 +1,279 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>How to Make Additions to an Alpha Channel Using Paint Shop Pro - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li ><a href="../vans/index.html">Vans</a></li>		
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png"  height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png"  height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+                        <h2><font color="#3333FF">How to Make Additions to an Alpha Channel Using Paint Shop Pro</font>
+                        <br>by Paul DeVerter</h2>
+                        <h3>A Port City Car Co. Project Copyright &copy; 2004</h3
+
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                             <p>My prior tutorial uses a relatively simple approach to making alpha channels in Paint Shop Pro.  It was done entirely with the Selection Tools, and avoided all use of the "Mask" procedure.  One thing I did not cover was how to add additional alpha areas to your texture files.  The reason was, I had not figured it out. The more I tried, the more confused I became.</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "link1"</a>
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">A Texture with Original Alphas</h2>
+			<div class="entry">
+
+                        <p>We'll start off assuming you have read and understand the <b><a href="pdv_alpha1.html">How to Make an Alpha Channel tutorial</a></b>.  Since we are not going to make a project this time around, but only illustrate the principles of making the texture file, I will start off with an entirely different texture or bmp file.  It could be a billboard, or a structure side, where you would like to have a series of see-through holes.  Here is a BMP file to get us started:</p>
+
+                        <p><img src="images/pdv_alpha2_image001.jpg" width="290" height="312" alt="" border="0"></p>
+
+                        <p>The first thing to do is decide which areas are going to have the alpha channel,  and thus end up transparent in the model.  You need to pick a tool to do the job,  so let's pick one of the Selection tools: here I have chosen the Magic Wand tool.</p>
+
+                        <p><img src="images/pdv_alpha2_image003.jpg" width="312" height="308" alt="" border="0"></p>
+
+                        <p>Now, lets select several areas for our project.  Here I have clicked on the aqua pentagon, and then holding down the SHIFT key, have also selected the yellow ellipse and the red circle.  You know they are selected because of the marching ants or marquees about these three selections.</p>
+
+                        <p> <img src="images/pdv_alpha2_image005.jpg" width="284" height="306" alt="" border="0"></p>
+
+                        <p>What we have done is to select the areas that will <b>not</b> be masked out, and what we want to do is select the areas that will be alphaed out or become transparent. This is completely backwards to my logic, as what we want to select are the areas that are to be alphaed out.  But if you look at this as masking, then what we have done is to protect the areas that we can not see through.  So, we must <b>Invert</b> the selections, and we do that clicking <b>Menu | Selections | Invert</b>.</p>
+
+                        <p><img src="images/pdv_alpha2_image007.jpg" width="286" height="308" alt="" border="0"></p>
+
+                        <p>This results in the marquee now running around the outside of the texture as well as the three areas previously selected.</p>
+
+                        <p>We need to save these selections to an alpha channel.  This will complete our "Texture with Original Alpha" channels.  Click on <b> Menu | Selections | Save to Alpha Channel </b>.  A new window opens named Save to Alpha, and it has a Preview area.</p>
+
+                        <p><img src="images/pdv_alpha2_image009.jpg" width="642" height="302" alt="" border="0"></p>
+
+                        <p>This shows what the alpha channel will be treating as transparent areas will look like.  The three areas you selected to be transparent are shown in black, in the Preview of the alpha channel.</p>
+
+                        <p>If it looks OK, and it does, then click on OK.  A new window opens, called New Channel. It now has a name for the new alpha channel, and the default name is: Selection #1.</p>
+
+                        <p><img src="images/pdv_alpha2_image011.jpg" width="644" height="312" alt="" border="0"></p>
+
+                        <p>Overwrite with another name if you like, but remember that name.  Then click OK, and we are back to the bmp file that we started with, before we did the alpha thing. That is, it still has the marquee or marching ants going around the outside.</p>
+
+                        <p><img src="images/pdv_alpha2_image007.jpg" width="286" height="308" alt="" border="0">
+                        <img src="images/pdv_alpha2_image001.jpg" width="290" height="312" alt="" border="0"></p>
+
+                        <p>We need to eliminate those.  Press CONTROL-D (or right-click anywhere on the image), and the marquee (or marching ants) disappears, leaving what looks like the original bmp file. But, it is not identical as internally PSP has kept the alpha channel, which we just told it to save.</p>
+
+                        <p><b>Save As</b> the .BMP file as a .TGA file which will preserve the hidden alpha channel.  Be sure you used the Options instructions in the earlier Tutorial. Notice the image now shows: TGA as the file type.  Remember where you saved it.</p>
+
+			 </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "link2"</a>
+		</div>
+
+    <!--- end cause --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Alpha Channel and TGATool2</h2>
+			<div class="entry">
+
+                   <p>To show or prove that the alpha is really there, let's next go to the TGATool2, and see what we have.   Open that Utility, and click <b>File | Load </b> and find the TGA file which we just saved.  Select that file, and click Open.  Here is what you should have:</p>
+
+                   <p><img src="images/pdv_alpha2_image015.jpg" width="454" height="414" alt="" border="0"></p>
+
+                   <p>This is the proper .TGA file with the appropriate alpha channel, and the areas to be transparent are black.  So you may now use the file to make whatever structure that you choose, and close out of it when done.  Next comes the part where we add more areas to the alpha channel.</p>
+
+			 </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "link3"</a>
+		</div>
+
+    <!--- end cause --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Adding to the Alpha Channel</h2>
+			<div class="entry">
+
+                        <p>After you have begun to texture your model, you may discover that you need to invoke even more alpha areas.  How you do this little trick is the subject of the remainder of this tutorial.  The secret is that we must get back to the state where we have the texture file showing the prior selections, and then add to them.</p>
+
+                        <p>In PSP, bring up the .TGA file you <b>Saved As</b> a couple of steps ago. Click on Menu bar <b>Selections | Load From Alpha Channel</b>.</p>
+
+                        <p>You will now see the .TGA file and the <b>Load From Alpha</b> window appears.  In the Preview window you will see the same alpha has now shown up.  It is Selection #1 - a name you were asked to remember.  Click OK.</p>
+
+                        <p><img src="images/pdv_alpha2_image017.jpg" width="638" height="310" alt="" border="0"></p>
+
+                        <p>When you do, you are now back to the inverted file, where the marquee (or marching ants) is running around the outside of the texture, as well as about the items you had previously selected.</p>
+
+                        <p><img src="images/pdv_alpha2_image007.jpg" width="286" height="308" alt="" border="0"></p>
+
+                        <p>We need to return to the version as it was before we inverted the file, so that we can make more selections.  Go to Menu  <b>Selections | Invert </b> and click on <b>Invert</b>. This will remove the marquee from about the outside and put us back even one more step - namely back to where the selections are just around the original three areas.</p>
+
+			 </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "link4"</a>
+		</div>
+
+    <!--- end cause --->
+    
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Additional Selections</h2>
+			<div class="entry">
+
+                   <p>Recall that the first selections were made by holding down the SHIFT key, and clicking onto new areas with the Magic Wand Selection Tool.  We are going to do the exact same thing. Hold down SHIFT and choose some more areas that you would like to become transparent.  I have added the vertical yellow ellipse and the red star to our array.</p>
+
+                   <p><img src="images/pdv_alpha2_image021.jpg" width="284" height="310" alt="" border="0"></p>
+
+                   <p>Now we are going to repeat the same steps forward, just as we did before.</p>
+
+                   <p>Go to Menu <b>Selections | Invert</b> and click on <b>Invert</b>.  And guess what, the marquee is now traveling around the five selections we made, and also around the perimeter of the texture.</p>
+
+                   <p><img src="images/pdv_alpha2_image022.jpg" width="286" height="304" alt="" border="0"></p>
+
+                   <p>Next click on Menu  <b>Selections | Save to Alpha Channel</b>. This will bring up the Save to Alpha window:</p>
+
+                   <p><img src="images/pdv_alpha2_image023.jpg" width="630" height="304" alt="" border="0"></p>
+
+                   <p>The difference is that we have two channels in the Available alpha Channels box, namely Selection #1 and New Channel.  The New Channel shows in the Preview window all five of the areas we have selected, and the Selection #1 shows the alpha areas before we made the recent additions.  If you are happy with the New Channel, then it is time to get rid of the no longer useful Selection #1.</p>
+
+                   <p>Click on Selection #1 in the Available alpha channels box to make it active, and then click on <b>Delete</b>.</p>
+
+                   <p><img src="images/pdv_alpha2_image025.jpg" width="638" height="298" alt="" border="0"></p>
+
+                   <p>Up will come a further window asking "Are you sure you want to delete this alpha channel".  Click Yes.</p>
+
+                   <p>This brings you back to the Save to Alpha window once again. Click OK, and in the New Channel pop-up dialogue box that pops up, accept Selection #1 and click ok.</p>
+
+                   <p>Just as before you need to remove the marquee by pressing the CONTROL-D key.  SAVE the .TGA file with the added alpha areas.  You are done, except for checking it out in TGATool.</p>
+
+
+			 </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "link5"</a>
+		</div>
+
+    <!--- end cause --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Alpha Channel and TGATool, Again</h2>
+			<div class="entry">
+
+                   <p>You should know the drill.  Open up the TGATool utility, and load the latest version of the .TGA file, and here is what you should have.  The alpha channel now shows that you have successfully added additional alpha areas.</p>
+
+                   <p><img src="images/pdv_alpha2_image027.jpg" width="452" height="416" alt="" border="0"></p>
+
+                        </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "link6"</a>
+		</div>
+
+    <!--- end cause --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Conclusion</h2>
+			<div class="entry">
+
+                        <p>You have learned how to make a texture file with an alpha channel, and you have learned how to go into that file and add additional alpha areas at a later time.  And all by using the Selection Tools of PSP, and avoiding the conscious use of "masks". </P>
+                        
+                        <p>A final note: you do not need to use the Magic Wand, instead you can use any of the Selection Tools available.
+
+                        <h3><font face="Verdana">Credits and Thanks to:</font></h3>
+                        <P>Tim Muir, Ted Ahner, Ed Hawkins.</p>
+
+                        </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+
+		</div>
+
+    <!--- end cause --->
+
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#link1">Texture with Original Alphas</a>
+                 <br><a href="#link2">Alpha Channel and TGATool2</a>
+                 <br><a href="#link3">Adding to Alpha Channel</a>
+                 <br><a href="#link4">Additional Selections</a>
+                 <br><a href="#link5">Alpha Channel and TGATool, Again</a>
+                 <br><a href="#conclusion">Conclusion</a>
+               </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 1 November 2004, 29 April 2010</center></p>
+</div>
+</body>
+</html>

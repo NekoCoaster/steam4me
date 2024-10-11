@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>Using Route_Riter To Remove Empty/Unused Tiles When Preparing a Route For Release - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Using Route_Riter To Remove Empty/Unused Tiles When Preparing a Route For Release</font>
+                        <br>by Jim "Sniper297" Ward & Mike Simpson</h2>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                             <p>Tiles that don't have a WORLD file associated with them are tiles that are unused in the sim.  Removing these unused tiles can significantly reduce the download package and final installed size of a route.</p>
+
+                             <p>There are usually tens to hundreds of tiles that can be removed.</p>
+
+                             <p>A new function within Route Riter can help you delete these unused tiles (you may need to add a few back in, but Route_Riter does the bulk of the work for you in seconds).</p>
+
+                             <p>Before.......</p>
+
+                             <p><img SRC="images/rem_xstiles_01.jpg" width=675 height=600></p>
+
+                             <p>.... and after.........</p>
+
+                             <p><img SRC="images/rem_xstiles_03.jpg" width=675 height=601></p>
+
+                             <p>Where tiles are removed close to the track, I prefer to use view blocks instead: either a tree-line.....</p>
+
+                             <p><img SRC="images/rem_xstiles_05.jpg" width=800 height=600></p>
+
+                             <p>..... or a line of buildings to hide the edge of the tiled route from the normal MSTS views.</p>
+                             
+                             <p><img SRC="images/rem_xstiles_06a.jpg" width=800 height=600></p>
+
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "easy">
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Using Route Riter To Remove Unused Tiles</h2>
+			<div class="entry">
+
+                             <p>For versions of Route_Riter v7.0.66 or higher.</p>
+
+                             <p><img SRC="images/RR_66_unused_tiles.jpg" width=879 height=629></p>
+
+                             <p>Select your route and press <b>"Confirm Route"</b>.
+                             <br>Click on the TsUtils tab (arrow #1).</p>
+
+                             <p>Under the TsUtils tab is a new button <b>"Remove .t files where no .w exists"</b> (arrow#2).</p>
+
+                             <p>This function removes ALL files from the <b>myroute\TILES\</b> folder and places them in <b>myroute\RRBackups\Tiles</b> folder.  In the event of you being dissatisfied with the result, you have a complete copy of the original TILES folder.  Route_Riter then goes through all the .w files in the route, calculates the equivalent .t file name, and copies it (along with all associated .raw files) back into the main Tiles folder.</p>
+
+                             <p>Exercise care as this will remove tiles where there are large empty spaces (eg seascapes or deserts) in your route.</p>
+
+                             <p><img SRC="images/rem_xstiles_21.jpg" width=800 height=603></p>
+
+                             <p>Here's an example of an empty mountain tile being deleted. These will need to be added back in manually, but this still saves a LOT of manual labour!  Another point to make is that planting just one tree on that tile would have prevented its removal.</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="discuss">
+		</div>
+
+    <!--- end cause --->
+
+
+    <!--- sol hard --->
+
+		<div class="post">
+			<h2 class="title">Discussion</h2>
+			<div class="entry">
+
+                        <p>Part of the responsibility of a route builder is to produce a package that is as small as possible.  Route_Riter can eliminate many superfluous and unnecessary files which bloat download sizes.  In any route there are many tiles that are totally unused and empty.  These can be removed, reducing the download size for a route quite dramatically.  There are some simmers who prefer to "fly over" a route, using it as an enormaous model railroad.  Others prefer to use it as a simulation, restricting their views to those provided by MSTS. Whilst some route-builders incorporate a "cushion of empty tiles", I'm a bit of a fanatic when it comes to squeezing the download size to keep it in range of the 56k dialuppers. My method is to use view blocks instead (see images above).</p>
+
+                        <p>This is about priorities - in a perfect world you could have everything the way everyone wants it, no compromises necessary. I'm an old model railroader myself, and I've seen layouts where the scenery was beautiful but you could run only one train at a time around in endless circles. Other layouts had block control, passing sidings, and doubletrack so you could run a dozen trains at the same time, but the switching (shunting) possibilities were very limited.</p>
+
+                        <p>The original Port Ogden & Northern was a 16 foot by 1 foot bookshelf layout which was good ONLY for switching, there wasn't room for reverse loops or wyes. I actually built the PO&N in HO scale back in the 70's, never did finish the scenery though - once I had the trackwork and wiring complete I was too busy doing switching operations! That's how any hobby goes tho, you do what interests you the most, and only when you get bored with one aspect of the hobby do you move on to the next - then again, only when you have the time to spare.</p>
+
+                        <p>Vince Cockeram summarises this issue beautifully: <i>"I'm going to continue to treat this as a simulation only, NOT a tabletop train layout. If others wish to create a complete world, most of which cannot be seen from the driver or passenger view, so be it. I want, demand actually, a smooth running sim AND easly installable on an average machine available today. An over populated sim that has scenery items running miles beyond where you could ever see is to me, an exercise in futility.</p>
+
+                        <p>The futility that is of wanting to create a complete world and then ending up with a route that is unplayable except for being able to produce the most beautiful screenshots ever."</i></p>
+
+       			</div>
+
+		</div>
+
+    <!--- end sol hard --->
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#easy">Remove The Tiles</a>
+                 <br><a href="#discuss">Discussion</a>
+
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 12 September 2007, 20 March 2010</center></p>
+</div>
+</body>
+</html>
+
+

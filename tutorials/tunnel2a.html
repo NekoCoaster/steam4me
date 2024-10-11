@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>More Tunnel Tips - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">More Tunnel Tips</font>
+                        <br>by Jim Steven and Jim  "Sniper297" Ward</h2>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                      <p>Read <a href=tunnel.html>Creating Tunnels in MSTS</a> for an overview of creating tunnels.</p>
+
+                      <p>Quick reference summary:
+                      <ul>
+                         <li>Punch a hole in terrain with the "V" key;</li>
+                         <li>Place tunnel portal;</li>
+                         <li>Hide hole with transfers.</li>
+                      </ul>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "link1">
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Creating Tunnels - some additional pointers</h2>
+			<div class="entry">
+
+                   <p>This tutorial lists some extra points by two other authors that you may wish to consider.</p>
+
+                   <ul>
+                       <li> The two items that make the process easy or difficult are the current tile setting for "Error Bias" and the overall map setting for "Detail Scaling Factor".
+
+                       <p>If Error Bias is not zero, you end up with large triangles. If the Detail Scaling Factor is not small enough, you also get large triangles.
+                       </li>
+
+                       <li>Align the route track with the terrain using the WIRE FRAME mode. It's important to get the track lined up with a texture triangle's vertex to avoid needing to carve large regions from the terrain using the "Vertex Key" in the route editor.
+                       <br>&nbsp;</li>
+
+                       <li>Use wire frame to align the horizontal area below your track so it's flat. If you don't do that, you'll find it hard to cover the white hole that remains.
+                       <br>&nbsp;</li>
+
+                       <li>Use the Terrain Transfers to patch the hole - but as it says on the MS Site: Terrain transfers directly lower FPS - so use them sparingly.
+                           <ul>
+                               <li>Transfers start as 1x1 objects, so place them on terrain you can see so they don't hide below the terrain. ("inside the tunnel");</li>
+                               <li>Pieces should be sized rectangular and you'll learn one configuration of width/height retains the texture better than the other;</li>
+                               <li>Transfers have a side that fades out into the surrounding terrain. That side goes outward;</li>
+                               <li>Turn on Wire-Frame mode to see how the terrain and track line up with each other.  Try making the patchable surfaces as flat as you can. When you  overlap transfer pieces, they cause white flashing of the textures as the different "alpha" layers are calculated. (Transfers are "TGA" files with transparencies);</li>
+                               <li>Use the keyboard keys to rotate or move those transfers too. Less frustrating than a mouse. Line your camera view up so you see inside the tunnel;</li>
+                               <li>I would also set the tile's Error Bias to ZERO instead of the default so the texture triangles are easier to manipulate;</li>
+                               <li>Another thing that helps with the mountain is to use Wire Frame mode only to set heights. You have many times more control over the terrain than when the texture is on screen.</li>
+                           </ul>
+                       </li>
+                   </ul>
+                   <p><i>Jim Steven, MCSE, Senior Microsoft Windows Application Developer</i></p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "link2">
+		</div>
+
+    <!--- end cause --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Another Quick Tunnel Tutorial</h2>
+                      <h3>by Jim "Sniper" Ward</h3>
+			<div class="entry">
+
+
+          <p>Essentially it's just a matter of stacking tunnel entrances to hide overly large holes you've created with the "V" key.</p>
+
+          <p>The JP1singletunnel is the perfect size for single track, but it's too narrow outside to hide the gaps. The UKtunnel is wide enough outside, but too wide inside, so I combine the two.</p>
+
+          <p>Download PO&amp;Nver5.zip and install it, open it in the RE and poke around, "reverse engineering" is the easiest way to figure out how somebody did something. In some places you'll see multiple tunnel stacks, vertically and horizontally, but by setting the terrain tool "cutting" to 55-65, "width" to 12, and using a temp piece of 10 meter straight track (moving it where you want and hitting Y to cut away terrain), you can adjust the slope where the V key makes the hole.</p>
+
+          <p><img SRC="images/quiktunnel1.jpeg" NOSAVE height=450 width=600></p>
+
+          <p>This shot at right was before I learned how to make the holes smaller. That's why it has a tunnel section buried in the ground, to hide the big hole in the ground under the tracks! I later used that to make "floors" for the engine sheds.</p>
+
+          <p><img SRC="images/quiktunnel2.jpeg" width=600></p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end cause --->
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p><a href="#">Overview</a>
+                 <br><a href="#link1">Additional Pointers</a>
+                 <br> <a href="#link2">Another Tunnel</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 31 July 2002, 3 July 2005, 12 April 2010</center></p>
+</div>
+</body>
+</html>
+

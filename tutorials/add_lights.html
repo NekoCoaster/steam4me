@@ -1,0 +1,408 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+
+   <title>Adding lights to MSTS Rolling Stock - at The Steam4me Site</title>
+
+   <meta name="keywords" content="">
+   <meta name="description" content="">
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen">
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width="100%" bgcolor="#333957">
+<tr>
+    <td align="left"><a href="http://steam4me.net"><img src="../images/S4M_Banner_left.png" nosave="" height="60" border="0"></a>
+    </td>
+    <td align="right"><img src="../images/S4M_Banner_Tutorials.png" nosave="" height="60">
+    </td>
+</tr>
+</table>
+</div>
+<hr>
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color="blue"><h2 class="title">Adding lights to MSTS Rolling Stock </h2></font>
+                        <br>by Yuri Sos
+                        <p><a name="overview"></a></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                        <p>As you expand your stock of vehicles, it becomes time to add marker lights or tail lights to your vehicles even if they didn't come with them.  In this tutorial, I'm going to show you how to add lights to any of your rolling stock that will light up no matter whether it's a payer or AI train.</p>
+
+                        <p>I'm going to show you how to activate or install lighting in passenger and freight rolling stock.</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a name="req_soft">
+		</a></div>
+
+    <!--- end end overview --->
+
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Recommended Software</h2>
+			<div class="entry">
+
+                        <li><a href="../utilities/shape_viewer.html" target="_blank">MSTS Shape Viewer</a> (opens in new window); and </li>
+                        <li><a href="../utilities/shape_viewer.html#ptool" target="_blank">Positioning Tool</a> (opens in new window). </li>
+                        <li><a href="context.html" target="_blank">ConTEXT editor</a> (and preferably its highlighter tool as well) (opens in new window). </li>
+                        
+                        <p>Follow the links above to install these and we can get started.</p>
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end cause --->
+<a name="associate"></a>
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Associating MSTS Files</h2>
+			<div class="entry">
+
+                        <p>If you haven't already done this, "associate" .ENG and .WAG files with a text editor: this means that whenever you double-click on a file with the extension .ENG or .WAG, it will open with that editor.</p>
+
+                        <p>If you need to do this, <a href="associate.html" target="_blank">click here</a> for a new window/tab showing you how to do this using my favourite text editor, <a href="context.html">ConTEXT</a>.<p>And now to the part you came here for! ..........</p>
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end cause --->
+<a name="thenumbers"></a>
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Acquiring the Numbers for the Light's Position</h2>
+			<div class="entry">
+
+                        <p>The first step is to work out exactly where the light should be placed.  Fortunately Shape Viewer <b>(SV)</b> and the Positioning Tool <b>(PT)</b> make it easy to acquire the necessary dimensions - in fact you'll find it's probably quicker to do than it is to read how to do it .</p>
+
+                        <p>I'll use the default Scotsman Mail car as my example vehicle.</p>
+
+                        <ul>
+                            <li>Browse to the Scotsman folder and right-click on <b>scotsmailcar.wag</b>.
+                            <br>Click on <b>Sview.exe</b> and the carriage will open in SV.<br>
+                            <p><img src="images/open_sv.jpg" width="720"></p></li>
+
+                            <li>In SV, press <b>F3</b> and browse to folder containing 1PosTool.
+                            <br>You will see a "no match" message.
+                            <br>From the drop-down box to the right of the filename, select <b>MSTS .s file (*.s)</b>.
+                            <p><img src="images/open_sv_2.jpg"></p>
+                            <br>lick on Postool.s to open it.<br>
+                            <p><img src="images/open_sv_3.jpg"></p></li>
+
+                             <li>The PT will appear under the carriage (at the origin of the original shape) and may be hard to see.  The adjustment panel allows you to move the PT shape: click on the open section between arrow and slider to advance by 1m, click on the arrows to move PT by 0.01m.
+                            <p><img src="images/sv_pt_01.jpg"></p>
+                             It'll only take you a few seconds to move the PT to the end of the carriage (which is on right side of screen).  Click <b>Front/Rear</b> to the left (increasing the negative value meaning it's moving to the rear) and <b>Up/Down</b> a couple of times to move it up towards its approximate height.
+                             <p><img src="images/sv_pt_02.jpg"></p>
+                             Once the PT is clear of the rear of the carriage, select <b>Tools | Camera | Rear</b> to turn the carriage end on.
+                             <p><img src="images/sv_pt_03.jpg"></p></li>
+                             <li><p>Click <b>Tools | Orthogonal Projection</b>.  This removes perspective and will give you accurate placement of the PT.
+                            <p><img src="images/sv_pt_04.jpg"></p></li>
+
+                            <li>Now use the <b>Up/Down</b> and <b>Left/Right</b> sliders to move the PT over the marker light graphic (or what I think is the marker light graphic).  <b>DO NOT MOVE</b> the <b>Front/Rear</b> slider yet.
+                                <br>You now have the x and y co-ordinates for the marker light: in this example x = -0.93 and y = 2.06.
+                                <p><img src="images/sv_pt_05.jpg"></p></li>
+
+                            <li>Click <b>Tools | Orthogonal Projection</b>.
+                                <br>The PT looks to have moved - it hasn't!  <b>Trust me!</b>
+                                <br>Do not touch the the <b>Up/Down</b> and <b>Left/Right</b> sliders.
+                                <p><img src="images/sv_pt_06.jpg"></p> </li>
+
+                            <li>Now move the <b>Front/Rear</b> slider forward (ie to the right) one arrow-click at a timeuntil the PT just disappears. Here it's disappeared at -8.69m, only the  tips of the vane of the PT are visible.
+                                <p><img src="images/sv_pt_07.jpg"></p></li>
+
+                            <li>One arrow-click (0.01m) back (left) and the PT appears. You know you have the right position when you see the PT appear/disappear with just one click of the slider: see image below and compare the difference between -8.69m (above) and -8.7m.
+                                <br>You now have the exact z co-ordinate (z = -8.7).
+                                <p><img src="images/sv_pt_09.jpg"></p></li>
+
+                            <li>Have a look at the side view - you can see the PT snug against the end of the carriage.
+                            <p><img src="images/sv_pt_10.jpg"></p>
+</li>
+                             <li>So these are the co-ordinates you need: <b>-0.93 2.06 -8.7</b>
+                             <br>As I said above, <b>much</b> easier to do than to explain.
+                             <br>Now to place them in the .WAG file.</li>
+                        </ul>
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end cause --->
+   <a name="codingwag"></a>
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Inserting the Code into your .WAG file</h2>
+			<div class="entry">
+                        <p>At the end of this tutorial are three blocks of code that will take cae of positioning the marker light(s).  Using ConTEXT or similar ediitor open the .WAG file and scroll to the bottom. Copy the required block of code (do include the top and bottom comment lines as you won't misplace a bracket.</p>
+                        <p>Insert a blank line IMMEDIATELY BEFORE the very last bracket in the .WAG file then paste in the block of code.  Move to the line
+<br><b>Position    ( n.nn n.nn -n.nn</b> #  x y z = left-/right+  up+/down- forward+/backward- all from model origin )
+ <br>and, using the figure we obtained above, change the line to read
+ <br><b>Position    ( -0.93 2.06 -8.7</b> #  x y z = left-/right+  up+/down- forward+/backward- all from model origin )</p>
+
+ <p>You also will need to  change radius to something like
+ <br><b>Radius     ( 0.25</b> # diameter of light in meters) </p>
+                         .
+
+
+                      </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+<a name="conclusion"></a>
+    <!--- end cause --->
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Conclusion</h2>
+			<div class="entry">
+                        <p>And here's the final result: </p>
+                        <p><img src="images/sv_pt_99.jpg" width="720"></p>
+
+                        <p>If you want two marker lights, it's usually just a metter of using the 2-marker light code below and inserting the position figures into both lighting parameters, but make one of the "x" values positive (eg 0.93 in our ongoing example here), the other negative (ie -0.93).  This will give you two marker lights equidistant from the centre of the rear of the carriage..... like this:</p>
+                        <p><img src="images/sv_pt_99_2lights.jpg" width="720"></p>
+
+
+                      </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+<a name="appendix"></a>
+    <!--- end cause --->
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Appendix: Blocks of Code For Marker Light(s) and EOT Devices</h2>
+			<div class="entry">
+
+                        <p>Shown below are three blocks of code, the first for a single red light, the second for a pair of marker lights and the third for a flashing rear red light.  You will only need to enter the figures for position of the light(s) and its size (diameter); the rest of the code is already set up for you.</p>
+
+<h3>SINGLE STEADY LIGHT</h3>
+<table border="2" bordercolor="blue">
+<tr><td>
+
+<b>
+<pre>
+<code>
+ <font size="-1">
+comment ( ===== lighting for last unit in train single steady light ========)
+    Lights    (    1
+
+        Light    (
+            comment( single solid Rear red light )
+            Type        ( 0 )
+            Conditions    (
+                Service  ( 2 # in service player or AI, not inert in siding )
+                    Unit ( 3 # last unit in train )
+            )
+            FadeIn    ( 0.5 )
+            FadeOut   ( 0.5 )
+            Cycle     ( 0 )
+            States    ( 1
+                State   (
+                    Duration    ( 0.0 )
+                    LightColour ( ffff0000 # red colour ff for full bright, 80 for half bright )
+                    Position    ( n.nn n.nn -n.nn #  x y z = left-/right+  up+/down- forward+/backward- all from model origin )
+                    Azimuth    ( 180 180 180 # 180 degrees points backwards)
+                    Transition ( 0 )
+                    Radius     ( 0.nn # diameter of light in meters)
+                )
+            )
+        )
+    )
+
+comment ( ====== end lighting code ====)
+</font>
+</code>
+</pre>
+</b>
+</td></tr></table>
+
+<p>&nbsp;</p>
+
+<h3><h3>TWIN Marker Lights</h3>
+
+<table border="2" bordercolor="blue">
+<tr><td>
+<b>
+<pre>
+<code>
+ <font size="-1">
+comment ( ===== lighting for last unit in train twin  steady lights ========)
+    Lights    (    2
+
+        Light    (
+            comment( single solid Rear red light left side)
+            Type        ( 0 )
+            Conditions    (
+                Service  ( 2 # in service player or AI, not inert in siding )
+                    Unit ( 3 # last unit in train )
+            )
+            FadeIn    ( 0.5 )
+            FadeOut   ( 0.5 )
+            Cycle     ( 0 )
+            States    ( 1
+                State   (
+                    Duration    ( 0.0 )
+                    LightColour ( ffff0000 # red colour ff for full bright, 80 for half bright )
+                    Position    ( -n.nn n.nn -n.nn #  x y z = left-  up+/down- forward+/backward- all from model origin )
+                    Azimuth    ( 180 180 180 # 180 degrees points backwards)
+                    Transition ( 0 )
+                    Radius     ( 0.nn # diameter of light in meters)
+                )
+            )
+        )
+Light    (
+            comment( single solid Rear red light right side)
+            Type        ( 0 )
+            Conditions    (
+                Service  ( 2 # in service player or AI, not inert in siding )
+                    Unit ( 3 # last unit in train )
+            )
+            FadeIn    ( 0.5 )
+            FadeOut   ( 0.5 )
+            Cycle     ( 0 )
+            States    ( 1
+                State   (
+                    Duration    ( 0.0 )
+                    LightColour ( ffff0000 # red colour ff for full bright, 80 for half bright )
+                    Position    ( n.nn n.nn -n.nn #  x y z = right+  up+/down- forward+/backward- all from model origin )
+                    Azimuth    ( 180 180 180 # 180 degrees points backwards)
+                    Transition ( 0 )
+                    Radius     ( 0.nn # diameter of light in meters)
+                )
+            )
+        )
+    )
+
+comment ( ====== end lighting code ====)
+</font>
+</code>
+</pre>
+</b>
+</td></tr></table>
+
+<p>&nbsp;</p>
+
+<h3>SINGLE FLASHING LIGHT</h3>
+<table border="2" bordercolor="blue">
+<tr><td>
+
+<b>
+<pre>
+<code>
+ <font size="-1">
+comment ( ===== lighting for last unit in train single flashing light ========)
+    Lights    (    1
+
+        Light    (
+            comment( single flashing Rear red light )
+            Type        ( 0 )
+            Conditions    (
+                Service  ( 2 # in service player or AI, not inert in siding )
+                    Unit ( 3 # last unit in train )
+            )
+            FadeIn    ( 0.5 )
+            FadeOut   ( 0.5 )
+            Cycle     ( 0 )
+            States    ( 2
+                State   (
+                    Duration    ( 0.35 )
+                    LightColour ( ffff0000 # red colour ff for full bright, 80 for half bright )
+                    Position    ( n.nn n.nn -n.nn #  x y z = left-/right+  up+/down- forward+/backward- all from model origin )
+                    Azimuth    ( 180 180 180 # 180 degrees points backwards)
+                    Transition ( 0 )
+                    Radius     ( 0.nn # diameter of light in meters)
+                )
+                State   (
+                    Duration    ( 0.35 )
+                    LightColour ( 00000000 # light is off )
+                    Position    ( n.nn n.nn -n.nn #  x y z = left-/right+  up+/down- forward+/backward- all from model origin )
+                    Azimuth    ( 180 180 180 # 180 degrees points backwards)
+                    Transition ( 0 )
+                    Radius     ( 0.75 # diameter of light in meters)
+                )
+            )
+        )
+    )
+
+comment ( ====== end lighting code ====)
+</font>
+</code>
+</pre>
+</b>
+</td><td></td></tr>
+</table>
+
+
+       			</h3></div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end cause --->
+
+     <!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#req_soft">Software</a>
+                 <br><a href="#associate">Associating Files</a>
+                 <br><a href="#thenumbers">The Numbers</a>
+                 <br><a href="#codingwag">Inserting Code into .WAG</a>
+                 <br><a href="#conclusion">Conclusion</a>
+                 <br><a href="#appendix">Appendix</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href="http://steam4me.net">http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 10 Feb 2003, 06 April 2010, 28-Feb-2021</center></p>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+<title>Making Windows Which Light Up In MSTS Buildings - at The Steam4me Site</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Making Windows Which Light Up In MSTS Buildings</font>
+                        <br>by Frank Carver</font> </h2>
+
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                             <p>I have noticed that most routes are not black at night anymore, but are now mostly twilight, this being exaggerated by the use of LCD monitors and better graphic cards. This causes the original MSTS building to appear BLACK with lighted windows whilst driving in the Simulator.</p>
+
+                             <p>I decided to do something about it and I started experimenting and I can now write this tutorial on "Making Buildings in TSM" but I'm sure the same system would apply to other 3D programs. These buildings only have ESD alternative texture (1) in the "SD" folder if you require snow or (0) if no snow is required.</p>
+
+                             <p>This system does increase the poly count of each model a little but I know they look better at night and can accept the higher poly count for this reason.</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "procedure">
+		</div>
+
+    <!--- end end overview --->
+
+
+    <!--- sol easy --->
+
+		<div class="post">
+			<h2 class="title">The Procedure</h2>
+			<div class="entry">
+
+                        <ol>
+    <li>First of all make an image in BMP or TGA for the building you want to texture, making sure all the windows and other required lighted items are
+        separated from the wall and roof textures as all windows and some of the other items will be required to be made into an alpha:
+
+        <p><img src="images/DOW_003.jpg" alt="" border="0"><img src="images/DOW_004.jpg" alt="" border="0">
+        <p>
+    </li>
+
+    <li>Make a basic normal building but without any windows and doors or anything else that require lighting at night as all these will be added as we go on with making this model.
+        <br>This building (below) was made up of four polygons on the front & four polygons on each end.
+        <br>The gable was made by pulling the two top polygons together.
+        <p><img src="images/DOW_005.jpg" alt="" border="0">
+        <p>Each poly was textured in Poly Mode.
+    </li>
+
+    <li>After texturing this model the windows can be fitted.
+        <p>At the front of the building a new box can be made at say 2.3m x 1.3m x .01m so that the 2.3 x 1.3 facing you: this poly will be <b>Solid Norm</b>.
+        <p><img src="images/DOW_006.jpg" alt="" border="0">
+    </li>
+
+    <li>Turn the building to the end mode and move the poly so that this window poly is just outside of the building wall.
+        <br>Place this box into poly mode delete the rear/ sides/top and bottom polygons, just leaving the one front polygon.
+        <br>This polygon can now be textured as a window and is better textured in texture mode.  This window is then copied and pasted.
+        <br>In Move mode move this copy one movement outside of the Solid Norm window as in the picture below.
+
+        <p><img src="images/DOW_007.jpg" alt="" border="0">
+
+        <p>Open the Current Item Properties and in Material change this copied window to Trans Hlfbright.</p>
+        <p>You can now copy & paste these two window polygons to anywhere on the model you wish them to be placed, changing the window frame to your liking.
+        <br>Don't forget that the solid poly is next to the wall and the Trans Hlfbright on the outer side but exactly in place over the solid poly.
+    </li>
+
+    <li>This building can now be created and the created accompanying ACE files can now be imported into TGATools.
+        <br>Click on the "Create Alpha Template" tab: this will generate the pictures as shown below.
+        <br>Mark out the Window Panes/Glass and any other Alpha item you require with the Selection Tool or Magic Wand in your Graphics program as with normal night painting.
+        <p><img src="images/DOW_008.jpg" alt="" border="0"><img src="images/DOW_009.jpg" alt="" border="0">
+    </li>
+
+    <li>Once these items in the pictures are marked, colour all visible items white and all others black; this will make only the window glass panes on the Trans Hlfbright item show in the model.
+        <p><img src="images/DOW_010.jpg" alt="" border="0"><img src="images/DOW_011.jpg" alt="" border="0">
+    </li>
+
+    <li>After the alpha pictures are painted, they can be saved and exported as ACE files with TGATools to the folder where your model is.  This will make a model as shown below.
+        <p><img src="images/DOW_012.jpg" alt="" border="0">
+    </li>
+
+    <li>The item can be checked in Shape Viewer to see if the windows panes light up OK.
+        <br>Load the item in Shape viewer, click the Lighting Tab, then move the Brightness slider to the left and the Latitude slider to the right; the item should darken as in the picture below but any part that is Trans Hlfbright should light up or stay normal.
+        <p><img src="images/DOW_013.jpg" alt="" border="0">
+`       <p>You will notice that the Pub Sign is lit up in the darkened model: that is because its fronts were ticked to Solid Hlfbright in the Current Item Properties; it does not require an Alpha as it is a Square Polygon.
+        <br>You can have just the two fronts of the sign lit by using the Poly Mode in your model maker; in the Current Item Properties just tick these Front Polys Solid Hlfbright and leave the Sign sides as SolidNorm.
+    </li>
+</ol>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="notes">
+		</div>
+
+    <!--- end speedup --->
+
+    <!--- notes --->
+
+		<div class="post">
+			<h2 class="title">Additional Notes</h2>
+			<div class="entry">
+
+<ul><li>After the model is placed in your route in Route Editor (and while you are still in the Route Editor) press the + key on the keyboard: the sun in the simulator will go through its 24 hour cycle and the night windows will light up while the model changes to a dark shade of colour.
+    <br>&nbsp;
+    </li>
+    <li>The ACE files for this type of building are not placed in the Night textures folder of your route as it will not work: it will not go completely black at night as it is controlled by the MSTS environment settings.
+    <br>&nbsp;
+    </li>
+    <li>As this model is set at 1 in ESD_Alternative_Texture it still requires a snow image Ace in the Snow folder if required.
+    <br>&nbsp;
+    </li>
+    <li>If you have a building you have made yourself, you can add some Trans Hlfbright window panes as above, change ESD alternative Texture to (1) in the .SD file of your model and remove the ACE file from the Night texture Folder.
+    <br>&nbsp;
+    </li>
+</ul>
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="#">
+		</div>
+
+    <!--- end notes --->
+
+
+
+	<!-- end #content -->
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p><a href="#">Overview</a></p>
+                 <p><a href="#procedure">Procedure</a></p>
+                 <p><a href="#notes">Additional Notes</a></p>
+
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 10 December 2009</center></p>
+</div>
+</body>
+</html>
+

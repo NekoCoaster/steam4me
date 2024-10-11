@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>Perfect Bridge Positioning - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Perfect Bridge Positioning</font>
+                        <br>by Lawrence Kellie (introduction by Bill Burnett)</h2>
+ 			   <div class="entry">
+
+                        <p>Bill Burnett wrote in a message on TrainSim.Com....</p>
+
+                        <blockquote><i>"Lawrence Kellie provided me with a technique for the perfect postioning of bridges and any other parallel object with track. And do I mean perfect, even if your track is on a grade! You can line up a ten mile bridge without so much as an inch variation from one end to the other. It is with Lawrence's permission that the technique is presented here. These are Lawrence's illustrations and mostly his wording."</i></blockquote>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "link1">
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Perfect Bridge Positioning</h2>
+			<div class="entry">
+
+                        <p>This procedure works best if your are currently laying track and you first lay the track across the area to be bridged, then you choose and place the bridge piece. (You can come back and place a bridge under some track that you laid some time ago, but it is not as easy.)</p>
+
+                        <ol>
+                            <li>Place the track that will have the bridge under it. Keep it selected, as shown below.</li>
+
+                            <p><img SRC="images/perb_01.jpeg" NOSAVE height=508 width=560></p>
+
+                            <li>You will need to write down some numbers from the Route Editor's Object Window.
+
+                            <p><img SRC="images/perb_02.jpeg" NOSAVE height=102 width=176></p>
+
+                            <li>This gives some values that will be very important for finding the track. Write down the entire "x" value: -320.513. Also, write down the name for the track piece (like A1t500mstrt.s) for the track you just placed.
+
+                            <p>Press F7 and look at the Route Editor. Is the <b>attached</b> end of the track in the same blue outlined tile as the camera is? If so, good. If not, move the camera so that it is in the same tile as the attached end of the track (as shown below).</p>
+
+                            <p><img SRC="images/perb_03.jpeg" NOSAVE height=484 width=540></p></li>
+
+                            <li>Look at the Camera window.
+
+                            <p><img SRC="images/perb_04.jpeg" NOSAVE height=129 width=174></p>
+
+                            <p>There are two values here that you need to write down. The "tile x" value (-12956) and the "tile z" value (14398). Write down these values making sure you keep straight which value is which.</li>
+
+                            <li>Place your bridge. Do not worry about getting it positoned. Just place it close to the track as shown below.
+
+                            <p><img SRC="images/perb_05.jpeg" NOSAVE height=419 width=563></p>
+
+                            <p>As you can see, it doesn't matter that the bridge is sitting on the track. Write down the filename (like "RailBridgeX1.s") of the bridge piece that you placed. The bridge name can be found by selecting the bridge, right clicking on it, selecting "Properties", and reading what Shape File it is. Save your work and exit out of the Route Editor.</li>
+
+                            <li>Open Windows Explorer and move to the \World folder for your route. Notice the weird filenames.
+
+                            <p><img SRC="images/perb_06.jpeg" NOSAVE height=53 width=144></p>
+
+                            <p>The top filename in the graphic above starts with a "w" then has "-012956" followed by "+14398" and then concluding with a dot w. Notice that those are the numbers for the "x tile" and "z tile" that you wrote down, except for the leading zero for the x tile number. That is the world file for that tile.</p>
+
+                            <p>Make sure you have a back up of this file!</li>
+
+                            <li>Open the file in WordPad.  Remember the x value from the Object window that you wrote down? That was the x value for the track piece. Now you want to find that piece. So, in WordPad, select "Edit", "Find", and the type in the value. In this example:
+
+                            <p><img SRC="images/perb_07.jpeg" NOSAVE height=222 width=413></p>
+
+                            <li>For the most part that value can be considered a unique identifier for the track piece. Click on "Find Next" and the following is found:
+
+                            <p><img SRC="images/perb_08.jpeg" NOSAVE height=187 width=404></p>
+
+                            <p>Notice that the filename, highlighted in blue, is the same filename you wrote down for the track piece.</p>
+
+                            <p>"Copy" the entire line highlighted in yellow.</li>
+
+                            <li>Find the bridge piece. Go back to the World tile file in WordPad and search for the name of your bridge piece. When you do this, here is what you will find:
+
+                            <p><img SRC="images/perb_09.jpeg" NOSAVE height=137 width=391></p>
+
+                            <p>Note: If you placed the bridge piece last, it will probably be at the end of the "Static" objects.</p>
+
+                            <li>"Paste" the QDirection values you copied from the track to the bridge. Save the World file and exit WordPad.<br>&nbsp;</li>
+
+                            <li>Open the Route Editor, load your route, and move to the location where you placed the bridge.
+
+                            <p><img SRC="images/perb_10.jpeg" NOSAVE height=336 width=569></p>
+
+                            <p>And there you have it. A perfectly aligned bridge!! (Now, just do NOT press F4)</p>
+
+                            <p>Move your bridge around, positioning it under the track, etc., and immediately save your work.</li></ol>
+
+                            <p>At first, this looks like an awful lot of trouble just to align a bridge or platform. But, after a few times, it becomes so familiar that you can zip though the process in a couple of minutes, saving all that frustration of manual alignment.</p>
+                            
+                            <blockquote><i><font color="#000099">"I want to sincerely thank Lawrence Kellie. I could not have built Sky City without this bridge alignment system."<br>Bill Burnett</i></blockquote>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end cause --->
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 31 July 2002, 12 April 2010</center></p>
+</div>
+</body>
+</html>

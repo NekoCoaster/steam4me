@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <title>Constructing A Steam Loco Using Train Sim Modeler - Part 4 - at The Steam4me Site</title>
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../../index.html">Home</a></li>
+		<li class="current_page_item"><a href="../index.html">Tutorials</a></li>
+		<li><a href="../../msts_errors.html">Error Messages</a></li>
+		<li><a href="../../steam/index.html">Steam</a></li>
+		<li><a href="../../electric/index.html">Electric</a></li>
+		<li><a href="../../passenger/index.html">Passenger</a></li>
+		<li><a href="../../diesel/index.html">Diesel</a></li>
+		<li><a href="../../freight/index.html">Freight</a></li>
+		<li ><a href="../../vans/index.html">Vans</a></li>
+		<li ><a href="../../routes/index.html">Routes</a></li>
+		<li><a href="../../utilities/index.html">Utilities</a></li>
+		<li><a href="../../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Constructing A Steam Loco Using Train Sim Modeler<br>Part 4</font>
+                        <br>by <a href="mailto: ROsbo77@aol.com">Richard Osborne</a></h2>
+                        <p></p>
+			<h2 class="title">Connecting Rods And Correcting Polygons</h2>
+ 			   <div class="entry">
+
+                   <p>We're getting close now. On a steam loco the single most difficult part to explain is the connecting rod. Once the penny drops, though, the principle is exactly the same for all other rods. Walschaert's, Stephenson, Joy, Baker, Southern or whatever all rely on pivots, motion &amp; rotation. If you're unsure of valve gear animation find a superb freeware animation program at:- <a href="http://www.tcsn.net/charlied" target="_blank">http://www.tcsn.net/charlied</a></p>
+
+                   <p>I'm not going to cover valve gears in this tutorial - if you master animating connecting rods you can animate anything else on a locomotive. If you study the valve gears you'll also see which parts don't move - some very well respected designers have published locos with basic errors.</p>
+
+                   <p>As usual this is one way - other designers have their methods. There is no right or wrong way - if it works, it works. I'd like to think this way has an elegance about it. <p>Before making the rods I've made the cylinders, plain tubes here with the ends split off. You'll also need small diameter tubes at the same centres. These will be used to align the little end &amp; will then serve as piston rods.</p>
+
+                   <p><img SRC="images/cyl_1.jpg"  height=386 width=550></p>
+
+                   <p>The connecting rod can be made from a single tube, closed on the outside. A little sketch shows me that I need 10 points, again I can put it in the correct place by using the same coordinates as the coupling rod.</p>
+
+                   <p><img SRC="images/rodlist.jpg"  height=366 width=410></p>
+
+                   <p>Without moving the axis - in 'point' mode - move the points until you get a decent shape. Here I've been too impatient - it would have been better to draw the horizontal rod.</p>
+
+                   <p><img SRC="images/c_rodm.jpg"  height=386 width=550></p>
+
+                   <p>If you look at the bottom of the big end in the screen shot above it isn't the shape you'd expect - we'll come back to that. It's become what I term an over-complex polygon.</p>
+
+                   <p><img SRC="images/c_rodm1.jpg"  height=386 width=550></p>
+                   <p><img SRC="images/c_rodm2.jpg"  height=386 width=550></p>
+
+                   <p>Nurdle the rod into a decent shape. When happy we need to rotate it - you're about to see why the axis location is so important. Rotate parts the same way you scale them, by dragging the mouse horizontally. When the small end is over the piston rod &amp; you're happy with it - press the 'ani' button; press BOTH ROTATION &amp; MOTION at 0 &amp; 8. You'll note the rotation is the same as the coupled rods. You could save the rotation from those rods &amp; use it on these. That's jumping ahead a bit. We'll do it the long way, if only to emphasise the sequence. We won't need to reload the disk we used for the coupled rod animation if we modified the rods. If not reload the disk; it's always saving these aids into another subdirectory - they'll come in useful for the next loco.</p>
+
+                   <p><img SRC="images/c_rod2.jpg"  height=386 width=550></p>
+
+                   <p>I've gone into 'Expanded Image' mode again. Slide the animation to position 1. MOVE the rod so that the axis is aligned with the coupled rod axis; press MOTION.</p>
+
+                   <p><img SRC="images/c_rod3.jpg"  height=386 width=550></p>
+
+                   <p>Then ROTATE the rod until the little end lines up with the piston rod, press ROTATION. You can't have both 'Move' &amp; 'Rotate' live at the same time.</p>
+
+                   <p><img SRC="images/c_rod4.jpg"  height=386 width=550></p>
+
+                   <p>Do the same for the other positions. Establish a sequence. Move - press Motion; Rotate - press Rotation; Next position. MMRR - next.</p>
+
+                   <p>That's all there is to it - all the mystique gone.</p>
+
+                   <p>Save the rod. I've animated gear with the names Walshaerts would know without problem. We've only got 4 rods - we might as well save these as rod03 &amp; rod04. <p>Before we change rod03 we'll look at the over-complex polygon problem. Cycle, in 'polygon' mode, until you come to the outside face. Subdivide the polygon, as has been said MSTS does this anyway - you're not adding to the polygon count. Look what's happening. TSM finds a "centre of gravity" for the centre point.</p>
+
+                   <p><img SRC="images/c_rod5.jpg"  height=386 width=550></p>
+
+                   <p>Fortunately, in this case, there's a simple cure. Go into 'point' mode &amp; move the centre point towards the big end until the triangles no longer overlap. Save it, load it &amp; convert it to rod04 the same way you made the second coupled rod.</p>
+
+                   <p><img SRC="images/c_rod6.jpg"  height=386 width=550></p>
+
+                   <p>This problem can occur when you don't expect it, couplings, steps etc. In extreme cases MSTS won't load - it'll call it a corrupted part &amp; refuse to accept it. You might have to delete triangles, add polygons or split parts until both TSM &amp; MSTS accept the parts. For this rod I might have needed to add a rectangle for the long part. KEEP PARTS SIMPLE. When things start to get complicated save often, possibly with different names. Export to MSTS often - it's a chore but there's no quick way of seeing you job progressing. It's easier if you can identify a problem, if one should occur, from the last half-dozen parts. Don't forget that MSTS draws EVERY polygon - then decides whether it'll be visible from that camera point. Keep polygons to the minimum - if it won't be seen don't draw it!</p>
+
+                   <p><img SRC="images/ontrak11.jpg"  height=463 width=551></p>
+
+                   <p>We'll need to make crossheads, guide bars &amp; modify the piston rods. The crossheads &amp; rods just move in one dimension, they'll have Motion only. You're on your own for now. The next tutorial will cover texturing in TSM. There are tutorials on the 'net, they're all for 3dstudio or Gmax.</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end end overview --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Copyright Notice</h2>
+			<div class="entry">
+
+                 <p><a href="copyright.html">Please read my copyright notice (click here)</a></p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end end overview --->
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p><a href="index.html">Part 1</a>
+                 <br><a href="TSMloco_02.html">Part 2</a>
+                 <br><a href="TSMloco_03.html">Part 3</a>
+                 <br><a href="#">Part 4</a>
+                 <br><a href="TSMloco_05.html">Part 5</a>
+                 <br><a href="TSMloco_06.html">Part 6</a>
+                 <p><a href="copyright.html">Copyright, T&C</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 2002, 02 April 2010</center></p>
+</div>
+</body>
+</html>

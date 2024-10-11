@@ -1,0 +1,248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <title>A Steam Loco for MSTS sing 3DCanvas Chapter 6 - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../../index.html">Home</a></li>
+		<li class="current_page_item"><a href="../index.html">Tutorials</a></li>
+		<li><a href="../../msts_errors.html">Error Messages</a></li>
+		<li><a href="../../steam/index.html">Steam</a></li>
+		<li><a href="../../electric/index.html">Electric</a></li>
+		<li><a href="../../passenger/index.html">Passenger</a></li>
+		<li><a href="../../diesel/index.html">Diesel</a></li>
+		<li><a href="../../freight/index.html">Freight</a></li>
+		<li ><a href="../../vans/index.html">Vans</a></li>
+		<li ><a href="../../routes/index.html">Routes</a></li>
+		<li><a href="../../utilities/index.html">Utilities</a></li>
+		<li><a href="../../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../../images/S4M_Banner_left.png"  height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../../images/S4M_Banner_Tutorials.png"  height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">A Steam Loco for MSTS Using 3DCanvas</font>
+                        <br>by Paul "decapod" Gausden</h2>
+                        <p></p>
+			<h2 class="title">Chapter 6 - Boiler, Funnel and Dome</h2>
+ 			   <div class="entry">
+
+                   <h2>Boiler</h2>
+
+                   <ol>
+                       <li>Add a cylinder primitive to the scene.<br>&nbsp;</li>
+                       <li>Instead of rotating it this time, I'll shift rotate the object instead (no real reason, other than it's different to last time). I right click on the shift operation button and enter the following:
+                           <p><img SRC="images/l6b1.jpg" ></p></li>
+                       <li>Select the cylinder and click on the shift operation - the cylinder should now be in the correct alignment for a boiler.<br>&nbsp;</li>
+                       <li>Scale the cylinder to the right size:
+                           <p><img SRC="images/l6b2.jpg" ></p>
+                       <li>Depending on how many polys you want at the end of it all, at this point I usually adjust the number of cylinder sides with the Open Source option for the shape. The boiler is worth using a few more it because of its size and it helps with specular shine. I usually stick to between 20 and 30 sides.<br>&nbsp;</li>
+                       <li>I run the shift centre plugin to the rear end of the cylinder to give myself a measuring point on the plan.<br>&nbsp;</li>
+                       <li>Now drag the new group into the Main group and adjust the group position properties to x = 0.0, y=2.83 (from plan centre line + 0.1 for the flange), z = -0.1 (the back of the cylinder is almost on the centre of the model). I also rename the new group "Boiler".
+                       <p><img SRC="images/l6b4.jpg" ></p></li>
+                       </ol>
+                       </p>
+
+
+                       <h2>Funnel and Dome...</h2>
+
+                       <p>(The more observant may notice a slight change in the size of the model here, but the principle is the same)
+                       <ol>
+                           <li>From the plan, take a few measurements...
+                               <p><img SRC="images/l6-1.jpg" ></p></li>
+                           <li>Build two cylinders the same size as the red rectangles... no need to change the number of sides above 16 here, often I actually lower the number to 14 or 12 to cut out lots of polys.
+                               <p><img SRC="images/l6-2.jpg" ></p></li>
+                           <li>Select the bottom face of the funnel object and run the "flare extrude" plugin. Enter the height and width or the green box as the extrude and bevel values - enter 2 and 1 for the other values. You could up the extrusions value to 3, but that makes more work later. Press OK.
+                               <p><img SRC="images/l6-3.jpg" ></p></li>
+                           <li>Do the same for the lower face of the dome object.<br>&nbsp;</li>
+                           <li>Repeat for the pale blue rectangle of the funnel.<br>&nbsp;</li>
+                           <li>For the dome top, repeat again, but this time the bevel value is negative half of the original cylinder diameter and the number of extrusions is increased to 3 (or 4 for extra smoothness).
+                               <p><img SRC="images/l6-4.jpg" ></p>
+                               <p>(for Remembrance, I entered a smaller bevel size to give a more flat topped dome)</p></li>
+                           <li>The dome needs a bit of optimising, for this you need to select the object and run the "Weld to Range" plugin available from the amabilis web site. - Enter a value of about 0.03, it should say "15 points welded". Then run the "Optimize" object operation.<br>&nbsp;</li>
+                           <li>I now use the standard Extrude Object Operation to add a small extrude with a negative bevel (dark blue box), then another extrude with 0.0 bevel for the top (purple line).<br>&nbsp;</li>
+                           <li>You could leave a flat top, but for just a few extra polys, I add a negative extrude for just over the full height of the funnel and a small negative bevel - this makes the funnel hollow. Then delete the centre circle at the bottom of this extrude (and optimize the object).<br>&nbsp;</li>
+                           <li>Now drag both new cylinder groups onto the Boiler group and position the groups according to the plan - with the object selected, you can use the Ctrl up/down arrow keys to fine tune the height so the centre of the boiler top just touches the base of both objects.
+                               <p><img SRC="images/l6-5.jpg" ></p></li>
+                           <li>Now use the Ctrl key to select both outside points, then move the cursor near one (till it turns yellow) and right drag the points downward simultaneously, till they touch the boiler top.
+                               <p><img SRC="images/l6-6.jpg" ></p></li>
+                           <li>Now select the four points next to these two (may require a bit of moving around as 3DC sometimes makes it hard to select these points) and repeat the simultaneous drag down with the right mouse button.
+                               <p><img SRC="images/l6-7.jpg" ></p></li>
+                           <li>Repeat again for the next four points, until you get to the centre line points.
+                               <p><img SRC="images/l6-8.jpg" ></p></li>
+                           <li>I also repeat steps 11 to 13 for some of the points on the next row up... not so critical on the funnel, but more important for the larger dome.
+                               <p><img SRC="images/l6-9.jpg" ></p></li>
+                           <li>Rrepeat 11 to 14 for the Dome.
+                           <    p><img SRC="images/l6-10.jpg" ></li>
+                       </ol>
+
+                       <p>Et Voila!</p>
+
+
+                        </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "check"</a>
+		</div>
+
+    <!--- end cause --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Q & A</h2>
+			<div class="entry">
+
+                   <h3>Q: Richard Osborne</h3>
+
+                   <p>Vaguely keeping up. I had to load parts from the newest version onto the chassis from a previous version - before I lost the animation. I haven't tried animating the rods again.</p>
+
+                   <p>Just built the boiler &amp; fittings, using the extrude tool. Used your flair plug-in but used a hemisphere on top of the dome. I tried multiple points - as soon as I right click they unselect; found it just as quick to pick front, then rear.</p>
+
+                   <p>It's getting easier as I'm learning the program though the constant crashing tries the patience a bit.</p>
+
+                   <h3>A: Paul Gausden</h3>
+
+                   <p>Unfortunately not much you can do about the crashes with windows 98 - more memory may help (and is relatively cheap)</p>
+
+                   <p>I too moved from Windows ME to XP - the stability is great, not just for 3DC, but lots of other programs seem to behave better now.</p>
+
+                   <p>There is a bit of a knack to multi-selecting and drag... Do the multi select of all points first, then move the mouse near one of the points so it turns yellow, then right click drag.
+
+                   <h3>Q: Richard Osborne</h3>
+
+                   <p>I've just had a far more satisfactory session with 3dc - managed to sort out the animation. More important no crashes.  I took the precaution of taking the bare chassis - in my case h16_2; saved it as h16_2anim before I started &amp; carefully went through the tutorial again. I think I was expecting too much first time. This time I worked through animating one thing - checking it before moving to the next. In hindsight, after a couple of goose-chases, the tutorial makes sense.</p>
+
+                   <p>I then went to the latest version, H16_6, &amp; repeated the steps I'd just taken. I had to have 2 attempts at the port-side rods but it worked.</p>
+
+                   <p>I had, as Decapod indicated, to realign the cylinders &amp; guides. I did this with the animation still live - mistake. Having put animation onto these parts I couldn't see how to remove it - I can't find where 3dc records animation; F2 in TSM, just clear it if you make a mistake. Had to delete the parts, reload &amp; move them. Rod animator obviously rewrites the crosshead group so just place the guides to the crossheads - assume there's no desaxe in the set-up.</p>
+
+                   <p>The split face, create triangle &amp; weld to range plug-ins have all been used - they fill in the gaps in 3dc &amp; echo they way I build in TSM - something about old dogs! Managed to get that very pronounced kink in the front footplate.</p>
+
+                   <h3>A: Paul Gausden</h3>
+
+                   <p><b>To remove animations for a group...</b>
+                   <br>Make the animation toolbar visible
+                   <br>Enter animation mode (press animate button)
+                   <br>Select the Group/object
+                   <br>Press the <b>Black</b> delete cross, Not the Red one!
+                   <br>Go back to modelling mode.</p>
+
+                   <p>I also forgot to mention in the tutorial - one your funnel and dome are correct - remove the underside faces, lots of polys hidden there.</p>
+
+                   <h3>Q: Ian McMillan</h3>
+
+                   <p>I have just about caught up, although I will hold off adding shading and weathering to the textures until nearer completion.</p>
+
+                   <p>I have the following observations on the instructions for this lesson:
+                   <br>1) using the shift operation with the given values, to lay the boiler over, you should specify the coordinate system you are using. I usually use world coordinates, so it would be 90 degrees around the X axis.
+                   <br>2) to use the plugin to move the axis to one end of the boiler, you need to select the end face then run the plugin. (there are no instructions on how this plugin works).
+                   <br>3) Doing the top of the dome, did you use 3 or 4 extrusions for the third parameter to the plugin?
+                   <br>4) No mention of deleting the bottom faces from the funnel and dome.
+                   <br>Other than that, a splendid lesson. The plug-ins really help with accuracy. I did the funnel and dome for the Terriers using the lathe tool, a lot of guesswork and estimation. I ended up building a huge funnel and then scaling it down in size to get a more accurate shape.</p>
+
+                   <h3>A: Paul Gausden</h3>
+
+                   <p>Thanks Ian,
+                   <p>I forgot to mention I was using the default edit mode, not world coordinates.
+                   <br>3) I used 4 as the 3rd parameter (sorry forgot that)
+                   <br>4) I added that to the end of the previous post.</p>
+
+                   <h3>Q: Richard Osborne</h3>
+
+                   <p>Being really rash now - animating valvegear! All going well but... both eccentric rods leap to the right, only about .1m but the port side rod sinks into the eccentric crank. I've tried a couple of times with the same result.</P>
+
+                   <p>Any ideas? I'm using the plug-in &amp; following the words.&nbsp; I'd used the black cross to lose animation - a screen appeared &amp; I couldn't reanimate the part. Used the red cross on h16_4, hence h16_5. It would be far better if the two crosses were distinctly different &amp; not close to each other.</p>
+
+                   <h3>A: Paul Gausden</h3>
+
+                   <p>It sounds like you may have moved the object whilst in animation mode... luckily I wrote a plugin for this situation (which has happened to me from time to time).</p>
+
+                   <p>Whilst in modelling mode, select the affected object (and make sure it is in the correct position) then run the Fix Animation Positions Plugin (or script if you have it) - this plugin removes all translational movement, but retains rotations - all of our animations, except for the piston motion should be purely rotational.</p>
+
+                   <p>If that's not the problem, I may need to take a peek at the 3DC file to see what's happening.<p>
+
+                   <p>Re black/red crosses:You're not wrong there&nbsp; The warning messages could do with big red flashing letters - I've used the wrong one more than once.
+
+                   </div>
+		   <p class="meta"><span class="posted"><a href="chap_9.html">Go To Chapter 9</a></span><a href="#" class="permalink">Return to top of page</a></p>
+
+		</div>
+
+    <!--- end cause --->
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <p><h3>Part 1 - Below the footplate</h3>
+                        <blockquote>
+                          <p><a href="steam3DC.html#start">0 - Beginners and reading</a></p>
+                          <p><a href="chap_1.html">Chapter 1 - Wheels</a></p>
+                          <p><a href="chap_2.html">Chptr 2 - Round Wheels</a></p>
+                          <p><a href="chap_3.html">Chptr 3 - Complex footplate shape</a></p>
+                          <p><a href="chap_4.html">Chptr 4 - Pistons and Valve gear</a></p>
+                          <p><a href="chap_5.html">Chptr 5 - Complex animations</a></p>
+                        </blockquote>
+
+                        <h3>Part 2 - Above the footplate</h3>
+
+                        <blockquote>
+                          <p><a href="#">Chptr 6 - Boiler, Funnel and Dome</a></p>
+                          <p><a href="chap_7.html">Chptr 7 - More Bodywork and Texturing</a></p>
+                          <p><a href="chap_8.html">Chptr 8 - Detailing</a></p>
+                          <p><a href="chap_9.html">Chptr 9 - More Detailing</a></p>
+                          <p>&nbsp;</p>
+                        </blockquote></p>
+
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 2002-2003, 22 April 2010</center></p>
+</div>
+</body>
+</html>

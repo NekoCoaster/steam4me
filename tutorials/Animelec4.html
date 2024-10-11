@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>How To Animate An Electric Loco (And Make Parts Move Using The P Key): Section 4 - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li ><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png"  height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png"  height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+                        <h2><font color="#3333FF">How To Animate An Electric Loco (And Make Parts Move Using The P Key): Section 4</font>
+                        <br> A Linecar with Rotating Gangplank
+                        <br>by Paul DeVerter</h2>
+                        <h3>A Port City Car Co. Project Copyright &copy; 2005</h3
+
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                   <p>This Linecar is a bit more complex than the one with the sliding gangplank.  We are going to use the same three parts but arranged to work differently.  We will have the same main part and the same elevating Tower that will raise from a running position to an elevated position.  But the Gangplank, instead of sliding out to the side, will rotate out after the Tower has reached its upper position.  Thus we will have two animated parts, one which moves linearly, and one which rotates.</p>
+
+                   <p>Here is what the Linecar with Tower and rotating Gangplank looks like in running position:</p>
+
+                   <p><img src="images/pdv_anim_loco_411.jpg" width="335" height="291" alt="" border="0"></p>
+
+                   <p>Since these are all essentially the same as the Sliding Linecar, the quickest way to make this loco would be to simply open your TSM file for that model, and then Save As, and pick a new name and Folder.  How about Linecar-Rotating.  Then make the changes to the Gangplank that will become obvious as we go along.</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "link1"</a>
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">The Process</h2>
+			<div class="entry">
+
+                   <p>If you chose to make a new model, then follow these instructions, and refer back to the Sliding Linecar for more detail.  Since all three parts are simple, proceed to make the body, which we will call Main, some reasonable length, width, and height.  I have chosen to again texture it yellow.  On top of this, about in the center, make a slightly wider elevator or Tower.  It will raise up toward the trolley wire when the P key is toggled.  I again colored mine red.  Then, the third and final part is the Gangplank, here colored turquoise, which will rotate out to the side after the Tower has finished rising upwardly.</p>
+
+                   <p>Just as with the Sliding Linecar locomotive, set the origin so that the Main is two or three feet above the origin, and the axes of the Main are on the origin.  The axes of the Tower may be conveniently left at the center of that part.  But the axes of the Gangplank need to be moved to the center of rotation, so once you have it constructed, and selected, hold down the SHIFT key and using the Move tool, shift the axes along the z axis till it is toward one end.  Here is a side view of what we have in TSM:</p>
+
+                   <p><img src="images/pdv_anim_loco_401.jpg" width="331" height="211" alt="" border="0">
+                   <img src="images/pdv_anim_loco_402.jpg" width="353" height="210" alt="" border="0"></p>
+
+                   <p>Now we need to take care of some nomenclature and other housekeeping chores, so let's go to Project Properties and once again pick an Electric locomotive a name such as Linecar-Rotate, and the number of animation frames, again 10.</p>
+
+                   <P><img src="images/pdv_anim_loco_403.jpg" width="658" height="335" alt="" border="0"></p>
+
+                   <p>We need to pick names for the parts that will be recognized by the P key, so again I have picked PantographBottom1 for the Tower, and PantographTop1 for the Gangplank.  And as noted in the Sliding Linecar, any of the other Pantograph Train Names could have been chosen, without regard to whether on top or not.  The Part Parent of both is Main, which happens to be the yellow body.</p>
+
+                   <p><img src="images/pdv_anim_loco_404.jpg" width="479" height="289" alt="" border="0">
+                   <br><img src="images/pdv_anim_loco_404b.jpg" width="475" height="273" alt="" border="0"></p>
+
+                   <p>If you have not already done so, now is a good time to texture your three pieces and save your work as well.  Let's move on to animation.</p>
+
+                   <p>Since the beginning frame of animation controlled by the P key is the non-powered frame, we will want the Tower to be up, and the Gangplank rotated outwardly in Frame 0, and down and parallel in the last Frame.  So, lets follow the same steps as with the Sliding Gangplank Linecar, and press the "Ani" button in the Menu.</p>
+
+                   <p><img src="images/pdv_anim_loco_405.jpg" width="359" height="254" alt="" border="0"></p>
+
+                   <p>Notice we again have 9 as the Last Animation Frame, and we want to set the first one, which will be Frame 0.  So make sure you have rotated the Gangplank outwardly, and then press Set Rotation.  I also pressed Set Motion, since this part has both rotation and motion. I am not sure you need to Set Motion for Frame 0, but I did anyway.  Now we want the rotation to be fairly slow, so let's move on to Frame 5.  Here we will rotate the Gangplank back to a position parallel to the Main, but still up in the air.  Once again press</p>
+
+                   <p><img src="images/pdv_anim_loco_406.jpg" width="659" height="252" alt="" border="0"></p>
+
+                   <p>both Set Motion and Set Rotation, and the Sim will interpolate the intermediate Frames.  Then lower the Gangplank to the bottom position, and move the slider over to the last frame which is Frame 9.  Press Set Motion and Set Rotation.  Again I am not certain that you needed to press the rotation button as there is no change in the rotation after Frame 5, but anyway, I did.  So here is a photo of Frame 9.</p>
+
+                   <p><img src="images/pdv_anim_loco_407.jpg" width="437" height="208" alt="" border="0"></p>
+
+                   <p>You need to make the usual animation for the Tower, except just like the Sliding Linecar, it has no rotation, only up and down motion so you will only press the Set Motion button.</p>
+
+                   <p>Check out the numbers in the Part Animation window (if you have forgotten how to get there then you need to reread Section 1).  Looking at the Gangplank, you will find it has numbers for both Motion and Rotation.  There is no difference between Frames 0 and 5 in the Motion Keys, because the Gangplank is not moving linearly, but is only rotating.  And you can see that is so by looking at Frames 0 and 5 of the Rotation Keys.  There you see that the Gangplank has rotated from 90° to 180°.  Then between Frames 5 and 9 in the Motion Keys, you will see that the Gangplank has lowered from 20.7 to 15.7.</p>
+
+                   <p><img src="images/pdv_anim_loco_408.jpg" width="367" height="415" alt="" border="0"></p>
+
+                   <p>Now check out the Part Animation window for the Tower.  Since there is no rotation, there should be nothing in the Rotation Keys, and numbers only in the Motion Keys.  If you are lost, then reread the instructions in Section 3, as the concepts are the same (in fact identical for the Tower) and the added wrinkle is simply the rotation of the Gangplank seen between Frames 0 and 5.  Now look at the Part Animation windows, and you should find exactly what I am talking about, when you compare the Gangplank above, and the Tower below.</p>
+
+                   <p><img src="images/pdv_anim_loco_409.jpg" width="371" height="314" alt="" border="0"></p>
+
+                   <p>And that is exactly what we have.  So now is the time to save everything again, and then to Create the Train Simulator Object.  By now you know how to check out what you should have in the Folder and Filename, as well as the Processing Options.  So do the</p>
+
+                   <p><img src="images/pdv_anim_loco_410.jpg" width="410" height="439" alt="" border="0"></p>
+
+                   <p>necessary, and then go to the Consist Editor and make a new consist for your Rotating Linecar.  Then go to Train Sim, and observe your new animated Linecar.  Here is what you should see, when you press the "P" key:</p>
+
+                   <p><img src="images/pdv_anim_loco_411.jpg" width="335" height="291" alt="" border="0">
+                      <img src="images/pdv_anim_loco_412.jpg" width="329" height="337" alt="" border="0"></p>
+                   <p><img src="images/pdv_anim_loco_413.jpg" width="333" height="327" alt="" border="0">
+                       <img src="images/pdv_anim_loco_414.jpg" width="324" height="325" alt="" border="0"></p>
+
+			 </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "conclusion"</a>
+		</div>
+
+    <!--- end cause --->
+
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Lessons Learned</h2>
+			<div class="entry">
+
+                   <p>Now you have successfully created a locomotive that is animated by the P key, and has parts that are successively moved linearly and then rotated.</p>
+
+                   <p>There is one problem with an animated pantograph, which you cannot ordinarily see.  If you were to place a passenger view into this locomotive such that you could view the Tower from View 5, you would notice that the Tower and Gangplank never rest - they are continually moving up and down and rotating.  If you have a passenger view in another car, such as a caboose, all looks well, just as it does in Views 2 and 3 in the Sim.  So, if you make an electric locomotive with a pantograph either do not have a View 5 in that locomotive, or else pick a viewpoint such that the motion of the pantograph is not visible.  There is one other cure, and that is to have a separate passenger view s file, which is called up in the eng file, when you use View 5.  In that case, View 5 will be looking, not at the main s file, but instead at the special s file you have created for that view.  An example of such a file is seen in the Illinois Traction System Class B locomotive, its1578.zip, in the Train-sim.com Library.</p>
+
+                   <p>Here are some photos of a fine Linecar made with all the bells and whistles, that this mock-up does not have.  This Linecar was made by Tim Muir and incorporates the animation you have just learned.  It has just been released, and you will find it in the Train-Sim Library as lc0077.zip, 7.5M, 21 Mar 2005.</p>
+
+                   <p><img src="images/pdv_anim_loco_415.jpg" width="573" height="310" alt="" border="0">
+                   <br><img src="images/pdv_anim_loco_416.jpg" width="569" height="282" alt="" border="0">
+                   <br><img src="images/pdv_anim_loco_417.jpg" width="553" height="314" alt="" border="0">
+                   <br><img src="images/pdv_anim_loco_418.jpg" width="800" height="600" alt="" border="0"></p>
+
+                   <p>Time now to move on to <a href="Animelec5.html">Section 5</a>, with a slightly different animation.
+
+                   </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+
+		</div>
+
+    <!--- end cause --->
+
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Series Contents</h2>
+                 <p> <a href="Animelec1.html">Section 1</a>
+                 <br><a href="Animelec2.html">Section 2</a>
+                 <br><a href="Animelec3.html">Section 3</a>
+                 <br><a href="#">Section 4</a>
+                 <br><a href="Animelec5.html">Section 5</a>
+                 <br><a href="Animelec6.html">Section 6</a>
+                 <br><a href="Animelec7.html">Section 7</a>
+                 <br><a href="Animelec8.html">Section 8</a>
+                 </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 12 April 2005, 30 April 2010</center></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>A Coach made with Gmax Chapter 9 - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <meta name="Author" content="Richard Osborne">
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+        <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">A Coach Made With GMax</font>
+                        <br>by Richard Osborne</h2>
+                        <p></p>
+			<h2 class="title">Chapter 9: Export To MSTS</h2>
+ 			   <div class="entry">
+
+                   <p>OK, we've seen it in SView, let's see it in MSTS. Hopefully we'll avoid the dreaded send/don't send screen. This normally means a fault with the texture files. For MSTS every polygon of every part must be textured, this is why we textured as we made the coach. Gmax doesn't show untextured polygons, you can isolate any in SView - they'll show white. Go to 'edit' 'textures' to check the texture files. Turn them all off; the entire model will be white. Turn them back on, any polys still white are untextured.</p>
+
+                   <P>Gmax will only export an .s file, it doesn't handle the associated files. The .sd & .wag files have to be written. I wouldn't expect you to write them from scratch; it's much simpler to alter existing files. The whole business of wagon physics is shrouded in mystery & magic. For copywrite reasons I'll suggest you alter one of the default files, being realistic find a coach similar to your needs & alter it. Some people have automatic couplers, some chain, some air brakes, some vacuum. British stock of this age should have vacuum brakes.</p>
+
+                   <P>Inside your MSTS/trains/trainset subdirectory you'll need a new folder 'lnwrcoach'. Copy the .ace & .s files from the project directory, rename the .s file to 'lnwr50brk1'. Naming your file is a bit of a pain, I found myself with yet another corr_3; the next email I opened was from someone suggesting a better way of naming. Subsequently after a little headscratching I use the company first, designer second, coach type next. Corr_3 became BRS_bull_corr3 for British Rail Southern_Bulleid_corridor_3rdclass. For this coach I used .wag & .sd files from one of my LSWR coaches. These were renamed lnwr50brk1 for LNWR_50ft_brake1st. Open both files, alter the .s file names & alter the lengths.</p>
+
+                   <P>All being well MSTS Activity Editor will read your file. Open one of your consists & add your coach.</p>
+
+                   <P><img src="images/ro_gmax_09_01.jpg" width="600" height="243" alt="" border="0"></p>
+
+                   <P>Look for the most important things first, does it sit well? Do the wheels & bogies rotate properly? You can see anything which needs to be amended; the windows are too opaque, the coach needs to be lifted for default rails etc.</p>
+
+                   <P>The main problems have all been solved if we can export to MSTS. 98% of the work has been done; everything from now on is just detail. There might be need to join parts to cut the number of parts down. The only proviso from now on is to keep the polygon count under control, handrails could have as many polys as the coach itself. At the moment I won't discuss Levels of Detail - the coach isn't detailed enough. When I've finished my coach I'll write another chapter. In the meantime you have enough to make a coach in Gmax. There's nothing like success, after a few coaches try a loco. You'll be surprised how quick it can be. The main thing is that you've tamed a difficult program - above all enjoy yourself, it's only a game.</p>
+
+                     </div>
+			 	<p class="meta"><span class="posted"><a href="#">Return to top of page</a></span><a href="ro_gmax_10.html" class="permalink">Go On To Chapter 10</a></p>
+
+             </div>
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Chapters</h2>
+<ol>
+<li><a href="ro_gmax_00.html">Overview</a></li>
+<li><a href="ro_gmax_02.html">Getting started</a></li>
+<li><a href="ro_gmax_03.html">First Texturing</a></li>
+<li><a href="ro_gmax_04.html">Modelling For Real</a></h3></li>
+<li><a href="ro_gmax_05.html">Texturing The Body</a></h3></li>
+<li><a href="ro_gmax_06.html">Alpha Channels</a></h3></li>
+<li><a href="ro_gmax_07.html">Wheels and Bogies</a></h3></li>
+<li><a href="ro_gmax_08.html">Interiors</a></h3></li>
+<li><a href="#">Export to MSTS</a></h3></li>
+<li><a href="ro_gmax_10.html">Texturing tricks and losing polygons</a></h3></li>
+<li><a href="ro_gmax_11.html">More Tricks and Tips</a></h3>
+<li><a href="ro_gmax_12.html">More about hierarchies</a></h3>
+</ol>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 24 August 2004, 19 March 2010</center></p>
+</div>
+</body>
+</html>
+
+
+
+
+
+

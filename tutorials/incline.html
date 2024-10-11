@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>Constructing an Incline Railway - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li ><a href="../vans/index.html">Vans</a></li>		
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png"  height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png"  height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Constructing an Incline Railway</font>
+                        <br>by Wayne Campbell</h2>
+                        <p></p>
+ 			   <div class="entry">
+
+                        <p>Here’s a project that may interest route builders.</p>
+                        <p><img src="images/wac_incline_01.jpg" width="700" height="525" alt="" border="0">
+                        <br><img src="images/wac_incline_02.jpg" width="700" height="525" alt="" border="0"></p>
+                        
+                        <p>This Inclined Railway was located at the west end of the L&PS’s Lake Erie beach terminal in Port Stanley ( Ontario, Canada ). It’s a well known structure and had to be included in my route. At first I considered a static model – and then I thought, maybe I could animate the cars so you could watch them go up and down. But then, why keep things simple – I finally decide I wanted to make the cars into a type of locomotive so that the operator could actually take a ride on the incline. I ended up with a model where the operator can ride in either car, and fully control the lifthouse to raise or lower the car on the incline.</p>
+
+                        <p>The trick was – how do I make one car come down while the other goes up! For those who want to give it a try, here are the essentials:</p>
+
+                        <ol>
+                            <li>The two tracks are actually connected at the top by six invisible curved track sections with a 1.5 meter radius and 30 degree angle. I custom made these sections and if I ever distribute the route, I’ll have to get the track sections added to the official TSECTION.DAT file.</p>
+                                <p><img src="images/wac_incline_03.jpg" width="646" height="525" alt="" border="0"></p>
+                            </li>
+
+                            <li>The two cars are connected by a 'train' of 1 meter long rope-shaped 'cars'. I built a model of a 1 meter long length of rope ( cable ) and wrote a .WAG file for it so that MSTS would think it was a railroad car. Then I could use the AE to place a consist consiting of the two cars joined by the correct number of rope sections. This is the secret to having the cars pass each other in the middle of the incline.
+
+                                <p><img src="images/wac_incline_04.jpg" width="648" height="534" alt="" border="0"></p>
+                            </li>
+
+                            <li>Finally the two cars were built - one as an electric locomotive and the other as a passenger car. That way the '5' and '3' view is in the second car and the '1' and '2' views are in the first car. I adjusted the .ENG file so it had only two throttle positions and two brake positions to simplify the operation. I created a cab view from inside the first car. I also adjusted the physics to give the 'locomotive' car plenty of power and traction for climbing the hill.
+                                <br>&nbsp;</li>
+                        </ol>
+
+                        <p>This approach also allows the Inclined Railway consist to operate as an AI train that runs in the distance when the scene is viewed from L&PS trains at the beach terminal. The result is a unique model that is a lot of fun to operate.</p>
+
+                        <p>I hope someone gives this a try on their own route.</P>
+
+                        <p>I hope you find this helpful.</p>
+
+                        <p>Wayne
+                        <br><a href="http://www.lnps.info/">Building the L & PS</a></p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+
+		</div>
+
+    <!--- end cause --->
+
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+               </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 28 January 2005, 19 April 2010</center></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>Creating Tunnels And Transfers in MSTS - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Creating Tunnels And Transfers in MSTS</font>
+                        <br>by Chris Jennings</h2>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                             <p>So you want to make tunnels for your route.  It was tricky with a lack of help at first, but after months of researching the editor and its functions, many people have found out how to make holes (the most important step in making a tunnel) thus leading the way to making tunnels (and subways if you're more advenced using with the editor).</p>
+
+                             <p>So for those who are just starting out making tunnels, read this - and good luck.</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "process">
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">The Process</h2>
+			<div class="entry">
+
+                        <p>First things first, create a hill (If you have your terrain already setup using DEM data or just by playing around with the terrain altering tools, then just find a place where you want your tunnel).</p>
+
+                        <p><img SRC="images/tunnel_Step01.gif" ALT="This is a simple hill we made for our Tunnel tutor" height=445 width=549></p>
+
+                        <p>Press the "Alter Terrain Height" button (or F9), move the crosshair to the area where you want the tunnel to begin and press "V" on your keyboard: this will make the area transparent.</p>
+
+                        <p>Next find an area where you want the other side of the tunnel and make it transparent.</p>
+
+                        <p>Note: If you can't make terrain transparent by pressing V, make sure you don't have any terrain selected.</p>
+
+                        <p><img SRC="images/tunnel_Step02.gif" ALT="By pressing the V key, we made a hole in the hill" ></p>
+                        
+                        <p>Once you have your holes ready, you can start adding track between the holes; it's best if you turn off camera collisions by pressing "/" (FORWARD SLASH) key and using wireframe mode by pressing "W".</p>
+
+                        <p>Note: When in the "Object Selector" menu finding tunnel based tracks, look at the file names carefully for clues as to its shape:</p>
+
+                        <ul>
+                            <li>TUN means a square tunnel</li>
+                            <li>RNDTUN means a nice round tunnel.</li>
+                        </ul>
+
+                        <p>When making the route for this tutorial I didn't copy any track based shapes from other route to the test map folder, so there may be some more tunnel shapes included with the offical MSTS routes.</p>
+
+                        <p><img SRC="images/tunnel_Step03.gif" ALT="The track that goes inside the hill it's sticking out but we'll deal with that soon" ></p>
+                        
+                        <p>Now that we have our track running through the holes, we need to cover the rest of the transparent gap.  To do this, we need to use a few "Transfers" to cover the gaps.</p>
+
+                        <p>Press <b>"More"</b> in the floating <b>"Placement"</b> bar, this will bring you into the <b>"Object Selector"</b> menu, select "transfers" from the "Object class" pulldown menu and find a transfer that matches the texture you're using for the tunnel.</p>
+
+                        <p><img SRC="images/tunnel_Step04a.gif" ALT="Object Selector, this where you choose the objects you want to add to your route" height=408 width=353></p>
+                        
+                        
+                        <p>Place the transfer on the route as you would place a piece of track: move the trasfer over the gap (it should hog the ground when moving along the terrain so you don't have to  do anything like adjusting the height or rotating like you would normal objects or tracks).  You can adjust the size of the transfer by right clicking on it when selected then selecting the "Transfer" tab.</p>
+
+                        <p><img SRC="images/tunnel_Step04b.gif" ALT="First we'll put our first transfer on the lower right on the gap" height=303 width=345></p>
+                        
+                        <p>You may need more then one transfer to cover most of the big gaps; don't forget the apply transfers to the other side of the tunnel.</p>
+
+                        <p>Note: If you want to make transfers, please scroll down to "How To Make Transfers".</p>
+
+                        <p><img SRC="images/tunnel_Step04c.gif" ALT="then we add another one on top" height=325 width=301></p>
+                        
+                        <p>We have now covered the majority of the hole, but there will be some small gaps left and the tunnel track is sticking out of the hole.</p>
+
+                        <p><img SRC="images/tunnel_Step04d.gif" ALT="then add one more on the lower left" height=277 width=348></p>
+                        
+                        <p>It's very simple to cover the tiny gaps and excess tunnel track by inserting any tunnel object in front of the hole and there you have it - a perfect tunnel.</p>
+
+                        <p><img SRC="images/tunnel_Step05.gif" ALT="Now we add an object to cover up the tiny gaps & the remaining track thats sticking out of the hill" ></p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="transfers">
+		</div>
+
+    <!--- end cause --->
+
+
+    <!--- sol hard --->
+
+		<div class="post">
+			<h2 class="title">How To Make Transfers</h2>
+			<div class="entry">
+
+                        <p>If you're making route from scratch (without copying any shapes from the official routes), you'll won't have an extensive library of objects, including transfers, for objects you have to make your own and/or copy some from the official routes, but making transfers are easy, all you need is to copy some texture files and edit one file.</p>
+
+                        <p>Find the directory where your route is (C:\Program Files\MicrosoftGames\Train Simulator\Routes\Myroute)</p>
+
+                        <p>Go to the TERRTEX directory, there should be some ACE files: find a ace file you want to use for a transfer (we'll use "TERRAIN.ACE") and copy it to your TEXTURE directory.</p>
+
+                        <p>Find the myroute.REF file in your route's directory: open it with ConTEXT or similr Unicode-aware editor and scroll down to find the word TRANFERS.</p>
+
+                        <p>We need to enter some simple code to make a transfer, enter the following code at right</p>
+
+                        <p><img SRC="images/tunnel_transfer1.gif" border=1 ALT="" ></p>
+
+                        <p>When entering this code, try not to alter other codes on the file, the code should fit between other object codes as shown below.  Using ConTEXT, you should be able to see the highlighted brackets.</p>
+
+                        <p>In the "Filename" brackets, enter the file name (with extension) of the texture file you moved to the TEXTURE directory a few moments ago, In the "Description" brackets, just give it a name like "Terrain Transfer" (with quotes, or no spaces if you don't use quotes) or what ever you want.</p>
+
+                        <p><img SRC="images/tunnel_Step06.gif" border=1 </p>
+
+                        <p>After adding the code, save the file, run MSTS Route Editor and your new transfer should be ready to use.</p>
+
+                        <p><img SRC="images/tunnel_Step07.gif" border=1></p>
+
+                        <p>Hope this helps.</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end sol hard --->
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#process">Creating A Tunnel</a>
+                 <br><a href="#transfers">Creating Transfers</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 25 July 2002, 17 September 2008, 26 March 2010</center></p>
+</div>
+</body>
+</html>
+
+
+
+
+
+

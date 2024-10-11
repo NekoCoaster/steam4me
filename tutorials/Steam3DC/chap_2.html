@@ -1,0 +1,300 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <title>A Steam Loco for MSTS sing 3DCanvas Chapter 2 - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../../index.html">Home</a></li>
+		<li class="current_page_item"><a href="../index.html">Tutorials</a></li>
+		<li><a href="../../msts_errors.html">Error Messages</a></li>
+		<li><a href="../../steam/index.html">Steam</a></li>
+		<li><a href="../../electric/index.html">Electric</a></li>
+		<li><a href="../../passenger/index.html">Passenger</a></li>
+		<li><a href="../../diesel/index.html">Diesel</a></li>
+		<li><a href="../../freight/index.html">Freight</a></li>
+		<li ><a href="../../vans/index.html">Vans</a></li>
+		<li ><a href="../../routes/index.html">Routes</a></li>
+		<li><a href="../../utilities/index.html">Utilities</a></li>
+		<li><a href="../../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../../images/S4M_Banner_left.png"  height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../../images/S4M_Banner_Tutorials.png"  height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">A Steam Loco for MSTS Using 3DCanvas</font>
+                        <br>by Paul "decapod" Gausden</h2>
+                        <p></p>
+			<h2 class="title">Chapter 2A - Round Wheels</h2>
+ 			   <div class="entry">
+
+                   <p>I imagine you are all eager to get this beast running?</p>
+
+                   <p>These days I hardly ever put the model into MSTS before it is finished, but this time round I will at least get something going by the next lesson (I hope).</p>
+
+                   <p>I am also going to build everything below the footplate level first, so it will not look like a steam engine until quite late on. I have my reasons for this which may be apparent later.</p>
+
+                   <p>One thing I forgot to mention in Lesson 1 - also make sure you have photos of your subject, plans are not always easy to interpret and often miss some detail.</p>
+
+                   <p>Here is the 4-6-4 and Ian's I3 4-4-2 dressed in Southern Railways livery - probably in Urie Sage Green from early 1920's, black edging with white trim lines. (Haresnape, Railway Liveries 1922-47)</p>
+                   
+                   <p><img SRC="images/rememberance.jpg" width=600>
+                      <br><img SRC="images/i3.jpg" width=600 ></p>
+                   
+                   <p>On with the modelling... or should I say texturing</p>
+
+                   <p>What we have doesn't look like it will run very well on rails, what with it's square wheels. Also if we want to try and get something running quickly, every part on our new model must have a texture assigned to it.</p>
+                   
+                   <p>Going back to our two wheel masks bitmaps we saved earlier, load these into your paint program.</p>
+
+                   <p>As a rule of thumb, I generally use 256x256 masks for wheels of 4' and over and 128x128 for smaller (or sometimes 192x192) - again, sticking to these sizes is important for texturing as it allows us to accurately map onto the wheel so it doesn't appear to wobble.</p>
+                   
+                   <ol>
+                     <li>To the main driving wheel mask, I first add the connection point for the con rod onto the driver mask - on the plan this is 30 pixels down and about 35 pixels wide - the wheel on the plan is 218 wide, so on the texture I need to paint a white circle 35/256*218 = 43 pixels wide and 30*256/218 = 35 pixels below the centre - then fill in the appropriate areas where it joins the hub.</li>
+                     <li>What I do next is create a blank 512x512 TGA file (which will become our ACE file later).</li>
+                     <li>copy the driving wheel mask and paste it into the _mask_ channel of the new TGA, positioned in the top left (so it takes up the top left quarter of the image)</li>
+                     <li>resize the bogie mask to 128x128, and attempt to clean up any grey areas that appear by filling with white or black for light grey or dark grey areas (PP7 uses magic fill tool set to a 50% range, then click on white area, switch to black and click on black areas) - also make sure the hub centre is about the right diameter in relation to the plan.</li>
+                     <li>copy and paste the bogie mask onto the TGA file mask channel and position it at x=256, y=0 - next to the driving wheel but not overlapping.</li>
+                     <li>finally, on the colour area of the TGA, colour in the wheel and add some detail - To get a nice "aliased" effect, I drew the hub rings with a slightly feathered paintbrush, starting with the largest in the dark colour, then one slightly smaller (2 pixels smaller) in the flat green - and so on till the middle dot.</li>
+                   </ol>
+
+                   <p>Accuracy is important for this job otherwise the rings will wobble when running - remember the paint program works from the top left corner, usually x=0 and y=0, so the centre of the driving wheel is at x=127 y=127.</p>
+
+                   <p>Next to the bogie wheel, I added a few small squares of black/brown splodges, grey and a brown edge which get used to cover large amounts of the model.</p>
+
+                   <p>I "cut out" the buffer beam shape and added it to the texture and finally, borrowed the con rod texture from my Aberdare - which was originally drawn just as a grey box with shading to make it appear 3D (more on that later)</p>
+
+                   <p>I then saved the texture as LB464W.TGA - here is an idea of what it looks like so far...</p>
+                   
+                   <p><img src="images/LB464W.jpg" border=1></p>
+
+                   <p>Back to the model...</p>
+
+                   <p>In the control panel on the left, select the Material panel.</p>
+
+                   <p>On the material Palette, select the second tab (Primary texture) and use the "open" to select the new texture.</p>
+
+                   <p>You should now see something like this:</p>
+                   
+                   <p><img src="images/l2a.jpg"></p>
+
+                   <p>Note the settings for the lighting properties - make sure you read the Train Simulator tutorials in the 3D canvas help about what happens when you change these values. (In practice I rarely change from the values shown here)</p>
+                   <ol>
+                     <li>Now press the "crop texture" button (green field with red square on it) - the texture pops up.</li>
+                     <li>Drag the red square around the driving wheel - now to fine tune, enter exact values in the lower 4 fields Origin Left 0.0, Top 0.0, Width 0.5 Height 0.5  - These are what is known as UV values, basically a fraction of the width and height of the texture. Because we have been exact with the wheel size, we can specify exact values. Press OK.</li>
+                     <li>Now set the Orientation selection on the top menu (see lesson zero) to "Edit using face coordinates" and look at the driving wheels on the right side (from slightly below)</li>
+                     <li>Select the Fill tool on the right menu bar and click on the &quot;faces&quot; and &quot;flange&quot; objects for the 3 drivers on both sides.</li>
+                   </ol>
+
+                   <p>For the Bogie wheels, do the same - just adjust the texture coordinates to 0.5,0.0,0.25,0.25 and use the fill tool straight away on all flat faces.</p>
+
+                   <p><img src="images/l2b.jpg"></p>
+
+                   <p>I'll stop for the moment to make sure everyone no one has problems...</p>
+
+                   <p>I have also posted a small object library on the <a href="http://www.highworth.freeuk.com"> Highworth</a> site, along with a couple of other plugin updates (not needed till later).  If others would like to contribute library parts, it may be worthwhile zipping them up and sending them to me so I can put them all in one library.</p>
+                   
+                   <p>The plugin did accept feet/inches in the inputs before, but they weren't reliable. Now you can work reliably (? I hope) even mix feet/metres in the inputs:  by entering 3'4.5" (or 40.5") for the main wheel diameter it will directly convert it to metres or decimal feet depending on how you have set up the program.</p>
+
+                   <p>It's worth adding that the basics of creating texture files and alpha channels using Paint Shop Pro v7 are covered in chapter 1 of Ian MacMillan;s '4 wheel wagon' tutorial available from <a href="http://www.amabilis.com" target="_blank">http://www.amabilis.com</a></p>.
+
+                        </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "check"</a>
+		</div>
+
+    <!--- end cause --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Chapter 2B - Round Wheels Turning</h2>
+			<div class="entry">
+
+                   <p>Next we need to texture the spokes and inner rim - not so easy, the wheel face is in the way.</p>
+                  <ol>
+                     <li>Right click on all the wheel faces (including bogies) and uncheck the Visible option on the object menu.
+                      <p><img src="images/l2b2.jpg"></P></li>
+
+                      <li>Use the crop texture window again (from the material palette tab) to select a small area of the colour you need for the inner rim and spokes - I usually pick the area under the con rod bearing.
+                      <p><img src="images/l2b1.jpg"></p></li>
+
+                      <li>Select the fill tool (edit orientation not important this time - I usually set back to default) and click on each spoke and inner rim object for all the wheels. Remember - if you miss the object you were aiming for, the "Undo" button on the main toolbar will return the original texture.
+                      <p><img src="images/l2b3.jpg"></p></li>
+
+                      <li>Select the hierarchy tab on the left and right click on all "Faces" (V1.2 engineer plugin) or "FrontFace" (previous version) objects and check the Visible menu option again so the wheel faces re-appear.
+                      <p>Alternatively if you're feeling lazy, save the file and open it again...</li>
+                 </ol>
+
+                   <p>To paint the outer rim, I usually like to put a small band of brown near the flange to make the transition from the grey a bit more smooth.</p>
+
+                   <p>To achieve this:</p>
+                   <ol>
+                       <li>Use the crop texture window to select a small square with a bit of brown down the right side.
+                           <p><img src="images/L2B4.jpg"></p></li>
+
+                       <li>make sure the Orientation mode is "Edit with default"</li>
+                       <li>look at the model from below and from one end, then fill all the rim objects on the left hand side.
+                          <p><img src="images/L2B5.jpg"></p></li>
+
+                       <li>now rotate your view point to the same position at the other end of the model and do the same again (the right hand wheels last time should now be on the left!)</li>
+                   </ol>
+
+                   <p>OK - let's fill in the remaining objects temporarily...</p>
+
+                   <ol>
+                       <li>crop the texture to the connecting rod texture and use the fill tool on the rod by viewing the model from square on each side.
+                       <p>Incidentally - have you noticed the con rods are only a top face and a side face? They look a bit odd from below, but in theory the MSTS viewpoint is unlikely to be able to see this.</li>
+                       <li>crop a small grey or black area texture</li>
+                       <li>fill the footplate/solebar, bogies, bearings and frames objects from any angle.</li>
+                   </ol>
+
+                   <h3>MSTS Export</h3>
+
+                   <p>First create a new folder in your trainset (I'll be using LBSCR464T)</p>
+
+                   <p>You could try using the "Train Simulator Wizard" in the 3DC plugins menu to do a simple export - If you do, skip over the "engine attributes" options (leave as zero) as this can disrupt the wheel and rod animations already generated. No need to select the bogies either. I mainly use this plugin to generate the size information for a custom ENG file and the SD file.</p>
+
+                   <p>I also ignore the create animation, sounds and cabview options on the last page, and try to use optimized distance levels (can take 3-4 mins to run this) and textures.</p>
+
+                   <p><i>If you use this you can skip to the last couple of paragraphs...</i></p>
+
+                   <p>Being an &quot;old hand&quot;, I just copy an existing aliased cabview folder and an ENG and SD file from a 'similar' loco (from my Aberdare to start with in this case) - then make adjustments with the wordpad editor so that they reference the LBSCR464T.S file I will be creating soon.</p>
+
+                   <p>Make sure the ENG file has the correct loco name so you can spot it in the game list - don't bother changing the effects or sizes/positions for this test.</p>
+
+                   <p>Now use MAKEACEWIN.EXE in your MSTS Utils folder and browse for the wheel texture (LB464W.TGA) and convert this to an ACE file in the LBSCR464T folder with the same name as the TGA i.e. LB464W.ACE</p>
+
+                   <p>When creating ACE files, I almost always use DXT compression. This tends to produce smaller files that run more efficiently than any other format. You may lose some quality, but it isn't noticeable, and in some cases as we will see later, actually improves the look.</p>
+
+                   <p>The only down side is that you cannot use them for translucency (dirty windows), only complete transparency.</p>
+
+                   <p>Finally we need the S file.</p>
+
+                   <p>Within 3D Canvas, right click on one of the objects in the Main group (currently only underframe or solebar) and select the Export/To Microsoft Train Simulator options.</p>
+
+                   <p>Browse to the trainset folder, enter the S file name and press OK.</p>
+
+                   <p>There is another prompt to say do you want distance levels - say Yes (you should always say yes here, except for extremely simple scenery objects with no groups)</p>
+
+                   <p>Yet another prompt says do you want optimized distance levels - try either Yes or No here  (Yes may take a few minutes to run the export)</p>
+
+                   <p>When this has finished you should be able to create a consist for the loco and select it to explore a route.</p>
+
+                   <p>If you exported the optimised distance levels of detail, take a look at the poly count with the Shape File Manager or the right click counter option - this would make a frame rate friendly AI loco.</p>
+
+                   <p>Sounds great aliased to the Goldsdorf 380 sounds.</p>
+
+                   <p><img src="images/L2B6.jpg"></p>
+
+                   <h3>Additional Notes</h3>
+
+                   <p>The Trains Sim Wizard can completely screw up the MSTS Engineer work - do not overwrite the animation or identify the parts.</p>
+
+                   <p>For extra reading on texturing and orientation modes - read the <b>Oriented Modelling tutorial</b> in the <b> 3DC help</b> file.</p>
+
+                   <p>Finally - if you do see flashing wheels when running the model... (unusually mine do not - more normally they do flash), select the offending part, click on the Crease Operation (small inverted V button) then just press OK without changing anything) - do this for all wheels. Now export the S file again.</p>
+
+                   <p>One more thing on the Engineer... I think the wheels are a bit thin, it uses 0.1m (about 4") as the tyre width, but some we saw at Didcot were 6"-8" thick - should I change it or does it look OK? <b>(Version 1.3 of MSTS Engineer changed the width to 0.12m - 5&quot;)</b></p>
+
+                   <p>I find the easiest way to texture the spokes and rims is to select a bit of colour, as you did, then select each spoke or rim object in the hierarchy panel in turn, then use the texture fill tool in the panel above that. No need to make faces invisible, etc.</p>
+
+                   <p>Then I go through the hierarchy again, selecting each bit of the wheels in turn, and apply the crease to everything, just to be on the safe side. It's a bit tedious though.</p>
+
+                   <p>Finally, I run the model through Train Sim Wizard once (usually when I have the buffers in place so the maximum dimensions have been reached) and it sets up all the files for me to then tinker with. After that, I export further versions manually.</p>
+
+                   <p>The creasing really only needs to be done on flat objects (faces &amp; flanges) - the plugin should calculate the rest of the normal vectors (which is the cause of the flashing) correctly.</p>
+
+                   <p>I'll probably use the wizard near the end to build a correct SD and use the dimensions and steam effects locations from the ENG file - as you say, after that you really only need to update the S file and/or textures after you have done this once.</p>
+
+                   <p>I should add one word of warning about selecting objects in the hierarchy, always count to two before moving the mouse as sometimes, if you move before 3DC has readjusted itself, it decides to move the selected item into some random location in the hierarchy. One of 3DCs little featurettes.&nbsp;</p>
+
+                   <p>If you can faintly see the square shapes (just a dotted line with a few pixels in them) in MSTS, then either the UV mapping is not exactly 0.0,0.0,0.500,0.500 or the wheel mask is not 256x256 - you can check the coordinates by selecting one wheel face and running the UVRemap Operation (red grid)</p>
+
+                   <p>With the 3DC texture cropping, beware that there are 4 decimal places, but ony 2 are shown - you can use the right arrow key to see if there are more.</p>
+
+
+       			</div>
+			  <p class="meta"><span class="posted"><a href="chap_3.html">Go To Chapter 3</a></span><a href="#" class="permalink">Return to top of page</a></p>
+
+		</div>
+
+    <!--- end cause --->
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <p><h3>Part 1 - Below the footplate</h3>
+                        <blockquote>
+                          <p><a href="steam3DC.html#start">0 - Beginners and reading</a></p>
+                          <p><a href="chap_1.html">Chapter 1 - Wheels</a></p>
+                          <p><a href="#.html">Chptr 2 - Round Wheels</a></p>
+                          <p><a href="chap_3.html">Chptr 3 - Complex footplate shape</a></p>
+                          <p><a href="chap_4.html">Chptr 4 - Pistons and Valve gear</a></p>
+                          <p><a href="chap_5.html">Chptr 5 - Complex animations</a></p>
+                        </blockquote>
+
+                        <h3>Part 2 - Above the footplate</h3>
+
+                        <blockquote>
+                          <p><a href="chap_6.html">Chptr 6 - Boiler, Funnel and Dome</a></p>
+                          <p><a href="chap_7.html">Chptr 7 - More Bodywork and Texturing</a></p>
+                          <p><a href="chap_8.html">Chptr 8 - Detailing</a></p>
+                          <p><a href="chap_9.html">Chptr 9 - More Detailing</a></p>
+                          <p>&nbsp;</p>
+                        </blockquote></p>
+
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 2002-2003, 22 April 2010</center></p>
+</div>
+</body>
+</html>
+
+

@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>A Coach made with Gmax Chapter 4 - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <meta name="Author" content="Richard Osborne">
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+        <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">A Coach Made With GMax</font>
+                        <br>by Richard Osborne</h2>
+                        <p></p>
+			<h2 class="title">Chapter 4: Modelling For Real</h2>
+ 			   <div class="entry">
+
+                   <p>Believe it or not we've described most of our initial techniques. The next thing to cover is working in point mode, then we'll have covered 80%.</p>
+
+                   <P>We're going to texture as we go. Both texture & model files tend to be very dynamic when I model. In other words I keep moving things, texture files can be an absolute mess but you won't find wasted space! The main advantage is to be able to export the model & view it with Shape File Viewer as soon as there's anything to see. The .s file must have .ace files which will be in the project directory.</p>
+
+                   <P>Which shall we make first? Let's make the first body parts.</p>
+
+                   <P>A few minutes with a pen & paper first to decide what sort of box to make. The coach has an arc roof & sides which are straight down to the bottom moulding then turn in so I'm going to use a box which has 7 horizontal divisions & 3 vertical. This will have a huge number of polygons to begin with; I'll show you how to reduce the count. We must keep the polygon count to the absolute minimum; the maxim is - if it doesn't show it shouldn't be there.</P>
+                   <p>Use the converter to establish the sizes, the plan shows 6' 9" x 8' 6" x 50' for the main body. Using the same technique as for the calibration box, make & centre it; move it vertically aligning it to the endview. We can double check it later.</p>
+
+                   <P><IMG SRC="images/ro_gmax_04_01.jpg" BORDER="0" WIDTH="600" HEIGHT="436" ALIGN="bottom" ALT=""></p>
+                   <P><IMG SRC="images/ro_gmax_04_02.jpg" BORDER="0" WIDTH="600" HEIGHT="436" ALIGN="bottom" ALT=""></p>
+
+                   <P>Notice the height relates to the length, the axis orientation is wrong. I found how to change the orientation after a Webb locomotive appeared dormant across the tracks. It might be that only the 'main' part has to corrected but we might as well make sure every part is the same. Make sure the part is active, click the hierarchy button & 'Affect Pivot Only'. Go to the top toolbar & click the 'Rotate' button. Keep the mouse over the button & right click, a screen will appear.</p>
+
+                   <P><IMG SRC="images/ro_gmax_04_03.jpg" BORDER="0" WIDTH="294" HEIGHT="126" ALIGN="bottom" ALT=""></p>
+
+                   <P>Change the values so that all read 0. If you read Volker Bollig's diesel tutorial you'll see he uses these drop down screens much more than I do; I prefer using the windows at the bottom of the screen which is the same system as Turbocad.</P>
+Next to do is a little shaping & losing most of the polygons.
+
+                   <P><IMG SRC="images/ro_gmax_04_04.jpg" BORDER="0" WIDTH="147" HEIGHT="449" ALIGN="bottom" ALT=""></p>
+
+                   <p>In 'polygon' mode, top view, highlight the polygons leaving only the sides & ends. Press 'Delete'. 16 polygons gone!</p>
+
+                   <P>Now we're going to work in 'Point' mode. Make your end view bigger, you can drag the viewpoint frames with the mouse. Press 'Select & Move' on the top toolbar. Drag the lines of points down to the curved part of the body. Move the bottom ouside points to meet the plan. when you drag a point you'll see a value appear in a bottom window. If you drag one side .05, drag the other -.05, the 2 points will be symetrical. You can also click on 1 point, the X value might be 1.245. The opposite point should be -1.245, if you have a different value just write in the preferred value & click the neighbouring window. With a little practice both ways are very quick.</p>
+
+                   <P><IMG SRC="images/ro_gmax_04_05.jpg" BORDER="0" WIDTH="600" HEIGHT="365" ALIGN="bottom" ALT=""></p>
+
+                   <P>When you're happy with the shape we'll lose some more polygons. Drag the points indicated in white down to the bottom line. We need to weld them together. Lassoe them with the mouse - they'll turn blue to red. Scroll down the side panel until you come to 'Weld'; 'Selected' defaults to 0.1m, far too big & I haven't found how to change the default setting, use the arrows to bring the value down to 0.01m. Press 'Selected' with luck the '36 Vertices Selected' will change to '12 Vertices Selected'; if not increase the size of the weld. Now drag the points to the left corner. If you press F3 then F4, in wireframe you'll see the polygons merge. Press 'Selected', you see '2 Vertices Selected'. It's almost certain to have moved a bit. You haven't touched the other corner so write down its co-ordinates & correct the corner you've just welded.</p>
+
+                   <P>Turn your attention to the top. The simplest way here is to drag the line of points down to the base of the arc, take the points 1 row inside & pull them up to the drawing, work inside until you have the arc. We might as well do a double check, the base should, according to the drawing be 4' above rail level. Measure a base line point & move the body if needed.</P>
+
+                   <p><IMG SRC="images/ro_gmax_03_06.jpg" BORDER="0" WIDTH="373" HEIGHT="381" ALIGN="bottom" ALT=""></p>
+
+                   <P>Check you body in 'Perspective' view. We won't need it yet but we'll make the inside for the body. Make the body active but not in 'Edit' mode; the simplest way is to press the 'Create' button - the arrow. Go to 'Edit' on the top toolbar, then 'Clone'; left click & an options window appears. Alter the name & click 'OK'. A clone is an exact copy, in this case it has little information; if the body were textured the clone would be textured, we'll use this later. Make the inside part active, change the colour, go to 'Point' mode & drag the sides & ends inside the outer body, only about 0.020m. 'Polygon' mode, make all polys active & 'Flip' them. You'll see both inside & outer body parts.</p>
+
+                   <P><IMG SRC="images/ro_gmax_04_07.jpg" BORDER="0" WIDTH="600" HEIGHT="436" ALIGN="bottom" ALT=""></p>
+
+                   <P>Go back to 'Create, make a box 7 across for the roof, pull the outside edges out a bit & drag it down to the body.</p>
+
+                   <P><IMG SRC="images/ro_gmax_04_08.jpg" BORDER="0" WIDTH="600" HEIGHT="247" ALIGN="bottom" ALT=""></p>
+
+                   <P>Apologies for the colours, I did most of the screen shots away from home on a computer with a very iffy monitor.</p>
+
+                   <P>Make a simple box for the 'main' part. I use the solebar (the main frame under the body) for this, although not strictly necessary it's easiest to use a symetrical part for your 'main' part. You'll only need the side faces, centre the axis then using 'Affect Pivot Only' & 'Select & Move'
+bring the Z axis to down to 0.</p>
+
+                   </div>
+			 	<p class="meta"><span class="posted"><a href="#">Return to top of page</a></span><a href="ro_gmax_05.html" class="permalink">Go On To Chapter 5</a></p>
+
+		</div>
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Chapters</h2>
+<ol>
+<li><a href="ro_gmax_00.html">Overview</a></li>
+<li><a href="ro_gmax_02.html">Getting started</a></li>
+<li><a href="ro_gmax_03.html">First Texturing</a></li>
+<li><a href="#">Modelling For Real</a></h3></li>
+<li><a href="ro_gmax_05.html">Texturing The Body</a></h3></li>
+<li><a href="ro_gmax_06.html">Alpha Channels</a></h3></li>
+<li><a href="ro_gmax_07.html">Wheels and Bogies</a></h3></li>
+<li><a href="ro_gmax_08.html">Interiors</a></h3></li>
+<li><a href="ro_gmax_09.html">Export to MSTS</a></h3></li>
+<li><a href="ro_gmax_10.html">Texturing tricks and losing polygons</a></h3></li>
+<li><a href="ro_gmax_11.html">More Tricks and Tips</a></h3>
+<li><a href="ro_gmax_12.html">More about hierarchies</a></h3>
+</ol>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 24 August 2004, 19 March 2010</center></p>
+</div>
+</body>
+</html>
+
+

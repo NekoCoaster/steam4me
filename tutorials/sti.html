@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>The Sound Test Interface - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li ><a href="../vans/index.html">Vans</a></li>		
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">The Sound Test Interface</h2></font>
+                                 <h3>What it is and how to use it</h3>
+                        <h2>by Stuart Williamson and Jeff Ashton</h2>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                            <p>This interface doesn't allow you to create sounds, but provides feedback on how sounds are being played and, to some degree, allows you to manipulate them.</p>
+
+                            <p>We've been able to disable certain sounds from playing. This will be really useful when testing new rolling stock sounds as both the loco and track sounds can be turned off/on at will, enabling just the sounds you want to hear to be heard.</p>
+
+                            <p>It also gives some data about the sound card setup, which we can see relates to some of the numbers in the soundcfg.dat file. It appears that MSTS defaults to 40 3D streams and 20 2D streams regardless of the actual sound card hardware! But this can be altered.</p>
+
+                            <p><img SRC="images/sti_01.jpg"  height=600 width=800></p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "interface">
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">The Interface</h2>
+			<div class="entry">
+
+                        <p>To use the Sound Test Interface, create a new shortcut to MSTS on your desktop, right click on properties, and change the target to read</p>
+
+                        <table BGCOLOR="#FFFFCC" >
+                        <tr>
+                            <td><b><font color="#006600">"C:\Program Files\Microsoft Games\Train Simulator\train.exe" -vm:w -soundtest</font></b></td>
+                        </tr>
+                        </table>
+
+                        <p>Include the quotes (and make sure it has the right path, which it should if you have MSTS in the default location). Then double click the new shortcut to open MSTS in a window. Then, in Display Options, lower the resolution to something lower than your default display settings (I go right to the lowest). Now you can start an activity.</p>
+
+                        <p>Make note of any error messages during start-up. They will tell you which .wav files the .sms files are looking for but cannot find, either because they do not exist, or because they are in the wrong places. Once MSTS is running, hit Shift T and you will get the Sound Test Interface Screen. The upper right box shows all .sms files active for the view you are in.</p>
+
+                        <p>I know it seems like a lot of bother, but once you get the hang of it, it makes MSTS sound design and troubleshooting an awful lot easier.</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="link2">
+		</div>
+
+    <!--- end cause --->
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#interface">The Interface</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 9 Sep 2002, 7 April 2008, 8 March 2010</center></p>
+</div>
+</body>
+</html>

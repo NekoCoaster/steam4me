@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>How To Adjust Your (Animated) Pantograph Height - at The Steam4me Site</title>
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+	</font>
+        
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">How To Adjust Your (Animated) Pantograph Height</font>
+                        <br>by Paul "decapod" Gausden</h2>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                        <p>Routes with overhead wires can be set at different heights (probably not too relevant to UK routes), so different locos look odd if the pantograph is too high (e.g. the Acela is 7.2M the Japan wire height is just over 5M).&nbsp; Unfortunately, the MSTS models are unable (and will never be able) to detect this to set the pantograph height accordingly.</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "adjust">
+		</div>
+
+    <!--- end end overview --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Making The Adjustment(s)</h2>
+			<div class="entry">
+
+                        <p>Adjusting the height is not a simple matter of scaling (though you could do this but the loco would look a bit odd) - the angles of the pantograph animation need to be changed.</p>
+
+                        <p>Using the Acela as an example, this has two parts (to both pantos):</p>
+
+                        <ul>
+                            <li>the lower arm moves up by about 45 degrees and</li>
+                            <li>the upper arm moves 85 degrees (about twice the angle) relative to the lower arm.</li>
+                        </ul>
+
+                        <p>The relevant part of the .S file that controls this is (<p>(I have removed the linear key parts and a few brackets for clarity - not relevant)</p>
+<b>
+<pre>anim_node PANTOGRAPHBOTTOM1 (
+&#09;controllers ( 2
+&#09;&#09;tcb_rot ( 3
+&#09;&#09;&#09;tcb_key ( 0 -0.00436731 0 0 0.99999 0 0 0 0 0 )
+&#09;&#09;&#09;tcb_key ( 1 -0.386715 0 0 0.922199 0 0 0 0 0 )
+&#09;&#09;&#09;tcb_key ( 2 -0.386715 0 0 0.922199 0 0 0 0 0 )
+
+anim_node PANTOGRAPHTOP1 (
+&#09;controllers ( 2
+&#09;&#09;tcb_rot ( 3
+&#09;&#09;&#09;tcb_key ( 0 0.0479783 0 0 0.998848 0 0 0 0 0 )
+&#09;&#09;&#09;tcb_key ( 1 0.678801 0 0 0.734322 0 0 0 0 0 )
+&#09;&#09;&#09;tcb_key ( 2 0.678801 0 0 0.734322 0 0 0 0 0 )
+</pre></b>
+
+                        <p>The second to fifth parameters of the tcb_key (this applys to slerp_key too) are a "quaternion" definition (3D matrix maths - fun stuff) but because the rotation is a simple one, about the x-axis only, it basically boils down to the fact that the second parameter is the negative sine of half of the rotation angle and the 5th parameter is the cosine of half of the rotation angle.</p>
+
+                        <p>Looking at the Acela we can see that the key frames 1 and 2 (first parameter) are the same (modelling oddity?) 45/85 bottom/top animation angles and the first key frame (0) is almost 0 angle for top and bottom.</p>
+
+                        <p>So now we can scale the animation - ignore key frame 0, this should be close to zero, if not use the difference to scale the angle.</p>
+
+                        <p>To change the animation to 35/70 degrees bottom/top, take out your casio calculators, last used for O-level exams:</p>
+                        <p>Sin(35/2)=0.3007, Cos(35/2)=0.95372 etc...</p>
+<b>
+<pre>anim_node PANTOGRAPHBOTTOM1 (
+&#09;controllers ( 2
+&#09;&#09;tcb_rot ( 3
+&#09;&#09;&#09;tcb_key ( 0 -0.00436731 0 0 0.99999 0 0 0 0 0 )
+&#09;&#09;&#09;tcb_key ( 1 -0.3007 0 0 0.95372 0 0 0 0 0 )
+&#09;&#09;&#09;tcb_key ( 2 -0.3007 0 0 0.95372 0 0 0 0 0 )
+
+anim_node PANTOGRAPHTOP1 (
+&#09;controllers ( 2
+&#09;&#09;tcb_rot ( 3
+&#09;&#09;&#09;tcb_key ( 0 0.0479783 0 0 0.998848 0 0 0 0 0 )
+&#09;&#09;&#09;tcb_key ( 1 0.57358 0 0 0.81915 0 0 0 0 0 )
+&#09;&#09;&#09;tcb_key ( 2 0.57358 0 0 0.81915 0 0 0 0 0 )
+</pre></b>
+
+                        <p>Now the height achieved depends on how long the pantograph arms are, so it may take a bit of trial and error to get the correct values for your wire height.</p>
+
+                        <p><i>Now the warnings...</i>
+                        <ul>
+                            <li>Make sure you backup your files first!</li>
+                            <li>Some animations may have more steps - you may need to experiment further.</li>
+                            <li>Also, this is still not 100% tested, though early tests looked promising.</li>
+                        </ul>
+
+                        <p>Big thanks to Ottodad for introducing me to this part of the sim and for managing to understand my earlier e-mails.</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end end overview --->
+
+
+<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#adjust">Making The Adjustment(s)</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 06 Feb 2004, 02 April 2010</center></p>
+</div>
+</body>
+</html>

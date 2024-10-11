@@ -1,0 +1,318 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>Adding Steam Effects with TSM - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li ><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png"  height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png"  height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+                        <h2><font color="#3333FF">Adding Steam Effects with TSM</font>
+                        <br>by Paul DeVerter</h2>
+                        <h3>A Port City Car Co. Project Copyright &copy; 2004</h3
+
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                   <p>This is a tutorial on adding steam and smoke to a steam engine when using Train Sim Modeler.  How to do so is another one of those little mysteries that I could not find explained in the Help file that accompanies the modeling program.</p>
+
+<p>I got into this project while trying to follow the tutorial by Richard Osborne: <a href="TSMloco_01.html">Constructing A Steam Loco Using Train Sim Modeler</a>.</p>
+
+<p>Although the tutorial is written for beginners, I was such a rank amateur that I started the project almost 3 years before I finished it.  I simply was not familiar enough with TSM to make a go of it.  I kept getting bogged down in the details.</p>
+
+<p>When I was well enough along to try out the basic loco in the Sim, it became apparent that it needed some smoke to make things look right.  Well, I could not fathom the instructions for adding such, and so I spent several days trying to figure out the method.  I finally did, and these are my findings on how to proceed.</p>
+
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "link1"</a>
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Smoke From The Chimney</h2>
+			<div class="entry">
+
+                   <p>Once you have constructed the boiler, and added such blobs and gadgets as the smoke stack, safety valve, whistle and cylinders, it is time to animate the model by adding what are known as Steam Effects.  If you look into an existing steam eng file, you will find a section like this:</p>
+
+                   <p><img src="images/pdv_addsteam_00.jpg" width="750" height="330" alt="" border="2"></p>
+
+                   <p>If you are using TSM to construct your model, the program will add the proper items to your eng file for you, if you know how to give it the proper instructions.  In order for the smoke to come out of the stack, you not only have to have the proper wording in the eng file, but you must also draw a placeholder or token in the desired location, and give that placeholder the correct Reference Part Name.</p>
+
+                   <p>Then you have to go to the eng file and adjust the three parameters under the particular effect that you are working on.  Thus the major part of this tutorial is about how to set up the placeholder and then how to adjust the three parameters.</p>
+
+                   <p>The first thing to do is to draw the Chimney or Smoke Stack placeholder in TSM.  You do that by using the Create Polygon Tool to designate a small 3-sided polygon, which faces upwards.  By small, I mean one that is perhaps 0.5 foot (0.15m) in radius.</p>
+
+                   <p><img src="images/pdv_addsteam_01.jpg" width="268" height="290" alt="" border="0"></p>
+
+                   <p>If you make it perpendicular to the Y axis it will be in the same plane as the horizon.  And since it is only a single polygon, it only has one surface, and that faces upwards.  You could make the polygon even smaller, but it turns out that it is not visible in the Sim in any event - small here means unobtrusive.</p>
+
+                   <p>Once it is drawn, move it over the top of the smoke stack, as shown.  Notice that the Z axis is along the track, the Y axis is vertical, and the X axis is orientated across the track.  This is the same orientation that lights, and other objects have on engines.</p>
+
+                   <p><img src="images/pdv_addsteam_02.jpg" width="196" height="170" alt="" border="0">
+                   <img src="images/pdv_addsteam_03.jpg" width="204" height="174" alt="" border="0"></p>
+
+                   <p>You can see the polygon in the perspective view of TSM, notice the white triangle just above the stack.  When you look at it from a horizontal view, it seems to disappear.</p>
+
+                   <p>Next we need to attend to the Part Properties and give the Smoke placeholder a Part Name, so press F2, and here is what you have:</p>
+
+                   <p><img src="images/pdv_addsteam_04.jpg" width="473" height="368" alt="" border="0"></p>
+
+                   <p>Smoke requires a special Reference Part Name in order to animate properly.  Click on the Reference Part Names button and a new list of Special Reference Part Names appears.  You are already familiar with the fact that Reference Parts do not show up in the Sim because you have undoubtedly used the Track Reference Part.  The one on this list that makes sense is <b>fx_StackFX</b>, so select that one, and hit OK.</p>
+
+                   <p><img src="images/pdv_addsteam_06.jpg" width="357" height="214" alt="" border="0"></p>
+
+                   <p>Now you are brought back to Part Properties, and you will see that your Part Name is the Reference Part Name that you selected.  Unlike other animated parts, the Parts picked from the Reference Part Names do not need a Part Parent.  But you do need to check the Reference Part Only box, toward the bottom.</p>
+
+                   <p><img src="images/pdv_addsteam_07.jpg" width="472" height="356" alt="" border="0"></p>
+
+                   <p>If you like, you can texture the <b>fx_StackFX</b> by choosing any color that you desire.  Here I have colored it green, which you can see just above the stack.</p>
+
+                   <p><img src="images/pdv_addsteam_08.jpg" width="250" height="175" alt="" border="0">
+
+                   <p>The advantage in doing so is that you can tell that you have it oriented properly, if the green colored side is facing upwardly.  On the other hand, there is no real need to texture it at all.  And in any event whether it is colored or not, if you have chosen a correct name for the part and if it is a Reference Part, the placeholder will not show up in the Sim.</p>
+
+                   <p>Next we need to Create a Train Simulator Object and see how our smoke looks.  If you have not already done so, you will need to pick a Filename, both short and long, and then fill in the blanks in Create Train Simulator Object.  Be sure you also pick a Folder to put you steam engine into, and you must check the boxes dealing with the New eng or wag File, and the New Sound and Cab Files, even if doing so overwrites a prior eng file.  The reason is that the eng file needs to have the Special Steam Effects language written into it, and TSM will do it for you since you have chosen a Reference Part Name.</p>
+
+                   <p><img src="images/pdv_addsteam_09.jpg" width="401" height="422" alt="" border="0"></p>
+
+                   <p>Check the boxes then press Continue and your engine will be generated so that it is ready to be put in the Sim by the Consist Editor.  But first take a peek into the newly created (or recreated) eng file.  You should find a new section dealing with SteamSpecialEffects in the middle of the eng file:</p>
+
+                   <p><img src="images/pdv_addsteam_10.jpg" width="461" height="323" alt="" border="2"></p>
+
+                   <p>Now you have only created the smoke for the Stack at this point so this should be the only SteamSpecialEffect listed.  Also note that three sets of numbers have been generated by TSM, and placed under the entry StackFX.  What do these numbers mean?</p>
+
+                   <p>Well the first row is the physical location parameter of the little polygon placeholder that you set.  The numbers mean that the polygon is located at X=0, Y=3.90144 meters up from the track or origin of the engine, and Z=2.49936 meters in front of the center of the engine along the track.  The second row tells you the direction that this particular effect, smoke, will be pointed.  Hence, X=0, Y=1, and Z=0, or the smoke will not be going to the left nor right (X), and not forward or backward (Z), but only vertically up (Y).  Another way to look at this is that the 3 numbers define a vector in space.  The X and Z axes define a horizontal plane, and the Y axis is vertical.  So, if you want the smoke to be emitted vertically, then 0 1 0 defines a vector normal to the X-Z plane, or pointing straight up.  The third row is an indication of the volume of smoke to be generated.  Often you will see a notation to the effect that the third row number signifies the width of the nozzle.  Hence you would think that the larger the number the greater the amount of smoke.</p>
+
+                   <p>However this is not true.  It appears to be the reciprocal, and does not seem to have anything to do with width.  If you want more smoke, then make the number small, like 0.1 and if you want less smoke then make the number larger, like 0.5.  Now this is not strictly true either, because there are other parameters in the eng file that must be taken into account, and they also affect the volume and color of the smoke.</p>
+
+                   <p>JW Titus, who has done considerable experimenting in this area, says that</p>
+                   
+                   <p><i>"This parameter sets the radius of the smoke port thereby determining the area over which the smoke is distributed.  For a given volume of smoke, a smaller area produces a denser smoke column but not as big around; a larger area, a thinner smoke column spread out over the larger area. The volume of smoke is controlled first in the .eng file.  See Tech Docs "Eng_and_wag_file_reference_guide.doc":  'CoalBurnage'; 'ExhaustLimit'; 'SteamSmokeUnitsPerPoundOfFuel'; 'SteamMaxSmokeUnitsReleaseRate'; and 'BasicCoalUsage'.  These parameters control the basic smoke and steam volume and expulsion rates. Having set these, then the volume and rate of smoke generation is further affected by settings of the various engine controllers in the cab, during operation."</i></p>
+
+                   <p>But I am getting ahead of myself.  Let's go into the Consist Editor and make up a consist with our now smoking engine and see how it looks.  Here is the Consist Editor........</p>
+
+                   <p><img src="images/pdv_addsteam_11.jpg" width="610" height="518" alt="" border="0"></p>
+
+                   <p>........and you should know how to create an engine and get it up and running.  Let's go to the Sim and see what we have.</p>
+
+                   <p>Notice that we now have smoke and a goodly amount of it too.  Also note the green triangle or polygon is not visible above the stack.  And note the smoke is starting somewhat above the top of the stack, and needs to be lowered down a bit.</p>
+
+                   <p><img src="images/pdv_addsteam_12.jpg" width="501" height="372" alt="" border="0"></p>
+
+                   <p>Go back to TSM, where we will adjust the height of the start of the smoke.  We do this little trick by simply moving the polygon part fx_StackFX down a bit, while maintaining the X and Z locations directly over the top of the stack.</p>
+
+                   <p><img src="images/pdv_addsteam_13.jpg" width="167" height="157" alt="" border="0"></p>
+
+                   <p>Then we go back to Create Train Simulator Object and check only some of the boxes, namely Convert to Binary, Replace Existing Files, New eng or wag File, and the New Sound and Cab Files.  We need to check the New Engine box so that the relocation of the Reference Part will be transmitted to the eng file.  We need to check the New Sound box also because if we don't the engine for some unknown reason will not show up in the Sim.  I can not explain why, just trust me.</p>
+
+                   <p><img src="images/pdv_addsteam_14.jpg" width="402" height="322" alt="" border="0"></p>
+
+                   <p>And here is what we have when we look at the lowered smoke in the Sim:</p>
+
+                   <p><img src="images/pdv_addsteam_15.jpg" width="394" height="340" alt="" border="0"></p>
+
+                   <p>Not bad at all.  We do not need to fiddle with the direction of the smoke as it should go up, but we need to adjust the volume of smoke.  This is simply done by changing the parameter in the third row from 0.1 to something else with less volume.  Here are two photos showing 0.1 and 0.5 parameters.  I finally settled for 0.38, but it is your choice.</p>
+
+                   <p><img src="images/pdv_addsteam_16.jpg" width="300" height="230" alt="" border="0">
+                   <img src="images/pdv_addsteam_17.jpg" width="300" height="230" alt="" border="0"></p>
+
+			 </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "link2"</a>
+		</div>
+
+    <!--- end cause --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Steam From The Whistle and Safety Valve</h2>
+			<div class="entry">
+
+
+                <p>Now that we have the stack taken care of, let's move on to the whistle and the safety valve.  The process is much the same except that we must use different names for the tokens or placeholders.  Simply set your polygons, texture them if you like, and use the appropriate names from the list of Reference Part Names, namely fx_WhistleFX and fx_SafetyValvesFX.</p>
+
+                <p>Here I have used different sizes of polygons to illustrate that the size does not matter, and different colors to illustrate that the color of a reference part does not show up in the Sim.  So, I have made the placeholder for the whistle steam red and larger than that for the safety valve, which is smaller and black.</P>
+
+                <p><img src="images/pdv_addsteam_18.jpg" width="169" height="163" alt="" border="0">
+                   <img src="images/pdv_addsteam_19.jpg" width="188" height="163" alt="" border="0"></p>
+
+                <p>Note that when you create the object in the Simulator, all of the volume parameters are reset to the default, which is 0.1.  This means that the smoke volume goes back to the default value as well.  Keep notes if you have previously found a volume that you like so you can go back and reinsert that value in the eng file.</p>
+
+                <p>Here you see the white steam coming from the whistle and then from the safety valve.  And again, the Reference Parts do not show up in the Sim.  (I could get the safety valve to pop by turning off the Automatic Fireman in the Options or by setting the fourth parameter in EngineVariables to a number 1 higher than MaxBoilerPressure).  All of these Special Effects need to have their volumes adjusted, to your liking.</p>
+
+                <p><img src="images/pdv_addsteam_20.jpg" width="265" height="251" alt="" border="0">
+                   <img src="images/pdv_addsteam_21.jpg" width="235" height="251" alt="" border="0"></p>
+
+			 </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "link3"</a>
+		</div>
+
+    <!--- end cause --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Steam From The Cylinder Cocks</h2>
+			<div class="entry">
+
+                <p>In British practice, the exhaust from the cylinder cocks is usually directed toward the front of the engine, and somewhat off to the side.  In US practice, the exhaust is usually directed away from the engine and perpendicular to the tracks.  Fortunately, you are allowed to make those choices, by adjusting the parameter for direction, i.e. the second row.</p>
+
+                <P>Once again, construct a polygon under each cylinder, in the area where the cylinder drain cocks are located.  Since this is a UK engine, I have placed a polygon on each side, under the front end of each cylinder.  I have textured them red, just for fun.</p>
+
+                <p><img src="images/pdv_addsteam_22.jpg" width="210" height="204" alt="" border="0"></p>
+
+                <P>The next step is to use F2 and pick the Reference File Name for each side.  The obvious choice is fx_CylinderFX.  Make sure you check the Reference Part Only box.  Then to make the one on the other side, simply Copy and Paste, and go into F2 again.  Here you will find the copied placeholder has taken the name fx_CylinderFX.1, and it will already be textured red.  It will be on the wrong side of the engine, so change the X Axis Location to a negative number and click OK.  Now you have both placeholders for the Cylinder Drain Cocks, one under the front of each cylinder.</p>
+
+                <p><img src="images/pdv_addsteam_23.jpg" width="456" height="297" alt="" border="0"></p>
+
+                <P>Then Create Train Simulator Object, and see what you have in the Sim.  As before, you will need to create new eng and Sound files.  Then fire up the Sim, and when your locomotive is showing, set the cut-off to perhaps 30%, release the brakes, and open the throttle.  The engine moves, but no steam comes out the cylinder drains.  So, increase the throttle up to 12-15%.  Still no exhaust steam.  Toggle the "C" key.  No exhaust steam.  What happened?</p>
+
+                <H3>Another Bug in TSM</H3>
+
+                <p>Something is wrong.  Eventually you might conclude that you have not chosen the proper Reference Part Name in TSM (fx_CylinderFX), and if so you would be correct.  If you will search through the eng files for those steam engines that have working Cylinder Valves, you will find that the proper reference part name is plural - <b>fx_CylindersFX</b>.  I spent 2 days looking for this bug, and finally found out what the problem was in a Forum on the UK Trainsim site.</p>
+
+                <p>There are two solutions: both work.  Simply go to TSM select the cylinder drain polygon, and press F2, Part Properties.  At the top is the Part Name, so simply amend it by adding an "s" after Cylinder.  Then recreate the Train Simulator Object once more.</p>
+
+                <p><img src="images/pdv_addsteam_24.jpg" width="213" height="119" alt="" border="0"></p>
+
+                <p>Next go to the Sim and see what you have this time.  You will need to increase the throttle to over 12% because, for some unknown reason, the cylinder drain does not exhaust below that Throttle setting.  Now you will see steam escaping from the cylinder that you have labeled with the proper reference part name.</p>
+
+                <p><img src="images/pdv_addsteam_25.jpg" width="379" height="252" alt="" border="0"></p>
+
+                <p>But there is no exhaust steam coming out of the other cylinder.  The other way to fix the problem is to open the .ENG file in WordPad or <a href="context.html">ConTEXT</a> and go to the section on SteamSpecialEffects, which will look like this:</p>
+
+                <p><img src="images/pdv_addsteam_26.jpg" width="383" height="327" alt="" border="2"></p>
+
+                <p>You will notice that one of the Cylinders is singular, and the one you just fixed is plural.  So change the singular to plural, so that they both read CylindersFX, and save.  Now, go back and fire up the Sim, and here is what you should see:</p>
+
+                <p><img src="images/pdv_addsteam_27.jpg" width="286" height="224" alt="" border="0"></p>
+
+                <p>Now steam is exhausting from both cylinders.  Of these two fixes the former is preferable, because if you ever have to recreate the eng file, the proper Reference Part Names are now listed in TSM.</p>
+
+                <p>But unfortunately it seems to be going straight up, and then trailing backwardly, as the engine moves forward.  We need to adjust the direction parameter, found in the second row.  The default direction is 0 1 0, and this means the direction of the exhaust steam is not along the X axis, not along the Z axis, but is along the Y axis in a positive direction - namely up.  We want the steam to exhaust forwards, which would be a positive Z direction, so change the Z parameter to 1.  We do not want it going up, so change Y to 0.  And finally we would like it angled a bit to the outside, so make the X parameter read 0.5.  So the final numbers for the second line are 0.5 0 1 for the cylinder that exhausts to the right, and -0.5 0 1 for the cylinder that exhausts to the left.</p>
+
+                <p>Then adjust the volume parameter, just as you did for the Smoke, and an exhaust volume of 0.4 or so seems about correct.  And here is what you have</p>
+
+                <p><img src="images/pdv_addsteam_28.jpg" width="302" height="230" alt="" border="0"></p>
+
+			 </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "link4"</a>
+		</div>
+
+    <!--- end cause --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Conclusion</h2>
+			<div class="entry">
+
+                   <p>Now you have learned how to add the SteamSpecialEffects to the eng file, and to adjust the location, direction, and volume parameters to fit your chosen locomotive.</p>
+
+                   <p>What you have not learned is what to do with some of the other Reference Part Names, such as CenterOfGravity, ObjectCenter, InertiaTEnsor, and light.  While I can guess, I have not experimented with those yet, so I simply do not know.  I also have not yet experimented with the values that would change the color of the stack smoke.</p>
+
+                   <h3>Credits and Beta testers</h3>
+                   <p>Thanks to:
+                   <br>Ted Ahner
+                   <br>Ed Hawkins
+                   <br>Frank Thomas
+                   <br>James Titus</p>
+
+                        </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+
+		</div>
+
+    <!--- end cause --->
+
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#link1">Smoke From The Chimney</a>
+                 <br><a href="#link2">Whistle and Safety Valve</a>
+                 <br><a href="#link3">Steam From Cylinder Cocks</a>
+                 <br><a href="#link4">The BMP and Alpha Process</a>
+                 <br><a href="#link5">Saving the Alpha Channel (and changing to a TGA file)</a>
+                 <br><a href="#link6">TGATools</a>
+                 <br><a href="#link7">TSM and converting the Texture from Bmp to TGA</a>
+                 <br><a href="#link8">Housekeeping 2</a>
+                 <br><a href="#conclusion">Conclusion</a>
+               </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 15 July 2006, 28 April 2010</center></p>
+</div>
+</body>
+</html>

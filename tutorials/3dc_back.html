@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>Background Images as Reference Source for 3D Canvas Pro - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li ><a href="../vans/index.html">Vans</a></li>		
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png"  height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png"  height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Background Images as Reference Source for 3D Canvas Pro</font>
+                        <br>by Trouble Pryor</h2>
+                        <p></p>
+			<h2 class="title">Question</h2>
+ 			   <div class="entry">
+
+                             <p><b>Question:</b> I was wondering if 3DC has the ability to load in a background for use as a reference?</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			  			<a NAME = "ans"</a>
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Answer</h2>
+			<div class="entry">
+
+                        <p>Yes, you absolutely can load in background images as reference. If you've seen any 3DCanvas screenshots, you've probably seen that the design area looks like it has a floor and two walls, in a gray and white checkerboard pattern. You can replace this pattern with an image.</p>
+
+                        <p>What I have done is I have a side and front view of the IC SD70 set as a backdrop on the two walls. Then, I use 3DC's orthographic views to make sure everything matches up exactly to the proportions of the diagram. This way, the technique you can use is to design model to the correct proportions based on the diagram, and then scale the whole thing to the proper dimensions.</p>
+
+                        <p>I've replaced the two side "walls" with the front and side diagrams:</p>
+
+                        <p><img SRC="images/3dc_back01.jpg" NOSAVE height=384 width=512></p>
+
+                        <p>Side orthographic view (below): The orthographic views do away with distance-related distortion, so you can get a good idea of how your parts are really placed and what they look like in relation to each other:</p>
+
+                        <p><img SRC="images/3dc_back2.jpg" NOSAVE height=614 width=819></p>
+
+                        <p>This is a perspective view (below): You can move freely around or through your model easily in all three dimensions in this view, and objects are rendered in the normal perspective (objects further from the "camera" appear smaller, etc.):</p>
+
+                        <p><img SRC="images/3dc_back3.jpg" NOSAVE height=384 width=512></p>
+
+                        <p>The bitmaps I used are 755 x 755. It works best if your images are square, to start with, so nothing is stretched funny. So, make your square picture, and then copy the diagram to a suitable place in the square (my diagrams are at the bottom of the square). The background picture will always fill the whole wall, it's just how you arrange the picture that determines where things appear.</p>
+
+                        <p>Also, 3DCanvas' extrude tool allows you to use a diagram as a backdrop, trace the object with points, and extrude the outline to make a solid object. <p>3D Canvas also supports patch modeling, which allows you to precisely construct complex curved surfaces (such as the bullet nose on a high speed train!) that would be very difficult to get right with any other method.</p>
+
+                        <p>Amabilis has a tutorial on their website that teaches you how to build a 3D dinosaur head based on a 2D profile drawing. The dinosaur happens to be used as an example because 3DC isn't just for MSTS, but the technique is equally relevant for the precise modeling of curvy locomotive shapes.</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a NAME = "steps"</a>
+
+		</div>
+
+    <!--- end cause --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Step-by-step Instructions<br>by Julian "Fozzy the Bear" Abrams</h2>
+			<div class="entry">
+
+                        <ol>
+                            <li>First of all figure out the total length of your finished locomotive.<br>&nbsp;</li>
+
+                            <li>Then set the working floor area in Canvas to that size plus about 2 Metres either end.<br>&nbsp;</li>
+
+                            <li>Lets say your locomotive is 10 Metres long so you should now have a working floor area 14 X 14 Metres.. divided into 1 Metre squares.<br>&nbsp;</li>
+
+                            <li>Take your background drawing and examine it... Obviously you know that the loco is 10 metres so all you then have to do is make a mark a further two metres from each end of the loco.<br>&nbsp;</li>
+
+                            <li>Scan the drawing in and crop it to the marks you made. Then make the canvas the loco is on square at 512 X 512 pixels or 1024 X 1024 pixels (do that using resize and canvas size in whatever paint software you use) -&nbsp; Quick note at this point, Photoshop or PaintShop Pro are the best choices for MSTS work because they both handle Alpha Channels well.<br>&nbsp;</li>
+
+                            <li>Now when you load it in Canvas it's exactly 14 Metres wide and the loco is exactly 10 metres in length, as canvas resizes it to fit the background of the working area which is already 14 Metres.<br>&nbsp;</li>
+                        </ol>
+
+                        <p>You can check the size accuracy by dragging a primitive cube out to the exact length your locomotive should be, and in an orthograpic view checking that cube against the background drawing.</p>
+
+                        <p>This is just another method for doing it and it's one that I personally find produces very accurate size results.</p>
+
+                        <p>Hope That Helps!!</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+
+		</div>
+
+    <!--- end cause --->
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Question</a>
+                 <br> <a href="#ans">Answer</a
+                 <br> <a href="#steps">Step-by-step</a>
+               </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 24 Dec 2002, 19 April 2010</center></p>
+</div>
+</body>
+</html>

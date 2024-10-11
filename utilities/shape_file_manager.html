@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+    <title>Shape File Manager by Paul Gausden -  at the steam4me Site</title>
+
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li><a href="../tutorials/index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li><a href="../routes/index.html">Routes</a></li>
+		<li class="current_page_item"><a href="index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+	</font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png"  height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Utilities.png"  height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Shape File Manager</font>
+                        <br>created by Paul "Decapod" Gausden
+                        <br>(tutorial by Yuri Sos)</h2>
+
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                   <p><center><b><i><font color="#3333FF"><font size=+1>"....the only way you can change a model</font></font></font></i></b>
+                   <br><b><i><font face="Verdana"><font color="#3333FF"><font size=+1>is if
+                   you have the original 3D files from
+                   <br>which the shape file was created."</font></font></i></b></center></p>
+
+
+                   <p>How many times have you seen this written in response to a query from a MSTS user wanting to adjust the height, width or even position of a model?</p>
+
+                   <p>Well sorry, the statement above is not true...... well it's no longer true since Paul Gausden wrote "Shape File Manager", a piece of Pommie ingenuity bundled up in a miniscule 38k Java application.</p>
+
+                   <h3>What is Shape File Manager (SFM)?</h3>
+
+                   <p>SFM is a single-file HTML Application written in Javascript (unrelated to Java: this application does not require Java to run) to assist with shape file maintenance.   Once SFM is opened, a simple yet powerful interface enables you to select an MSTS Shape, uncompress it, then adjust height, width, length, size, position and visibility of any model in MSTS.</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="download">
+		</div>
+
+    <!--- end down --->
+
+
+    <!--- sol hard --->
+
+		<div class="post">
+			<h2 class="title">Download And Installation</h2>
+			<div class="entry">
+                                  <p></p>
+                                  <table width=75% bgcolor = "#C1FFE7" >
+                                      <tr>
+                                         <td><a href="files/sfm24_2.zip"><img SRC="../images/download_icon.gif" border=0></a></td>
+                                         <td><b><a href="files/sfm24_2.zip">sfm24_2.zip</a></b></td>
+                                      </tr>
+                                   </table>
+                         <p>
+                            <ul>
+                                   <li>Click on links above to download Shape File Manager 2.4.2 (17,503 bytes) (version 2.4.2 (or 2.4a) uploaded to this site July 2005 - small fixes over v2.4).<br>&nbsp;</li>
+
+                                   <li>SFM <b>requires Internet Explorer</b> (IE 5 or higher); IE does NOT need to be your default browser;<br>&nbsp;</li>
+ 
+                                   <li>Save the ZIP file into any directory and extract its contents into your <b>Train Simulator/UTILS/FFEdit folder</b>, overwriting the default newshape.bnf file (uncompressing locos with animation will only work if you have installed the updated newshape.bnf file (included within the .ZIP file));<br>&nbsp;</li>
+
+                                   <li>Double-click on sfm.hta to start SFM;<br>&nbsp;</li>
+
+                                   <li>The first you run this software <b>some anti-virus software may report the file  as a "malicious script":</b> I can assure you it is not: if you receive this message, select the option (usually last on the drop-down box) that instructs your anti-virus software to "Authorise this script".<br>&nbsp;</li>
+ 
+                                   <li>If after installation, opening Shape File Manager just opens a notepad with the source code text, you will need to edit/change the File Associations in Explorer.  Go  <b>Tools | Folder Options | File Types</b>, scroll down to .HTA, press EDIT: look for the "Open" command - it should read thus:
+                                       <p><b>C:\WINDOWS\system32\mshta.exe "%1" %*</b></p>
+                                       <p>Make it so, click "ok" and SFM should now open correctly.</p></li>
+
+                                   <li>If SFM still does not run, it's possible one of its DLLs has not registered properly: run the following line from a command prompt:
+                                   <p><b>regsvr32 scrrun.dll</b></p>
+                                   <p><img src="images/sfm_18.jpg" alt="command prompt window" border="0"></p></li>
+
+                           </ul>
+                        </p>
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="use">
+		</div>
+
+    <!--- end sol hard --->
+
+    <!--- sol hard --->
+
+		<div class="post">
+			<h2 class="title">Using Shape File Manager</h2>
+			<div class="entry">
+
+                        <p><ol>
+                               <h2><li>Uncompression/Compression</h2>
+
+                                   <p>When you open SFM, you will be presented with a screen something like shown below;  click on "Parent" to move up a folder, click on a folder name to open that folder; use the scroll bar at right or the mouse-wheel to scroll folder lists that are off-screen.</p>
+
+                                   <p>To modify any shape file, you need to uncompress it first.  Move your mouse pointer over the grey Options box beside the shape file you wish to uncompress.  A minimal series of options will appear.  Click on Uncompress.</p>
+
+                                   <p><img src="images/sfm_01.jpg" width="800" height="417" alt="" border="0"></p>
+
+                                   <p>After a few seconds, the file size will change and SFM will show your file as Uncompressed. Mousing over the Options box now gives you an expanded range of choices.</p>
+
+                                   <p><img src="images/sfm_02.jpg" width="800" height="476" alt="" border="0"></p>
+
+                                   <p>Once you've finished with the model, you Compress the shape file by selecting Compress when the list of options appear.</p>
+                               </li>
+                               <h2><li>Scale</h2>
+
+                                   <p>The first option for your uncompressed model is Scale: it is now a simple matter to create or distort an existing model to suit custom applications.
+
+                                   <p><img src="images/sfm_03.jpg" width="800" height="235" alt="" border="0"></p>
+
+                                   <p>For example, you can distort a tunnel entrance along all or any axis to achieve a larger tunnel.</p>
+
+                                   <p>Clicking on scale pops up a new dialogue box with a series of further options:  here we will use JP1Tunnel.s as an example (if you're following this tutorial, it would be a good idea to first make a backup by clicking copy/paste on the shape file to give you a "Copy of JP1Tunnel1.s").</p>
+
+                                   <p>Check the box for "Scale same in all directions" and type in 2.5; static models have no ENG/WAG file, so uncheck that option as well:</p>
+
+                                   <p><img src="images/sfm_04.jpg" width="800" height="450" alt="" border="0"></p>
+
+                                   <p>This achieves a new shape file which has been enlarged in all axes by a factor of 2.5.&nbsp; The original JP1Tunnel is shown to the left of the altered version (below):</p>
+
+                                   <p><img SRC="images/sfm_05.jpg" height=526 width=646 border="0"></p>
+
+                                   <p>You can also just alter one axis: uncheck the "Scale same in all directions" and fields appear for all three axes: x (width), y (height), z (length).  This time we set the Y axis to be scaled by a factor of 2.5, but left the X and z axis at no change (=1).</p>
+
+                                   <p><img src="images/sfm_06.jpg" width="800" height="450" alt="" border="0"></p>
+
+                                   <p>The result can be seen in the image below, JP1Tunnel has been enlarged in only the "y" axis by a factor of 2.5.&nbsp; The original JP1Tunnel is shown in front of the altered version:</p>
+
+                                   <p><img SRC="images/sfm_07.jpg" NOSAVE height=526 width=646></p>
+
+                                   <p>When Australian designer Michael Thompson reskinned Jens-Chris Baerenz's E8 to resembler an Australian outline NSWGR 42 class, he shrank the model 5-10% to bring the model within Australia's more restrictive loading gauge.</p>
+
+                                   <p>Check the images below:</p>
+
+                                   <p><img SRC="images/sfm_08.jpg" NOSAVE height=324 width=666>
+                                   <br><img SRC="images/sfm_09.jpg" NOSAVE height=324 width=666></p>
+
+                                   <p><b>Warning</b>:&nbsp; scaling locos/stock may not always work as the WAG/ENG files sometimes can get slightly corrupted.</p>
+                               </li>
+                                   <h2><li>Texture Modes</h2>
+
+                                   <p><img SRC="images/sfm_10.jpg" NOSAVE height=401 width=640></p>
+
+                                   <p>Awaiting departure early morning (no specular lighting enhancement).</p>
+
+                                   <p><img SRC="images/sfm_11.jpg" NOSAVE height=401 width=640></p>
+
+                                   <p>Notice the sunlight glinting off the locomotive in the lower image.  Click on "Texture Modes".&nbsp; The following screen will appear.&nbsp; Click on "HiShine" for the part of the model you wish to enhance.&nbsp; Save your work and test it in MSTS.</p>
+
+                                   <p><img SRC="images/sfm_12.jpg" NOSAVE height=573 width=800></p>
+                               </li>
+                               <h2><li>Distance Levels</h2>
+
+                                   <p><b>Distance Visibility / Level of Detail(LOD) Adjustment</b> lets you adjust the maximum distance at which objects are visible (modellers should really be doing this, so that small scenery items disappear over 500m) and adjust the level of detail.&nbsp;&nbsp; This will help improve frame rates on routes with a high object density.</p>
+
+                                   <p><img src="images/sfm_13.jpg" width="403" height="302" alt="" border="0"></p>
+
+                                   <p>The pop-up box varies slightly if there is one (see above) or more than one (see below) LOD. </p>
+
+                                   <p><img src="images/sfm_14.jpg" width="390" height="292" alt="" border="0"></p>
+                               </li>
+                                   <h2><li>Shift</h2>
+
+                                   <p>As well as resizing a model, you can shift the model on its axis.&nbsp; A good example of this is 310wdcar.s located in the 310 folder:&nbsp; this is a MSTS default wagon that rumbles along with the wheels embedded in the rails (image immediately below).</p>
+
+                                   <p><img SRC="images/sfm_16.jpg" NOSAVE BORDER=0 height=340 width=540></p>
+
+                                   <p>Using SFM, I shifted the model +0.05m in the "y" direction.&nbsp;</p>
+
+                                   <p><img src="images/sfm2005_08.jpg" width="448" height="259" alt="" border="0"></p>
+
+                                   <p>As you can see, the wheels now ride on the rails, rather than in them.</p>
+
+                                   <p><img SRC="images/sfm_17.jpg" NOSAVE height=340 width=540></p>
+
+                               </li>
+                                  <h2> <li>Reverse</h2>
+
+                                   <p>You can also "Reverse" or rotate a model 180<sup>o</sup> on its axis.  This command runs immediately you click on it. This message pops up when the reversing is complete.</p>
+
+                                   <p><img src="images/sfm_09a.jpg" width="360" height="126" alt="" border="0"></p>
+
+                                   <p>This command is very useful for diesels running in MU: "flipping" them in Consist Builder means that the loco runs with its bogies turning in the opposite direction to the curve.  Note the bogies on the rear (brown loco) on the image below are rotating the wrong way.</p>
+
+                                   <p><img src="images/rev_bogies.jpg" width="785" height="455" alt="" border="0"></p>
+
+                                   <p>Reversing the shape and adding the reversed shape as a normal trailing unit ensures that the bogies follow the track.
+                               </li>
+                                   <h2> <li>Wordpad Edit .S</h2>
+
+                                   <p>Once the .s file is uncompressed, you can edit it in a Unicode-aware editor: this link opens the file in Wordpad.  I generally use this to change the name of the embbedded ACE filenames when I'm reskinning.</p>
+                               </li>
+                                   <h2> <li>WordPad Edit .SD</h2>
+
+                                   <p>This command uses Wordpad to open the .sd file that matches the .s file.</p>
+                               </li>
+                           </ol>
+                        </p>
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end sol hard --->
+
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br> <a href="#download">Download</a>
+                 <br><a href="#use">Using SFM</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 16 April 2005, 14 Mar 2007, 18 May 2009</center></p>
+</div>
+</body>
+</html>

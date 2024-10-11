@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>Using Hidewire to Remove Catenary Over Part Of Your Route in MSTS - at The Steam4me Site</title>
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Using Hidewire to Remove Catenary Over Part Of Your Route in MSTS</font>
+                        <br>by Wayne Campbell</h2>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                             <p>We have been plagued for some time with the difficulties of mixing electric and steam roads in one route.  I think most of us are using <a href="No_cat.html">SWISSIE's method</a> now which involves editing the world files and converting 'non-electric' track object to static objects. The only difficulty is that once this is done, its quite dangerous to make any changes to the route.   Also it is sometimes difficult to find the proper track object entries in the world file.  </p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "utility">
+		</div>
+
+    <!--- end end overview --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">The Hidewire Utility</h2>
+			<div class="entry">
+
+                        <p>I have written a little utility to help with the conversion process.  Called Hidewire, this liitle utility and its associated batch files should be installed into your Route folder.</p>
+
+                        <p>HIDEWIRE requires Microsoft dot NET Framework 1.1 (Redistributable) or higher from:</p>
+
+                        <p><a href="http://msdn.microsoft.com/netframework/technologyinfo/howtoget/default.aspx">http://msdn.microsoft.com/netframework/technologyinfo/howtoget/default.aspx</a></p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "works">
+		</div>
+
+    <!--- end end overview --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">How Hidewire Works</h2>
+			<div class="entry">
+
+                 <ul>
+                     <li>In RE, you mark non-electric track-sections by right clicking and changing the the detail level from 0 to 2;  see image below:
+                     
+                         <p><img src="images/hidewire_01.jpg" width="646" height="532" alt="" border="0"></p>
+                     </li>
+
+                     <li>Hidewire then converts those tracksections in the world files to 'static objects', preventing MSTS from displaying wire over them.
+                         <br>See <b>"BEFORE"</b> image below:
+
+                         <p><img src="images/hidewire_04.jpg" width="646" height="477" alt="" border="0"></p>
+
+                         <p>and the <b>"AFTER"</b> results below:</p>
+
+                         <p><img src="images/hidewire_05.jpg" width="646" height="477" alt="" border="0"></p>
+
+                         <p>The original world files are saved with the extension .wOK: see image below:</p>
+
+                         <p><img src="images/hidewire_03.jpg" width="644" height="416" alt="" border="0"></p>
+                     </li>
+
+                     <li>You must not edit the route after Hidewire has run.  To prevent this, Hidewire changes the extension of the route's .ref file to .noedit. 
+                         <br>To make the route editable again, run the command EDITROUTE.  It restores the original world files from the .wOK backups and restores your .ref file.
+
+                         <p>Two batch files are provided to automate the above: 
+                         <br>EDITROUTE  - automatically un-does the HIDEWIRE changes if necessary and then launches RE;
+                         <br>RUNROUTE   - automatically hides the wire if necessary and then launches MSTS.</p>
+                     </li>
+                 </ul>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "issues">
+		</div>
+
+    <!--- end end overview --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Known Issues</h2>
+			<div class="entry">
+
+                <p>I have found that switches under the 'hidden wire' ( non electric track ) don't animate.  The train is routed properly and the switch alignment is visible in the F8 display, but the actual points don't move.</p>
+
+                <p>HIDEWIRE will not hide the wire over DYNAMIC TRACK.   Don't use DYNAMIC TRACK on any sections where you don't intend to have overhead wire.</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "advanced">
+		</div>
+
+    <!--- end end overview --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Advanced Application</h2>
+			<div class="entry">
+
+                   <p>By default, HIDEWIRE looks for detail level 2 or 3 track sections to make non-electric. You can pass an optional parameter to HIDEWIRE to tell it to use an alternate detail level instead.  For example:
+
+                   <p><b>HIDEWIRE 0</b> will hide the wire over all track sections with detail level 0.  Since 0 is the default detail level for track, this will hide all track except ones that you mark with a detail level other than 0 ( ie 1 ).   Use this method when most of your track is non-electric
+and you want just a few sections to be electric.</p>
+
+                   <p><b>HIDEWIRE</b>    hides wire over track with detail level 2 or 3 ( as before )
+                   <br><b>HIDEWIRE 0</b>  hides wire over track with detail level 0 only
+                   <br><b>HIDEWIRE 1</b>  hides wire over track with detail level 1 only
+                   <br><b>HIDEWIRE 2</b>  hides wire over track with detail level 2 only
+                   <br>etc</p>
+
+                   <p>Change the RUNROUTE.BAT file appropriately if you intend to use this feature. No changes are needed to the EDITROUTE.BAT file.</p>
+
+       			</div>
+               <a NAME = "download">
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end cause --->
+
+
+
+    <!--- sol hard --->
+
+                  		<div class="post">
+			<h2 class="title">File download name, link and size</h2>
+			<div class="entry">
+
+                                  <table width=75% >
+                                      <tr>
+                                         <td><a href="files/HideWire_v12.zip"<img SRC="../images/download_icon.gif" border=1></a></td>
+                                         <td><b><a href="files/HideWire_v12.zip">HideWire_v12.zip</a></b></td>
+                                      </tr>
+                                   </table>
+
+                                   <p>File Size: {8.38 KB (8,584 bytes)</p>
+
+                                   <p>Extract the files to your route folder.</p>
+
+       		</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end sol hard --->
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#">The Hidewire Utility</a>
+                 <br><a href="#works">How Hidewire Works</a>
+                 <br><a href="#issues">Known Issues</a>
+                 <br><a href="#advanced">Advanced Application</a>
+                 <br><a href="#download">Download Info</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 25 Aug 2005, 02 April 2010</center></p>
+</div>
+</body>
+</html>

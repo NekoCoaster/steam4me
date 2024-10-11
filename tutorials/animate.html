@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>How to Animate Walschaert's Valve Gear using Abacus Train Sim Modeller v1.1 - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li ><a href="../vans/index.html">Vans</a></li>		
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png"  height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png"  height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+                        <h2><font color="#3333FF">How to Animate Walschaert's Valve Gear using Abacus Train Sim Modeller v1.1</font>
+                        <br>by Mike Wilson</h2>
+
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                             <p>In order to animate correctly, I think you have to know how a steam engine works, and in this case, the Walschaert's gear. I found this gear animation program a godsend - <a href="http://www.tcsn.net/charlied" target="_blank">ttp://www.tcsn.net/charlied</a> - get the Windows version.</p>
+
+                             <p>Walschaert's valve gear does not provide power on a single stroke. A vacuum is created in front of the piston head, which tends to pull the piston forwards, and this is assisted by steam applied from behind. When it reaches a certain point in the stroke, an admission valve is opened.&nbsp; This breaks the vacuum, and causes live steam to be injected into the space ahead of the advancing piston. As this steam expands, it pushes the piston backwards. This power is transferred to the central driving wheels via the piston rod, and to the other drivers by means of the coupling rod.</p>
+
+                             <p>A common error is the assumption that both sides of a steam engine are symmetrical. This is not the case - if both piston rods connected to the drivers at the same point, you would get a massive amount of force being applied to a single point on the wheel, which would be bad. (I understand that this is called 'Hammer Blow' and is the bane of the Civil Engineer's life.)</p>
+
+                             <p>To offset this, the piston rods are attached to the drivers at an offset of 45 or 90 degrees to each other. If they were offset by 180 degrees, the loco could stall, but that's another story.</p>
+
+                             <p>More information here... <a href="http://www.howstuffworks.com/steam1.htm" target="_blank">http://www.howstuffworks.com/steam1.htm</a></p>
+
+                             <h2>Disclaimer</h2>
+
+                             <p>I am neither an engineer, nor a locomotive crewman. My terminology may be suspect, and I'm prepared to stand corrected. I am using TSM v1.1, and I assume that you're familiar with that product.</p>
+
+                             <h2>Terms</h2>
+
+                             <p>I assume that you're working on a locomotive that is travelling along the z-axis.</p>
+                             <p>Motion: Movement along the z- or y-axes
+                             <br>Rotation is around the x-axis.</p>
+
+                             <p>For steam engines, I prefer to use 16-frame rotation, because it looks smoother, and is only twice as much work. If you only want to use 8 frames, replace the number 16 with 8 in the rest of this spiel. In order to set this up in TSM, you need to go to the ‘project properties’ section.</p>
+
+                             <ul>
+                                 <li>Set locomotive type to Steam (duh)</li>
+                                 <li>Set last animation frame to 17 (or 9)</li>
+                             </ul>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "link1"</a>
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">How To Animate The Gear</h2>
+			<div class="entry">
+
+                        <p>Let’s cut to the chase. I assume that you have already animated the wheel and built all of the bits you need for the motion. If you want to know how to do this - go see Richard Osborne's excellent tutorial. To animate the valve gear - pick a side, and do that first.
+
+                        <p><img SRC="images/mot_anim1.jpg" height=316 width=712></p>
+
+                        <p>I chose the left side for these pictures.  Here is Henry (by Darren Kent), shorn of motion.</p>
+                        
+                        <p>Place a block on the central driver at 'bottom dead centre' - this is about 'six o'clock' on the wheel. Place a similar block on the other side, and either three o'clock, or 9 o'clock - you choose.&nbsp; If you are working from plans, it'll probably tell you... Fuse these blocks to the wheel, and you can delete the points later.&nbsp;&nbsp; The picture below shows the left side block, and I chose to set it at a relative 3 o’clock – offset 90 degrees from BDC.&nbsp; It’s at the end of the arrow!</p>
+
+                        <p><img SRC="images/mot_anim2.jpg" height=310 width=416></p>
+
+                        <p>I assume you have already created the coupling rods = Parent for all rods should be "Main". Centre the coupling rod on the block you just created.</p>
+
+                        <p>This might be a good time to save your work.</p>
+                        
+                        <p>Refer to your drawings, and you'll find a 'poky up bit' that I tend to call an eccentric (see above) - this connects to the reversing gear, but does not rotate. If you haven’t built it yet - do so - fuse it to the coupling rod or the wheel - it doesn't matter which.&nbsp; Note the other driving wheels aren’t rotated correctly.
+
+                        <p><img SRC="images/mot_anim3.jpg" NOSAVE height=238 width=710></p>
+                        
+                        <p>Select the coupling rod, and push the 'Anim' button. There are sixteen frames of animation available to you, and frames 0 and 16 will be the same. This part does not rotate, only move along the y and z-axes. Without moving the part at all, and the animation frame set to 0, press the "Set Motion" button. Now change the animation frame to 16 and do the same thing.&nbsp;See below.</p>
+
+                        <p><img SRC="images/mot_anim4.jpg" NOSAVE height=250 width=254></p>
+
+                        <p>Select frame 1 - you will see that the wheel has moved, and the block you added is now in a new position. Lock the x-axis, then move the coupling rod so that its centre is on the block. Repeat for the remaining frames of animation. Check the animation when you've finished to make sure it's nice and smooth, with no obvious jerks.</p>
+
+                        <p><img SRC="images/mot_anim4b.jpg" NOSAVE height=293 width=640></p>
+
+                        <p>This might be a good time to save your work.</p>
+
+                        <p>The piston rod is the next task - this has motion (z-axis) and rotation (x-axis). Make sure that the pivot point is at the end closest to the front of the locomotive. To move this, you need to press shift and then move it with the mouse. (Don't forget to lock the axes you aren’t using!)</p>
+
+                        <p><img SRC="images/mot_anim5.jpg" NOSAVE height=270 width=712></p>
+
+                        <p>Animate as before, moving the rod backwards and forwards, and rotating so that the end that attaches to the coupling rod (the so-called Big End) is always in the same relative position when compared to the coupling rod. To rotate, lock the y- and z-axes and rotate using the mouse. In addition to setting the motion as before, press 'set rotation' when you're happy with the position of each animation frame. Check the animation when you've finished.</p>
+
+                        <p>This might be a good time to save your work.</p>
+                        
+                        <p>Animate the crosshead slide so that it moves along the z-axis in response to the motion of the piston rod.</p>
+
+                        <p><img SRC="images/mot_anim6.jpg" NOSAVE height=310 width=634></p>
+
+                        <p>Next, the reversing link arm - this bit is connected to the reversing rod at the top, and the eccentric on the coupling rod. The lower end will move up and down in response to the eccentric. The whole arm will move backwards and forwards as well.</p>
+
+                        <p><img SRC="images/mot_anim7.jpg" NOSAVE height=302 width=518></p>
+
+                        <p>Rotate the reversing link (the little rod that dangles from the foot plate) so that its end stays in relative position to the link arm.&nbsp; These two parts are co-acting, so you may need to fiddle around a bit before they are perfect.</p>
+
+                        <p><img SRC="images/mot_anim8.jpg" NOSAVE height=358 width=618></p>
+                        
+                        <p>Finally, you need to add the admission valve actuation rod to both sides. This is co-acting with&nbsp; the motion of the reversing link, and the rod slides in and out of the top of the cylinder block.</p>
+
+                        <p><img SRC="images/mot_anim9.jpg" NOSAVE height=292 width=666></p>
+
+                        <p>Now save your work and compile it - voila!</p>
+
+                        <p>If, like me, you have elected to go with a 16-frame animation, there is one thing left to do.&nbsp; The animation within MSTS defaults to 30 FPS, so your motion will appear to be running in half speed.&nbsp; You need to uncompile the .S file for your locomotive, amend the line:</p>
+ 
+                        <p>&nbsp;&nbsp; <b>animation ( 16 30 )</b></p>
+
+                        <p>to read:</p>
+
+                        <p>&nbsp;&nbsp;&nbsp; <b>animation ( 16 60 )</b></p>
+
+                        <p>Then recompile.</p>
+
+                        <p>If you are uncomfortable mucking around with the .S file, simply halve the Wheel radius in the .ENG file.</p>
+
+			 </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "conclusion"</a>
+		</div>
+
+    <!--- end cause --->
+
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Conclusion</h2>
+			<div class="entry">
+
+                        <p>In conclusion, this method of animation is quick and dirty, but works without any tedious calculation.&nbsp; It’s probably not as accurate as other methods but if you are having trouble, then this may help you out.&nbsp; Feel free to email me if you have any trouble, or better yet post at the <a href="http://forums.uktrainsim.com/viewforum.php?f=246" target="_blank">UK Trainsim Forum</a>, and you’ll be overwhelmed by the offers of support, as I have been.</p>
+
+                        </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+
+		</div>
+
+    <!--- end cause --->
+
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#link1">Animate The Gear</a>
+                 <br><a href="#conclusion">Conclusion</a>
+               </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 10 Feb 2004, 28 April 2010</center></p>
+</div>
+</body>
+</html>

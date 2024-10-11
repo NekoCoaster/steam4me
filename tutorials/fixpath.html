@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>Fixing Broken Paths Using Activity Editor - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li ><a href="../vans/index.html">Vans</a></li>		
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Fixing Broken Paths Using Activity Editor</font>
+                        <br>by Bob Latimer (latimers at UKTS)</h2>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                             <p>Broken paths are usually the result of paths created for one version of a route being used on a different version.</p>
+
+                             <p>Paths are defined by their starting point, their end point and every set of points (switches) that they pass through.  If one version of a route has different trackwork to another, paths that use the different trackwork wil not work on both routes.</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Repair</h2>
+			<div class="entry">
+
+                        <p>First open the "Train Simulator Editors &amp; Tools" from the shortcut created when MSTS was installed.</p>
+
+                        <p><img src="images/fixpath_01.jpg" width="720" height="562" border="0"></p>
+
+                        <p>Then open the Activity Editor by clicking on the appropriate button.</p>
+
+                        <p><img src="images/fixpath_02.jpg" width="800" height="600" border="0"></p>
+
+                        <p>The first step is to open an activity for the route that you want to work on.  It doesn't matter which activity you use, you're not going to change it.</p>
+
+                        <p>For this tutorial, I am using Tim Court's MidEast UK route version 1.3 and a path created for version 1.2.  So the sequence is <b>File | Open | UK1 | Activities | any.act</b>.</p>
+
+                        <p><img src="images/fixpath_03.jpg" width="800" height="600" alt="" border="0"></p>
+
+                        <p>The next step is to find all of the paths.  Since some aren't player-driveable, the way to do this is through the traffic creation procedure.</p>
+
+                        <p>On the bottom right under <b>"Traffic Pattern"</b>, if there is an entry in the drop down box, click on Edit. If the drop down box says None, click on New. If the latter, just give it a  dummy name when asked.  You won't be saving the traffic pattern.</p>
+
+                        <p><img src="images/fixpath_04.jpg" width="800" height="600" alt="" border="0"></p>
+
+                        <p>In the new box labelled <b>Traffic Pattern</b> that has appeared on the left, click on <b>New</b>.</p>
+
+                        <p><img src="images/fixpath_05.jpg" width="657" height="714" alt="" border="0"></p>
+
+                        <p>You now can see the Service Editor.  Click on the drop down arrow under <b>Path</b>  and scroll down until you find a path that has (broken) beside its name.</p>
+
+                        <p> <img src="images/fixpath_06.jpg" width="649" height="717" alt="" border="0"></p>
+
+                        <p>Click on Edit.  Move the windows around so they look like the next picture – push the Traffic Pattern one off to the left so it's out of the way - put the other two down to the bottom right so that they don't disappear behind the big window if you click on the wrong one.</p>
+
+                        <p><img src="images/fixpath_07.jpg" width="800" height="600" alt="" border="0"></p>
+
+                        <p>You are now ready to start fixing the path.</p>
+
+                        <p>On this one, the broken part, shown with a red line, is fairly obvious.  Sometimes they are not so obvious and you have to zoom in on the  route and check it from one end to the other to find the red part(s).</p>
+
+                        <p>To zoom in, put the cursor on the bottom right corner of the route window, hold down the right mouse button and drag it diagonally up and to the left.  Zoom out by dragging top left to bottom right.</p>
+
+                        <p>Move around the route by placing the cursor on the route, hold down the left mouse button and drag.   You can also use the arrows on the Tools window or the ones on your keyboard.</p>
+
+                        <p><img src="images/fixpath_08.jpg" width="652" height="536" alt="" border="0"></p>
+
+                        <p>That is a place where the path went through a set of points (a node) on the other route version and the node has moved in this version.   Put the cursor on the red dot and right click.  That brings up the following menu.</p>
+
+                        <p><img src="images/fixpath_09.jpg" width="651" height="563" alt="" border="0"></p>
+
+                         <p>Choose Delete broken point and then Yes.</p>
+
+                         <p><img src="images/fixpath_10.jpg" width="648" height="539" alt="" border="0"></p>
+
+                         <p>The next task is to put the red part of the path back through the nodes that will work for it. In this example, I went to the bottom end of the red line to find that the path was on the second line from the right (in this case, the up fast line).</p>
+
+                         <p>Then I moved up the route until I found the node that it needed to go through.  Note in the picture above there are four nodes visible and the path needs to go through the top right one since it is on the second line from the right.</p>
+
+                         <p><img src="images/fixpath_12.jpg" width="651" height="536" alt="" border="0"></p>
+
+                         <p>Now you have to grab the red line.</p>
+
+                         <p>Put the point of the cursor on it and the circle should appear.  Unfortunately, the picture above doesn't show the cursor, just the circle.</p>
+
+                         <p>Now hold down the left button and drag the line towards the node.  The red line won't actually move but a new black line will appear and follow the cursor.</p>
+
+                         <p>Sometimes when you try this, the whole picture moves.  If that happens, move it back to where it was, let go and try clicking on another point on the red line.  It sometimes takes several attempts, especially if there is a lot of trackwork around or the nodes are close together.</p>
+
+                         <p>Once you've got it, drag the line through the node.  Since the two nodes here are close together, it is better to drag the line to the right past the nodes and then approach the nodes from the right. When a circle appears around the node you want the path to go through, let go of the button.</p>
+
+                         <p><img src="images/fixpath_13.jpg" width="750" height="738" alt="" border="0">
+                         <br><img src="images/fixpath_14.jpg" width="561" height="741" alt="" border="0"></p>
+
+                         <p>Now go back to the Path Editor window, which will be partially obscured, and click on Leave Path Editor and then answer Yes to saving the path changes.</p>
+
+                         <p>The Service Editor will then appear and if you have fixed all of the broken points on that path, the (broken) after the name of the path will have disappeared.</p>
+
+                         <p><img src="images/fixpath_15.jpg" width="651" height="582" alt="" border="0"></p>
+
+                         <p>If the (broken) is still there, click on Edit again and check that your fix worked and then check for other broken parts.</p>
+
+                         <p>If that one was successfully fixed, move down the dropdown list of paths until you find the next broken one.</p>
+
+                         <p>Sometimes I have found that fixing one path will break another.  Strange as that may seem, it does happen.</p>
+
+                         <p>If I find that happening, I make a copy of all of the paths in the Paths folder into a temporary folder.  As I fix each one, I copy the newly fixed path into the temporary folder.  At the end of the process, I copy all of the paths in the temporary folder back into the Paths folder and then double check to make sure they are all fixed.</p>
+
+                         <p>If all of the paths are now fixed, click on Cancel in the Service Editor window.  Then click on the red X at the top of the main window.</p>
+
+                         <p><img src="images/fixpath_16.jpg" width="661" height="541" alt="" border="0"></p>
+
+                         <p>Click on No to the question about saving the activity.</p>
+
+                         <p>Just a quick word about start and end points.  These can be quite tricky to fix.</p>
+
+                         <p>If trackwork in a station has changed, it often generates messages about incorrect platforms.  Often you can fix these problems by dragging the start or end point back onto an appropriate place on the new trackwork.  If this fails for an end point, the end point can just be deleted and a new one created.  However, if you delete a start point, the whole path disappears and you have to start again.</p>
+
+                         <p>Comments or suggestions gratefully received on the UKTS forums or to <a href="mailto:latimers@ihug.co.nz">latimers@ihug.co.nz</span></a></p>
+
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+
+		</div>
+
+    <!--- end cause --->
+
+
+
+
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#cause">Repair</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 22 August 2004, 12 April 2010</center></p>
+</div>
+</body>
+</html>

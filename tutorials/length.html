@@ -1,0 +1,321 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>Achieving Perfect Car Length Parameters - at The Steam4me Site</title>
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Achieving Perfect Car Length Parameters</font>
+                        <br>by Yuri Sos</h2>
+                        <h3>**(updated 2 June 2006, using input from Ian Bowles aka "gallop3", Joe Morris and Lukas A Lusser aka "Swissie")**
+                        <br>*** Updated 19 Sep 2009 with important <a href="#cogfix">Centre Of Gravity fix</a> information discovered by L W Shell and Jeff Kraus-Yao ***</h3>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                             <p><p>Every now and then you come across a model like this................</p>
+                             
+                             <p><img src="images/length_01.jpg" width="500" height="200" alt="" border="0"></p>
+
+                             <p>In this case, we're dealing with <b>us2freightcar5</b>; frustrating as the train rumbles past with wagons separated by a metre or more distance.</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "define">
+		</div>
+
+    <!--- end end overview --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Defining The Problem</h2>
+			<div class="entry">
+
+                        <p>Checking the bounding box in this model (press <b>Ctrl +</b> : the + key on the numeric keyboard), we can see that it's ok as far as the BB is concerned: in fact this particular model couples and uncouples correctly, but the vehicles remain separated.</p>
+
+                        <p><img src="images/length_02.jpg" width="500" height="200" alt="" border="0"></p>
+
+                        <p>So how can we reliably repair wagons such as these?</p>
+
+                        <p>The first thing we need to know is <b>"What is the correct length of this vehicle?"</b></p>
+
+                        <p>The answer lies in using <a href="../utilities/shape_viewer.html">Paul Gausden's magnificent Shape Viewer</a> and then performing a little judicious editing of the model's .WAG file.</p>
+
+                        <p><img src="images/length_03.jpg" width="648" height="429" alt="" border="0"></p>
+
+                        <p>Open the model in Shape Viewer and press Ctrl-B to see the dimensions of the wagon in a visual sense (the red shaded box in the image above), then press Ctrl-C to bring up the pop-up box listing the dimensions of the model.  It should be noted here that these dimensions are calculated from the shape file itself with no reference at all to the .SD or .WAG file.</p>
+
+                        <p>The key dimension to read here is the length of 20.269m, say 20.27m (we don't need more than two decimal places and there's some evidence to suggest that these long numbers may delay or even confuse MSTS).  This is the complete length of the model from coupler to coupler.</p>
+
+                        <p>Open the model's .WAG file in the Unicode-aware editor of your choice.  It will look something like the image below.</p>
+
+                        <p><img src="images/length_04.jpg" width="639" height="558" alt="" border="0"></p>
+
+                        <p>You will note that the length in the .WAG file is shown as 21.3m.  This is where the problem lies.</p>
+                        
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "correct">
+		</div>
+
+    <!--- end end overview --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Correcting The Errors</h2>
+			<div class="entry">
+
+                        <p>It's been stated elsewhere that the length of a model should be calculated as the distance between coupler centres.  So if we take the end-end dimension from the .S file of 20.27m and subtract say 0.4m, you'll end up with a coupler centre-coupler centre dimension of 19.87m.</p>
+
+                        <p><img src="images/length_06.jpg" width="637" height="462" alt="" border="0"></p>
+
+                        <p>Change the numbers in the <b>Size</b> line to read 19.87m (as in image above).</p>
+
+                        <p>Change the numbers in the <b>InertiaTensor</b> to read 19.27m (as in image above).  The InertiaTensor length is inter-related with the coupler damping characteristics and should be the same or just slightly smaller than the actual Size.</p>
+
+                        <p>Save the file.</p>
+
+                        <p>While you're there, check the .SD file (see below).</p>
+
+                        <p><img src="images/length_05.jpg" width="639" height="558" alt="" border="0"></p>
+
+                        <p>Examine the <b>ESD_Bounding_Box</b> line.</p>
+
+                        <blockquote>
+
+                        <p>Firstly, what do these numbers mean?  These numbers define the limits of the bounding box from the centre of the model in the format</p>
+                        
+                        <p><b>ESD_Bounding_Box ( front-x  lower-y  front-z rear-x upper-y rear-z);</b></p>
+
+                        <p>the parameters are in meters:
+                        <br>x:  left negative, right positive relative to origin;
+                        <br>y: positive above, negative below origin;
+                        <br>z: positive forward of, negative to the rear of the origin.</p>
+
+                        <p> So an ESD_Bounding_Box ( -2 0 5 2 3 -5 ) would define a bounding box 4m wide, 3m high and 10m long, extending 2m either side of the origin of the model, up 3m from the origin of the model and 5m fore and aft of the origin of the model.</p>
+                        </blockquote>
+
+                        <p>Several things to check:</p>
+
+                        <ol>
+                            <li>The second parameter (in this case 0.957m) should be 0.6m or higher as it delineates the lower limit of the bounding box: some models have this figure as low as 0.01m which may cause derailments on uneven track or level crossings.
+
+                            <p><a href="../Route_Riter/index.html">Route Riter 6.1.63</a> or higher now has a button under "MISC" enabling you to change all the minimum height bounding box values to 0.90.</p>
+
+                            <p>In the case of a flatcar, such as this one, it might pay to increase the height of the bounding box to say 2.5m to ensure it doesn't get "run over" by an adjacent vehicle.</p>
+                            <br> &nbsp;</li>
+                            <li>Add the third and sixth figures (ignore the minus sign on the third parameter): these two figures should add up to a figure less than the model length figure in the .S file. The easiest way to achieve this is to change the third parameter to Shape Viewer's min Z figure plus 1 and the sixth parameter to Shape Viewer's Max Z minus 1.  This pretty well always leaves the bounding box covering the physical shape of the wagon excluding draft gear and couplers.
+                            <br> &nbsp;</li>
+                            <li>Truncate all values to two decimal places.
+                            <br> &nbsp;</li>
+                            <li>Make sure the width and height parameters are correct.  Some bounding boxes are way out width-wise and you may get collisions with vehicles on adjacent tracks: set the width (1st and 4th parameters) to -1.47 and 1.47 on all (standard gauge) rolling stock.
+                            <p>See image below for an example of a Bounding Box WAY out of line.</p>
+
+                            <p><img src="images/length_12.jpg" width="560" height="360" alt="Example of a badly defined Bounding Box" border="0"></p>
+                            </li>
+                            </ol>
+
+                            <p>When you've done all the above, this is how your .SD file should look:</p>
+
+                            <p><img src="images/length_09.jpg" width="637" height="462" alt="Final appearance of .SD file" border="0"></p>
+
+                            <p>And this is how it should look in Shape Viewer - from the side.....</p>
+
+                            <p><img src="images/length_10.jpg" width="636" height="462" alt="Side on view in Shape Viewer" border="0"></p>
+
+                            <p>....and from the end......</p>
+
+                            <p><img src="images/length_11.jpg" width="636" height="462" alt="End on view in Shape Viewer" border="0"></p>
+
+                            <p>Now let's look at this models in the simulation again.  You can see that these wagons now appear correctly coupled and couple and uncouple correctly.</p>
+
+                            <p><b>Consequences of Too Long a Bounding Box:</b> the BB will prevent the engine or car from properly re-coupling.
+                            <br><b>Consequences of Too short a Bounding Box:</b> the shortened BB prevents the car from being stopped in buffer-type collisions at the end of track before it "falls off the rails".</p>
+
+                            <p><img src="images/length_07.jpg" width="500" height="200" alt="" border="0"></p>
+
+                            <p><img src="images/length_08.jpg" width="500" height="200" alt="" border="0"></p>
+
+                            <p>You may wish to alter some of the figures I've presented here, but at least you have a formula for establishing correct dimensions for model length and bounding boxes.</p>
+
+
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "cogfix">
+		</div>
+
+    <!--- end end overview --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Dealing With Oddly-Spaced Wagons (the Centre of Gravity Fix)</h2>
+			<div class="entry">
+
+               <p><b><a href="../Route_Riter/index.html">Route Riter</a> (v6.4.5 or higher donation-ware version)</b> already performs the corrections in the tutorial above, but the CentreOfGravity fix will be included in RouteRiter v7.1.42 or higher.</p>
+
+               <p>Once you've corrected all the parameters above, you still may occasionally notice that wagons are not equally spaced when one wagon is flipped relative to its neighbour.  The couplers may be further apart or more bunched up than when all the wagons are "facing forward" or unflipped.  This occurs when the model is not centred on the Z-axis and thus the couplings are not equally spaced when the car is flipped.</p>
+
+               <p>Using the figures derived from the Ctl-C window in Shape Viewer, adjust or add a CentreOfGravity line to the model's .WAG file so that the "z" value is changed using a value calculated by the formula</p>
+
+               <p><img src="images/z_formula.gif" ></p>
+
+               <p>inserting the appropriate values for Min Z and Max Z.</p>
+
+               <p>Continuing to use the USFreightCar5 example above............</p>
+
+               <p><img src="images/z_formula3.gif" ></p>
+
+               <p>the formula for z would read</p>
+
+               <p><img src="images/z_formula2.gif" ></p>
+
+               <p>Note that this resultant figure can be either positive or negative.  Adding the line</p>
+
+               <p><b>CentreOfGravity ( 0m 1.4m 0.0024m )</b></p>
+
+               <p>will now correct this car and couplers will be evenly spaced whether the wagon is flipped or not.</p>
+
+               <p><img src="images/length_13.jpg" ></p>
+
+               <p>Whilst this is a trivial change in this particular wagon, this alteration can make quite a difference in wagons such as these tank-wagons (images below): Shape Viewer reported these wagons as having Min Z -8.4845 and Max Z as 8.30134 - a difference of 0.18m (or 7 inches for those metrically challenged): this could translate to a 0.36m/14" variation in the gap between wagons.</p>
+
+               <ul><li>The first image shows the wagons in a normal consist;</li>
+                   <li>the second with the trailing (right) wagon flipped relative to the other (left) wagon being "normal"; and</li>
+                   <li>the third with the leading (left) wagon flipped relative to the other (right) wagon being "normal".</li>
+               </ul>
+
+               <p><img src="images/len_coupler2.jpg" ></p>
+               <br><img src="images/len_coupler4.jpg" ></p>
+               <br><img src="images/len_coupler5.jpg" ></p>
+
+               <p>Adding a line <b>CentreOfGravity ( 0m 1.4m -0.0916m )</b> resulted in evenly spaced wagons, flipped or not.  As demonstrated by the images above, even a small offset of origin from the centre of the model can make a large difference visually.</p>
+
+               <p><b><a href="../Route_Riter/index.html">Route Riter</a> (v7.1.42 or higher donation-ware version)</b> includes the CentreOfGravity fix as part of the Fix ENG/WAG file editor.</p>
+
+               <p><img src="images/RR_eng_file_cog1.jpg" >
+               <br><img src="images/RR_eng_file_cog2.jpg"></p>
+
+               <p>Thanks to L W Shell who first noticed the effect of a change in CoG and to Jeff Kraus-Yao for the formula for another MSTS fix.</p>
+
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end cause --->
+
+
+
+    <!--- sol hard --->
+
+		<div class="post">
+                  <h2 class="title">Executive Summary</h2>
+  			      <div class="entry">
+
+                  <p>Quick reference summary of values to be changed:</p>
+                  <ul>
+                      <li>Get true length of model from Ctrl-C in Shape Viewer;</li>
+                      <li>Set length in the <b>Size</b> parameter in .WAG file to length minus 0.4m;</li>
+                      <li>Set length in the <b>InertiaTensor</b> parameter in .WAG file  to length minus 1.0m;</li>
+                      <li>Set length in .SD files to values 1m less than min Z and and max Z from Ctrl-C in Shape Viewer;</li>
+                      <li>Check width and height parameters .SD files; truncate all values to two decimal places.</li>
+                  </ul>
+                  </p>
+       		</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end sol hard --->
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#define">Defining The Problem</a>
+                 <br><a href="#correct">Correcting The Problem</a>
+                 <br><a href="#cogfix">Oddly-Spaced Wagons</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 0 December 2004, 3 June 2006, 19 Sep 2009, 02 April 2010</center></p>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+<title>Using MSTS with Widescreen Monitors - at The Steam4me Site</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Using MSTS with Widescreen Monitors</font>
+                        <br>by Yuri Sos</h2>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+                              <p><table>
+                                    <tr>
+                                       <td><p>MSTS was designed in the early 2000s and its screen output is based on a "standard" monitor view based on a 4:3 aspect ratio.</p>
+
+                                           <p>These are the standard MSTS resolutions: depending on the maximum resolution of your graphics card/screen, you will see some/all of these: (all are 4:3 aspect ratio).</p>
+                                           <p>Note that the highest resolution available is based on the <b>vertical resolution</b> of your monitor (which is logical as that ensures that there will be no cutoff of the images).
+
+                                       </td>
+                                       <td><img src="../images/msts_display_01.jpg" border="0">
+                                       </td>
+                                    </tr>
+                                 </table>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "laptops">
+		</div>
+
+    <!--- end end overview --->
+ 		<div class="post">
+			<h2 class="title">Windows 10 and nVidia</h2>
+			<div class="entry">
+
+                           <p>You can set screen resolutions on widescreen desk- and laptops with nVidia graphics cards using the nVidia Control Panel.
+                            to eliminate distortion in MSTS by setting "scaling" or "aspect ratio".</p>
+
+                           <p>This is an example using a recent (at time of this update - 02/2021) nVidia installation:</p>
+
+                           <p>Right-click on the desktop, select "Graphics Properties", then "nVidia Control Panel".</p>
+                           
+                           <p>Expand <b>Display</b> and click on <b>Adjust desktop size and position</b>.
+
+                           <p>Under <b>Scaling,</B>, click on <b>Aspect Ratio</b> radio button. (arrow).
+                           <p>Under <b>Perform Scaling on</b>, select <b>GPU</b> from the drop-down box (arrow):</p>
+
+                            <p>From the Resolution drop-down box, select the largest vertical resolution that your monitor offers (here native resolution of 1920x1200 means that I selected 1600x1200).</p>
+
+
+                           <p><img src="images/ws_nvidia_cpanel.jpg" border="0"></p>
+
+
+                           <p>This will give you the largest possible MSTS viewpoint with black bars down each side of the screen (much like a 4:3 TV programme on a wide-screen TV) - note you now DO NOT need the -vm:w parameter (see below):</p>
+
+                           <p><img src="../images/msts_display_aspect_ratio_Compaq_03.jpg" border="0"></p>
+
+                           <p>Set the screen display in MSTS Options to the largest option available and save: MSTS will open with that resolution every time.</p>
+
+                           <p>Command-line switches are useful if you have mini-routes that you want to run at a different resolution to your master MSTS as mini-routes take their initial resolution settings from the registry - UNLESS they are specified in the command line (for example, you're working on an activity in a mini-route and want to be sure AE opens in 16-bit to avoid "issues").</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="desktops">
+		</div>
+
+    <!--- end place links --->
+
+    <!--- laptops --->
+
+		<div class="post">
+			<h2 class="title">Laptops</h2>
+			<div class="entry">
+
+                           <p>(written 2010) You can set screen resolutions on widescreen laptops to eliminate distortion in MSTS: most in-built graphics card have an option to set "scaling" or "aspect ratio".</p>
+                           
+<p>Here's another example using an much older nVidia-equipped laptop display:  right-click on desktop, select "nVidia Display" then "Laptop Display". Select "Digital Flat Panel Settings" ans then select "Fixed Aspect ratio scaling".</p>
+
+                           <p><img src="../images/msts_display_aspect_ratio_nVidia_display.jpg" border="0"></p>
+                           
+
+                           <p>This is an example using an Intel Graphic Card.</p>
+
+                           <p>Right-click on the desktop, select "Graphics Properties", then "Display Settings", thus:</p>
+
+                           <p><img src="../images/msts_display_aspect_ratio_Compaq_01.jpg" border="0"></p>
+
+                           <p>Under "Display Expansion", click on "Aspect Ratio Options" (arrow #1 above).
+                           <br>Select "Maintain Aspect Ratio", thus (arrow #2):</p>
+
+                           <p><img src="../images/msts_display_aspect_ratio_Compaq_02.jpg" border="0"></p>
+
+                           <p>This will give you the largest possible MSTS viewpoint with black bars down each side of the screen (much like a 4:3 TV programme on a wide-screen TV) - note you now DO NOT need the -vm:w parameter (see below):</p>
+
+                           <!--- <p><img src="../images/msts_display_aspect_ratio_Compaq_03.jpg" border="0"></p>
+
+                           <p>Set the screen display in MSTS Options to the largest option available and save: MSTS will open with that resolution every time.</p>
+
+                           <p>Command-line switches are useful if you have mini-routes that you want to run at a different resolution to your master MSTS as mini-routes take their initial resolution settings from the registry - UNLESS they are specified in the command line (for example, you're working on an activity in a mini-route and want to be sure AE opens in 16-bit to avoid "issues").</p>
+
+                           <p>Here's another example using an nVidia-equipped laptop display:  right-click on desktop, select "nVidia Display" then "Laptop Display". Select "Digital Flat Panel Settings" ans then select "Fixed Aspect ratio scaling".</p>
+
+                           <p><img src="../images/msts_display_aspect_ratio_nVidia_display.jpg" border="0"></p>
+                           <!--->
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="desktops">
+		</div>
+
+    <!--- end place links --->
+
+
+    <!--- Increasing Forest Density --->
+
+		<div class="post">
+			<h2 class="title">Desktops</h2>
+			<div class="entry">
+
+                           <p>(written 2010) The same options as I've shown above for laptops exist for desktop PCs.  Note: you must use the DVI inputs on your display panel and video card (rather than the older VGA) if you want these options to work correctly.  Here's an image of the DVI connections you will need to use:</p>
+
+                           <p><img src="../images/msts_display_DVI_VGA_card_connections.jpg" border="0"></p>
+
+                           <p>Here's a screenshot showing you how to alter an nVidia-equipped PC:</p>
+
+                           <p><img src="../images/msts_display_flat_panel_scaling.jpg" border="1"></p>
+
+                           <p>Here's a screenshot showing you an ATI Catalyst screen that allows you to set fixed-image scaling on ATI graphics card (ATI have been MUCH slower than nVidia to implement this feature and has only appeared in the last few months).  This has only been implemented with v8.3 or higher drivers.</p>
+
+                           <p>Select <b> Digital Panel | DVI | Check "Enable GPU Scaling" | Check "Maintain Aspect Ratio" | Ok.</b></p>
+
+                           <p><img src="../images/msts_display_ati_scaling.jpg" border="1"></p>
+
+                           <p>Finally, if you're still having trouble with setting scaling on an ATI card, <a href=ati_scaling.html>read this tutorial</a> on setting up scaling with ATI cards.
+                           
+                           <p>Hope this helps.</p>                           
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="view">
+		</div>
+
+     <!--- end desktops --->
+
+	</div>
+
+	<!-- end #content -->
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#overview">Overview</a>
+                 <br><a href="#laptops">Laptops</a>
+                 <br><a href="#desktops">Desktops</a>
+
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2010 steam4me.net. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 20 February 2009, 1 March 2010</center></p>
+</div>
+</body>
+</html>

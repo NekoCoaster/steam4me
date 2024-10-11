@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>Setting Up A Cabview in MSTS - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li ><a href="../vans/index.html">Vans</a></li>		
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Setting Up A Cabview in MSTS</font>
+                        <br>by Yuri Sos</h2>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                            <p>I have had a cabview tutorial in preparation for some time, but I've noticed that the most common question asked on the forums is "how do I alter a given view from the cab?".</p>
+
+                            <p>I though I'd put down on paper my experience on adjusting cabviews to enable MSTS users to alter their own cabviews to suit individual conditions.  As time progresses, I'll work through all the various options and settings, but for now it's going to be "adjusting your eye-point".</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "eyepoint"></a>
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Adjusting A Cabview's Eye-Point</h2>
+			<div class="entry">
+
+                        <p>The Eye-point (camera view) for cabview position is modified in the .cvf file, not the ENG file (although head-out is modified in the ENG file).</p>
+
+                        <p>To alter your eyepoint in the cabview, open your .cvf file in a Unicode-aware editor such as <a href=context.html>ConTEXT Text Editor</a>.</p>
+                        
+                        <p>Here's the first part of a .cvf file:</p>
+                        
+                        <p><img src=images/cabview_01.jpg alt=cabview_01 ></p>
+                        
+                        <p>The first line of note is <b>CabViewType  ( n )</b>.  The number n refers to the type of locomotive the cab is to be used for.</p>
+                        <ul>
+                            <li>1 = Electric</li>
+                            <li>2 = Diesel</li>
+                            <li>3 = Steam</li>
+                        </ul>
+                        
+                        <p>Next the views are defined as front, left, right in that order.  Each view has five parameters:</p>
+                        <ul>
+                            <li><b>CabViewFile ( filename.ace )</b> -- the ACE file to call;</li>
+                            <li><b>CabViewWindow ( 0 0 640 480 )</b> -- the visible view: from the days of poor memory/graphics cards (nowadays set this line as shown at left); this masked off parts of the view not required because it would be covered by the appropriate ACE file: you only see the mask if the ACE file is missing.  As the cabview is based on a 640x480 view, set this parameter as shown: there's no point in going higher than this value; </li>
+                            <li><b>CabViewWindowFile ( "" )</b> -- totally useless parameter, never properly implemented: just leave a pair of double quotes here); don't omit this line as the train will not load in MSTS, returning a "Failed To Open Cabview" error message;</li>
+                            <li><b>Position ( x y z )</b>; and</li>
+                            <li><b>Direction ( x y z )</b>.</li>
+                        </ul>
+
+                        <p>You alter your eye-point (camera) by altering the Position and Direction lines for each view.</p>
+
+                        <p><b>Position ( x y z )</b>: this line defines the position of the camera relative to the origin (centre) of the shape you are using: the axes x, y, z are numeric values in meters:</p>
+
+                        <ul>
+                            <li>x axis - right (positive) or left (negative) of the origin of the shape;</li>
+                            <li>y axis - above (positive) or below (negative - never used) the origin of the shape;</li>
+                            <li>z axis - in front of (positive) or behind (negative) of the origin of the shape.</li>
+                        </ul>
+
+                        <p>Example: Position ( -1.2 3.5 -6.2 ) is a view 1.25m to the left of centre, 3.5m above the track and 7m behind the centre of the loco (this example from team-ALCO's S class steam locomotive).</p>
+
+                        <p><b>Direction ( x y z )</b> provides the direction the camera is pointing: the axes x, y, z are numbers (between -180 and +180) in degrees where 0 is straight ahead and
+                        <ul>
+                            <li>"x" is view up (negative) or down (positive) in degrees from the initial eyepoint ;</li>
+                            <li>"y" is view left (negative) and right (positive) from the initial eyepoint (so left is -90, right is 90, rearview is 180);</li>
+                            <li>"z" is view as if you have a head tilt (positive you tilt your "head" right, negative you tilt your "head" left; this z value is probably best left at 0 (zero).</li>
+                        </ul>
+
+                        <p>Example: Direction ( 2 35 0 ) is a view pointing down 2<sup>o</sup>, looking 35<sup>o</sup> to the right (this example from team-ALCO's S class steam locomotive - right view).</p>
+
+                        <p><img src=images/cabview_02.gif alt=cabview_02 ></p>
+
+                        <p>
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "link2"></a>
+		</div>
+
+    <!--- end cause --->
+
+    <!--- end cause --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">.</h2>
+			<div class="entry">
+
+                        <p>
+
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "link2"></a>
+		</div>
+
+    <!--- end cause --->
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#eyepoint">Adjusting Eyepoint</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 30 Oct 2006, 20 June 2010</center></p>
+</div>
+</body>
+</html>
+

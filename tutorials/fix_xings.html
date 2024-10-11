@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+<title>Fixing Level Crossings Where Cars Don't Restart After The Train Has Passed - at The Steam4me Site</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Fixing Level Crossings Where Cars Don't Restart After The Train Has Passed</font>
+                        <br>by Devin LeGresley</h2>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                              <p>Many train-simmers (myself included) have always wondered why cars in the carspawner will remain stopped at mast-only signals even after a train has passed by. I say mast-only signals because these signals are the only ones that have this realism problem (and not signals with barriers).</p>
+
+                              <p><b>The problem</b> was NOT caused by the carspawner but lay within the shape file itself.</p>
+
+                              <p><b>The solution:</b> the shape must have animation.</p>
+
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		       </div>
+
+    <!--- end end overview --->
+
+    <!--- overview --->
+
+		<div class="post">
+
+			<h2 class="title">The Procedure</h2>
+ 			   <div class="entry">
+
+                              <p><p>The shape that makes up the level crossing sign has to be altered to include an animation section.  You can add "animation" to any existing shape.
+                              <p>Uncompress the required shape with Shape File Manager or Zipper.</p>
+
+                              <p>Open the shapefilename.s in a Unicode-aware editor such as MS Wordpad or better still, ConTEXT.</p>
+
+                              <p>Add the following lines of code in the green box (you can copy and paste) immediately above the last bracket in the shape file: make sure you have all the brackets copied and pasted correctly.</p>
+
+                              <p><table border=2 BGCOLOR="#80FF00" ><tr><td><font face="Courier">
+                              <blockquote>	animations ( 1
+                              <blockquote>		animation ( 1 1
+                              <blockquote>			anim_nodes ( 1
+                              <blockquote>				anim_node MAIN (
+                              <blockquote>					controllers ( 0 )
+                              </blockquote>				)
+                              </blockquote>			)
+                              </blockquote>		)
+                              </blockquote>	)
+                              </blockquote>
+                              </font></td></tr></table>
+
+<p>Once you've placed the code, use ConTEXT's bracket-matching feature to check that you've got all the brackets: it should look like this:</p>
+
+<p><img SRC="images/rr_xing_fix_02.jpg" height=451></p>
+
+<p>Note that there is one and only one (closing) bracket after this fragment of inserted code.</p>
+
+<p>The following image shows you the shape file with the added text in the right-hand image.</p>
+
+<p><img SRC="images/rr_xing_fix_01.jpg" height=413></p>
+
+<p>Save the resultant shape file, compress with Zipper or Shape File Manager and place in your route.</p>
+
+</p>
+
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		       </div>
+
+    <!--- end end overview --->
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#">The Fix</a>
+
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 16 June 2006, 8 March 2010</center></p>
+</div>
+</body>
+</html>
+
+
+

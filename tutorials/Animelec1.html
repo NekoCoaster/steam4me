@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>How To Animate An Electric Loco (And Make Parts Move Using The P Key): Section 1 - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li ><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png"  height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png"  height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+                        <h2><font color="#3333FF">How To Animate An Electric Loco (And Make Parts Move Using The P Key): Section 1</font>
+                        <br>by Paul DeVerter</h2>
+                        <h3>A Port City Car Co. Project Copyright &copy; 2005</h3
+
+                        <p></p>
+			<h2 class="title">SECTION 1 - The Rail Gun</h2>
+ 			   <div class="entry">
+
+                   <p>This is a relatively simple model to learn on.  What we want is a gun barrel that is up when the power is off and down when the object is ready to move under its own power or when hauled by another locomotive.  Unfortunately, since it is really an Electric Locomotive, we are stuck with catenary over the track.  We can solve that problem by going into Route Editor-Properties and lowering the wire down to ground level, or by raising it into the sky so that it can not be seen.  I have read it is not  possible to electrify a railroad by using the third rail option in the Route Editor, so you can not make an Electric Locomotive operate on what appears to be track without wires.</P>
+
+                   <BLOCKQUOTE>
+                   <p><i>(Editor's Note:  you may want to examine <a href="No_cat.html">Removing catenary from Spur lines</a></b> by Lukas A Lusser.&nbsp;  Lukas demonstates a clever technique to "trick" MSTS into removing catenary locally, for example above a spur that is supposed to be non electrified.)</i>
+                   </blockquote>
+
+                   <p>First off make a body or chassis for the gun.  To illustrate the principles we are going to use simple shapes such as blocks and tubes and we are going to texture them with the same colorful bitmap file we used in the <a href="anim_scen.html">first tutorial</a>. The colors are vivid and easy to see, for illustration purposes.  The bmp used to texture this object, and all the others in this Section, is SteamEngine.bmp (<a href="files/SteamEngine.zip">click here for a 2k ZIP containing the BMP file</a>).</P>
+
+                   <p>Using the Box Tool, draw something like what is illustrated.  A box that is 10 feet deep, 3 feet high, and perhaps 10 feet wide.  This will be the chassis, so name it Main. Next use the Tube Tool to draw a barrel that is perhaps 15 feet long and 2½ feet in diameter, and taper it down to look sort of like a gun barrel.  What I failed to do was to change the origin of the box - now it is almost 3 feet above the baseline origin in the drawing. This means that the center of the box will actually be at the top of the rail, instead of above the rail.  But it doesn't matter for the purposes of this tutorial.</P>
+
+                   <p><img src="images/pdv_anim_loco_04.jpg" width="211" height="108" alt="" border="0">
+                   <img src="images/pdv_anim_loco_05.jpg" width="210" height="119" alt="" border="0"></P>
+
+                   <p>The photo above and to the right shows the barrel, but here I have moved the origin of the barrel from the center of the tube to the point where we want it to pivot.  I did this by using the Move Tool and constraining X and Y, and then holding down the SHIFT key, moved the axes to the right to what I considered an appropriate pivot point.</P>
+
+                   <p>Recall that this rail gun is going to have animated rotational movement, and I would like that to be about the pivot point, and not the center of the barrel.  Now we need to texture the two parts, and I will leave that up to you.  Then we need to do some housekeeping in order to set up the animation for the barrel.</P>
+
+                   <p>Go to the Menu, and under File, choose Project Properties, and up comes the box named: Project Properties.  Here we must choose a Name and a Short Name for this object. I chose Railgun.  We must specify it to be a Locomotive, and in the Locomotive Type, pick Electric.  In the Animation Frames I chose 10.  You can use any number over 2, which is the minimum for a loco.  Why 10?  Well, the number of frames of animation directly affects the speed at which the animation takes place.</P>
+
+                   <p><img src="images/pdv_anim_loco_06.jpg" width="655" height="319" alt="" border="0"></P>
+
+                   <p>The larger the number of frames the longer it will take the barrel to raise and lower.  It is also possible to adjust the speed of animation by uncompressing the .s file, and changing the animation number in that file.  This was explained in the first tutorial in this series with regard to scenery objects and I have found that the same thing can be done to locomotives as well.  In that instance, the number 30 seems to be the MSTS default, and lowering that number (instead of raising it) makes the animation slower.  My experiments show it can be reduced to 4 or 5, and that does not seem to affect the wheels nor bogies, but your experience may vary.</P>
+
+                   <p>What we want is a pretty slow movement of the barrel, you can always change it if you don't like my numbers.  You may think that you will have to animate each of the frames, so that the more you choose, the more tedious it will become.  Not true.  You are about to learn a great trick in TSM animation.</P>
+
+                   <p>First we have one more housekeeping chore to attend to.  We need to make certain the parts are correctly named with the reserved train parts used by the P key.  Go to the Menu, and under File, find and bring up Part Properties (F2).  We are going to fix the properties of the barrel so it is obvious that the part should have Polygon Smoothing checked.  This will make the barrel more or less round.  Next we want the parent to be the chassis which we have named Main, so fix that under Part Parent.  The really important thing is the Part Name.  The P key only animates certain parts, and those are listed under Train Names, and only those that begin with Pantograph are controlled by the P key.</P>
+
+                   <p>We could pick any of those having to do with Pantograph but let's stick with what would be the primary Pantograph of a Locomotive, and that is the one on the front  in the 1 series.  So, chose PantographBottom1 for the Part Name from the Train Names drop-down list.  Ignore the notation of Rotation after the Animation box because these photos were made after the fact.</P>
+
+                   <p><img src="images/pdv_anim_loco_07.jpg" width="471" height="371" alt="" border="0"></P>
+
+                   <p>Now it is time to begin the animation.  Just as in the Scenery animation we click on the "Ani" button to bring up the animation controls for the Pantograph.  First we must understand what is likely to happen when the object loads in the Sim.  This is controlled by the eng file, and more particularly the line that begins with:</P>
+
+                   <P><b>        PantographToggle1 ( 0 1 1 )</b></P>
+
+                   <P>This is located near the bottom of the eng file.  What is shown is the default line which is generated by TSM when the Railgun Electric Loco is made.  As I understand the parameters, the first number "0" is the beginning animation frame position, the first "1" is the ending animation frame position, and the third number, which is also a "1" is the position picked by you when setting up the eng file, and the default is "1".  So, this means that the beginning Frame is the 1st animation frame (thus the 0), the ending animation frame is the "1" or last animation frame (the middle number), and the eng file will begin with either the first or the last frame, depending on whether the last number is "0" or "1". Consequently, if you have the line shown above, the Sim will begin with the Pantograph in the last position.  On the other hand, you can change the numbers so that the line reads:</P>
+
+                   <P><b>		PantographToggle1 ( 0 1 0 )</b></P>
+
+                   <br>This will cause the Sim to begin the Electric Loco with the pantograph in the beginning animation frame.  If you animate the barrel with the first animation frame in the up position, and the ending animation frame in the down position, and you wish the Electric Loco to be in the down position when the game starts, then you will want the third number to reflect the down position or "1".</P>
+
+                   <p>Let's begin the animation.  Remember we have 10 animation frames which means in the TSM program we will have Frames 0 through 9, which makes 10.</P>
+
+                   <p>In the TSM program, click on the "Ani" button, and here is what you have:</P>
+
+                   <p><img src="images/pdv_anim_loco_08.jpg" width="682" height="521" alt="" border="0"></P>
+
+                   <p>The Animate Part box comes up and shows that you are in Frame 0 and that the Last Animation Frame is 9.  We have the buttons at the top set for Rotate and the X axis is constrained.  The barrel is down.  Press Set Rotation.  The beginning animation will be as the photograph shows.  The barrel will be down.</P>
+
+                   <p>Next move the Frame slider to the right until we get to Frame 9</P>
+
+                   <p><img src="images/pdv_anim_loco_09.jpg" width="397" height="272" alt="" border="0"></P>
+
+                   <P>This will be the last frame of animation, and we want the barrel raised to the up position.  So, manipulate the Mouse until the barrel is raised as shown.  Click Set Rotation again.  That is all there is to setting the rotation, and since we are not messing with Motion, we will not touch that button.</P>
+
+                   <p>Lets take a moment and peek at the Animation numbers in the rot file we have just constructed.  Return the Slider to the left so you are in Frame 0, get out of Animate Part, and while the barrel is selected, push F2 Part Properties, click on the Animation box toward the bottom right, and up comes the Part Animation box.  Notice it has animation only in the Rotation Keys, and only Frames 0 and 9.  Also note that the Frame 9 has an odd number namely 37.500004.  We can easily clear that up, by selecting row 9 and the hitting the Edit Rotation button, and now we have the Rotation box showing Frame 9.</P>
+
+                   <p><img src="images/pdv_anim_loco_09a.jpg" width="369" height="430" alt="" border="0">
+                   <img src="images/pdv_anim_loco_09b.jpg" width="269" height="244" alt="" border="0"></P>
+
+                   <p>Change the number in the X Axis to simply 37.5, click OK, and it is done.</P>
+
+                   <p>What about all the animation in the middle?  Well, it is all taken care of by TSM, and you do not need to do anything about the middle.  The barrel will automatically and slowly move from the Frame 0 position to the Frame 9 position in the Sim, without you doing anything further.  Amazing.  Of course, it does not look that way in TSM, and when you move the slider back to a lower number, the barrel will drop back to the position shown in Frame 0, and you may think this will not work.  E.g., move the slider back to Frame 2, and you will see the barrel is at the same position as in Frame 0, so far as TSM is concerned.  But suppose you take my word for it and go ahead and generate a Train Sim Loco.</P>
+
+                   <p><img src="images/pdv_anim_loco_10.jpg" width="264" height="370" alt="" border="0"></P>
+
+                   <p>Go to Menu, File, Create Train Simulator Object, and let's fill in the blanks and see what we really have.  We have already taken care of Project Properties so the additional information we need is covered by checking all the boxes shown in the next photo.  Push the Continue button at the bottom, and this will automatically generate a generic Electric Locomotive with Sound file and Cabview file, as well as the ace file, s, sd, and eng files, and put them into a new Folder called Railgun, ready to run.  You will need to go the Activity Editor and generate a Consist for the new Electric Locomotive called Railgun, and then go to the Sim and see what you have.</P>
+
+                   <p>You will notice that you have not made provision for any bogies, nor wheels.  You may think these are necessary for a locomotive to work in the Sim.  Not so.  You will have made a loco that will run just fine without any wheels, and buried part way into the track. This is an exceedingly simple way to try out what you are experimenting with, and play with it.  It also has the advantage of placing all the operative parts and Folders into the Railgun Folder at the click of a single button.  The added advantage is that you can add to the loco in much the same manner and you can remove it from the TRAINSET Folder by simply deleting the Railgun Folder.</P>
+
+                   <p>Back to the Create Train Simulator Object box, and after you have pushed Continue, you must then make a Consist in the Activities-Consist Editor.</P>
+
+                   <p><img src="images/pdv_anim_loco_11.jpg" width="409" height="443" alt="" border="0"></P>
+
+                   <p>What you should have is shown by the next two photos.  Try running your new Railgun around: release the brakes, advance the throttle, and try out the P key.</P>
+
+                   <p><img src="images/pdv_anim_loco_12.jpg" width="346" height="189" alt="" border="0">
+                   <img src="images/pdv_anim_loco_13.jpg" width="316" height="325" alt="" border="0"></P>
+
+                   <p>The one on the left is with the barrel up, and the power is on so that the loco will run.  If you press the P key, the barrel will slowly come down, and the power to the loco will go off, and you can only brake it if moving, but the throttle will not work.  We have the animation backwards don't we.  We do not want the gun to run when it is up, but only when it is down.</P>
+
+                   <p>What to do?  The answer is to reverse the animation frames so that Frame 0 becomes Frame 9 and vice versa.  How to do that?  Well, you must go back to the F2 Part Properties window and click on the Animation bottom in the bottom portion, and then do your adjusting in the Edit box for Rotation of this object.  We have learned that animation Frame 0 is actually the non-powered position of the Pantograph, while the last animation Frame, here 9, is the powered position.  So, lets go through the steps of making the needed edits even though you were taught how to in Tutorial Part 1, because you will need to use this technique often.  We have learned that the third number in the toggle in the .eng file has nothing to do with raising or lowering the barrel in the Railgun, but has to do with whether the Sim starts with the first animation frame or the last animation frame.</P>
+
+                   <p>What follows is the step-by-step adjustment (or reversal) of the animation frames.  We have reopened the Part Animation box for the barrel.  What we want to do is reverse the rotation data for Frames 0 and 9.  Click on the line for Frame 9 to select it, and then</P>
+
+                   <p><img src="images/pdv_anim_loco_15a.jpg" width="363" height="165" alt="" border="0">
+
+                   <p>click on the Edit Rotation button.  This will bring up the Rotation box, and change the top item, which reads Frame 9 so that it now reads 0.</P>
+
+                   <p><img src="images/pdv_anim_loco_15b.jpg" width="267" height="186" alt="" border="0"></P>
+
+                   <p>Then click OK, and you are back to the Part Animation box, which now shows 2 lines that begin with 0.</P>
+
+                   <p><img src="images/pdv_anim_loco_15c.jpg" width="362" height="151" alt="" border="0"></P>
+
+                   <p>We have changed the former 9, so let's now select (click on) the old 0, at the top of the list</P>
+
+                   <p><img src="images/pdv_anim_loco_15d.jpg" width="363" height="159" alt="" border="0"> </P>
+
+                   <p>and again click the Edit button.  This brings up the Rotation box again, and now we simply need to change the 0 to a 9 in the top line</P>
+
+                   <p><img src="images/pdv_anim_loco_15e.jpg" width="269" height="190" alt="" border="0"></P>
+
+                   <p>Do so, and click OK again, and we are back to the Part Animation box again.  But there is</P>
+
+                   <p><img src="images/pdv_anim_loco_15f.jpg" width="364" height="156" alt="" border="0"></P>
+
+                   <p>still a problem.  The top line reads 9, and it should read 0, to be in the proper order. So click on the bottom line, which starts with 0, to select it.</P>
+
+                   <p><img src="images/pdv_anim_loco_15g.jpg" width="363" height="157" alt="" border="0"></P>
+
+                   <p>Then click on the Move Up button, and the 0 line will move up to the top, where it belongs. Now click on the OK button, and you are out of Part Animation and back to Part Properties.</P>
+
+                   <p>Try out your revised animation frames in the .dst file, and you will see that you have reversed them.  The Frame 0 will now show the barrel up, and Frame 9 will show it down. To move this new animation to the Sim, we will have to again Create a Train Simulator Object.  We have not changed the texture file, nor the Cabview, Sound, and eng files. What we have changed will only affect the .s file.</P>
+
+                   <p>Go to the Create Train Simulator box, and uncheck the boxes that do not need</P>
+
+                   <p><img src="images/pdv_anim_loco_15.jpg" width="408" height="437" alt="" border="0"></P>
+
+                   <p>to be checked.  To update the .s file the only two that need to be checked are Convert to Binary and Replace Existing Files, as shown above.  Click Continue, and check out your Railgun with the reversed frames in the Sim.</P>
+                   
+                   </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "link1"</a>
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">CONCLUSION - Lessons learned</h2>
+			<div class="entry">
+
+
+                   <p>To recap: we have covered a lot of ground, and</P>
+
+                   <ul>
+                       <li>we have learned that the larger the number of animation frames the slower the animation, and that we do not need to actually program in all of the frames, as the Sim will interpolate the missing frames.</li>
+                       <li>We learned that animation Frame 0 is actually the non-powered position of the Pantograph, while the last animation Frame, here 9, is the powered position.</li>
+                       <li>We have learned that the third number in the PantographToggle1 line in the .eng file has nothing to do with raising or lowering the animated part, but has to do with whether the Sim starts with the first animation frame or the last animation frame.</li>
+                       <li>We have learned how to simplify and to rearrange the frame animation lines for an animated part.</li>
+                       <li>We have learned how the P key operates, and how to name parts to be used by that key.  </li>
+                       <li>We have learned that locos need no wheels to operate, and how to simply replace or update s files when creating objects.</li>
+                   </ul>
+
+                   <p>We have finished Section 1.  Now it is time to start on another of our animated electric locomotives in <a href="Animelec2.html">Section 2.</a></p>
+
+                   </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "link1"</a>
+		</div>
+
+    <!--- end end overview --->
+
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Series Contents</h2>
+                 <P><a href="#">Section 1</a>
+                 <BR> <a href="Animelec2.html">Section 2</a>
+                 <br><a href="Animelec3.html">Section 3</a>
+                 <br><a href="Animelec4.html">Section 4</a>
+                 <br><a href="Animelec5.html">Section 5</a>
+                 <br><a href="Animelec6.html">Section 6</a>
+                 <br><a href="Animelec7.html">Section 7</a>
+                 <br><a href="Animelec8.html">Section 8</a>
+                 </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 12 April 2005, 06 May 2010</center></p>
+</div>
+</body>
+</html>

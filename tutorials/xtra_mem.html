@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <meta name="Author" content="MSTS-Bin George, Otto Wipfel, Yuri Sos">
+   <meta name="GENERATOR" content="ConTEXT  v0.98">
+   <meta name="Description" content="Improving MSTS: Increasing memory that can be used by MSTS">
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+
+   <title>Increasing memory that can be used by MSTS - at the steam4me site</title>
+
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Increasing memory that can be used by MSTS</title></font>
+                        <p>compiled by Yuri Sos, contributions by Otto Wipfel and Joseph Hoevet</h2>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+
+                        <p>This is an "undocumented feature" of MSTS.  It was in fact discovered by George, the "MSTS-BIN" developer, but it can be successfully used by default MSTS users.
+
+<p>You can handle the amount of memory to be used by MSTS with an undocumented parameter: <b>-mem:xxx</b>.</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "shortcuts">
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Change your MSTS shortcuts</h2>
+			<div class="entry">
+
+                        <p>When you install MSTS, you end up with two shortcuts, one for the simulation, one for the Editors and Tools, thus:
+
+                        <p><img src="images/xtra_mem_01.jpg" border="0"></p>
+
+                        <p>If you right-click on these links (arrow 1) and select Properties (with a left-click - arrow 2),</p>
+
+                        <p><img src="images/xtra_mem_02.jpg" border="0"></p>
+
+                        <p>you will end up with a window that looks something like this (my MSTS is not in the default folder, so your window may vary from this):</p>
+
+                        <p><img src="images/xtra_mem_03.jpg" border="0"></p>
+
+                        <p>No matter, you are only going to change the end of the line in the "Target" field.  Do not alter the drive or path: for a default installation of MSTS, this line will probably read <b>"C:\Program Files\Microsoft Games\Train Simulator\launcher.exe" </b> and <b>"C:\Program Files\Microsoft Games\Train Simulator\launcher.exe" -runeditor</b> for the Editors and Tools.  Note: you need to enclose the folder name and exe file within double quotes if there are spaces in the folder name (as there are in the default installation).</p>
+
+                        <p>Backspace everything until you have removed launcher.exe.</p>
+
+                        <p>Then.......</p>
+
+                        <table width =80% bgcolor="#EEEFB3">
+                            <tr>
+                               <td><b><font face="Verdana">If you want to.....</b></td><td>.</td><td><b><font face="Verdana">then use this shortcut.....</b></td>
+                            </tr>
+                            <tr>
+                               <td><font size=-1><font face="Verdana">To Play the Simulation in Full Screen</td><td></td><td><font size=-1><font face="Verdana">train.exe -mem:nnn</td>
+                            </tr>
+                            <tr>
+                                <td><font size=-1><font face="Verdana">To Play the Simulation in a Window</td><td></td><td><font size=-1><font face="Verdana">train.exe -vm:w -mem:nnn</td>
+                            </tr>
+                            <tr>
+                                <td><font size=-1><font face="Verdana">To Use the MSTS Editors & Tools</td><td></td><td><font size=-1><font face="Verdana">train.exe -toolset -mem:nnn</td>
+                            </tr>
+                            </table>
+
+                            <p>where  <b>nnn</b> is the amount of memory you wish to allocate to MSTS.</p>
+
+                            <p>For example: to start MSTS with 512MB memory, memory use:</p>
+                            <ul><li><b>train.exe -mem:512</b> for playing MSTS full-screen or</li>
+                                <li><b>train.exe -vm:w -mem:512</b> for playing MSTS in a window or</li>
+                                <li><b>train.exe -toolset -mem:512</b>" for Editors and Tools.</li>
+                            </ul>
+
+                            <p>You should end up with something like this (this is for 512MB of memory in MSTS played in a window):</p>
+
+                            <p><img src="images/xtra_mem_04.jpg" border="0"></p>
+
+                            <p>If you're using default folders, ensure the folder name and exe are enclosed in double quotes, thus (composite image):</p>
+
+                            <p><img src="images/msts_shortcut_06.jpg" border="0"></p>
+
+                            <p>You can use as much memory as you want, but it should not exceed one-half of physical PC memory (eg for a 1G-equipped PC, use <b>-mem:512</b> as the switch; for a 2G or higher machine use <b>-mem:1024</b> (MSTS will only ever use a maximum of 1024MB, so there is no point in placing a higher figure in the switch).</p>
+
+                            <p>Test to establish the best value for your system.  Most people report there seems to be little or no improvement beyond 512MB.</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="memory">
+		</div>
+
+    <!--- end cause --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">How Do I find out how much memory my PC has?</h2>
+			<div class="entry">
+
+                            <p>If you press Ctrl-Alt-Delete, then click on <b>Performance</b> tab, you will be able to see the available memory in the <b>Physical Memory (K)</b> section.  In the screenshot below, the number is 3668360 (ie 3.6G): this is a 4G PC, but XP can only address 3.6G.</p>
+
+                            <p><img src="images/xtra_mem_06.jpg" border="0"></p>
+
+                            <p><i>(thanks to Ottodad for this Task Manager tip)</i></p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="improve">
+		</div>
+
+    <!--- end cause --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Improvements in operation reported</h2>
+			<div class="entry">
+
+                            <p>Improvements in operation reported include:</p>
+
+                            <ul>
+                               <li>in the game: a reduction or elimination in <b>Failure to load shape: xxxxx.s</b> errors messages in route with heavily populated tiles;<br>&nbsp;</li>
+                               <li>In Route Editor: I couldn't say it any better than Allan Lownsborough: <i>"From a route developer's point of view, this appears to be a stunning discovery. I have inserted the mod into the startup for Route Editor and have been working on the Adelaide route for over half an hour laying track continuously for that time and it has remained stable with no saves. Previously, RE would have crashed within 15 - 20 minutes and most certainly laying track and across numerous tiles."</i> </li>
+                            </ul>
+
+                            <p>Hope this helps.</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end cause --->
+
+    <!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#shortcuts">Change MSTS shortcuts</a>
+                 <br><a href="#memory">How Much Memory</a>
+                 <br><a href="#improve">Improvements Noted</a>
+
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 7 April 2008, 8 March 2010</center></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>A Coach made with Gmax Chapter 8 - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <meta name="Author" content="Richard Osborne">
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+        <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">A Coach Made With GMax</font>
+                        <br>by Richard Osborne</h2>
+                        <p></p>
+			<h2 class="title">Chapter 8: Interiors</h2>
+ 			   <div class="entry">
+
+
+<p>The insides have been sitting there waiting to be textured. If you have the project on screen, keyboard H, select the inside & outside parts.  Right click on the screen then 'Hide Unselected'. This ability to hide & show parts is very useful. If you've hidden parts & want them back click on the 'Display' icon then 'Unhide by Name'. Make the already textured side active; press the 'Material Editor' & 'Get!'. The 'windows' texture should appear. It might indicate a 'Mat #5' or similar, scroll down until 'windows' shows.</p>
+
+<P>Make one interior side active in 'polygon' mode. Apply the interior texture. The trick is to have the corridor opposite the compartments & facing the same direction. Some trial, error & flipping might well be needed. Do the same on the other side. If you've used 'solid' for the end use 'Get!' again. 'Unhide All' & select 'main' part.</p>
+
+<P><img src="images/ro_gmax_08_01.jpg" width="600" height="209" alt="" border="0"></p>
+
+<P>Now, this is where life gets tricky. If you've used TSM you'll appreciate using alphanorm+ for the exterior & alphanorm- for the interior. We've used the same texture state for interior & exterior. Gmax uses the LOD manager to arrange the order in which parts are drawn. This is explained on christrains.com faq page I guided you towards earlier. There was also a long thread on train-sim.com which gave an in-depth look at the subject:- "Z-Buffer and Alpha Test" topic 7798.</p>
+
+<P>Take a look at the screenshot; isolate the 'sides' part. On 'Selected Node' tick 'Collapse Node' & set 'SubObject ID' to 1. On the data panel tick 'Sort this SubObject' & 'Sort Priority' 5.</p>
+
+<P><IMG SRC="images/ro_gmax_08_02.jpg" BORDER="0" WIDTH="189" HEIGHT="549"  ALT=""></p>
+
+<P>Isolate the 'insides' part. This time set the Manager to ID = 2; Sort Priority to 15. I don't entirely know the logic but it works. Let Gmax do the sorting. The insides just won't show if you make an error here.</p>
+
+<P><IMG SRC="images/ro_gmax_08_03.jpg" BORDER="0" WIDTH="189" HEIGHT="549" ALIGN="bottom" ALT=""></p>
+
+<P>Now export the model, don't forget to remove LOD data & have a look in SView. Again this screenshot was taken before applying alpha texture to the inside. If it doesn't show when you've applied alpha a couple of things could have gone wrong. You didn't MakeAceWin so that you have an earlier .ace file. The wrong texture state could be in use. On the Material Editor press 'Query', you'll see a list of parts which use that texture. You might have forgotten to 'Collapse All' after texturing. Just double check, the error will show soon enough. As Lee Trevino said "The more you practise the easier it looks!"</p>
+
+<P><IMG SRC="images/ro_gmax_08_04.jpg" BORDER="0" WIDTH="504" HEIGHT="266" ALIGN="bottom" ALT=""></p>
+
+<P>Some more bits for the interior now; first bulkheads between the guard & passenger sections. These are the same as the ends so we'll copy them. Highlight, in polygon mode, one interior end.</p>
+
+<P><IMG SRC="images/ro_gmax_08_05.jpg" BORDER="0" WIDTH="600" HEIGHT="436" ALIGN="bottom" ALT=""></p>
+
+<P>If we click 'detach' you can see some options, before we split parts into smaller units. This time we want a copy leaving the original polygons in place. Tick 'detach as Clone' , give it a sensible name & 'OK'. The new part won't be active, you'll have to select it, either keyboard H or the 'Select' icon. Select, centre axis, move it nearer the end of the guard's compartment, texture. Just texture with black or dark grey is fine. I'll always have some area of plain colour on a texture file. Clone the bulkhead, flip it & move it into the passenger compartment a bit. I find it easier to roughly place bulkheads & move them into place when they're all in place.</p>
+
+<p>For a change the plans I'm using here give the exact compartment size; I could make a dummy part as a guide. I like to use jigs, a few moments to make them takes a lot of guesswork from modelling.</p>
+
+<P><IMG SRC="images/ro_gmax_08_06.jpg" BORDER="0" WIDTH="254" HEIGHT="131" ALIGN="bottom" ALT=""></p>
+
+<P>We need to make a box which will be used for the corridor partition, this has a kink at the end for the corridor connection. We also need some bulkheads; take the centre bulkheads, clone & rename, select new part, trim off a couple of polygons & drag one point down to floor level. You could trim a couple more polygons before texturing. I put a couple of bulkheads on the texture file assuming the first & third compartments had different colouring.</p>
+
+<P><IMG SRC="images/ro_gmax_08_07.jpg" BORDER="0" WIDTH="421" HEIGHT="300" ALIGN="bottom" ALT=""></p>
+
+<P>Position the first bulkhead, clone it until all compartments are closed. Clone, flip & close the other side of the compartments.</p>
+
+<P>Let's see how it looks in SView. It'll be easier if we don't include the roof, select the roof & unlink it by pressing the button, the one with the broken chain. Select the parts you've just made & link them all to 'main'. At a later stage it'll be to our advantage to join some of these parts, bulkheads for example, together.</p>
+
+<P>Although the compartment partition will use 'windows' texture & be on the inside don't be tempted to physically join it to the 'inside' part; it'll disappear. Gmax will sort the drawing order. Using the LOD manager just set this part to 'SubObject ID 2', the same as the inside part; don't ask for an explanation - it works. Export as before, look at the result & check that everything's in the right place. The graphics appear so much better in SView use it & note down those things which should be changed.</p>
+
+<P><IMG SRC="images/ro_gmax_08_08.jpg" BORDER="0" WIDTH="538" HEIGHT="410" ALIGN="bottom" ALT=""></p>
+
+
+                     </div>
+			 	<p class="meta"><span class="posted"><a href="#">Return to top of page</a></span><a href="ro_gmax_09.html" class="permalink">Go On To Chapter 9</a></p>
+
+             </div>
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Chapters</h2>
+<ol>
+<li><a href="ro_gmax_00.html">Overview</a></li>
+<li><a href="ro_gmax_02.html">Getting started</a></li>
+<li><a href="ro_gmax_03.html">First Texturing</a></li>
+<li><a href="ro_gmax_04.html">Modelling For Real</a></h3></li>
+<li><a href="ro_gmax_05.html">Texturing The Body</a></h3></li>
+<li><a href="ro_gmax_06.html">Alpha Channels</a></h3></li>
+<li><a href="ro_gmax_07.html">Wheels and Bogies</a></h3></li>
+<li><a href="#">Interiors</a></h3></li>
+<li><a href="ro_gmax_09.html">Export to MSTS</a></h3></li>
+<li><a href="ro_gmax_10.html">Texturing tricks and losing polygons</a></h3></li>
+<li><a href="ro_gmax_11.html">More Tricks and Tips</a></h3>
+<li><a href="ro_gmax_12.html">More about hierarchies</a></h3>
+</ol>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 24 August 2004, 19 March 2010</center></p>
+</div>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <title>Route-Riter - Route Riter: Getting your Rollingstock Rolling</title>
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li><a href="../tutorials/index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li><a href="../routes/index.html">Routes</a></li>
+  		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li class="current_page_item"><a href="index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Route_Riter_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Route-Riter - Route Riter: Getting your Rollingstock Rolling</font>
+                        <br>by Yuri Sos & Ian Bowles
+			<br>updated by Mike Simpson 29 January 2007</h2>
+		</div>
+
+    <!--- end end overview --->
+
+
+    <!--- overview --->
+
+		<div class="post">
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                    <p>One of the biggest frustrations in MSTS is getting the parameters associated with reliable operation for coupling and activities correct and consistent.</P>
+
+		    <p>Ian Bowles (gallop3 on the forums) and I have worked closely with Mike "The Route Riter Wizard" Simpson to create a simple one-button fix for your rolling stock.  This one-button fix requires only that the Mass in the ENG or WAG file be correct.</P>
+
+		    <p>So what does this one-button fix actually do?</p>
+		    <ol>
+		        <li>It uses the Mass in tonnes to correct the DerailRailForce: RR takes the mass and calculates the DerailRailForce as 2.7*mass in t;
+			<br>&nbsp;</li>
+
+			<li>It adjusts the DerailBufferForce to 1000kn (user-alterable);
+			<br>&nbsp;</li>
+
+			<li>It opens the appropriate shape file in Shape Viewer, taking the length, width, height, minZ and maxZ from the actual model.  RR then adjusts the Size, InertiaTensor lines in the ENG or WAG file and the ESD_Bounding_Box line in the model's .SD file;  the adjustments are
+			<br>&nbsp;
+			<ul><li>The length in the Size line is adjusted to the actual model length less 0.4m;</li>
+			<li>The length in the InertiaTensor line is adjusted to the actual model length less 1.0m; effectively this means that the InertiaTensor box is now 0.6m less than the length of the model in the Size () line;</li>
+			<li>The Bounding Box widths are adjusted to the actual model's width;</li>
+			<li>The Bounding Box minimum height is adjusted 0.90m and the height is adjusted to the model height or 2.50m, which ever is the greater;</li>
+			<li>The Bounding box front and rear lengths are adjusted to the model's min Z and max Z values decremented by 0.5m; thus the bounding box is the same length as the InertiaTensor length; </li>
+			<li>All values are truncated to 2 decimal places.</li>
+			</ol>
+			</li>
+			</ol>
+
+			<P>Here's an example of what is achieved:</p>
+			<p>This first image below shows a model in Shape Viewer with Ctrl-C pressed to display its dimensions:</p>
+			<p><img src="images/fix_01.jpg" width="785" height="554" alt="This is the model with the size parameters shown (press Ctrl-C" border="0"></p>
+			<p>After Route_Riter ENG/WAG file editor has adjusted the WAG and SD files, this is the result (below):</p>
+			<p><img src="images/fix_02.jpg" width="802" height="588" alt="These are the values in the WAG and SD files" border="0"></p>
+			<br><img src="images/fix_04.jpg" width="785" height="554" alt="These are the values in the WAG and SD files" border="0"></p>
+			<p>The image below shows that the DerailBufferForce has been set to 1000kN (user definable) and the DerailRailForce has been set to a correct 149t (2.7*55.03 to nearest integer):</p>
+			<p><img src="images/fix_03.jpg" width="802" height="588" alt="These are the values in the WAG and SD files" border="0"></p>
+			<p>In one click, you have achieved accurate consistency across all your models, eliminating all Bounding Box, Size, InertiaTensor and Derail Force errors.</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "start">
+		</div>
+
+    <!--- end end overview --->
+
+   <!--- sol hard --->
+
+		<div class="post">
+                  <h2 class="title">Let's Get Started</h2>
+			<div class="entry">
+
+        `         <p><ol>
+		  	 <li>Open Route_Riter.
+			 	  <p>Click on the tab labelled <b>Activities/Stock"</b> (arrowed "1" below).
+				  <p>Click on the <b>.ENG/.WAG File Editor</b> button (arrowed "2" below).
+
+				  <p><img src="images/rr_ew_edit01.jpg" width="787" height="640" alt="Start here to adjust rolling stock" border="0">
+				  <br>&nbsp;
+			 </li>
+
+			 <li>Click on the type of Rolling Stock to be adjusted: for this tutorial I'll click on <b>Freight</b> wagons:
+			 <br><img src="images/rr_ew_edit02.jpg" width="835" height="619" alt="Select type of rolling stock" border="0">
+			 <br>&nbsp;</li>
+
+			 <li>After a few seconds, RR will present a list of all the WAG or ENG files:  the total number is arrowed in the image below:
+			 <br><img src="images/rr_ew_edit03.jpg" width="835" height="619" alt="Rolling stock listed" border="0">
+			 <br>&nbsp;</li>
+
+			 <li>You now select the items of rolling stock you wish to alter: you can "select all", click on an item to be changed, Click then shift-click to select a range or Ctrl-click to select individual items of rolling stock; selected stock is highlighted (see arrowed "1" below) and the box at bottom right tells you how many files you've selected.
+			 <p>Click on <b>Correct Settings</b> to commence the process (arrowed "2" below).
+			 <br><img src="images/rr_ew_edit04.jpg" width="835" height="619" alt="Select items" border="0">
+			 <br>You'll be offered 1000kN as the default DerailBufferForce - you may change this to any other value if you wish, then click "ok" and the corrections will commence:
+			 <br><img src="images/fix_05.jpg" width="363" height="152" alt="Check derailbufferforce" border="0">
+			 <br>&nbsp;</li>
+
+			 <li>As the procedure runs, you will see the image of each model flash onto the screen as RR opens SV, records the measurements, closes SV and applies the adjustments, decrements the number of selected files, creates .BAK (backup files) of the ENG, WAG and SD files altered and moves onto the next file:
+			 <br><img src="images/rr_ew_edit05.jpg" width="835" height="619" alt="In work" border="0">
+			 <br>&nbsp;</li>
+			 </ol>
+       		</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+                 	<A Name="define">
+		</div>
+
+    <!--- end sol hard --->
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Section added by Mike Simpson 29 January 2007</font></h2>
+			<div class="entry">
+			
+			<h3>Update by Mike Simpson - 29 January 2007</h3>
+
+<b>Since the above was written, some extra buttons have been added to this screen as shown below, however operation of the Correct Settings button remains as described.</b>
+
+<p>I have done a lot of extra work on the Correct Settings button.
+
+It now :-
+<ol><li>Checks for Bar and replaces it with Automatic or Chain depending on what the other coupler is;</li>
+<li>Checks to make sure there are two couplers, if not it adds one;</li>
+<li>Checks length of wagon if it is of Type Freight, and if under 15m flags it as such;</li>
+<li>Removes all commented CouplingHasRigidConnection lines</li>
+<li>Adds CouplingHasRigidConnection ( 1 ) to both couplers unless item is a short wagon in which Case it is only added to the front coupler;</li>
+<li>Does the other bits it was already doing;</li>
+<li>Checks for Mass and Size statements and if missing it does not process the file and adds to report.</li>
+</ol>
+
+<hr SIZE=0 WIDTH="100%">
+
+<p>The 'Tweak Settings' button has now been added - This allows you to actually view the bounding boxes of a selected rolling-stock item and to make small changes.
+
+<p><img src="images/rr_ew_edit101.jpg" width="907" height="759" alt="In work" border="0">
+
+<p>This button displays the details shown above of the selected rolling stock item, and allows you to make small changes to the 'Z' parameter of both the bounding box and size settings of the item. There is also a button which will equalise the bounding box (making it symmetrical about the center of the item).
+
+<p>Once you have made these changes, click Update to save them, you can view the Bounding Box by clicking the View BB button. Once everything is satisfactory, you can then select other rolling-stock of the same class from the list (e.g. all SD402 locos) and click the 'Apply to all selected files' button and all will be updated.
+
+<p><img src="images/rr_ew_edit102.jpg" width="733" height="569" alt="In work" border="0">
+
+<p>This picture shows the View BB screen which is overlaid with Ian MacMillan's Measurement Tool which shows the loco behind a 0.5m grid which allows you to easily tweak the Bounding Box to the position you require it.
+
+<hr SIZE=0 WIDTH="100%">
+
+<p><img src="images/rr_ew_edit103.jpg" width="749" height="776" alt="In work" border="0">
+
+<p>As Route_Riter now contains a large selection of Coupling and Brake files which have been fine-tuned by Bill Prieger, Joe Morris, Otto Wipfel and Jean-Louis Chauvin as well as the original ones I supplied from Yuri and Ian Bowles. More experienced users required a means whereby they could select, say, a number of wagons, and add a certain Coupler file to each.
+
+<p>This is accomplished by using the Correct Couplers Manually button. You use this as before, but clicking on say the Diesel Loco button to get a list of your Diesel Locos. Then select those you wish to modify (Ctrl-Click). Then click the 'Correct Couplers Manually' button. This brings up the Couplings folder and you can select the required coupler from the list provided (or you could add your own coupler.txt files if you have made/modified your own files.
+
+<hr SIZE=0 WIDTH="100%">
+
+<p><img src="images/rr_ew_edit104.jpg" width="762" height="577" alt="In work" border="0">
+
+<p>Similar to the above, there is also a "Correct Brakes Manually" button on this screen. This button allows you to add 'TurboBill's' brake settings, however it has some automatic features as well as the manual ones.
+
+<p>If for instance you select all of your Freight Wagons (not Inter-Modal or Rail-Roaders) then run this option, you will be asked if you wish to carry out a Manual or Automatic fix to the brakes on the selected stock. If you select Automatic, the option checks the Mass of the wagon and adds the correct settings for a wagon of that mass.
+
+<p>Unfortunately, when it comes to automatic changes, you are currently locked into Bill's nomenclature and parameters which are suitable only for modern American rolling stock.  In addition, Bill's parameters assumes that every passenger carriage has the same braking ability/force with no allowance for varying weights or types or carriage.
+
+<p>To have Route Riter alter brake settings correctly for non-American stock (for example, Australian stock uses 70 psi brake pipe pressure and has NO emergency reservoir, plus there are wooden-bodied as well as steel-bodied passenger stock), you will need to alter the contents of each file in the \Brakefiles folder to suit local conditions, but you MUST keep the filenames the same (ie "20t railcar brake values.txt" or similar) or Route Riter will simply delete the brake section from your WAG file completely (nb "railcar" in the filename here refers to standard freight wagons, NOT passenger wagons).
+
+<p>If however, you select Manual, then you must select a brake patch to use with the selected wagons.   If you run different types of (non-American) passenger stock, the "automatic" selection is useless - you will need to use the "Manual" selection and apply the appropriate Passenger value.
+
+<p>This option also works in a similar fashion for Diesel Locos (but again American locos only) - No Steam or Electric patches are available yet.
+
+
+
+</div>
+
+		</div>
+
+    <!--- end end overview --->
+
+
+
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>>22 October 2006, 29 January 2007</center></p>
+</div>
+</body>
+</html>

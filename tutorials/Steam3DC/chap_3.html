@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <title>A Steam Loco for MSTS sing 3DCanvas Chapter 3 - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../../index.html">Home</a></li>
+		<li class="current_page_item"><a href="../index.html">Tutorials</a></li>
+		<li><a href="../../msts_errors.html">Error Messages</a></li>
+		<li><a href="../../steam/index.html">Steam</a></li>
+		<li><a href="../../electric/index.html">Electric</a></li>
+		<li><a href="../../passenger/index.html">Passenger</a></li>
+		<li><a href="../../diesel/index.html">Diesel</a></li>
+		<li><a href="../../freight/index.html">Freight</a></li>
+		<li ><a href="../../vans/index.html">Vans</a></li>
+		<li ><a href="../../routes/index.html">Routes</a></li>
+		<li><a href="../../utilities/index.html">Utilities</a></li>
+		<li><a href="../../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../../images/S4M_Banner_left.png"  height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../../images/S4M_Banner_Tutorials.png"  height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">A Steam Loco for MSTS Using 3DCanvas</font>
+                        <br>by Paul "decapod" Gausden</h2>
+                        <p></p>
+			<h2 class="title">Chapter 3 - Getting The Shape Right</h2>
+ 			   <div class="entry">
+
+                   <p>This next part will concentrate on getting the footplate profile and frames looking correct. Up till now we have done very little modelling ourselves - now it gets serious.  Consequently, this Lesson I am going into as much detail as I can - though it is quite long, the actual work you do is quite small.</p>
+
+                   <p>Firstly, this loco has a nice complex shape that the main body sits on.</p>
+
+                   <P>All the locos I have built so far have had straight, flat surfaces - how do I build this one?</p>
+
+                   <p>There are many possible ways - building up from several primitive objects joined together, object subtraction - Both options are either time consuming to do, or very expensive on polys (avoid object subtraction, it is not very accurate and can lead to complications later - 3DC V6 may fix this).</p>
+
+                   <p>An alternative is to use an Extruded Object (not the extrude operation) - these are normally associated with high poly counts, but this can be easily controlled. It is worth practicing with this method as it can be used for many complex shapes found on locos (saddle tanks, smoke box supports etc - though for symmetrical items there is a slight change to the technique).</p>
+
+                   <p>(This is where we find out how horizontal the plan is...)</p>
+
+                   <ol>
+                       <li>Drag the Extrude Object builder onto the scene - a new 4 panel window will appear - maximise this window.
+                           <p><img src="images/l3a.jpg" width="157" height="349"></p>
+                       </li>
+
+                       <li>Press the background picture button (the small truck image on the top menu) and select the scanned plan - use the navigate control to find the side view and zoom out or in on the top left panel - ignore the distortion of the shape, this is corrected later.<br>&nbsp;</li>
+
+                       <li>On the lower left panel, select two points on the horizontal about 18 squares apart. Look at the bottom left status bar to make sure their Y coordinates (second value of "Position x.xxxx, y.yyyyy") are exactly equal. They can be adjusted by dragging the points with the mouse. This will give our object depth.<br>&nbsp;</li>
+
+                       <li>Pick a start point on the plan side view in the top right panel and click (lower front buffer beam).<br>&nbsp;</li>
+
+                       <li>Now select subsequent points around the shape, clicking on each point twice until it turns blue. Where the shape is straight, place a point at each end of the straight. For curves, as a rough guide, use 2-4 points around a 90 degree bend (fewer for small radius curves). Hold the CTRL key and click to delete a point and SHIFT click to add a point before the one clicked.<br>&nbsp;</li>
+
+                       <li>When you reach the start point again, instead of clicking on the start point, pick somewhere near, then drag the final point over the start point until you see an object appear in the top left panel - this could be below the grid so you may need to adjust the view as in the following:
+                       <p><img src="images/l3b.jpg" width="800" height="600"></p></li>
+
+                       <li>Now correct all the points by dragging with the mouse, so they are squared up horizontally or vertically and the Y or X coordinates match the other points. (my plan is not quite square, but the points should be made to match)<br>&nbsp;</li>
+
+                       <li>Press the save button and close the window.<br>&nbsp;</li>
+
+                       <li>Press the "Centre Selection on Frame" Operation button (white square with 4 black triangles and yellow centre) and drag the object up slightly with the right mouse button.<br>&nbsp;</li>
+
+                       <li>We now need to orientate the shape correctly for the model. Right click on the object, select properties and adjust the group orientation - mine needed to rotate it 90 degrees anti-clockwise around the vertical axis (Y) then 180 degrees around the longitudinal axis (Z) like so:
+                          <p><img src="images/l3c.jpg" width="548" height="477"></p>
+
+                          It is possible yours may need a different rotation angles - I have yet to work out the mysteries of the extrude object.<br>&nbsp;</li>
+
+                          <li>We can now correct the size (which removes the earlier plan distortion) - taking measurements from the plan (we already know the length is 14.32m), right click the object and select Scale/ToSize. Note because of the 90 degree Y rotation, X is currently the length for this object:
+                          <p><img src="images/l3d.jpg" width="269" height="101"><p></li>
+
+                          <li>Our extrude object group is currently not attached to the model so we drag it into the main group:
+                          <p><img src="images/l3e.jpg" width="233" height="384"></p></li>
+
+                          <li>Right click on the object and select properties once more... this time set the position values for X and Z to zero. Our object should appear centrally over the frames.<br>&nbsp;</li>
+
+                          <li>Select the old flat footplate/solebar object and delete it.<br>&nbsp;</li>
+
+                          <li>Use the right mouse button to drag the new object into position so the top of the frames object just disappears (use Ctrl UP/Down arrows for fine adjustment).<br>&nbsp;</li>
+
+                          <li>Once you are happy with this, drag the object into the main group:
+                          <p><img src="images/l3f.jpg" width="585" height="303"></p>
+                          <p>Now that was proper 3D modelling! Just to finish off...<br>&nbsp;</li>
+
+                          <li>Remove the two lowest flat faces - these shouldn't be visible in MSTS. Use the face selection tool (white square on the right). Viewing from below, hold the CTRL key down, click on both faces so they are highlighted in pale blue and press the Delete key.  The remaining lower faces need to be moved up slightly...<br>&nbsp;</li>
+
+                          <li>Use the CTRL Key to select all the remaining lower faces as before and press the Cut button (or press CTRL-X).<br>&nbsp;</li>
+
+                          <li>Switch to object select mode and select the footplate object again by clicking and press the Paste button (or press CTRL-V)
+                          <p><img src="images/l3g.jpg" width="572" height="445"></p></li>
+
+                          <li>The paste operation creates a new object, in a child group of the currently selected group, centred at 0.5, 0.5, 0.5 relative to the parent group. Right click and select properties, then change the position to 0,0,0 - which puts the faces you selected back to their original position (except they are now independent)<br>&nbsp;</li>
+
+                          <li>Right click and drag the new object up slightly so it looks like the underside of the footplate.<br>&nbsp;</li>
+
+                          <li>You may notice the footplate shading has changed - to correct this back to normal, use either the crease or the optimize operations on the object.<br>&nbsp;</li>
+
+                          <li>Finally, if you are happy with the position of the underside of the footplate, select this object and use the combine object tool (double white circles on the right) to merge it back into the footplate object.</li>
+                      </ol>
+
+                   <p>Use the Fill tool and a small dark area cropped from the texture to give it a dirty black colour all over.</p>
+                   <p>Lots of instructions, but relatively quick to perform once you get the hang of extruding and cut &amp; paste.</p>
+
+                   <h2>Onto the frames - firstly the model, then the texture.</h2>
+
+                   <ol>
+                       <li>The frames created by the Engineer plugin are just given default values for size - Measuring on the plan from the top of the new footplate to the lowest part of the frames and springs gives the new height - Right click on the frame object and select Scale/To Size - change the Y value to your new measured height.<br>&nbsp;</li>
+
+                       <li>Use the Shift Object tool (White and yellow square on the right menu) and use the Right mouse drag to shift the object vertically so the top of the frame just meets the top of the new footplate.<br>&nbsp;</li>
+                   </ol>
+
+                   <p>Frames do not need to be highly detailed, a general approximation to the right shape looks OK as they are mostly hidden behind the wheels. However, I am a teeny bit concerned about the length of this loco, so I will distort the texture vertically to get a slightly better resolution in one direction.</p>
+                   <ol>
+                       <li>"cut out" an approximate outline of the frames and springs (from the top of the footplate) from the plan with the painting program.
+                           <p>We can ignore the rear part of the texture where the footplate dips as there appears to be a raised cab floor and the bunker covering this. I will chop out the dip at the front and model the curved frames above the footplate front, as these are far more visible.<br>&nbsp;</li>
+
+                       <li>I usually paste this as a new image to work on first, before adding to the final texture.<br>&nbsp;</li>
+
+                       <li>Resize it to 512 pixels wide and about 128 high - my paint tool aliases the mask on resizing so I have to correct the mask with the fill tool or the edges wil go fuzzy.<br>&nbsp;</li>
+
+                       <li>give it some colour (muddy dark brown) and add some details.<br>&nbsp;</li>
+
+                       <li>transfer the new object onto the main texture file.
+                         <p><img src="images/l3j.jpg" width="512" height="512"></p></li>
+                   </ol>
+
+                   <p>Apply the mask so the frames shape will be opaque when painted onto the shape - the darker green in the above image shows the area masked off.</p>
+
+                   <p>Back to the model...</p>
+                   
+                   <ol>
+                       <li>View the model side that appears on the plan.<br>&nbsp;</li>
+                       
+                       <li>Using the default orientation mode, crop the texture area to the new frames texture and use the Fill tool on the right menu on the frames object (don't worry if a bit of the texture sticks up at the front, the modelled frames should cover it).<br>&nbsp;</li>
+
+                       <li>Export the shape to MSTS, et voila
+                       <p><img src="images/l3k.jpg" width="800" height="600"></p></li>
+                       </ol>
+
+       			</div>
+			  <p class="meta"><span class="posted"><a href="chap_4.html">Go To Chapter 4</a></span><a href="#" class="permalink">Return to top of page</a></p>
+
+		</div>
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <p><h3>Part 1 - Below the footplate</h3>
+                        <blockquote>
+                          <p><a href="steam3DC.html#start">0 - Beginners and reading</a></p>
+                          <p><a href="chap_1.html">Chapter 1 - Wheels</a></p>
+                          <p><a href="chap_2.html">Chptr 2 - Round Wheels</a></p>
+                          <p><a href="#.html">Chptr 3 - Complex footplate shape</a></p>
+                          <p><a href="chap_4.html">Chptr 4 - Pistons and Valve gear</a></p>
+                          <p><a href="chap_5.html">Chptr 5 - Complex animations</a></p>
+                        </blockquote>
+
+                        <h3>Part 2 - Above the footplate</h3>
+
+                        <blockquote>
+                          <p><a href="chap_6.html">Chptr 6 - Boiler, Funnel and Dome</a></p>
+                          <p><a href="chap_7.html">Chptr 7 - More Bodywork and Texturing</a></p>
+                          <p><a href="chap_8.html">Chptr 8 - Detailing</a></p>
+                          <p><a href="chap_9.html">Chptr 9 - More Detailing</a></p>
+                          <p>&nbsp;</p>
+                        </blockquote></p>
+
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 2002-2003, 22 April 2010</center></p>
+</div>
+</body>
+</html>
+
+

@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>Editing the Timetable For Passenger Trains in MSTS' Activity Editor - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li ><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Editing the Timetable For Passenger Trains in MSTS' Activity Editor</font>
+                        <br>by Yuri Sos</h2>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                        <p>You've created a passenger train activity.  Everything is set up and ready to go, you set the "Start Time" then you click on "Edit Timetable" in the "Player" section.</p>
+
+                        <p>The times all say 10:00:00.</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "link1">
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Establish The Timings You Wish To Use</h2>
+			<div class="entry">
+
+                        <p<p><B>STOP HERE</b> for a moment ...... Here's a decision point.  If you know what times you want to input, skip from here to the section below labelled <b>"Altering the Arrival and Departure Times"</b>.</p>
+
+                        <p>If you want to let MSTS set the times for you, press "Recalculate this" and a series of arrival and departure times appear.</p>
+
+                        <p><img src="images/ae_set_time_12.jpg" border="1"></p>
+
+                        <p>So far so good....... you think.</p>
+
+                        <p>When you try out the activity, you find that the times are just not accurate or realistic.</p>
+
+                        <p>How can you change the times to reflect a more accurate timetable?  It can be done in MSTS' Activity Editor quite easily..... but not intuitively (but you know that about MSTS by now anyway).</p>
+
+                        <p>You can do this in two ways, either by referring to the prototypical timetable (public or employee) or by running a train over the route and measuring the running times between stations.</p>
+
+                        <p>For this tutorial, I'm using arrival/departure times based on figures that Gary O'Connor came up with after running a consist on the Australian Central West route (v1.6):</p>
+
+<pre>
+&#09;Town&#09;&#09;Arrival&#09;Departure
+&#09;
+&#09;Cullya&#09;&#09;10:12&#09;10:13
+&#09;Mullion Creek&#09;10:16&#09;10:17
+&#09;Kerrs Creek&#09;10:31&#09;10:32
+&#09;Warnecliff&#09;10:43&#09;10:44
+&#09;Euchareena&#09;10:48&#09;10:49
+&#09;Stuart Town&#09;11:05&#09;11:06
+&#09;Mumbil&#09;&#09;11:12&#09;11:13
+&#09;Dripstone&#09;11:20&#09;11:21
+&#09;Wellington&#09;11:28&#09;11:29
+&#09;Maryvale&#09;11:33&#09;11:34
+&#09;Guerie&#09;&#09;11:45&#09;11:46
+&#09;Wongarbon&#09;11:52&#09;11:53
+&#09;Eulomogo&#09;11:59&#09;12:00
+&#09;Dubbo&#09;&#09;12:10
+</pre>
+
+                        <p>Open the activity in Activity Editor (AE).  On the "Player" screen, click on <b>"Edit Timetable"</b> (see arrow #1 below).  A timetable (initially with all starting times the same) will pop up.</p>
+
+                        <p><img src="images/ae_set_time_01.jpg" border="1"></p>
+
+                        <p>If you click on "Recalculate This" (arrow 3 below), you get a series of times selected by the AE:</p>
+
+                        <p><img src="images/ae_set_time_02.jpg" border="1"></p>
+
+                        <p>Don't!!!</p>
+
+                        <p>If you try to run a train based on these times you may find that the operation is not very realistic.</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+	          <a NAME = "link2">
+		</div>
+
+    <!--- end cause --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Altering The Arrival And Departure Times</h2>
+			<div class="entry">
+
+                        <p>This is where the fun starts!  You will be able to edit the arrival and departure times.  Double-click on the "Arrive" field for the first station (Orange at 10:3:53 in this example); a pop-up box appears thus:</p>
+
+                        <p><img src="images/ae_set_time_03.jpg" border="1"></p>
+
+                        <p>Type in the <b>Departure</b> time - yes, I said <b>Departure Time</b> - thus.... </p>
+
+                        <p><img src="images/ae_set_time_04.jpg" border="0"></p>
+
+                        <p>... and click "ok".</p>
+
+                        <p>The timetable now shows both "Arrive" AND "Depart" times as 10:07:00, thus:</p>
+
+                        <p><img src="images/ae_set_time_05.jpg" border="0"></p>
+
+                        <p>Double-click on the "Arrive" field again: you can make a second entry.  Enter the <b>arrival time</b> (10:06:00 in this example) and click "ok".  If it is earlier than the "depart" time you just edited, MSTS is programmed wisely enough to only update the arrivals column.  You have now successfully edited the "Arrive" and "depart" times.</p>
+
+                        <p><img src="images/ae_set_time_06.jpg" border="0"></p>
+
+                        <p>Work your way down the timetable, inserting departure, then arrival times for each station in the manner described above until you have altered all the times.  When you have finished, the window should look like this:</p>
+
+                        <p><img src="images/ae_set_time_07.jpg" border="0"></p>
+
+                        <p>Do NOT touch the "Relcalculate This" button.  Close the window and then Save the activity.</p>
+
+                        <p>Start MSTS, select the route, then the activity.  When the activity starts, click on the "Timetable" button and you will see your edited times in the window:</p>
+
+                        <p><img src="images/ae_set_time_08.jpg" border="0"></p>
+
+                        <p>In the sim, press <b>F10</b> to see the timetable as you've edited it.</p>
+
+                        <p><img src="images/ae_set_time_09.jpg" border="0"></p>
+                        
+                        </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+                  <a NAME = "link3">
+		</div>                        
+
+    <!--- end cause --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Editing the Timetable to Input An Earlier Departure Time</h2>
+			<div class="entry">
+
+                        <p>The problem with the technique described above is that you can only input a departure time later than the one already present in the timetable.  The AE will not permit you to enter a departure time earlier than the one already present.</p>
+
+                        <p>You can enter an earlier departure time by manually editing the .ACT file (see below), but Laurie Dickerson has described another method to be able to enter the departure times of your choice.</p>
+
+                        <h3>Sheesh, Do You Mean I Have To Open AE Just To Change Times?</h3>
+
+                        <p>No, actually you don't.  You can edit the .ACT directly in a unicode-aware editor such as <a href="context.html">ConTEXT</a>.  MSTS sets the arrival and departure times in seconds past midnight, thus,</p>
+
+                        <p><img src="images/ae_set_time_10.jpg" width=606 border="0"></p>
+
+                        <p>So it's a simple matter to insert your own arrival and departure times in the appropriate positions in the ACT file.</p>
+
+                        <p>To make this process even easier, Gary O'Connor has written a tiny EXE file that quickly converts time of day to seconds or vice versa:</p>
+
+                        <p><img src="images/ae_set_time_11.jpg" border="0"></p>
+
+                        <p>For example, using the activity in this tutorial, you might want to change the departure time at Cullya.</p>
+
+                        <p>Type 10:13 into MSTS_TimeCalc and it instantly returns 36780, enabling you to find that time in the .ACT file (at line 33: the stations are not named so this is a quick way to find the time you want to change).</p>
+
+                        <p>Say you want to change it to 10:14: simply enter 10:14 into the MSTS_TimeCalc: it returns 36840.  Replace 36780 with 36840 in the ACT file, save and retry the activity.</p>
+
+                        <p>Download Gary's MSTS_TimeCalc program here: <a href="files/MSTS_TimeCalc.zip">MSTS_TimeCalc.zip</a> - only 8.28 KB (8,480 bytes).  Unzip it anywhere.  Instructions are in the Comments section of the ZIP file (but it's really simple to use).</p>
+
+                        <p>Hope this helps.</p>
+
+
+		      </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end cause --->
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#link1">Establish Timings</a>
+                 <br><a href="#link2">Altering Departure Time</a>
+                 <br><a href="#link3">Earlier Departure Time</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 30 Jan 2009, 12 April 2010</center></p>
+</div>
+</body>
+</html>
+

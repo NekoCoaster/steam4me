@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Vince Cockeram">
+   <meta name="GENERATOR" content="ConTEXT  v0.98">
+   <meta name="Description" content="Making Signal Work on Diamond Crossings">
+
+<title>Making Signals Work on Diamond Crossings - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li ><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Making Signals Work on Diamond Crossings</font>
+                        <br>by Vince Cockeram</h2>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                             <p>Many route builders create diamond crossings by laying one track across another.  This is expedient, but become problematic when users try to design activities that call for trains to cross (and possibly collide) at such a crossing.</p>
+
+                             <p>In the following examples the blue train is the player train and the red train is the AI train.</p>
+
+                             <p>The following images show a pair of tracks simply laid one across another.</p>
+
+                             <p><img SRC="images/DiamondX_01.jpg" ALT=""></p>
+
+                             <p><img SRC="images/DiamondX_03.jpg" ALT="" width=400 border=1></p>
+
+                             <p>As you can see there is no signal protection.  Both signals show proceed and the AI train on the crossing track cannot "see" the player train with predictable results.</p>
+
+                             <p><img SRC="images/DiamondX_04.jpg" ALT="" </p>
+
+                             <p><img SRC="images/DiamondX_05.jpg" ALT="" </p>
+
+                             <p>There is a solution.</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "solution">
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Making A Diamond Crossing Work Properly</h2>
+			<div class="entry">
+
+                        <p>In addition to the two default MSTS diamond crossings (2.5 and 5 degree) all XTracks diamond crossings provide a tracknode (the black dot in Activity Editor) where the tracks cross. They all will provide protection if signaled.</p>
+
+                        <p><img SRC="images/DiamondX_02.jpg" ALT=""></p>
+                        <p><img SRC="images/DiamondX_06.jpg" ALT="" border=1></p>
+
+                        <p>There is no special linking needed: however, you must use absolute signals (STOP and STAY). Permissive signals (STOP and PROCEED), will NOT work.</p>
+
+                        <p>Permissive signals' most restrictive aspect is STOP and PROCEED. If you signal a diamond, a REAL MSTS diamond with a TrackNode as the crossing, with a permissive signal, thats just what the AI will do. . .STOP and PROOCEED . . .right into the players or another AI path, a collision.</p>
+
+                        <p>The next four screenshots show a 90 degree diamond crossing (XTracks) with signaling.  The image below shows the player train with a green signal and the AI holding for the red:</p>
+
+                        <p><img SRC="images/DiamondX_07.jpg" ALT="" ></p>
+
+                        <p>Now you see the player train clearing the diamond.................</p>
+
+                        <p><img SRC="images/DiamondX_08.jpg" ALT="" ></p>
+
+                        <p>and the AI train now gets a green signal and proceeds through the junction.</p>
+
+                        <p><img SRC="images/DiamondX_09.jpg" ALT=""></p>
+
+                        <p><img SRC="images/DiamondX_10.jpg" ALT=""></p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="ytracks">
+		</div>
+
+    <!--- end cause --->
+
+
+    <!--- ytracks --->
+
+		<div class="post">
+			<h2 class="title">Using YTracks Diamonds and slips in MSTS</h2>
+			<div class="entry">
+
+                        <p>The XTracks Standardized T-Section.dat file contains a set of beautifully detailed, easy to assemble double and single slip switches known as Y-Tracks. I am using them extensivly in the LIRR route that is 'a building. They work great, look good and have a (I think) a 9 degree frog. Just perfect for complicated terminal trackwork.</p>
+
+                        <p>The crossover part of these switches does indeed have a TrackNode at the crossing. There is a problem though if player and AI or two AI paths use the diverge path in a double slip. As the two diverge paths do not cross, the AI dispatcher cannot "see" the train on the other path through the slip switch and will crash - a wreck. Oops!</p>
+
+                        <p>One other thing. The Y-Tracks slip switches do not survive a Track Database Rebuild, or I should say the crossing TrackNode does not survive. It gets wiped out by the rebuild, in effect leaving you with the same thing as two tracks laid across one another.</p>
+
+                        <p>This is because crossovers are actually interactive items. The definitions in the TrItemTable are the actual dot you see in the AE, and are what provide for signalling to work. When you rebuild the track database, these 'items' are left out. Simply re-clicking on them adds the CrossoverItems (2 per track piece) back to the database.</p>
+
+                        <p><img SRC="images/DiamondX_11.jpg" ALT="" border=1></p>
+
+                        <p>(image and information by Joe Erickson)</p>
+
+                        <p>Hope this helps.</p>
+                        
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end ytracks --->
+    
+    <!--- ytracks --->
+
+		<div class="post">
+			<h2 class="title">But wait, there's more!</h2>
+			<div class="entry">
+
+
+                        <p>But what if you want to create a crossing that doesn't have a tracknode?</p>
+                        
+                        <p>Simple - you add one!</p>
+                        
+                        <p>Read <b><a href="make_xover.html">Creating a Diamond Crossover complete with Track Node</a></b> by Jeffrey Kraus-Yao for instructions on how to make a node for any crossing track.</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end ytracks --->
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#solution">Solution</a>
+                 <br><a href="#ytracks">Using YTracks</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 7 April 2008, 12 May 2011</center></p>
+</div>
+</body>
+</html>

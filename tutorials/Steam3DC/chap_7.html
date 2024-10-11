@@ -1,0 +1,313 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <title>A Steam Loco for MSTS sing 3DCanvas Chapter 7 - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../../index.html">Home</a></li>
+		<li class="current_page_item"><a href="../index.html">Tutorials</a></li>
+		<li><a href="../../msts_errors.html">Error Messages</a></li>
+		<li><a href="../../steam/index.html">Steam</a></li>
+		<li><a href="../../electric/index.html">Electric</a></li>
+		<li><a href="../../passenger/index.html">Passenger</a></li>
+		<li><a href="../../diesel/index.html">Diesel</a></li>
+		<li><a href="../../freight/index.html">Freight</a></li>
+		<li ><a href="../../vans/index.html">Vans</a></li>
+		<li ><a href="../../routes/index.html">Routes</a></li>
+		<li><a href="../../utilities/index.html">Utilities</a></li>
+		<li><a href="../../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../../images/S4M_Banner_left.png"  height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../../images/S4M_Banner_Tutorials.png"  height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">A Steam Loco for MSTS Using 3DCanvas</font>
+                        <br>by Paul "decapod" Gausden</h2>
+                        <p></p>
+			<h2 class="title">Chapter 7 - The Rest Of The Bodywork</h2>
+ 			   <div class="entry">
+
+                   <p>A few more shapes need building to make this object look more like a loco. Firebox, Water tank, Cab and coal bunker.</p>
+
+                   <h2>Firebox</h2>
+
+                   <p>This is effectively a box with rounded edges - so that's the way we'll build it!</p>
+
+                   <ol>
+                       <li>Starting with a cube primitive, scaled to the maximum dimensions of the firebox from the plans (extending it into the cab slightly for the back head.
+                          <p><img SRC="images/l7a.jpg" ></p></li>
+
+                       <li>Select the two top side edges and run the "Chamfer" object operation - don't click anywhere else once this has run! make sure the two new faces are still selected.
+                          <p><img SRC="images/l7b.jpg" ></p></li>
+
+                       <li>The top curve on the firebox has a larger radius than the curve on the ends so this first chamfer needs to be enlarged. You do this by holding down the shift key and dragging the mouse over the edit control, until the faces are approximately 2-3 times their original width.
+                          <p><img SRC="images/l7c.jpg" ></p></li>
+
+                       <li>Now holding down the Ctrl key, we select all of the edges on the object, except for the ones around the base.<br>&nbsp;</li>
+
+                       <li>Run the Chamfer operation again - one firebox.
+                          <p><img SRC="images/l7d.jpg" ></p></li>
+
+                       <li>To position it on the model, Make the new group a child of the main group.<br>&nbsp;</li>
+
+                       <li>Select the two lower rear corners and run the Shift Centre plugin - now  alter the Group Position properties to the correct position from the plan.<br>&nbsp;</li>
+
+                       <li>Once you're happy with the position, drag the firebox object into the boiler group.</li>
+                   </ol>
+
+                   <h2>Tank</h2>
+
+                   <p>This is a box. You could be more accurate and build it as two boxes on either side, but the visible difference in negligible.  Basically the procedure is exactly the same as for the firebox, but without any of the chamfering.</p>
+
+                   <p>Also, this box has to be butted up against the cab (and not part of the cab as I am trying to keep objects in a group with single texture files). There is a slight curve at the top rear and the bottom rear needs to curve down to follow the footplate.</p>
+
+                   <ol>
+                       <li>Scale a cube from the start of the top curve to the footplate and position it as per the fire box - Don't drag the tank group into the boiler group just yet, we need it shortly to position the cab against it.
+                           <p><img SRC="images/l7e.jpg" ></p></li>
+
+                       <li>We now need to make and extrude and scale twice, following the pale green on the plan below. To make a "smooth" circular curve, the first extrude is just over twice the second extrude size.
+
+                           <p>We make the first extrude (about 0.1), then select the face and use the vertical scale of the edit control to increase the height of the face by 0.1 (0.05 top and bottom) - I then had to drag the bottom edge down slightly as it didn't quite meet the footplate.</p>
+                           <p><img SRC="images/l7f.jpg" ></p>
+                       <li>The second extrude was 0.05 and the height was increased by 0.2 this time.
+                           <p><img SRC="images/l7g.jpg" ></p></li>
+                   </ol>
+
+                   <h2>Cab</h2>
+
+                   <p>Cabs can be done as extrude objects, alternatively they could be built out of a cube and part of a cylinder on its side, welded together - then the roof would need to be split off and adjusted for overhang.</p>
+
+                   <p>Not anymore! - Cab builder plugin to the rescue.</p>
+
+                   <ol>
+                       <li>Before running the plugin, gather some dimension information on the cab.<br>&nbsp;</li>
+                       <li>Select the footplate object and run the "MSTS Cab Builder" plugin - the plugin attempts to position the cab on top of the currently selected object - and gets it wrong in this particular case due to the odd shape):
+                           <p><img SRC="images/l7h.jpg" ></p></li>
+                       <li>Press OK.
+                           <p><img SRC="images/l7i.jpg" ></p></li>
+                       <li>we can position the cab exactly against the tank by dragging the cab *group* into the tank group and adjusting it's Z position to the length of the cab base (2.64) divided by two minus 0.15 (the two extrudes)<br>&nbsp;</li>
+                       <li>Now drag the cab object down with the right mouse button till it touches the footplate.
+                           <p><img SRC="images/l7j.jpg" height=400 width=400></p></li>
+                       <li>Now move the Cab group back into the main group and drag the tank object into the Boiler group.</li>
+                   </ol>
+
+                   <P><b>NOTE - there is/was a bug in the cab builder plugin where the roof object disappears after saving. Optimising the object and/or adding a texture to the roof should stop this from happening.</b></p>
+                   
+                   
+                   <h2>Bunker</h2>
+
+                   <p>A similar process to the Cab object.</P.
+
+                   <ol>
+                       <li>Get the dimensions of the bunker - the base box goes up to the coal rail, the curve near the cab can be added with the textures. Again I use the 70/30 rule for the two steps for the curve on the rear.  Enter the values into the plugin.
+                           <p><img SRC="images/l7k.jpg" ></p></li>
+                       <li>Press OK.
+                           <p><img SRC="images/l7l.jpg" ></p></li>
+                       <li>Now drag the new group (also called Cab) into the first cab group... here is most of the current scene hierarchy:
+                           <p><img SRC="images/l7m.jpg" ></p></li>
+                       <li>Now set the new group position, Z value = (cab base length plus the bunker base length) divided by two, Y and X values are 0.0<br>&nbsp;</li>
+                       <li>Now use the <b><i>Optimize Object operation</i></b> on the bunker and cab objects. <b>Some have experienced odd effects such as the cab disappearing after saving and loading again - probably a good idea to check this is OK.</b>
+                           <p><img SRC="images/l7n.jpg" ></p></li>
+                   </ol>
+
+                   <p>There are lots of hidden faces now - make sure you remove them all (back of boiler, bottom of firebox etc) <p>Before I begin adding the textures, you may have noticed on a couple of the textures I have pre-drawn, there was not enough room to cover the entire object as built. Firebox sides - The bottom edge of the Firebox sides need to be shifted up to just above the boiler centre line to match the size of the texture.</p>
+
+                   <ol>
+                       <li>select both flat sides of the firebox and run the Face Split plugin.<br>&nbsp;</li>
+                       <li>Select the bottom edge of both sides of this new object (using the CTRL key).<br>&nbsp;</li>
+                       <li>move near one of the edges (so it turns yellow) and use the Right mouse button drag to list both edges up to just above the centre of the boiler. (I have made the Tank object invisible to see what was happening):
+                           <p><img SRC="images/l7b1.jpg" ></p></li>
+                       <li>Use the Merge object operation on the right menu to recombine the split faces with the firebox object and press the Optimize object operation button. An alternative way is to use the split option on all 4 vertical edges, then use the Edge operation to split the faces horizontally, then delete the lower face. (My Edge operation doesn't seem to work properly).<br>&nbsp;</li>
+                   </ol>
+
+                   <h2>Cab Front and Back</h2>
+
+                   <p>I also forgot to mention I didn't delete the rear face of the Tank or the cab side face of the bunker. I'll using these as part of the Cab.</p>
+
+                   <ol>
+                       <li>Select all inside and outside faces of the front and rear cab faces and use the face split plugin as before.<br>&nbsp;</li>
+                       <li>Select the two bottom edges of this object (can be difficult to spot as the footplate gets in the way)<br>&nbsp;</li>
+                       <li>Use the right mouse drag again, till the rear edge is near the top of the coal level in the bunker.<br>&nbsp;</li>
+                       <p><img SRC="images/l7b2.jpg" ></p></li>
+                       <li>Merge and optimise objects as before.</li>
+                   </ol>
+
+                   <h2>Painting</h2>
+
+                   <p>Now switch on "highlight selection showing operation direction". When you select an object, it now shows the way a texture will get wrapped on an object. (Orange is the left of the selected texture area, green top, blue bottom, red right, using the "Flat Wrap" option on the texture)</p>
+
+                   <p><img SRC="images/l7b3.jpg" ></p>
+
+                   <p>With "Edit using standard coordinate" orientation mode turned on, the texture "snaps" horizontally and is only affected by moving the view around the object.</p>
+
+                   <ol>
+                       <li>Making sure the boiler texture is selected in the material palette - make sure there is no mask selected for this texture. Select the crop texture button.</li>
+                       <li>Select the area as shown, leaving a gap at the top.
+                          <p><img SRC="images/l7b4.jpg" ></p></li>
+                       <li>Use the fill tool on the right on the boiler object.
+
+                          <p>For the funnel, I select an area of the firebox, light at the top, dark at the bottom, press the flip texture vertically and fill the object. Using Cylindrical wrapping sometimes helps here.</p>
+
+                          <<p>The dome I select an area from the boiler between the bands, with the texture up the right way.</li>
+                   </ol>
+
+                   <p>Now you may notice that there appears to be some "stretching" on top of the boiler - to adjust the texture to reduce this...</p>
+
+                   <ol>
+                       <li>Select the top few faces of the boiler from the centre, down one side (depends on how many faces you have used on the boiler).
+                           <p><img SRC="images/l7b5.jpg" ></p></li>
+                       <li>Run the UV remap operation (button with red Grid):
+                           <p><img SRC="images/l7b6.jpg" ></p></li>
+                       <li>Now drag the green squares up so they are spaced more evenly.
+                           <p><img SRC="images/l7b7.jpg" ></p></li>
+                       <li>Repeat at the firebox end and press OK - less stretching.</li>
+                   </ol>
+
+                   <h2>Tank</h2>
+
+                   <ol>
+                       <li>Select an area of green (from next to the word Remembrance), move to a 3/4 view, switch to edit using screen coordinates and fill the tank object.<br>&nbsp;</li>
+                       <li>Switch to the default coordinate mode, crop the texture for the left side (I conveniently set the sizes to multiples of 128, so the Y texture coordinates will be multiples of 0.25)<br>&nbsp;</li>
+                       <li>Multi-select all faces that make up the left side and press the "Apply Material to Selection" operation - the paint pot on the left menu (Object Operations)<br>&nbsp;</li>
+                       <li>repeat for the right side.
+                           <p><img SRC="images/l7b8.jpg" ></p>
+                           <p>I should mention, after each application of a texture, if it is not quite correct, you can make use of the operation adjust tool on the Right menu. I have had some odd result with this, but on the whole it works quite well.</p>
+                           <p>For instance, the tank side texture needed shrinking slightly from the bottom so the white line was visible. After applying the texture, selecting the operation adjust tool, clicking on the tank and using the Y axis of the edit control, I was able to fix the texture. This tool takes a bit of experimentation.</li>
+                   </ol>
+
+                   <h2>Firebox</h2>
+
+                   <p>A bit of a combination of all so far.</p>
+
+                   <ol>
+                       <li>Fill the firebox object with a plain green area of texture from the firebox section.
+                          <p><img SRC="images/l7b9.jpg" ></p></li>
+                       <li>Select all the side and top faces.
+                          <p><img SRC="images/l7b10.jpg" ></p></li>
+                       <li>Crop the firebox texture (leaving a gap at the top, as with the boiler, but not as large) and apply using the "Apply Material" Operation, viewing from the side with default mode on.<br>&nbsp;</li>
+                       <li>There is a slight problem with reducing the stretching on top here. Being only one face, it leaves one side slightly different to the other, but it's not really noticeable.
+                          <p><img SRC="images/l7b11.jpg" ></p>
+                          <p>The backhead is also part of the firebox, inside the cab.</p></li>
+                       <li>Select the back face and all the small faces around it.<br>&nbsp;</li>
+                       <li>Crop a small grey/black area from the texture and use the apply material.<br>&nbsp;</li>
+                       <li>Select the back face by itself.<br>&nbsp;</li>
+                       <li>Select the backhead from the texture and use the apply material operation again.</li>
+                   </ol>
+
+                   <h2>Cab</h2>
+                   <p>Now load the cab texture file into the Material Palette.</p>
+
+                   <ol>
+                       <li>I have Merged the bunker object into the cab object to form a single object for texturing purposes.<br>&nbsp;</li>
+                       <li>Select <b>*all*</b> faces inside and out that make up the right cab and bunker side.
+                           <p><img SRC="images/l7b12.jpg" ></p></li>
+                       <li>Select the right cab side from the texture:
+                           <p><img SRC="images/l7b13.jpg" ></p></li>
+                       <li>Use the apply material operation.
+
+                           <p>This is also a good time to try out the operation adjust tool to shift the texture slightly to line up the lining between the tank and cab - alternatively,adjust the texture is that's easier.</p></li>
+                       <li>Repeat for the Left side (Looks like I may have to make a couple of small adjustments to the texture later to make the 3rd coal rail appear properly) The bunker rear was taken from a small section near the back of one of the bunkers. The usual method of selecting all faces (inside and out) and applying the texture was used. There is quite a lot of stretching from the back, but I'll wait to see how this looks running before doing anything about it. The from and rear cab faces were applied in the same way (remembering to select inside and out) - the front face required quite a bit of adjustment to make it fit correctly. You could use UV re-map if the operation adjust is not easy to use. Just watch the left panel as you change the coordinates.</p></li>
+                   </ol>
+
+                   <h2>Coal</h2>
+
+                   <ol>
+                       <li>Viewing from above and select "edit using screen coordinates":
+                           <p><img SRC="images/l7b14.jpg" ></p></li>
+                       <li>Crop an area of coal and apply this to the selection.</li>
+                   </ol>
+
+                   <h2>Roof</h2>
+
+                   <ol>
+                       <li>Select the whole object this time and move to view from above, as square as possible.
+                           <p><img SRC="images/l7b15.jpg" height=354 width=485></p></li>
+                       <li>crop the roof texture and fill using the fill tool (as this is an independent object)</li>
+                   </ol>
+
+                   <p>Looks a lot more like a steam engine when you export it now ...</p>
+                   
+                        </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "check"</a>
+		</div>
+
+    <!--- end cause --->
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <p><h3>Part 1 - Below the footplate</h3>
+                        <blockquote>
+                          <p><a href="steam3DC.html#start">0 - Beginners and reading</a></p>
+                          <p><a href="chap_1.html">Chapter 1 - Wheels</a></p>
+                          <p><a href="chap_2.html">Chptr 2 - Round Wheels</a></p>
+                          <p><a href="chap_3.html">Chptr 3 - Complex footplate shape</a></p>
+                          <p><a href="chap_4.html">Chptr 4 - Pistons and Valve gear</a></p>
+                          <p><a href="chap_5.html">Chptr 5 - Complex animations</a></p>
+                        </blockquote>
+
+                        <h3>Part 2 - Above the footplate</h3>
+
+                        <blockquote>
+                          <p><a href="chap_6.html">Chptr 6 - Boiler, Funnel and Dome</a></p>
+                          <p><a href="#">Chptr 7 - More Bodywork and Texturing</a></p>
+                          <p><a href="chap_8.html">Chptr 8 - Detailing</a></p>
+                          <p><a href="chap_9.html">Chptr 9 - More Detailing</a></p>
+                          <p>&nbsp;</p>
+                        </blockquote></p>
+
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 2002-2003, 22 April 2010</center></p>
+</div>
+</body>
+</html>
+

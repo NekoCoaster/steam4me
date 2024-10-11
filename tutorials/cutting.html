@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>Embankments and Cuttings - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Embankments and Cuttings</font>
+                        <br>by Jim "Sniper297" Ward
+                        <br>(with contributions by Lawrence Kellie, Rob Murphy and David Klemm)</h2>
+
+ 			   <div class="entry">
+
+                        <p>The Terrain window has 3 settings, embankment, width, and cutting. <b>Embankment</b> and <b>Cutting</b> are the angle of the
+slope in degrees, embankment above ground and cutting below.</p>
+
+                        <p><img SRC="images/embcut01.jpeg" ></p>
+
+                        <p>Width might seem obvious, but since the terrain polygons are rather coarse and rectangular, wide enough for straight level track pointing due North/South is not going to be wide enough for a sharp curve, angled North East and inclined 3 degrees.</p>
+
+                        <p>I have found that "width" covers a rectangular area, so "width" also means length. Even when going in one of the 4 cardinal compass directions if you are going up or down a steep grade, spillover or undercutting is going to occur on the connected track pieces, and the only way to fix it is to steepen cutting and embankment, experiment with width (and length, remember) to see how little you can get away with, and go back over the whole grade clicking on each section and hitting "Y".</p>
+
+                        <p><img SRC="images/embcut02.jpeg" </p>
+
+                        <p>In the above shot the embankment is set at 75 degrees, the width at 10(meters, I assume, KUJU didn't say). The center track is pointing due North, the width looks good, the embankment is clean and sharp. The left track is rotated to azimuth 330 degrees, the width is too wide in some places, undercuts in others, and leaves a sawtooth edge. The right hand piece is a 45 degree yard curve angled to an elevation of 3 degrees up, and it's a complete mess. The fill underneath doesn't even go all the way to the end. So as you can see, your choices are too wide or not wide enough. This is further complicated by the "now you see  it now you don't" problem with the editor, you have some terrain spilling over onto the track after hitting the "Y" key, select the terrain editing tool to adjust it, and it disappears. And sadistically reappears as soon as you deselect the terrain tool.</p>
+
+                        <p><img SRC="images/embcut03.jpeg" </p>
+
+                        <p>The only thing you can do is to increase the width in small increments, reselect the track piece, hit "Y" again, and see if that cleans it up. Then go around trying to fix nearby track at different elevations. In the second picture you'll see the 45 degree yard curve spilled over onto the center 100 meter straight, in spite of the fact that it didn't fill in completely. Given the already steep embankment, that track configuration is probably not going to work. Sometimes saving or hitting the J key (recalculate terrain buffers) works, sometimes it don't. So all too frequently the choice is unrealistcally wide cuts and valleys with flat floors, or accept some spillover.</p>
+
+                        <p><img SRC="images/embcut04.jpeg" </p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "link1">
+		</div>
+
+    <!--- end end overview --->
+
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Additional information</h2>
+			<div class="entry">
+
+                        <p>Bugs other than the aforementioned "what you see is NOT what you get".</p>
+
+                        <ul>
+                            <li>RAM helps considerably for this, not the Dodge truck or the sheep with the silly looking horns, the Random Access Memory kind. The more the better. After hitting Y or raising and lowering terrain for a while, sometimes the terrain editing tool and/or the Y key stops working even if you have the width set to a reasonable value for the track you're working with. How long is "a while"? More RAM, longer, less Ram, shorter.</p>
+
+                            <p>When it happens, even with the 512 mb I currently have, the only fix is to exit all the way back to desktop to clear the RAM and start again. Save often, sooner or later you're going to get send/don't send and lose everything since the last save. And don't forget to make backup copies of the route at least daily.
+                            
+                            <p>Another thing that helps is to change the tile error bias to zero. That allows for finer changes.</p>
+                            </li>
+
+                            <li>The default 45/18/45 will return if you exit from the session. Any changes you make to the "defaults" will not be written to the registry.  (<i>Jim Steven, MCSE, Senior Microsoft Windows Application Developer)</p></i></li>
+
+                            <li>Regarding the now you see it, now you don't, I have found the following order of events to work very well for me.</p>
+
+                            <p>Before pressing F9, I turn on wire mode.&nbsp; I place the mouse pointer over the raised point that is spilling over--it usually covers quite a large area. I then press F9.  When I do, the triangle grids (points) get smaller, thus the problem "disappears." However, since I have my mouse pointer over the point that I want to lower, I just lower away, press F2, then turn off wire mode to see what was the results.  So the sequence is: Wire mode on, hover mouse, F9, make changes, F2, wire move off.
+                            <br>Works for me. (<i>Contribution by Lawrence Kellie)</i></p>
+                            </li>
+
+                            <li>Try this...Press F9, surround the area with the red box, hit the "F" key, then the "J" key. Without moving the mouse, hit CTRL+S to Save, then Enter, don't move the mouse, hit F2.  Works great. (<i>Contribution by Rob Murphy)</i></p>
+                            </li>
+                        </ul>
+</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end cause --->
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 21 June 2002, 12 April 2010</center></p>
+</div>
+</body>
+</html>

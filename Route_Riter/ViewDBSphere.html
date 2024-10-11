@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+
+
+   <title>Route-Riter: The Role Of The ViewDbSphere Parameter - at The Steam4me Site</title>
+
+   <meta name="keywords" content="">
+   <meta name="description" content="">
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen">
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width="100%" bgcolor="#333957">
+<tr>
+    <td align="left"><a href="http://steam4me.net"><img src="../images/S4M_Banner_left.png" nosave="" height="60" border="0"></a>
+    </td>
+    <td align="right"><img src="../images/S4M_Banner_Tutorials.png" nosave="" height="60">
+    </td>
+</tr>
+</table>
+</div>
+<hr>
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color="blue"><h2 class="title">Route-Riter: The Role Of The ViewDbSphere Parameter And Disappearing Shapes</h2></font>
+                        <h3>compiled from information published by Wayne Campbell, Paul Gausden, Marc Nelson and others</h3>
+                        <p></p>
+			<h2 class="title">What is a ViewDbSphere?</h2>
+ 			   <div class="entry">
+
+                   <p>The ViewDbSphere statements are added to the world file by the route editor. They are used by 3D engines to improve framerates by culling objects that are not in the field of view (FOV). The mathematics to determine the visibility of a sphere is simple compared to the math necessary to determine the visibility of complex shaped objects. So, to keep the math simple, each object has a ViewDBSphere defined ( in the shape file ) that fully encloses the object. These ViewDBSpheres are then copied into the world file and, to further simplify the math, overlapping ViewDBSpheres are combined to reduce the number of tests needed. The result is a small heirarchical database of spheres within spheres that speeds the process of searching for visible objects.</p>
+
+                   <p>You'll see that the top level sphere fully encloses all the others. To some extent, RE does this properly. But at some point, I see it seems to all break down. Too bad, because FOV culling is a good technique to improve framerates.</p>
+
+                   <p>Another problem caused by the ViewDbSphere is the phenomenon of "disappearing" shapes:  the reason for the shape disappearing is that the location of the shape doesn't match the ViewDbSphere location.</p>
+                   
+                   <h2>Should I bother deleting them?</h2>
+
+                   <p>It is safe to delete them and you may see some performance increase in low density tiles, but deleting them in higher density (1000+ objects) may slow things down.</p>
+
+                   <p>It has also been noted that while in the Route Editor (RE), adding an Object seems to add two objects for each object placed, which seems to include adding a ViewDbSphere statement to the World file.  If you delete an object, its ViewDbSphere statement remains as the object count for a tile only decreases by one.</p>
+
+                   <p>Deleting the ViewDbsphere reduces the object count further.  Whilst this may slow down drawing images in heavily-populated route tiles, it may also allow more objects to be placed on already heavily populated tiles or may improve the reliability of the sim in operating routes with object-dense tiles.</p>
+
+                   <p>It has also been noted that unexplained crashes-to-desktop of some routes in MSTS may be caused by errors in the "VDbId" parameter.
+
+                   <h2>How do I correct the "disappearing shapes" error?</h2>
+
+                   <p>In Route Editor, move your Point Of View (camera) around the shape until you come to a point where it can be selected.  Once you have selected the object, right-click, select Properties and change the properties to use one of the shadow options, click OK, and then select and undo the changes in the properties. Once you save in RE, the ViewDbSphere location will update to match that of the shape's actual position (MN).
+
+                   <h2>How can I delete these statements?</h2>
+
+                   <p>Route_Riter v7.0.91 and higher now has an option under MSTS FileUtils:</p>
+
+                   <p><img src="images/ViewDbSphere.jpg" width=""></p>
+
+                   <p>This as it says, removes all the ViewDbSphere entries from the .w files and it also alters all VDbId () entries to VDbId ( 4294967295 ).</p>
+
+                   <p>Use with care and <b>ALWAYS <a href="route_backup.html">back up your vital route files</a></b> before proceeding.</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a name="link1">
+		</a></div>
+
+    <!--- end end overview --->
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href="http://steam4me.net">http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 8 June 2008, 12 April 2010</center></p>
+</div>
+</body>
+</html>
+

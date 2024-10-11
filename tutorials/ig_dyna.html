@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>Idiot's Guide to Dynamic Track in MSTS - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="Author" content="Jim Ward, rewritten for the web by Yuri Sos">
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Idiot's Guide to laying dynamic track in MSTS</font>
+                        <br>by Jim "Sniper" Ward</h2>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                             <p>There's been a few questions about this, there's no real right way or wrong way, but since I was making a wye anyway I thought I'd make a little tutorial on what works for me.</p>
+
+                             <p>First thing - where is Dynamic Track?  You'll find it in Track Sections under "D".</p>
+
+                             <p><img SRC="images/igdt_000.jpg" width=667></p>
+
+                             <p>That can be a little hard to find, especially if you've installed Xtracks and you've got a long way to scroll down.  Here's a quick tip (by Yuri Sos) to make it *so* much easier to find your dynamic track piece.</p>
+
+                             <p>Open the .ref file for the route you are working on.  The Dynamic Track entry is usually the first entry in this file, see?</p>
+                             
+                             <p><img SRC="images/igdt_020.jpg" ></p>
+                             
+                             <p>Simply put a space between the quote mark and the word <b>dynamic</b> as demonstrated below:</p>
+
+                             <p><img SRC="images/igdt_021.jpg" ></p>
+
+                             <p>Now when you open <b>Track Sections | More</b>, you'll find that it's sorted to the top of the list:</p>
+
+                             <p><img SRC="images/igdt_022.jpg" ></p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "lay">
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- laying --->
+
+		<div class="post">
+			<h2 class="title">Laying The Track</h2>
+			<div class="entry">
+
+                        <p>Get familiar with that dynamic track window. If it isn't already open, click on window at the top of the route editor screen, then dynamic track, and you'll get this:</p>
+
+                        <p><img SRC="images/igdt_001.jpg" height=459 width=450></p>
+
+                        <p>Note the buttons on the left are for moving it a lot, the ones on the right move it just a little. The "start" is the length of the first straight section, the "middle" will be the middle if you have the second curve enabled. If you are only using the first curve, the "middle" will actually be the end, because there's nothing beyond it. Checking the box for the second curve gives you the "end", which in that case would be the last straight section beyond the second curve. I'm putting together a simple wye track here, so I don't really need the additional complication of a compound curve. OK, here we go.</p>
+
+                        <p><img SRC="images/igdt_002.jpg" NOSAVE height=445 width=600></p>
+
+                        <p>Oops. That's NOT the way to do it, dynamic track only curves to the left, and the above would have to curve to the right. Let's try it from the other end.</p>
+
+                        <p><img SRC="images/igdt_003.jpg" NOSAVE height=419 width=600></p>
+
+                        <p>That's better. Check the box to enable the first curve, then click the left hand up arrow next to "middle" (actually the middle is the end if only one curve is enabled, remember?) and crank it out to 50 meters or thereabouts so you can see where it's going.</p>
+
+                        <p>Here's where it gets a little confusing. The up arrow increases the radius of the curve, but to make the curve curve more it's the down arrow on the angle. It actually makes sense tho, bigger broader curve up arrows, smaller tighter curve down arrows.  The default minimum 25 meters ain't gonna take an 0-4-0 tho, so the first thing is to broaden the radius. I usually bump it up to 120 meters to start for low speed sections like yards, 250 meters for a mainline. Next I hold the down arrow on the angle to tighten the curve (make it curve more) until it gets in the ballpark of the section I'm trying to connect to.</p>
+
+                        <p><img SRC="images/igdt_004.jpg" NOSAVE height=395 width=600></p>
+
+                        <p>Now we need to fly over to the other end to get a close up of the alignment process. Be advised, if you click on something else it will deselect the dynamic track. You'll know if you did that when all the little numbers in the dynamic track window disappear. if that happens, just fly back to the beginning and click on that funny little green trapezoid to reselect it. Let's see how close I came:</p>
+
+                        <p><img SRC="images/igdt_005.jpg" NOSAVE height=392 width=600></p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="adjust">
+		</div>
+
+    <!--- end laying --->
+
+
+    <!--- adjust --->
+
+		<div class="post">
+			<h2 class="title">Adjusting Dynamic Track</h2>
+			<div class="entry">
+
+                        <p>Hmmm, that's not gonna work. The curve is just about correct, because the rails are almost parallel, but the end of the dynamic track is too far to the right. Normally I would adjust it to the left by reducing the length of the "start" piece of straight track, but it's already down to the minimum. Gonna have to tighten the radius, let's try 100 meters.</p>
+
+                        <p><img SRC="images/igdt_006.jpg" NOSAVE height=395 width=600></p>
+
+                        <p>That's better, it moved it to the left so much I had to increase the "start" section to 8 meters to move it back to the right, and had to increase the middle to get my overlap back. You always want a few meters of overlap at the end of the track at this point, because it makes it easier to see if the lineup is correct. As you can see, it's not, the dynamic track is cocked to the left. Since it only curves left, I need to tighten the curve to angle it more to the left, or loosen the curve to angle more to the right. So in this case I need to reduce the angle (up arrow) to cock it to the right.</p>
+
+                        <p><img SRC="images/igdt_007.jpg"  height=407 width=600></p>
+
+                        <p>At this point I'm also using the fine tuning buttons on the first piece of straight track to make it easier to see if the rails are parallel. This looks pretty close, now to go for horizontal alignment using the same buttons.</p>
+
+                        <p><img SRC="images/igdt_008.jpg"  height=391 width=600></p>
+
+                        <p>Looks pretty smooth, but the game won't accept that much overlap, so now is the time to get rid of it. So click on the down arrows on the "middle" section to reduce the length and open a gap. Then zoom in closer to see the final adjustment. Holding down the END key while using the keyboard arrows makes this easier to position the view.</p>
+
+                        <p><img SRC="images/igdt_009.jpg"  height=389 width=600></p>
+
+                        <p>Now we use the fine tune buttons to adjust the length of the middle section to close the gap.</p>
+
+                        <p><img SRC="images/igdt_010.jpg" height=420 width=600></p>
+
+                        <p>The right side is closing before the left, indicating that the angle isn't exactly right. Two more strokes on the fine tune up button would close the gap, with only a little
+overlap on the right hand rail, and the game would accept it like that. But let's get finnicky and try for a perfect join. Lessee, gap on the left bigger, cocked too far left, need to decrease the angle to cock it more to the right. Up arrow on the angle, less curve. Then I gotta adjust the length of the two straight sections to line it up again.</p>
+
+                        <p><img SRC="images/igdt_011.jpg"  height=423 width=600></p>
+
+                        <p>Can't beat that. My own personal standard to avoid rough track joints is the second gap has to close within 2 fine strokes after the first, but until you get comfortable with doing this it's not really necessary to get that persnickety.</p>
+
+                        <p><img SRC="images/igdt_012.jpg" height=450 width=600></p>
+
+                        <p>The final acid test, click on the terrain somewhere to deselect the dynamic track piece. If the blue line disappears, it's a valid track join.</p>
+
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end adjust --->
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#lay">Laying The Track</a>
+                 <br><a href="#adjust">Adjusting Dynamic Track</a>
+                 <br><a href="#easy">Easy Repair</a>
+
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 19 Oct 2001, 26 March 2010</center></p>
+</div>
+</body>
+</html>

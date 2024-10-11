@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>A Coach made with Gmax Chapter 10 - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <meta name="Author" content="Richard Osborne">
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+        <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">A Coach Made With GMax</font>
+                        <br>by Richard Osborne</h2>
+                        <p></p>
+			<h2 class="title">Chapter 10: Texturing Tricks And Losing Polygons</h2>
+ 			   <div class="entry">
+
+                   <p>I'm a believer in looking at how other people solve problems. If you look at the sample textures from KUJU you'll see numbers & emblems far bigger in proportion than the coach sides. It dawned on me that they must use a transparent panel for their numbers. This is very efficient & cunning. One small area of texture can be used many times on a model, the number appears much sharper & a number is simply changed. All this for just 2 extra polygons per number. I've used transparent panels on all my models.</p>
+
+                   <P>They're also the answer if you want to change, say, the emblem on a loco. Change the size & position of one panel to take L S W R, which is a scale 12'  to a 2' square to take a BR dog & wheel. Once the panel is made you can scale it, remap it, move it & clone it.</p>
+
+                   <P>This coach uses the LNWR emblem, nicknamed Cauliflower, twice per side, you can see the scale of it on the texture file. Some coaches have an elaborately shaded 1 or 3 on each door, it would be very tedious to try to repeat them. For the LSWR coaches I drew a texture file with numbers & words using it with each series of coaches. For these coaches I need the words:- Guard, Luggage, Third, First, L&NWR, WCJS as well as the cauliflower. The cauliflower & wording could fit a 256 file which would be needed once for a full train
+of 15 coaches; it won't be inefficient usage of a small texture file.  I've seen just a bogie side on a 512 file before - that's inefficiency. A tip - the more elaborate & time-consuming the alpha masking leave it till last. Only mask when the file is finalised.</p>
+
+                   <P><IMG SRC="images/ro_gmax_10_01.jpg" BORDER="0" WIDTH="600" HEIGHT="280" ALIGN="bottom" ALT=""></p>
+
+                   <P>I haven't done it yet but...when final texturing, assuming your plan isn't terribly distorted you should be able to draw part of your coach & repeat it. These coaches were built to standard sizes, each window & door should be the same. Accurately draw one part, copy it to the clipboard then paste it as many times as needed. You only have to fill in between pasted parts - saves hours!</p>
+
+                   <P><IMG SRC="images/ro_gmax_10_02.jpg" BORDER="0" WIDTH="175" ></p>
+
+                   <P>There will be times when you have to move & remap with a bit more precision, Gmax is hopeless for mapping with precision. One trick is to draw a scale on the texture file. In SView you can see that something should be 4 up, 5 to the right or whatever. Texturing is all nudge & move. If you try to finalise the texture then make it fit you're making a rod for your back. </p>
+
+                   <P><IMG SRC="images/ro_gmax_10_03.jpg" BORDER="0" WIDTH="325" ></p>
+
+                   <P>If you put texture on a cylinder, a boiler or tank wagon, from the side, in Gmax planar you'll get distortion as the centre polygons are wider than the edges.Purely as a demonstrator I've put a tank onto the running gear of the coach. Isolate one side of the tank & just apply texture. I've put some rivets onto a plain background. It appears on the .ace files with distortion.</p>
+
+                   <P><IMG SRC="images/ro_gmax_10_04.jpg" BORDER="0" WIDTH="575" HEIGHT="549" ALIGN="bottom" ALT=""></p>
+
+                   <P>The result when we view it. See how the rivets & numbers near the centreline are stretched. The numbers were added after the first screenshots.</p>
+
+                   <P><IMG SRC="images/ro_gmax_10_05.jpg" BORDER="0" width="600"></p>
+
+                   <P>If we draw a regular grid & add it to our texture file we can compensate. If we look at the 'edit' screen we can see the tank still with distortion. This grid has been drawn before & called from the clipboard manager.</p>
+
+                   <P><IMG SRC="images/ro_gmax_10_06.jpg" BORDER="0" WIDTH="600" ></p>
+
+                   <P>Pull the horizontals to match the horizontals of the grid.</p>
+
+                   <P><IMG SRC="images/ro_gmax_10_07.jpg" BORDER="0" width="600"></p>
+
+                   <P>Now when we export & look in SView the rivet & number spacing is regular.</p>
+
+                   <P><IMG SRC="images/ro_gmax_10_08.jpg" BORDER="0" width="600"></p>
+
+                   <P>With a regular shape we could use 'cylindrical' in the 'Mapping' panel. If you had a boiler with firebox or smokebox it's easier to use 'planar'. You can do something similar to this in TSM; isolate each polygon then 'Polygon', find 'Texture' near the bottom of the dropdown & remap the polygon. As you have to remap polygon by polygon it takes an age.</p>
+
+                   <P>Here's one from TSM, but it could equally apply to Gmax. For some reason the texture for the back of seats is from the top & not from the right as you'd expect. The result is that the back uses a very thin slice of texture, I've got a feeling LNWR used a flowery print for their seats, the effect will be more  pronounced.</p>
+
+                   <P><IMG SRC="images/ro_gmax_10_09.jpg" BORDER="0" WIDTH="497" HEIGHT="547" ALIGN="bottom" ALT=""></p>
+
+                   <P>In TSM 'Polygon', isolate the offending polygon, 'Texture' & remap. In Gmax isolate the horizontal polygons & texture, then the verticals. The result is better. Gmax will mirror without any problem, in TSM you'll have to mirror then place texture from right instead of from left.</p>
+
+                   <P><IMG SRC="images/ro_gmax_10_10.jpg" BORDER="0" WIDTH="501" HEIGHT="585" ALIGN="bottom" ALT=""></p>
+
+                   <P>I said before I'd use transparent panels now where I used to use solid construction. An example:- those of you who read the loco tutorial will remember the cab was built from rectangles, quite labour & polygon intense. In my defense I stated it as a way of building, logical but not necessarily the best way. Now I'd use panels certainly for the top of the cab unit, again it's a compromise between efficient building & efficient use of the texture file. You can see the polygons, I could have used one panel for the top rear
+face. If only Gmax showed transparency!</p>
+                   
+                   <P><IMG SRC="images/ro_gmax_10_11.jpg" BORDER="0" WIDTH="600" ></p>
+
+                   <P>I mentioned solid driving wheels before; I used to make wheels with all solid parts.
+Coach wheels are made in the way I've described in Chapter 7; driving & loco bogie wheels
+can be a bit of a compromise.</p>
+
+                   <P><IMG SRC="images/ro_gmax_10_12.jpg" BORDER="0" WIDTH="393" HEIGHT="131" ALIGN="bottom" ALT=""></p>
+
+                   <P>These are bogie wheels; I use one panel for the inside faces, one for the outside of the
+rims, one for body colour with a black painted axle end. Tip:- they're in squares; texture using the corners for UVW mapping then apply alpha texturing. Obviously the texture has to be masked around the rims & spokes. The tricky bit is getting the inside of the rims to match the solid rims of the wheel.</p>
+
+                   <P><IMG SRC="images/ro_gmax_10_13.jpg" BORDER="0" WIDTH="569" HEIGHT="507" ALIGN="bottom" ALT=""></p>
+
+                   <P>A pair of driving wheels, the spokes & hub are showing in front of the outer face, when you see the wheel in SView or MSTS the wheels appear exactly as solid wheels. The main difference is a saving of hundreds of polygons. </p>
+
+                   <P>Speaking of saving polygons; there's no reason why locos & coaches have to be symetrical.  A brake coach could have more detail on the rear end, buffers might be solid here but have transparent faces on the front, hidden end. Loco handrails might be 10 sided on the driver's side where they're visible from the Cab View but only 5 sided on the opposite side. It all counts! I have downloaded a loco where the cabview model is more detailed on the blind side than the main model - but that's another story. The golden rule - if you can't see it, it shouldn't be there.</p>
+
+                   <P>I haven't mentioned Levels of Detail. In reality our coach isn't yet detailed to the point where it would help us by trimming polygons. We need to finish building underbody parts, vacuum pipes, vents & handrails; those things which add to the solidity of our model when viewed from close-to but which won't be seen from further away. Gmax is a bit awkward for LoD, you have to trim polygons from parts; all parts must remain on the list even if they only have a few polygons remaining.</p>
+
+                   <P>The main thing is to get some coaches or wagons built & running in a consist. I promise
+you'll have a grin like the Cheshire Cat when you see your efforts on the screen. Maybe publish them & get some complimentary feedback. Before concluding can I thank those people who were patient with me when I asked the most basic questions when the learning curve seemed insurmountable.</p>
+
+                   <P>Above all:- enjoy yourself, it's a game. It says so on the box.
+
+                     </div>
+			 	<p class="meta"><span class="posted"><a href="#">Return to top of page</a></span><a href="ro_gmax_11.html" class="permalink">Go On To Chapter 11</a></p>
+
+             </div>
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Chapters</h2>
+<ol>
+<li><a href="ro_gmax_00.html">Overview</a></li>
+<li><a href="ro_gmax_02.html">Getting started</a></li>
+<li><a href="ro_gmax_03.html">First Texturing</a></li>
+<li><a href="ro_gmax_04.html">Modelling For Real</a></h3></li>
+<li><a href="ro_gmax_05.html">Texturing The Body</a></h3></li>
+<li><a href="ro_gmax_06.html">Alpha Channels</a></h3></li>
+<li><a href="ro_gmax_07.html">Wheels and Bogies</a></h3></li>
+<li><a href="ro_gmax_08.html">Interiors</a></h3></li>
+<li><a href="ro_gmax_090.html">Export to MSTS</a></h3></li>
+<li><a href="#">Texturing tricks and losing polygons</a></h3></li>
+<li><a href="ro_gmax_11.html">More Tricks and Tips</a></h3>
+<li><a href="ro_gmax_12.html">More about hierarchies</a></h3>
+</ol>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 24 August 2004, 19 March 2010</center></p>
+</div>
+</body>
+</html>
+

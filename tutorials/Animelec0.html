@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>How To Animate An Electric Loco (And Make Parts Move Using The P Key) - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li ><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png"  height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png"  height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+                        <h2><font color="#3333FF">How To Animate An Electric Loco (And Make Parts Move Using The P Key)</font>
+                        <br>by Paul DeVerter</h2>
+                        <h3>A Port City Car Co. Project Copyright &copy; 2005</h3
+
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                        <p>This is a series of Tutorials on Animation for Microsoft Train Simulator, using Train Simulator Modeler for the 3D modelling.  This series of tutorials concerns only Electric Locomotives.  It is written with the understanding that you have read and generally understand the prior Tutorials which dealt with</p>
+                        <ol><li><a href="anim_scen.html">“How To Animate A Scenery Object”</a>, and</li>
+                            <li><a href="anim_scen2.html">“How to Animate a Scenery Object that Rotates on an Incline"</a>.</li>
+                        </ol>
+
+                        <p>MSTS includes a few keys that may be used to animate certain aspects of a locomotive. These include the "P" key which is designed to raise and lower a pantograph, and the "V" key which is designed to make windshield wipers oscillate.</p>
+
+                        <p>The P key only works on Electric Locomotives, while the V key will work on both Electric and Diesel Locos.  Unfortunately, the V key works only with parts that return to the original off position, so far as I can tell, but I am still experimenting. On the other hand, the P key can be used with parts that return to their original position, or which remain extended.  Further the parts do not have to look like anything on a pantograph, nor act like anything on a pantograph, and can be made to move linearly or to rotate, with certain constraints.</p>
+
+                        <p>The major constraint is that the P key only works on an electric locomotive on an electrified route.  It toggles action which you may animate, but it also cuts the power on and off the loco.  So, in a first position, the loco is dead, in the sense that the throttle will not make it move, or if already moving, will not give any more power and the loco will eventually coast to a stop.  In the second position, the P key turns on the power to the loco, and you may control it at will.  This happens whether or not you have a pantograph.</p>
+
+                        <p>In order to invoke the animation of parts with the P key, the parts must be named with certain reserved train names.  These names all begin with "Pantograph", such as Pantograph Bottom 1, and Pantograph Middle 2B, etc.  Apparently you must have at least 2 Frames of Animation, when you set up your loco, or the animation will not work.  You may use considerably more, in order to slow the action down.  We will cover these rules in more detail as we build several objects.</p>
+
+                        <p>Now what sorts of objects can we animate?  Now we are not talking about scenery objects, which are better handled using the techniques of the prior Tutorials.  Instead, we are talking about objects that move by themselves over the track, or are pulled, as a part of a train, along the track - thus engines and wagons.  But since the P key will only work with Electric Locomotives, the object must, in fact, be an electric Locomotive, even though disguised as something else, such as a side dump gondola, or a rail gun.   This is easy enough to do, by ignoring or reducing the power of the object to zero.</p>
+
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "kiln"</a>
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Table of Contents with Links</h2>
+			<div class="entry">
+
+                   <p>Here is a series of eight tutorials (sections) that will cover every aspect of electric loco animation.  Simply click on the links below to go to each tutorial.  Each section will have further links to the next/previous section.</p>
+
+                   <p>We will make six animated objects from the Electric Loco (thus Sections 1 - 6), and use the P key to toggle the animation on and off.  Somewhat in order of complexity, they are:</p>
+
+                   <oL>
+                       <li><a href="Animelec1.html">a rail gun whose barrel goes up and down;</a></li>
+                       <li><a href="Animelec2.html">a trolley car whose trolley pole goes up and down;</a></li>
+                       <li><a href="Animelec3.html">a linecar having a lift that raises, and a gangplank that extends out to one side;</a></li>
+                       <li><a href="Animelec4.html">a linecar having a lift that raises, with a gangplank that rotates out to the side when raised;</a></li>
+                       <li><a href="Animelec5.html">a side dump gondola whose container slides to one side, and then tilts to discharge the load;</a></li>
+                       <li><a href="Animelec6.html">and finally a crane having a cab that pivots on the body, with a cable that lowers a hook or a weight to the ground.</a>
+                              <p>You can see that they do not have to look at all like a Loco.</p>
+
+                              <p>Since we have to have an eng file, even for a non-powered animated gondola, we know the eng file will be quite large, and include Cabview and Sound Folders.  I have done some experimenting, and have been able to make.....</li>
+
+                       <li><a href="Animelec7.html">An .ENG file for a side dump gondola that is no longer than a short wag file</a> and which does not have, nor need, the Sound and Cabview Folders.</li>
+<li>Finally, <a href="Animelec8.html">how to animate a trolley wheel on an electric car, which rotates backwardly compared to the wheels on the track.</a>  This is necessary because the wheels on the track are riding on top of the track, but the trolley wheel is riding on the bottom of the wire.</li>
+                   </ol>
+
+                   <p><img src="images/pdv_anim_loco_01.jpg" width="898" height="229" alt="" border="0"></p>
+
+                   <p>The image above illustrates six of the objects we will be building,</p>
+
+                   <p><img src="images/pdv_anim_loco_02.jpg" width="643" height="237" alt="" border="0"></p>
+
+                   <p>and these photos show the difference between some of the objects when in running condition (immediately above) and when in the unpowered position (immediately below), meaning when the P key has been toggled.</p>
+
+                   <p><img src="images/pdv_anim_loco_03.jpg" width="626" height="222" alt="" border="0">
+
+			 </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end cause --->
+
+
+
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+
+                       <p> <a href="Animelec1.html">Topic #1</a>
+                       <br><a href="Animelec2.html">Topic #2</a>
+                       <br><a href="Animelec3.html">Topic #3</a>
+                       <br><a href="Animelec4.html">Topic #4</a>
+                       <br><a href="Animelec5.html">Topic #4</a>
+                       <br><a href="Animelec6.html">Topic #6</a>
+                       <br><a href="Animelec7.html">Topic #7</a>
+                       <br><a href="Animelec8.html">Topic #8</a>
+               </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 12 April 2005, 04 May 2010</center></p>
+</div>
+</body>
+</html>

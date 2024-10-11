@@ -1,0 +1,269 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>Using Google Earth To Place Markers in Route Editor in MSTS - at The Steam4me Site</title>
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Using Google Earth To Place Markers in Route Editor in MSTS</font>
+                        <br>by Yuri Sos, based on work by Javier Aranda and Doug Kightley
+                        <br>KML to MKR conversion by Route Riter by Mike Simpson</h2>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                             <p>What is Google Earth?</p>
+
+                             <div align=right><img SRC="images/gem_01.gif" align=RIGHT></div>
+
+                             <p>To quote Google themselves, "Google Earth combines the power of Google Search with satellite imagery, maps, terrain and 3D buildings to put the world's geographic information at your fingertips.  But Google Earth is much more than just a mapping software. It's a tool for viewing, creating and sharing location-specific information which can be explored in an interactive and visually intuitive interface."</p>
+
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "download">
+		</div>
+
+    <!--- end end overview --->
+
+
+    <!--- dl --->
+
+		<div class="post">
+			<h2 class="title">Download</h2>
+			<div class="entry">
+
+                        <p>Download Google Earth at <a href=http://earth.google.com/>http://earth.google.com/</a>. It's a free download and at the time of this tutorial update (28 Mar 2010) was at version 5.</p>
+
+                        <p>You'll also need <a href=../Route_Riter/index.html>Route_Riter ver 6.4.62 or higher</a>. (As I wrote this tutorial, I "commissioned" Mike Simpson to assist with converting the .kml file: amazing programming guru that he is, Mike was able to come up with yet another new Route Riter function almost overnight.  The route used to generate screenshots is Russell Beer's excellent "Great Southern Main".)</p>
+
+        			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="configure">
+		</div>
+
+    <!--- end dl --->
+
+
+
+    <!--- configure --->
+
+		<div class="post">
+                  <h2 class="title">Configuration</h2>
+			<div class="entry">
+
+                        <p>Set up Google Earth - numbered points match arrows in image immediately below:</p>
+
+                        <ol>
+                            <li>Click on <b>View</b>, Select Grid (to turn Lat/Lon grid on;
+                                <p><img SRC="images/gem_01a.jpg" width=625 height=300></p>
+                            </li>
+                            <li>Click on <b>Tools | Options</b>;</li>
+                            <li>In the <b>3d View</b> section under "Show Lat/Long, select "Degrees";</li>
+                            <li>Optionally, you may want to turn on the display of rail and tram tracks: under <b>Layers</b> at left, expand "Transportation" and check "Railroads" and "Transit".</li>
+                            <li>In the <b>Places</b> view box at left, right click on <b>My Places</b> and select <b>Add | New Folder</b>;</li>
+
+                                <p><img SRC="images/gem_02.jpg" width=881 height=739></p></li>
+
+                                <li>A dialogue box opens - rename "Untitled Folder" to a folder name of your choice (example used here is <b>Great_Southern_Main</b>) and click "Ok":
+
+                                <p><img SRC="images/gem_03.jpg" >
+                                   <img SRC="images/gem_04.jpg" ></p></li>
+                        </ol></p>
+
+        			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="collect">
+		</div>
+
+    <!--- end configure --->
+
+
+
+    <!--- collect --->
+
+		<div class="post">
+                  <h2 class="title">Collecting Data Points To Be Used As Markers</h2>
+			<div class="entry">
+
+                        <p>Start by clicking once on your Great_Southern_main folder to select it. Now scroll and zoom into the site of your route in Google Earth.</p>
+
+                        <p> You create a placemark either by clicking on the Push-Pin icon (arrow #1 below) or by using Crtl-Shift-P.  A push-pin placemark (arrow #2) and a dialogue box appear.  Drag it to the location it is required.  Click on the dialogue box at left and change the name "Untitled Placemark" (arrow #3 below) to the name of the marker.  Important note:  be sure to leave NO SPACES in the placemarker name: use uinderscores if you need multiples words.</p>
+
+                        <p><img SRC="images/gem_05.jpg" ></p>
+
+                        <p>Click "Ok" when you're done.</p>
+
+                        <p>Repeat this process placing and naming markers as you move along your route.  As you insert the placemarks, you will see that they appear under "Great_Southern_Main" in the Places pane at left.</p>
+
+                        <p><img SRC="images/gem_06.jpg" width=466 height=540></p>
+
+                        <p>You don't need to do all the placemarks in one session as Google Earth will save all the placemarks if you exit and return later.</p>
+
+        			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="save">
+		</div>
+
+    <!--- end collect --->
+
+
+    <!--- save --->
+
+		<div class="post">
+                  <h2 class="title">Saving Your Data</h2>
+			<div class="entry">
+
+                        <p>Once you've finished marking out your route, right click on the folder name "Great_Southern_Main"  and select "Save As" from the drop-down box.</p>
+
+                        <p><img SRC="images/gem_07.jpg" width=252 height=312></p>
+
+                        <p>Save the file to your route's top folder and use the <b>.kml</b> extension.</p>
+
+                        <p><img SRC="images/gem_08.jpg" width=562 height=436></p>
+
+        			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="convert">
+		</div>
+
+    <!--- end save --->
+
+
+    <!--- convert --->
+
+		<div class="post">
+                  <h2 class="title">Converting Your Data</h2>
+			<div class="entry">
+
+                        <p><a href=../Route_Riter/index.html>Route_Riter ver 6.4.62</a> or higher will now convert a Google Earth created .kml file to a MSTS marker file.</p>
+
+                        <p>Browse to your route in the left-hand window (arrow #1 below).
+                        <br>Browse to, and select, the .kml file in the adjacent window (arrow #2 below).
+                        <br>Click on the "Convert Google Earth...." button (arrow #3 below):</p>
+
+                        <p><img SRC="images/gem_18.jpg" width=896 height=640 border=2></p>
+
+                        <p>A "Save Marker File" dialogue box appears:  select the route (arrow #4 below) and type in the filename so that it bears the same name as the .trk file (arrow #5 below).  Note that you can have only one active marker file in your route at a time.  If you have a complex route, you may wish to set up seperate marker files for track and infrastructure, roads and so on.  If so, save the marker file to a different name, then rename whichever one you want active to the route's filename.</p>
+
+                        <p><img SRC="images/gem_19.jpg" width=563 height=416 border=2></p>
+
+                        <p>The process defaults to marker flag type 2 in your route: you can open your .MKR file in Wordpad or ConTEXT editors and you will see the marker file thus:</p>
+
+                        <p><img SRC="images/gem_20.jpg" width=648 height=300 border=2></p>
+
+        			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="wrong">
+		</div>
+
+    <!--- end convert --->
+
+
+    <!--- wrong --->
+
+		<div class="post">
+                  <h2 class="title">Markers In The Wrong Position</h2>
+			<div class="entry">
+
+                        <p>Occasionally, you'll see a row of markers with one or more markers in obviously the wrong position in MSTS, but the place-markers look ok in Google Earth.</p>
+
+                        <p>To correct this, right-click on the marker in Google Earth, select Properties........</p>
+
+                        <p><img SRC="images/gem_21.jpg" width=388 height=280 border=2></p>
+
+                        <p>...... and select the "View" tab in the dialogue box that opens.</p>
+
+                        <p>Click the "Reset" button, then "Ok"and resave the kml file as above and the marker position will be corrected.</p>
+
+                        <p><img SRC="images/gem_22.jpg" width=367 height=489 border=2></p>
+
+        			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+
+		</div>
+
+    <!--- end wrong --->
+
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#download">Download</a>
+                 <br><a href="#configure">Configuration</a>
+                 <br><a href="#collect">Collect Data</a>
+                 <br><a href="#save">Save Data</a
+                 <br><a href="#convert">Convert Data</a>
+                 <br><a href="#wrong">Corrections</a
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 29 Jan 2007, 21 March 2010</center></p>
+</div>
+</body>
+</html>
+
+

@@ -1,0 +1,362 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>How to Make an Alpha Channel Using Paint Shop Pro and TGATool2 - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li ><a href="../vans/index.html">Vans</a></li>		
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png"  height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png"  height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+                        <h2><font color="#3333FF">How to Make an Alpha Channel Using Paint Shop Pro and TGATool2</font>
+                        <br>by Paul DeVerter</h2>
+                        <h3>A Port City Car Co. Project Copyright &copy; 2004</h3
+
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                             <p>I have had great difficulty in making see-through windows, and other alpha channel objects for Microsoft Train Simulator.  Mostly, it has been a problem of understanding the steps involved, and then understanding exactly what needs to be done in the Paint Shop Pro program.  So, I finally decided that I was going to conquer the problem, and stick with it until I could get it to work properly.</p>
+
+                             <p>This tutorial assumes that you know how to use Train Sim Modeler, or another 3D modeling program, and also how to make elementary shapes with Paint Shop Pro.  It also assumes that you understand the concepts of BLACK resulting in a transparent structure, and WHITE resulting in the underlying colors or textures showing through.</p>
+
+                             <p>We are going to make a simple static object, which consists of only two parts - a base and a wheel.  And the textures are likewise going to be relatively simple, although it took me some time to make the wheel, and paint on the spokes, etc.  But, the project is complicated enough that you are going to have to make several selections, and have a reasonably complex alpha channel, when you are done.  We are not going to use the mask arrangement at all.  Instead, the alpha channel is going to be generated solely by using the Selection menu, and you won't even have to fiddle with the various levels of transparency.  But after you get the hang of this, then you can go back and experiment.</p>
+
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "link1"</a>
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">The Project</h2>
+			<div class="entry">
+
+                        <p>The project is a relatively simple static scenery object.  It consists of a concrete base, set in the Earth, and a large automobile tire set on top of the base. If you wish, you may letter the base with a sign, like: We Fix Flats, or something similar. The wheel has a rubber tire and a spoked hub to hold the tire.  The spaces between the spokes are the subject of the alpha channel, and they will become invisible, so that you can see through these spaces, just as you could with a real wheel.</p>
+
+                        <p>Here is the finished project:</p>
+
+                        <p><img src="images/pdv_alpha1_image001.jpg" width="238" height="223" alt="pdv_alpha1_image001" border="0"></p>
+
+                        <p>Notice you can see through the center of the wheel.</p>
+
+                        <p>I am going to assume that you know how to make the necessary TSM parts, and likewise know how to put objects into your route with Route Editor.  Also that you know how to make the textures as bmp files, and how to texture the model.  We are going to skip lightly over the TSM part, and how to make the bmp texture file.  Most of the time will be spent in the construction of the alpha channel.  Then, we will go back to the TSM project, and make some corrections, and create the MSTS static scenery object.</p>
+
+			 </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "link2"</a>
+		</div>
+
+    <!--- end cause --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Construction Begins</h2>
+			<div class="entry">
+
+                        <h3>The Base</h3>
+
+                        <p>The first thing to do is make a base.  Use the box tool, and shape it to suit your fancy.  I made this about 5 feet wide, 3 feet high, and 1 foot deep.  I arranged the origin so that it was up from the bottom 1 foot, so that normally 2 feet of the base will extend above the Earth.  Why?  So that you can mount the base on uneven or sloping ground, and you will not have part of the foundation being above the ground.  Use SolidNorm for the material. Then texture the base, and put a sign on the front and back advertising your service station: FLATS FIXED, or what ever you may choose.</p>
+
+                        <h3>The Wheel</h3>
+
+                        <p>The final part is the wheel that is held up by the base.  I used a tube that was 2 feet radius, and 7 or 8 inches thick, structured on both sides.  Since it is round, I used polygon smoothing, and since it will have the alpha channel on it, make the material TransNorm in F2.  Now, texture the wheel with an ordinary bmp file.  BMPs do not handle the alpha channel, but we are going to fix that momentarily.  The object now is to make sure that the wheel looks OK.  See below in the section "The BMP and Alpha Process" section for a reference to the bmp file I used to texture the whole assembly.</p>
+
+                        <h3>The Assembly</h3>
+
+                        <p>After you have made the two parts, and textured them, or even before you texture them, you need to remove unnecessary polys, so as to make the object easier on your Simulator.  Here is a front view of the assembly:</p>
+
+                        <p><img src="images/pdv_alpha1_image003.jpg" width="233" height="228" alt="" border="0"></p>
+
+                        <p>You may remove the bottom of the base, and also the portion of the tread of the wheel that is buried in the base.  I was able to remove two polys here. Here is a view looking upwardly from the base, and you can see the polys mentioned are gone:</p>
+
+                        <p><img src="images/pdv_alpha1_image006.jpg" width="387" height="264" alt="" border="0"></p>
+
+                        <p>You can also see through the inside of the base, as though it were not there, because you are looking at the back side of the polys, which are not textured.</p>
+
+			 </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "link3"</a>
+		</div>
+
+    <!--- end cause --->
+    
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Housekeeping 1</h2>
+			<div class="entry">
+
+                        <p>It is time to do some housekeeping, and make sure you know where your files are so that you can find them again.  I like to place all of my project files in one place, and that includes the TSM dst files, BMP files, TGA files, JPG files of textures from the WWW, and the like.  I create a project folder, and sometimes when it gets crowded, even subfolders.  I put them here: <b>C:\Projects\FixFlats</b>.  Your names may vary.</p>
+
+                        <p>It is also time to think about the ultimate names for the ace files when they are created, as well as the .S and .SD file names.  If the name you remember this project by is FixFlats, then it makes sense to save the TSM dst file as <b>FixFlats.dst</b>.  As you create .BMP files for the textures, it likewise makes sense to call them FixFlats1, 2, and 3.bmp, or something similar.</p>
+
+                        <p>You will need a long and short name for the project, such as FixFlats.  This has the added benefit of helping when TSM creates the .S, .SD, and .ACE files, as they will also begin with FixFlats.  When you need to find the files in the Route Editor, in order to revise, remove, or otherwise, they have a common thread.</p>
+
+			 </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "link4"</a>
+		</div>
+
+    <!--- end cause --->
+    
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">The BMP and Alpha Process</h2>
+			<div class="entry">
+
+                        <p>Make your BMP for the textures.  Here is what mine looks like and you may use it if you so desire.  It is a simple single layer bmp made in the PSP7 program. Click on the image to save a ZIP file containing the BMP: It is a 256 x 256 texture and probably could have been made even smaller.</p>
+
+                        <p><a href="files/FlatFix.zip"><img src="images/pdv_alpha1_image007.jpg" width="256" height="256" alt="" border="2"></a></p>
+
+                        <p>The wheel texture took several hours to make, and there is no particular reason for the colors.  I just continued to hack until I got something that looked reasonable to me.  Learning to make concentric circles was a chore and so was drawing and coloring the spokes.  Save your work.</p>
+
+                        <p>Now we are going to begin the process of making the alpha channel from this bmp. You may think that you can only make an alpha channel from a tga file, but I found that you can work with a bmp file in PSP7, through the point of saving the alpha channel, and then convert the whole thing to a tga file, without difficulty.  The only tool we are going to use is the <b>Selection</b> tool.</p>
+
+                        <p>Lets begin with the <b>Magic Wand</b> tool.  It is located on the tool bar and looks like a magician's baton.  When you click on it, the Tool Options window can be opened to give you some choices for how the Magic Wand will operate.</p>
+
+                        <p><img src="images/pdv_alpha1_image009.jpg" width="526" height="314" alt="" border="0"></p>
+
+                        <p>Since the bmp has a consistent background color of gray between the spokes and these are the areas you wish to become transparent in the Sim, they are the ones to be "alpha"ed out. Choose RGB Value for the Match mode, and the Magic Wand will focus on the first color you select.  Or at least that is what the PSP Help file says.  In fact, I found that it does not seem to matter which Match mode you choose - you get the desired result as long as you click in the proper areas.  Set the Tolerance at 0 so the selection will stick with the exact color, and the Feather to 0 so that the selection sticks close to the line.  These two numbers appear to be critical for our purposes.  Move the cursor to any gray area between two spokes, and left click once.  You will now see the marching ants (selection) about the area in which you clicked.</p>
+
+                        <p><img src="images/pdv_alpha1_image010.jpg" width="124" height="89" alt="" border="0"></p>
+
+                        <p>Then, place the cursor on each of the successive gray areas about the hub, and holding down the SHIFT key, continue to left click until all of the areas between the spokes are selected.  We have just selected all the areas that are to become transparent.</p>
+
+                        <p><img src="images/pdv_alpha1_image012.jpg" width="216" height="199" alt="" border="0"></p>
+
+                        <p>Now, comes the mysterious part.  We must invert the selections.</p>
+
+                        <p>Go to the Menu bar at the top and click <b>Selections | Invert</b>.  This will add a selection or marching ants about the outside of the canvas, and keep what appear to be the same selections about the gray areas.  The selections about the gray areas are now really between the gray areas and the outer canvas selection.  Look for the line of marching ants about the rim of the canvas, as well as the previously selected gray areas, as shown in the next photo.  After you see this, you are ready to make the alpha channel.</p>
+
+                        <p><img src="images/pdv_alpha1_image014.jpg" width="294" height="314" alt="" border="0"></p>
+
+                        <p>Go back to the Menu bar, click <b>Selections | Save to Alpha Channel</B>.  The "Save To Alpha" window opens.  Note it has a preview of the alpha channel you are about to save, and notice that the areas between the spokes are black - which means transparent - and the rest of the channel is white - which means the original colors on the main file will show through, i.e. they are not masked out.</p>
+
+                        <p><img src="images/pdv_alpha1_image016.jpg" width="676" height="357" alt="" border="0"></p>
+
+                        <p>This is just what we wanted.  Click OK, and this will result in a still further window appearing.  It is called  New Channel and it allows you to pick a name for the alpha channel, in case you ever want to use it again, or use it in another project.</p>
+
+                        <p><img src="images/pdv_alpha1_image018.jpg" width="355" height="123" alt="" border="0"></p>
+
+                        <p>You probably won't, so simply click OK, thus choosing the default name, probably Selection #1.</p>
+
+                        <p>After you have Ok'ed your way out of these boxes, you are now back to the scene 2 photos ago, which is where you had inverted the selections.  It is now time to convert and save your texture with the alpha channel, as in the next section.</p>
+
+			 </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "link5"</a>
+		</div>
+
+    <!--- end cause --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Saving the Alpha Channel (and changing to a TGA file)</h2>
+			<div class="entry">
+
+                        <p>Since the BMP format will not save or include an alpha channel, we must save the texture as a TGA file which TSM also recognizes as a proper texture.</p>
+
+                        <p>Go to the Menu bar, and click <b>File | Save As</b>. When the "Save As" box opens in the "Save as type:" go down to and select TGA. Pick a File Name that you like.</p>
+
+                        <p>Do not stop here, click next on the <b>Options</B> button. This opens the "Save Options" window: here make sure to click <b>24 bits</b> and also <b>Uncompressed</b>.</p>
+
+                        <p><img src="images/pdv_alpha1_image019.jpg" width="708" height="372" alt="" border="0"></p>
+
+                        <p>Click "OK", and you are back to the "Save As" window, so click "Save".</p>
+
+                        <p>When you do, the extra windows will close, and you now have your TGA file with an alpha channel.  If you look at the menu bar at what was the BMP texture, you will now see that it is named FlatFix.tga, or something similar.</p>
+
+                        <p><img src="images/pdv_alpha1_image021.jpg" width="317" height="64" alt="" border="0"></p>
+
+                        <p>The marching ants are still there and you need to remove them by holding CONTROL and pushing the D key.  You should now save your work again, by going to <b>File | Save</b>. Do not forget to check the location.  Your TGA file should now be safely in the Folder with the rest of the files pertaining to this project.  You may close out of PSP.  Your texture file with an alpha channel is now complete, and we are going to look at it in TGATool next, just to make sure.</p>
+
+                        </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "link6"</a>
+		</div>
+
+    <!--- end cause --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">TGATool2</h2>
+			<div class="entry">
+
+                        <p>Open TGATool, and then in the menu click <b>File | Load</b>.  Browse to the folder where you placed your new FlatFix.tga file, and see what you have:</p>
+
+                        <p><img src="images/pdv_alpha1_image023.jpg" width="505" height="412" alt="" border="0"></p>
+
+                        <p>This looks good.  We were successful in making an alpha channel with a minimum of work. We have two choices here.  We can get out of TGATool without more, or we can go ahead and make an .ACE file, as a backup, in case something goes wrong.</p>
+
+                        <p>I normally go ahead with making an ace file, and here is why.  Sometimes TSM does not properly convert texture files to ace files that include the alpha channel.  If this happens you can simply substitute the TGATool-made ace for the TSM made ace in the Route.  Click on <b>Export | Ace (Alpha) - not DXT</b>, pick a name for your ace file, perhaps FlatFix.ace, put it in the Folder where you are saving the project files, making sure it is saved as an ACE Texture file.</p>
+
+                        <p>If you were making a window pane instead of a wheel with spokes, you might desire to have the alpha not be fully transparent.  Perhaps translucent.  The way to do that is to send the alpha channel from TGATool to your drawing program, and then change the dead black alpha segments to something much closer to white - say a light gray, but this will have to wait for another lesson.</p>
+
+                        <p>Now, back to TSM to change out from bmp to tga.</p>
+
+                        </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "link7"</a>
+		</div>
+
+    <!--- end cause --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">TSM and converting the Texture from Bmp to TGA</h2>
+			<div class="entry">
+
+                        <p>Assuming you previously textured the TSM object it would have been done using a bmp file. Since BMPs do not support an alpha channel, we must now either retexture the .DST file using the .TGA texture or we must convince TSM to convert over from the .BMP file to the .TGA file.  This is easily done.</p>
+
+                        <p>Make certain that the wheel portion of the project is set as TransNorm in the material box  by pressing F2 and making any necessary correction.  This would also be a good time to go  into <b>File | Project Properties</b>, and click <b>static scenery</b>, and fill in the  blanks for both long and short names, if you had not already done so.</p>
+
+                        <p>On the TSM menu bar, click <b>Edit | Convert Texture Filename</b>. We are going to convert the texture file that this DST project is now using to a different texture file.  This will work if you have not moved any of the portions of the main texture around to a different location: we have not.</p>
+
+                        <p>Up pops this window: Change Texture Filename:</p>
+
+                        <p><img src="images/pdv_alpha1_image025.jpg" width="479" height="231" alt="" border="0"></p>
+
+                        <p>If you know the Current BMP texture Filename put it in the blank, otherwise press the "Browse" button and find and select the BMP file for the wheel.  In the "New Filename" box type in the name of the TGA file that contains the alpha channel you just made, it is similar to FlatFix.tga, and press OK.</p>
+
+                        <p>TSM will convert the .DST file so that it is now looking at the New Filename which is a TGA file with an alpha channel.  This is a DOS process, so you are restricted to a filename having the 8.3 format.  Notice that the process does not place the newly Filenamed file in the Textures Folder of the Route, but we haven't placed anything in the Route yet anyway, so we need not worry about this.  If you had, however, you would need to make sure that the newly Filenamed file is located in the proper place in the Route.  This is a very handy method to not only change texture file types, but also to change the name of a texture file to one that more closely relates to the long and short names of the project, without having to manually retexture the project, or attempt to change all the references in <b>Part | Textures</b> (F4).</p>
+
+                        <p>The only thing left to do in TSM is to go to <b>File | Create TS Object File</b> and fill in the blanks.  This would be a good object for the Clutter class.  After the Conversion Report is generated, click <b>File | Save</b>, and close out of TSM.</p>
+
+                        </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "link8"</a>
+		</div>
+
+
+    <!--- end cause --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Housekeeping 2</h2>
+			<div class="entry">
+
+                        <p>Now all that is left is to make a copy of the Conversion Report for your documentation, and then go to Route Editor and place and admire your new object with its see-through wheel.</p>
+
+                        </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "conclusion"</a>
+		</div>
+
+    <!--- end cause --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Conclusion</h2>
+			<div class="entry">
+
+                        <p>You have now learned how to make an alpha file, so that you can have a transparent area.  And this was done without fiddling around with the Masks section of PSP, and being thoroughly confused with the terminology and red colored masks.</p>
+
+                        <h3>Credits and Thanks to:</h3>
+
+                        <p>Tim Muir, Ted Ahner, Ed Hawkins.</p>
+
+                        <h3>Links</h3>
+
+                        <p><a href="files/FlatFix.zip">I have attached the BMP</a> file I used, in case you wish to use it.  The font used in the lettering of the base was Comic Sans MS.  The dst file is so simple, you should have no trouble making your own.</p>
+
+                        </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+
+		</div>
+
+    <!--- end cause --->
+
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#link1">The Project</a>
+                 <br><a href="#link2">Construction Begins</a>
+                 <br><a href="#link3">Housekeeping 1</a>
+                 <br><a href="#link4">The BMP and Alpha Process</a>
+                 <br><a href="#link5">Saving the Alpha Channel (and changing to a TGA file)</a>
+                 <br><a href="#link6">TGATools</a>
+                 <br><a href="#link7">TSM and converting the Texture from Bmp to TGA</a>
+                 <br><a href="#link8">Housekeeping 2</a>
+                 <br><a href="#conclusion">Conclusion</a>
+               </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 1 November 2004, 28 April 2010</center></p>
+</div>
+</body>
+</html>
+

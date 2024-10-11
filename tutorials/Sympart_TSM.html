@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>How to Make a Symmetrical Part in TSM - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li ><a href="../vans/index.html">Vans</a></li>		
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png"  height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png"  height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+                        <h2><font color="#3333FF">How to Make a Symmetrical Part in TSM</font>
+                        <br>by Paul DeVerter</h2>
+                        <h3>A Port City Car Co. Project Copyright &copy; 2004</h3
+
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                             <p>This is a short, mostly pictorial, tutorial on how to use a largely undocumented feature of Train Simulator Modeler to make symmetrical parts:  that is, you make one part, such as the right front fender of a Model A Ford; you need an identical left front fender, except it is the reverse, and on the other side of the centerline.</p>
+
+                             <p>I tried copying the right fender, and then pasting it, and moving it over out of the way, which is easy enough.    But I could not figure out how to rotate it so that the outer right edge became the outer left edge on the other side of the centerline.  </p>
+                             
+                             <p>Well, I finally got it, and here is how.</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "link1"</a>
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Make the First Part</h2>
+			<div class="entry">
+
+                        <p>Using TSM with a basic Box tool shape, and an assortment of sections, manipulate the various points into the shape you want.  Here we have a right front fender of a Model A Ford, c 1930.  It has been textured so it is easier to see.    Also we have the top view, and you can see the left hand portion fairing that will be next to the motor.</p>
+
+                        <p><img src="images/PdV_Sympart_01.jpg" width="166" height="116" alt="" border="0">
+                           <img src="images/PdV_Sympart_02.jpg" width="123" height="172" alt="" border="0"></p>
+
+                        <p>To make the symmetrical part for the left fender, you could start over with a new Box and sections and try to duplicate the opposite fender.  Or you can copy and transform the existing fender – which is a whole lot easier and quicker.</p>
+
+                        <p>Copy the right fender, and then Paste it.    It will cover the right fender, so use the Move tool and move it in the X-axis to the left, over the centerline.    That gets it out of the way.</p>
+
+                        <p><img src="images/PdV_Sympart_03.jpg" width="286" height="100" alt="" border="0">
+                           <img src="images/PdV_Sympart_04.jpg" width="217" height="175" alt="" border="0"></p>
+
+                        <p>Now we have two identical fenders, and we need to make the left one the symmetrical equivalent. I tried all sorts of rotations, and got nowhere.</p>  
+
+                        <p>Finally, I fiddled with the <b>Transform | Flip</b> options.</p>
+
+                        <p>Logically, it seemed to me that the left fender needed to be flipped about the Z-axis, and I tried that, as well as the Y-axis.    Finally, I tried the X-axis, and that was the answer I was looking for.  I can not figure out how to predict about which axis you should flip the part.    Just try them all till you get the desired result.</p>
+
+			 </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "link2"</a>
+		</div>
+
+    <!--- end cause --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Transform the Copy</h2>
+			<div class="entry">
+
+                        <p>Go to the Menu Bar and click <b>Transform | Flip | Flip X</b></p>
+
+                        <p><img src="images/PdV_Sympart_05.jpg" width="195" height="226" alt="" border="0">
+                           <img src="images/PdV_Sympart_06.jpg" width="275" height="128" alt="" border="0">
+                           <img src="images/PdV_Sympart_07.jpg" width="208" height="180" alt="" border="0"></p>
+
+                        <p>The only problem is that they are not equidistant from the centerline.    But this is easy to fix too.</p>
+
+			 </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "conclusion"</a>
+		</div>
+
+    <!--- end cause --->
+    
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Setting the Exact Distance from the Centerline</h2>
+			<div class="entry">
+
+                        <p><p>This is a trick Tim Muir taught me. Select the right fender and then press F2. You are now in the Part Properties window.  Notice the three numbers which give the position of the original right fender from the origin.   These are in the box called Axis Location.    Now go to the Part Properties window for the left fender, and note the difference.  I have not changed the PartName for the right fender yet, so in typical TSM fashion, it is named Fender, Front, Right.1, instead of left.    You can fix that later. </p>
+
+                        <p><img src="images/PdV_Sympart_08.jpg" width="472" height="370" alt="" border="0">
+                        <br><img src="images/PdV_Sympart_09.jpg" width="253" height="246" alt="" border="0">
+                        <img src="images/PdV_Sympart_10.jpg" width="236" height="235" alt="" border="0"></p>
+
+                        <p>The important thing here is that we moved the copied part over to the left in the X-axis. So, the Y and Z Axis Location numbers are the same.  We need to adjust the X Axis Location number of the left fender so that it is identical to, but the opposite sign of, the right fender.  Change the –1.502 to –1.992, Click OK, and now we are done, except for housekeeping. </p>
+
+                        <p>After you look at this for a while and think about it, it will dawn on you that you did not need to move the left fender over in the first place, as shown in the second set of photographs.    Instead, you could simply <b>Copy</b> the right fender, <b>Paste</b>, and then go to the Part Properties window and set the X Axis Location number to a negative number.   This will automatically set your left fender over to the proper location.  This tip courtesy of Ted Ahner.</p>
+
+                        <p><img src="images/PdV_Sympart_11.jpg" width="229" height="202" alt="" border="0"></p>
+
+
+			 </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "conclusion"</a>
+		</div>
+
+    <!--- end cause --->
+    
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Conclusion</h2>
+			<div class="entry">
+
+                        <p>The left fender is a symmetrical rendition of the right fender, and is properly located from the vertical and horizontal centerlines, and we did not have to reconstruct the left fender by moving a bunch of pesky points around.</p>
+
+                        </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+
+		</div>
+
+    <!--- end cause --->
+
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#link1">Animate The Gear</a>
+                 <br><a href="#conclusion">Conclusion</a>
+               </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 9 September 2004, 28 April 2010</center></p>
+</div>
+</body>
+</html>

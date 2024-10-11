@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+    <title>Placing a Zero Degree Switch with Xtracks to Overcome the Node Problem - at The Steam4me Site</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Xtracks - Placing a Zero Degree Switch to Overcome the Node Problem</font>
+                        <br>by Yuri Sos</h2>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                             <p><a href="../routes/xtracks.html">Xtracks</a> is an expanded range of straight, curved, trolley, bridge, tunnel track pieces, as well as switches (turnouts), crossovers and a turntable. Xtracks also includes corrected track shapes and other files that were omitted from Microsoft's original MSTS release..</p>
+
+                             <p>In an effort to get around an MSTS bug where a great distance between points (switches for US readers) caused erratic train handling and coupler breakage, zero degree nodes were developed.</p>
+
+                             <p>These are 1m "invisible" points/switches, a pair of which should be placed every 5-6km between nodes. Placement is simple but not intuitive.</p>
+
+                             <p>You will require three track pieces:  <b>A1tPnt1mStrt.s, A1t3mStrt.s</b> and <b>A1t1mStrt.s</B>.</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "install">
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Installation</h2>
+			<div class="entry">
+
+                        <p>Let's start:  the steps are explained in the following images:</p>
+
+                        <ol>
+                            <li>First you need to decide where the node is going to go (approx 5-6 km from the next node or set of points/switches); you will need to have a 5m space:
+                                <p><img src="images/xtrks_node_01.jpg" alt="xtrks_node_01.jpg" border="0"></p>
+                                </li>
+
+                            <li>Here we've highlighted and will delete a 25m straight track:
+                                <p><img src="images/xtrks_node_02.jpg" alt="xtrks_node_02.jpg" border="0"></p>
+                            </li>
+
+                            <li>Next place a track piece 5m less in length than the piece you've just deleted; in this case we've placed a 20m straight, leaving a 5m space:
+                                <p><img src="images/xtrks_node_03.jpg" alt="xtrks_node_03.jpg" border="0"></p>
+
+                            </li>
+                            <li>From the Object Selection Menu, select a "<b>A1tPnt1mStrt.s</b>" track piece and place it: here it's just been placed on the right side of the gap:
+                                <p><img src="images/xtrks_node_04.jpg" alt="xtrks_node_04.jpg" border="0"></p>
+                            </li>
+                            <li>Now place another "<b>A1tPnt1mStrt.s</b>" track piece next to it, like so:
+                                <p><img src="images/xtrks_node_06.jpg" alt="xtrks_node_06.jpg" border="0"></p>
+                            </li>
+                            <li>Press Ctrl-T <b>ONCE</b> and once only.  
+                                <p>From the Object Selection menu, select and place an <b>A1t3mStrt.s</b> in the gap to the left of the switches; as you place it, you should see two red poles and two blue poles where your two A1tPnt1mStrt.s pieces have been placed:
+                                <p><img src="images/xtrks_node_07.jpg" alt="xtrks_node_07.jpg" border="0"></p>
+                            </li>
+                            <li>From the Object Selection menu, select an <b>A1t1mStrt.s</b> track piece: place your cursor between the two blue poles and click to insert the 1m piece:
+                                <p><img src="images/xtrks_node_08.jpg" alt="xtrks_node_08.jpg" border="0"></p>
+                            </li>
+                            <li>If you've done this successfully, the blue poles will diasppear and you are left with two red poles indicating the presence of the zero node:
+                                <p><img src="images/xtrks_node_09.jpg" alt="xtrks_node_09.jpg" border="0"></p>
+                            </li>
+                        </ol>
+
+                        <p>Now that was simple, wasn't it?</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="modify">
+		</div>
+
+    <!--- end cause --->
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#install">Installation</a>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 31 March 2011, 1 July 2015</center></p>
+</div>
+</body>
+</html>

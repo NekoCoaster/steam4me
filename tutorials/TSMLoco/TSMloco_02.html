@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <title>Constructing A Steam Loco Using Train Sim Modeler - Part 2 - at The Steam4me Site</title>
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../../index.html">Home</a></li>
+		<li class="current_page_item"><a href="../index.html">Tutorials</a></li>
+		<li><a href="../../msts_errors.html">Error Messages</a></li>
+		<li><a href="../../steam/index.html">Steam</a></li>
+		<li><a href="../../electric/index.html">Electric</a></li>
+		<li><a href="../../passenger/index.html">Passenger</a></li>
+		<li><a href="../../diesel/index.html">Diesel</a></li>
+		<li><a href="../../freight/index.html">Freight</a></li>
+		<li ><a href="../../vans/index.html">Vans</a></li>
+		<li ><a href="../../routes/index.html">Routes</a></li>
+		<li><a href="../../utilities/index.html">Utilities</a></li>
+		<li><a href="../../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Constructing A Steam Loco Using Train Sim Modeler<br>Part 2</font>
+                        <br>by <a href="mailto: ROsbo77@aol.com">Richard Osborne</a></h2>
+                        <p></p>
+			<h2 class="title">Adding "Big" Lumps</h2>
+ 			   <div class="entry">
+
+                   <p>Let's establish the total length by adding buffers. These will be tubes squeezed, pulled &amp; pushed into shape. In TSM 95% of your parts will start as primitives.</p>
+
+                   <p>TSM has provision for templates, structures &amp; all manner of twiddley bits - I don't even use them, they're more useful for architectural models.</p>
+
+                   <p>A sketchpad is a good idea, a few doodles to give an idea of the part. Make a bufferbeam from a box, scale &amp; move it to fit. Copy &amp; paste, move to the other end. For the buffers I'll have a tube of 12 points &amp; 5 sections, with the left face ticked. We already have a value for the 'x' axis.</p>
+
+                   <p><img SRC="images/bufferp1.jpg" NOSAVE height=400 width=550></p>
+
+                   <p>Go into 'polygon' mode, cycle through, select the end polygon &amp; 'Subdivide'. You'll see that the 12 sided polygon has become 12 triangles. It's important to realize that MSTS does this anyway -you're not adding to the polygon count. MSTS sees every part as a collection of triangles - a rectangle is seen as 2 triangles. This explains the 'After Conversion' figure in the 'Project Statistics' screen. <p>We want to find the centre point of those polygons &amp; move it out slightly. Pull, push &amp; squeeze until you get a decent buffer shape.</p>
+
+                   <p><img SRC="images/bufferp2.jpg" NOSAVE height=400 width=550></p>
+                   <p><img SRC="images/bufferp3.jpg" NOSAVE height=400 width=550></p>
+
+                   <p>We need to separate the buffer head from the stock. Name your part 'buffer_1', 'smooth, parent 'main', change colour. Go into 'polygon' mode, lasso the head &amp; 'split part'. The last part will be current. Into 'point' mode &amp;, as a precaution, move   the shank slightly into the stock. F2, change the name to 'buffhed1' &amp;  save. Notice the parent part is already there. 'P' goes back to the buffer stock, save it as 'buffer1'</p>
+
+                   <p><img SRC="images/bufferp4.jpg" NOSAVE height=400 width=550></p>
+                   <p><img SRC="images/buffer1.jpg" NOSAVE height=400 width=550></p>
+
+                   <p>Load 'buffer1' - it'll be superimposed. F2, change the 'x' value negative, change the name to 'buffer2'. load &amp; change 'buffhed1'. You now have a pair of identical buffers.</p>
+
+                   <p><img SRC="images/buffer2.jpg" NOSAVE height=400 width=550></p>
+
+                   <p>Load twice more, for the 3rd buffer change the 'z' axis negative; for the 4th change the 'z' &amp; 'x' axes. You now have 4 sets of buffers. We're not quite finished.</p>
+
+                   <p><img SRC="images/buffer3.jpg" NOSAVE height=400 width=550></p>
+
+                   <p>We have a pair of buffers facing inwards. Cycle through the last 4 parts individually &amp; flip them in 'z' axis.</p>
+
+                   <p><img SRC="images/buffer4.jpg" NOSAVE height=400 width=550></p>
+
+                   <p>Now we have the loco to its full length. Save the project, recreate it &amp; export it to MSTS. This time we only need to 'Convert to Binary' 'Replace existing Files'. We can either make a new .eng file at this stage or amend the existing file in "Wordpad". We need to alter the length to agree with the .sd file - 7.738m.</p>
+
+                   <p><img SRC="images/create3.jpg" NOSAVE height=433 width=404></p>
+                   <p><img SRC="images/ontrack3.jpg" NOSAVE height=341 width=549></p>
+
+                   <p>Believe it or not we've covered about 85% of construction in TSM! <p>Let's add some other big lumps. The tank is just a box; this one's mostly for show, we'll be left with top &amp; front - the rest will be split off &amp; joined to the cab.</p>
+
+                   <p><img SRC="images/tank2.jpg" NOSAVE height=400 width=550></p>
+
+                   <p>It'll be no surprise that the boiler is a tube, 3 sections to include the smokebox. Place the axis of the boiler to the right height, in this case the clack valve is at centre height. As for the buffers, move &amp; scale until we have a smokebox, slightly larger diameter.</p>
+
+                   <p><img SRC="images/boiler4.jpg" NOSAVE height=400 width=550>
+
+                   <p>Split off the smokebox &amp; smokebox ring. With the part smoothed look at the front end. We need to split the smokbox front in order to keep the shape. Smoothing works by averaging adjacent polygons - we're over-reaching!</p>
+
+                   <p><img SRC="images/smokbox1.jpg" NOSAVE height=400 width=550></p>
+
+                   <p>Much better!</p>
+
+                   <p><img SRC="images/smokbox2.jpg" NOSAVE height=400 width=550>
+
+                   <p>Take another look at it on the track.</p>
+
+                   <p><img SRC="images/ontrack4.jpg" NOSAVE height=331 width=401></p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end end overview --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Copyright Notice</h2>
+			<div class="entry">
+
+                 <p><a href="copyright.html">Please read my copyright notice (click here)</a></p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end end overview --->
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p><a href="index.html">Part 1</a>
+                 <br><a href="#">Part 2</a>
+                 <br><a href="TSMloco_03.html">Part 3</a>
+                 <br><a href="TSMloco_04.html">Part 4</a>
+                 <br><a href="TSMloco_05.html">Part 5</a>
+                 <br><a href="TSMloco_06.html">Part 6</a>
+                 <p><a href="copyright.html">Copyright, T&C</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 2002, 02 April 2010</center></p>
+</div>
+</body>
+</html>
+

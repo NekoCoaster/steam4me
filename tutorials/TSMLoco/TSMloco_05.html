@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <title>Constructing A Steam Loco Using Train Sim Modeler - Part 5 - at The Steam4me Site</title>
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../../index.html">Home</a></li>
+		<li class="current_page_item"><a href="../index.html">Tutorials</a></li>
+		<li><a href="../../msts_errors.html">Error Messages</a></li>
+		<li><a href="../../steam/index.html">Steam</a></li>
+		<li><a href="../../electric/index.html">Electric</a></li>
+		<li><a href="../../passenger/index.html">Passenger</a></li>
+		<li><a href="../../diesel/index.html">Diesel</a></li>
+		<li><a href="../../freight/index.html">Freight</a></li>
+		<li ><a href="../../vans/index.html">Vans</a></li>
+		<li ><a href="../../routes/index.html">Routes</a></li>
+		<li><a href="../../utilities/index.html">Utilities</a></li>
+		<li><a href="../../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Constructing A Steam Loco Using Train Sim Modeler<br>Part 5</font>
+                        <br>by <a href="mailto: ROsbo77@aol.com">Richard Osborne</a></h2>
+                        <p></p>
+			<h2 class="title">Spoked Wheels</h2>
+ 			   <div class="entry">
+
+                   <p>Knees trembling? No need, spoked wheels are very simple to make in TSM. For an express train rushing past I don't suppose they're necessary, you need impressions of speeding trains. For a small, shunting engine which will be viewed closely &amp; often; detail &amp; impressions are necessary.</p>
+
+                   <p>Again it's a sequence - stick to it. Making these spoked wheels will be simpler than working out how to texture quartered disc wheels. You should have got to grips with the program so I won't spend too long on the proceedure.</p>
+
+                   <p>I've loaded the wheels we've already built - that way the diameter must be right! Strip off the flat faces leaving only the rim. Although not strictly necessary it'll make life easier to move 'y' &amp; 'z' axes to 0. Copy, paste &amp; scale in 'y' &amp; 'z' to make the inner rim.</p>
+
+                   <p><img SRC="images/solid_1.jpg"  height=299 width=513></p>
+
+                   <p>We have to duplicate the draft angle of the wheel, on the prototype it's there for the casting process. It's a gift for us as we can texture the wheel faces from the side only. We'll use front/rear texture for the rims. Select the outside points of the inner rim &amp; scale them. You'll need to keep all the draft angles in the same direction - just think of making sand castles.</p>
+
+                   <p><img SRC="images/solid_2.jpg"  height=161 width=550></p>
+
+                   <p>This will be facing outwards so - 'polygon' mode, 'flip all'.</p>
+
+                   <p><img SRC="images/solid_3.jpg"  height=299 width=514></p>
+
+                   <p>We'll have to build up the rim faces. Load a 4 sided polygon &amp; position it on one segment of the rim. We don't have to do this 32 times!</p>
+
+                   <p>Copy the polygon &amp; paste it; go into 'transform' &amp; rotate it. A little maths tells me we need to rotate it 22.5 degrees. Repeat until 1/2 the rim is completed. Try not to duplicate any of the segments. When 1/2 the rim is complete, ( could be 1/4 but it's harder to explain ), select all the segments &amp; 'Join Selected'. Copy, paste &amp; flip. You now have all the segments in place. Join those 2 parts to make a complete face. For the other face - copy, paste flip in 'x' ( to turn the polygons ), move to the other face &amp; in 'point' mode tidy up with 'v'. Both faces will now be complete. Join the rims &amp; the faces - 'Snap to Grid' &amp; lose another shed full of points.</p>
+
+                   <p><img SRC="images/solid_4.jpg"  height=299 width=513></p>
+                   <p><img SRC="images/solid_5.jpg"  height=299 width=513></p>
+
+                   <p>Import a tube, closed on the outside, which will probably have fewer faces than the rim. This hub has 12 points. As with the rim make it tapered to emulate the draft angle. Don't overdo it although if you look at a photo of a prototype wheel you'll see it's quite an angle - probably 5 degrees! Take the bottom 3 points &amp; move them down &amp; in for the throw - the part where the crankpin fits.</p>
+
+                   <p><img SRC="images/solid_6.jpg"  height=161 width=550></p>
+                   <p><img SRC="images/solid_7.jpg"  height=162 width=549></p>
+
+                   <p>Now for the spokes - you're not going to believe how easy this is!</p>
+
+                   <p>We've already used the proceedures needed. I can teach you everything but concentration.</p>
+
+                   <p>Start with a box - AXIS AT BOTTOM. In 'point' mode - so that the axis is undisturbed - nurdle the box until you get a spoke shape. Again this must have a draft angle. Remove the top &amp; bottom faces of the box which will be buried in the rim or hub. This will save 160 polygons. Copy the spoke.</p>
+
+                   <p>The B4 has a 10 spoke wheel with very prominent balance weights which we'll ignore for now. When you've made the wheels it'll be easy to alter the spokes into weights.</p>
+
+                   <p><img SRC="images/solid_8.jpg"  height=386 width=550></p>
+
+                   <p>Paste your spoke - it'll be superimposed. A little more maths tells me that it needs to be rotated 36 degrees. 'Transform' &amp; 'Rotate' 36 degrees in 'x'. Your second spoke is in place.</p>
+
+                   <p>For the third 'paste'; 'Rotate' 36 will still be showing in the window. Just make it negative - the spoke will be to the left of centre. The next pair will be at +/- 72 degrees. Repeat until all of the spokes are in place - the last will be at 180 degrees. Notice that TSM will call these parts "spoke", "spoke.1", "spoke.2" etc. The last should be "spoke.9" - very helpful. You could, of course, just rotate by eye - there's no point in being inaccurate though.</p>
+
+                   <p><img SRC="images/solid_9.jpg" HSPACE=5  height=144 width=250><img SRC="images/solid10.jpg" HSPACE=9  height=179 width=237></p>
+                   <p><img SRC="images/solid11.jpg" HSPACE=5  height=146 width=250><img SRC="images/solid12.jpg" HSPACE=5  height=145 width=250></p>
+
+                   <p>We have a wheel on the centreline. To move it the easiest way is to load our disc wheelset &amp; move our new wheel on the 'x' axis so that it aligns.</p>
+
+                   <p><img SRC="images/solid14.jpg"  height=160 width=550></p>
+
+                   <p>F2, find the 'x' value. 'Transform' - move the axis to 0. Move the wheel to the same position as "Wheels2".</p>
+
+                   <p>To check that the throw fits our rod load "rod01". If we need to make our throw bigger select the bottom 3 points &amp; move them, either by eye or with 'Transform'.</p>
+
+                   <p><img SRC="images/solid20.jpg"  height=160 width=549></p>
+
+                   <p>Copy the wheel, paste &amp; flip in 'x'.</p>
+
+                   <p><img SRC="images/solid22.jpg"  height=160 width=549></p>
+
+                   <p>Obviously these wheels arre mirror images. We need to quarter the second wheel. Load "rod02", in 'point' mode lasso the second wheel. 'Transform' 'Rotate' either 90degrees or -90 degreesso that the throw &amp; the rod align.</p>
+
+                   <p><img SRC="images/solid23.jpg"  height=386 width=550></p>
+                   <p><img SRC="images/solid25.jpg"  height=386 width=550></p>
+
+                   <p>You could now alter the wheels so that the spokes become weights - it's a prominent feature of the B4. Look at the composite shot below. I've saved 20 polygons per wheelset doing this - that's 80 in MSTS. I might even add flanges to the wheels!</p>
+
+                   <p><img SRC="images/solid26.jpg"  height=162 width=550></p>
+                   <p><img SRC="images/ontrak13.jpg"  height=369 width=550></p>
+
+                   <p>Isn't that worth the extra effort; the visual effect of the weights is much more pronounced when the loco's in motion. </p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end end overview --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Copyright Notice</h2>
+			<div class="entry">
+
+                 <p><a href="copyright.html">Please read my copyright notice (click here)</a></p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end end overview --->
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p><a href="index.html">Part 1</a>
+                 <br><a href="TSMloco_02.html">Part 2</a>
+                 <br><a href="TSMloco_03.html">Part 3</a>
+                 <br><a href="TSMloco_04.html">Part 4</a>
+                 <br><a href="#">Part 5</a>
+                 <br><a href="TSMloco_06.html">Part 6</a>
+                 <p><a href="copyright.html">Copyright, T&C</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 2002, 08 May 2010</center></p>
+</div>
+</body>
+</html>

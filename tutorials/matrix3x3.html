@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>Correcting the Orphan Blue Pole / Matrix3x3 Errors - at The Steam4me Site</title>
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<a href="index.html">Tutorials</a></li>
+		<li class="current_page_item"><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>		
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Correcting the Orphan Blue Pole / Matrix3x3 Errors</font>
+                        <br><br>compiled by Yuri Sos and Allan Lownsborough
+                        <br>with valuable contributions by Charlie Leveritt</h2>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+                        <h3>Blue Poles</h3>
+
+                        <p>You see them in Route Editor - these pesky "blue poles" that seem to be out in the landscape on their own.  You can't select them, you can't delete them - these are the so-called "orphan blue poles".  The cause is unknown as they appear randomly even when carefully saving practices are employed in Route Editor.</p>
+
+                        <p>You may not even see the "blue poles", but have arrived at this tutorial after finding lots of <b>"matrix3x3"</b> errors in your <a href=ts_utils_ichk.html>Ts_Utils Integrity Check Report</a>.  No matter, the repair principles are similar.</p>
+
+                        <p>The easiest way to get rid of these is to revert to an earlier backup, but so often these blue poles have gone un-noticed through many back-ups and changes.</p>
+
+                        <p>Nevertheless, if you aren't backing up your route on a regular basis, here's the link to the Route_Riter tutorial on back-ups: <a href="../Route_Riter/route_backup.html">click here for a tutorial on using Route_Riter to back up your files</a>.</p>
+
+                        <p><img src="images/matrix3x3_00.jpg" width="646" height="512" alt="" ></p>
+
+                        <h3>Matrix3x3 errors (?) - are these really errors?</h3>
+
+                        <p>Carl-Heinz Rive, author of TsUtils says <i>"I don't know for sure if 'matrix3x3' is really an error. Therefore this message (reporting the presence of a matrix3x3 parameter in TsUtils ichk report) is marked with a 'question mark'.</p>
+
+                        <p>Normally, 'matrix3x3' should be NO error, but forum-discussion shows that there may be various problems if 'matrix3x3' is used within a world-object-definition instead of 'qdirection' . Therefore this message is logged.</p>
+
+                        <p>'matrix3x3' and 'qdirection' (which must be used 'either..or')  define the position of an object within space relative to north heading.</p>
+
+                        <p>'qdirection' is (mathematically) a 'quaternion' which defines a rotation from a default heading to the current heading of the object (but also 'bank' and 'slope': 3 dimensions).  More information about this can be read in the documentation that accompanies Michael Vone's 'Object-Rotator'.</p>
+
+                        <p>'matrix3x3' is another way to define the position of an object within space. The exact meaning of the values within the definition is not known to me. However, as far as I know you can define an object unambigous within space using 3 coordinates (each 3 dimensions) and together with the 'position'-value of an object-definition, there are 4 coordinates available."</i></p>
+
+                        <p><img src="images/tsutils_ichk_matrix_01.jpg" width="673" height="449" alt=""></p>
+
+                        <p>As Carl-Heinz says, there's some debate as to whether these matrix3x3 parameters are even errors as they appear in the .W files in both <b>Static</b> objects as well as <b>TrackObj</b> (both road and rail) statements within .W files (see a snippet of ichk report above).</p>
+
+                        <p><b>Tutorial Authors' opinion:</b> The presence of the orphan blue pole indicates that it is part of the track database: the track piece that's specified within the TrackObj that contains a matrix3x3 parameter is never visible, nor is it even on the normal track alignment.  Thus we believe they should be corrected or deleted as soon as they are found.</p>
+
+                        <p>However, Matrix3x3 statements that ARE NOT part of a TrackObj representing an orphan blue pole (ie the road or track piece appears to be placed correctly) should be left alone (an example of this follows shortly).</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "repair">
+		</div>
+
+    <!--- end end overview --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Repair Technique</h2>
+			<div class="entry">
+
+                        <p>You generally see these blue poles in the Route Editor (example as in top image), but sometimes, the only time you see them is when you are in the Activity Editor and there is a track node way off the normal tracks: see below.  Note that if you highlight the node (arrow #1), you can record the latitude and longitude (arrow #2).</p>
+
+                        <p><img src="images/matrix3x3_01.jpg" width="651" height="535" alt=""></p>
+
+                        <p>Now open the Route Editor, enter the Latitude and Longitude  into the "Camera" window (arrow #1 below) and press "Jump".  You will arrive at the blue pole. (arrow #2 below).  If you can't see it, check that you are at the correct Lat/Long - sometimes the "Jump" goes astray; move the camera around; you may need to press "W" to go into Wireframe mode as the blue pole may be underground.</p>
+
+                        <p><img src="images/matrix3x3_02.jpg" width="820" height="512" alt=""></p>
+
+                        <p>The purpose of finding the pole is so that you can establish in which .W file the error is located.   The "w" filename is made up of <b>tile X</b> + <b>tile Z</b> so in the example above. you would look for "w+000864+010356.w".</p>
+                        
+                        <p>Open the appropriate <b>w+000864+010356.w</b> file (arrow #1 below) in ConTEXT or your favourite Unicode-aware Text Editor and search for "Matrix" (arrow #2 below):</p>
+
+                        <p><img src="images/matrix3x3_03.jpg" width="815" height="603" alt=""></p>
+
+                        <p>Let's look at what we've found:  the blue pole IS a track piece (in this case, a zero degree point/switch found in Xtracks);  the Position and Matrix3x3 parameters contain odd numbering conventions (using e-nnn).  This is the result when a number larger that the space allocated for it is displayed.</p>
+
+                        <p>What we're going to do now is turn this into "proper" track section.  You'll notice that the TrackObj immediately below the one containing the Matrix parameter has a normal looking Position and QDirection:  we're going to copy the Position and QDirection line from this TrackObj and paste them into the faulty one above, overwriting the faulty Position and Matrix3x3 lines:</p>
+
+                        <p><img src="images/matrix3x3_04.jpg" width="815" height="603" alt=""></p>
+
+                        <p>Then change the elevation parameter in the Position line and increment it by a few metres (the elevation or "y" co-ordinate is the second number in the Position line) so that the line looks like this:</p>
+
+                        <p><img src="images/matrix3x3_05.jpg" width="815" height="603" alt=""></p>
+
+                        <p>Record Tile x/Tile y/ x-coordinate (-591) y-coordinate (-590). Save the .w file.</p>
+
+                        <p>Open Route Editor.</p>
+
+                        <p>In the Camera Window, enter the x-coordinate, y-coordinate, tile-x and Tile-y parameters and press "Jump".</p>
+
+                        <p>Here we are:  the errant track piece is now suspended 4 metres above the rest of the track.</p>
+
+                        <p><img src="images/matrix3x3_06.jpg" width="646" height="532" alt=""></p>
+
+                        <p>You can highlight the track piece......</p>
+
+                        <p><img src="images/matrix3x3_07.jpg" width="646" height="532" alt=""></p>
+
+                        <p>....select it and delete it.</p>
+
+                        <p><img src="images/matrix3x3_08.jpg" width="646" height="532" alt=""></p>
+
+                        <p>Now point your camera at the sky and click to make sure you're not selecting anything and Save the Route changes.  In this way, the track database will be updated without the need for a track database rebuild (which is usually undesirable once the route has interactives such as signals installed).</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="leave">
+		</div>
+
+    <!--- end cause --->
+
+    <!--- sol hard --->
+
+		<div class="post">
+			<h2 class="title">Leaving Well Enough Alone</h2>
+			<div class="entry">
+
+                        <p>As we said in the introduction, you shouldn't assume that all matrix3x3 statements are errors.</p>
+
+                        <p>Here's an example of a matrix3x3 statement in a TrackObj that is perfectly placed and the road database is perfectly functional.</p>
+
+                        <p><img src="images/matrix3x3_ok_01.jpg" width="651" height="722" alt=""></p>
+
+                        <p>The road piece in question is a 50m 2-lane road placed across the bridge in the centre of this screenshot.  The RDB lines above the road are in perfect position and the absence of extra/orphan blue poles should alert you that there is no problem here.The .W file shows that the TrackObj specification contains a matrix3x3 statement.</p>
+
+                        <p>You can select and even delete this piece of road (see below):</p>
+
+                        <p><img src="images/matrix3x3_ok_02.jpg" width="646" height="532" alt=""></p>
+
+                        <p>Now let's change the matrix3x3 statement to a Qdirection statement.  Apart from the incorrect position (which has never been a problem before as demonstrated above), you cannot select nor delete this piece.........</p>
+
+                        <p><img src="images/matrix3x3_ok_03.jpg" width="651" height="722" alt=""></p>
+
+                        <p>....... nor the pieces on either side of where this road piece was originally located (even though those adjacent pieces have QDirection statements, not Matrix3x3 statements.</p>
+
+                        <p><img src="images/matrix3x3_ok_04.jpg" width="646" height="532" alt=""></p>
+
+                        <p>In other words the matrix3x3 statement seems to have some other link to the item in the RDB.</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end sol hard --->
+
+    <!--- sol easy --->
+
+		<div class="post">
+			<h2 class="title">End-End-Vector Errors</h2>
+			<div class="entry">
+
+                        <p>Another error you're likely to run into is the "end-end vector" error, <b><a href="end_end_vector.html"> click here</a></b> for information on solving this problem.</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="#">
+		</div>
+
+    <!--- end sol easy --->
+    
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#repair">Repair Technique</a>
+                 <br><a href="#leave">Leave It Alone</a>
+                 <br><a href="end_end_vector.html">End End Vector Errors</a>
+
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 5 January 2007, 12 August 2007, 22 March 2010</center></p>
+</div>
+</body>
+</html>

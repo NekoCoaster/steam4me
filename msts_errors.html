@@ -1,0 +1,585 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+
+    <title>Error Messages Encountered When Using MSTS - at the steam4me Site</title>
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+   <link href="style.css" rel="stylesheet" type="text/css" media="screen">
+   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="tutorials/index.html">Tutorials</a></li>
+		<li class="current_page_item"><a href="msts_errors.html">Error Messages</a></li>
+		<li><a href="steam/index.html">Steam</a></li>
+		<li><a href="electric/index.html">Electric</a></li>
+		<li><a href="passenger/index.html">Passenger</a></li>
+		<li><a href="diesel/index.html">Diesel</a></li>
+		<li><a href="freight/index.html">Freight</a></li>
+		<li><a href="vans/index.html">Vans</a></li>
+		<li><a href="routes/index.html">Routes</a></li>
+		<li><a href="utilities/index.html">Utilities</a></li>
+		<li><a href="Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+	</font>
+</div>
+<div id="splash">
+<table width="100%" bgcolor="#333957">
+<tr>
+    <td align="left"><a href="http://steam4me.net"><img src="images/S4M_Banner_left.png" height="60" border="0"></a>
+    </td>
+    <td align="right"><img src="images/S4M_Banner_Error.png" height="60">
+    </td>
+</tr>
+</table>
+</div>
+<hr>
+<div id="page">
+	<div id="content">
+
+    <!--- keyboard1 --->
+
+		<div class="post">
+			<font color="blue"><h2 class="title">Errors and Error Messages</h2></font>
+                        <p></p>
+			<h2 class="title">MSTS Fails to Respond To ANY Keyboard Commands</h2>
+			<div class="entry">
+				<p>One of the "original" errors/problems encountered when using MSTS.</p>
+
+                        <p>The fix is simple: browse to your MSTS\Global folder and delete/move/rename <b>"startup.mpg"</b>: it's not required and deleting it has no downsides at all.</p>
+
+				<p></p>
+			</div>
+			<p class="meta"><span class="posted"></span><a href="#" class="permalink">Top Of Page</a></p>
+     	            <a name="keyboard2">
+
+		</a></div>
+
+<!--- end keyboard1 --->
+
+    <!--- keyboard2 --->
+
+		<div class="post">
+			<h2 class="title">MSTS Fails to Respond To Keyboard Commands to Apply Brake</h2>
+			<div class="entry">
+				<p>This is an error that seems to have cropped up only with some MSTS installations on Vista and Windows 7.
+				<ol><li>Click on "Computer" (or open Explorer).  Browse to your MSTS folder. Right-click and select "Properties".</li>
+				    <li>Under "Attributes", if it's not set to read-only, select read-only and click "apply".</li>
+				    <li>Either way, the MSTS folder is now set to read-only.  Now unselect "read-only" and click "ok".</li>
+				    <li>Start MSTS.  Under "Options", Click on "keyboard".  It's set to steam.  Now click on the key to change: we want the "Increase Train Brake" key. Press the apostrophe key.
+                        <p> <img src="images/keymap.jpg" alt="" border="0"></p>
+                        <p>The box clears - no character is shown. But that's ok.</p></li>
+				    <li>Click "Save".</li>
+				    <li>Now repeat the process for "Diesel" and "Electric", remembering to "Save" each time</li>
+				    <li>Problem fixed forever.</li>
+                </ol>
+
+			</div>
+			<p class="meta"><span class="posted"></span><a href="#" class="permalink">Top Of Page</a></p>
+			<a name="ae_16bit">
+		</a></div>
+
+<!--- end keyboard2 --->
+
+    <!--- keyboard3 --->
+
+		<div class="post">
+			<h2 class="title">MSTS Activity Editor Locks Up As Soon As You Move The Map</h2>
+			<div class="entry">
+				<p>This is an error that seems to occur with some graphics cards.</p>
+
+				<p>
+				<ol><li>Right-click anywhere on the Desktop and select "Properties".</li>
+				    <li>A new window, "Display Properties" appears.  Left-click on "Settings"</li>
+				    <li>Under Color Quality, select <b>Medium (16-bit)</b> and click <b>ok</b>.
+                                        <p> <img src="images/16bit_display.jpg" alt="" border="0"></p></li>
+				    <li>Activity Editor should now work ok.</li>
+                                </ol>
+                                <p>Windows 7 seems to handle the reduction in resolution required automatically and elegantly: I've never had to alter the screen settings manually.</p>
+                                <p> <img src="images/smart_w7.jpg" alt="" border="0"></p>
+
+			</div>
+			<p class="meta"><span class="posted"></span><a href="#" class="permalink">Top Of Page</a></p>
+			<a name="ae_missing">
+		</a></div>
+
+<!--- end keyboard2 --->
+
+    <!--- keyboard3 --->
+
+		<div class="post">
+			<h2 class="title">MSTS Activity Editor "Loses" AI/Static Consists</h2>
+			<div class="entry">
+				<p>MSTS Activity Editor "Loses" AI/Static Consists - they exist, but they don't show up in the AE.  This error is caused by corrupt registry keys.</p>
+
+				<p><a href="msts_ae_fix_w7.html">Click here</a> for advice on repairing your registry settings if you're using Windows 7.</p>
+
+				<p>Read on here if you're using Windows XP.</p>
+
+				<p>
+				<ol><li>Click Start | Run | Type in "regedit" Ok (arrows 1, 2, 3):
+                        <p> <img src="images/regedit_01.jpg" alt="" border="1"></p>
+                </li>
+
+				    <li>Expand <b>HKEY_LOCAL_MACHINE</b></li>
+				    <li>Expand <b>Software</b></li>
+                    <li>Scroll down to, and expand <b>Microsoft</b></li>
+                    <li>Scroll down to, and expand <b>Microsoft Games</b></li>
+				    <li>Expand <b>Train Simulator</b></li>
+				    <li>Click on <b>HWRenderer</b>.  In the right-hand window, click, then shift-click to select all registry keys starting with <b>"AE_"</b>.  Right-click and select "Delete".
+                        <p><img src="images/regedit_02.jpg" alt="" border="0"></p></li>
+                    <li>Close the Regedit window (click on red "x").  The AE registry keys will be regenerated next time you start Activity Editor.</li>
+
+			</ol></div>
+			<p class="meta"><span class="posted"></span><a href="#" class="permalink">Top Of Page</a></p>
+			<a name="ae_f11">
+		</a></div>
+
+<!--- end keyboard2 --->
+
+    <!--- ae_crash --->
+
+		<div class="post">
+			<h2 class="title">Activity Crashes on Pressing F11 or Pop-Up</h2>
+			<div class="entry">
+				<p>This is caused by too many sounds in your activity.</p>
+
+                        <p>The cure is to install Carlo Santucci's soundcfg.dat file.  Click on Read More for full explanation and sound config file download.</p>
+
+			</div>
+			<p class="meta"><span class="posted"></span><a href="tutorials/fix_sound.html#update" class="permalink">Read More</a>
+			<a name="traindb">
+		</a></p></div>
+
+<!--- end ae crash --->
+
+    <!--- traindb --->
+
+		<div class="post">
+			<h2 class="title">Error Reading Train Database file xxxx.eng</h2>
+			<div class="entry">
+				<p>This has to be the most common error message I receive enquiries about.</p>
+
+                <p>It usually doesn't interfere with running MSTS, and you can click "Yes" to continue, but every time you start or stop an activity or open the Activity Editor you're confronted with this message.  The activities that use this item of rolling stock usually can't be run either.  I get 2-3 emails a week asking me where this error came from and how to get rid of it.</p>
+
+                <p>The glib one-line answer is "<i>this error message means that there is a consist asking for a non-existent piece of rollingstock.</i>"</p>
+
+                <p>Well, that's really helpful isn't it?  I'm going to show you how to track down and eliminate these errors using Mike Simpson's incredible Swiss-Army knife fix-everything program, <b><a href="Route_Riter/index.html">Route Riter</a> (versions 7.0.50 or higher).</b>.</p>
+
+                <p>Here's a quick answer if the error message contains a reference to lines 90-190 (or thereabouts), it's generally a locomotive with lighting set up for the MSTS-Bin patch being used on a default installation of MSTS.</p>
+
+			</div>
+			<p class="meta"><span class="posted"></span><a href="tutorials/traindb.html" class="permalink">Read More</a>
+			<a name="twi">
+		</a></p></div>
+
+<!--- end twi --->
+
+    <!--- twi --->
+
+		<div class="post">
+			<h2 class="title">Error Message - Train World Initialization Failed</h2>
+			<div class="entry">
+				<p><b>Reason #1:</b> If the route uses Kosmos environments, you may need to check the "Textured Sky" option in <b>MSTS | Options | Advanced Display</b>.</p>
+
+                <p><b>Reason #2</b>:  "Train World Initialization Failed" means something is missing/corrupted in the \envfiles folder, so you could try copying the \envfiles folder from \train simulator\template to see if that fixes it.  In a similar vein, the installme.bat file may not have run correctly or to completion when installing a new route.  Try running it again, watching for multiple "1 File(s) Copied" messages.
+                   <br>(Jim "Sniper" Ward)</p>
+
+                   <p><b>Reason #3:</b> If you have an AI train which has been parked on a siding behind a red light, as described in <a href="#">Method #2 of making an AI train stop at a terminal</a> station, and you save the activity after the train has stopped, when you try to reload the activity, you will get "Train World Initialization Failed", EVERY time.</p>
+
+                   <p>Unfortunately, the solution is to remove the AI train from the activity. MSTS seems to be incapable of restarting with a "stopped" AI train.
+                   <br>(Barry Galbraith)</p>
+
+			</div>
+			<p class="meta"><span class="posted"></span><a href="#" class="permalink">Top Of Page</a>
+			<a name="uid200">
+		</a></p></div>
+
+<!--- end twi --->
+
+    <!--- uid2000 --->
+
+		<div class="post">
+			<h2 class="title">Error Message - Can't Add Car (uid:20000n) to world</h2>
+			<div class="entry">
+				<p>This error often occurs when testing the new wagon in a consist after reskinning or otherwise modifying the model.</p>
+
+                <p>Errors starting with uid:20000n are <b>active consist</b> failures: The last digit (n) tells you the position in the consist (0=leading unit, 3=fourth unit, etc.).</p>
+
+                <p>This is usually caused by</p>
+                <ul>
+                    <li>an error within the model - polycount, corrupt compression, texture error if reskinning, etc;</li>
+                    <li>removal of a shape file from its MSTS folder after the consist has been created - various registry cleaners and anti-virus programs have been implicated in this removal; finally</li>
+                    <li>editing a loose consist which may make it too long and one or more vehicles becomes positioned off-track.</li>
+                </ul>
+                
+
+			</div>
+			<p class="meta"><span class="posted"></span><a href="#" class="permalink">Top Of Page</a>
+			<a name="path">
+		</a></p></div>
+
+<!--- end uid200 --->
+
+    <!--- path --->
+
+		<div class="post">
+			<h2 class="title">Error Message - Unable To Save Path</h2>
+			<div class="entry">
+				<p>You may be missing one or more of the following folders in your route: TRAFFIC, PATHS, SERVICES, ACTIVITIES. If any of these folders are missing create them with the <b>File | New | Folder</b> command in Windows Explorer.</p>
+
+    <p><b>Special note to route-builders creating Clickteam installers for distribution of their route</b>: When setting up your install files, note that InstallCreator or the older InstallMaker do not copy empty folders. This affects TRAFFIC, PATHS, SERVICES, ACTIVITIES folders in many distributed routes.</p>
+
+    <p>The fix is to create a non-empty file called say blank.fil&nbsp; - note file must have something in it eg "This file required for installer to work correctly - you may now delete it".&nbsp; The folder will then be copied into the installer.</p>
+
+    <p>Note: The option in InstallCreator in Files Tab, Misc Tab for "Do not install file, but create directory" was broken in the free versions with build numbers less than 17 (current build is 31, so upgrading your Clickteam InstallCreator will solve this problem).
+        <br>(Yuri Sos)</p>
+
+			</div>
+			<p class="meta"><span class="posted"></span><a href="#" class="permalink">Top Of Page</a>
+			<a name="batch">
+		</a></p></div>
+
+<!--- end path --->
+
+    <!--- path --->
+
+		<div class="post">
+			<h2 class="title">Xcopy Is Not Recognised</h2>
+			<div class="entry">
+               <p>The Command Prompt window (DOS window to some) says "<i>Xcopy is not recognised as an internal or external command, operable program or batch file</i>".</p>
+
+               <p>Batch files generally run well inside XP Pro and higher (exceptions: "Choice" for conditional batch files no longer works, needs a "%%" switch instead, among other differences).</p>
+               <p>Press <b>Start | All Programs | Accessories | Command prompt.</b>
+               <br>In the Command Prompt window, type <b>Xcopy /?</b> &lt;enter>. It should find Xcopy and list all the parameters.
+               <br>If it doesn't, your computer path may be corrupted.</p>
+
+               <p>In the Command Prompt Window, type <b>path &lt;enter></b>. It should show your computer path: <p><b>path=c:\windows\system32;c:\windows;c:\windows\system32\</b>
+               <br>(Replace c: with your drive partition if it's not drive C:)
+               <p>If you need to correct the path, press <b>Start | right-click My Computer | Properties | Advanced | Environment Variables | Path | Edit.</b>. Make your changes as above then exit.
+               <br>This error correction was originally published by William Sieffert.</p>
+
+
+			</div>
+			<p class="meta"><span class="posted"></span><a href="#" class="permalink">Top Of Page</a>
+			<a name="regload">
+		</a></p></div>
+
+<!--- end path --->
+
+    <!--- palette --->
+
+		<div class="post">
+			<h2 class="title">Error Message - Region load error - parent PointsIndicator does not exist</h2>
+			<div class="entry">
+				<p>You have exceeded the number of consists that your msts installation can handle (ca. 1100) and you may need to run a utility called Trainstore. Trainstore fools msts into thinking you have a lot less loaded than you actually have by moving anything not needed for a particular activity out of the msts folder into Store. This gets the consist count down to a reasonable level again.</p>
+
+			</div>
+			<p class="meta"><span class="posted"></span><a href="#" class="permalink">Top Of Page</a>
+			<a name="palette">
+		</a></p></div>
+
+<!--- end palette --->
+
+    <!--- palette --->
+
+		<div class="post">
+			<h2 class="title">Error Message - Failed to Load Material Palette</h2>
+			<div class="entry">
+				<p>Ensure that "lightmat.pal" exists in the Global\Shapes folder.  <a href="files/lightmat_pal.zip">Click here to download this zipped file (562 bytes)</a> if you've accidentally deleted it.</p>
+
+                <p>Photoshop users also get Photoshop-related icons showing inside the Activities and Path folders of MSTS (as the .PAL and .ACT may be associated with Photoshop on installation); double-clicking on an act or pat file in a MSTS subfolder accidentally fires up Photoshop with subsequent error message that the material palette / the samples file was damaged and could not be loaded (which is logical, as an MSTS .file is not an Adobe Photoshop Material Pallette!).  Deleting it then results in the above error message.
+                <br>{Marc Nelson, Lukas A Lusser}</p>
+
+			</div>
+			<p class="meta"><span class="posted"></span><a href="#" class="permalink">Top Of Page</a>
+			<a name="gui">
+		</a></p></div>
+
+<!--- end palette --->
+
+    <!--- gui font --->
+
+		<div class="post">
+			<h2 class="title">Error Message - Failed to load gui_font&lt;IDS_FONT_2/&gt;</h2>
+			<div class="entry">
+				<p>The problem is one of the registry entries. The registry must point to a complete and valid MSTS installation - doesn't matter if it's your main MSTS installation or a mini-MSTS.</p>
+
+                <p><b>Background:</b> my MSTS is a combination of the standard MSTS installation along with several mini-MSTS installations. Setting up appropriate shortcuts for each mini-MSTS, I'm able to run trains or edit any route (main or mini) without touching the registry values. I DO need to change the registry to be able to install an APK (see <a href="Route_Riter/unpack_apk.html">hhttp://msts.steam4me.net/Route_Riter/unpack_apk.html</a>). All of this has worked without any issues till now.</p>
+
+                <p>I'd been working on beta-testing some new Route_Riter (RR) features and I wanted to be able to test some features regarding rollingstock adjustments without jeopardising my standard or mini-route setups. I set up a TEST folder with a global SOUND folder, a ROUTE folder with the tiny Timesaver route (RR crashes on startup if there's no Route in an MSTS installation), a TRAINS (includiing TRAINSET and CONSISTS) folder with the rollingstock appropriately placed. In this particular test module, RR uses the registry settings to point to the appropriate set of ENG/WAG files to be tested.</p>
+
+                <p>RR only looks for <b>train.exe</b> when you do a registry change, so I copied only train.exe into the top TEST folder and then used RR's registry change feature to point to the TEST folder. The beta-test went ok. But now I got the "Failed...." error message: I got it in all my MSTS installations - main and minis: both in running the sims and trying to use the editors/tools.</p>
+
+                <p>As soon as I used RR to point to a complete MSTS installation (main or mini), the problem went away.
+                <br>(Yuri Sos - originally posted 13 July 2006 on UKTS)</p>
+
+			</div>
+			<p class="meta"><span class="posted"></span><a href="#" class="permalink">Top Of Page</a>
+			<a name="init_am">
+		</a></p></div>
+
+<!--- end gui font --->
+
+    <!--- gui font --->
+
+		<div class="post">
+			<h2 class="title">Error Message - Failed To Initialize Activity Manager</h2>
+			<div class="entry">
+				<p>This appears to be a major MSTS-killer! The <b>"Mother Of All MSTS Errors!"</b>.  <b>There is no known cure, save re-installation</b>.  As of September 2008, I've suggested you try this: delete your Global folder, replace it with your backup Global folder (you did make a backup of your Global folder when you installed MSTS, didn't you?), then re-install Xtracks, Newroads and/or UKFinescale (if you use these add-ons). I've had only ONE person report success with this method; no-one else to my knowledge has ever found the cause or cure for this error.  Restoring registry keys doesn't appear to work.  Failing that, move all your routes and trains away from MSTS, UNINSTALL MSTS, delete any remaining MSTS folders and re-install MSTS. (You may find <a href="tutorials/installing_msts_xp.html&quot;">Re-installing MSTS</a> helpful).</p>
+
+<p>Many MSTS users have spent many many hours trying to locate this source of this error without success.  Typically, Conbuilder's and Route_Riter's test routines find no errors.  One user found that it was caused by a corrupt WAG file, but all too often this error occurs right across all routes and all models in MSTS - doesn't seem to matter whether you have default-MSTS or MSTS-Bin, whether you use Trainstore or not.</p>
+
+<p>If you can't locate the source of the error within a couple of hours (and I'd love to hear from you if you do - see "Contact me" on Home Page)), give up, re-install MSTS and then carefully add back each add-on route and item of rolling stock, testing each as you install them.</p>
+
+			</div>
+			<p class="meta"><span class="posted"></span><a href="#" class="permalink">Top Of Page</a>
+			<a name="unpack">
+		</a></p></div>
+
+<!--- end gui font --->
+
+    <!--- activity unpack fix  --->
+
+		<div class="post">
+			<h2 class="title">Activity Unpack Fix</h2>
+			<div class="entry">
+
+                        <p>When you download a packaged activity from the web and try to install it using TSUnpack, you will see an error "unable to open packaged activity".</p>
+
+                        <p>This is caused by a registry error that is simple to fix.</p>
+
+                        <p>Simply <a href="tutorials/files/tsunpack-fix.exe">download this installer</a> written by Thomas Tydal.  Save it somewhere (say the Desktop); right-click on the .exe file and <b>"Run As Administrator"</b> (this file modifies the Registry, so it needs to be  and run as an Administrator) once:
+
+                        <p><img src="tutorials/images/msts_install_w7_36a.jpg"></p>
+
+                        <p>You can now unpack activities.</p>
+
+                        <p><img src="tutorials/images/msts_install_w7_36.jpg"></p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a name="damage">
+		</a></div>
+
+    <!--- end activity unpack fix --->
+
+    <!--- package damaged --->
+
+		<div class="post">
+			<h2 class="title">Error Message - Expected more files, package damaged!</h2>
+			<div class="entry">
+				<p>This error means that the the route folder name was different from the route id when the activity was packaged in Activity Editor. The folder name (eg EUROPE1) and the RouteID (found in the .trk file, eg europe1.trk should have line <b>RouteID (EUROPE1 )</b> ) have to be exactly the same for the activity packager to work correctly. If there is a difference, only the consists used in the activity will be packaged.</p>
+				
+				<p>When unpacking an activity, Tsunpack and MSTS use only the RouteID for identification.</p>
+
+			</div>
+			<p class="meta"><span class="posted"></span><a href="#" class="permalink">Top Of Page</a>
+			<a name="rigid">
+		</a></p></div>
+
+<!--- end package damaged  --->
+
+    <!--- gui font --->
+
+		<div class="post">
+			<h2 class="title">Error Message - Failed to initialize car &lt;200nnn&gt; Rigidbody</h2>
+			<div class="entry">
+				<p>These errors are caused by placing a consist on a siding for which it is too long or over a set of points (switches).  Open Activity Editor, select the Activity and click on <a href="tutorials/vss.html">"Verify Starting State"</a>.  This will show you where the error is. When you look at static consists on the sidings it may not be apparent that there is a car off the end of the siding because a car off the end IS NOT VISIBLE. You have to move the consist to see any car off the end. There is no way to relate the error message to one of the loose consists.</p>
+                        <p>You will, at this point, need to check each and every loose consist by moving it slightly away from the siding end to see if another car appears, the one that may be hidden.  Also get to know the exact car count of the loose consists you are placing so you can count the cars showing as a double check. {Vince Cockeram}</p>
+
+				 <p>Move the consist so that it fits on the track properly and re-run "Verify Starting State".</p>
+
+			</div>
+			<p class="meta"><span class="posted"></span><a href="#" class="permalink">Top Of Page</a>
+			<a name="act_header">
+		</a></p></div>
+
+<!--- end gui font --->
+
+    <!--- act header  --->
+
+		<div class="post">
+			<h2 class="title">Error Message - Failed To Load Activity Header</h2>
+			<div class="entry">
+				<p>This error message is caused by</p>
+                                <ol>
+                                    <li>the route's *.trk file extension has been renamed, does not exist at all, or the route's name has been changed.  Open the .act file and check the RouteID line.  It should exactly match the Route folder name; or<br>&nbsp;</li>
+
+                                    <li>an activity file that doesn't contain any information other that the file identifier (SIMISA@@@@@@@@@@JINX0a0t______). This is often caused by the Activity Editor locking up when trying to save or re-save an activity.  Check the .act file - it will most likely be empty.  Delete and rebuild. Paths, services and consists used by that activity will be intact.</li>
+
+			</ol></div>
+			<p class="meta"><span class="posted"></span><a href="#" class="permalink">Top Of Page</a>
+			<a name="reqfile">
+		</a></p></div>
+
+<!--- end heading tape --->
+
+    <!--- heading --->
+
+		<div class="post">
+			<h2 class="title">Error Message - Failed To Locate A Required File</h2>
+			<div class="entry">
+				<p>This error message ""Failed to locate a required file in your installation. You may need to re-install train simulator" is usually caused by a shortcut pointing to an invalid installation of MSTS or an incorrect location.  Most commonly seen after creation of mini-routes and subsequent faulty Registry entries.</p>
+
+			</div>
+			<p class="meta"><span class="posted"></span><a href="#" class="permalink">Top Of Page</a>
+			<a name="heading">
+		</a></p></div>
+
+<!--- end heading tape --->
+
+    <!--- heading --->
+
+		<div class="post">
+			<h2 class="title">Error Message - Failed To Initialize Heading Tape</h2>
+			<div class="entry">
+				<p>This error message is caused by a missing or corrupt "ACleanTrack1.ace" and / or "ACleanTrack2.ace".  "Read More" for discussion and solution.</p>
+
+			</div>
+			<p class="meta"><span class="posted"></span><a href="tutorials/heading_tape.html" class="permalink">Read more</a>
+			<a name="picformat32">
+		</a></p></div>
+
+<!--- end heading tape --->
+
+    <!--- heading --->
+
+		<div class="post">
+			<h2 class="title">Error Message - Component Picformat32.ocx or one of its dependencies is missing</h2>
+			<div class="entry">
+				<p>This error message may suddenly appear when trying to start Conbuilder or Route_Riter, even after these programs having been running error-free for months or years.</p>
+
+  			    <p><img src="images/picformat_missing.jpg" height="133" alt="picformat32.ocx is missing" border="0"></p>
+
+  			    <p>Your first reaction may be to re-register the .ocx by typing this command into a DOS/Command Line prompt: <b>regsvr32.exe picformat32.ocx</b></p>
+
+  			    <p>If this doesn't correct the problem, it may well be that your anti-virus program has taken a dislike to the picformat32.ocx file (which has been around since 2003).  Simply set your a/v program to "ignore" or "whitelist" picformat32.ocx and the problem will go away.</p>
+
+                <p><img src="images/picformat_za.jpg" height="383" alt="picformat32.ocx ignored" border="0"></p>
+
+			</div>
+			<p class="meta"><span class="posted"></span><a href="#" class="permalink">Top Of Page</a>
+			<a name="sluggish">
+		</a></p></div>
+
+<!--- end heading tape --->
+
+    <!--- sluggish --->
+
+		<div class="post">
+			<h2 class="title">Movement in the Route Editor is very sluggish</h2>
+			<div class="entry">
+				<p>Usually occurs when you've just started building a new route.</p>
+
+                                <p>Simply place a Sound-Source on the Start Tile and the problem is fixed.</p>
+
+			</div>
+			<p class="meta"><span class="posted"></span><a href="#" class="permalink">Top Of Page</a>
+			<a name="tsec_old">
+		</a></p></div>
+
+<!--- end sluggish --->
+
+    <!--- sluggish --->
+
+		<div class="post">
+			<h2 class="title">Error Message - Continuation between "tsection.dat"(local) and global "tsection.dat"(old) is not correct-- Function failed </h2>
+			<div class="entry">
+				<p>This message occurs when running TsUtils. This means that route was built using the default tsection.dat file, located in the Global folder, whereas you currently have the standardised tsection.dat file installed.  In order to run the TSUtils check you will need to get hold of the original MSTS default tsection.dat file, make a copy of the current standardised tsection.dat file and replace it with the default.</p>
+
+			</div>
+			<p class="meta"><span class="posted"></span><a href="#" class="permalink">Top Of Page</a>
+			<a name="snd_place">
+		</a></p></div>
+
+<!--- end sluggish --->
+
+    <!--- heading --->
+
+		<div class="post">
+			<h2 class="title">Sound Source Placement Error Causes MSTS to Crash</h2>
+			<div class="entry">
+    			    <p>Values for the x- and z- coordinates in the Position line in .WS files that are outside the range -1024 to +1024 will cause the simulation to crash without warning.  Lukas Lusser discovers the cause of the problem and Mike Simpson fixes it with Route_Riter.</p>
+
+			</div>
+			<p class="meta"><span class="posted"></span><a href="tutorials/snd_region_error.html" class="permalink">Read more</a>
+			<a name="#">
+		</a></p></div>
+
+<!--- end heading tape --->
+
+	<!-- end #content -->
+	</div>
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents/Keywords</h2>
+                 <p> <a href="#keyboard1">Keyboard Nonresponsive #1</a>
+                 <br><a href="#keyboard2">Keyboard Nonresponsive #2</a>
+                 <p><a href="#ae_16bit">Activity Editor (AE) Lock Up</a>
+                 <br><a href="#ae_missing">AE Missing Consists (Win XP)</a>
+                 <br><a href="msts_ae_fix_w7.html">AE Missing Consists (Win 7)</a>
+                 <br><a href="#ae_f11">Acts Crash on F11 or Pop-ups</a>
+
+                 <p> <a href="security_unblock.html">Route Riter Help Issue</a>
+                 <br><a href="security_unblock.html#not_open">Win7 Can't Open Installer File</a>
+
+                 <p> <a href="#traindb">Error Reading Train Database</a>
+                 <br><a href="#twi">Train World Initialization Failed</a>
+                 <br><a href="#uid200">Can't Add Car To World</a>
+                 <br><a href="#path">Unable to Save Path</a>
+                 <br><a href="#batch">Xcopy Is Not Recognised</a>
+
+                 <p> <a href="#regload">Region Load Error</a>
+                 <br><a href="#palette">Failed to Load Material Palette</a>
+                 <br><a href="#gui">Failed to load gui_font&lt;IDS_FONT_2/&gt;</a>
+                 <br><a href="tutorials/fix_sd402.html">Sd40-2 Shape File Error</a>
+                 <p><a href="#unpack">Activity Unpack Fix</a>
+                 <br><a href="#init_am">Initialize Activity Manager</a>
+                 <br><a href="#damage">Package Damaged</a>
+                 <p><a href="#rigid">Rigidbody</a>
+                 <br><a href="#act_header">Load Activity Header</a>
+                 <br><a href="#reqfile">Required File Missing</a>
+                 <br><a href="#heading">Initialise Heading Tape</a>
+                 <br><a href="#picformat32">Picformat32.ocx missing</a>
+                 <br><a href="tutorials/matrix3x3.html">Matrix 3x3 Errors</a>
+                 <br><a href="tutorials/end_end_vector.html">End_End_Vector Error</a>
+                 <br><a href="tutorials/phantom_signals.html">Phantom Signals</a>
+                 <p><a href="#sluggish">Sluggish Movement in RE</a>
+                 <p><a href="#tsec_old">TsUtils tsection.dat continuation error</a>
+                 <br><a href="#snd_place">Sound Placement Crashes Sim</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2010 <a href="http://steam4me.net">http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br>Updated: 1 May 2004, 29 November 2010, 5 Jan 2011, 5 May 2011, 23 May 2011
+        <br>This website is hosted by <a href="http://www.ventraip.com.au">VentraIP.com.au</a>
+
+<hr width="100%">
+
+</div>
+</body>
+</head></html>

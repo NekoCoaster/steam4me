@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+<title>Carspawners and Angled Level Crossings - The Old Way</title>
+
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Carspawners and Angled Level Crossings - The Old Way</font>
+                        <br>by Yuri Sos</font></h2>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                             <p>This tutorial details one way of handling how to stop cars driving through booms or past stop signs on angled crossings.  This method has now been largely superceded by Jeffrey Kraus-Yao who has found a simpler, more elegant solution to the issue of holding cars back from angled level crossings.
+This tutorial is left here in recognition of <b>Bruce Bridge's breakthrough work</b> many years ago.</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "place">
+		</div>
+
+    <!--- end end overview --->
+
+
+    <!--- placement --->
+
+		<div class="post">
+			<h2 class="title">How can I stop cars driving through the booms at angled level crossings?</h2>
+			<div class="entry">
+
+                      <p>The problem is that the cars stop their separation distance away from the track (or more precisely away from the orange cube on the tracks that marks the presence of a level crossing):  like this.......</p>
+
+                      <p><img src="images/car_sp_18.jpg" width="600" height="450" alt="" border="0">
+                      <br><img src="images/car_sp_19.jpg" width="600" height="450" alt="" border="0"></p>
+
+                      <p>The clever solution was first used by <b>Bruce Bridges</b> in his Conrail Indy route v.1.</p>
+
+                      <p>Open the Route Editor and place two pieces of straight track parallel to and on either side of the level crossing:  here I've used a couple of 30m straight pieces:</p>
+                      <p><img src="images/car_sp_20.jpg" width="600" height="450" alt="Place two pieces of track" border="0"></p>
+
+                      <p>Select and delete the old crossings:</p>
+                      <p><img src="images/car_sp_21.jpg" width="600" height="300" alt="delete crossing gates" border="0"></p>
+
+                      <p>Now place the crossings anew (as shown below, both with road visible and made invisible to demonstrate where they sit):</p>
+
+                      <p><img src="images/car_sp_22.jpg" width="600" height="300" alt="Place crossing gates" border="0">
+                      <br><img src="images/car_sp_23.jpg" width="600" height="300" alt="Place crossing gates" border="0"></p>
+
+                      <p>Finally select each piece of track and depress it below the terrain: you should end up with this:</p>
+                      
+                      <p><img src="images/car_sp_24.jpg" width="600" height="300" alt="Depress tracks" border="0"></p>
+
+                      <p>Save and quit and try out the crossing in the sim: as you can see, we've almost got it right - but one car still has managed to stop within the booms:</p>
+                      <p><img src="images/car_sp_25.jpg" width="600" height="300" alt="Place crossing gates" border="0"></p>
+
+                      <p>Back into Route Editor:  with experimentation, you'll find that there is a limit to how far from the first track the extra track can be placed: when you place the crossing gates, you'll find that the orange cubes don't extend from track to track.  However, this is not a problem as there is no reason why you can't successfully place a double track piece to stop the cars even further away.</p>
+
+                      <p>The image below demonstrates the use of a double track to extend the "no-go" zone further away from the crossing as well as the fact that the orange cubes of the emplaced crossing gates have a limit as to how far they will jump to another:  it doesn't really matter that the orange cubes are not on the end (dummy) tracks as they are on the trailing side of the crossing as far as the road traffic is concerned.</p>
+
+                      <p><img src="images/car_sp_26.jpg" width="600" height="300" alt="Place crossing gates" border="0">
+                      <br><img src="images/car_sp_27.jpg" width="600" height="300" alt="Place crossing gates" border="0"></p>
+
+                      <p>And here is the final result in the sim:</p>
+                      <p><img src="images/car_sp_28.jpg" width="600" height="300" alt="Place crossing gates" border="0"></p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="#">
+		</div>
+
+    <!--- end placement --->
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <p><a href="#place">Placement</a>
+
+
+
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 10 April 2009, 11 March 2010</center></p>
+</div>
+</body>
+</html>

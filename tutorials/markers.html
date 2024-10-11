@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>Creating Marker Files - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li ><a href="../vans/index.html">Vans</a></li>		
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Creating Marker Files</font>
+                        <br>by Yuri Sos</h2>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                             <p>Markers are used to pinpoint landmarks or track when building a route in Route Editor.&nbsp; The file is named myroute.mkr (where myroute is the filename of the route (ie the same name as the .REF file) and is, as are most of the files in MSTS, a Unicode text document which must be opened and edited in Wordpad.</p>
+
+                             <p>Tip: I've found it difficult to write marker files from scratch, so I usually copy a .mkr file from a default route, say SettleCa.mkr from Europe1, delete all the markers in the file than add my own.&nbsp; Your marker file will look like this (this is the first part of the SettleCa.mkr file:</p>
+
+                             <p><img SRC="images/marker_file.jpg" height=471 width=710></p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Defining Markers</h2>
+			<div class="entry">
+
+                        <p>When you define a marker in a marker file, you need four things:</p>
+
+                        <ol>
+                            <li><b>Longitude</b>: must be in decimal degrees ie 145.50 NOT 145 degrees 30 minutes:&nbsp; Western Hemisphere is negative, Eastern Hemisphere is positive; the number of decimal places is irrelevant;
+                                <br>&nbsp;</li>
+
+                            <li><b>Latitude</b>: must be in decimal degrees ie 38.50 NOT 38 degrees 30 minutes:&nbsp; Southern Hemisphere is negative, Northern Hemisphere is positive; the number of decimal places is irrelevant;</font>
+                                <br>&nbsp;</li>
+
+                            <li><b>Label</b>: this will be the description written on each label to help you identify what the marker represents;&nbsp; may be one word, more than one word with underscores as spaces or several words enclosed in quotes; eg Melbourne, West_Gate_Bridge, "Heathcote Junction";
+                                <br>&nbsp;</li>
+
+                            <li><b>MarkerType</b>: there are three marker types, shown below:&nbsp; I use&nbsp; 0 for interesting landmarks, 1&nbsp; for stations, junctions and 2 for the track route itself.
+                                <br>&nbsp;</li>
+                            </ol>
+
+                            <p>This data is placed in the following format:</p>
+
+                            <p><b>Marker (longitude latitude Label MarkerType )</b> - note no commas, just spaces, strings enclosed in quotes.</p>
+
+                            <p>Examples:
+
+                            <br>Marker ( 144.8985 -37.6578 Melbourne 0 )
+                            <br>Marker ( 144.8985 -37.6578 West_Gate_Bridge 1)
+                            <br>Marker ( 144.8985 -37.6578 "Heathcote Junction" 0 )</p>
+                            
+                            <p>Shown below are a type 0, 1 and 2 marker</p>
+
+                            <p><img SRC="images/marker00.jpg"  height=324 width=400>
+                            <br><img SRC="images/marker01.jpg"  height=324 width=400>
+                            <br><img SRC="images/marker02.jpg"  height=324 width=400></p>
+
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+
+		</div>
+
+    <!--- end cause --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Trouble-shooting</h2>
+			<div class="entry">
+
+                        <h3>Markers not Showing Up in Route Editor</h3>
+
+                        <p>Assuming you've followed the above instructions to the letter and you still don't see the markers, you are probably using Route Editor in a mini-Route.</p>
+
+                        <p>Two solutions:
+                        <ol>
+                           <li>Alter the command used to launch the route editor to this: <b>"whatever-your-miniroute-path-is\train.exe" -toolset</b>. That forces things to stay in local directory tree. If you don't do that there are several items where the route editor will follow the default path found in the registry instead of your miniroute -- markers is one, tiles is another -- and there really isn't any warning about it doing that. Many thanks to Dave Nelson for posting that tip.
+                               <br>&nbsp;</li>
+                           <li>Use Route_Riter to change the registry settings so that they point to your mini-Route.
+                               <br>See <a href="../Route_Riter/unpack_apk.html">Using Route Riter to change the MSTS Registry Settings</a>
+                               <br>&nbsp;</li>
+                           </ol>
+                           </p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+
+		</div>
+
+    <!--- end cause --->
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+               </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 27 April 2003, 8 Feb 2006, 19 April 2010</center></p>
+</div>
+</body>
+</html>
+

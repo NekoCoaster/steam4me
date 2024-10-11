@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created on: 3/29/2007 -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <title>BEGINNERS GUIDE TO RETEXTURING MSTS LOCOMOTIVE MODELS: Page 8</title>
+  <meta name="author" content="Sean Lim aka Trackdancer">
+<link rel="StyleSheet" type="text/css" href="trackdancer.css">
+</head>
+<body>
+<!-- TITLE -->
+<div id="boxtitle">
+BEGINNERS GUIDE TO RETEXTURING MSTS LOCOMOTIVE MODELS: Page 8
+</div>
+<div id="boxmenu">
+Menu<br><br>
+<div id="menuitems">
+<a href="../index.html" style="color: #696969; text-decoration: none;font-weight: bold;">Steam4me Main Tutorial Index</a><br><br>
+<a href="main.html" style="color: #696969; text-decoration: none;font-weight: bold;">SECTION INDEX</a><br><br>
+<a href="tutorial1.html" style="color: #696969; text-decoration: none;">How to weather locomotive textures tutorial.</a><br><br>
+<a href="tutorial2a.html" style="color: #696969; text-decoration: none;">How to re-texture MSTS locomotive models - a Comprehensive Guide</a><br><br>
+<a href="tutorial3.html" style="color: #696969; text-decoration: none;">A Beginner's Guide to avoiding problems building models with TSM</a><br><br>
+<a href="tutorial4.html" style="color: #696969; text-decoration: none;">Building an Arch using TSM.</a><br><br>
+</div>
+</div>
+<!-- Validation -->		
+<img src="resources/fig/valid-html401-blue.gif" border="0" width="88" height="31" alt="Valid HTML 4.01 Transitional" style="position: absolute; left: 10px; top: 280px;">
+<!-- SideBar -->
+<div id="sidebar">
+<b>Quick Links:</b><br><br>
+<a href="tutorial2a.html#part1" class="part">Part 1 - Introduction</a><br>
+<a href="tutorial2a.html#part2" class="part">Part 2 - The project</a><br>
+<a href="tutorial2a.html#part3" class="part">Part 3 - What you will need</a><br>
+<a href="tutorial2b.html#part4" class="part">Part 4 - The subject of the repaint</a><br>
+<a href="tutorial2b.html#part5" class="part">Part 5 - Installing the SD45 model</a><br>
+<a href="tutorial2b.html#part6" class="part">Part 6 - Creating a custom SD45</a><br>
+<a href="tutorial2c.html#part7" class="part">Part 7 - Converting the ACE files</a><br>
+<a href="tutorial2d.html#part8" class="part">Part 8 - Figuring out the mapping</a><br>
+<a href="tutorial2e.html#part9" class="part">Part 9 - Color considerations</a><br>
+<a href="tutorial2e.html#part10" class="part">Part 10 - Entering RGB colors</a><br>
+<a href="tutorial2f.html#part11" class="part">Part 11 - Color sampling from a photo</a><br>
+<a href="tutorial2g.html#part12" class="part">Part 12 - Masks, layers and transparency</a><br>
+<a href="tutorial2h.html#part13" class="part">Part 13 - Painting the main hull</a><br>
+<a href="tutorial2i.html#part14" class="part">Part 14 - Rendering the details</a><br>
+<a href="tutorial2j.html#part15" class="part">Part 15 - Finishing Touches</a><br>
+</div>
+<!-- MAIN CONTENT -->
+<div id="boxcontent">
+<a name="part13"></a><div class="subtitle">PART 13 - Setting the Rules and painting the Main Hull</div>
+
+<p>A good approach to texturing is to establish a rule of steps and techiniques that will applied to almost all parts of the same texture. The reasoning behind this is to facilitate uniformity. Unlike a traditional illustration where you can see the image in it's entirety, a texture map is a composite of different pieces that makes up the whole.</p> 
+
+<p>What I do is to think out exactly what it is that I want to achieve. Then I establish a list of definite steps that will be applied for every piece of the texture map in exactly the same order. This way I can work quickly and at the same time there is the confidence that, other then a few minor adjustments, everything will look right when it is put back together on the model.</p>
+
+<div class="subtitle">The Rules Established for the CSX SD45:</div>
+
+<p>I started off by masking off the panel details. Then saving the mask.</p>
+<center><img src="resources/fig/t_step1.jpg" border="0" width="480" height="122" alt=""></center>
+
+<p>The mask is used to create a new layer on which the panel lines exist. These are paint black. I then proceeded to paint the background using a graduated fill. The light tone uppermost with the dark tone at the bottom.</p>
+<center><img src="resources/fig/t_step2.jpg" border="0" width="480" height="122" alt=""></center>
+
+<p>The CSX blue line is added in a solid band. Using the gradient tool I highlighted the top with 70% transparent white. The panel lining was then fixed back to the main area as a 50% transparent overlay. Loading the mask of the paneling that I save earlier, I created new copy of the panel lines. This was isolated to its own layer and "locked" to prevent accidental changes.</p>
+<center><img src="resources/fig/t_step3.jpg" border="0" width="480" height="122" alt=""></center>
+
+<p>I copied the entire area to a new layer and applied a cloud filter. This was then fix back to the original area as 75% transparent overlay.</p>
+<center><img src="resources/fig/t_step5.jpg" border="0" width="480" height="122" alt=""></center>
+
+<p>At this point I copied the entire side, flipped it horizontally. This is then used for the other side of the rear hull. I chose to do this step at this point because of the <b>45º Rule</b> with regards to lighting direction. For a lot of illustrations, artists make the assumption that light is shining on the object being drawn from an angle 45º to the left and above the object being rendered. If I copied the side after the highlighting was done and then flipped it, the highlights on the second panel would be wrong. So in the interest of visual consistency I copied and flipped the first side to create the second side before highlighting was done.</p>
+<center><img src="resources/fig/t_step4.jpg" border="0" width="480" height="247" alt=""></center>
+
+<p>Refocusing on the first side, the logo was prepared seperately from the clip art I scrounged off the Web. It needed some cleaning up before it could be used as the original was a GIF and had poor anti-aliasing. Once the clean-up was done the logo was brought over, reduced to the correct side and positioned. I then "feathered" the edges of the logo slightly before fixing it in place. The copy of the panel lines I saved earlier was overlayed at full strength on top of it. (I saved an extra copy of the panel lines for use on the other side).</p>
+
+<p>Highlighting was done next. This was done with the pencil tool using white set at 70% transparency. I drew one latch, then copied and pasted the rest using the grey rectangles as positioning aids. It really helps to zoom in close when doing any detailed work.</p>
+<center><img src="resources/fig/t_step6.jpg" border="0" width="480" height="122" alt=""></center>
+
+<p>The final step was to copy the entire completed side. Treating the copy to a fairly strong blast of "wind" - a plugin that is available in Photoshop and Picture Publisher. A good substitute is the "motion blur" plugin. This was then fixed over the original surface as a 75% transparent overlay. The prototype is not that dirty, so all I wanted to do was to suggest some light weathering and to tie everything together smoothly without blurring the details.</p>
+<center><img src="resources/fig/t_step7.jpg" border="0" width="480" height="122" alt=""></center>
+
+<p>The same steps were applied to all the other main upper hull areas. Other than adjustments needed to align the lines, it all went very quickly and everything was done in an evening at a relaxed pace. SVIEW (and MakeAceWin) really helped as it allowed me to hop back in to view the textures on the model to check alignments with the minimum of fuss.</p>
+
+<p>For more weathering ideas and techniques please refer to the <a href="tutorial1.html">Locomotive Weathering Tutorial</a>.</p>
+
+<br><br>
+[ <a href="#top">Top of Page</a> ]&nbsp;[ <a href="tutorial2g.html">Prev</a> ]&nbsp;[ <a href="tutorial2i.html">Next</a> ]
+<!-- FOOTER -->
+<hr>
+<p class="small">Copyrights © 2004-2007, Sean Lim. All Rights Reserved. Hosted courtesy of steam4me with permission.</p>
+</div>			
+</body>
+</html>

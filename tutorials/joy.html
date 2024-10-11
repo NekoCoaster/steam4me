@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>Animating Valve Gear in both GMax and TSM - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li ><a href="../vans/index.html">Vans</a></li>		
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png"  height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png"  height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+                        <h2><font color="#3333FF">Animating Valve Gear in both GMax and TSM</font>
+                        <br>by Richard Osborne</h2>
+
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                   <P>I needed to make animated valve gear for an LNWR Webb compound I'm drawing & will use this as a basis for this little tutorial. Sadly I haven't a decent picture of it, the photo above is of an LSWR Double Single, the only other class of loco I know of which used Joy for outside cylinders. One thing immediately obvious is that our efforts might be largely hidden by the splashers.</p>
+
+                   <p><IMG SRC="images/ro_joy_lswr_4220.jpg" BORDER="0" WIDTH="555" HEIGHT="290" ALIGN="bottom" ALT=""></p>
+
+                   <P>Joy valve gear is driven from the connecting rod & was designed for use on traction engines. It's not a well-known gear but serves our purpose well. As far as I know it wasn't used outside Britain, unless by a British manufacturer.</p>
+
+                   <P>The best known gear worldwide has to be Walschaerts, others used on outside cylinder locos include Baker & Southern, both designed to be used when upgrading locos. Neither of these gears was used in Europe. Many early Continental European railways used Stephenson gear with both eccentrics mounted outside the crankpin. Stephenson gear is interesting to watch but animating it is like knitting with jelly!  I'll demonstrate how any valve gear can be animated logically. Hopefully a picture is worth a thousand words so I'm using screenshots.</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "link1"</a>
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Before Starting</h2>
+			<div class="entry">
+
+                        <p>As always decent drawings & an understanding of what's happening are essential.</p>
+
+                        <ul>
+                            <li><b>Valvegear program</b>:  The first step is to download a valvegear program; the best is at <b><a href="http://www.tcsn.net/charlied">Valve Gear on the Computer</a></b> by Charlie Dockstader
+                               <br>This is a brilliant program which shows most gears in common use for locomotive & industrial use. It would be cheap at $50, it's free!!  When you look at the program it's evident that a few mathematical principles are used - we'll use fewer for our animation.<br>&nbsp;</li>
+
+                           <li><b>Convert</b>:We need a calculator if our drawings are Imperial; since writing the coach tutorial I've found another converter on the web, this very useful freeware tool is <b><a href="http://www.joshmadison.com/software/convert/">Convert program</a></b> by Josh Madison</li>
+                        </ul>
+
+                        <P>I'll describe the system of animation so that it can be used for TSM & Gmax. I've used it for both.</p>
+
+                        <p>There is a golden rule for TSM, however: <b>Make sure your loco sits properly, is the right height for rail level, it couples properly etc. before ANY animation, even coupling rods.</b> TSM holds animation information in such a way that subsequent changes to the model don't carry over to animation. You'll see that rods suddenly leap when the loco starts to move. The same applies to parts; all valve gear parts will have to be in the correct neutral position before animation. Gmax is slightly more accommodating but it's still not a bad idea to get things in the right place first.</p>
+
+			 </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "start"</a>
+		</div>
+
+    <!--- end cause --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Sorting & Starting</h2>
+			<div class="entry">
+
+                        <p>I'm cheating on this project by importing wheels from another. Building wheels, animating coupling & connecting rods have been covered on other tutorials. In this case I have connecting rods linked to wheels2 & animating using 16 frames.</p>
+                        
+                        <P><IMG SRC="images/ro_joy_adriatic_gear.jpg" BORDER="0" WIDTH="600" HEIGHT="276" ALIGN="bottom" ALT="ro_joy_adriatic_gear"></p>
+
+                        <P>The valve gear drawing has the crucial dimensions, some others have to be assumed.</p>
+
+                        <P><IMG SRC="images/ro_joy_model1.jpg" BORDER="0" WIDTH="600" HEIGHT="399" ALIGN="bottom" ALT="ro_joy_model1"></p>
+
+                        <P>Here's outside admission Joy gear from the program. I've used some of the prototype dimensions to get a better idea; the prototype is upside-down with the valve chest below the cylinder. I could invert the screenshot to match, alter the program, which would take more time than it's worth or look at the computer screen by a mirror.</p>
+
+                        <P>Watch the program in action for a few minutes; we need to sort the parts into 3 types:</p>
+                        <Ol><li>those which are fixed to the frame;</li>
+                            <li>those which take their movement from another regular moving part, a wheel or rod;</li>
+                            <li>those where the movement is a combination of other actions.</li></ol>
+
+                        <P>We don't need to remember geometry from school days or to remember teachers' "You'll need this someday". We're just going to work in sequence. Make everything regular, it's easier if you do all your part building in Animation Frame 0/16. Apologies in advance for overuse of the word 'pivot'!</p>
+
+			 </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "pivots"</a>
+		</div>
+
+    <!--- end cause --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Pivots, Pivots, Pivots</h2>
+			<div class="entry">
+
+                   <p>The first thing we need to do is to add a pivot to the connecting rod, this is 6' in front of the big-end which is our axis point. Draw a small cylinder at the right place, 6 or 12 sides & brought closer to the rod. Don't overlap the rod; it'll make it harder to delete later. In Gmax you must neutralise each part you draw, always go to 'Adjust Pivot' 'Affect Pivot Only' & set the 'Rotate' values to 0. They'll arrive with 0, +/- 90 all designed to confuse. Gmax will assume your X axis to be Y, Y to be Z; it'll get itself in a mess. You'll need loads of these pivots so clone from the one you've drawn. Place another at the small-end position. Make your conrod active & attach both cylinders to it. In TSM you'd 'Join Selected'. Run the animation to check that they are attached, run animation after each modification. Remember to save often, preferably save before animating then save with another name.</p>
+
+                   <P><IMG SRC="images/ro_joy_conrod_1.jpg" BORDER="0" WIDTH="600" ></p>
+
+                   <P>With this gear we can see that there's an anchor link, with a length of 3' 10", fixed to the frame. Let's introduce a couple of extra parts which are the core of this system. The locus for the moving pivot is obviously at a radius of 3' 10" so we introduce a cylinder of that radius, some arithmetic will give us the placement, the centre is 9' 8" forward of the wheel centre, 1' 1" above cylinder centres. The cylinder can be of as many sides as you wish, it won't be included in the model. In TSM there's a maximum of 32 sides, in point mode you could rotate points to be closer & give a smoother segment.</p>
+                   
+                   <P><IMG SRC="images/ro_joy_conrod_2.jpg" BORDER="0" WIDTH="600" ></p>
+
+                   <P>On the program we can see just one part attached to the rod - the coupler. Organise the pivots first, one of the cloned cylinders on the conrod pivot, one 5.5" from it, another 12" from that, if you just slide them along the same axis you'll have 3 in line. Make a box to enclose the 3 pivots, move it outboard of the connecting rod & neutralise the box. Now make the cylinder on the conrod pivot active & join both other pivots & the box to make one unit, name it coupler. The axis should be the first pivot. Link the coupler to the connecting rod. Try the animation, the coupler should move with the rod.</p>
+
+                   <P>To animate the part; make the coupler active. Press 'Rotate' on the top toolbar, rotate the coupler until the outer pivot intersects the circle we introduced earlier. For large movements put the mouse over the part until the icon changes then drag it, for fine adjustment use the arrows by the windows on the bottom toolbar. Adjustment in Gmax is to the hundredth of a degree! It will be easier if we neutralise the part again. In TSM you can only drag the part or use the 'Transform' menu.</p>
+
+                   <P><IMG SRC="images/ro_joy_coupler_1.jpg" BORDER="0" WIDTH="600"></p>
+
+                   <P>Press 'Animate' on the bottom bar, move the animation forward to frame 1, rotate the coupler to intersect, forward another frame through the cycle. Check the animation. The top pivot should be following the circle, the locus of the anchor link.</p>
+
+                   <P><IMG SRC="images/ro_joy_coupler_2.jpg" BORDER="0" WIDTH="600"></p>
+
+                   <P>We can make the anchor link, clone the top pivot of the coupler in 'polygon' mode 'Detach as Clone'. Use the clone, without moving it, for the anchor link. On this prototype the link has a right angle turn so it's not just a simple box, remember to neutralise it - I can't emphasise this too many times. Attach the pivot then set the part axis to the centre of the circle. When we animate the part the trick is to have both pivots co-incident, set it close by dragging it then go in close & refine both parts using the nudge arrows. The anchor link has a most odd movement, it will be linked to 'main', not to any other part of the valve gear.</p>
+
+                   <P><IMG SRC="images/ro_joy_anchorlink_1.jpg" BORDER="0" WIDTH="600" HEIGHT="380" ALIGN="bottom" ALT=""></p>
+
+                   <P><IMG SRC="images/ro_joy_anchorlink_2.jpg" BORDER="0" WIDTH="600" HEIGHT="436" ALIGN="bottom" ALT=""></p>
+
+                   <P>The valve gear drawing equates to frame 8 on my animation sequence, I imported wheels for this project. If I'd started from scratch I'd have had frame 0 the same as my drawing. The centre of the link isn't dimensioned; it appears to be vertically below the anchor link outer pivot. The middle pivot of the valve lever appears to be at the centre of the link when the crank is fully forward, in this case at animation frame 8. Draw the link, this will be a visual part so it has only 12 sides. The die slides in a channel in this block, run the valve gear program & look at the rotation at about 30 - 40% cut-off in forward gear. To emulate this channel draw a cylinder about 5' forward of the link centre, on the same height. I've trimmed off most of the polys leaving just a segment which is visible in side view. Join this to the link, then rotate the link so that the segment looks to be at the same angle as the program.</p>
+
+                   <P><IMG SRC="images/ro_joy_valvelev_1.jpg" BORDER="0" WIDTH="600" HEIGHT="491" ALIGN="bottom" ALT=""></p>
+
+                   <P>We'll do the next part of the modelling on frame 8. We need a valve lever; this has pivots on the centre of the link, another pivot at -2" & a top pivot at the middle of the coupler. This last dimension isn't given so a bit of schoolboy geometry is needed. Draw circles (cylinders) at the centre, another of 2" radius & the third to intersect the coupler. The centre cylinder can be used as a pivot, clone it & slide it to the 2" circle, another clone & slide it to the outside circle. It's clearer on the screen shot.</p>
+
+                   <P><IMG SRC="images/ro_joy_valvelev_2.jpg" BORDER="0" WIDTH="600" ></p>
+
+                   <P>Draw a box for the valve lever, move it outwards. Make the middle pivot active & attach the other parts, rotate the lever about the middle pivot until the top pivot meets the middle pivot of the coupler.</p>
+
+                   <P><IMG SRC="images/ro_joy_valvelev_3.jpg" BORDER="0" WIDTH="600" HEIGHT="303" ALIGN="bottom" ALT=""></p>
+
+                   <P><IMG SRC="images/ro_joy_valvelev_4.jpg" BORDER="0" WIDTH="389" HEIGHT="379" ALIGN="bottom" ALT=""></p>
+
+                   <P>Move the axis to the top pivot & link the part to the coupler. Run the animation to check the link. To animate the lever rotate it until the middle pivot runs along the channel on the link. This part starts with some large movements so drag it first then go in close & fine tune the angle with the nudge buttons. In TSM you can move the 'Axis Only' in 'Transform', you'll need a bit of arithmetic first.</p>
+
+                   <P><IMG SRC="images/ro_joy_valvelev_6.jpg" BORDER="0" WIDTH="600" HEIGHT="436" ALIGN="bottom" ALT=""></p>
+
+                   <P>The next part to draw is the valve rod, the dimension for this is given as 9' 8". The rear end pivots about the bottom pivot of the valve lever, The valve chest end is connected to the valve spindle which will have just fore & aft movement. Make a box which will have both pivots. The axis for the part will be the rear pivot, link the part to the valve lever. The front guide will be the valve spindle, elongate this part so that the front of the valve rod appears to run along it. The valve spindle itself is animated by having it just touch the front pivot of the valve rod, it'll have lateral movement only. The crosshead can be joined to the spindle & will be linked to the 'main' part. You can animate with just a few parts showing on the screen. In all the gear animations I've drawn the last part to animate is the valve itself.</p>
+
+                   <P><IMG SRC="images/ro_joy_valverod_1.jpg" BORDER="0" WIDTH="600" HEIGHT="220" ALIGN="bottom" ALT=""></p>
+
+                   <P>Unhide all the valve gear parts & see how well you've done!</p>
+
+                   <P><IMG SRC="images/ro_joy_valverod_2.jpg" BORDER="0" WIDTH="599" HEIGHT="169" ALIGN="bottom" ALT=""></p>
+
+                   <P>If you haven't already done so move the parts outwards to their proper positions. Make sure the first side is working well. Clone & copy all parts to the other side. They'll carry the animation information with them. If you haven't quartered wheels you could use them as they stand, removing hidden polygons from both sides. There might be a temptation to use them, calling frame 0 frame 4, if you've quartered wheels. My advice is DON'T, you'll get tied in knots; it's much easier to cancel the animation - make all rotation values 0.  Move the animation sequence to the appropriate frame then animate from scratch. Keep all the pivots in place until you're happy with the gear, then delete them from all parts. None of the jigs & dummy circles will be needed on the model. Either delete them or just make sure they're not linked to the 'main' part. In TSM you'll have to delete them. Steam locomotives look far better with wheels quartered as per prototype, well worth the extra effort.</p>
+
+                        </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "conclusion"</a>
+		</div>
+
+    <!--- end cause --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Conclusion</h2>
+			<div class="entry">
+
+                        <p>All valve gears, including Walschaerts, can be animated with this method. Look at the gear, group it in the same way, decide where your dummy parts will be needed & animate in sequence. Notice that some parts, lifting links & reach rods etc. don't move! You could ignore them until the animation is done. On the three diagrams below I've overlaid where I'd put dummy loci. When you look at these gears in the program note that the eccentric leads or trails the crankpin.  The gear won't work if the lead is wrong! The sequence would be:-eccentric to link or bell crank, link to combination lever, crosshead to combination lever.Where the two pivots on the combination lever are close it's easiest to approximate then nudge pivots together. The valve spindle will always move in a straight line.</p>
+
+                        <P><IMG SRC="images/ro_joy_south_2.jpg" BORDER="0" WIDTH="600"></p>
+
+                        <P><IMG SRC="images/ro_joy_baker_2.jpg" BORDER="0" WIDTH="600" ></p>
+
+                        <P><IMG SRC="images/ro_joy_walsch_2.jpg" BORDER="0" WIDTH="600" ></p>
+
+                        <p>As with other computer modelling start with something easy before attempting a complicated gear. A loco with decent valve gear is a delight to watch. Above all an easy method of animating means that you're not restricting yourself to inside cylinder prototypes.</p>
+
+
+                        </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+
+		</div>
+
+    <!--- end cause --->
+
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#link1">Before Starting</a>
+                 <br><a href="#start">Starting And Sorting</a>
+                 <br><a href="#pivots">Pivots</a>
+                 <br><a href="#conclusion">Conclusion</a>
+               </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 01 September 2004, 28 April 2010</center></p>
+</div>
+</body>
+</html>
+

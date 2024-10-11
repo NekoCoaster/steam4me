@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>A Coach made with Gmax Chapter 6 - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <meta name="Author" content="Richard Osborne">
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+        <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">A Coach Made With GMax</font>
+                        <br>by Richard Osborne</h2>
+                        <p></p>
+			<h2 class="title">Chapter 6: Alpha Channels</h2>
+ 			   <div class="entry">
+
+                   <p>OK, time to see through the windows! We need to create an alpha layer in PSP, other programs will be similar. I described alpha channels in chapter 6 of the loco tutorial - still the same. Open PSP & open the .tga texture file. Go to the top toolbar - "Masks", "New", "Show All".</p>
+
+                   <p>Press "OK" then reopen the menu. You'll notice three things - everything on the dropdown is now black, the file has an asterisk which indicates that it's not saved & the word "Background" has changed to "Layer 1".</p>
+
+                   <P> Go into "File" on the top toolbar, "Preferences", "General Program Preferencies",  "Transparency" & change the grid size to "Tiny". It's slightly slower when blocking  in but far easier to see - we're going to be working in single pixels in a moment. Press  "Edit" & ""View Mask", the latter means that you draw in a very visible pink.</p>
+
+                   <P><IMG SRC="images/ro_gmax_06_01.jpg" WIDTH=500 HEIGHT=330></p>
+
+                   <P>You'll also see that the colour palette has been replaced by a palette with greys only. Which grey you use is a matter of experimentation - for starters try the dark side of the mid-tone. Choose your brush from the toolbar. Set the tool size to 1 for detail, larger for blocking-in. A graphic tablet is a great help here but not necessary. We want to zoom in & block in the areas we want as windows. I'll just prepare the windows at one end.</p>
+
+                   <P><IMG SRC="images/ro_gmax_06_02.jpg" BORDER="0" WIDTH="525" HEIGHT="545" ALIGN="bottom" ALT=""></p>
+
+                   <P>I've also drawn the area around the bogie, this is solid black. We'll need it soon.</p>
+
+                   <P>We'd better save the file. I'll describe this in detail.</p>
+
+                   <P>You can't just save by pressing the "Save" icon. The alpha ( for alpha read transparent & vice-versa ) channel will disappear into the ether - I know!!</p>
+
+                   <P>Go into the "Masks" menu on the toolbar. At the bottom of the drop-down is "Save to Alpha Channel". Press, a small screen appears with "Save to Alpha" on top. The screen shot is of a mask previously saved. A new mask won't have "Alpha Channel 1".</p>
+
+                   <P><IMG SRC="images/ro_gmax_06_03.jpg" ></p>
+
+                   <P>Press "OK", a smaller screen is shown probably naming the layer "selection #0". Change it if you wish.</p>
+
+                   <P>When you go back into PSP or reload the file the alpha channel won't show. Go to "Masks" then "Load from Alpha Channel".</p>
+
+                   <P>When you need to save:   This is a bit tricky to explain. Into the "Masks" menu & "Save to Alpha Channel" again. Click "New Channel" The same small screen appears with another name, probably "Selection #1", Press "OK". Now you'll see on the left a list with something like Selection #0 & New Channel. press on New Channel, the smaller screen appears with "Selection #1", Press "OK". NOW to avoid using the wrong channel we'll delete the first. Before saving the file go straight back into "Masks", "Save to Alpha Channel". You'll find on the list both Selection #0 &  Selection #1; Press Selection #0 - the "Delete" button should turn live. The highlighted layer  will show in the preview window, it'll be obvious which is which. You want to delete the first  layer before the work you've just done. Delete then CANCEL, if you press "OK" again a New Channel  window will appear. Please experiment with this sequence before you've done too much work. You  will lose your alpha channel if you don't use this sequence. You could always save under a  different name & have autosave running.</p>
+
+                   <P>Use MakeAceWin again to update the .ace file. Look at the coach again in SView, notice you can see the bottom of the roof but we haven't put the insides in yet.</p>
+
+                   <P><IMG SRC="images/ro_gmax_06_04.jpg" BORDER="0" WIDTH="600" HEIGHT="483" ALIGN="bottom" ALT=""></p>
+
+                   <p>Time for another beer!</p>
+
+
+                     </div>
+			 	<p class="meta"><span class="posted"><a href="#">Return to top of page</a></span><a href="ro_gmax_07.html" class="permalink">Go On To Chapter 7</a></p>
+
+             </div>
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Chapters</h2>
+<ol>
+<li><a href="ro_gmax_00.html">Overview</a></li>
+<li><a href="ro_gmax_02.html">Getting started</a></li>
+<li><a href="ro_gmax_03.html">First Texturing</a></li>
+<li><a href="ro_gmax_04.html">Modelling For Real</a></h3></li>
+<li><a href="ro_gmax_05.html">Texturing The Body</a></h3></li>
+<li><a href="#">Alpha Channels</a></h3></li>
+<li><a href="ro_gmax_07.html">Wheels and Bogies</a></h3></li>
+<li><a href="ro_gmax_08.html">Interiors</a></h3></li>
+<li><a href="ro_gmax_09.html">Export to MSTS</a></h3></li>
+<li><a href="ro_gmax_10.html">Texturing tricks and losing polygons</a></h3></li>
+<li><a href="ro_gmax_11.html">More Tricks and Tips</a></h3>
+<li><a href="ro_gmax_12.html">More about hierarchies</a></h3>
+</ol>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 24 August 2004, 19 March 2010</center></p>
+</div>
+</body>
+</html>
+

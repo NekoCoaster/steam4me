@@ -1,0 +1,329 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <title>Constructing A Steam Loco Using Train Sim Modeler - Part 3 - at The Steam4me Site</title>
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../../index.html">Home</a></li>
+		<li class="current_page_item"><a href="../index.html">Tutorials</a></li>
+		<li><a href="../../msts_errors.html">Error Messages</a></li>
+		<li><a href="../../steam/index.html">Steam</a></li>
+		<li><a href="../../electric/index.html">Electric</a></li>
+		<li><a href="../../passenger/index.html">Passenger</a></li>
+		<li><a href="../../diesel/index.html">Diesel</a></li>
+		<li><a href="../../freight/index.html">Freight</a></li>
+		<li ><a href="../../vans/index.html">Vans</a></li>
+		<li ><a href="../../routes/index.html">Routes</a></li>
+		<li><a href="../../utilities/index.html">Utilities</a></li>
+		<li><a href="../../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Constructing A Steam Loco Using Train Sim Modeler<br>Part 3</font>
+                        <br>by <a href="mailto: ROsbo77@aol.com">Richard Osborne</a></h2>
+                        <p></p>
+			<h2 class="title">Animating Rods And More Big Lumps</h2>
+ 			   <div class="entry">
+
+                   <p>Let's move on to animation of the rods. First we need some rods, these will be made from 3 component parts &amp; joined in a particular sequence. I'll explain as we go.</p>
+
+                   <p><img SRC="images/rodprop1.jpg" NOSAVE height=370 width=470></p>
+
+                   <p>The driving wheel end, just a tube with the right side closed. Notice it's been set to the axle coordinates. Copy, paste &amp; reset to the axle coordinates of wheels1. We have both ends of the rod to exact length.</p>
+
+                   <p><img SRC="images/rods_2.jpg" NOSAVE height=400 width=550></p>
+
+                   <p>For the joining part draw an open square tube - nurdle it about until it's a decent fit. I do about 90% of my drawing in 'point' mode - other people will do it differently. Use 'v' to get it square.&nbsp;</p>
+
+                   <p><img SRC="images/rods_3.jpg" NOSAVE height=400 width=550></p>
+                   <p><img SRC="images/rods_5.jpg" NOSAVE height=400 width=550></p>
+
+                   <p>You'll have noticed that each of the 3 parts has its own axis. We want the rod to have the axis of wheels2 - the first part. We need to join them in such a way that the first part is selected last. Highlight the front part, the rod &amp; finally the rear part. Double check - it's a fiddle splitting again. 'Part' then 'Join Selected', F2, take one of the Train Names - rod01, parent 'main'. I'm going to come back to the rods &amp; show how to split, improve &amp; rejoin it, using 'Snap to Grid'.</p>
+
+                   <p><img SRC="images/rods_6.jpg" NOSAVE height=400 width=550></p>
+
+                   <p>Why not take 'Wheels2' as parent? Think of your dinner going round in the microwave, it stays motionless on the plate and rotates relative to the oven. Then think of Buster Keaton sitting on the coupling rod in "The General" - he is motionless relative to the rod. We <i>could</i> have 'Wheels2' as parent - we'd have to introduce a rotation counter to the rotation of the wheel. Why complicate life?</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end end overview --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Animating Rods</h2>
+			<div class="entry">
+
+
+                   <p>We've found that animating wheels has no great secrets - neither have rods. Remember these rods will have MOTION only. We have to introduce a marker for the movement. Again there are many ways of doing this, I'll sometimes use a dummy crankpin. This way is simple &amp; it works.&nbsp;</p>
+
+                   <p>From the primitives draw an 8 face polygon. The stroke of a B4 is 22", hence 0.279.</p>
+
+                   <p><img SRC="images/motdisk1.jpg" NOSAVE height=283 width=263></p>
+
+                   <p>F2, position the disk at 'Wheels2' axis.</p>
+
+                   <p><img SRC="images/motdisk2.jpg" NOSAVE height=400 width=550></p>
+
+                   <p>We have the rod at BDC. To make life easier - in the side window, right click &amp; go to 'Expanded View'. You'll have seen that we have 9 frames for 8 animation movements - 0 &amp; 8 are identical. Make the animation button live - it'll be at 0, press the Motion button, ignore Rotation. Without moving the rod slide the animation to 8 &amp; press again. We'll double check the list with F2. <p>Now bring the animation slider to 1, the wheel will rotate, the disc &amp; rod will stay still. Move the rod, you're going clockwise, until the axis is at the 1st point of the disk. A picture's worth a thousand words.</p>
+
+                   <p><img SRC="images/motion1.jpg" NOSAVE height=400 width=550></p>
+
+                   <p>Press Motion. Repeat for the other points, the slider's not as friendly as it could be. Next position, move rod, press 'Motion'. repeat, finish, check the motion. F2, verify the motion, 0 &amp; 8 should be the same as the axis coordinates given at the top of the page. If not highlight the line &amp; edit. Go back to the perspective view &amp; check it. Save the rod &amp; the project.</p>
+
+                   <p><img SRC="images/motion3.jpg" NOSAVE height=425 width=365></p>
+
+                   <p>Load the rod, F2, make it negative in 'x', rename it 'rod02', flip in 'x'. It will work perfectly well like that BUT we want better than that. Prototype wheelsets are quartered, we'll do the same. Some people will explain how to progress the motion - I assure you it's quicker to start fresh. F2, notice that "Motion" appears by the animation button. Open the page &amp; clear the motion. Move the rod either straight ahead or straight back, properly "trailing" or "leading". There's no right or wrong, sometimes locos of the same class were set differently.</p>
+
+                   <p><img SRC="images/motion4.jpg" NOSAVE height=400 width=550></p>
+
+                   <p>Do exactly the same as for Rod01, if one rod overtakes the other you've made a mistake. Remake the project, go into trainsim &amp; take a look.</p>
+
+                   <p><img SRC="images/ontrack5.jpg" NOSAVE height=348 width=550></p>
+
+
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end end overview --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Improving And Re-working Parts</h2>
+			<div class="entry">
+
+                   <p>The rods are a bit clumsy, we'll improve them somewhat. Open another TSM, after minimising the first. Load Rod01. <p>We're going to make it more homogenous &amp; improve its looks a bit. To do this we'll need to split the part. This is why we opened another TSM, here we have just 2 parts. In 'polygon' mode find &amp; subdivide both 8 sided polygons. I can't really give a blow-by-blow summary. You'll see which parts to split &amp; move. Experiment - you haven't saved anything yet. You'll be using the multiple point tool.&nbsp;</p>
+
+                   <p><img SRC="images/rod_jon1.jpg" NOSAVE height=400 width=550></p>
+
+                   <p>Points won't join to other points in the same part. Hence splitting, even if it's just 1 polygon. Takes longer talking about it than doing it. If you look in the parts list everything will still be called Rod01.&nbsp;</p>
+
+                   <p><img SRC="images/rod_jon2.jpg" NOSAVE height=400 width=550></p>
+
+                   <p>You'll find that you're going to be 2 polygons short. Copy an individual polygon, paste &amp; move. When you're satisfied rejoin the parts. Cycle through the parts &amp; highlight with the space bar. Remember we want the part with 'Wheels2' axis to be the last.&nbsp;</p>
+
+                   <p><img SRC="images/rod_jon3.jpg" NOSAVE height=400 width=550></p>
+
+                   <p>Hidden from view TSM still isn't satisfied, test the part by smoothing it in F2 - it won't smooth. There's something else we need to do. Go to 'part' menu, halfway down is 'Snap to Grid'. This feature gathers doubled points within a certain distance &amp; singles them. It's an internal function of the program we're not actually drawing to a tenth of a millimetre. Press, you'll see the default figure is 0.1. This is way too big, we want a figure of 0.0001 - something impossibly small. Our points are coincident as we used 'v'.</p>
+
+                   <p><img SRC="images/gridsize.jpg" NOSAVE height=153 width=285></p>
+
+                   <p>Look what's happened. We've lost 30 points from just this one part - that's 60 bits of extra information that MSTS doesn't have to lug around with it - just from 2 rods.</p>
+
+                   <p><img SRC="images/30point.jpg" NOSAVE height=119 width=168></p>
+
+                   <p>Notice that it's also smooth.</p>
+
+                   <p><img SRC="images/smooth1.jpg" NOSAVE height=211 width=276></p>
+
+                   <p>While this proves that snap to grid has worked the rod looks more like a dog's bone so take smoothing off the part. Save the part; don't transform it into Rod02 yet. Load rod02, F2, animation button &amp; save the motion. Delete rod02, load the new rod01 &amp; transform it to rod02. Load the motion you've just saved. Save the part. Minimise this TSM - it's too easy to lose parts. Open the first TSM, delete both rods &amp; load the new. Check that they both have 'main' as parent. Check the animation &amp; save the project. It would be a good idea to back-up onto disk.</p>
+
+
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end end overview --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Cab And More Big Lumps</h2>
+			<div class="entry">
+
+                   <p>There are dozens of way of making objects like the cab of our B4. For this demo I'll build it from a series of boxes. This will give an exterior, interior &amp; cab coaming. We could equally make a flat side, copy &amp; flip it, then make the rear parts.&nbsp; <p>Start with a box which fits behind the tank. Rough it out by eye.</p>
+
+                   <p><img SRC="images/cab_1.jpg" NOSAVE height=400 width=550></p>
+
+                   <p>Let's get accurate; snap the 2 points closest to the tank.</p>
+
+                   <p><img SRC="images/cab_2.jpg" NOSAVE height=400 width=550></p>
+
+                   <p>Point mode, F2, check the 'x' &amp; 'y' dimensions. Go round the other points &amp; make the box part regular.&nbsp;</p>
+
+                   <p><img SRC="images/point2.jpg" NOSAVE height=179 width=215></p>
+
+                   <p>Copy the part, paste &amp; move building up the cab shape. I've used 13 boxes in total.&nbsp;</p>
+
+                   <p><img SRC="images/cab_3.jpg" NOSAVE height=400 width=550></p>
+
+                   <p>Now with a scrap of paper to hand ( to jot down figures in F2 ) tidy the boxes into shape; make the verticals vertical, the horizontals horizontal. I've again opened another TSM. Notice this is Autosave, I'd forgotten to save the part. Remember this feature - you'll lose a maximum of 10 minutes work.</p>
+
+                   <p><img SRC="images/cab_4.jpg" NOSAVE height=400 width=550></p>
+
+                   <p>If you can visualise inside the cab you'll see bottom, top, front &amp; rear faces which we don't need. Even with a small loco like this we want to lose all unnecesssary polygons. In 'polygon' mode go round &amp; select all unseen polygons. Split part, into 'part' mode, delete the part. From this cab side part I deleted 38 polygons, leaving 36. For both sides that's 158 polys saved. I'd separated the polygon which will be the rear horizontal part of the coaming. 'Snap to Grid' - another shed full of points saved. Don't try to delete polygons - you'll have orphaned points to confuse MSTS. Always make your polygons into parts &amp; delete them - even just a triangle.</p>
+
+                   <p><img SRC="images/cab_5.jpg" NOSAVE height=400 width=550></p>
+
+                   <p>In order to have the interior smaller than the exterior grab points &amp; move them inwards. Save this part as cab_st.</p>
+
+                   <p><img SRC="images/cab_6.jpg" NOSAVE height=400 width=550></p>
+
+                   <p>Load cab_st, F2, negative in 'x', rename cab_pt, flip in 'x'. You now have a matched pair of cab sides. Before texturing I'll delete the bottom front polygon, extend the tank side &amp; join the part.</p>
+
+                   <p><img SRC="images/cab_7.jpg" NOSAVE height=400 width=550></p>
+
+                   <p>Make cab front from a 7 sided polygon, you'll need to copy &amp; paste it, in F2 make it alphanorm in the 'materials' box; these parts will use transparencies.You need 3 copies; cab front forward &amp; rear ( flipped ); cab rear forward &amp; rear (flipped). Snap with 'v', F2 to tidy up. It's not a bad idea to save the loco with a different name. If there's a problem you can always reload an earlier version &amp; add newer bits - that's another habit I learned with the earlier flightsim programs.</p>
+
+                   <p><img SRC="images/cab_8.jpg" NOSAVE height=400 width=550></p>
+
+                   <p>It's looking more like a loco now. I've substituted my usual grey blank.ace.&nbsp;</p>
+
+                   <p><img SRC="images/ontrack7.jpg" NOSAVE height=319 width=459></p>
+
+
+
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end end overview --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Chimney And Dome</h2>
+			<div class="entry">
+
+                   <p>I shall add a few more bits before making the cylinders. The dome starts as a sphere, cut in two - discard the bottom half.&nbsp;</p>
+
+                   <p>How many sides?</p>
+
+                   <p>This is entirely preference remembering the trade-off between detail &amp; frame rate. I remember, from the best flightsim how-to, the tip that the cockpit surrounds gave the identity to an airliner. Buffers, chimneys &amp; domes do the same for a steam loco. Make a chimney too fat or with the wrong taper - it'll never look like the prototype. You can make the best wheels that ever graced a virtual loco - nobody notices.</p>
+
+                   <p>I've made this dome with 12 points - you'll almost certainly need 2 sections for the base in order to make a convincing mating surface with the boiler. So, with half a sphere &amp; a tube snapped with 'v', squeeze &amp; pull your dome into shape. 'Snap to Grid' &amp; save. I'm a lazy bod so I'll use the dome as a basis for the chimney. You know the proceedure now. I've split off the top section to use as the inside of the chimney - the inverted cone - gives a good effect for just 12 triangles. Roughly place it &amp; snap with 'v'.&nbsp;</p>
+
+                   <p><img SRC="images/chim_1.jpg" NOSAVE height=386 width=550></p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end end overview --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">A Couple Of Brilliant Features</h2>
+			<div class="entry">
+
+                   <p>TSM is over modest - tucked away are some very useful features. One is the ability to hide parts from view. This doesn't affect the parts in any way. You could always hide parts by deleting them but this rather defeats the object of the exercise. We'll hide the dome so that we can see the chimney better. </p>
+
+                   <p><img SRC="images/domelist.jpg" NOSAVE height=353 width=471></p>
+
+                   <p>Isolate the dome in the parts list, 'OK'. Go to the 'Edit' menu, about 2/3 of the way down you'll see 'Hide Selected', press. Please be careful in this list - it's very easy to press the wrong thing &amp; lose parts. That's why I suggested you practice on one of the samples. Make a note of the hot keys - saves time. Notice the dome is hidden in the perspective view as well.&nbsp;</p>
+
+                   <p><img SRC="images/domehide.jpg" NOSAVE height=386 width=550></p>
+
+                   <p>I made the cab roof from an open 8 sided tube - there's an edge which is very noticable on this loco. (I've got to admit to cheating here - I took the screenshot after I'd made the part).&nbsp; <p>To make the closing rectangles. In 'point' mode lasso 4 points - it's pretty obvious which - go the the 'polygon' menu. Only ' Make Polygon From Selected Points' will be black &amp; active. Press &amp; you'll see that a polygon has been added to the roof. Repeat for the other polygons. Don't try to make a closed tube for a part like this - you'll get tied in knots. NB polygons like these won't cause any problems, if the polygon is more square TSM sometimes gets confused &amp; draws the polygon crossed. There is a way of correcting it - cross 2 points - into 'polygon' mode. 'f' for flip, a small screen appears with Yes to flip selected points, No to flip entire polygon. More experimentation needed here. Sometimes it's just as quick to introduce a polygon &amp; glue it on - especially on a curved surface.</p>
+
+                   <p><img SRC="images/cabroof1.jpg" NOSAVE height=386 width=550></p>
+
+                   <p>Here's another useful dodge. Sometimes it's useful to lose the solid modelling. Go to 'View' menu, 'Perspective View' &amp; turn off 'Display as Solid'.</p>
+
+                   <p><img SRC="images/cabroof2.jpg" NOSAVE height=386 width=550></p>
+
+                   <p>One more thing you'll notice about TSM; I have a program running which tells me the RAM usage. It's VERY greedy with memory. It takes memory until it'll lock up. Probably won't until it has a big file but every now &amp; then, after one of your frequent saves, come out of TSM - maybe reboot the computer while you make another coffee. Reload TSM &amp; start fresh. Remember if the worst happens &amp; it locks up you always have Autosave.dst.</p>
+
+                   <p>You'll have noticed some little triangles in the drawing. These are for the steam &amp; smoke effects. Draw a small triangle &amp; place it above the chimney. F2, to the right of the 'Part Name' box you'll see 'Reference Part Names'. By definition these parts aren't drawn by TSM - they're to identify animation functions or, in this case, additions to the .eng file. Choose fx_stackFX , remember we have to interpret from the American. Do the same for the whistle, safety valve &amp; cylinder cocks. The other function is for injector overflow. While we're here make a note of where you thing the 'HeadOut Display' should be. The default will be for the Scotsman - or in the first wagon of our train! Make sure that the 'Project Properties' has been changed from B4_1 to B4_2 &amp; remake. The screen will have everything ticked. Go into the Consist Editor &amp; make up a train for B4_2. The .eng &amp; .wag files  can be read &amp; edited with Windows wordpad - you may have to associate first. This time open the B4_2.eng file &amp; see the train effects that have just been added. Find the 'HeadOut' line &amp; alter it. Make the first value negative, probably -1.2. Civilised locomotives are left hand drive.</p>
+
+                   <p>Now we should have a loco with smoke from the chimney &amp; a little wooden whistle that would whistle.</p>
+
+                   <p><img SRC="images/ontrack10.jpg" NOSAVE height=367 width=535></p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end end overview --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Copyright Notice</h2>
+			<div class="entry">
+
+                 <p><a href="copyright.html">Please read my copyright notice (click here)</a></p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end end overview --->
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p><a href="index.html">Part 1</a>
+                 <br><a href="TSMloco_02.html">Part 2</a>
+                 <br><a href="#">Part 3</a>
+                 <br><a href="TSMloco_04.html">Part 4</a>
+                 <br><a href="TSMloco_05.html">Part 5</a>
+                 <br><a href="TSMloco_06.html">Part 6</a>
+                 <p><a href="copyright.html">Copyright, T&C</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 2002, 02 April 2010</center></p>
+</div>
+</body>
+</html>

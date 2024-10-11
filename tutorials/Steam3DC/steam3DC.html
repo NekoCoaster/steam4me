@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <title>A Steam Loco for Microsoft Train Sim Using 3DCanvas - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../../index.html">Home</a></li>
+		<li class="current_page_item"><a href="../index.html">Tutorials</a></li>
+		<li><a href="../../msts_errors.html">Error Messages</a></li>
+		<li><a href="../../steam/index.html">Steam</a></li>
+		<li><a href="../../electric/index.html">Electric</a></li>
+		<li><a href="../../passenger/index.html">Passenger</a></li>
+		<li><a href="../../diesel/index.html">Diesel</a></li>
+		<li><a href="../../freight/index.html">Freight</a></li>
+		<li ><a href="../../vans/index.html">Vans</a></li>
+		<li ><a href="../../routes/index.html">Routes</a></li>
+		<li><a href="../../utilities/index.html">Utilities</a></li>
+		<li><a href="../../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../../images/S4M_Banner_left.png"  height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../../images/S4M_Banner_Tutorials.png"  height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">A Steam Loco for Microsoft Train Sim Using 3DCanvas</font>
+                        <br>by Paul "decapod" Gausden</h2>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                             <p>This tutorial to build a steam locomotive from scratch using 3D Canvas by <a href="http://www.amabilis.com">Amabilis</a> was a small project I started in December 2002. I did not want to just sit down and write it from start to end and publish, so I published parts on the <a href="http://www.uktrainsim.com">UKTrainsim.com</a> user forums to receive feedback as I went to hopefully improve the parts before they were collated and published as a whole</p>
+
+                             <p>In this text, I have kept in a few of the relevant comments and questions from the forums - many thanks to all those who contributed to the discussion and improvements for this version: Ian, Mike, Daryn, Richard, Gavin, Jason and anyone else I have forgotten.</p>
+
+                             <p>I am publishing the collated parts in &quot;chapters&quot;, though the chapter headings are quite loose descriptions of the parts.</p>
+
+                             <p>Also, for some of the later parts I have not included the forum comments to save some time with the collation of this text.</p>
+
+                             <p>April 2003 - Even though the tutorial is not yet complete, the model and source files are now available at the <a href="http://www.highworth.freeuk.com">Highworth Project Website</a></p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+                          <a Name = "start" </a>
+		</div>
+
+    <!--- end end overview --->
+
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Beginners and reading
+                        <br>Loco Lesson zero - Absolute beginners?</h2>
+			<div class="entry">
+
+                        <p>To make sure everyone using the same nomenclature and understanding, the following is all I think you need to read before starting this Tutorial. It is not much and is well worth reading a second time, even if you are experienced - it always reveals something new.
+                        <br>The rest will be introduced as we come to it.</p>
+
+                        <p>Go to the <b> 3D Canvas Help text</b>: <b>"Getting started with 3D canvas"</b> - read this page, the link to <b> "Navigation Control", "Mouse Navigation", "Edit Control" and "Mouse Editing".</b></p>
+
+                        <p>Next read and understand (and do) the <b> "Tutorials"</b>:</p>
+                        <ol>
+                           <li><b>3D Canvas Basics</b></li>
+                           <li><b>Resizing Objects</b></li>
+                           <li><b>Using the Scene Hierarchy</b> (also read the section of the same name)</li>
+                        </ol>
+
+                        <p>Finally under <b> "Menus, Toolbars and other Options&quot;</b>, read as much as you can, pay particular attention to:</p>
+                        <ol>
+                          <li><b>"Component Menu"</b></li>
+                          <li><b>"Using alternate keyboard functions"</b></li>
+                          <li><b>the "primary toolbar" constraint and orientation modes</b> - then experiment by moving objects with the various orientation modes or constraints switched on.</li>
+                        </ol>
+
+                        <o>You should now be able to:</p>
+                        <ol>
+                          <li>add and manipulate objects within groups in a scene, using the controls, mouse and keyboard.</li>
+                          <li>understand the hierarchy concept and group positioning.</li>
+                          <li>be able to access all menus and toolbar options.</li>
+                          </ol>
+                        </p>
+
+       			</div>
+			<p class="meta"><span class="posted"><a href="chap_1.html">Go To Chapter 1</a></span><a href="#" class="permalink">Return to top of page</a></p>
+
+		</div>
+
+    <!--- end cause --->
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <p><h3>Part 1 - Below the footplate</h3>
+                        <blockquote>
+                          <p><a href="#start">0 - Beginners and reading</a></p>
+                          <p><a href="chap_1.html">Chapter 1 - Wheels</a></p>
+                          <p><a href="chap_2.html">Chptr 2 - Round Wheels</a></p>
+                          <p><a href="chap_3.html">Chptr 3 - Complex footplate shape</a></p>
+                          <p><a href="chap_4.html">Chptr 4 - Pistons and Valve gear</a></p>
+                          <p><a href="chap_5.html">Chptr 5 - Complex animations</a></p>
+                        </blockquote>
+
+                        <h3>Part 2 - Above the footplate</h3>
+
+                        <blockquote>
+                          <p><a href="chap_6.html">Chptr 6 - Boiler, Funnel and Dome</a></p>
+                          <p><a href="chap_7.html">Chptr 7 - More Bodywork and Texturing</a></p>
+                          <p><a href="chap_8.html">Chptr 8 - Detailing</a></p>
+                          <p><a href="chap_9.html">Chptr 9 - More Detailing</a></p>
+                          <p>&nbsp;</p>
+                        </blockquote></p>
+               </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 2002-2003, 22 April 2010</center></p>
+</div>
+</body>
+</html>
+
+

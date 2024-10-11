@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>How To Animate An Electric Loco (And Make Parts Move Using The P Key): Section 8 - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li ><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png"  height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png"  height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+                        <h2><font color="#3333FF">How To Animate An Electric Loco (And Make Parts Move Using The P Key): Section 8</font>
+                        <br>by Paul DeVerter</h2>
+                        <h3>A Port City Car Co. Project Copyright &copy; 2005</h3
+
+                        <p></p>
+			<h2 class="title">SECTION 8 - The Trolley Wheel</h2>
+ 			   <div class="entry">
+
+                   <p>Actually this Section had nothing to do directly with the P key, or animation using that key, except to point out several things that will not work.  Instead, this Section deals primarily with the counter rotating trolley wheel.</p>
+
+                   <p>Located at the top of the trolley pole is either a shoe or a wheel.  Locomotives that drew a good deal of current, typically used a shoe while lighter cars, such as interurban and streetcars typically used a wheel.  The wheel is about 6" in Diameter, and perhaps 1½ or 2" thick.  Usually they were spoked.  Tim Muir has placed a few trolleys in the Train-Sim Library that have rotating trolley wheels.  Unfortunately, these wheels rotate in the wrong direction.</p>
+
+                   <p>Assume you have a trolley car moving from left to right.  Then the wheels on the track rotate clockwise.  In order to make the trolley wheel rotate, it is designated with a reserved Train Name, such as Wheel23.  This will automatically cause it to rotate, just as do Wheels22 or 21, but in the same direction of rotation as the wheels on the track.  That is because the Part Parent is Bogie2 (or perhaps Bogie1, if a single car truck).  But, the trolley wheel does not ride on top of the rail; instead it rides under the trolley wire.  So, as the car moves from left to right, the trolley wheel should be rotating counterclockwise, not clockwise. Well, you can barely see it, so maybe it does not matter.  But Tim issued a challenge, so I decided to see if I could make the wheel rotate the proper direction.  It can be done, with a little animation.</p>
+
+                   <p>Once again, make a fanciful trolley car, and on top place a trolley base (to represent the springs that hold up the pole, a trolley pole, and at the top a trolley wheel to contact the wire.  If you like, you could use the same locomotive you used for the Crane, in Section 7 or you could cobble together a new one, without the Crane feature, so that it will not interfere with the basic features we are going to cover.</p>
+
+                   <p>I made a new one, and here is what it looks like.  It is our familiar box Main,</p>
+
+                   <p><img src="images/pdv_anim_loco_801.jpg" width="235" height="169" alt="" border="0"></p>
+
+                   <p>and has the usual 2 Bogies, two sets of wheels, and the trolley base, pole, and wheel. Since the instructions for making this have been pretty well covered in Section 7, I am not going to spend time in showing you how to make it.</p>
+
+                   <p>There are some things that must be remembered.  The Part Parent is the Main.  The 2 Bogies are each dependent from the Main.  The wheel sets Wheels11 and Wheels 12 are dependent from Bogie 1, etc.  Lets set the Animation Frames to 9, and make the Trolley Wheel a little large so you can see it better.</p>
+
+                   <p><img src="images/pdv_anim_loco_802.jpg" width="512" height="297" alt="" border="0"></p>
+
+                   <p>Once you have everything textured, you must decide what name to use, and also what to use as a Part Parent for the Trolley Wheel.  As noted in the introduction, if you make the Name one of the Reserved Train Names, then the animation may be handled automatically. Wheels11, etc are done in that manner.  However, they will turn the wrong direction for a trolley wheel.  Suppose we chose another Train Name, this time Wheel1.  This Train Name is not automatically given rotation by TSM.  Instead, you must add a rot file, or else manually do the part animation bit.  The drivers on a steam locomotive are named in this same series, but the animation is not automatic.  On the other hand, because it is a reserved Train Name, it will rotate as the locomotive moves down the track, and will stop when the loco stops.</p>
+
+                   <p>This is what I tried, and it worked.  Name the Trolley Wheel with the reserved Train Name Wheel1, and make the Part Parent Main.  Now you must set up the animation so that the Wheel1 will turn counterclockwise as the Locomotive moves from left to right.  To do this, you may use the "Ani" button and go through the procedure you have already learned. Alternatively, I gave you some exemplary rot files as attachments to Section 1, How To Animate A Scenery Object.  Being lazy, I used one of those.  I chose the one with 8 Frames of animation, rotating about the x axis, and counterclockwise.</p>
+
+                   <p>Simply go to the Part Animation box, and for the Rotation Keys portion click the Load button, and browse to where you have previously saved the rot file, and select it.  Your Part Animation window will then look like this.</p>
+
+                   <p><img src="images/pdv_anim_loco_803.jpg" width="269" height="147" alt="" border="0"></p>
+
+                   <p>Now it is time to Create the Train Simulator Object and see what you have. You should have an electric locomotive named TrolleyWheel, which moves right along on the track, and you should notice that the Trolley Wheel is likewise rotating, but counterclockwise, which is just fine for a wheel pressing up on the trolley wire.</p>
+
+                   <h2>Lessons Learned</h2>
+
+                   <p>You now know how to animate your Trolley Wheel, in the sense that you can make it rotate, in the proper direction relative to the trolley wire.   And you have used a reserved Train Name, so that the rotation is not continuous, but is instead a function of movement of the locomotive.</p>
+
+                   </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "link1"</a>
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Things that Don't Work</h2>
+			<div class="entry">
+
+                   <p>I tried a number of other experiments with the rotating trolley wheel.  I made the trolley pole amenable to movement by the P key, i.e. as a pantograph part.  While I could get the pole to go up and down, using the P key, the trolley wheel refused to cooperate, and still rotate. If it were named with a Pantograph Train Name, it would move with the pole, but not rotate. If named Wheel1 it could be made to rotate, but not come down with the pole.  So, I ended up with a rotating wheel up in the air, and a pole that was down.  Not too good.  If I added motion to the Wheel1 to match the end of the pole, then the Wheel would jump up and down as the car moved, and not pay any attention to the pole.</p>
+
+                   <p><img src="images/pdv_anim_loco_804.jpg" width="331" height="301" alt="" border="0"></p>
+
+                   <p>I also tried making the trolley pole and base dependent from either Bogie.  When you do so, the base moves to the side as the Bogie swivels, and I could not figure out how to make it stay in the center, and yet rotate as the Bogie rotates, unless the trolley base happened to be centered over the vertical axis of the Bogie.</p>
+
+                   </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+
+		</div>
+
+    <!--- end cause --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">General Remarks</h2>
+			<div class="entry">
+
+                   <p>I strung together 5 or 6 of various types of these animated electric locos.  I found that the lead loco seems to control the whole train.  So, if the lead loco had only 4 or 5 Frames of animation, and the SideDump or Crane had 20, sometimes the animation on the trailing cars would stop when the lead loco animation stopped, and before the Crane had finished going through its whole routine.  The moral of this story is to make the number of animation frames in the lead electric loco at least as large as the number in any of the animated cars which follow.</p>
+
+                   <h3>Credits For Sections 1-8</h3>
+
+                   <p>I want to particularly thank Ed Hawkins, who taught me, by example, that the Sim would automatically interpolate the animation frames, and who also taught me that you need not have rotation keys when there is no current rotation.   He also convinced me that the Part Animation window is the most important asset in correcting things that go wrong, and in even setting up the animation.</p>
+
+                   <p>These Sections were Beta tested and proofread by Ted Ahner and Tim Muir.   Questions were answered, suggestions made, and encouragement given by Ed Hawkins, Ted Ahner, Tim Muir, Chuck Zeiler, and Bill Hall.</p>
+
+                   </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+
+		</div>
+
+    <!--- end cause --->
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Series Contents</h2>
+                 <p> <a href="Animelec1.html">Section 1</a>
+                 <br><a href="Animelec2.html">Section 2</a>
+                 <br><a href="Animelec3.html">Section 3</a>
+                 <br><a href="Animelec4.html">Section 4</a>
+                 <br><a href="Animelec5.html">Section 5</a>
+                 <br><a href="Animelec6.html">Section 6</a>
+                 <br><a href="Animelec7.html">Section 7</a>
+                 <br><a href="#">Section 8</a>
+
+                 </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 12 April 2005, 06 May 2010</center></p>
+</div>
+</body>
+</html>
+
+

@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>Image Under Routes in Route &amp; Activity Selection in MSTS - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li ><a href="../vans/index.html">Vans</a></li>		
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png"  height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png"  height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">How to create the image that appears under the Routes in Route &amp; Activity Selection in MSTS</font>
+                        <br>compiled by Yuri Sos</h2>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                   <p><img SRC="images/logo_02.jpg"  height=562 width=750></p>
+
+                   <p>The default routes generally have a logo in the black spot in the screen shot above.&nbsp; I've written this tutorial to demonstrate how to create your own .ACE file to fill this position.</p>
+
+ </p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+            <a Name = "link1"</a>
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- 3d 1 --->
+
+		<div class="post">
+			<h2 class="title">Ingredients required</h2>
+			<div class="entry">
+			
+<ol>
+<li><b>Microsoft Train Simulator</b>
+<li><b><a href="../MSTS_Updates/index.html">MSTS Tools Update</a></b> (ie version 1.4 MSTS) should have been installed, especially with the updated makeace.exe.</li>
+
+<li><b><a href="http://www.mnwright.btinternet.co.uk/download/tgatool2.ZIP">TGATools</a></b> by Martin Wright:&nbsp; available from Martin's site at <a href="http://www.mnwright.btinternet.co.uk/train/train.htm" target="_blank">http://www.mnwright.btinternet.co.uk/train/train.htm</a>.  TGATools 2a is also installed as part of Route_Riter.</li>
+
+<li>As <b><a href="http://www.jasc.com" target="_blank">Paintshop Pro 7.02</a></b> is the most commonly used image manipulation software in MSTS, I've used this in all the screenshots.</li>
+</ol>
+<p>I'll use Mark Todd's Test Track as the example route in this tutorial. Mark's route is available in the trainsim.com library.</p>
+
+
+ </p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+            <a Name = "link2"</a>
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- 3d 1 --->
+
+		<div class="post">
+			<h2 class="title">The Process</h2>
+			<div class="entry">
+
+
+<p>The gap in the image above is normally filled by an .ACE file bearing the same name as the .REF file in your route.&nbsp; Unless altered by the route developer, the default .ACE files displays as a black image with a transparency gradation around the edge giving it the fuzzy halo appearance.</p>
+
+<p>The .ACE is automatically created by the Route Creation process.</p>
+
+<p>First you need to decide what logo you are going to place there - something simple, easily recognisable when you select that particular route.&nbsp; I decided that a clipboard graphic might be appropriate for a Test Track route so I used Google's image search engine to give me a selection of likely suspects.</p>
+
+<p>This is my "short list" of images:</p>
+
+<p><img SRC="images/logo_01.jpg"  height=354 width=627></p>
+
+<p>The image I chose looked like this:</p>
+
+<p><img SRC="images/logo_05.gif"  height=135 width=165></p>
+
+<p>I've actually picked this because the greyish background will blend into the MSTS background colours quite nicely.  As we're going to utilise the transparency within the .ACE file, the first thing to do is to get an image file we can work with.</p>
+
+<p>Open TGATools.</p>
+<p>Select <b>File | Load.</b>&nbsp; Browse to the "Test Track" folder and select <b>File of Type:</b> "ACE Image".  Select Test Track.ACE, then click <b>Open.</b>.</p>
+
+<p><img SRC="images/logo_06.jpg"  height=319 width=566></p>
+
+<p>The screen will then look like this:</p>
+
+<p><img SRC="images/logo_07.jpg"  height=543 width=750></p>
+
+<p>Select <b>File | Save As</b></p>
+
+<p><img SRC="images/logo_08.jpg"  height=394 width=750></p>
+
+<p>Save as Type:&nbsp;<b> "Targa Image". </b>Assign it a name, say "mylogo".&nbsp; Click <b>Save</b>.</p>
+
+<p><img SRC="images/logo_09.jpg"  height=319 width=566></p>
+
+<p>Now open Paintshop Pro.</p>
+
+<p>Select <b>File | Open</b>.  Browse to "Test Track" folder.  Select<b> File of Type</b>: Truevision Targa. Select <b>File name</b>: mylogo.tga. Click <b>Open</b>.</p>
+
+<p><img SRC="images/logo_10.jpg"  height=471 width=572></p>
+
+<p>Well, that looks pretty underwhelming.</p>
+
+<p><img SRC="images/logo_11.jpg"  height=585 width=750></p>
+
+<p>Click <b>Masks | Load from Alpha Channel</b></p>
+
+<p><img SRC="images/logo_12.jpg"  height=535 width=750></p>
+
+<p>Click <b>"OK"</b></p>
+
+<p><img SRC="images/logo_13.jpg"  height=325 width=470></p>
+
+<p>Now you can see the alpha or transparency layer.</p>
+
+<p><img SRC="images/logo_14.jpg"  height=576 width=750></p>
+
+<p>(By the way,&nbsp; you can change the way the transparency layer looks in Paintshop Pro by clicking <br><b>File | Preferences</b> | Click on <b>Transparency</b> tab, then make your changes.)</p>
+
+<p><img SRC="images/logo_15.jpg"  height=395 width=662></p>
+
+<p>Now<b> File | Open</b> and select your logo image.</p>
+
+<p><img SRC="images/logo_16.jpg"  height=590 width=750></p>
+
+<p>Click<b> Edit | Copy</b> or <b>Ctrl-C.</b> Close this file.  The .TGA file is now on the screen.</p>
+
+<p>Click<b> Edit | Paste | As New Layer</b> or<b> Ctrl-L.</b>  Only the central part of the image is visible.  Press the Deformation button on the toolbar at left (arrowed in image below):&nbsp; a box with ten little squares or "handles" will appear, outlining the true size of the overlaid image.</p>
+
+<p><img SRC="images/logo_17.jpg"  height=590 width=750></p>
+
+<p>Grab one of the eight handles around the perimeter of the box and drag until the image just fits inside the underlying .TGA file with just a little bit of transparency showing:</p>
+
+<p><img SRC="images/logo_18a.jpg"  height=234 width=328></p>
+
+<p>Click on<b> File | Save As.</b>  Make sure you're in Test Track.&nbsp; Select <b>"Save as Type"</b>: as <b>Truevision Targa (*.tga)</b> and give it a name (say copy2).</p>
+
+<p>Make sure the TGA options are set to "24-bit" and "Uncompressed" or your ACE will look scrambled.</p>
+
+<p><img SRC="images/logo_19a.jpg" border=1>  </p>
+
+<p>&nbsp; Click <b>Save.</b></p>
+
+<p><img SRC="images/logo_19.jpg"  height=471 width=572></p>
+
+<p>A Warning message pops up.&nbsp; Click on <b>Yes.</b></p>
+
+<p><img SRC="images/logo_20.jpg"  height=220 width=639></p>
+
+<p>Open TGATool.&nbsp; Click<b> File | Load.</b>&nbsp;Select <b>File of Type</b>: Targa Image.</p>
+
+<p>Click on <b>copy2.tga</b>.&nbsp; Click on<b> Open</b>. 
+
+<p><img SRC="images/logo_21.jpg"  height=319 width=566></p>
+
+<p>Make sure the settings on the right of the screen are set as in the image below.</p>
+
+<p><img SRC="images/logo_25.jpg"  height=292 width=228></p>
+
+<p>Click on <b>Export | Ace (Alpha).</b></p>
+
+<p><img SRC="images/logo_22.jpg"  height=324 width=500></p>
+
+<p>Select&nbsp; <b>Test Track.ace.</b>&nbsp; Click on <b>Save.</b></p>
+
+<p><img SRC="images/logo_23.jpg"  height=319 width=566>
+
+<p>You're done.</p>
+
+<p>Open MSTS.&nbsp; Select your Route.&nbsp; Your new logo appears.</p>
+<p><img SRC="images/logo_24.jpg"  height=563 width=750></p>
+
+<p>I know you're saying..... that's a lot of work just for a logo.&nbsp; Why not make an .ACE file from a .BMP or .TGA sized exactly 177x142 pixels?&nbsp; The answer is in the two screenshots below: at left, an .ACE file made from a simple .BMP file exactly 177x142 pixels in size and at right, using the transparency of the .TGA to blend and neaten the frame around the image.&nbsp; The image on right is just a little more "finished".</p>
+
+<br>&nbsp;
+<center><table>
+<tr>
+<td>
+<center><img SRC="images/logo_no_a.jpg"  height=200 width=230></center>
+</td>
+
+<td>
+<center>.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .&nbsp;</center>
+</td>
+
+<td>
+<center><img SRC="images/logo_a.jpg"  height=200 width=230></center>
+</td>
+</tr>
+</table></center>
+
+<p>I hope you've found this tutorial of benefit.</p>
+<p>Enjoy.
+
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+
+		</div>
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#link1">Ingredients</a>
+                 <br><a href="#link2">The Process</a>
+               </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 22 May 2002, 19 April 2010</center></p>
+</div>
+</body>
+</html>

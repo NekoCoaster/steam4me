@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <meta name="Author" content="Jeff Krausyao">
+   <meta name="GENERATOR" content="ConTEXT  v0.98">
+   <meta name="Description" content="Creating a Diamond Crossover complete with Track Node">
+<title>Creating a Diamond Crossover complete with Track Node - at The Steam4me Site</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Creating a Diamond Crossover complete with Track Node</font>
+                        <br>by Jeffrey Kraus-Yao</h2>
+                        <h3>Contributions by Yuri Sos</h3>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                             <p>In his tutorial on <a href="diamond_X.html">creating diamond crossings</a>, Vince Cockeram demonstrated that one track simply laid over another might be an expedient way to create a diamond crossing, but that it would not be recognised in the sim as such and thus trains would collide on the opposing tracks.  A crossover node is required at the junction and up till now, only diamond crossings specially created and registered in the global tsection.dat, could be correctly signalled.</p>
+
+                             <p>It is now possible to add a crossing node by direct editing of the track database files.  This is not as daunting as it sounds!</p>
+
+                             <p>Crossover nodes are used by MSTS signalling to control access to a track by a train in order to prevent collisions between Player and AI trains. Crossover nodes are automatically placed, being integral to special crossover track sections (e.g. default and Xtracks diamond crossing pieces) and when these track pieces are laid, two crossover nodes are installed at the same position with one crossover node per track.</p>
+
+                             <p>However, the track database can be manually edited to add crossover nodes. By placing and converting track interactives (e.g. speed posts, deer hazards) placed by Route Editor (RE), the difficult part of selecting which track vector and calculating distance from start of track vector is done by Route Editor.</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "procedure">
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">The Procedure</h2>
+			<div class="entry">
+
+                        <p>The first version of this procedure used "Speedposts". However, their unpredictability in areas other than isolated diamond crossings can make placing them problematic (they can sometimes not jump across 2 tracks or, more frequently jump across more than two tracks). (<i>If you want to read the older tutorial, <a href="obsolete_make_xover.html">click here.</a></i>)
+
+                        <p>It's probably better to use the deer hazard as at least you can be sure of its placement. You will need to use two deer hazards for each proposed node.  Here's a non-noded diamond crossing as seen in AE>.</p>
+
+                        <p><img src="images/make_node_01.jpg" border="0"></p>
+
+                        <p>Start by <a href="../Route_Riter/route_backup.html">backing up your route</a>.</p>
+
+                        <p>In Route Editor, start by placing a deer hazard on each track close to where the two tracks cross.  Make sure the hazards are placed on separate tracks - we can move them later.  This will create two Hazzard elements and link each TrVectorNode to the deer hazard by a TrItemRef element. Make a note of the World tile co-ordinates.</p>
+
+                        <p><img src="images/make_node_02.jpg" border="0"></p>
+                        <p><img src="images/make_node_03.jpg" border="0"></p>
+
+                        <p>Save changes and quit Route Editor.</p>
+
+                        <p>Using your favourite unicode-aware editor (<a href="context.html">ConTEXT</a> is used in these screenshots), open the two track database files, route.tdb and route.tit and search for "Hazzard" (sic); they are generally the last two items in the file, but the RE will sometimes drop one of them into an empty spot further up the file; in the example shown, we can see that they are separated by a couple of other Items; here we have the .TDB file (the .TIT file will be identical but you must make identical changes to each file):</p>
+
+                        <p><img src="images/make_node_04.jpg" border="0"></p>
+
+                        <p>We're going to make a few changes to both nodes in both files.</p>
+
+                        <ul>
+                           <li>Change <b>HazzardItem</b> to <b>CrossoverItem </b>: in two places in the two files;</li>
+                           <li>Change the "6" in the TrItemSData to a "2". If this is not done the signals will not be enabled by the dispatcher;</li>
+                           <li>Delete the complete line containing <b>TrItemPData</b> - in two places in the two files;</li>
+                           <li>Add a new line <b>CrossoverTrItemData ( tritemid trackshape )</b>: in two places in the two files; the first parameter of the CrossoverTrItemData element is the TrItemId of the other pair of the crossing. The second parameter is a track shape. Choose the number of a crossing track and it will use the ClearanceDist defined for that track shape in the global tsection.dat file. Suggestions include
+                           <ul>
+                               <li><b>75</b>: this is the default A1tXover2_5d.s with a clearance distance of 50m; or</li>
+                               <li><b>76</b>: this is the default A1tXover5d.s with a clearance distance of 25m.</li>
+                            </ul></li>
+                        </ul>
+
+                        <p>Save your changes.</p>
+
+                        <p>Now let's have a look at this diamond crossing in Activity Editor.  Crossing nodes are visible, protecting this diamond.</p>
+
+                        <p><img src="images/make_node_06.jpg" border="0"></p>
+
+                        <p>The nodes are close to, but not exactly on the crossing.  No matter, the crossing will still be protected.  You can adjust the position of the nodes by altering the first parameter of the <b>TrItemSData</b> element, eg  TrItemSData ( 339.645 00000002 ), where 339.645 is the distance in meters from the start of the trackvector. This number could be changed for both entries so the two nodes are on top of each other and then appear as one.  I adjust the value by 5 or so metres (in both .tit and .tdb files)and simply reload the route in AE after each change to see how I'm going.  Shown below, I've moved the east-west node, then the north-south node.</p>
+
+                        <p><img src="images/make_node_07.jpg" border="0"></p>
+                        <p><img src="images/make_node_08.jpg" border="0"></p>
+
+                        <p>Finally, you should have both the .tdb and .tit files looking something like this:</p>
+
+                        <p><img src="images/make_node_05.jpg" border="0"></p>
+
+                        <p><img src="images/make_xo_node_06a.jpg" border="0"></p>
+
+                        <p>Ok, now let's open Route Editor.  As you open it, you may see an error message like this:
+
+                        <p><img src="images/make_xo_node_07.jpg" border="0"></p>
+
+                        <p>If you do, simply answer "yes" and continue.  The Hazzard entries will be deleted in the World files.  This will make changes irreversible.  Immediately save and quit Route Editor, then re-start (RE likes to arc up if you don't folow this simple step and you may lose your route).  Answer "No" if you may want to convert the crossing node back to a Hazzard for deletion with Route Editor.</p>
+
+                        <p>Now restart Route Editor, place your signals, save and quit Route Editor.</p>
+                        
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="test">
+		</div>
+
+    <!--- end cause --->
+
+
+    <!--- sol hard --->
+
+		<div class="post">
+			<h2 class="title">Test Your Installation</h2>
+			<div class="entry">
+
+                        <p>It's time to create an activity and test.</p>
+
+                        <p>Here we have a team-ALCO X class locomotive as the player engine and the default GP38-2 as the traffic (AI) engine.  Upper quadrant semaphores have been placed so that you can see the aspect clearly.  The loco has a green signal whilst the diseasel is held behind a red signal on the crossing track.</p>
+
+                        <p><img src="images/make_xo_node_08.jpg" border="0">
+
+                        <p><img src="images/make_xo_node_09.jpg" border="0">
+
+                        <p>As soon as the train clears the crossing, the signal for the traffic train is set to green and the GP38 begins to move off.</p>
+
+                        <p><img src="images/make_xo_node_10.jpg" border="0"></p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="complex">
+		</div>
+
+    <!--- end sol hard --->
+
+    <!--- sol hard --->
+
+		<div class="post">
+			<h2 class="title">Complex Junctions</h2>
+			<div class="entry">
+
+                        <p><i>(Added by Yuri Sos 12 May 2011)</i></p>
+
+                        <p>This technique can be used to protect even complex junctions.  Here's an example of a complex tramway junction with three separate tracks crossing over each other at the same place.  All routes had to be signalled and protected for activities to work properly.</p>
+
+                        <p><img src="images/complex_junction_00.jpg" border="0">
+
+                        <p>The outer crossovers were quite simply noded, thus:</p>
+
+                        <p><img src="images/complex_junction_01.jpg" border="0">
+
+                        <p>The three-way junction looks tricky, but is in fact just three crossovers that happen to be sitting on top of each other.  As you can see by the image below, the crossovers are for crossing paths 1 & 2, crossing paths 2 & 3, and crossing paths 3 and 1:
+
+                        <p><img src="images/complex_junction_01a.jpg" border="0">
+
+                        <p>Following the principles above, I was able to place three pairs of deer hazards to create the three nodes protecting the junction completely.  A few tips: 
+                        
+                        <ul>
+                            <li>do only one pair at a time;</li>
+                            <li>save and quit Route Editor to the desktop between each pair;</li>
+                            <li>back up the route between each node placement.</li> 
+                        </ul>
+                        
+                        <p>The next three images show the placement one by one for nodes at 1-2, 2-3 and 3-1 respectively.</p>
+
+                        <p><img src="images/complex_junction_02.jpg" border="0">
+                        <p><img src="images/complex_junction_04.jpg" border="0">
+                        <p><img src="images/complex_junction_03.jpg" border="0">
+
+                        <p> Once I had placed all the nodes (and written down the TrItem numbers for each pair), I then moved them all to the one position on the junction.  The image below shows you the junction's appearance in AE.<p>
+
+                        <p><img src="images/complex_junction_05.jpg" border="0">
+
+                        <p>The junction works a treat!  Here below you can see a player (double-) tram crossing the junction (from left to right), another tram (AI) following one section behind, an AI tram  in the opposite direction entering the junction and turning, whilst another two AI trams are coming up the street at right: no collisions, all waiting their turn at the junction (the route uses BNSF interlocking signals buried below street level):</p>
+
+                        <p><img src="images/complex_junction_06.jpg" border="0">
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end sol hard --->
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#procedure">The Procedure</a>
+                 <br><a href="#test">Test Your Work</a>
+                 <br><a href="#complex">Complex Junctions</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 7 April 2008, 8 March 2010, 12 May 2011</center></p>
+</div>
+</body>
+</html>

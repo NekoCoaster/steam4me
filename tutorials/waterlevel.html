@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>Implementing Multiple Water Levels Within The Same Tile - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Implementing Multiple Water Levels Within The Same Tile</font>
+                        <br>By Cal Rasmussen
+                        <br>(with input from Bill Burnett, designer of Seaview)</h2>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                        <p>As I began construction on my Columbia Gorge route, I knew it was waiting for me.&nbsp; I started about ten miles east of the city of The Dalles (two words) and began to proceed westward.&nbsp; I knew that once I finished the Wishram yard and started west I would have to face it…the damn dam, one of two in my route.&nbsp; Modeling the dam structure is a major task in itself but the real problem is that the dam is not located on a tile boundary.&nbsp; A tile boundary does pass though the north end of the dam but that was of little help.</p>
+
+                        <p>The underlying problem is that MSTS only allows one water level per tile.&nbsp; However, this applies only to the automatically generated water that you can toggle on and off.&nbsp; There is nothing to prevent you from having something that looks like water at different elevations within the same tile.&nbsp; It simply takes some creative effort with terrain height adjustment and some fancy texturing techniques.</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "link1">
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Applying Water</h2>
+			<div class="entry">
+
+                        <p>To use my technique, you must replace the watertop.ace file in your <b>routes\envfiles\textures</b> directory with an opaque water texture such as the one the Pat Malicki has designed (<a href="files/patmalicki_water.zip">click here to download Pat's water texture</a>).&nbsp;&nbsp; This is a fairly realistic texture with ripples and waves and it is animated.&nbsp; Pat tells me that it is not animated by design, MSTS does is automatically.&nbsp; You can’t see the animation with the default watertop.ace because there is no pattern to it.</p>
+
+                        <p>Once you have the new watertop.ace file installed, copy this file into your <b>&lt;route-name>\terrtex</b> directory for use as a terrain texture.&nbsp; You may also want to create a terrain transfer from this texture.&nbsp; To do this, copy the watertop.ace into your &lt;route-name>\textures directory.&nbsp; Then add the following lines to your &lt;route-name>.REF file:
+
+<pre>&#09;Transfer (</b>
+&#09;&#09;FileName ( Watertop.ace )
+&#09;&#09;Class ( Transfers )
+&#09;&#09;Align ( None )
+&#09;&#09;Description ( Watertop )
+&#09;)
+</pre>
+
+                        <p>You will need some add-on tools for this task.&nbsp; You will need <a href="http://www.mnwright.btinternet.co.uk/download/tgatool2.ZIP">TGATools</a> by Martin Wright:&nbsp; available from Martin's site at <a href="http://www.mnwright.btinternet.co.uk/train/train.htm" target="_blank">http://www.mnwright.btinternet.co.uk/train/train.htm</a> to convert .ACE files to .BMP images for editing and back to .ACE files.&nbsp;&nbsp; Most important, you will need a good graphic editor such as <a href="http://www.jasc.com/products/psp/" target="_blank">Paintshop Pro</a> to edit the images extracted by Tgatools2.&nbsp; You will need a 3d modeling program such as <a href="http://www.trainsimulatorworld.com/tsm/tsmmain.htm" target="_blank">Trainsim Modeler</a> or <a href="http://www.amabilis.com/products.htm" target="_blank">3d Canvas</a> if you are going to create the water objects described below.</p>
+
+                        <p>I will describe three different methods of handling water in MSTS.&nbsp;&nbsp; First, the water built in to the Route Editor.&nbsp; Second, is a method involving terrain textures.&nbsp; Lastly, a technique used by Bill Burnett (a.k.a. Southern_Railway a.k.a. Tree_Frog) in SeaView which involves the use of flat custom scenery objects that look like water.</p>
+
+                        <p>If your route has a lot of water in it such as a major river, large lake, or ocean, then you can use the route editor water method for a significant portion of it.&nbsp; If your route has lakes and ponds at different levels, and they are not too large, Bill Burnett’s method is the easiest&nbsp; to implement.&nbsp; Rivers flow down hill.&nbsp; There is a law on the books about that, somewhere!&nbsp; To handle water that changes elevation such as at a dam or waterfall, my terrain texture method is probably best.&nbsp; You will probably want to use combinations of all three.</p>
+
+                        <p>Enough of the preliminaries.  Let’s look at an overhead view of The Dalles dam in my Columbia Gorge Route.</p>
+
+                        <p><img SRC="images/water_01.jpg" NOSAVE height=383 width=563></p>
+
+                        <p>Two tiles are shown in this shot.&nbsp; The boundary between the tiles is the blue vertical line in the center of the picture.&nbsp; All the water in the left tile except the square at the bottom is default MSTS water at a height of 51 meters.&nbsp; All water to the right of the dam is in the right hand tile and is default MSTS water at a height of 25 meters.&nbsp; The areas between the blue line and the dam plus the square at the bottom (with the lock) are terrain manipulations.&nbsp; The upper right corner of the dam is still under construction.</p>
+
+                        <p>What I have done here is to raise the terrain between the blue line and the dam to the upstream water lever of 51 meters. Where squares intersect the dam, only the terrain above the dam was raised.  Where necessary, the terrain immediately below the dam was lowered to below the downstream water level of 25 meters.&nbsp; This was to make sure the default water covered the land.&nbsp; After raising the terrain above the dam, I used the flatten function to make sure it was flat.&nbsp; The picture below shows what it looked like at this point.</p>
+
+                        <p><img SRC="images/water_05.jpg" NOSAVE height=386 width=563></p>
+
+                        <p>The cutting and embankment angles were set to 88 degrees so that the transition in terrain elevation was as vertical as possible at the dam.&nbsp; The square at the bottom just to the left of the tile boundary and the square at the lower end of the spillway are special cases that required custom terrain files.&nbsp; Although the lower left square is in the left tile, the elevation to the right of the dam is lower than the tile water level.&nbsp; If the default water had been used, this ground would be under water.</p>
+
+                        <p>The square at the lower end of the spillway is in the right tile but is split by the spillway.&nbsp; The left side needs to be at the upstream water level while the right side is partly land and partly water.&nbsp; The terrain above the dam is raised to the upstream water level.&nbsp;&nbsp; The portion of this square immediately below the spillway has been lowered below the downstream water level to allow the default water to be used.&nbsp; The land area at the bottom of the square is below the upstream water level and higher than the downstream water.</p>
+
+                        <p>To texture these two squares, I create two special textures that are combinations of land and water.&nbsp; I used copy and paste in Paintshop Pro to overlay the land where appropriate with the water.&nbsp; The first two pictures below are of the uncut textures greenscrub.ace and watertop.ace.&nbsp; The next two pictures show the special textures after the copy/paste operation.</p>
+
+                        <p><img SRC="images/water_02.jpg" NOSAVE height=563 width=563></p>
+
+                        <p>When working with the watertop.ace as a terrain texture, you need to make sure it is oriented properly.&nbsp; This water texture by Pat Malicki has a “grain” pattern to it.&nbsp; If rotated the wrong way, it will not match up to the pattern of the default water.&nbsp; One problem I have not addressed, yet with this texture is size.&nbsp; When using the watertop.ace as a texture, the pattern comes out much larger than the default water.&nbsp; I leave it to the reader to address this problem.&nbsp; Essentially, you need to reduce the size of the pattern and tile it to match the default water.,/p>
+
+                        <p>For the navigation lock, I raised the terrain inside the lock to the water level of the upstream tile.&nbsp; Instead of using the watertop terrain texture, which is much too large and difficult to manage, I used the transfer mentioned at the beginning of this article.&nbsp; I was able to adjust the transfer size to exactly match the inside of the lock.</p>
+
+                        <p>My method of terrain manipulation and texture painting works but is somewhat difficult and temperamental!&nbsp; It takes a lot of patience to get the terrain shaped correctly without any gaps or bulges.&nbsp; For small areas of water such as ponds and lakes, Bill Burnett has come up with a method that is much easier to manage.</p>
+
+                        <p>With Bill’s method, the first thing to do is create a flat box shape in TSM or 3D Canvas.&nbsp; The size of the box is up to you.&nbsp; For this discussion we will use 40m x 20m x .5m.&nbsp; Texture the top of this box with your water texture.&nbsp; Use any texture for the remaining sides and bottom of the box.&nbsp; Save this object and export it to MSTS.&nbsp;&nbsp; For small ponds or lakes this size may be fine. For larger pools of water you can connect two or more of these objects together or create a larger version that is more suitable to your needs.</p>
+
+                        <p>Next, in the Route Editor, determine where your lake is to be located.&nbsp; If not already done, create a depression in the terrain, the outline and size of which is approximately the shape and size of your lake.&nbsp; Now select the water object created earlier.&nbsp; Position the object cursor (F5) near the top of one of the surrounding hills and click.&nbsp; Your “water box” will be floating near the spot selected.&nbsp; Now use the mouse and/or arrow keys to “push” the box down into the depression until the edges are hidden beneath the terrain.&nbsp; Viola, instant lake!</p>
+
+                        <p>The pictures below are screenshots from Sunken Island in Bill’s Sea View 2 route.&nbsp; The first picture shows some ponds as they would appear in Train Simulator.&nbsp; The second picture shows a wire-frame view of the same spot.&nbsp; From the wire frame view, you can see exactly how Bill has positioned his “water boxes” to create the ponds.&nbsp; In the pond near the top, you can see where he has joined two or more boxes to make a larger water area.</p>
+
+                        <p><img SRC="images/water_03.jpg" NOSAVE height=362 width=563>
+                        <br><img SRC="images/water_04.jpg" NOSAVE height=436 width=563></p>
+
+                        <p>The methods presented here are, I’m sure, not the only methods of handling water in Microsoft Train Simulator.&nbsp; The terrain texture method is more difficult but is probably more suitable to large areas of water such as a major river with a dam or waterfall.&nbsp; Bill Burnett’s method makes it very easy to put small pools of water at any elevation wherever you need them.</p>
+
+                        <p>I hope this has been helpful.&nbsp; I want to thank Bill Burnett for allowing me to share his technique as well as show some screenshots from his excellent route.&nbsp; Good luck and if you have any questions, feel free to email me or post the question in the Route Building forum.</p>
+
+
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end cause --->
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#link1">Changing Start Tile</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 2 August 2002, 23 May 2005, 2 April 2010</center></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,573 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>How to set up AI Lighting in MSTS Locomotives - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li ><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">How to set up AI Lighting in MSTS Locomotives</font>
+                        <br>by Yuri Sos</h2>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                        <p>As you start to play MS Train Simulator (MSTS), you know that you can turn on or off the lights on the locomotives under your direct control (and usually the tail lights on the last vehicle on your train):&nbsp; these trains are known as "player trains".</p>
+
+                        <p>However, it becomes very frustrating as you play various activities that all the default trains coming towards you are unlit (see below).</p>
+
+                        <p><img SRC="images/ai_08.jpg" height=450 width=600></p>
+
+                        <p>MSTS was shipped with all locos only able to display lights if they were under the control of the player - all other locos in the sim ran through their activities with their lights off.</p>
+
+                        <p>Surely the image below is preferable - note that, as above, the train approaching is not under player control - it is being controlled by MSTS:&nbsp; these trains are called "AI trains", AI standing for "Artificial Intelligence".</p>
+
+                        <p><img SRC="images/ai_09.jpg" height=450 width=600></p>
+
+                        <p>The difference here is that the AI-train is fully lit with headlights and ditchlights operating as it approaches and passes the player train.</p>
+
+                        <p>I'm going to show you how to activate or install lighting in locomotives that are not under your direct control - AI-lighting.</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "link1">
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Text Colours Used In This Tutorial</h2>
+			<div class="entry">
+
+                        <p><b>Black:</b> this text you are reading;
+                        <br><font color="#009900"><b>Green:</b> snippets of original code found within the .ENG files you will be modifying;</font>
+                        <br><font color="#FF0000"><b>Red:</b> explanations of lines of code: do not copy these into .ENG files;</font>
+                        <br><font color="#3333FF"><b>Blue:</b> snippets of altered code you will be typing into the .ENG files.</font></p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end cause --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Associating MSTS Files</h2>
+			<div class="entry">
+
+                        <p>If you haven't already done this, "associate" .ENG and .WAG files with a text editor: this means that whenever you double-click on a file with the extension .ENG or .WAG, it will open with that editor.</p>
+
+                        <p>If you need to do this, <a href="associate.html" target="_blank">click here</a> for a new window/tab showing you how to do this using my favourite text editor, <a href=context.html>ConTEXT</a>.</p?
+
+                        <p>And now to the part you came here for! ..........</p>
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end cause --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Activating the AI-Lighting in Default MSTS AI-Locomotives</h2>
+			<div class="entry">
+
+                        <p>You will have noticed that there are several locomotives that came with your installation of MSTS that appear in activities but cannot lead player trains.&nbsp; These are characterised by the absence of a Controller Handle symbol in front of the loco's name in Activity Editor (see lack symbol to the left of SD40 below):</p>
+
+                        <p><img SRC="images/ae_symbols.jpg" height=175 width=412 border=1></p>
+
+                        <p>These locos are known as AI-locomotives and are used in AI- (or traffic) trains in Activities.  They usually lack a cab and thus also have simplified sounds.</p>
+
+                        <p>These locomotives are:</p>
+                        <ul>
+                           <li>Steam
+                               <ul>
+                                   <li>310</li>
+                                   <li>Pendennis Castle</li>
+                                   <li>Royal Scotsman</li>
+                               </ul>
+                           </li>
+                           <li>Diesel
+                               <ul>
+                                   <li>Kiha 140</li>
+                                   <li>SD40</li>
+                               </ul>
+                           </li>
+                           <li>Electric
+                               <ul>
+                                   <li>30000</li>
+                                   <li>Genesis</li>
+                                   <li>Metroliner</li>
+                               </ul>
+                           </li>
+                        </ul>
+
+                        <p>Let's start with the Pendennis Castle.&nbsp; This steam locomotive is located in the following folder:
+                        <br><b>\TRAINS\TRAINSET\PENDENNIS</b></p>
+
+                        <p>Within that folder you will find Pendennis.ENG, the engine file that controls how the model will behave in MSTS.  Copy it to a Backup folder outside your MSTS folders for safekeeping.  Double-click on the .ENG file and it opens in your text editor.  Scroll down and you will find section that starts <b><font color="#009900">Lights (.</font></b></p>
+
+                        <p>At this point, it's useful to have the light settings open in MS Word (they're on page 2 of the How_to_Specify_Lights.Doc),
+                        <br>but the relevant parts are also <a href="light-settings.html" target="_blank">HERE</a>.</P>
+
+                        <p>The part we're interested in here is the <b>Conditions()</b> parameter.</p>
+<font color="#009900">
+<pre>
+<b>Conditions (</b>
+&#09;Headlight ( 3 )
+&#09;Unit ( 2 )
+&#09;)
+</pre></font>
+
+                        <p>As it stands here, this particular light only comes on when the headlight is manually set to Full and the Unit is leading.  But this is an AI loco, not a player train, so you can't turn on the lights, therefore you'll never see the lights on in the sim.</p>
+
+                        <p>We're going to change this by using the following condition clauses:</font>
+
+                        <table BORDER=1 CELLSPACING=2 cellpadding=5>
+                        <tr>
+                            <td><center>Control ( 1 )</center></td>
+                            <td><center>the player is NOT in charge of the loco (ie it's an AI train</center></td>
+                        </tr>
+
+                        <tr>
+                            <td><center>Unit ( 2 </center></td>
+                            <td><center>Light on only if it's the lead unit</center></td>
+                        </tr>
+
+                        <tr>
+                            <td><center>Service ( 2 )</center></td>
+                            <td><center>the loco is actually on an AI train, not inert in a siding</center></td>
+                        </tr>
+                        <tr>
+                            <td><center>TimeOfDay ( 0 )</center></td>
+                            <td><center>lights are on no matter if day or night</center></td>
+                        </tr>
+                        </table>
+
+                        <p>So the Conditions parameter above is changed to look like this:</p>
+
+<font color="#000099">
+<pre>
+<b>Conditions (</b>
+&#09;Control ( 1 )
+&#09;Unit  ( 2 )
+&#09;Service ( 2 )
+&#09;TimeOfDay ( 0 )
+&#09;)
+</pre></font>
+
+
+                        <p>You can remove everything in green and replace it with everything in blue.</p>
+
+                        <p>Repeat this for each of the four lights() specifications.</p>
+
+                        <p>Let's do another quick change while we're here in the pendennis file:&nbsp; For each of the Type ( 0 ) lights, scroll down to
+                        <br><font color="#009900">Radius ( 5.0 )</font>
+                        <br>and change it to
+                        <br><font color="#3333FF">Radius ( 0.5 )</font>
+                        
+                        <p>Save the file and quit.</p>
+
+                        <p>Now do the same for the RoyalScotsClass.Eng in the RoyalScotsClass folder and 310.eng in the 310 folder.</p>
+
+                        <p>Now load MSTS.&nbsp; Pick an activity on the Settle and Carlisle and commence the activity. You will notice that the oncoming trains have their headlights on!</p>
+
+                        <p>In turn, move to the sd40 folder, open sd40.eng and change the 9 lights as above.&nbsp; Then also kiha41 and the others listed above.</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end cause --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Installing AI-lights In Locomotives That Are Normally Player Locomotives</h2>
+			<div class="entry">
+
+                        <p>This is where many great gains are to be made in the appearance of many locos in the sim as many player locos are used in AI-consists in various activities.&nbsp; These changes involve getting "up close and personal" with the lighting section of the .ENG files, so be sure to make a backup to a folder remote to MSTS of any model you're planning to alter.</p>
+
+                        <p>The structure of the Lighting section of the .ENG file is as follows:</p>
+
+<pre>
+Lights ( number_of_different_light_specifications
+&#09; Light (
+&#09;&#09;comment ( description_of_light )
+&#09;&#09;Type ()
+&#09;&#09;Conditions ()
+&#09;&#09;Cycle (
+&#09;&#09;FadeIn ()
+&#09;&#09;FadeOut ()
+&#09;&#09;States ( number_of_states
+&#09;&#09;&#09;State ( define each state
+&#09;&#09;&#09;) <font color="#FF0000">&lt;- bracket to close State</font>
+&#09;&#09;)<font color="#FF0000">&lt;-bracket to close States</font>
+&#09;)<font color="#FF0000"> &lt;- bracket to close Light</font>
+&#09;
+Light ( next light
+&#09;&#09;&#09;) <font color="#FF0000">&lt;- bracket to close State</font>
+&#09;&#09;)<font color="#FF0000">&lt;-bracket to close States</font>
+&#09;)<font color="#FF0000"> &lt;- bracket to close Light</font>
+) &lt;- if this was last light definition, brackets to close whole Lights Section</font>
+Sound ( locoeng.sms ) <font color="#FF0000">&lt;- not always in this position</font>
+)<font color="#FF0000" >&lt;- bracket to close WAG section of ENGine specification.</font>
+</pre>
+
+                        <p>This tutorial is about adding AI-lights, and not a treatise on the lighting section itself so I've intentionally gone light on the internals of each Light () definition.&nbsp; <b>I'm preparing a tutorial on Lights.</b></p>
+
+                        <p>You have two choices when creating AI-lights:</p>
+                        <p><b>1. &nbsp; Add AI-Lights to a "Player Engine"
+                        <br>2. &nbsp; Make an AI-copy of a "Player Engine".</b></p>
+                        
+                        <p>Let's look at each in turn.
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end cause --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">1. &nbsp; Add AI-Lights to a "Player Engine"</h2>
+			<div class="entry">
+                      
+                      <p>When you add an AI-light to your engine, the two most common mistakes (and I make both on a regular basis) are:</p>
+<ol>
+<li>not incrementing the number of lights at the top of the light definitions; and </li>
+
+<li>not copying all the brackets when copying a light () definition.</li>
+</ol>
+
+<p>Failure to avoid either/both of these errors results in the infamous MSTS "phone home".</p>
+
+<p>You create an AI-light in a player locomotive by copying the existing light definition and changing the conditions; you then increment the <font color="#3333FF">number_of_different_light_specifications</font>
+(see above) by one.</p>
+
+<p>Let's start by using the GP38 as our working model.  Open the gp38.eng file (now you HAVE made a backup first, haven't you?).  Scroll down to the Lights section.</p>
+
+<p>You will find</font>
+<br><font color="#009900">Lights ( 9</font></font>
+<br>This tells us that there will be nine light definitions.</font>
+<br>They are</font>
+
+                        <ol>
+                            <li>Sphere of light</li>
+                            <li>Head light dim</li>
+                            <li>Head light bright</li>
+                            <li>Head light bright</li>
+                            <li>Front right flashing light</li>
+                            <li>Front left flashing light</li>
+                            <li>Rear right light</li>
+                            <li>Rear left light</li>
+                            <li>Rear red light</li>
+                        </ol>
+                        
+                        <p>For an AI locomotive, we really only need the headlights and the flashing lights, so we'll copy definitions 3,4,5,6 and modify those.</p>
+
+<p>As I said before, it's so easy to mess up the brackets, so what I do is first create a demarcated space where the copied light definitions will go.</p>
+
+<p>This is a snippet of code which crosses the boundary between the second-last and the last light.</p>
+
+
+
+<pre>
+<font color="#009900">&lt;start snip>
+&#09; Light (
+&#09;&#09;Azimuth ( -180 -180 -180 )
+&#09;&#09;Transition ( 0 )
+&#09;&#09;Radius ( 1.0 )
+&#09;&#09;)
+&#09;&#09;)
+&#09;&#09;)
+&#09;&#09;States ( number_of_states
+&#09;&#09;&#09;State ( define each state
+&#09;&#09;&#09;) <font color="#FF0000">&lt;- bracket to close State</font>
+&#09;&#09;)<font color="#FF0000">&lt;-bracket to close States</font>
+&#09;)<font color="#FF0000"> &lt;- bracket to close Light</font>
+
+Light (
+&#09;comment( Rear red light )
+&#09;&#09;Type&nbsp; ( 0 )
+ &lt;end snip>
+</pre></font>
+
+<p>You can clearly see the three brackets closing one light definition, and the next Light definition commencing.</p>
+
+<p>I move the cursor to the space between the definitions and type the lines shown in blue</p>
+
+
+<pre>
+<font color="#009900">&lt;start snip>
+&#09; Light (
+&#09;&#09;&#09;Azimuth ( -180 -180 -180 )
+&#09;&#09;&#09;Transition ( 0 )
+&#09;&#09;&#09;Radius ( 1.0 )
+&#09;&#09;)
+&#09;)
+<font color="#3333FF">
+
+Comment ( ========= begin AI lights ========= >
+
+Comment ( ========= end AI lights ========= >
+<font color="#009900">
+Light (
+&#09;comment( Rear red light )
+&#09;&#09;Type&nbsp; ( 0 )
+ &lt;end snip>
+</pre></font></font></font>
+
+                        <p>Now I scroll up to the first Light definition I want (<font color="#009900">Light ( Head light top&nbsp; bright )</font></p>
+
+                        <p><img SRC="images/ai_11.jpg" NOSAVE height=518 width=600></font>
+
+                        <p>and I mark the block all the way down to the end of "front left flashing light" - ie I stop before going into the Light entitled "rear right light".</p>
+
+                        <p><img SRC="images/ai_12.jpg"></p>
+
+                        <p>Make absolutely sure that you have marked the three brackets as shown in the screenshot above.</p>
+
+                        <p>Now press Ctrl-C to Copy.Scroll down to the blank line between the two AI comment lines you created a moment ago and press Ctrl-V to paste the light definitions into this area.</p>
+
+                        <p>Now it's a relatively simple exercise to replace the lines</p>
+
+<pre>
+<font color="#009900">
+&#09; Conditions (
+&#09;&#09;Headlight ( 2 )
+&#09;&#09;Unit ( 2 )
+&#09;&#09;)</font>
+</pre>
+
+                        <p>in each of the four AI-light definitions with</p>
+
+
+<pre>
+<font color="#000099">
+&#09; Conditions (
+&#09;&#09;Control ( 1 )
+&#09;&#09;Unit ( 2 )
+&#09;&#09;Service ( 2 )
+&#09;&#09;TimeOfDay ( 0 )
+&#09;&#09;)</font>
+</pre>
+
+                        <p>As you change each light, place an "AI" at the beginning of the comment line so that</p>
+
+                        <p><font color="#009900">comment( Headlight top bright )</font>
+                        <br>now reads
+                        <br><font color="#3333FF">comment( AI Head light top bright )</font></p>
+
+                        <p>Finally, scroll up to the very beginning of the Lights section and replace</p>
+                        <p><font color="#009900"> Lights ( 9</font>
+                        <br>with
+                        <br><font color="#3333FF">Lights ( 13</font></p>
+                        
+                        <p>You can check your work by using <a href="context.html#brack">ConTEXT's bracket-matching</a> feature to ensure your bracketing is correct.  You'll soon find out if you've made an error as MSTS will either crash on loading the sim, or on loading an activity!</p>
+
+                        <p>Save and quit.&nbsp;&nbsp; Now drop down to <a href="#endchoice">here </a>to bypass reading about your second choice.</p>
+</p>
+
+                      </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end cause --->
+    
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">2. &nbsp; Make an AI-copy of a "Player Engine".</h2>
+			<div class="entry">
+                      
+                      <p>This method involves copying the .ENG file of a player locomotive and converting it to an AI locomotive.&nbsp; There are advantages to this method, the main one being that you can lower the light count in the AI locomotive.&nbsp; It's been recently discovered that an excess of lights in an activity can cause some lights or even signals to "go dark". There appears to be a 72 "lights-per-tile" limit as some users have reported lights going out when an AI train approaches, then coming back on after the train has departed.</p>
+
+                        <p>Step 1:We'll work with the Dash9 engine, but these principles will apply to all locos.&nbsp; Open Windows Explorer. Click Copy, then Paste on Dash.Eng. Rename "Copy of Dash9.Eng" to "AI_Dash9.Eng".</p>
+
+                        <p>Step 2: Open AI_Dash9.Eng in Wordpad or similar Unicode-aware editor.
+                        <br>Ctrl-F (Find) "cvf.
+                        <br>Remove the line that states Cabview ( Dash9.cvf).
+                        <br>Scroll to near the bottom and look for the line
+                        <br>Name ( "Dash 9 " )
+                        <br>Change that to
+                        <br>Name ( "AI Dash 9" )</p>
+
+                        <p>Move up to the Lights section.  You will see each Light specification starting under the line reading Lights ( 10.</p>
+
+                        <p>You will be removing many of these light specifications. Examine each Light specification. You will see the format that starts with Light ( and ends with THREE closing brackets.</p>
+
+                        <p>Let's start with the "Sphere of Light".&nbsp; Look at the image below.</p>
+
+                        <p><img SRC="images/ai_14.jpg" NOSAVE height=737 width=600>
+
+                        <p>Note that the whole light specification has been highlighted, including the three last brackets.&nbsp; Press "Delete".</p>
+
+                        <p>Now remove "Headlight Dim".&nbsp; Change the next two "Headlight Bright" specifications so that you replace Headlight ( 3 ) with Control ( 0 ) Service ( 2 ).</p>
+
+                        <p>Rear bottom light, Rear Top Light.</font></font>
+
+                        <p>Leave&nbsp; Rear Red Light&nbsp; but change to Control ( 0 ) Service ( 2 ) and change Unit ( 2 ) to Unit ( 3 ).</p>
+
+                        <p>Now scroll up to the top and change "10" on the very first line of the Lights to "5".</p>
+
+                        <p>Check your work, then save and quit.</p>
+
+                        <p>Test your work first by creating a consist of "Dash9" + "AI Dash 9".&nbsp; Make sure that the sim runs - you'll get an MSTS "phone home" if you've made an error.</p>
+
+                        <p>Replace the Dash9 locos in your AI consists with AI Dash9.</p>
+
+                        <p>Obviously there's only a saving of 4 lights here, but some models have over 35 lights, fine for the leading player loco but completely wasted on an AI engine (really, are you going to notice the steplights on the other side of the locos on an AI train you are passing in a loop?).</p>
+
+                      </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end cause --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Modifying Rolling Stock For AI-lighting</h2>
+			<div class="entry">
+                      
+                      <p><p><a NAME="endchoice"></a>Regardless of which choice you made above...........</p>
+
+                        <p>Open MSTS, pick an activity and away you go.</p>
+
+                        <p>The same procedure can be used for any MSTS loco, default or add-on.&nbsp; One thing, though, the default Dash9 has 9 light definitions, but has 10 as the number of lights - obviously it works by sheer luck.&nbsp; When you add the four AI lights, change the number of lights to 13, the correct number of definitions, and it will work correctly (as you can see by the screenshots in the introduction).</p>
+
+                        <p>Note that the "beam of light" projected in front of a loco works only for player trains, not AI-trains.</p>
+
+                        <p>You can apply the above principles to any locomotive: here is NALW's brilliant Berkshire converted to AI-lighting and running in activity on the S&amp;C.</p>
+
+                        <p><img SRC="images/ai_13.jpg" NOSAVE height=361 width=640></p>
+
+
+                      </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end cause --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Modifying Rolling Stock For AI-lighting</h2>
+			<div class="entry">
+                      
+                      <p>By now, you're feeling comfortable with modifying the ENG file, so editing the WAG file will even be easier.</p>
+
+                      <p>Open the .WAG file for the wagon you're interested in, scroll down to Lights:&nbsp; most lighting parameters in wagons are for the End Of Train (EOT or FRED) red blinking light, or for marker lights for guard's vans or cabeese, solid red colour marker lights.</p>
+
+                      <p>A typical light definition will be</p>
+                      
+<font color="#009900">
+<pre>
+<b>Light (</b>
+&#09;comment( Rear red light flashing when headlight dim )
+&#09;&#09;Type ( 0 )
+&#09;&#09;Conditions (
+&#09;&#09;&#09;Headlight ( 2 )
+&#09;&#09;&#09;Unit ( 3 )
+&#09;)
+</pre>
+</font>
+
+                      <p>Simply replace</p>
+
+                      <p><font color="#009900">Headlight ( 2 )</font></p>
+                      <p>with</p>
+
+                      <p><font color="#3333FF">Control ( 0 )
+                      <br>Service ( 2 )</font></p>
+
+                      <p>and the marker light will be on regardless of whether it's a player or AI-train, as long as it's in actual service.</p>
+
+                      </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end cause --->
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#link1">Glossmap</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 10 Feb 2003, 06 April 2010</center></p>
+</div>
+</body>
+</html>
+

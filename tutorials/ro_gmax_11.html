@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>A Coach made with Gmax Chapter 11 - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <meta name="Author" content="Richard Osborne">
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+        <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">A Coach Made With GMax</font>
+                        <br>by Richard Osborne</h2>
+                        <p></p>
+			<h2 class="title">Chapter 11: Further Hints And Tips</h2>
+ 			   <div class="entry">
+
+
+<h3>A radical improvement to the viewport</h3>
+
+<p>In Chapter 1 I unkindly described the texture handling as next to useless, by default it is. It samples large files & tries to assume they're holding less information. I've since been told the trick - mention of it is buried in the help file but it's hard to find.</p>
+
+<P> First choose your driver, mine defaulted to Heidi, Software z-buffer. If you have DirectX 8 or newer you can choose Direct 3D. Try both, if your graphics card is on the elderly side it won't like Direct 3D. In either case you need to change the configuration settings for the graphic driver.</p>
+
+<P>You can find it under "Customize | Preferences - Viewports Tab" Click on "Configure Driver". Select your driver from the list, a window appears, this is for Direct 3D:-</p>
+
+<P><IMG SRC="images/ro_gmax_11_01.jpg" BORDER="0" WIDTH="321" HEIGHT="589" ALT=""></p>
+
+<P>This for the Heidi driver:-</p>
+
+<P><IMG SRC="images/ro_gmax_11_02.jpg" BORDER="0" WIDTH="293" HEIGHT="227" ALT=""></p>
+
+<P>Make sure the 'Match Bitmap Size ....." is ticked.</p>
+
+<P><IMG SRC="images/ro_gmax_11_03.jpg" BORDER="0" WIDTH="600" HEIGHT="359" ALT=""></p>
+
+<P>This makes a huge difference to the quality of the display screen, placing parts accurately is now easy. Compare the image above to the similar image in <a href="ro_gmax_08.html">Chapter 8</a>. I'm obliged to Nalle of Dekosoft Trains for that tip.</p>
+
+<h3>Transparent material</h3>
+
+<p>If you refer back to chapter 4 the section on manipulating the ends could be better; you might have thought "It's a pity you can't see through the end at the drawing". You can quite simply: make the ends active, right click then 'Properties'. You'll see 'Display Properties', press 'See-Through'. The part appears as a grey block, any texturing applied will not show. This is just a random box.</p>
+
+<P><IMG SRC="images/ro_gmax_11_04.jpg" BORDER="0" WIDTH="600" HEIGHT="329" ALIGN="bottom" ALT=""></p>
+
+<P>You can use wireframe views for modifying point positions.</p>
+
+<P><IMG SRC="images/ro_gmax_11_05.jpg" BORDER="0" WIDTH="600" HEIGHT="153" ALIGN="bottom" ALT=""></p>
+
+<h3>Transparent inside textures</h3>
+
+<p>I gave my corridor partition windows a translucent texture; some designers use transparent textures here. Optically it makes little difference unless you're looking from a platform, in theory using transparencies make less work for the graphics card which just has to say "Yes" or "No" & not bother about "How much?" It should make sorting easier.</p>
+
+<h3>Tint to textures</h3>
+
+<p>Still with textures I said that Shape View will isolate untextured polygons. You could help it by applying an overall tint to the texture files during the initial stages. Of course they'll have substantial body colour as they're textured but will be white at first. You could just spray on a colour, turning the opacity way down to about 20%. A better way would be to add a new raster layer, apply a solid colour, turn the opacity low & save as a .tga. PSP will try to save a file in its native .psp format, save this first, the layers will still
+be there so that they can be modified. A .tga file will have the layers merged. Even if you save this with a different name you can import any alpha channels from the first file.</p>
+
+<P><IMG SRC="images/ro_gmax_11_06.jpg" BORDER="0" WIDTH="600" HEIGHT="600" ALIGN="bottom" ALT=""></p>
+<P><IMG SRC="images/ro_gmax_11_07.jpg" BORDER="0"  ALT=""></p>
+
+<h3>UVW menu</h3>
+
+<p>It would be possible to write a long tutorial just about the UVW menu; I'll leave that to someone else. I want to keep this tutorial simple. I've said that Gmax is extremely powerful in texture handling - this screen is at the centre of it. It's possible to use dragging or positioning by co-ordinates, I'll only use dragging. I've found the help files in Gmax are more helpful after you've got the hang of one method, all the buttons & bobs are explained. I'll just give you a couple of useful tips. </P>
+
+<P>If we click on bogie2 then call up the UVW 'edit' screen we'll have the image below.</p>
+
+<P><IMG SRC="images/ro_gmax_11_08.jpg" BORDER="0" WIDTH="575" HEIGHT="549" ALIGN="bottom" ALT=""></p>
+
+<P>The bogie is quite small on the screen. If we lasso the corners to make them active - by default they'll turn red - then press the 'extents' on the bottom right toolbar the bogie will fill the edit screen.</p>
+
+<P><IMG SRC="images/ro_gmax_11_09.jpg" BORDER="0" WIDTH="575" HEIGHT="549" ALIGN="bottom" ALT=""></p>
+
+<P>We can make it even larger by pressing the normal Windows 'make it bigger' button top right.</P>
+
+<P><IMG SRC="images/ro_gmax_11_10.jpg" BORDER="0" WIDTH="600" HEIGHT="436" ALIGN="bottom" ALT=""></p>
+
+<P>The problem now is that we can't see the lines clearly. It's simple to change the colours. Press the button between UV & 'Bitmaptexture', a square with a blue line on top. The following screen will show. The default line colour is white.</P>
+
+<p><IMG SRC="images/ro_gmax_11_11.jpg" BORDER="0" WIDTH="323" HEIGHT="293" ALIGN="bottom" ALT=""></p>
+
+<P> Change the colour option, the line colour is more important. The lines should show more clearly. I find that, on my computer, dragging the line has a slight time delay. Obviously the graphics card is working hard at this resolution. Don't forget that after making any changes it's necessary to 'Collapse All'.</p>
+
+<P><IMG SRC="images/ro_gmax_11_12.jpg" BORDER="0" WIDTH="600" HEIGHT="123" ALIGN="bottom" ALT=""></p>
+
+<h3>Mutiple Clones</h3>
+
+<p>I used clone before to give just 1 copy, here's how to make multiple copies. This is for the buffer, make the part active, I've textured it already. Press the 'move' icon, hold down the 'Shift' on the keyboard & drag the buffer in one axis; when you release the mouse button a screen appears.</p>
+
+<P><IMG SRC="images/ro_gmax_11_13.jpg" BORDER="0" WIDTH="245" HEIGHT="230" ALIGN="bottom" ALT=""></p>
+
+<P> Three cloned buffers appear, if you check the objects list you'll find buffer1, the original, then buffer02, buffer03 & buffer04. Notice the offset is the distance you dragged the buffer.</p>
+
+<P><IMG SRC="images/ro_gmax_11_14.jpg" BORDER="0" WIDTH="600" HEIGHT="436" ALIGN="bottom" ALT=""></p>
+
+<P>The logical sequence, though, would be clone buffer1, mirror it to the other side. Join them to make one part, clone & mirror to the other end.</p>
+
+
+                     </div>
+			 	<p class="meta"><span class="posted"><a href="#">Return to top of page</a></span><a href="ro_gmax_12.html" class="permalink">Go On To Chapter 12</a></p>
+
+             </div>
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Chapters</h2>
+<ol>
+<li><a href="ro_gmax_00.html">Overview</a></li>
+<li><a href="ro_gmax_02.html">Getting started</a></li>
+<li><a href="ro_gmax_03.html">First Texturing</a></li>
+<li><a href="ro_gmax_04.html">Modelling For Real</a></h3></li>
+<li><a href="ro_gmax_05.html">Texturing The Body</a></h3></li>
+<li><a href="ro_gmax_06.html">Alpha Channels</a></h3></li>
+<li><a href="ro_gmax_07.html">Wheels and Bogies</a></h3></li>
+<li><a href="ro_gmax_08.html">Interiors</a></h3></li>
+<li><a href="ro_gmax_09.html">Export to MSTS</a></h3></li>
+<li><a href="ro_gmax_10.html">Texturing tricks and losing polygons</a></h3></li>
+<li><a href="#">More Tricks and Tips</a></h3>
+<li><a href="ro_gmax_12.html">More about hierarchies</a></h3>
+</ol>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 24 August 2004, 19 March 2010</center></p>
+</div>
+</body>
+</html>
+
+

@@ -1,0 +1,269 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <title>Constructing A Steam Loco Using Train Sim Modeler - Part 6 - at The Steam4me Site</title>
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../../index.html">Home</a></li>
+		<li class="current_page_item"><a href="../index.html">Tutorials</a></li>
+		<li><a href="../../msts_errors.html">Error Messages</a></li>
+		<li><a href="../../steam/index.html">Steam</a></li>
+		<li><a href="../../electric/index.html">Electric</a></li>
+		<li><a href="../../passenger/index.html">Passenger</a></li>
+		<li><a href="../../diesel/index.html">Diesel</a></li>
+		<li><a href="../../freight/index.html">Freight</a></li>
+		<li ><a href="../../vans/index.html">Vans</a></li>
+		<li ><a href="../../routes/index.html">Routes</a></li>
+		<li><a href="../../utilities/index.html">Utilities</a></li>
+		<li><a href="../../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Constructing A Steam Loco Using Train Sim Modeler<br>Part 6</font>
+                        <br>by <a href="mailto: ROsbo77@aol.com">Richard Osborne</a></h2>
+                        <p></p>
+			<h2 class="title">Texturing</h2>
+ 			   <div class="entry">
+
+                   <p>Breath a sigh of relief - TSM is far the simplest of the 3d programs when it comes to texturing. It has a price - some texturing features which the other programs can manage are impossible in TSM.</p>
+
+                   <p>It's worth finding &amp; following threads in the forums - some go into far greater detail than I will here. I want to get you up &amp; running with a loco which you built &amp; textured.</p>
+
+                   <p>As with the loco itself its worth finding as much reference as possible. Locos varied enormously during their working lives - if you can find a photo of a particular loco at a particular time so much the better. If you're making a Bulleid Light Pacific with a Geisl ejector it makes sense to number it 34064. Mind you we're in Fantasy Land - you can have Thomas the Tank Engine on the Main Line if you wish - just anticipate a full email box if you make a blatant error.</p>
+
+                   <p>To business: we need textures for our locos. We MUST have textures which are 64*64, 128*128, 256*256 or 512*512 pixels. TSM &amp; MSTS only accept texture files with these size values. It's rumoured that TSM accepts 1024*1024 - it hasn't for me! You'll find that 512*512 is perfectly satisfactory for our needs. By definition one 1024*1024 file is the size of four 512*512 files. We'll use two sheets, probably with another 256*256 sheet for the wheels. Be prepared to shuffle &amp; change them; we want to get as much on our sheets as possible. One of my dislikes is to download a model &amp; then find MSTS has to heave a large file with just an axlebox on it! Such models don't stay on my computer long.</p>
+
+                   <p>Again I'll make the point - this is just one way of texturing - dozens of other people have dozens of other ways.</p>
+
+                   <p>Before we start: I'll be using Paint Shop Pro for the artwork. Any decent paint program will do the job perfectly well, it has to be able to handle .bmp &amp; .tga formats with the ability to handle alpha channels for the transparencies. There are plenty of freeware programs, at sites like moochers.com, which are perfect. I have a facility called "ClipMate" which is an extended clipboard, I can keep dozens of images ready for use. I can't handle any computer without such a program - makes it about a million times better. This was shareware &amp; was the best $20 I've spent on my computer. It's possible there's a freeware version somewhere. Please find one &amp; be familiar with it asap. I have to assume an extended clipboard is in use.</p>
+
+                   <p><img SRC="images/clipmate.jpg"  height=378 width=550></p>
+
+                   <p>A screenshot, on ClipMate, of Clipmate.</p>
+
+                   <p>I hope you've looked at the texture files which come with MSTS - in the 'samples' subdirectory. The first thing you notice is that they bear no resemblance to any loco on your computer - you recognize bits - a smokebox, a cabside etc. The placements appear to be all over the shop. This is a 512*512 file. I've never seen rivets through a boiler band - but that's another topic entirely!</p>
+
+                   <p>This is a .jpg image, .jpg doesn't handle alpha channels - you have the original .tga file. You'll see the boiler, firebox underneath, only one cabside; how do they use it for the other side?</p>
+
+                   <p>Notice the splasher - TSM can't turn part of the image through 90 Degrees.</p>
+
+                   <p><img SRC="images/pendennis.jpg"  height=512 width=512></p>
+
+                   <p>For the starting point for our B4 we'll use the .bmp files we used for the loco model. You have another source - TSM itself; a screen shot can be very useful especially if your source .bmp file isn't very good. Use 'Alt' + 'Print Screen' for a screen grab at any time.</p>
+
+                   <p><img SRC="images/textr_26.jpg"  height=386 width=550></p>
+
+                   <p>We're using a decent .bmp so we'll have to chop it up &amp; fit it to our 512*512 screen. It's perfectly possible to stretch &amp; compress the image, bringing them back to ratio in TSM. I prefer, if at all possible, to keep things to the true ratio, especially if any lining or lettering is involved.</p>
+
+                   <p>Some sketching &amp; imagination will be good. I know our longest part will be the frame sides &amp; valances. It needs to be from the rab roof to the sandpipe in depth. If we cut the drawing &amp; resize to 512 wide we should start to make progress.</p>
+
+                   <p><img SRC="images/textr_10.jpg"  height=386 width=550></p>
+
+                   <p>The frame, if the drawing maintains the ratio, is 512 * 238. We must add 274 to the depth.</p>
+
+                   <p><img SRC="images/textr_29.jpg" HSPACE=8  height=348 width=250>
+                   <img SRC="images/textr_28.jpg" HSPACE=10  height=205 width=240></p>
+                   <p><img SRC="images/textr_30.jpg"  height=386 width=550></p>
+
+                   <p>Using the rectangular selection tool - move the part above the footplate upwards out of the way. Pick the area below the footplate as far as the base of the steps - press 'Ctrl' + 'c' to copy to clipboard - then 'Ctrl' + 'e' to 'Paste as New Selection'. Position it above the original drawing.</p>
+
+                   <p><img SRC="images/textr_31.jpg"  height=386 width=550></p>
+
+                   <p>Notice I've introduced, in the same way, parts from the front view. Be prepared to do quite a lot of jiggling &amp; juggling. The two cab fronts will be front &amp; rear view. It'll look a bit odd until I've reworked &amp; coloured them. The file has been saved as B4_1.tga.</p>
+
+                   <p>I'll go back to our simple B4 &amp; start the texturing, normally I'd texture as I go - better than looking at a boring grey loco!</p>
+
+                   <p><img SRC="images/textr_39.jpg"  height=336 width=275></p>
+
+                   <p>Notice I've joined the tank sides to the cab - the texture will fit at one sitting. Make the cab side current, this is cab_st; the right side. Press 'F4', a screen appears.</p>
+
+                   <p><img SRC="images/textr_42.jpg"  height=361 width=548></p>
+
+                   <p>We need to browse &amp; find our texture file for the 'Right' assign. Ignore the others for the time being. </p>
+
+                   <p><img SRC="images/textr_40.jpg"  height=612 width=428></p>
+
+                   <p>A screen showing the file appears - press 'OK' &amp; the file itself appears bigger on another screen. You'll find that you can select any rectangle within the square screen. The actual coordinates appear on the right. Roughly select the area of the cab then adjust more precisely with the nudge buttons. Fix the 'Crop' first - then 'Size'.</p>
+
+                   <p><img SRC="images/textr_41.jpg"  height=483 width=550></p>
+
+                   <p>The first bit of texture on our B4.</p>
+
+                   <p><img SRC="images/textr_43.jpg"  height=336 width=276></p>
+
+                   <p>Make the other cab side current &amp; repeat the process as far as selecting the area of the texture file THEN if you look below the coordinate readout you'll see two tick boxes - Invert X &amp; Invert Y. This is the left side so we want to 'Invert X'.</p>
+
+                   <p><img SRC="images/textr_44.jpg"  height=483 width=550></p>
+
+                   <p>Not surprisingly the lettering is backwards. We're not going to use direct lettering - we'll use a transparent panel. If you use direct lettering you'll need a left &amp; right image - more files or less quality! If you look at the coach textures in the MSTS samples directory you'll see that the lettering is far bigger than you'd expect. We'll use the same technique.</p>
+
+                   <p><img SRC="images/textr_45.jpg"  height=335 width=276></p>
+
+                   <p>Do the same thing for the the cab front &amp; rear - 4 faces. If you remember we made them alphanorm+ &amp; alphanorm-.</p>
+
+                   <p><img SRC="images/textr_47.jpg"  height=386 width=550></p>
+
+                   <p>We'll take the bull by the horns &amp; tackle the thorny subject of transparency.</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end end overview --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Transparency</h2>
+			<div class="entry">
+
+
+                   <p>Not as scary as it's made out BUT again it's important to establish a sequence. If you're going to use PSP go into some  of the User Group websites. There are all manner of tutorials &amp; how-to sheets available.</p>
+
+                   <p>Let's get the more difficult bit done first. We'll put opaque windows into the cab front &amp; rear. We haven't made any sort of cutout for the windows, transparency will do it for us. Again it'll be worth exploring some of the sample files to get a better idea of what's happening.</p>
+
+                   <p>Let's first add an alpha layer to our .tga file. In PSP, go to 'Masks'; 'New' - expand &amp; press 'Show All'. At the moment there's nothing to show - this is preparing the way. Press 'OK' then reopen the menu. You'll notice three things - everything on the dropdown is now black &amp; the file has an asterisk which indicates that it's not saved.</p>
+
+                   <p>Press 'Edit' &amp; ''View Mask', the latter means that you draw in a very visible pink. Go into 'File', 'Preferences', 'General Program Preferencies', 'Transparency' &amp; change the grid size to 'Tiny'. It's slightly slower when blocking in but far easier to see - we're going to be working in single pixels in a moment.</p>
+
+                   <p><img SRC="images/textr_51.jpg"  height=330 width=500></p>
+
+                   <p>You'll also see that the colour palette has been replaced by a palette with greys only. Which grey you use is a matter of experimentation - for starters try the dark side of the mid-tone. Choose your brush from the toolbar. Set the tool size to 1. A graphic tablet is a great help here but not necessary. We want to zoom in on the cab windows &amp; block in the areas we want as windows.</p>
+
+                   <p><img SRC="images/textr_11.jpg"  height=386 width=550></p>
+
+                   <p>Carry on until all four windows are done - you can always come back to change the value or add some texture.</p>
+
+                   <p><img SRC="images/textr_12.jpg"  height=386 width=550></p>
+
+                   <p>We'd better save the file. I'll describe this in detail.</p>
+
+                   <p>You can't just save by pressing the 'Save' icon. The alpha ( for alpha read transparent &amp; vise versa ) channel will disappear into the ether - I know!!</p>
+
+                   <p>Go into the 'Masks' menu on the toolbar. At the bottom of the drop-down is 'Save to Alpha Channel'. Press, a small screen appears with 'Save to Alpha' on top.</p>
+
+                   <p><img SRC="images/textr_13.jpg"  height=269 width=354></p>
+
+                   <p>Press 'OK', a smaller screen is shown probably naming the layer "selection #0". Change it if you wish. In PSP you can have multiple layers - we'll only want one. I'd recommend deleting the last after each save - I'll show you how. It's not documented but you could lose the layer you want &amp; reload an earlier layer - time wasted.</p>
+
+                   <p>Now that you've saved to Alpha channel press the 'Save' icon; a screen will appear telling you it'll merge - only one alpha channel will be saved. Press 'Yes'. Come out of PSP; I'll have to show you how to reload.</p>
+
+                   <p>Before we draw the next transparency we'll have to go into TSM &amp; alter a few parts. Make 'main' current, 'polygon' mode &amp; split off the two sides. F2, rename the part "frames", parent "main" &amp; change the material to 'Transnorm'. This is the material which gives us completely transparency; there are no degrees of opacity - it's either transparent or not! Into 'point' mode &amp; bring the bottom down to the level of the sandpipes &amp; the horn thingies - I've forgotten the proper name. We know that MSTS doesn't see both sides of a polygon, we can see that part of the frames will be visible from the other side. Copy the "frames" part, paste &amp; scale in 'x' by the tiniest amount,  rename to "framein", parent "main" &amp; flip the polygons so that they face inwards.</p>
+
+                   <p><img SRC="images/textr_15.jpg"  height=386 width=550></p>
+
+                   <p>Back into PSP, reload the image file. Into 'Masks' &amp; 'Load from Alpha Channel', a preview will appear, press 'OK'. Try not to have different files with alpha channels open at the same time, it's possible to load the wrong alpha channel - Yes, I have the T shirt.</p>
+
+                   <p>For the completely transparent part of the frames we want to block in where it will be transparent. Choose solid black from the palette, zoom in close &amp; block in, zoom out often to check progress. You can get a better idea zoomed out - it's easier to block in zoomed in close.</p>
+
+                   <p><img SRC="images/textr_14.jpg"  height=386 width=550></p>
+
+                   <p>When you need to save:</p>
+
+                   <p>This is a bit tricky to explain. Into the 'Masks' menu &amp; 'Save to Alpha Channel' again. The same small screen appears with another name, probably 'Selection #1', Press 'OK'. Now you'll see on the left a list with something like Selection #0 &amp; New Channel. press on New Channel, the smaller screen appears with 'Selection #1', Press 'OK'. NOW to avoid using the wrong channel we'll delete the first. 'Masks', 'Save to Alpha Channel'. You'll find on the list both Selection #0 &amp; Selection #1; Press Selection #0 - the 'Delete' button should turn live. The highlighted layer will show in the preview window, it'll be obvious which is which. You want to delete the layer with just the windows, the other will have the frames and the windows. Delete then CANCEL, if you press 'OK' again a New Channel window will appear. Please experiment with this sequence before you've done too much work. Your screen should have looked like this - although this is 'Load From Alpha'.</p>
+
+                   <p><img SRC="images/textr_14a.jpg"  height=269 width=354></p>
+
+                   <p>Apply the texture to the frames - both parts - in exactly the same way as for the cab sides. You won't be able to see the transparency in TSM - you have to wait until it's in MSTS.</p>
+
+                   <p><img SRC="images/textr_19.jpg"  height=386 width=550></p>
+
+                   <h3>The Dreaded Makeace:</h3>
+
+                   <p>Re-export the model to MSTS. You have the option on the screen of exporting &amp; compressing the texture files. Like some other features of TSM it seems to depend more on whether there's a high tide in Wigan. Sometimes it works - sometimes it doesn't. All TSM does is to write a batch file for a tool called "makeace" which is in the trainsim/utilities directory. We can make life easier for ourselves if we use the "MakeAceWin.exe" that comes with the first MSTS patch. If it's not there already put a shortcut onto the Windows desktop screen. Go into  the program; it first looks for your files in "My Downloads". This merely tells you it's a Microsoft product. Find the input &amp; output files. If you're adding a file rather than overwriting one you'll have to fill in the output file name; use the same name as the input file with an .ace suffix. Tick the 'Use ZLib Compression' box.</p>
+
+                   <p><img SRC="images/textr_52.jpg"  height=449 width=395></p>
+
+                   <p>You've now exported your texture file with the transparency information - time for another look in MSTS.</p>
+
+                   <p><img SRC="images/ontrac19.jpg"  height=419 width=551></p>
+
+                   <h2>The End.</h2>
+
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end end overview --->
+
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Copyright Notice</h2>
+			<div class="entry">
+
+                 <p><a href="copyright.html">Please read my copyright notice (click here)</a></p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end end overview --->
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p><a href="index.html">Part 1</a>
+                 <br><a href="TSMloco_02.html">Part 2</a>
+                 <br><a href="TSMloco_03.html">Part 3</a>
+                 <br><a href="TSMloco_04.html">Part 4</a>
+                 <br><a href="TSMloco_05.html">Part 5</a>
+                 <br><a href="#">Part 6</a>
+                 <p><a href="copyright.html">Copyright, T&C</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 2002, 02 April 2010</center></p>
+</div>
+</body>
+</html>

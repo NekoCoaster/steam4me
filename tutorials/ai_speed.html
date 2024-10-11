@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>Setting Speed Control For AI Trains - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li ><a href="../vans/index.html">Vans</a></li>		
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Setting Speed Control For AI Trains</font>
+                        <br>(or Unravelling the mysteries of the .CON and .SRV files)
+                        <br>by Jim "sniper297" Ward</h2>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                             <p><p>After uploading the PO&amp;N6 route, I experimented with replacing the default KUJU SD40s on all the AI traffic trains with PO&amp;N SD40s. Just that one change, nothing more, and although the MS/TA SD40-2 is a little more powerful (385kN as opposed to 350kN), the original KUJU SD40 has a faster max velocity, 82mph as opposed to 65. I really have no idea whether that line is read or not, but when replacing the engine the <b>MaxVelocity</b> line in the .con file is recalculated. That changes the default running speed of the AI train, and although it doesn't (usually) affect activities with eastbound traffic, the westbound traffic gets SFNRS (Stop For No Reason Syndrome) with changes to even one consist.</p>
+
+                             <p>With the incomparable help of the infamous Scott "Igor" Miller and jtsdadinaz, we think we've finally figured out the formula.</p>
+
+                             <p>Essentially, deciphering the line in the .con file:</p>
+
+                             <h3>MaxVelocity ( 33.08096 0.22339 )</h3>
+
+                             <ul>
+                                 <li>First number is the actual max speed (in meters per second) based on TE/tonnage;</li>
+                                 <li>Second number is some kind of multiplier that determines what speed the AI train will slow to on grades and curves.</li>
+                             </ul>
+
+                             <p>Further complication, the only direct speed control in the activity editor is the "expected performance" in the service editor.</p>
+
+                             <p>So on examining the .srv file:</p>
+
+                             <h3>Efficiency ( 0.75 )</h3>
+
+                             <p>means the maxvelocity is multiplied by 0.75, that's as fast as it will go, and the minimum speed is all three numbers multiplied together. </p>
+                             
+                             <p>So for the example above, <b>MaxVelocity ( 33.08096 0.22339 )</b> <p>33.08096 meters per second = 1984.8576 meters per minute = 119091.45 meters per hour.
+
+                             <br>Divided by 1000 to convert to kilometers per hour&nbsp; = 119.09.
+                             <br>Multiplied by 0.6 to convert to miles/hour&nbsp; = 71.45mph.
+
+                             <p>That's the absolute maximumvelocity for this consist.</p>
+
+                             <p>Now multiply by 0.75 ("Expected Performance", or Efficiency in the .srv file) and you get 53.58, so about 54mph is the fastest this will run as an AI train on straight level track, given no speed restriction zones.</p>
+
+                             <p>Multiply again by that second number, 54 x 0.22339, you get 12.06mph as the slowest it will go when climbing a 4% grade with a 500 meter radius S curve or whatever.</p>
+
+                             <p>AI trains do cheat on physics, so although a player driving that 2xGP38 35 mixed consist won't make it anywhere near the summit on the original Marias Pass, an AI train using the same consist will just motor on up at the minimum speed.</p>
+
+                             <p>So what's all this mean for the average guy who don't like playing with calculators?</p>
+
+                             <p>The usual way to change AI traffic train speed is in the service editor, adjusting the expected performance up and down B'guess and B'god.</p>
+
+                             <p>Let's simplify this.</p>
+
+                             <p>Leave all your AI services at 75% so you don't have to fiddle with that, then open the .con file in Wordpad and manually hack the numbers to get the approximate speed you want. Change the second number to 0.5 or something, that will give half speed as the minimum and cure the unexplained stops, the first number at 12.5 gives about 20mph max, 15 = about 25mph max. Personally I'm using maxvelocity ( 12.34 1.0 ) in all my consists, runs about 19-20mph steady, who really pays attention to when an AI train slows down and speeds up anyway? That gives me 25 and 30 car trains pulled by a single engine crawling along at a steady 20mph, no more screwing around fiddling with expected performance values to speed this one up a little, slow that one down a little, damn now it stopped for no reason, guess I gotta edit all of them a little higher, why does this blasted thing keep resetting to the default 75 every time I open the service editor?!</p>
+
+                             <p>The hell with that, open the .con files, adjust the maxvelocity manually.</p>
+
+                             <p>For those who like calculators the formula is:</p>
+
+                             <table COLS=1 WIDTH="100%" BGCOLOR="#FFFFCC" >
+                             <tr>
+                             <td><b>Speed in mph</b> divided by<b>0.6 (kph)</b> multiplied by <b>1000 (meters)</b> divided by <b>60 (minutes)</b> divided by<b>60 (Seconds)</b> divided by E<b>xpected Performance </b>(as in efficiency, 0.75 not 75.0!).&nbsp;</td>
+                             </tr>
+                             </table>
+                             
+                             <p>Then adjust the second number for whatever you want minumum speed to be, as a percentage of the first number, so for 20mph max velocity if the second number is 0.25 the minimum will be 5mph, 0.5=10 mph, 0.75=15mph, 1.0 means it will maintain same speed regardless.</p>
+
+                             <p>Here's a table summarising the findings - at 75% Expected Performance:</p>
+                             
+<pre>
+&#09;First Parameter&#09;Second Parameter&#09;Min : Max speed of AI train in mph
+MaxVelocity ( 12.34&#09;0.50 )&#09;&#09;&#09;10:20
+MaxVelocity ( 12.34&#09;0.75 )&#09;&#09;&#09;15:20
+
+MaxVelocity ( 18.50&#09;0.50 )&#09;&#09;&#09;15:30
+MaxVelocity ( 18.50&#09;0.75 )&#09;&#09;&#09;22.5:30
+
+MaxVelocity ( 24.60&#09;0.50 )&#09;&#09;&#09;20:40
+MaxVelocity ( 24.60&#09;0.75 )&#09;&#09;&#09;30:40
+
+MaxVelocity ( 30.80&#09;0.50 )&#09;&#09;&#09;25:50
+MaxVelocity ( 30.80&#09;0.75 )&#09;&#09;&#09;37.5:50
+
+MaxVelocity ( 37.00&#09;0.50 )&#09;&#09;&#09;30:60
+MaxVelocity ( 37.00&#09;0.75 )&#09;&#09;&#09;45:60
+</pre>
+
+                        <p>Hmmm.</p>
+
+                        <p>Looking at that I see a pattern, for max speed if you're not concerned with precision, <br><b>6.0 for each 10 mph.</b></p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end end overview --->
+
+
+
+
+
+
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#cause">Repair</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 10 Feb 2004, 13 April 2010</center></p>
+</div>
+</body>
+</html>
+

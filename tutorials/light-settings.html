@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>Lighting settings in MSTS (from the Kuju Tech Docs) - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Lighting settings in MSTS</font></h2>
+                        <p></p>
+			<h2 class="title">Setting requirements</h2>
+ 			   <div class="entry">
+
+                      <p>The first thing you must specify is when you want the light or lights in question to come on.&nbsp; This is done by setting a number of flags to define the requirements for the lights concerned to light – if no requirements are listed, the light will always be on.</p>
+
+                       <p>Possible Requirements</P>
+<pre>
+
+<b>Type</b>
+&#09;( 0 )   the light is actually a 2-polygon square, the appearance of which is controlled
+              by a combination of parameters in Conditions and States
+&#09;( 1 )   the so-called "sphere of Light" - the beam thrown by the loco:
+              works only on player locomotives (not AI)
+
+<b>Conditions (</b>
+&#09;Headlight (0)&nbsp; (ignore headlight control status)
+&#09;Headlight (1) (the headlight control is at “Off”)
+&#09;Headlight (2)&nbsp; (the headlight control is at “Dim”)
+&#09;Headlight (3)&nbsp; (the headlight control is at “Bright”)
+
+&#09;Unit (0) (ignore unit status)
+&#09;Unit (1) (the unit is in the train but isn’t at the front or back)
+&#09;Unit (2) (the unit is the frontmost unit of the train)
+&#09;Unit (3) (the unit is the rearmost unit of the train)
+
+&#09;Penalty (0) (ignore penalty status)
+&#09;Penalty (1) (the train has not “stopped due to a penalty brake application”)
+&#09;Penalty (2) (penalty) (the train has stopped due to a penalty brake application”
+&#09;&#09;(useful for specifying an emergency warning light)
+
+&#09;Control (0) (ignore control status)
+&#09;Control (1) (the player is not control of the unit
+                 [i.e. it is a helper locomotive, AI locomotive or wagon])
+&#09;Control (2) (the player is in control of the unit)
+
+&#09;Service (0) (ignore service status)
+&#09;Service (1) (the unit is not in service e.g. a failed train lying in a siding)
+&#09;Service (2) (the unit is in service)
+
+&#09;TimeOfDay (0) (ignore time of day)
+&#09;TimeOfDay (1) (only come on if it’s daytime)
+&#09;TimeOfDay (2) (only come on if it’s night)
+
+&#09;Weather (0) (ignore weather)
+&#09;Weather (1) (only come on if it’s fine)
+&#09;Weather (2) (only come on if it’s raining)
+&#09;Weather (3) (only come on if it’s snowing)
+
+Hang on, you say, you've left out Coupling()
+So I have, but then so did Kuju when they left out the code in the Sim to make it work!
+
+<b>FadeIn</b>
+&#09;( nn )  nn = time in seconds from fully off to fully on
+<b>FadeOut</b>
+&#09;( nn )  nn = time in seconds from fully on to fully off
+
+<b>States</b>
+&#09;( zz )  nn = number of states (each state represents a different light setting,
+             (flash on/off, flash different colours, etc
+
+<b>State</b>
+&#09;Define each state: there must be the same number of definitions as zz above
+&#09;
+&#09;Duration ( nn )&#09;&#09;nn - duration of multi-state light in seconds
+&#09;&#09;&#09;&#09;leave at zero for single state
+&#09;LightColour ( ffrrggbb )transparency, red, green, blue (in hex)
+&#09;Position ( xx yy zz )&#09;of light from origin of model
+&#09;Transition ( 0 )
+&#09;Radius ( nn )&#09;&#09;nn = length of beam thrown [type ( 1 ) only]
+&#09;Radius ( nn )&#09;&#09;nn = radius of light [type ( 0 ) only]
+&#09;Angle ( nn )&#09;&#09;nn = width of beam in degrees [type ( 1 ) only]
+&#09;Azimuth ( xx yy zz )&#09;in degrees
+&#09;Elevation ( xx yy zz )&#09;in degrees
+
+</pre>
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "link1">
+		</div>
+
+    <!--- end end overview --->
+
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 31 October 2001, 12 April 2010</center></p>
+</div>
+</body>
+</html>

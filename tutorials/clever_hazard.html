@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>Clever Use of Hazard Feature: Activating Interlocking Signals - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li ><a href="../vans/index.html">Vans</a></li>		
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png"  height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png"  height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Clever Use of Hazard Feature:<br>Activating Interlocking Signals</font>
+                        <br>by Wayne Campbell</h2>
+                        <h3>or.... "Whistle Communication with Interlocking Tower"</h3>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                             <p>I have been constructing a route representing the London and Port Stanley ( Ontario Canada ) Railway. One of the key features is the junction with the Michigan Central. The crossing is protected by an interlocking plant controlled from the nearby BX Tower. The signals were normally lined against the L&PS. L&PS trains were required to stop clear of the signals and use their whistles to signal the BX tower of their intended destination through the interlocking plant. Once the tower operator set up the switches, he would provide a clear indication on the semaphore signals to allow the train to proceed. I wanted to be able to simulate this on my MSTS route and have come up with a unique way to build a ‘whistle activated’ signal.</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Activating The Signal</h2>
+			<div class="entry">
+
+                        <p>The trick is to <b>make the signals as a ‘hazard’ item</b>. Hazards are special MSTS models that react to trains by running specific animations when a train approaches or when the train sounds the horn. The hazard most people are familiar with are the track-side deer. They look up and then run away when a train approaches. What I did was build a signal tower and semaphore with the appropriate animation. By playing with the ‘idle loop’ timing and the ‘scamper loop’ timing I could create what appears to be a random delay between sounding of the whistle and raising of the semaphore. There is a fairly narrow range of distances - 160m to 200m - where the train whistle will activate the hazard. I was careful with placement of the hazard’s handle so that trains stopped within whistle activation range.</p>
+
+                        <p><img src="images/signal_hazard.jpg" width="700" height="505" alt="" border="0"></p>
+
+                        <p>The photo above shows how it works. Trains approaching the interlocking are required to stop short of Talbot street ( seen in the forground ). They whistle the BX Tower ( middle distance on the left ) and after a random delay the appropriate signal arm raises.</p>
+
+                        <p>It's a great technique that has allowed me to simulate this little piece of L&PS operations. I hope you can use it.</p>
+
+                        <p>Most of the info I needed was in the TechDocs on the MSTS CD in the file <b>"How to make a track hazard"</b>. This isn't a step-by-step tutorial but here is some of the essential information:</p>
+
+                        <p>Here is how my .haz file looks:</p>
+<pre>Tr_Worldfile (
+&#09;FileName ( SignalBladeRight.s )
+&#09;Distance ( .01 )
+&#09;Speed ( .0001 )
+&#09;Idle_Key ( 0 280 )
+&#09;Idle_Key2 ( 0 250 )
+&#09;Surprise_Key_Left ( 0 290 )
+&#09;Surprise_Key_Right ( 0 300 )
+&#09;Success_Scarper_Key ( 300 3300 )
+)
+</pre>
+
+                        <p>The signal spends most of its time randomly in one of the Idle_Key loops. When the train approaches, the model begins running the Surprise_Key loops. I designed my model so that it shows a stop signal and does nothing during both the Idle_Key and Surprise_Key loops. The hazards animate at 30 keys per second so you can see these loops run about 8 to 10 seconds long. Their purpose is to cause a random delay when the whistle is sounded. After the operator sounds the whistle, the currently running loop will finish and then the model runs the 'Success_Scarper_Key' animation. This animation raises the semaphore blade and holds it up for 100 seconds before lowering it again. The distance and speed are computed to provide 100 seconds of 'scamper' time ( .01m divided by .0001m/sec ) but essentially no real movement of the signal.</p>
+
+                        <p>My model has a total animation of 3300 keys arranged as follows:</p>
+
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Key 0 to 300, the semaphore blade is in the stop position.
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Key 300 to 330, the semaphore blade raises to the clear position
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Key 330 to 3270, the semaphore blade is held in the clear position
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Key 3270 to 3300, the semphore blade falls back to the stop position.
+
+                        <p>Here is how one of the animation nodes look in my shape file:</p>
+
+<pre>
+anim_node SEMAPHORE (
+&#09;controllers ( 1
+&#09;tcb_rot ( 5
+&#09;slerp_rot ( 0 -0.5000001 0.5 0.5 0.4999999 )
+&#09;slerp_rot ( 300 -0.5000001 0.5 0.5 0.4999999 )
+&#09;slerp_rot ( 330 -0.7071068 1.152023E-07 0 0.7071068 )
+&#09;slerp_rot ( 3270 -0.7071068 1.152023E-07 0 0.7071068 )
+&#09;slerp_rot ( 3300 -0.5000001 0.5 0.5 0.4999999 )
+</pre>
+
+                        <p>My semaphore model has the crank and pushrods animated also, but this should give you the basic idea.</p>
+
+                        <p>Placing the semaphore in RE is a bit tricky. On the L&PS there are very specific spots where trains are required to stop. In one case it is defined by a road crossing. At another location there were large 'All Trains Must Stop' signs beside the track. The diamond shaped 'hazard handle' needs to be positioned 160m - 200m from the place where the trains stop and sound their whistle. Use your RE 'Placement Window' coordinates to get an exact measurement. I had one problem though. Once the 'hazard handle' was placed, I couldn't move the actual semphore signal to its proper spot near the 'stopping zone' . RE prevents you from putting the hazard too far away from its handle. To solve this, I left the handle where it needed to be and went in and manually edited the .W world file to reposition the semaphore signal to its correct location near the 'stopping zone'.</p>
+
+                        <p>Another issue you are going to run into is that the whistle activated signals really only work well from one direction. You can get the distances right for trains from one direction, but most likely they won't be right for trains coming from the other. For my application this didn't matter since the interlocking plant had separate signals north and south of the diamond. The signals south of the diamond respond to northbound trains and vice versa for the signals north of the diamond.</p>
+
+                        <p><b>Important note:</b>  these signals are considered to be 'Animal Hazards'. They will be invisible during Explore mode and you must set 'Animal Hazards' to 100% in AE to be sure they are visible during activities. You can still use other 'animal hazards' elsewhere along the track ( although 100% of them will be visible ) and the 'people hazards' work normally. I haven't run into any restrictions yet on the number of hazards. I now have 5 different types of whistle activated signals along with the default deer and spottter and haven't had any difficulty.</p>
+
+                        <p>I have a separate .haz file for each hazard so I end up with several of them in my route folder. ie</p>
+
+                        <p>SemaphoreBladeRight.haz
+                        <br>SemaphoreBladeLeft.haz
+                        <br>Semaphore2Blades.haz
+                        <br>etc</p>
+
+                        <p>Each .haz file has a corresponding .s shape file in my Global\Shapes folder and the textures they need are in the Global\Textures folder.</p>
+
+                        <p>In addition, I added each hazard to my route's .ref file using a format like this:</p>
+
+<pre>Hazard (
+&#09;Class ( Hazards )
+&#09;Filename ( semaphorebladeright.haz )
+&#09;Align ( None )
+&#09;Description ( "SemaphoreBladeRight" )
+&#09;)
+</pre>
+
+                        <p>Well I hope this helps others who might want to try a Hazard model. They can be train activated, whistle activated and randomized using the AE 'Hazard Freq' control.</p>
+
+                        <p>This technique won't work with any of the existing searchlight signal models, but it could be done with a custom built searchlight. Hazard models are not able to control a signal light color - they can only control animation. The trick is to make a cube with red on one face and green on the opposite face. Arrange the animation so that the correct colored face rotates into the lit area of the signal head. I have used this method on my semaphores to light up the correct colored lens for night viewing.</p>
+
+                        <p>I also like the idea of populating the station stops with groups of passengers that vary from run to run.  I'm trying to work out something similar for the flag stops along my route. I'd like the stop flag to appear randomly at some of my stops to add variety to my passenger activities.</p>
+
+                        <p>Let's see what you all can do with this technique.</p>
+
+                        <p>I hope you find this helpful.</p>
+
+                        <p>Wayne
+                        <br><a href="http://www.lnps.info/">Building the L & PS</a></p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+
+		</div>
+
+    <!--- end cause --->
+
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+               </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 28 January 2005, 19 April 2010</center></p>
+</div>
+</body>
+</html>

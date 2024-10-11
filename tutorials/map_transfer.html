@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>Using Maps/Aerial Photos as Transfer Objects in Route Editor - at The Steam4me Site</title>
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Using Maps/Aerial Photos as Transfer Objects in Route Editor</font>
+                        <br>by Wayne Campbell</h2>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                             <p>This is a technique to use scanned maps or airphotos to aid in exact placement of track and structures. The technique allows a single map to cover up to a 500 meter square area and works best in dense urban areas. For larger areas, traditional methods with markers is easier. I am fortunate to have Fire Insurance maps for the populated areas of my route. These show exact locations for track, bridges, rivers, roads and buildings. With these maps, I can lay track right along the lines on the map, drop structures in the exact spot and place fences exactly along property lines.</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "process">
+		</div>
+
+    <!--- end end overview --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">The Procedure</h2>
+			<div class="entry">
+
+                        <p><img src="images/map_transfer1.jpg" width="640" height="480" alt="" border="0"></P>
+
+                        <p>This technique uses the Transfer feature to lay the maps full scale directly on the terrain inside RE. As with most things, it takes much longer to explain than to do.</p>
+
+                        <ol>
+                            <li>The first step is to scan in your map and work out the scale of the scanned image. To do this for my example, I loaded it into my paint program and determined from the scale printed on the map that 100 feet was equal to 130 pixels ( In PSP7 use the rectangular select tool for measurements ). I know that 100 feet is equivalent to 30.48 meters. 130 pixels divided by 30.48 meters = 4.26 pixels per meter. So my map scale is 4.26 pixels per meter.
+                                <br> &nbsp;
+                            </li>
+                            <li>Most maps are probably too big and will have to be cropped. The biggest map that we can load into RE as a transfer is about 500m by 500m. In my example that works out to 2130 pixels square ( 500 x 4.26 ). Now, I use the crop tool ( don’t resize! ) to crop around the area of interest, ensuring that it does not exceed 2130 pixels square. Make a note of the size of the cropped image. In my example, I cropped it at 2096 x 1861 pixels.  Using my scale of 4.26 pixels per meter, this works out to 492 x 437 meters. Remember this figure because later RE will ask for the size of the transfer.
+                                <br> &nbsp;
+                            </li>
+                            <li>Now the map must be resized to a MSTS standard 512x512 pixel square texture. For this, use the RESIZE tool. Regardless of the original cropped size of your map, resize it now to 512x512 pixels.
+                                <br> &nbsp;
+                            </li>
+                            <li>Save the map as a windows bitmap with a descriptive name. I usually append the original size of the map to the filename. For example, this map was called PSWEST-492x437.BMP Now you have a 512x512 pixel bitmap representing a map 492x437 meters big.
+
+                                <p><img src="images/map_transfer2.jpg" width="512" height="512" alt="" border="0"></p>
+                            </li>
+                            <li>Next we must convert this into a Transfer object in RE. First I use TGATool2 to export the bitmap image into my route texture folder as an .ACE file. Use ‘No-Alpha’ with ‘Compression’.
+                                <br> &nbsp;
+                            </li>
+                            <li>Now I add the transfer to my route’s .REF file. The entry looks something like:
+
+                                <p><font face="Courier"><b>
+                                Transfer (
+                                <br>&nbsp;&nbsp;&nbsp;&nbsp;FileName (PSWest-492x437.ace)
+                                <br>&nbsp;&nbsp;&nbsp;&nbsp;Class ( Transfers )
+                                <br>&nbsp;&nbsp;&nbsp;&nbsp;Align ( None )
+                                <br>&nbsp;&nbsp;&nbsp;&nbsp;Description ( PSWest-492x437 )</b></font></p>
+                            </li>
+                            <li>We are nearly there. Open RE and go to the approximate location for the map.
+                                <br>&nbsp;
+                                <ol>
+                                    <li>Press F5 ( Placement Tool );
+                                        <br> &nbsp;</li>
+                                    <li>Click on ‘MORE’ in the Placement Dialog Window;
+                                        <br> &nbsp;</li>
+                                    <li>In the Object Class drop-down box, select Transfers;
+                                        <br> &nbsp;</li>
+                                    <li>Find your transfer, PSWEST-492x437 for example, in the list and double click on it to select;
+                                        <br> &nbsp;</li>
+                                    <li>Use your placement tool to drop the map transfer onto the ground. You will see it as a tiny 1 meter square map on the ground under the green triangle shaped marker;
+                                        <br> &nbsp;</li>
+                                    <li>With the marker still selected, right click to view the properties of the map;
+                                        <br> &nbsp;</li>
+                                    <li>Go to the transfer tab and key in 492 x 437 for the width and height of the transfer. Now you see the advantage of including the dimensions in the filename.
+                                    </li>
+                                </ol>
+
+                                <p><img src="images/map_transfer3.jpg" width="444" height="331" alt="" border="0"></p>
+                                <br> &nbsp;
+                            </li>
+                            <li> After you click OK, the map appears full size on the terrain. You can use your F3 and F4 tools to rotate and position it properly relative to other objects in the scene.
+                                <p><img src="images/map_transfer4.jpg" width="640" height="480" alt="" border="0"></p>
+                                <br> &nbsp;
+                            </li>
+                        </ol>
+                        </p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="tips">
+		</div>
+
+    <!--- end cause --->
+
+
+
+    <!--- sol hard --->
+
+		<div class="post">
+                  <h2 class="title">Other Tips</h2>
+			<div class="entry">
+
+                      <h3>Here’s a couple of additional tips:</h3>
+                      <ul>
+                          <li>When you are finished using the map, go back to its properties and set its width and height back to 1 meter by 1 meter. This gets the map out of the way, but it conveniently stays at the right location on the route in case you need it later.
+                              <br>&nbsp;</li>
+                          <li>When you are preparing your map in your paint program, rotate it so that north is straight up. That will save you having to rotate it when you drop it into RE.
+                              <br>&nbsp;</li>
+                          <li>I use conventional markers to aid placement of the transfers (see the first pic above).  I place a few markers at the major intersections and align the transfer to the marker.
+                              </li>
+                     </ul>
+
+                     <p>I hope you find this helpful.</p>
+
+                     <p>Wayne.  <a href="http://www.lnps.info/">(Visit my site: Building the L & PS)</a></p>
+
+                     <h3>Additional notes by Bob Jones:</h3>
+
+                     <ul>
+                          <li>Doug Cox, at USA photomaps, confirmed that 1 meter equals 1 pixel. I’ve been using the 500 x 500 meter photo images.
+                              <br>&nbsp;</li>
+                              <li>With USGS maps, using the 'meter scale' from the map’s title block, grid off the map as needed in paint, and go from there just like you have been doing.</li>
+                     </ul>
+       		</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end sol hard --->
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#process">The Procedure</a>
+                 <br><a href="#tips">Other Tips</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 28 January 2005, 29 March 2010</center></p>
+</div>
+</body>
+</html>

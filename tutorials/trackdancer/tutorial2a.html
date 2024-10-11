@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created on: 3/29/2007 -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <title>BEGINNERS GUIDE TO RETEXTURING MSTS LOCOMOTIVE MODELS: Page 1</title>
+  <meta name="author" content="Sean Lim aka Trackdancer">
+<link rel="StyleSheet" type="text/css" href="trackdancer.css">
+</head>
+<body>
+<!-- TITLE -->
+<div id="boxtitle">
+BEGINNERS GUIDE TO RETEXTURING MSTS LOCOMOTIVE MODELS: Page 1
+</div>
+<div id="boxmenu">
+Menu<br><br>
+<div id="menuitems">
+<a href="../index.html" style="color: #696969; text-decoration: none;font-weight: bold;">Steam4me Main Tutorial Index</a><br><br>
+<a href="main.html" style="color: #696969; text-decoration: none;font-weight: bold;">SECTION INDEX</a><br><br>
+<a href="tutorial1.html" style="color: #696969; text-decoration: none;">How to weather locomotive textures tutorial.</a><br><br>
+<a href="tutorial2a.html" style="color: #696969; text-decoration: none;">How to re-texture MSTS locomotive models - a Comprehensive Guide</a><br><br>
+<a href="tutorial3.html" style="color: #696969; text-decoration: none;">A Beginner's Guide to avoiding problems building models with TSM</a><br><br>
+<a href="tutorial4.html" style="color: #696969; text-decoration: none;">Building an Arch using TSM.</a><br><br>
+</div>
+</div>
+<!-- Validation -->		
+<img src="resources/fig/valid-html401-blue.gif" border="0" width="88" height="31" alt="Valid HTML 4.01 Transitional" style="position: absolute; left: 10px; top: 280px;">
+<!-- SideBar -->
+<div id="sidebar">
+<b>Quick Links:</b><br><br>
+<a href="tutorial2a.html#part1" class="part">Part 1 - Introduction</a><br>
+<a href="tutorial2a.html#part2" class="part">Part 2 - The project</a><br>
+<a href="tutorial2a.html#part3" class="part">Part 3 - What you will need</a><br>
+<a href="tutorial2b.html#part4" class="part">Part 4 - The subject of the repaint</a><br>
+<a href="tutorial2b.html#part5" class="part">Part 5 - Installing the SD45 model</a><br>
+<a href="tutorial2b.html#part6" class="part">Part 6 - Creating a custom SD45</a><br>
+<a href="tutorial2c.html#part7" class="part">Part 7 - Converting the ACE files</a><br>
+<a href="tutorial2d.html#part8" class="part">Part 8 - Figuring out the mapping</a><br>
+<a href="tutorial2e.html#part9" class="part">Part 9 - Color considerations</a><br>
+<a href="tutorial2e.html#part10" class="part">Part 10 - Entering RGB colors</a><br>
+<a href="tutorial2f.html#part11" class="part">Part 11 - Color sampling from a photo</a><br>
+<a href="tutorial2g.html#part12" class="part">Part 12 - Masks, layers and transparency</a><br>
+<a href="tutorial2h.html#part13" class="part">Part 13 - Painting the main hull</a><br>
+<a href="tutorial2i.html#part14" class="part">Part 14 - Rendering the details</a><br>
+<a href="tutorial2j.html#part15" class="part">Part 15 - Finishing Touches</a><br>
+</div>
+<!-- MAIN CONTENT -->
+<div id="boxcontent">
+<a name="part1"></a><div class="subtitle">PART 1 - Introduction</div>
+<p>Painting your own locomotive models is one of the most exciting parts of the MSTS experience. This tutorial will tell you everything you need to know about what is needed to complete your own project. The contents of this tutorial is arranged into seperate sections so that you will know what is needed to be done at every stage.</p>
+<p>Unlike other "beginners" tutorials, this one will go into a fair degree of depth so that by the end of your project, you should have an excellent repaint to add to your collection of locomotives.</p>
+
+<a name="part2"></a><div class="subtitle">PART 2 - The Project</div>
+<p>For this tutorial. you will need to have a copy of my friend James Hunt's Santa Fe SD40 locomotive model which is available in the Download Section of Train-sim.com model archive. Here is a view of the model in it's original form:</p>
+<div style="text-align: center"><img src="resources/fig/tutor00.jpg" border="0" width="480" height="300" alt=""></div><br><br>
+
+<a name="part3"></a><div class="subtitle">PART 3 - What you will need</div>
+<p>There are certain things that you will need for a retexturing project. Below is a list of the items that you will need to get a hold of plus a brief explaination of what they are and where you can get them from:</p>
+<table summary="" border="1" width="525"  cellspacing="0" cellpadding="4">
+	<tr>
+		<th width="35%" style="background-color: #DCDCDC;">Item Required:</th>
+		<th width="35%" style="background-color: #DCDCDC;">Why You Will Need It:</th>
+		<th width="30%" style="background-color: #DCDCDC;">Where To Get It From:</th>
+	</tr>
+	<tr>
+		<td valign="top">A copy of <b>Microsoft Train Simulator</b>.</td>
+		<td valign="top">Needed to operate the model.</td>
+		<td valign="top">You should already have this program.</td>
+	</tr>
+	<tr>
+		<td valign="top">A copy of the SD45 model.</td>
+		<td valign="top">Subject of this tutorial.</td>
+		<td valign="top"><a href="http://www.train-sim.com/login.htm">Train-sim.com</a>.<br>The download is free.</td>
+	</tr>
+	<tr>
+		<td valign="top">A graphics program such as <b>Photoshop</b>, <b>Paintshop Pro</b> or <b>Picture Publisher</b>.</td>
+		<td valign="top">Needed to repaint models.</td>
+		<td valign="top">Paintshop Pro is available for trial usage for a 30 day period and is a free download from <a href="http://www.jasc.com/">JASC Software</a>.<br><br>You can also use MS Paint that came with your Windows operating system, but I seriously would not recommend this program for this type of application.</td>
+	</tr>
+	<tr>
+		<td valign="top"><b>TGAtools2.exe</b></td>
+		<td valign="top">Needed to convert the ace files into bmp format for repainting.</td>
+		<td valign="top"><a href="http://www.mnwright.btinternet.co.uk/train/train.htm">MW Graphics</a><br><br>This is a Freeware utility.</td>
+	</tr>
+		<tr>
+		<td valign="top">A Unicode Text Editor</td>
+		<td valign="top">Needed to edit model files.</td>
+		<td valign="top">You already have this - it is the <b>WordPad</b> program that comes with your Windows operating system.</td>
+	</tr>
+		<tr>
+		<td valign="top"><b>MakeAceWin.exe</b></td>
+		<td valign="top">Need to convert your repainted texture maps into the MSTS ace format.</td>
+		<td valign="top">This comes with all current editions of MSTS. For earlier versions you will need to get this from Microsoft. It is a part of the <a href="http://www.microsoft.com/games/trainsimulator/downloads.asp#tsupdate">Tools Update</a>.<br><br>The update is Free.</td>
+	</tr>
+	<tr>
+		<td valign="top"><b>WinZip.exe</b></td>
+		<td valign="top">Needed to unzip and zip model files.</td>
+		<td valign="top">If you do not already have this useful utiltiy, it can be found on a lot of sites on the Internet. One good place to get it from is <a href="http://www.download.com/">downloads.com</a>.</td>
+	</tr>
+	<tr>
+		<td valign="top" colspan="3" style="background-color: #DCDCDC;"><div style="text-align: center">The following programs will be very helpful but are not absolutely necessary to complete your project.</div></td>
+	</tr>
+	<tr>
+		<td valign="top">Paul Gausden's<br><b>SVIEW.exe</b></td>
+		<td valign="top">Useful to view the model whilst you are repainting it. It saves having to open up the simulator every time you want to check the progress of your work</td>
+		<td valign="top">This excellent program is available from <a href="http://www31.brinkster.com/decapod/">DECAPOD's MSTS Projects</a> web site.<br><br>This is a Freeware utility.</td>
+	</tr>
+	<tr>
+		<td valign="top">Carlos Gomez's <b>ConBuilder.exe</b></td>
+		<td valign="top">Needed to create consists files for your model.</td>
+		<td valign="top">This is also available from <a href="http://www.train-sim.com/login.htm">Train-sims.com</a>.<br><br>This is a Freeware utility.<br><br>You can also use the default Consist Editor that is a component part of the MSTS Editor and Tools program.</td>
+	</tr>
+</table>
+<p>Once you have assembled your tools, read at least the basic instructions so that you can follow with the rest of this tutorial. It will be too much to have to give step-by-step instructions on the use of these tools. If you do get stuck with any of them, you can contact me or post a request for assistance on one of the many forums that pertain to retexturing MSTS models.</p>
+
+
+<br><br>
+[ <a href="#top">Top of Page</a> ]&nbsp;[ <a href="tutorial2b.html">Next</a> ]
+<!-- FOOTER -->
+<hr>
+<p class="small">Copyrights © 2004-2007, Sean Lim. All Rights Reserved. Hosted courtesy of steam4me with permission.</p>
+</div>			
+</body>
+</html>

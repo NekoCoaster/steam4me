@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>Modifying Track Textures - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+	</font>
+        
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Modifying Track Textures</font>
+                        <br>by Jim "sniper297" Ward</h2>
+                        <p></p>
+ 			   <div class="entry">
+
+                        <p><b>Question:</b>Is it possible to modify a track texture so it has no ties?</i></b>
+
+                        <p><b>Answer:</b> First thing you need to get to convert .ACE files back and forth is TGAtool2, free from <a href="http://fly.to/mwgfx" target="_blank">http://fly.to/mwgfx</a>  If you don't have one already, then you need a good graphics program like PSP-7 to edit the textures, although you can get by copying and pasting in Paintbrush.</p>
+
+                        <p>In the route you want to hack, look in \Textures (and \Textures\Snow for winter) for Acleantrack1.ace, which is the ties and ballast, and Acleantrack2.ace for the rails themselves. For what you want to do, just edit Acleantrack1.ace to replace the ballast and tie textures with your iron thing.</p>
+
+                        <p><img SRC="images/trktexnew1.jpeg" NOSAVE height=600 width=800></p>
+
+                        <p>I think there are tutorials on how to use TGAtool2, but it's pretty intuitive and doesn't take long to get the hang of it. One thing you need to be aware of with Acleantrack1.ace is the mipmapping is wierd, so if you get a neon glow tinting the distance texture, all you need to do is darken the single pixel* in the lower right corner to fix it.</p>
+
+                        <p>Once you play with it for a few hours, you can make any kind of track texture you want.</p>
+
+                        <p><img SRC="images/trktexnew2.jpeg" NOSAVE height=600 width=800></p>
+
+                        <p><b>Supplementary Question:&nbsp;</b> I don't get the part about the bottom right pixel. Am I supposed to just fill it black and the colors will correct themselves?</p>
+
+                        <p>I don't get it either, but one of the graphics geniuses came up with that answer to the distant tinting problem.</p>
+
+                        <p>Apparently what you see over all in the .ACE file is the near texture, and the lower right corner is what paints the far texture, so if the track looks good up close but is tinted bright yellow or something in the distance, check that bottom right corner, and paint a little dot either medium gray or dirty brown or whatever the general color of your ballast is to fix it.</p>
+
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "adjust">
+		</div>
+
+    <!--- end end overview --->
+
+
+<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 19 July 2002, 13 April 2010</center></p>
+</div>
+</body>
+</html>
+

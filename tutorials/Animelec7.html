@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>How To Animate An Electric Loco (And Make Parts Move Using The P Key): Section 7 - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li ><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png"  height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png"  height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+                        <h2><font color="#3333FF">How To Animate An Electric Loco (And Make Parts Move Using The P Key): Section 7</font>
+                        <br>by Paul DeVerter</h2>
+                        <h3>A Port City Car Co. Project Copyright &copy; 2005</h3
+
+                        <p></p>
+			<h2 class="title">SECTION 7 - The Engine File</h2>
+ 			   <div class="entry">
+
+                   <p>The typical engine file is 6 or 7 pages long. It includes sections on lights, engine power, air brakes for the train and for the engine, engine controllers, a description, and an operating procedure. Further, you must have Sound and Cabview Folders. I believe that the TSM default electric eng file is designed for the Acela locomotive.</p>
+
+                   <p>Compare this to the wagon file for a passenger or freight car. It is often only one page long and does not require any additional Folders.</p>
+
+                   <p>If we were building a powered animated electric locomotive, such as the Crane, or the Linecar, then we would need a full eng file. There are a number of changes we would make, such as changing the type of coupling, changing the brakes and their values, removing the emergency monitoring, etc. But we would still need a fairly complete eng file. However, if we are building a non-powered side dump gondola, and are only using the electric locomotive because it has a P key which we can use to animate the object, then we have a lot of stuff in the eng file that is of no use to us. So, what can we eliminate? What can we pare the file down to?"</p>
+
+                   <p>That is the subject of this Section.  I started off with the TSM default eng file for an electric locomotive, and began hacking away at un-necessary portions.  I also changed a few items to fit typical North American freight car practice.  I ended up with an eng file that is no longer than a short wag file, and was even able to eliminate the Sound and Cabview Folders.  And the animation still works, as desired.</p>
+
+                   <p>Now I know little of the numbers that belong in the parts I have left, so there is probably a lot of tweaking that could be done by an eng file expert.  That is to say, I have not adjusted the Mass, Coupling Spring, Brake Charging Rates, and other numbers that are left. I will leave that to someone more knowledgeable than I.</p>
+
+                   <p>I did make adjustments to MaxPower, and others in that group, by reducing them to zero. When I tried to eliminate these parameters entirely, the file would not load.  So, here is the eng file, along with a few comments on what is left in.</p>
+
+<pre>
+&#09;SIMISA@@@@@@@@@@JINX0D0t______
+&#09;Wagon ( SideDump7
+&#09;Type ( Engine )
+&#09;&nbsp;&nbsp;WagonShape ( SideDump7.s )
+&#09;&#09;Size  ( 2.85118m 1.28016m 9.144m )
+&#09;&#09;CentreOfGravity ( 0.0m 0.0m 0.0m )
+&#09;&#09;Mass ( 90.7t )
+&#09;&#09;WheelRadius ( 0.5m )
+&#09;&#09;InertiaTensor ( Box ( 2.85118m 1.28016m 9.144m ) )
+&#09;&#09;Coupling (
+&#09;&#09;&nbsp;Type ( Automatic )
+&#09;&#09;&#09;Spring (
+&#09;&#09;&#09;Stiffness ( 2e7N/m 0  )
+&#09;&#09;&#09;Damping ( 0.2e7N/m/s 0 )
+&#09;&#09;&#09;Break ( 1e7N 0 )
+&#09;&#09;&#09;r0 ( 0.1 1e9 )
+&#09;&#09;)
+&#09;&#09;CouplingHasRigidConnection ( 1 )
+&#09;&nbsp;Buffers (
+&#09;&#09;Spring (
+&#09;&#09;&nbsp;Stiffness ( 1e7N/m 0 )
+&#09;&#09;&nbsp;Damping ( 1e6N/m/s 0 )
+&#09;&#09;&nbsp;r0 ( 0m 1e9 )
+&#09;&#09;)
+&#09;&#09;Centre ( 0.5 )
+&#09;&#09;Radius ( 1 )
+&#09;&#09;Angle ( 0.5deg )
+&#09;&nbsp;)
+&#09;
+&#09;&#09;comment( guessed brake force )
+&#09;&nbsp;MaxBrakeForce ( 150kN )
+&#09;&nbsp;Adheasion ( 0.2 0.4 2 0 )
+&#09;&nbsp;DerailRailHeight ( 4cm )
+&#09;&nbsp;DerailRailForce ( 230kN )
+&#09;&nbsp;DerailBufferForce ( 200kN )
+&#09;&nbsp;NumWheels ( 8 )
+&#09;&nbsp;Friction (
+&#09;&nbsp;150N/m/s		1		-1mph		0		1
+&#09;&nbsp;5.1N/rad/s		1		-1rad/s		0		1
+&#09;&nbsp;)
+
+&#09;&nbsp;BrakeEquipmentType( "Handbrake, Triple_valve, Auxilary_reservoir, Emergency_brake_reservoir" )
+&#09;&nbsp;BrakeSystemType( "Air_single_pipe" )
+&#09;&nbsp;MaxBrakeForce( 180kN )
+&#09;comment ( added Handbrake does not retard car )
+&#09;&nbsp;MaxHandbrakeForce ( 35kN )
+&#09;&nbsp;EmergencyBrakeResMaxPressure( 110 )
+&#09;&nbsp;TripleValveRatio( 2.5 )
+&#09;&nbsp;MaxReleaseRate( 20 )
+&#09;&nbsp;MaxApplicationRate( 20 )
+&#09;&nbsp;MaxAuxilaryChargingRate( 30 )
+&#09;&nbsp;EmergencyResCapacity( 10 )
+&#09;&nbsp;EmergencyResChargingRate( 30 )
+&#09;&nbsp;BrakeCylinderPressureForMaxBrakeBrakeForce( 70 )
+&#09;&nbsp;)
+&#09;
+&#09;Engine ( SideDump7
+&#09;&nbsp;    Wagon ( SideDump7 )
+&#09;&nbsp;    Type ( Electric )
+&#09;&nbsp;    MaxPower ( 0kW )
+&#09;&nbsp;    MaxForce ( 0kW )
+&#09;&nbsp;    MaxContinuousForce ( 0kN )
+&#09;&nbsp;    MaxVelocity ( 0mph )
+&#09;&nbsp; MaxCurrent ( 0A )
+&#09;&nbsp;    WheelRadius ( 0.5m )
+&#09;&nbsp;    NumWheels ( 1 )
+&#09;&nbsp;    BrakesEngineBrakeType( "Air_single_pipe"  )
+&#09;&nbsp;    BrakesTrainBrakeType( "Air_single_pipe" )
+&#09;&nbsp;    BrakesEngineControllers( "Independent, Train" )
+&#09;
+&#09;&nbsp;Sound ( "GenFreightWag1.sms" )
+&#09;Name ( "SideDumpHopper7" )
+&#09;&nbsp;)
+&#09;)&nbsp;
+</pre>
+
+
+                   <p>My sound expert, Chuck Zeiler, tells me that I should substitute "GenPassWagModern.sms" for the Sound in the next to last entry.  In truth, you can leave out the whole line, as it is not needed to make the Gondola work.</p>
+
+                   <p>Notice that the numbers relating to MaxPower through MaxCurrent have all been reduced to zero.  These headings must still be there for the eng file to work.</p>
+
+                   <p>I changed the default BrakeEquipmentTypes, and added the "Handbrake" as well.  I then added the lines about "MaxHandBrakeForce" and "NumberOfHandbrakeLeverSteps".  This causes the car to turn red when using F9 and double clicking it in the train, but I can not tell that it adds any retarding force to the car, so you may be able to leave these out also.</p>
+
+                   <p>The Coupler has been changed from Bar to Automatic.  The BrakeSystemType has been changed to Air_single_pipe in all three places.  The eng sound and wag sound items have been removed, hence there is no need for a dependent Sound Folder.  Also the reference to the Cabview is gone, so the Cabview Folder is likewise gone.</p>
+
+                   <p>All of the items in the EngineControllers section have been removed, and amazingly enough that includes the "PantographToggle1" line.  When the car is coupled to an electric engine, the P key still operates to animate the gondola.  When the car is uncoupled, it is not animated, but upon recoupling, it again animates.  I think this is because the lead locomotive is used by MSTS to control the whole train, even if there are additional locomotives.</p>
+
+                   <p>Since this is still a locomotive, disguised as a freight car, when you make a consist in Consist Editor, you will find the object in the Electric Locomotives listing, and since it has no Cabview, there is no controller handle in front of the listing.</p>
+
+                   <h2>Lessons Learned</h2>
+
+                   <p>The complexity and extent of the eng file can be considerably reduced, if you are using it solely as a vehicle to animate a freight or passenger car that is not self powered.  By doing so, the P key still operates to actuate the animation.  The numbers given above are not accurate for a freight car, and need to be adjusted for that sort of physics.  I imagine the couplers section likewise needs attention.</p>
+
+                   <p>Well, that completes this Section.  So, we will move on to <a href="Animelec8.html">Section 8</a> and discuss the Trolley Wheel, and its rotation.</p>
+
+
+                   </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "link1"</a>
+		</div>
+
+    <!--- end end overview --->
+
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Series Contents</h2>
+                 <p> <a href="Animelec1.html">Section 1</a>
+                 <br><a href="Animelec2.html">Section 2</a>
+                 <br><a href="Animelec3.html">Section 3</a>
+                 <br><a href="Animelec4.html">Section 4</a>
+                 <br><a href="Animelec5.html">Section 5</a>
+                 <br><a href="Animelec6.html">Section 6</a>
+                 <br><a href="#">Section 7</a>
+                 <br><a href="Animelec8.html">Section 8</a>
+                 </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 12 April 2005, 06 May 2010</center></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,597 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>How To Animate A Scenery Object - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li ><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png"  height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png"  height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+                        <h2><font color="#3333FF">How To Animate A Scenery Object</font>
+                        <br>by Paul DeVerter</h2>
+                        <h3>A Port City Car Co. Project Copyright &copy; 2004</h3
+
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                   <h2>A Stationary Steam Engine project</h2>
+
+                   <p><img SRC="images/dev_01.jpg" NOSAVE height=95 width=199></p>
+
+                   <p>This advanced level tutorial is for users of <b>Train Sim Modeler (TSM)</b>.</p>
+
+                   <p>Unfortunately, as delivered, TSM contains little help on animation.&nbsp;&nbsp;&nbsp; If you follow this tutorial, you will build an animated scenery object.</p>
+
+                   <p>After you have decided what you are going to do, you need to make sure you follow several rules:</p>
+
+                   <ul>
+                       <li>The animated scenery object as a whole can not be rotated in TSM after you have animated a part, without redoing the animation.&nbsp; The whole thing can, however, be rotated in Route Editor as you place it in MSTS;</li>
+                       <li>The origin at ground zero may be reset (raised or lowered) after animation;</li>
+                       <li>The hierarchy must follow strict guidelines, or the animated parts will go everywhere.&nbsp; Learn to find the Part Animation Window and pay attention to what it shows.&nbsp; If parts rotate or do other strange things, the way to clear them up is in this Window.&nbsp; And, if you need to start over again, you will need to go here to remove all prior animation;</li>
+                       <li>Add pins for rotating parts to help line things up, and later delete them as polys if you so desire, when they have served their purpose.</li>
+                   </ul>
+                   </p>
+
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "link1"</a>
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Model Details</h2>
+			<div class="entry">
+
+                   <p>This model has rotating, rotating and sliding, and simple sliding parts.&nbsp;&nbsp; The size is not important, just whatever looks reasonable.&nbsp;&nbsp; Do use gaudy and multiple colors so you can send pictures to friends and ask for advice and identify parts by color as well as nomenclature.</p>
+
+                   <p>To begin, create a base larger than you will need, and thick enough so that it can be placed on uneven ground&nbsp; - say 6 by 12 feet, by &frac12; foot high.&nbsp; Give it a name, such as BASE, or MAIN (if you are building a Pickup Object, there are required names and you need to read the MSTS document “Creation of a Complex Shape” and other docs in the Tech Articles that came with the Sim - but this is not a Pickup Object so the same rules do not apply).</p>
+
+                   <p>A stationary engine has very few parts:</p>
+
+                   <ul>
+                       <li>a base;</li>
+                       <li>a support for the flywheel;</li>
+                       <li>the flywheel itself;</li>
+                       <li>a connecting rod;</li>
+                       <li>a crosshead;</li>
+                       <li>a piston rod and</li>
+                       <li>ancillary parts such as a Cylinder, Slides for the Crosshead, etc.</li>
+                   </ul>
+
+                   <p>Animation:</p>
+                   <ul>
+                       <li>the flywheel rotates;</li>
+                       <li>the crosshead moves linearly, as does the piston rod;</li>
+                       <li>the connecting rod both rotates and moves back and forth.&nbsp; To make it easier to manipulate, start with the flywheel, and once it is correct, move on to the other parts in a logical manner.</li>
+                   </ul>
+
+
+			 </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "link2"</a>
+		</div>
+
+    <!--- end cause --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Construction Begins</h2>
+			<div class="entry">
+
+                   <p>To support the flywheel, you will need a Stand of some sort. But before you do that, move the origin for the Base so that it is at the origin, or better yet, embedded into the earth just a little. The origin in TSM is the place where the heavy lines cross in the middle of the panes. After you have used the Box tool to make the Base, and gotten it to the size you prefer, and the Base to the place you want it on the pane; then while it is selected, hold down the SHIFT key, and then use the MOVE tool to adjust the AXIS of the Base to the place you want it. I generally chose to move the axis to the center of the Base, and leave about 3 or 4 inches of foundation below the origin, so that the model can rest on, or sink into, uneven ground, without being undercut.</p>
+
+                   <p><img SRC="images/dev_02.jpg" NOSAVE height=95 width=314></p>
+
+                   <p>The way this works in the Sim is that the base sinks into the ground to the level of the X axis shown above (the heavy white horizontal line), when you hit H in the Route Editor.</p>
+
+                   <p><img SRC="images/dev_03.jpg" NOSAVE height=207 width=386></p>
+
+                   <p>Next add a Stand, again made with the Box tool, say 2 wide, 3 high, and 1 deep. Move it over to the end and far side of the Base, and sink it into the base just a tad. You need to think ahead on your parts. If the Stand is sunk into the Base, then the bottom of the Stand does not need to be textured, which will save you some time. And the poly that is at the bottom can ultimately be deleted.&nbsp;&nbsp; And as far as that goes, so can the poly at the bottom of the Base. But more on this later.</p>
+
+                   <p>Now on to the first animated part - the Flywheel.</p>
+
+                   <p><img SRC="images/dev_04.jpg" NOSAVE height=267 width=408></p>
+
+                   <p>Use the Tube tool to make a simple disc about 4 feet in diameter, and 6 inches thick.&nbsp; This means the radius is only 2 feet.&nbsp; You will need to set the number of points per section and the number of sections as well.&nbsp; It won’t look very good but choose an octagon because it will help line up things as you animate&nbsp; (later, after you get the hang of it, you can pick a more rounded shape).&nbsp;&nbsp; Choose a radius of 2, a length of 0.5, 8 points and 1 section.&nbsp; Close both ends, and structure on the Z axis.&nbsp; This results in the flywheel being dead on in the Front View. And it will rotate about the Z axis.</p>
+
+                   <p>You now need to pick a name for the part. It can be Flywheel or you may choose to use one of the special reserved names used by MSTS and TSM, such as Wheels1.&nbsp;&nbsp; Place the Flywheel in the upper portion of the Stand, and pretty close to it.</p>
+
+                   <p><img SRC="images/dev_05.jpg" NOSAVE height=243 width=235><img SRC="images/dev_06.jpg" NOSAVE height=245 width=269></p>
+
+                   <p>Here is a good location.&nbsp; I have changed the Preferences in TSM, because the black background is hard on your printer, and I find that I need to print things out in order to follow along, when making the project. I have placed the axis of the Flywheel at the intersection of grid lines. This will help us when we add the crank pin, and when we need a reference point for animation.</p>
+
+                   <p>You may want to add a main shaft to the Flywheel extending through the Stand so that you would have a power take-off point to do useful work.&nbsp; But for the purposes of this tutorial, I have skipped this refinement and no such shaft is necessary to keep the Flywheel in the proper place, nor to keep it rotating.</p>
+
+                   <p><img SRC="images/dev_07.jpg" NOSAVE height=189 width=163><img SRC="images/dev_08.jpg" NOSAVE height=193 width=215></p>
+
+                   <p>Although not necessary I find it helps to at least temporarily add a Crankpin to the Flywheel. As we animate the Flywheel, it will serve to remind us of the extent of rotation, and will also give us an aiming spot for the Connecting Rod later. To do this, go to the Tube tool, and choose a small Radius of 0.1, and a Length of 0.9, with 4 or so Points, 1 Section, and both ends closed. Form the Crankpin on the Z axis, and then use the Move tool to place it directly below the axis of rotation of the Flywheel, and a foot lower – which just happens to put us again on an intersection of grid lines. Let it stick out about half way from the face of the Flywheel.</p>
+
+                   <p>The next thing to do is to join or fuse the Crankpin to the Flywheel. Unselect all the parts in the Edit menu, and then cycle through the parts using the N or P keys until the crankpin is illuminated, and hit the Spacebar.&nbsp;&nbsp;&nbsp; Then cycle some more until the Flywheel is illuminated, and again hit the Spacebar. Then hit J to join the two parts.&nbsp; Now they are one.&nbsp; By choosing the Flywheel last, its name will be preserved for the combined part. And speaking of names, we need to attend to that.</p>
+
+                   <p>Go to F2 | Part Properties, and rename the Tube to Flywheel. Set the relationship to the Part Parent namely: Base. Note there is no animation - see the box at the bottom right of Part Properties. Click OK.</p>
+
+
+			 </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "link3"</a>
+		</div>
+
+    <!--- end cause --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Part Hierarchy</h2>
+			<div class="entry">
+
+                   <p>Let's talk for a bit about naming hierarchy.&nbsp; In order to set things into MSTS, TSM wants you to have a parent part and a bunch of dependents. The part that goes on the ground is the one at the origin. If you pick something above that physically for the origin, the part object will sink into the ground when you try to place it in Route Editor.&nbsp; We have already placed the Base at the origin, and adjusted its axis so that it will be sunk into the ground about half way.&nbsp; What is confusing in reading about bogies and wheels is that the frame of an engine or car is the parent, and the bogies are dependent, and the wheels are sub-dependents.</p>
+
+                   <p>So how do we set up an animated object that has a Flywheel, a Connecting Rod, a Crosshead, and a Piston Rod, each connected to the next, yet each independently animated?  The answer is trial and error, and here is my solution after facing flying parts.</p>
+
+                   <p>First, I tried to make the Base the parent, the Stand its dependent and the Flywheel dependent from the Stand, and then the Connecting Rod dependent from the Flywheel, etc. This worked while I was still in TSM, up to the point where I created the MSTS files. Then it failed. Second, I tried making the Flywheel dependent from the Base, and the other animated parts daisy-chained as in the first example.&nbsp; Failure, in the same manner. The answer was pretty simple, but does not follow from reading the TSM and MSTS documents.</p>
+
+                   <p>Each animated part is dependent directly from the Base and whether that makes sense or not, it works. You can daisy chain non-moving parts but <b>not </b>animated parts. I think the reason is that all of the animation calculations are done from the origin, and not other parts. That is, each animated part is independent from any other, even though they may seem to work together.</p>
+
+
+			 </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "link4"</a>
+		</div>
+
+    <!--- end cause --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Part Names</h2>
+			<div class="entry">
+
+
+
+                   <p><img SRC="images/dev_09.jpg" NOSAVE height=444 width=562></p>
+
+                   <p>And as mentioned earlier, you can choose any names you wish for animated parts in scenery objects, and that seems to work fine. This is not true for Pickup Objects, and for these you need to read the MSTS Technical Documents in your CDs.</p>
+
+			 </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "link5"</a>
+		</div>
+
+    <!--- end cause --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Adding Animation</h2>
+			<div class="entry">
+
+                   <p>Back to No animation.</p>
+
+                   <p><img SRC="images/dev_10.jpg" NOSAVE height=332 width=658></p>
+
+                   <p>To add animation, go to Project Properties in the File menu.</p>
+
+                   <p>Choose Anim Scenery which is TSM’s name for a Complex Shape in the scenery department.&nbsp; Pick a long name and a short name for the project.</p>
+
+                   <p>Notice the Box Animation Frames down toward the bottom.</p>
+
+                   <p>Until you chose Anim Scenery it showed a grayed out (0), and the line says: (Last animation frame will be one less than this value). If we are going to have 8 animation frames, then we need to stick in 9. But later, when we are setting up the frames, the numbering scheme starts with 0 and goes to 8. 0 through 8 frames = 9, which is somehow inconsistent with the last animation frame being one less than 9. However, the 0 frame and the end frame are identical, which I am told causes the animation to loop into a repetitive string.&nbsp; But logic aside, if you are going to have 8 frames, put in 9; and if you are going to have 16,put in 17. There is no need to use a bunch of un-necessary animation, and TSM and MSTS seem to fill in the gaps, and it really looks lifelike and smooth.</p>
+
+                   <p>If you were doing a Water Tank spout, you would use only 3 frames; 0 and 2 being the same, and being the initial up position, and 1 being the down position. Yet when played in the Sim, all looks well and works slowly. And we haven’t really gotten to frames yet anyway. But we will very shortly.</p>
+
+                   <p>Now, if you were to go back to F2 it would still show No animation, but the Ani button at the top toolbar will now work. Anyway, we have now joined the Crankpin to the Flywheel, and they are both the same color. The next item of business is to select the Flywheel, if it is not already selected.</p>
+
+                   <p>After that, click the “Ani” button at the top. Make sure the Flywheel is positioned with the Crankpin down at 6 o’clock. You will do this by pushing the Rotate button, and with the X and Y buttons up, and the Z axis button constrained, and using the mouse to make the Flywheel rotate about the Z axis.</p>
+
+                   <p><img SRC="images/dev_11.jpg" NOSAVE v:shapes="_x0000_i1044" height=412 width=586></p>
+
+                   <p>Now look at the Animate Part pane. Even though you set 9 in the Part Properties pane, the Animate Part pane shows 8 as the Last Animation Frame. And we are currently in Frame 0. Think for a moment about what we are going to do. We are going to rotate the Flywheel. So, for this part we will only be using the Set Rotation button.</p>
+
+                   <p>Remember that the initial (0) and last (8) frames will be in the same place. You simply slide (actually click) the rectangular button over to the far right to get to the last (8) frame. So, while you are in Frame 0, click the Set Rotation button.&nbsp; Then slide the Slider button over to the far right so that you are in Frame 8, and look at the Flywheel. It should be in the same position as it was in Frame 0, and if so click the Set Rotation button again. If it is not, then use the Rotate tool, with Z axis constrained, and your mouse to rotate the Flywheel so that it is, and click Set Rotation.</p>
+
+                   <p><img SRC="images/dev_12.jpg" NOSAVE height=241 width=526></p>
+
+                   <p>Next, move the Slider back to the left until you arrive at Frame 1. Use the Rotate tool to rotate the Flywheel 45 degrees clockwise.&nbsp; Cleverly, you have an octagon for a Flywheel, so the next set of points will be lined up with the Y grid axis, which goes through the center of the Flywheel. Click the Set Rotation button again. Now you can try out your handiwork. Move the Slider back to 0 and the Flywheel should rotate back to the starting position. Move it to 8, and it should rotate through the 1 position and then back to the 8 position, which is the same as the 0 position. Do the same sort of things for Frames 2 – 7, and we are through animating the Flywheel.</p>
+
+                   <p><img SRC="images/dev_14.jpg" NOSAVE height=280 width=490></p>
+
+                   <p>But suppose something goes wrong (and it nearly always does) and the Flywheel doesn’t want to follow your instructions, and goes off on a spin of its own, as here. What to do?</p>
+
+                   <p><img SRC="images/dev_15.jpg" NOSAVE height=400 width=732></p>
+
+                   <p>We need to go back to Part Properties F2, and look at what we now have. Note that beside the Animation button, it now says Rotation. Click the Animation button, and up comes the Part Animation pane. There is data in the Rotation Keys box, but none in the Motion Keys box, and this is how it should be. And note the data doesn’t look right in the Rotation Keys. The first item is the data for Frame 0, and it is divided into three sections, namely degree data for the X, Y, and Z axes. Frames 0 and 8 are identical and look fine. The only rotation should be about the Z axis, not X and Y. Frame 1 shows 45 degrees rotation about the Z axis, and Frame 2 shows 90 degrees (well actually 89, which we can correct, as below), and that is what you were trying to do. But all the rest have problems, because there is data in the X and Y axes, and there should be none.</p>
+
+                   <p>For example, look at Frame 3, and you will see 180 in the X axis, and there should be only a 0 there. Further, the Z progression in degrees is not correct, because of the jump from 90 (or 89) to 314. So, you have two choices. You can delete all the data for all Frames by clicking the Clear button, which is worth a try, and doing the exercise over again. Or, you can correct the erroneous Frames. Since you already know how to start the animation over again, let’s try the correction route.</p>
+
+                   <p>The first thing to do is move the animation Slider back to Frame 0. Then click the Ani button to close the Animate Part pane. If you don’t, the changes you are about to make may not stick.</p>
+
+                   <p><img SRC="images/dev_16.jpg" NOSAVE height=477 width=725></p>
+
+                   <p>In the Part Animation pane, click on the line for Frame 3 to select it, which currently shows 180 degrees of rotation in the X axis, and 314 degrees in the Z axis. Then click on the Edit Rotation button and up comes a new pane called Rotation. Indeed, it shows the same erroneous 180 in the X axis, as well as the erroneous 314+ degrees in the Z axis. So, simply delete the degrees in the X axis, and make it 0. And change the Z axis to the proper number. Now we are rotating each frame by 45 degrees, and Frame 2 was at 90 degrees, so Frame 3 in the Z axis should be 135 degrees. Change it accordingly, and press OK to save the new data.</p>
+
+                   <p>Then go back to Frame 2 and change the 89 to 90 if you want.</p>
+
+                   <p>Get out your adding machine (or thinking cap), and figure out what each of the other Frames should read in the Z axis, and make the corrections as needed.</p>
+
+                   <p>Why do these things happen? Why does it sometimes rain?</p>
+
+                   <p>I think that TSM gets loaded down with data, and can’t make the computations correctly. It has also been my experience that you must progress through the animation data input in numerical order, at least for rotation items. But sometimes not. It may also help to close other Programs that may be open, and also to save, and perhaps close and reopen the TSM file fairly regularly. Anyway, you know how to fix it, so do it now. Proper data is shown below.</p>
+
+                   <p>This what the corrected Rotation Keys data for the Flywheel should look like after you are done editing all of the entries:</p>
+
+                   <p><img SRC="images/dev_17.jpg" NOSAVE height=318 width=573></p>
+
+                   <p>In this image you can clearly see the data for each of the 8 Frames, and also discern the three parameters. I see there is still a slight error in Frame 1, and you can fix it if you wish. Now, again run the Ani button slider, and see if everything rotates properly.</p>
+
+                   <p>To digress even further, I think the clue to all rotation key data in TSM is to save after each entry is made. I have prepared correct .rot files for each axis, and have still had problems making the rotation keys data stick when animating parts. The only way I can make TSM behave is to enter one or two keys worth of data, and then save the whole file, before entering any further data.</p>
+
+                   <p>I have prepared several .rot files for you, one in each of the three axes, and some going clockwise and some counterclockwise. I have finally been able to animate three wheels, one in each of the three axes, and have all 3 rotate properly, in various directions, at the same time. <a href="files/Anim_Scen_Rot.zip">These .rot files are available in ZIP form by clicking here</a>. The structure is that the first letter is the axis of rotation, the second is the number of frames, and the third is either clockwise or counterclockwise, e.g. x8cw.rot.</p>
+
+                   <p>You may place these files in your TSM Folder Abacus\TSModeler\Resources and use them for further projects that involve rotation. Simply use the Load button to bring them up. You should also either remove the .rot file that came with TSM, or else correct it so that Frame 0 and Frame 8 are identical, which means change the 360 in Frame 8 to a 0.</p>
+
+                   <p>Let us now construct and animate the Connecting Rod. Using the Box tool, lets make a Rod that is 5 feet in width, 0.3 deep, and 0.3 high. The first thing to do is move the axis from the center to the left end where it will mate with the Crankpin. So, activate the Move tool, constrain Y and Z, and hold down SHIFT while you move the part axis to the end. After you have shifted the axis to the left end in the front view, look at the side view, and move the Rod out so it clears the Flywheel. Now, back to the front view, constrain just Z, and move the Rod with its shifted axis over the Crankpin. Then use the Rotate tool, constrain Z, and rotate the right end so that it rests on the grid line that goes through the horizontal center of the Flywheel.</p>
+
+                   <p>Change the name in F2 from tube to Connecting Rod, and change the parent to Base. It looks like this:</p>
+
+                   <p><img SRC="images/dev_18.jpg" NOSAVE height=236 width=383></p>
+
+                   <p>We will use the horizontal grid line for placing the right end of the Rod, and the Crankpin for the left end as we proceed with animation. Since the entire project is animated scenery in Part Properties, we need to do nothing further, except to use the Ani button and Animate Part pane to set the motion. The position shown will be the initial and last positions, which will handle Frames 0 and 8, just as in the case of the Flywheel. The only difference is that we will need to click both the Set Rotation and Set Motion buttons for each frame.</p>
+
+                   <p>So, make sure the Rod is selected, and push the Ani button, and see that the Connecting Rod and Flywheel are in the above positions in Frame 0. If not, make adjustments. Then click both the Set Rotation and Set Motion buttons. Next, move the Slider to the far right, to Frame 8 and do the same things. Then go back to Frame 0 and press F2 and then the Animation button, and look at the data.&nbsp; The Frames for the two Keys should be the same. If not, straighten it out now, as explained for the Flywheel.</p>
+
+                   <p>Now we will go on to the setting for Frame 1, which should follow intuitively from the prior instructions. But if not, you should move the Slider in the Animate Part pane to Frame 1. Then, using the Move tool, and constraining Z, move the axis of the Rod to the center of the Crankpin. Then using the Rotate tool, and again constraining Z, rotate the Rod till the right end is centered on the grid line of the center of the Flywheel, and then click Set Motion and Set Rotation. Do this all the way through Frame 7, as you have already done Frame 8.&nbsp; Now you can check your work, as you have done before for the Flywheel, by clicking the Ani button, and moving the Slider back and forth. And problem solving is identical as before. If there are any, look for abnormalities in the Part Animation pane.</p>
+
+                   <p>The illustration below is Frame 7 of the Connecting Rod. It shows how the Rod has been manipulated to place the left end over the Crankpin of the Flywheel, and the right end in line with the horizontal axis of the center of the Flywheel, on the grid line. When in place the Set Motion and Set Rotation buttons are both clicked.</p>
+
+                   <p><img SRC="images/dev_19.jpg" NOSAVE height=287 width=611></p>
+
+                   <p>Now we move on to the next part in the chain, the Crosshead. This is a simple block in this tutorial, and I include a simple removable Pin in the center, just to help line up the parts. This part only slides linearly back and forth along the X axis, so we will only be using the Set Motion button, as there is no rotation of the Crosshead.</p>
+
+                   <p>Again go to the Box tool, and pick a shape that is 1 foot wide, 1 foot high, and 0.8 deep. Manipulate the Crosshead until it is centered on the horizontal grid line from the center of the Flywheel, in both the Front and Side views. Then add a simple Crosshead Pin in the Z axis in the middle of the Crosshead, such as a tube of 0.1 Radius, 0.9 Length, closed at both ends, and structured along the Z axis. After it is placed, as with the Crankpin, it needs to be joined to the moving part, so follow the same selection and joining process, with the Crosshead being selected last. Also go to F2, Part Properties, and change the name of the box to Crosshead, with the Part Parent being Base.</p>
+
+                   <p>Now is the time to animate the Crosshead. So, once again select the Crosshead, and note that you will constrain it in both the Y and Z axes, because it only moves back and forth along the X axis. After it is properly placed for the initial starting position, which is Frame 0, you will need to only click the Set Motion button. And as before, you will move the Slider to the Frame 8 position, and after making certain everything is in the proper position, you will click the Set Motion button again.</p>
+
+                   <p><img SRC="images/dev_20.jpg" NOSAVE height=277 width=675></p>
+
+                   <p>Here we have the Crosshead with fused Crosshead Pin in Frame 4. So far as the Crosshead is concerned, it is in the same position in Frames 0, 8, and 4. The other Frames will require sliding the Crosshead back and forth along the X axis only, so attend to these animation details. Note that the Crosshead is in the same position in Frames 1 and 3, and likewise in Frames 5 and 7. I have had no difficulty in using the Set Motion button in no particular order. When you are done, move the Animation Part Frame back to 0, and get out on Ani. Then check your work as before by going to F2, Animation Button, and looking over the Part Animation pane to see that the Motion Keys and Rotation Keys data looks correct. Again  you should see nothing changing in the Y and Z axes for each Frame, and if you have inadvertently made an entry or two in the Rotation Keys for the Crosshead, simply Clear that area of data.</p>
+
+                   <p>The last part to animate is the Piston Rod. So, go to the Tube tool, and let's pick a Radius of 0.1, and a length of 3 feet, with the Rod being open at both ends, and having 4 or 6 points and only 1 section.&nbsp;&nbsp; Structure it along the X axis, as that is where it slides back and forth. Place it along the same grid line as the horizontal center of the Flywheel, and Crosshead. It will be placed slightly inset into the Crosshead so that there is no need for a left poly or texture, and the right end will be hidden in the Cylinder, so it also needs no poly or texture. Check Polygon Smoothing to make it round, name it Piston Rod, and its parent will also be the Base.</p>
+
+                   <p><img SRC="images/dev_21.jpg" NOSAVE height=185 width=418></p>
+
+                   <p>Now you will animate the Piston Rod in an identical manner to the Crosshead, as all it does is slide back and forth, linearly on the X axis. You will only be using the Set Motion button. <p>Now it is time to make the remaining static, un-animated parts of the Stationary Engine. These are pretty simple to finish up your project.</p>
+
+                   <p>Probably the easy thing to make is the Cylinder. Use the Tube tool and make one with a Radius of 1.25, length of 3 feet, closed on both ends, 8 or 10 points, and 1 section, formed along the X axis. Using your Ani button see where the Crosshead is in its extreme right position, which should be Frame 6. Put the left end of the cylinder a couple of inches from there with the central axis of the Cylinder being concentric with the Piston Rod.&nbsp; Sometimes the Cylinder will jump around as the animation is cycled, so just get a general location for it, and then make the final placement after you are out of the animation mode.</p>
+
+                   <p><img SRC="images/dev_22.jpg" NOSAVE height=193 width=509></p>
+
+                   <p>Name it Cylinder, and use the Base as the Parent. Check Polygon Smoothing. This is generally what it should look like in the perspective view, in Frame 6.</p>
+
+                   <p>Next up are the Upper and Lower Slides for the Crosshead and a support for the Cylinder. For the Upper Slide, go to the Box tool, and create a Slide that is 3.2 wide, 0.3 high, and 1 deep. Then use the Move tool to place it above the Crosshead, and slightly sunken into the Cylinder head. It should be centered above the Piston Rod.</p>
+
+                   <p><img SRC="images/dev_23.jpg" NOSAVE height=209 width=548></p>
+
+                   <p>After it is in place, go to F2 and name it Slide, Upper and make its part parent Base.</p>
+
+                   <p>Now for the Lower Slide, we will copy and paste. While the Upper Slide is selected go to the Edit menu, and click Copy. Then click Paste. The new part is covering up the earlier one, so use the Move tool, constrain X and Z, and move the pasted Slide down in the Y axis until it is placed under the Crosshead. Rename it Slide, Lower with parent as Base.</p>
+
+                   <p><img SRC="images/dev_24.jpg" NOSAVE height=227 width=477></p>
+
+                   <p>The final part is a Support for the Cylinder. Again use the Box tool, and create a Support that is 2 wide, 1.3 or so deep, and 2 high. Center it under the Cylinder, so that it is buried in both the Base and the Cylinder, and name it Support with Base as parent.</p>
+
+                   <p>Now you are done making parts, and it is time to begin cleaning up the parts so that we can texture the Stationary Engine. Here you will see why we have buried certain parts within other parts. The answer is so that we can avoid having to texture things we can not see.&nbsp; If we can not see a surface, we can probably just eliminate the surface in order to reduce the number of polys in the Object, and thus reduce the load on the Sim engine, to ultimately speed up the frame rate.</p>
+
+                   <p>Go through the parts one by one and check in F2 to make certain that each part has a name and a parent, except the Base.</p>
+
+                   <p>Then look at each part to see if there are any surfaces that will not be seen, and can thus be eliminated.</p>
+
+                   <p><img SRC="images/dev_25.jpg" NOSAVE height=243 width=482></p>
+
+                   <p>So, lets start with the Base. Select the Base and go into poly mode, and change the view to Outline, as opposed to Solid. Then use the N key to cycle through all the polys to determine if any will be hidden. And you will find that the bottom of the Base is pointing into the ground when in the Sim, and thus will never be seen. So, with that normal or poly highlighted (as above) it can be eliminated simply by hitting Delete.</p>
+
+                   <p>The same can be done for many of the other parts, such as the bottom of the Stand, the ends of the Slides that are buried in the Cylinder, and both the top and bottom of the Support. Also the right end of the Connecting Rod is buried in the Crosshead. And if you wish, you can eliminate the Crankpin polys and the Crosshead Pin polys, as well. If you leave them in, remove the poly on the end of the Crankpin that is buried inside the Flywheel.</p>
+
+                   <p>However, if you eliminate one poly too many, it is difficult to get it back, so exercise caution.</p>
+
+			 </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "link6"</a>
+		</div>
+
+    <!--- end cause --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Texturing</h2>
+			<div class="entry">
+
+                   <p>There are really no secrets in texturing this simple model, and rather than write an article on that subject, I simply refer you to the manual that comes with TSM.</p>
+
+                   <p><img SRC="images/dev_26.jpg" NOSAVE BORDER=2 height=155 width=259></p>
+
+                   <p>I created a simple set of color blocks in a 256 x 256 bmp, with the thought being that some vivid colors would make explaining, and asking questions a whole lot simpler. So here is what the bmp looks like, and you can make your own.&nbsp; Of course, I have sort of squeezed this up, so that it doesn’t take much space, but you get the idea. I also tried using texture wrap for the Piston Rod and for the Cylinder, and that worked well.</p>
+
+                   <p>Once you have finished texturing, then go to the Polygon Menu, and click on Find Untextured Polygons. With any luck, you will get this pane.</p>
+
+                   <p><img SRC="images/dev_27.jpg" NOSAVE v:shapes="_x0000_i1059" height=142 width=345></p>
+
+                   <p>It is now time to stick it into a Route and see what it looks like.&nbsp; If you did have untextured polygons follow the instructions in the pane:&nbsp; you will be led to the offending parts, and/or even polys, which you must then texture.</p>
+
+                   <p>You must fill in the blanks for Create a Train Simulator Object, found in the Edit menu. TSM will do the necessary, and even prepare a .REF file entry for you. I picked a new Class, called Animated. The Filename comes from the Project Properties pane, which we filled out much earlier. But, if you failed to do so, you can do it now.</p>
+
+                   <p>My ref file entry came out like this:</p>
+
+<pre>
+Static (
+&#09;&#09;Class ( Animated )
+&#09;&#09;Filename ( StatStmEng.s )
+&#09;&#09;Align ( None )
+&#09;&#09;Description ( Stationary_Steam_Engine )
+)
+</pre>
+
+                   <p>in the .REF file of the Route I sent it to, namely FirstRoute.    FirstRoute is the name of the tutorial route which you make by following the instructions in Michael Vone's "Step-By-Step Guide to Building Routes" distributed by Abacus.  You can, of course, send the project to any route you choose, just as you would do with any other scenery object.</p>
+
+                   <p>Notice the name of the .S file.&nbsp; TSM takes the Filename entry (which is the short name in Project Properties) and adds an s. The .SD file name is the same. <p>The ace file takes its name from the .BMP file that you use to texture. Choose a name similar to your project for your .BMP. There is a way to change the .BMP file name, but that is another story.</p>
+
+                   <p>The Description entry comes from the long name that you placed in the Project Properties pane earlier. TSM automatically added the underlines between each word when it creates the .REF file. I don’t know if there is any way to add sound to the Object.</p>
+
+                   <p><img SRC="images/dev_28.jpg" NOSAVE height=520 width=488>
+
+                   <p>Now go ahead and create the model in MSTS.</p>
+
+                   <p><img SRC="images/dev_29.jpg" NOSAVE height=281 width=443></p>
+
+                   <p>Move on to Route Editor to set the model on the terrain. The only trick here is to get the Engine animation to work. All you need to do, after rotating and setting the height, is press F2 and while the object is in wire frame mode, right click. The Properties pane comes up with two tabs at the top. Pick the one that says “(cont.)” and check the box “Animate this object”.&nbsp; Go to F2 and click the Object, and the animation should start.&nbsp; Save your way out of Route Editor in the usual way.&nbsp; You can now go to the regular Train Simulator and drive by and enjoy your new Stationary Engine.</p>
+
+                   <p>And you will see it is really spinning.</p>
+
+
+			 </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "link7"</a>
+		</div>
+
+    <!--- end cause --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Animation Speed</h2>
+			<div class="entry">
+
+                   <p>As you have seen, the animation is much too fast. The Flywheel is going around and around way too often. The problem: how to slow it down?  The answer is to adjust a parameter in the .S file.&nbsp; The speed of rotation is set up automatically in MSTS and you are not given an opportunity to select what you would like.&nbsp; The initial speed is set at a parameter of 30. I can not tell if this is RPM or Feet per Second, but nonetheless, it can be changed.</p>
+
+                   <p>If you un-compress the .S file you will find a line that is styled animation and the parameters are <b>( x 30</b> ,the x indicating the number of animation frames. In our case we have used an animation of 9 which really means 8, so the line reads:</p>
+
+                   <p><b>animation ( 8 30</b></p>
+
+                   <p>The first number we have already set with the number of animation frames, and the second has to do with speed. I counted the revolutions per minute and 30 seems to be about twice as fast as I would like, and when I changed the line to read:</p>
+
+                   <p><b>animation ( 8 15</b></p>
+
+                   <p>the rotation speed was much more reasonable, and close to 112 rpm.</p>
+
+                   <p>Un-compress the .S file with Shape File Manager. Search for “animation” in the .S file and you will find the line that states: <b>animation ( 8 30</b> way down at the bottom.</p>
+
+                   <p>In WordPad, change this line so that it reads:</p>
+
+                   <p><b>animation ( 8 15</b></p>
+
+                   <p>Here is what the lines look like in the s file, before you have made the change:</p>
+
+                   <p><img SRC="images/dev_30.jpg" NOSAVE BORDER=2 height=418 width=823></p>
+
+                   <p>Recompress the .S file, and substitute this new .S file for what was previously in the Shapes folder of your route file in the Sim,&nbsp; simply overwriting the existing one with the revised one.&nbsp; You will have reduced the rotation speed to approximately 112 RPM, which is a reasonable speed for a Stationary Steam Engine. You can try other numbers for other speeds.</p>
+
+
+			 </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "link8"</a>
+		</div>
+
+    <!--- end cause --->
+    
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Documentation</h2>
+			<div class="entry">
+
+                   <p>When making a new object for MSTS one of the things I always do is document what files were made, and where the object was placed. The easiest way to do this is to save a copy of the Conversion.txt file (CnvReport.txt), generated by TSM in the same place you keep the project.</p>
+
+                   <br>CnvReport.txt is found in the Abacus\TSModeler Folder. To this conversion file I add a copy of the pertinent part of the Reference file and also document the location that I put the object. Then place it in your Project Folder.</p>
+
+                   <p>I have to admit that I changed the long and short files names before I created the object to Tutorial Steam Engine and TutStatEng. So, I ended up with something like this:</P>
+
+<pre>
+&#09;TutStatEng.txt
+&#09;&#09;Tutorial Stationary Steam Engine March 29, 2004
+&#09;&#09;Conversion Report:
+&#09;&#09;TSM.s - TrainSim shape file
+&#09;TSM_ascii.s - ascii version of shape file
+&#09;&#09;TSM.sd - TrainSim shape definition file
+&#09;&#09;Converted texture:
+&#09;&#09;C:\PROGRA~1\MI9A48~1\TRAINS~1\utils\makeace "C:\Projects\trainsim\Animation\SteamEngine.bmp" "SteamEngine.ace" -dxt
+&#09;&#09;SteamEngine.ace Texture copied to C:\PROGRA~1\MI9A48~1\TRAINS~1\Routes\FirstRoute\Textures\SteamEngine.ace
+&#09;&#09;Converted TSM.s to binary file TSDSb.s
+&#09;&#09;TSMb.s - Binary version of shape file
+&#09;&#09;Copied TSMb.s to C:\PROGRA~1\MI9A48~1\TRAINS~1\Routes\FirstRoute\Shapes\TutStatEng.s
+&#09;&#09;Copied TSM.sd to C:\PROGRA~1\MI9A48~1\TRAINS~1\Routes\FirstRoute\Shapes\TutStatEng.sd
+&#09;&#09;Added object reference to FirstRoute.ref
+&#09;Object added to FirstRoute at Long. -0.20041 Lat. 51.60137
+&#09;Reference file data in FirstRoute.ref:
+&#09;&#09;Static (
+&#09;&#09;&#09;Class ( Animated )
+&#09;&#09;&#09;Filename ( TutStatEng.s )
+&#09;&#09;&#09;Align ( None )
+)
+&#09;Description ( Tutorial_Steam_Engine )
+&#09;&#09;)
+</pre>
+
+                   <p>This will give you the basic facts to help generate a readme file for others to use. And it will also provide you a record of the name of the ACE, .S, and .SD files and where they were placed. When you build several objects, you soon forget exactly what the names were, where they are located, and even what class they are in.</p>
+
+
+			 </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "link9"</a>
+		</div>
+
+    <!--- end cause --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Improvements</h2>
+			<div class="entry">
+
+                   <p>Here is what the Stationary Steam Engine looks like, when you are all done.</p>
+
+                   <p><img SRC="images/dev_31.jpg" NOSAVE height=119 width=254></p>
+
+                   <p>You are now on your own, but here are some things that you might consider as improvements.</p>
+
+                   <p>The Flywheel looks like an octagon and if you were to check the box in Part Properties for Polygon Smoothing, that would help a little. But it would help even more if you were to use 16 points, instead of 8. You do not need to use 16 frames for the rotation.</p>
+
+                   <p>The direction of rotation of the Flywheel is currently clockwise, because that is the direction of the individual animation frames. If you wish it to rotate counterclockwise, I believe you will have to rebuild the whole animation from the beginning of the Flywheel.</p>
+
+                   <p>The colors are terrible, but your children will love them.</p>
+
+                   <p>A Crankshaft or Flywheel shaft could easily be added and extended out the back side of the Flywheel, and be connected to all sorts of machinery, like a dynamo or pump.</p>
+
+			 </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "conclusion"</a>
+		</div>
+
+    <!--- end cause --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Conclusion</h2>
+			<div class="entry">
+
+                   <p>
+                   <ul>
+                       <li>You have learned how to make a simple piece of rotating machinery.</li>
+                       <li>You have learned how to make animated parts that rotate, slide, and both rotate and slide.</li>
+                       <li>You have learned how and where to troubleshoot things that go wrong with animation.</li>
+                   </ul>
+
+                   <p>So enjoy your engine, and go on to bigger and better projects.</p>
+
+                   <h3>Links:</h3>
+
+                   <p><a href="files/Anim_Scen_Rot.zip">Anim_Scen_Rot.zip:</a>&nbsp;
+
+                   <p>Several .rot files to add to your Abacus\TSModeler\Resources Folder.</p>
+
+                   <p><a href="files/Anim_Scen_TutStatE.zip">Anim_Scen_TutStatE.zip:</a>
+
+                   <p>A completed Tutorial Stationary Steam Engine for you to compare to what you have done, or to place in any route you may desire. It includes the .S, .SD, .ACE, and a text file.</p>
+
+                        </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+
+		</div>
+
+    <!--- end cause --->
+
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#link1">Model Details</a>
+                 <br><a href="#link2">Construction Begins</a>
+                 <br><a href="#link3">Part Hierarchy</a>
+                 <br><a href="#link4">Part Names</a>
+                 <br><a href="#link5">Adding Animation</a>
+                 <br><a href="#link6">Texturing</a>
+                 <br><a href="#link7">Animation Speed</a>
+                 <br><a href="#link8">Documentation</a>
+                 <br><a href="#link9">Improvements</a>
+                 <br><a href="#conclusion">Conclusion</a>
+               </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 30 April 2004, 04 May 2010</center></p>
+</div>
+</body>
+</html>
+

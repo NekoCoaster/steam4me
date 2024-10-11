@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>A Guide to Checking and Fixing an MSTS .REF file - at The Steam4me Site</title>
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Route_Riter_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">A Guide to Checking and Fixing an MSTS .REF file</font>
+                        <br>by Yuri Sos</h2>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                    <p>The REF file is used to list the objects used when creating a route using MSTS Route Editor.  It is not required when running a route, but is essential if you wish to create or edit routes using Route Editor.</p>
+                    
+                    <p>Unfortunately, it sometimes becomes corrupted, usually caused by the route builder adding references incorrectly.  This tutorial walks you through correcting the .REF file using both Route Riter and TsUtils.  It is recommended that you install or upgrade to Route_Riter 7.0.43 or higher to make best use of the REF File Editor.</p>
+
+                    <p>TsUtils, designed by Carl-Heinz Rive, is like having a Swiss Army knife within the Route_Riter Swiss Army knife.  The very comprehensive Integrity-Check (<b>"ichk"</b>) report has a section that reports any errors within the route's REF file.</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "quickfix"</a>
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- sol hard --->
+
+		<div class="post">
+                  <h2 class="title">The One-Shot Quick-Fix-It-All Function</h2>
+			<div class="entry">
+
+                           <p>I normally write tutorials demonstrating a problem followed by the means of solving the problem.</p>
+
+                           <p>I'm going to break from my normal pattern and suggest that you <b>run this following option as a matter of course before doing anything else</b>. This Route_Riter module is <b>SO</b> good that it will fix 98% of your REF file errors in one pass.</p>
+
+                           <p>Route developers should run this option from time to time to ensure that they have access to all the shapes they think they have: dropping a bracket is so easy to do.  The "quick-fix" method demonstrated here fixes bracket errors, "names-with-spaces-not-enclosed-in-quotes" errors and removes duplicate shape references in one pass</p>
+
+                           <p>Open Route_Riter.</p>
+
+                           <ol>
+                               <li>Select your route (arrow #1).</li>
+                               <li>Click on "Confirm Route" (arrow #2).
+                               <li> Click on the route's REF file (arrow #3).</li>
+                               <li>  Click on the REF File Editor button (arrow #4).
+
+                               <p><img SRC="images/rr_ref_file_check.jpg" width=777 height=630></p></li>
+
+                               <li>Route_Riter will then check all the shapes in the Shapes folder and compare them to the REF file.  The REF file is then presented in an Excel-like spreadsheet format.  It doesn't display the four standard items - DYNTRACK, PLATFORM, SIDING, CARSPAWNER: Route_Riter will add these definitions to the top of any REF file automatically on saving.  Route_Riter also saves the original REF file as a backup in case you've made an error.
+
+                               <p>The quick-fix method is to</p>
+                               <ol>
+                                   <li>click "Delete Duplicates" (arrow #1); Route_Riter will ask you to confirm (some route developers have the same shape file in two separate classes for ease of use);</li>
+                                   <li>re-index .REF file (arrow #2); then </li>
+                                   <li>click "Save New REF" (arrow #3).</li>
+                               </ol>
+
+                               <p><img SRC="images/rr_ref_file_check_02.jpg" width=675 height=630></p>
+
+                            </ol>
+
+                            <p>This has taken care of over 98% of REF file errors.  If you want to / have to read on, TsUtils will now help you to correct any REF file errors that are left.</p>
+
+       		</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+                 	<A Name="startts"</a>
+		</div>
+
+    <!--- end sol hard --->
+
+
+    <!--- sol hard --->
+
+		<div class="post">
+                  <h2 class="title">Getting Started With TsUtils</h2>
+			<div class="entry">
+
+                           <p>Read <a href="ts_utils_ichk.html">Understanding the TsUtils Integrity-Check Report File</a>: the Getting Started section shows you how to generate the report we are going to use.</P>
+
+                           <p>Once you've generated the report, scroll past the thousands of Missing Shapes messages until you come to the .REF file section.  If there's no error, you will get a one-line message that the .REF file has been loaded and checked - like this.</P>
+
+                           <p><img SRC="images/tsutil_ichk_ref_04.jpg" width=675 height=203></P>
+
+                           <p>Commonly, though TsUtils will return a variety of errors.  We propose to run through these errors and give you hints on their correction.</p>
+
+       		</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+                 	<A Name="error1"</a>
+		</div>
+
+    <!--- end sol hard --->
+
+
+    <!--- sol hard --->
+
+		<div class="post">
+                  <h2 class="title">Error Correction Part 1: The Most Common Error - The Missing Bracket</h2>
+			<div class="entry">
+
+                           <p>Typically and most commonly, the errors that are found within the REF file are related to missing brackets and missing or erroneous parameters. You need to find and correct this error as shapes referenced below the missing bracket cannot be accessed in Route Editor.  The missing bracket also masks errors further down the REF file.
+
+                           <p>Let's look at an example - here's a typical REF file report:</p>
+
+                           <p><img SRC="images/tsutil_ichk_ref_00.jpg" width=673 height=183></p>
+
+                           <p>If you look at the report, you can see that there is a keyword error: this is usually the giveaway for a missing bracket: note that the number AFTER the keyword STATIC points to the line number in the REF file.</p>
+
+                           <p>Let's open the REF file in ConTEXT, turn on line numbering (<b>Options | Environment Options | Editor [x] Line Numbers</b>) and jump to the line number in question (<b>Ctrl-G</b>):</p>
+
+                           <p><img SRC="images/tsutil_ichk_ref_01.jpg" width=672 height=490>
+
+                           <p>It's immediately very clear that the problem with the keyword Static is that the shape reference immediately above is lacking a closing bracket.  This is why the ref file is not examined below this error and may account for the subsequent EOF error.</p>
+
+                           <p>There are two ways to correct this error:  insert the closing bracket at line 2654, save the .REF file and run the ichk again: this certainly works but the quick-fix-it-all function described above is better because it corrects a few other errors at the same time.</p>
+
+       		</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+                 	<A Name="error2"</a>
+		</div>
+
+    <!--- end sol hard --->
+
+
+    <!--- sol hard --->
+
+		<div class="post">
+                  <h2 class="title">Error Correction Part 2: A Shape Is Listed In The REF File That Is Not In The Shapes Folder</h2>
+			<div class="entry">
+
+                           <p><img SRC="images/rfe_no_shape_01.jpg" width=491 height=107></p>
+
+                           <p>This one is self-evident: there's no matching shape in the SHAPES directory.  Either place the shape's files (.S, .SD into Shapes folder, .ACE(s) into Textures folder) or delete the entry using the Ref File Editor.</p>
+
+                           <p><img SRC="images/rfe_no_shape_02.jpg" width=350 height=107></p>
+
+                           <p>This one appears a little trickier at first glance, but it isn't.  As there's no filename in the error message it means there is a static shape definition with no shape specified or a blank shape specified, ie the REF File definition will have either omitted the <b>Filename</b> line altogether or have a line such as <b>Filename ( "" )</b>.</p>
+
+                           <p>Repair by the following method:</p>
+                           <ol>
+                               <li>In Route File Editor, click on <B>Delete duplicates</b>, then click on <b>Filename column header</b> (arrow #1 below) to sort the REF file entries.</li>
+                               <li>The top static entry/entries will contain a blank for filename (arrow #2).</li>
+                               <li>Select row by clicking on index number. Click <b>Delete Row</b> (arrow#3). Click <b>Re-index REF File</b>. Click <b>Save New REF file</b>.</li>
+                           </ol>
+
+                           <p><img SRC="images/rfe_no_shape_03.jpg" width=772 height=339></p>
+
+       		</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+                 	<A Name="error3"</a>
+		</div>
+
+    <!--- end sol hard --->
+
+    <!--- sol hard --->
+
+		<div class="post">
+                  <h2 class="title">Error Correction Part 3: some of the rest!</h2>
+			<div class="entry">
+
+                           <p><h3></h3>
+
+                           <p>(Section Incomplete - I'm still looking for more examples to demonstrate repair techniques - email me if you have one of interest)</p>
+
+                           <p>Back to the REF file we looked at before - now we have an error on line 4747 (beyond where the bracket error was - note that this error only appeared after we corrected the bracket error).</p>
+
+                           <p><img SRC="images/tsutil_ichk_ref_02.jpg" width=675 height=175></p>
+
+                           <p>Here's the area in ConTEXT.</p>
+
+                           <p><img SRC="images/tsutil_ichk_ref_03.jpg" width=672 height=490></p>
+
+                           <p>Remove the invalid "ALIGN" line and after tunning "ichk" again, all errors in this section are cleared - thus the REF file is now correct.</p>
+
+                           <p><img SRC="images/tsutil_ichk_ref_04.jpg" width=675 height=203></p>
+
+       		</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+                 	<A Name="finetune"</a>
+		</div>
+
+    <!--- end sol hard --->
+
+        <!--- sol hard --->
+
+		<div class="post">
+                  <h2 class="title">Fine-tuning your REF file (mainly for route developers)</h2>
+			<div class="entry">
+
+                           <p>Route developers are a smart lot - they can work it all out from this screenshot.</p>
+
+                           <p><img SRC="images/rr_ref_file_check_03.jpg" width=675 height=630></p>
+
+       		</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end sol hard --->
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#quickfix">Quick Fix</a>
+                 <br><a href="#startts">Start With TsUtils</a>
+                 <br><a href="#error1">Missing Bracket Error</a>
+                 <br><a href="#error2">Missing Shape Error</a>
+                 <br><a href="#error3">Other Errors</a>
+                 <br><a href="#finetune">Fine Tuning REF File</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 10-17 Aug 2007, 20 Aug 2007, 6 April 2010</center></p>
+</div>
+</body>
+</html>

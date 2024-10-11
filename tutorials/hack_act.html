@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>Hacking Activities II: Drive the Trains You Want to! - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li ><a href="../vans/index.html">Vans</a></li>		
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png"  height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png"  height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Hacking Activities II: Drive the Trains You Want to!</font>
+                        <br>by Jim "sniper297" Ward</h2>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                             <p>I'm going to describe modifying activities using <b><a href="http://www.conbuilder.com/">Conbuilder</a>,</b> a payware consist editing utility.</p>
+
+                             <p>We'll cover that first, since most computer dummies prefer it to the activity editor.</p>
+
+                             <p>First things first.</p>
+
+                             <p>Open windows explorer. Click on <b>File | New | Folder</b> and name the folder "Backup". <p>Now browse to \Train Simulator, find and select the \Trains folder, Click on "Copy".</p>
+
+                             <p>Browse back to your new backup folder, click "Paste". You now have a complete backup copy of the trainsets and consists, so if you botch anything up you can copy the \Trains folder from \Backup, paste it into \Train Simulator, and fix everything without having to reinstall MSTS.</p>
+
+                             <p><img SRC="images/hac_ac01.jpeg"  height=554 width=770></p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Let's Hack!</h2>
+			<div class="entry">
+
+                        <p>After installing and patching conbuilder, first thing is to click on <b>Program | Activities</b>, which brings up a second window,"Consists from activities". Scroll down to the route and activity you want to change engines in, and the player consist shows up at the top of the consists window, with AI traffic consists (if any) below that. Double click on the player consist, which brings it up:</p>
+
+                        <p><img SRC="images/hac_ac02.jpeg"  height=442 width=687></p>
+
+                        <p>In the little window that shows the train, double click on the train icon to delete the GP38 from that spot.  </p>
+
+                        <p><img SRC="images/hac_ac03.jpeg"  height=442 width=687></p>
+
+                        <p>Next scroll down the left window, find the line for the engine you want to drive, and double click on the line. That drops the selected engine into the empty slot.</P>
+
+                        <p>Click on <b>Program | Save</b>, and it will ask "Overwrite this consist?" Answer yes, and all activities that use that consist file for a player engine will now use the one you replaced it with.</p>
+
+                        <p>Next thing is a little harder, replacing AI traffic trains. It's best to replace those with something that matches the horsepower to tonnage ratio as closely as possible, otherwise you'll have to go into the activity editor and edit the service to adjust the speed of the AI train by fiddling with the "expected performance" setting. If you can do all that you don't really need conbuilder or this tutorial anyway, so the best use of this would be to replace a BNSF SD40 with a Norfolk Southern SD40, for example. If you're replacing a geep with a dash 9, you'll probably want to add more cars to slow it down.</p>
+
+                        <p>So do step one again, this time select one of the traffic consists.</p>
+
+                        <p><img SRC="images/hac_ac04.jpeg"  height=442 width=687></p>
+
+                        <p>In the upper left window are all the engines, in the upper right all the cars. If you double click on one engine or car icon in the train window, then double click on a line in one of the upper windows, the engine or car you select in the upper window will be placed in the empty slot. If you haven't deleted any cars and there are no empty slots, it will start adding to the back of the train.</p>
+
+                        <p><img SRC="images/hac_ac05.jpeg"  height=442 width=687></p>
+
+                        <p>You can replace just the engine(s) for now, and come back to replace all the KUJU cars with your CSX boxcars or UP reefers after a little practice.</p>
+
+                        <p><img SRC="images/hac_ac06.jpeg"  height=529 width=750></p>
+
+                        <p>After that try it out in the sim, see if you have any wierd visitors from foreign roads driving around your route.</p>
+
+                        <p>Well, one drawback to that, every activity that uses "PONPlay1.con" for the player service consist will use the K36 or whatever engine you replaced the default with, if you want variety you gotta get into creating your own consists and editing the different activities to use different engines. For that we're stuck with the activity editor itself, so after copying your \Trains folder to a backup, set your desktop to 1024x768 or above, grit your teeth and open the activity editor.</p>
+
+                        <p><img SRC="images/hac_ac07.jpeg"  height=562 width=750></p>
+
+                        <p>Wooo, scary. Well, you can ignore most of the stuff in here, we're only gonna use a couple of buttons. On the far right under "player service", click on the "use as template" button. That brings up the service editor, and automatically makes a new copy of that service, adding a number to the filename, so "Anderson.srv" becomes "Anderson0.srv", in this example. There's another "use as template" button in the service editor, clicking on that brings up the consist editor.</p>
+
+                        <p><img SRC="images/hac_ac08.jpeg"  height=578 width=608></p>
+
+                        <p>Since you clicked on "use as template" it created a clone of the consist, so now to edit it click on the engine in the lower window, hold the mouse button down and drag it to the little coupler icon and dump it.</p>
+
+                        <p><img SRC="images/hac_ac09.jpeg"  height=578 width=608></p>
+
+                        <p>Now select the engine category, then the engine you want, and drag from the right side display window and drop into the bottom train window. Right clicking on the engine in the bottom window will reverse it, if you want one of them long hood forward.  Save and exit, you have just created a new service with a new consist.</p>
+
+                        <p><img SRC="images/hac_ac10.jpeg"  height=437 width=552></p>
+
+                        <p>After clicking Okay to exit the service editor, go back to the "Player Service" on the right side, and click the drop down arrow. Select the new service you just created. Now click on File, Save, and exit the activity editor.</p>
+
+                        <p><img SRC="images/hac_ac11.jpeg"  height=480 width=640></p>
+
+                        <p>For that one activity you now have a player service that's different from the other activities, if you wish you can repeat these steps so that every activity uses a different engine or engines.</p>
+
+                        <p><img SRC="images/hac_ac12.jpeg"  height=480 width=640></p>
+
+                        <p>You can get as crazy as you want with this type of thing, the only limitation being a finite number of .con files allowed in \Consists due to a sim bug, I think the max number of consists you can have in the \Trains\Consists folder is 899.</p>
+
+                        <p>Conbuilder has one more useful feature I should mention:&nbsp; the ability to show the engine/wagon with the data like here:</p>
+
+                        <p><img SRC="images/hac_ac13.jpeg"  height=433 width=685></p>
+
+                        <p>right click on the engine/wagon(on the highlite) and a picture+ data will show up.</p>
+
+                        <p>Now before you all start screaming that it does not show an image, there needs to be an gif ot jpg image in the particular trainfolder of course, and it should have the same name as the .eng or .wag file  i.e. in the Turkey steamloc folder a Turkey10.eng + turkey10.gif or Turkey50ftleg.wag + Turkey50ftleg.gif.  It also would be nice if it is, a picture of that engine/wagon.</p>
+
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+
+		</div>
+
+    <!--- end cause --->
+
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+               </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 14 Jan 2003, 22 April 2010</center></p>
+</div>
+</body>
+</html>
+
+</html>

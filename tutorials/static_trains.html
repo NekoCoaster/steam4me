@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>Filling Up Your Yards With Static Trains - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li ><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png"  height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png"  height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Filling Up Your Yards With Static Trains</font>
+                        <br>by Jim "sniper297" Ward</h2>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                             <p>First, why static trains?
+
+                             <p>Well, we all love really big freight yards - problem is they look really lame unless they're filled with cars, and filling them with cars in an activity drops the frametrates to 3FPS. The reason for that is for each and every loose consist car in an activity, the game loads the wag files, shape files and textures, sound files, and location on the track database, with a unique UID number for each car since it has to keep track of it as a potential movable object.</p>
+
+                             <p>Static trains are purely scenery objects, nothing but the shape and texture is loaded, and they're much easier on framerates.</p>
+
+                             <p><img src="images/static_trains_01.jpg" width="800" height="660" alt="Typical empty MSTS yard" border="0"></p>
+
+                             <p>This is not a very big yard, there are only three yard tracks on the left, and a player track with two AI traffic tracks on the right. Adding fake tracks and static trains on the outside will create the illusion of a much bigger yard.</p>
+
+                             <p>Two ways to do this, use real track sections that are not connected to the tracks you drive on, or use fake tracks. Fake tracks are better because they don't show up in the activity editor, so an activity designer can't accidently create a path that runs thru static trains. John Milligan's dumbtrak.zip from the file library is a good source, or you could steal the shapes and ref datablocks for "maintracks" and "dirtytracks" from the Port Ogden & Northern (current PONver9.zip).</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			  <a Name="fill"</a>
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Filling Up The Yard</h2>
+			<div class="entry">
+
+                        <p>To begin, go to \TRAIN SIMULATOR\TRAINS\TRAINSET, pick the engine or wagon you want to turn into a static object. 
+                        
+                        <p>Open the vehicle in <a href=../utilities/shape_viewer.html>Shape Viewer</a> and Press Ctrl-T:</p>
+
+                        <p><img src="images/static_trains_02a.jpg" alt="get textures from shape" border="0"></p>
+                        
+                        <p>This will list all the textures (.ACE files) used by this model.</p>
+
+                        <p>Copy the .s and .sd files to the route's SHAPES folder, copy all the .ace files to the route's TEXTURES folder:</p>
+
+                        <p><img src="images/static_trains_02.jpg" width="830" height="547" alt="Moving shape files" border="0"></p>
+
+<p>Open the route's ref file in wordpad, add a datablock:</p>
+
+<pre>
+Static (
+&#09;Filename ( "US2CHEMICAR.s" )
+&#09;Class ( "Static Trains" )
+&#09;Align ( None )
+&#09;Description ( "static US2CHEMICAR" )
+)
+</pre>
+
+                        <p>For the illustration I'm using default cars (which I also use in my route, since I'm really stingy about fattening the zipfile with custom textures, I just add lines to the installme.bat to copy them from the end user's folders), but you can do this with addon cars as well.</p>
+
+                        <p>Once you have the ref file entry and the shapes and textures where they belong, you'll have a new object class, static trains.</p>
+
+                        <p><img src="images/static_trains_03.jpg" width="509" height="663" alt="Object Selector screen" border="0"></p>
+
+                        <p>Easiest way to do this is to find an empty tile, hit the G key (snap to grid) and set the grid size for 1 meter (bottom left of "placement" window). Lay the fake track section, then select a static train and place. Move the train to line up with the rails:</p>
+
+                        <p><img src="images/static_trains_04.jpg" width="790" height="672" alt="Object Placement" border="0"></p>
+
+                        <p>then turn off snap to grid and raise it so the wheels are on top of the rails:</p>
+
+                        <p><img src="images/static_trains_05.jpg" width="790" height="672" alt="Object Placement" border="0"></p>
+
+                        <p>After placing as many cars as you want on the track and getting them aligned, multiple select (hold down the CTRL key and click on each object in turn), then  CTRL C to copy. Move to the location next to the real yard tracks, hit CTRL V to paste. Use the movement and rotation keys to shift the combined objects before you deselect, and you'll probably have to raise everything so the ballast shows above ground.</p>
+
+                        <p>Here's Anderson yard on PO&N 9, there are five actual yard tracks with 20 real loose consist cars in this scene:</p>
+
+                        <p><img src="images/static_trains_06.jpg" width="800" height="497" alt="Object Placement" border="0"></p>
+
+                        <p>Here's a new yard I'm working on: six actual yard tracks, and the Dash 9 with 25 mixed cars is the only real train in the scene:</p>
+
+                        <p><img src="images/static_trains_07.jpg" width="800" height="585" alt="Object Placement" border="0"></p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+
+		</div>
+
+    <!--- end cause --->
+
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#fill">The Procedure</a>
+               </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 1 June 2006, 19 April 2010</center></p>
+</div>
+</body>
+</html>

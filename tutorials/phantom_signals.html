@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <meta name="Author" content="Jeff Krausyao">
+   <meta name="GENERATOR" content="ConTEXT  v0.98">
+   <meta name="Description" content="Creating a Diamond Crossover complete with Track Node">
+<title>Phantom Signals: An Aid To Their Removal - at The Steam4me Site</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Phantom Signals: An Aid To Their Removal</font>
+                        <br>by Yuri Sos</h2>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                             <p>This problem cropped up recently when I was beta-testing a forthcoming route.  Route author <b>Brian Bere-Streeter</b> came up with a solution, but I've also discovered that <b>Maurie Daly</b> independently came up with the same solution on train-sim.com.</p>
+
+                             <p>A Phantom Signal is a signal that doesn't appear in the simulation, but controls and generally inteferes with the progress of trains in activities.</p>
+
+                             <p>Here's a typical scenario:  the signal appears to be green, but the Heads Up Display (HUD) indicates that the signal appears to be red:</p>
+
+                             <p><img src="images/phantom_01.jpg" border="0"></p>
+
+                             <p>Let's look at this problem's diagnosis and treatment.</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "problem">
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">The Problem</h2>
+			<div class="entry">
+
+                           <p>If you try to proceed past this signal, the activity ends, thus:</p>
+
+                           <p><img src="images/phantom_02.jpg" border="0"></p>
+
+                           <p>Looking at this location in Activity Editor (AE), you can see that there appears to be two signals, one superimposed on the other:</p>
+
+                           <p><img src="images/phantom_03.jpg" border="0"></p>
+
+                           <p>If you "Play" an activity in the AE, the player consist comes to a halt at this signal because it hasn't cleared, but it's invisible in the simulation and the visible signal is green behind this phantom signal:</p>
+
+                           <p><img src="images/phantom_04.jpg" border="0"></p>
+
+                           <p>If you go into RE, there is only one signal and one "pyramid" vsible on the track:</p>
+
+                           <p><img src="images/phantom_05.jpg" border="0"></p>
+
+                           <p>So that's the problem - the solution is quite easy.</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="solution">
+		</div>
+
+    <!--- end cause --->
+
+
+    <!--- sol hard --->
+
+		<div class="post">
+			<h2 class="title">The Solution</h2>
+			<div class="entry">
+
+                        <p>First go into RE and browse to the visible signal; press F2, select the pyramid, right-click and make a note of the x y z co-ordinates: it will make putting this signal back so much easier:</p>
+
+                        <p><img src="images/phantom_06.jpg" border="0"></p>
+
+                        <p>Now delete this signal: here the mast is a static piece but the signal (with two semaphore arms has vanished, as has the red pyramid:</p>
+
+                        <p><img src="images/phantom_07.jpg" border="0"></p>
+
+                        <p>If you save at this point and look at the junction in AE, you will see that there appears to be one signal still present; this is our "phantom signal"; it's a signal that doesn't have an entry in the World files, but is still present in the TDB:</p>
+
+                        <p><img src="images/phantom_08.jpg" border="0"></p>
+
+                        <p>The next step is to select and delete the track where the signal was:</P>
+
+                        <p><img src="images/phantom_09.jpg" border="0"></p>
+
+                        <p>Now Click <b>Route | Save |  Save World Placement Changes | Yes</b>.</p>
+                        
+                        <p>Up pops the following message: victory is at hand!</p>
+                        
+                        <p>Click on <b>Delete Markers/Objects</b> and exit to the Desktop.</p>
+
+                        <p><img src="images/phantom_10.jpg" border="0"></p>
+
+                        <p>It's now a simple matter to return to RE, replace the track and the signal you deleted.  Once you've placed the signal, select it, right-click and enter the x y z co-ordinates as above.  It will then be a simple matter to rotate the signal into its correct position. Set up the links, if necessary, and save.</p>
+
+                        <p>The signal and route now work properly.</p>
+
+                        <p><img src="images/phantom_99.jpg" border="0"></p>
+
+
+
+                      	</div>
+          			<a Name="test">
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+
+		</div>
+
+    <!--- end sol hard --->
+
+
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#problem">The Problem</a>
+                 <br><a href="#solution">The Solution</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2011 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 7 June 2011</center></p>
+</div>
+</body>
+</html>

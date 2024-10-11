@@ -1,0 +1,299 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>Passenger Views in MSTS - The Definitive Tutorial - at The Steam4me Site</title>
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Passenger Views in MSTS - The Definitive Tutorial</font>
+                        <br>by Yuri Sos</h2>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                        <p>The Passenger View is the viewpoint the player has when he presses the "5" key in the simulation.  This view can be of the inside of a carriage or van or can be used to simulate an external view such as the view of a shunter from the loco steps, or a brakeman standing on the rear platform of his van or caboose.  If you have more than one carriage with a Passenger View in a consist, only the first carriage with the PassView will display a cabview (this applies to a default MSTS installation: MSTS-Bin allows more than one Passenger View per consist).</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "desc">
+		</div>
+
+    <!--- end end overview --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Description</h2>
+			<div class="entry">
+
+                        <p>The Passenger View calls its own shape that is used for that camera view.  In the case of the four default Passenger Views (Orient Express bar car, Kiha railcar seating, UK Second Class Passenger Carriage and US2 caboose), pressing "5" calls a highly detailed shape that is used in the simulation.</p>
+
+                        <p>For example, the Orient Express parlour car view (complete with rotating fans and wafting cigar smoke):</p>
+
+                        <p><img SRC="images/passv5_oe1.jpg" width=640></p>
+
+                        <p>the Kiha31 passview (also a version with red seats):</p>
+
+                        <p><img SRC="images/passv5_kiha1.jpg" width=640></p>
+
+                        <p>the BNSF US2Caboose view:</p>
+
+                        <p><img SRC="images/passv5_us2cab02.jpg" width=640></p>
+
+                        <p>and the UK Mk1 Carriages view:</p>
+
+                        <p><img SRC="images/passv5_mk1_10.jpg" width=640></p>
+
+                        <p>(<b>Right-click | View Image</b> in Firefox for a larger version of these three images).</p>
+
+                        <p>When you look at the shapes that are used by these Views in Shape Viewer, they look like this:</p>
+
+                        <p>the Orient Express parlour car view:</p>
+
+                        <p><img SRC="images/passv5_oe_sview.jpg" width=640></p>
+
+                        <p>the Kiha31 passview (also a version with blue seats):</p>
+
+                        <p><img SRC="images/passv5_kiha2.jpg" width=640></p>
+
+                        <p>the BNSF US2Caboose view:</p>
+
+                        <p><img SRC="images/passv5_us2cab_sview.jpg" width=640></p>
+
+                        <p>and the Mk1Carriages view:</p>
+
+                        <p><img SRC="images/passv5_mk1_sview.jpg" width=640></p>
+
+                        <p>No external walls, no wheels/bogies, just a highly detailed model designed to be viewed from one position within the model.   These are 3D models that are created in the same way as other models for MSTS: however, as they are static as far as the sim is concerned, you can make them as detailed as you wish without incurring a great hit on frame rates.  Windows should be transparent so that you can look out at the passing scenery.  You can even include animation within the model (note the rotating roof fans and the wisp of cigar smoke in the Orient Express parlour car).  A dedicated passenger view shape requires the shape file (.s) and the texture (.ACE) files for that shape.  You do not require an .SD file. </p>
+
+                        <p>If you don't want something so elaborate, you can use the wagon shape file as the shape for the sim to use: this can be quite successful if you are trying to simulate a guard leaning out of his van window, a brakeman on the rear porch of a caboose or even a shunter's view standing on the step of the caboose.  Generally using the wagon shape results in a much less detailed and more jagged view of the wagon.  If you do use an existing shape, the shape will need to have an interior or you will only see scenery.</p>
+
+                        <p>Here's an example of a railcar that's been constructed with an interior:  the Passenger View here is positioned in the the actual railcar shape (right-click | View Image for a larger view):
+
+                        <p><img SRC="images/passv5_rdc.jpg" width=640 height=480>
+                        <br><img SRC="images/passv5_rdc_shape.jpg" width=640 height=480></p>
+
+                        <p>You can also use a shape that has no interior at all: here's a guard's van (which has no interior) with a Passenger View simulating the guard looking out his side window.</p>
+
+                        <p><img SRC="images/passv5_vrZVan.jpg" width=640 height=480></p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "define">
+		</div>
+
+    <!--- end end overview --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Defining The Passenger View In The Model's WAG File</h2>
+			<div class="entry">
+
+                 <p>The Passenger View needs to be defined within the WAG file of the model.  It is in the format</p>
+
+<font color=blue><b>
+<pre>
+&#09;Inside (
+&#09;PassengerCabinFile ( filename.s )
+&#09;PassengerCabinHeadPos ( x y z )
+&#09;StartDirection ( x y z )
+&#09;RotationLimit ( x y 0 )
+&#09;Sound ( "soundfile.sms" )
+&#09;)</font></b>
+</pre>
+
+
+                 <p>and is usually found towards the bottom of the WAG file near the Sound () line.  Be sure to have an opening and closing bracket correctly placed.  You may copy and paste the code contents.</p>
+
+                 <p>The contents of the Inside() module are:</p>
+                 <ol>
+                     <li><b>PassengerCabinFile ( filename.s )</b>: this is the name of the shape that MSTS will call when you press the "5" key. You can use the shape of the wagon itself or you can use/construct a dedicated interior view to be used with the engine or wagon.  A dedicated interior view needs no external walls, animation, wheels, physics etc and thus can be as detailed as you can make it.
+                     <br>&nbsp;</li>
+                     <li><b>PassengerCabinHeadPos ( x y z )</b>: is self-explanatory: it defines the position of the head (ie camera) relative to the origin (centre) of the shape you are using: the units are numeric values in meters.
+                     <ul>
+                         <li>x - right (positive) or left (negative) of the origin of the shape;</li>
+                         <li>y - above (positive) or below (negative - never used) the origin of the shape;</li>
+                         <li>z - in front of (positive) or behind (negative) of the origin of the shape.</li>
+                     </ul>
+                     </li>
+
+                     <li<b>StartDirection ( x y z )</b>: provides the initial direction the camera (your view)is pointing when you press the "5" key.  The parameters x, y, z are numbers (between -180 and +180) in degrees where 0 is straight ahead and
+                     <ul>
+                         <li>x is view up (negative) or down (positive) in degrees from the initial eyepoint ;</li>
+                         <li>y is view left (negative) and right (positive) from the initial eyepoint (so left is -90, right is 90, rearview is 180);</li>
+                         <li>z is view as if you have a head tilt (positive you tilt your "head" right, negative you tilt your "head" left;
+                         this z value is probably best left at 0 (zero).</li>
+                     </ul>
+                     </li>
+
+                     <li<b>Rotation Limit ( x y 0 )</b>: determines how far left, right, up down you can rotate your view using the arrow keys.  The x, y values are numbers (in degrees) between 0 and 360 that determine the angle the camera will move away from the StartDirection view on  either side.
+                     <ul>
+                         <li>x is view rotation up or down in degrees from the StartDirection;</li>
+                         <li>y is view rotation left and right from the StartDirection;</li>
+                         <li> Last number is unused, so leave at 0 (zero).</li>
+                     </ul>
+                     </li>
+
+                     <li<b>Sound (soundfile.sms)</b>:  This line calls the SMS files that determines the sound you will hear in the Passenger View: in the case of the Orient Express, you hear a piano playing, in the case of a caboose, you may wish to hear the locomotive working, depending on how many wagons there are between loco and caboose.  Sound files are outside the scope of this tutorial, but make sure that the SMS files have a "<b>Activation ( PassengerCam() )</B>" line to ensure that the sounds will be heard when in key "5".  Have a look at the <b>oebarpas.sms</b> file in the SOUND folder in the 380 folder to see how it's structured.
+                     </li>
+                 </ol></p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "error">
+		</div>
+
+    <!--- end end overview --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">The UK Mk1 Carriages Error - A Case Study in Error Correction</h2>
+			<div class="entry">
+
+                 <p>The Mk1Carriages were supplied with the MSTS v1.2/1.4 upgrade.  The passenger view is quite nice, but there is an error in its positioning.  I thought I'd present this one as an example of how you sometimes need to look deeper into a problem.</p>
+
+                 <p>Let's look at the default Mk1Carriages passenger view (here shown at Horton-In-Ribblesdale station on the Settle-Carlisle line).</P>
+
+                 <p><img SRC="images/passv5_mk1_01.jpg" width=800></p>
+
+                 <p>As you can see, your view is in the correct position relative to the seats and window, but, oh dear, as you look out the window you are staring at the side wall of the platform.  Obviously the view is too low.  BUT, and it's an important BUT, the view is basically correct.  So this means that the passenger view shape you are looking out from is not positioned correctly. </p>
+
+                 <p>Well this looks a simple repair, doesn't it?</P>
+
+                 <p>Your first reaction might be to alter the PassengerCabinHeadPos parameter for height:  ok let's do that for starters.  Open the "uksecond.wag" in ConTEXT or similar unicode-aware editor and scroll down to line 42.  Let's adjust the "y" parameter from 1.47801 up by, say, 0.85m and make it 2.33m.  Forget about the numbers beyond the second decimal point and make the line read <b>PassengerCabinHeadPos ( -0.61 2.33 0.11 )</b>.
+
+                 <p>Save the file and look at the view in the sim.  Ooops!  Now we've got our head in the luggage rack and the platform outside the window is still too low.</p>
+
+                 <p><img SRC="images/passv5_mk1_02.jpg" width=800></p>
+
+                 <p>So that's not the solution we were looking for.</p>
+
+                 <p>What's happening here?</p>
+
+                 <p>The answer lies in the position of the shape used to construct the passenger view.  If we look at the passenger view shape in Shape Viewer and add the carriage as a second shape (press F3), you can see that the passenger view is too low when compared to the passenger carriage itself.</p>
+
+                 <p><img SRC="images/passv5_mk1_03.jpg" width=802></p>
+
+                 <p>We need to correct the position of the shape relative to the origin.  To correct this error, uncompress the <b>uksecondpassview.s</b> using Zipper, then open the shape file in <a href=sfm_faq.html>Shape File Manager</a>.  Mouse over "Options" and select Shift.
+
+                 <p><img SRC="images/passv5_mk1_04.jpg" width=774></p>
+
+                 <p>In the dialogue box that opens, put "0.85" in the "Y" box (this means we are shifting the shape upwards by 0.85m (I picked 0.85m after looking at the difference in the height of the shapes using <a href=../utilities/shape_viewer.html#mtool>Ian MacMillan's measuring tool</a>).
+
+                 <p><img SRC="images/passv5_mk1_05.jpg" width=774></p>
+
+                 <p>Let's look at the two shapes again in Shape Viewer:  Now the windows line up perfectly.</p>
+
+                 <p><img SRC="images/passv5_mk1_06.jpg" width=802></p>
+
+                 <p>And finally, we look at the result in the sim:  the platform is now visible outside the window, although the platform still seems high.
+
+                 <p><img SRC="images/passv5_mk1_07.jpg" width=800></p>
+
+                 <p>This seems a little odd as we know we've lined up the passenger view in the coach perfectly.  There's obviously some other issue that's causing the passenger view to look low.  Maybe there's another problem that doesn't have anything to do with the carriage.</p>
+
+                 <p>It's time to look at the station shape as well as the passenger shape.  When we examine the train at the station, we can see that the platform seems a little high when the carriages are alongside.......</p>
+                 
+                 <p><img SRC="images/passv5_mk1_11.jpg" width=800></p>
+                 
+                 <p>..... and looking at the carriage and the station shape in SView confirms that the platform is too high for the coaches:</p>
+                 
+                 <p><img SRC="images/passv5_mk1_08.jpg" width=802></p>
+                 
+                 <p>Adjusting the coach by 0.85m (there's that number again!) and the doors now clear the platform edge in Shape Viewer..... </p>
+                 
+                 <p><img SRC="images/passv5_mk1_09.jpg" width=798></p>
+                 
+                 <p>....and once you increase the height of the shape and the height of the passenger view by another 0.85m, the view out the window looks just about right:</p>
+                 
+                 <p><img SRC="images/passv5_mk1_10.jpg" width=800></p>
+                 
+                 <p>The extra shift upwards has fixed the passenger view for the stations on the Settle-Carlisle, but may now be too high when the carriages are used on another route with correct height platforms.  It would then be your choice as to whether you create a separate passenger view for your carriages to use on other routes with platforms at the correct height, or go into Route Editor and push down the station platforms on the Settle-Carlisle by 0.85m.</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end end overview --->
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#desc">Description</a>
+                 <br><a href="#define">Defining Pass View</a>
+                 <br><a href="#error">Error Correction</a>                 
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br>Updated: 14 Apr 2008, 02 April 2010</p>
+</div>
+</body>
+</html>

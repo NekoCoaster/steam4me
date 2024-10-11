@@ -1,0 +1,527 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>Mastering Polymaster - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li ><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png"  height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png"  height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+                        <h2><font color="#3333FF">Mastering Polymaster</font>
+                        <br>by Matt Austin</h2>
+                        <h3>member of team-ALCO</h3
+
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+
+                   <p>Polymaster is a very useful utility for modifying shapes made using Train Sim Modeler (TSM). Just as MSTS-Bin has given new life to MSTS, Polymaster gives new life to TSM and allows more detailed TSM-built models to run in MSTS.</p>
+
+                   <p>The three main abilities of Polymaster on TSM models are to:</p>
+                   <ol>
+                       <li>fix the TSM transparency problem;</li>
+                       <li>add levels of detail to models; and</li>
+                       <li>allow the model to be loaded in stages in MSTS through the use of subobjects.</li>
+                   </ol>
+
+                   <p>We look at these three Polymaster abilities, and how to apply them to your TSM model.</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "link1"</a>
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">TSM Alpha Transparency Problem</h2>
+			<div class="entry">
+
+                   <p>Often when testing TSM-built models in MSTS, we notice that when we look through the vehicle's windows, there is a lack of detail showing through the windows on the other side, as shown here. Note that the bottom part of the tree is not visible through the cab windows:</p>
+                   
+                   <p><img SRC="images/ma_polym01.jpg" alt="ma_polym01.jpg" ></p>
+
+                   <p>This takes place when we use alpha material for windows, to allow tinted glass. Problem is, as seen in the example above, if you wanted tinted glass, there was no way to see most of the detail on the other side. Before Polymaster, there were several ways of getting around this problem. The first way was to make the tinting so dark that it was hard to see any detail through the interior window. This is darkening the alpha. This would mean that lack of detail wasn't noticed, as shown below:</p>
+
+                   <p><img SRC="images/ma_polym02.jpg" alt="ma_polym02.jpg" ></p>
+                   
+                   
+                   <p>The second way to get around the TSM alpha transparency problem was to replace all alpha transparencies (Alpha material in TSM) with clear transparencies (Trans material in TSM). This is removing the alpha. This would mean that there was no tinting and the window was completely clear. Detail could be seen but it was as if there was no glass in the windows, as windows on rail vehicles are seldom clean enough to be completely clear.</p>
+
+                   <p><img SRC="images/ma_polym03.jpg" alt="ma_polym03.jpg" ></p>
+                   
+                   <p>Neither of these approaches really fixed the problem, and it was only with Polymaster that a solution could be found and applied.</p>
+
+                   <h3>Preparation Of The Model In TSM To Fix The Alpha Transparency Problem</h3>
+
+                   <p>In order for the Polymaster transparency fix to be applied, the model must first be prepared in TSM. As the problem concerns the windows, we have to look at inward-facing transparencies (windows) and outward-facing transparencies. We split all windows (and other surfaces - walls, floor, roof) into exterior (polys facing out, windows looking in) and interior (polys facing in, windows looking out).</p>
+
+                   <p>As an example, here we see a  screenshot of a model in TSM.</p>
+
+                   <p><img SRC="images/ma_polym04.jpg" alt="ma_polym04.jpg" ></p>
+
+                   <p>The exterior transparencies of this model (polys facing out, windows looking in) are shown here:</p>
+
+                   <p><img SRC="images/ma_polym05.jpg" alt="ma_polym05.jpg" ></p>
+
+                   <p>The interior transparencies (polys facing in, windows looking out) are shown here:</p>
+
+                   <p><img SRC="images/ma_polym06.jpg" alt="ma_polym06.jpg" ></p>
+
+                   <p>The solid internal detail of the model (such as seats and lights ) is shown here with the interior transparencies. The solid interior details are shown with the interior transparencies because these need to be sorted later in Polymaster, and are grouped together:</p>
+
+                   <p><img SRC="images/ma_polym07.jpg" alt="ma_polym07.jpg" ></p>
+
+                   <p>What we need to do, is set up the parent hierarchy, naming pattern and part materials of the model in TSM. This means that we can then use Polymaster to sort the order in which these parts are loaded in MSTS and remove the alpha transparency problem.</p>
+
+                   <p>We start by creating a small part and name this Alphamain. This can be a single-poly part, and it can be hidden somewhere in the frame where it won't be seen. This part is parented to main and the material used is AphaNorm as shown when F2 is selected for Alphamain:</p>
+
+
+                   <p><img SRC="images/ma_polym08.jpg" alt="ma_polym08.jpg" ></p>
+
+                   <p>This is the part that all transparencies will be parented to. Here we find a problem. Anyone working with textures in MSTS soon learns that if 8-bit alpha textures are used, the quality of the textures is degraded. So, if we use tinted windows, the surrounding texture will not have the depth of colour and detail that clear window textures will have. So, if we want tinted windows, the surrounding body detail will not be as crisp as if we have clear windows.</p>
+
+                   <p>One way to get around this is to use separate glass panels for the exterior windows. We can either have tinted rectangular panels which precisely cover every window, or we can have a tinted strip which sits just inside the windows. I choose the strips rather than having a tinted panel for each window. Shown in TSM, it looks like this:</p>
+
+                   <p><img SRC="images/ma_polym09.jpg" alt="ma_polym09.jpg" ></p>
+
+                   <p>In order to show where it goes, it is shown laid over the interior details of the model:</p>
+
+                   <p><img SRC="images/ma_polym10.jpg" alt="ma_polym10.jpg" ></p>
+
+                   <p>A simple way to lay out the exterior glass panel is to position it slightly inboard of the outside walls, doors and windows. This means that it will be seen through the windows, but it will not show on top of solid external parts, such as walls and solid doors.</p>
+
+                   <p>The exterior glass panel is parented to Alphamain and the material used is Alphanorm+ as shown:</p>
+
+                   <p><img SRC="images/ma_polym11.jpg" alt="ma_polym11.jpg" ></p>
+
+                   <p>Having this glass panel means that If we do this, then the outside walls of the vehicle can have fully transparent windows (rather than tinted) to allow the textures to have more detail. The part will be parented to Main with the material being TransNorm:</p>
+
+                   <p><img SRC="images/ma_polym12.jpg" alt="ma_polym12.jpg" ></p>
+
+                   <p>Now that we have the outside windows covered, we move to the transparencies and detail on the inside of the car. I usually don't use alpha textures with tinted windows for the inside windows as this reduces the texture detail. I find that if the outside windows are tinted, we don't need to tint the inside ones, as the effect of a darker interior is done by the outside glass section. The interior transparencies (such as inside walls) are parented to Alphamain, and the material is AlphaHlfBrt-  as shown:</p>
+
+                   <p><img SRC="images/ma_polym13.jpg" alt="ma_polym13.jpg" ></p>
+
+                   <p><b>Please Note:</b> The use of AlphaHlfBrt for the interior transparencies and other internal details is because this model is of a passenger car with an interior which is lit up at night. If building a vehicle which has an interior that is not lit at night (such as a sheep wagon), then the material would be AlphaNorm-.  On the Tait cars, I've had materials using HlfBrt for the passenger saloon but Norm for the driver and guard's compartment. This is because they're not lit at night. The important thing is to use Alpha+ for the outward facing but inward looking glass strip and Alpha- for the interior parts. This is necessary for the fix to work. Using HlfBrt material parts for the interior results in the car's interior being dimly lit up at night as shown (note the driver's cab is in not lit):</p>
+
+                   <p><img SRC="images/ma_polym14.jpg" alt="ma_polym14.jpg" ></p>
+                   
+                   <p>The internal details (that are dimly lit at night) such as ceiling, floor, seats, lights, luggage racks, etc are parented to Main and their material is SolidHlfBrt.
+
+                   <p>So, we've covered all of the parts that need to be sorted and given correct alpha materials to fix the alpha transparency problem. A simple diagram is included to show how windows and interior detail needs to be arranged:</p>
+
+                   <p><img SRC="images/ma_polym15.jpg" alt="ma_polym15.jpg" ></p>
+
+                   <p>Please note that in the above diagram, the spaces between the exterior and interior sides, roof and floor sections, (with the glass panel in between) has been increased for clarity. They can be quite close, only a point or so apart.</p>
+
+                   <table border=2 cellpadding=5 bgcolor=#FFFFC0>
+                          <tr>
+                              <td><img SRC="images/200px-Yellow_exclamation_mark.svg.png" alt="200px-Yellow_exclamation_mark.svg.png" ></td>
+                              <td><h3>Checklist for this section</h3>
+                              <ul>
+                                  <li>Have I created an Alphamain part, which is parented to Main?</li>
+                                  <li>Have I created an external glass part?</li>
+                                  <li>Have I given all the external glass part and internal transparencies the Alphamain parent and the correct alpha+ or alpha- material?</li>
+                                  <li>Have I parented all solid internal detail to Main?</li>
+                                  <li>Have I given all solid internal detail the correct material, be it half bright(HlfBrt) or normal (Norm), depending on whether we want the car to be it up at night?</li>
+                              </ul></td>
+                          </tr>
+                          </table>
+
+                          	 </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "link2"</a>
+		</div>
+
+    <!--- end cause --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Levels Of Detail</h2>
+			<div class="entry">
+
+                   <p>Levels Of Detail (or LODs) enable MSTS to process the model better. It allows varying amounts of detail to be shown at various distances. As an example, up to 140 metres away, we want all detail to be visible. From 140 to 250 metres, we can lose small detail such as whistles, downpipes, handrails, springs and such detail which wouldn't be visible more than 100 metres away. From 250 to 800 metres, we can lose details such as buffers, couplers and other larger detail. From 800 to 2000 metres we can lose details such as underfloor boxes, pantographs and larger details.  From 2000 metres, we can have a simple box.</p>
+
+                   <p>Doing this means that the MSTS graphics engine doesn't have to carry out the calculations necessary to render full detail at greater distances. At these distances, we wouldn't see such smaller detail and it is a waste for MSTS to be carrying out unneeded calculations. For long trains comprised of highly-detailed vehicles, this can be a great help for slower machines.</p>
+
+                   <h3>Preparation Of The Model In TSM To Set Levels Of Detail In Polymaster.</h3>
+                   
+                   <p>We now have everything prepared in TSM to fix the alpha transparency problem. We can move on to the second lot of preparation; to set levels of detail.</p>
+
+                   <p>Here we have to use an interesting TSM feature; dummy animation.</p>
+
+                   <p>When TSM converts a file to an MSTS .s shape file, any non-animated parts are merged into the main part. This makes it less complicated, but if there are parts which we want to remain separate in Polymaster, we need to give them a dummy animation. This means that TSM won't merge such parts into the main part and we can deal with them separately from the main. For  example, if we're going to make the couplers disappear at 80 metres, we need to give it a dummy animation. This is because it doesn't have an actual animation; not needing to be animated in MSTS.</p>
+
+                   <p>To begin setting up parts to stop them being merged into the main shape, we select F2 Part Properties in each part.</p>
+
+                   <p><img SRC="images/ma_polym16.jpg" alt="ma_polym16.jpg" ></p>
+
+                   <p>Select the Animation button in the bottom right to get the Part Animation window:</p>
+                   
+                   <p><img SRC="images/ma_polym17.jpg" alt="ma_polym17.jpg" ></p>
+
+                   <p>In the bottom half of this window, select the Add Rotation button to bring up the Rotation window:</p>
+
+                   <p><img SRC="images/ma_polym18.jpg" alt="ma_polym18.jpg" ></p>
+
+Here we want to add a frame of rotation, but as it is a dummy, we want a frame of rotation that doesn't actually move. Click OK to add a rotation frame and it returns to the Part Animation window.
+
+                   <p><img SRC="images/ma_polym19.jpg" alt="ma_polym19.jpg" ></p>
+
+                   <p>Select Add Rotation again and put a 1 in the frame box:</p>
+
+                   <p><img SRC="images/ma_polym20.jpg" alt="ma_polym20.jpg" ></p>
+
+                   <p>Then press enter again to see the Part Animation window:</p>
+
+                   <p><img SRC="images/ma_polym21.jpg" alt="ma_polym21.jpg" ></p>
+
+                   <p>Repeat this process seven times, numbering the frames from 2 to 8</p>
+
+                   <p><img SRC="images/ma_polym22.jpg" alt="ma_polym22.jpg" ></p>
+                   
+                   <p>At this stage, click Save, and save the file as Dummy.rot for future use. Then when you add a dummy rotation to another part, you can load the Dummy.rot file instead of having to add each frame of rotation.</p>
+
+                   <p>Please note that this is a file to allow rotation, but as all the figures are zeros, there is no actual rotation. As explained earlier, it is to stop TSM from merging this part into the main part of the shape file.</p>
+
+                   <p>Please Note - all of the parts that are part of the TSM alpha transparency problem must have dummy rotation animations added to them so they don't get merged into the main shape. The glass section, inside and outside transparencies, and any interior detail, all must have dummy rotation animations added. This is important to solve the TSM alpha transparency problem in Polymaster.</p>
+
+
+                   <table border=2 cellpadding=5 bgcolor=#FFFFC0>
+                          <tr>
+                              <td><img SRC="images/200px-Yellow_exclamation_mark.svg.png" alt="200px-Yellow_exclamation_mark.svg.png" ></td>
+                              <td><h3>Checklist for this section</h3>
+                              <ul>
+                                  <li>Have I worked out which parts need to be separate so they can be hidden at greater distances? </li>
+                                  <li>Have I added a dummy rotation file to each of these non-moving parts? </li>
+                                  <li>Have I added dummy rotation animations to all interior and exterior transparencies and all internal details?</li>
+                              </ul></td>
+                          </tr>
+                          </table>
+
+
+			 </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "link3"</a>
+		</div>
+
+    <!--- end cause --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Subobjects</h2>
+			<div class="entry">
+
+                   <p>Subobjects are simply levels in which the MSTS graphics engine loads each shape. The more complicated a model is, the more likely that it will eventually be too complicated to load in MSTS, resulting in the UID2000 error. When this takes place, it shows that MSTS cannot load the complicated shape.</p>
+
+                   <p>Polymaster's Subobject capability allows the MSTS graphics engine to load the model in stages rather than all at once.</p>
+
+                   <h3>Preparation of the model in TSM to set Subobjects in Polymaster.</h3>
+
+                   <p>This is covered by the work which was done for in TMS to prepare the shape for LODs. Not much is needed as the work done to give parts dummy animation will also prepare the parts to be allocated as subobjects.</p>
+
+                   <table border=2 cellpadding=5 bgcolor=#FFFFC0>
+                          <tr>
+                              <td><img SRC="images/200px-Yellow_exclamation_mark.svg.png" alt="200px-Yellow_exclamation_mark.svg.png" ></td>
+                              <td><h3>Checklist for this section</h3>
+                              <ul>
+                                  <li>Are there any other large parts which I'd like to load after the main part?</li>
+                                  <li>Have I added a dummy rotation file to each of these non-moving parts? </li>
+                              </ul></td>
+                          </tr>
+                          </table>
+
+			 </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "link4"</a>
+		</div>
+
+    <!--- end cause --->
+    
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Installing And Setting Up Polymaster</h2>
+			<div class="entry">
+
+                   <p>We've already prepared our model in TSM and converted it to an .s shape file. Having done this, we need to use Polymaster to modify the shape for MSTS.</p>
+
+                   <p>Polymaster can be downloaded from <a href=http://www.thopil.de/>http://www.thopil.de/</a>.  The page is in German, but this isn't a problem. Select Polymaster from the menu on the left side of the screen, ....</p>
+
+                   <p><img SRC="images/ma_polym22a.jpg" alt="ma_polym22a.jpg" ></p>
+
+                   <p>.... scroll down (1) and click the download link (2) at the bottom of the Polymaster page:</p>
+
+                   <p><img SRC="images/ma_polym22b.jpg" alt="ma_polym22b.jpg" ></p>
+
+                   <p>Once installed on your computer, run the program, which looks like this:</p>
+
+                   <p><img SRC="images/ma_polym23.jpg" alt="ma_polym23.jpg" ></p>
+
+                   <p>We have a problem. As the default language of the program is German, it won't mean much to non-German speakers. Click the <b>Einstellungen/Settings tab</b> in the top left corner.</p>
+
+                   <p><img SRC="images/ma_polym24.jpg" alt="ma_polym24.jpg" ></p>
+
+                   <p>Once in the Settings tab, select  the pulldown menu under "Sprache" and select English. Much better.  Don't go back to the Splitting tab just yet. You'll notice the text is all in English now.</p>
+
+                   <p><img SRC="images/ma_polym25.jpg" alt="ma_polym25.jpg" ></p>
+
+                   <p>As shown above, choose 4 LODs and enter your chosen distance in metres. I use the above settings, but you may wish to vary them slightly. This sets up Polymaster for all subsequent shape work.</p>
+
+
+			 </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "link5"</a>
+		</div>
+
+    <!--- end cause --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Setting LODs In Polymaster</h2>
+			<div class="entry">
+
+                   <p>Return to the Splitting tab and it all makes much more sense. We're going to uncompress and open the shape in Polymaster, so we can carry out the Polymaster steps. We do this as shown below:</p>
+
+                   <p><img SRC="images/ma_polym26.jpg" alt="ma_polym26.jpg" ></p>
+
+                   <p>Once the file has been uncompressed and opened, the window looks like this:</p>
+
+                   <p><img SRC="images/ma_polym27.jpg" alt="ma_polym27.jpg" ></p>
+
+                   <p>The left hand side is where the LODs and subobjects are allocated. We'll do what needs to be done here before looking at the rest.  Note that there are four columns of figures, L1 to L4. These are the LOD columns, and here we select at which level we want each part to display. To refresh our memory; L1 is 0 to 140 metres, L2 is 140 to 800 metres, L3 is 800 to 2000 metres and L4 is over 2000 metres.</p>
+
+                   <p>We notice that all the figures are ones. The 1 means that this part is visible at the column LOD distance. If we want a part to be visible at L1 but invisible at all other levels, we enter 999 into the field. The 999 makes the part invisible at this distance. As an example, we might want brake hoses to be visible up to 140 metres away then invisible after that. We leave the 1 in the first field and enter 999 into the L2, L3 and L4 columns. We may want the roof ventilators to be visible up to 800 metres.</p>
+
+                   <p>In that case, we leave the 1 in the L1 and L2 fields, and enter 999 in the L3 and L4 fields. And so on for all parts.</p>
+
+                   <p>The LOD grid which is below the Subobject grid in the centre-right of the window shows how many faces are displayed at each level. Careful choice in applying LODs can see quite a reduction of faces shown at longer distances.</p>
+
+                   <p>The following is an example of LODs allocated. Notice that different parts are invisible at different LODs;</p>
+
+
+                   <p><img SRC="images/ma_polym28.jpg" alt="ma_polym28.jpg" ></p>
+                   
+                   <h3>Setting up the details in the Elements and Subobject grids in Polymaster</h3>
+
+                   <p>To set the subobjects in Polymaster, we start by looking at the L1 column. These are all 1s, showing that all parts are visible up to 140 metres. We need to consider two things about the MSTS graphics engine. The first thing is that no more than 14000 vertices can be loaded at once. If we look to the right of the Elements graph, there is a small grid called Subobjects. The Vert column shows the total number of vertices of the model. This graph is related to the L1 column in the Elements grid.</p>
+
+                   <p>My personal preference is for three levels of objects/subobjects. The first level is comprised of any Main parts. The second level is comprised of bogies, wheelsets and other underfloor detail. The third level is comprised of all the parts involved with the interior and exterior transparencies.</p>
+
+                   <p>I choose to set the third level first. Any of the parts that we've looked at as part of the TSM alpha transparency object are given a 3 in the L1 column. This includes the Alphamain part and any parts parented to Alphamain. It also includes any interior detail such as lights, seats, luggage racks, internal handrails, bulkheads and cab details. So, simply put, we make sure that all apha transparencies, inside windows and inside detail will be loaded last. This is important to solve the TSM alpha transparency error.</p>
+
+                   <p>Note - If we're using a glass section for alpha on the windows facing out, we don't set the vehicle sides to 3 in the L1 column. It's best left as 1 in the L1 column.</p>
+
+                   <p>Once we've set all of those parts to 3 in the L1 column, we can set all bogie and underfloor detail to 2 in the L1 column. I usually then split any remaining parts evenly between 1 and 2 in the L1 column. In the Subobjects grid, we see the total vertices of each subobject level. As the note next to it says, the number of vertices per subobject should not exceed 14000.</p>
+
+                   <p>After this is done, we have to get the Subobject grid to sort all parts into the subobjects. We do this by entering a lower-case x in the second and third lines as shown below. Be sure to scroll right and enter an x in the L1 to L4 boxes for Subobjects 2 and 3. Don't enter an x into any of the top line boxes, as this is the level to which the 2 and 3 levels must be subobjected:</p>
+
+                   <p><img SRC="images/ma_polym29.jpg" alt="ma_polym29.jpg" ></p>
+
+                   <table border=2 cellpadding=5 bgcolor=#FFFFC0>
+                          <tr>
+                              <td><img SRC="images/200px-Yellow_exclamation_mark.svg.png" alt="200px-Yellow_exclamation_mark.svg.png" ></td>
+                              <td><h3>Checklist for this section</h3>
+                              <ul>
+                                  <li>Have I set all necessary  transparencies and interior detail as 3 in the L1 column? </li>
+                                  <li>Have I evenly distributed the rest of the parts between 1 and 2 in the L1 column?</li>
+                                  <li>Have I made sure that no single level of subobjects exceeds 14000 vertices?</li>
+                              </ul></td>
+                          </tr>
+                          </table>
+
+
+
+			 </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "link6"</a>
+		</div>
+
+    <!--- end cause --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Removing Unneeded Dummy Rotation Animations In Polymaster</h2>
+			<div class="entry">
+
+                   <p>We've seen earlier that the purpose of adding dummy rotations to parts in TSM is to stop them from being merged into the main shape, so LODs and subobjects can be applied. As such, once these steps have been done, there is no need for them to keep the unnecessary animations in MSTS. We remove them quite simply, as they show up in the Matrices box, in the bottom centre-right of the window. If we scroll down through the matrices, we see that some of them have a lower-case x in the Anim column:</p>
+
+                   <p><img SRC="images/ma_polym30.jpg" alt="ma_polym30.jpg" ></p>
+
+                   <p>To remove these dummy animations, we simply delete the x from each box in the Anim column. Once we've deleted every x here, we click the Delete Needless Anim button to the right. That removes the dummy animations which are no longer required.</p>
+
+                   <table border=2 cellpadding=5 bgcolor=#FFFFC0>
+                          <tr>
+                              <td><img SRC="images/200px-Yellow_exclamation_mark.svg.png" alt="200px-Yellow_exclamation_mark.svg.png" ></td>
+                              <td><h3>Checklist for this section</h3>
+                              <ul>
+                                  <li>Have I deleted every x from the Anim column in the Matrices grid?  </li>
+                                  <li>Have I clicked the Delete Needless Anim button?</li>
+                              </ul></td>
+                          </tr>
+                          </table>
+
+			 </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "link7"</a>
+		</div>
+
+    <!--- end cause --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Finishing Off All Necessary Work In Polymaster</h2>
+			<div class="entry">
+
+                   <p>We're getting close now.</p>
+
+                   <p>We notice on the lower right hand side of the box, we have a number of buttons:</p>
+
+                   <p><img SRC="images/ma_polym31.jpg" alt="ma_polym31.jpg" ></p>
+
+                   <p>These buttons complete the actions that Polymaster does to improve the shape file. We've already clicked the Delete Needless Anim button and we now click the others as needed.</p>
+
+                   <p>First we click the Make LODs/Subobjects button. This sorts the Levels Of Detail and the Subobjects.</p>
+
+                   <p>Next we click the Weld Together Points button  and Weld Together Normals button. These two buttons show another unexpected bonus of Polymaster. As indicated, these two buttons merge any identical points and normals, and thus neaten up the shape. These two buttons come up with a confirm message, to which we click Yes/Ja.</p>
+
+                   <p>Then comes the biggie. We click the Correct TSM Mat. Error button. This sorts the transparency issue and fixes it so we can see the interior detail and details through the windows on the other side of the vehicle.</p>
+
+                   <p>We shouldn't need to click the Undo File Changes button unless we've clicked one of these buttons before we've entered the details in the Elements or other grids.</p>
+
+                   <p>We then save the file, which usually takes a few seconds. Once it is saved, the red text in the Save and Save As buttons goes black. After this we compress the file, using the Compress/Decompress .s button above.</p>
+
+                   <table border=2 cellpadding=5 bgcolor=#FFFFC0>
+                          <tr>
+                              <td><img SRC="images/200px-Yellow_exclamation_mark.svg.png" alt="200px-Yellow_exclamation_mark.svg.png" ></td>
+                              <td><h3>Checklist for this section</h3>
+                              <ul>
+                                  <li>Have I clicked the appropriate buttons to complete the Polymaster stages? </li>
+                                  <li>Have I saved and compressed the file?</li>
+                              </ul></td>
+                          </tr>
+                          </table>
+
+
+			 </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "conclusion"</a>
+		</div>
+
+    <!--- end cause --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Conclusion</h2>
+			<div class="entry">
+
+                   <p>Now we're done. Test the shape in MSTS and see the difference:</p>
+
+                   <p><img SRC="images/ma_polym32.jpg" alt="ma_polym32.jpg" ></p>
+
+                   <p>Trees and other details can be seen and the interior of the car is darker through the windows. What can't be seen is the fact that the model loads quicker, frame rates rise and the sim generally performs better.<p>
+                   
+                   <p>Polymaster is a terrific little program, quick to learn and of great benefit to anyone making complicated models in TSM for MSTS.</p>
+
+
+			 </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "link8"</a>
+		</div>
+
+    <!--- end cause --->
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <center>
+           <p>&nbsp;</p>
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#link1">TSM Alpha Transparency</a>
+                 <br><a href="#link2">Levels Of Detail</a>
+                 <br><a href="#link3">Subobjects</a>
+                 <br><a href="#link4">Installing Polymaster</a>
+                 <br><a href="#link5">Setting LODs</a>
+                 <br><a href="#link6">Removing Unneeded Animation</a>
+                 <br><a href="#link7">Finishing Up</a>
+                 <br><a href="#conclusion">Conclusion</a>
+               </p>
+               </center>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 25 May 2010</center></p>
+</div>
+</body>
+</html>
+

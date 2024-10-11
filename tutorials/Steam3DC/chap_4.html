@@ -1,0 +1,336 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <title>A Steam Loco for MSTS Using 3DCanvas Chapter 4 - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../../index.html">Home</a></li>
+		<li class="current_page_item"><a href="../index.html">Tutorials</a></li>
+		<li><a href="../../msts_errors.html">Error Messages</a></li>
+		<li><a href="../../steam/index.html">Steam</a></li>
+		<li><a href="../../electric/index.html">Electric</a></li>
+		<li><a href="../../passenger/index.html">Passenger</a></li>
+		<li><a href="../../diesel/index.html">Diesel</a></li>
+		<li><a href="../../freight/index.html">Freight</a></li>
+		<li ><a href="../../vans/index.html">Vans</a></li>
+		<li ><a href="../../routes/index.html">Routes</a></li>
+		<li><a href="../../utilities/index.html">Utilities</a></li>
+		<li><a href="../../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../../images/S4M_Banner_left.png"  height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../../images/S4M_Banner_Tutorials.png"  height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">A Steam Loco for MSTS Using 3DCanvas</font>
+                        <br>by Paul "decapod" Gausden</h2>
+                        <p></p>
+			<h2 class="title">Chapter 4 - Pistons and Rods</h2>
+ 			   <div class="entry">
+
+                   <p>Time to build the valve gear - animation may have to wait till next time.</p>
+
+                   <p>Lesson Highlights - makes heavy use of group hierarchy for accurate positioning and animation. Copy and pasting of objects.</p>
+
+                   <h2>Cylinders</h2>
+
+                   <ol>
+                       <li>drag a cylinder primitive onto the scene.<br>&nbsp;</li>
+                       <li>Right click and Scale/To Size to the appropriate dimensions taken from the plan:
+                           <p><img SRC="images/l4-2.jpg" ></p></li>
+
+                       <li>The cylinder is not a huge object so there is no need to use 16 sides -  right click, select "Open Source" and change the longitude to 12 - (this saves us 16 polys per cylinder):
+                          <p><img SRC="images/l4-3.jpg" ></p></li>
+
+                       <li>Looking at the plans, I see we need to angle the cylinders slightly - if you measure from the centre of the centre wheel to the point where the piston rod enters the cylinder you can calculate the angle - I make it about 2.9 degrees?<br>&nbsp;</li>
+
+                       <li>Next, measure the same point on the cylinder, to the pivot point you marked on the plan at rail height (the centre line) - Z=4.68m, Y= 1.23m.<br>&nbsp;</li>
+
+                       <li>There appears to be markings for the cylinders on the front elevation of the plan, this gives us X = 2.07m between the cylinders.<br>&nbsp;</li>
+
+                       <li>We need to rotate the cylinder 90-2.9 = 87.1 degrees in the x-axis - Right click the cylinder and select properties - enter 87.1 in the X field of the group orientation.<br>&nbsp;</li>
+
+                       <li>The pivot point of our cylinder object needs to be the same as our measuring point on the plan. The point is currently at the centre of the object but needs to be in the middle of the rear face. To Achieve this select the rear face with the face selection tool. Next run the "<b>Shift Centre on Selection</b>" plugin (or script for Pro version). This will give us the correct pivot position.
+                           <p><img SRC="images/l4-8.jpg" ></p></li>
+
+                       <li>Now drag the group containing the cylinder onto the Main group, bring up the object properties and enter X=1.035 (half of 2.07), y=1.23 and z=4.68 in the group position. The cylinder should now appear exactly as it does in the plan.
+                           <p><img SRC="images/l4-9.jpg" >
+                           <br><img SRC="images/l4-9a.jpg" ></p></li>
+                       <li>The wheel connection rod as built by MSTS Engineer looks a bit on the thin side, so I have made it thicker (0.1m) in the X direction (right click/scale/to size)
+                           <p><img SRC="images/l4-12.jpg" ></p></li>
+
+                       <li>The wheel connection now needs moving out slightly from the wheels - click on the blue Z on the top menu to stop the object moving length ways and drag the rod with the mouse, so that it is just outside of the wheels again.</li>
+                           <p><b>Note:</b> on models with no outside cylinders, you will now have to run my "<b>fix animation position</b>" plugin. This corrects the animation that was created by the MSTS Engineer - otherwise your connection will move in and out as well as around the wheel. For outside cylinder models we have to completely rebuild the animations so this is not needed.</p></li>
+
+                       <li>I also enlarged the wheel bearing objects - select each object, press the Ctrl key and drag over the edit control - watching the scale size on the status bar) - Alternatively you can use the scale selection operation button. Right click on it first to set the scale sizes (I used "Scale" and 1.5 for all 3 values). Next select each bearing in turn and left click on the scale selection button.<br>&nbsp;</li>
+                   </ol>
+                   
+                   <p>On to the rods and piston objects... we will start with the right side...</p>
+
+                   <ol start="13">
+                       <li>drag a cube primitive onto the scene. On the plan, measure the distance between the driving wheel rod connection point and the point where it connects to the rod coming out of the piston.<br>&nbsp;</li>
+                           <br>A bit of maths needed here: the length is the Square root of (352*352) + (53*53) = 356 pixels *0.9638 = 343cm
+                           <br>Now scale the cube to a long rod 3.43m (Z) by 0.1 (X) by 0.1 (Y)
+                           <p><img SRC="images/l4-15.jpg" ></p></li>
+
+                       <li>The rear end of the rod needs to be made slightly taller so select the rear face and drag the mouse over the vertical part of the edit control till the Y dimension reads about 0.150:
+                           <p><img SRC="images/l4-16.jpg" ></p></li>
+
+                       <li>The animation of this rod is directly linked to the wheel and its pivot point is at one end. We first use the shift centre plugin to set the pivot point. Next drag the group containing the object onto the Wheels2 group (the one to which it is connected on the plan) and change the group name to something meaningful by clicking on the word "Group" in the hierarchy
+                           <br>panel - e.g. PistRodRight
+                           <p><img SRC="images/l4-17.jpg" ></p></li>
+
+                       <li>Set the position of the object via the properties - The Z value must be 0.00 and Y -0.35 (half the stroke), the X value should be about 0.3 - use the same method we used earlier with the wheel connection to make fine tune adjustments to the X value by draging the object in or out. In fact the position can be calculated exactly from the cylinder centre and wheel group X positions of 1.035 &amp; 0.7175 - i.e. 0.3175)<br>&nbsp;</li>
+
+                       <li>We now need to add the piston object - Starting with the guide. For this I start with a cube and scale it to about 0.1, 0.2, 0.2<br>&nbsp;</li>
+
+                       <li>This object is animated in a linear fashion, so it needs to be in its own group and not a child of the wheel. Firstly make it a child group of the main group by dragging it in the hierarchy. Next rename the group to something meaningful e.g. PistonRight:<br>&nbsp;</li>
+
+                       <li>The animator plugin alters the Y &amp; Z coordinates of this object so only the X coordinate is important here and that should be the same as the cylinder centre (1.035)<br>&nbsp;</li>
+
+                       <li>Lastly (for this main part of the motion) add the piston itself. I have used a 6 sided cylinder, scaled to about 0.1 round and 1.6m long, rotated (X) 90 degrees and shifted so one end is the pivot point. Then remove both end faces.
+                           <p><img SRC="images/l4-22.jpg" ></p></li>
+
+                       <li>Now drag the new cylinder group onto the PistonRight group and set all the XYZ properties of the group to 0.00. Then drag the Cylinder object into the PistonRight group to fix its position. (Note: the piston rod now looks creased - use the Crease operation to smooth this object again. 3D Canvas, by default, creases angles of 120 degrees or less - this changes with version 6.0):
+                           <p><img SRC="images/l4-23.jpg" ></p></li>
+
+                       <li>Bring up the properties panel for the piston object and enter -2.9 in the group rotation properties.
+                           <p><img SRC="images/l4-24.jpg" ></p></li>
+                   </ol>
+
+                   <h2>Detailing</h2>
+
+                   <p>I'm not going to go overboard on the detailing, it's not really necessary for a good model, most can be done with texturing.</p>
+
+                   <p>Before animating it all, it is probably a good idea to build one side completely first, then all we need to do is copy and paste for the other side. I'm going to "cheat" at this point and just show a few pictures of the "detailed" cylinder, piston and rod with a small description of each:</p>
+
+                   <p><b>Cylinder</b>
+
+                   <p><img SRC="images/l4-cyl.jpg" ></p>
+
+                   <p>I just added an 8 sided cylinder through the centre of the main cylinder.</p>
+
+                   <p><b>Tip:</b> where objects are symmetrical and the centre is hidden - use one object that passes through, it saves polys - e.g. steps on boilers etc.</p>
+
+                   <p>Another smaller cylinder was added on the end of this and finally two small vertical cylinders (7 sided cylinders remain "smooth" when grouped) with a smoothed 3 sided cylinder was added below.</p>
+
+                   <p>The top guide appears to be connected to the frames and not the cylinder - I'll just leave this floating free as you are unlikely to see the connection that close to the footplate (can be added later), however it will still be part of the cylinder object.</p>
+
+                   <p>The slight taper on the end of the guide was created by scaling a cube 0.1, 0.05, 1.6 ), selecting the end face and extruding by 0.2m (no bevel). The select the lower edge and use the right mouse button to drag the edge up slightly (as shown)</p>
+
+                   <p><img SRC="images/l4-cyla.jpg" ></p>
+
+                   <p>Care was taken to remove *any* completely hidden faces, and faces that point downward below a metre above the rails. However, I have not yet removed the hidden faces near the frames on the inside, as I intend to use a copy of this cylinder object on the other side.</p>
+
+                   <p>All of this was done with grouping, positioning and scaling. Finally all added objects were merged with the main cylinder object.</p>
+
+                   <p>Once the Cylinder is complete:</p>
+
+                   <ol start="23">
+                       <li>To add the cylinder on the other side, select the first cylinder, Copy (CTRL-C), select the cylinder again and Paste (CTRL-V) - this creates a new cylinder object as a child group of the first cylinder.<br>&nbsp;</li>
+                       <li>In the properties of the new group, change Y and Z to 0.00 and X to -2.07.  Since we know this is the right position, the new cylinder object can now be dragged into the first cylinder group.<br>&nbsp;</li>
+                   </ol>
+
+                   <p><b>A small comment on groups here:</b> While modelling, having lots of groups is a good idea. Being able to move sets of object relative to other groups is useful and is essential for animated parts.</p>
+
+                   <p>In MSTS, large numbers of groups (effectively the matrix lines in the S file) has an adverse effect on model performance, although there is reportedly a limit to the number of polys in a group.</p>
+
+                   <p>In 3DC, usually as I'm modelling, I try and group objects together when I can - usually keeping them as separate objects which aids texturing later. 3D Canvas also makes use of groups for the unoptimised distance levels - anything not in the main group is removed over 700m - so the best idea is to keep small bodywork details in their own group.</p>
+
+                   <h2>Piston</h2>
+
+                   <p><img SRC="images/l4-pis.jpg" ></p>
+
+                   <p>The piston guide was shaped by using the CTRL key to select the top and bottom faces of the small cube at the same time and using the extrude tool to extrude by 0.08m (no bevel). Then by constraining the X movement, drag on the edit control to extend the faces to the correct length.</p>
+
+                   <p>A single square face (by deleting all but one face from a cube) was scaled and added as the link to the reverser gear then shaped with the edit control (bottom edge shrunk and moved out slightly).</p>
+
+                   <p>All parts combined into one object and hidden faces removed as before.</p>
+
+                   <h2>Rod</h2>
+
+                   <p><img SRC="images/l4-rod.jpg" ></p>
+
+                   <p>A small cube, slightly wider than the rod, was added to the wheel end of the rod. The top and bottom edge on the right were selected with the CTRL key down and the edges were chamfered (Chamfer operation button).</p>
+
+                   <p>Parts combined and hidden faces removed.</p>
+
+                   <ol start="25">
+                       <li>Before animating, it may be a good idea to copy the rest of these objects onto the left side. Starting with the Rod, select the object, press the copy button. Select the centre wheel on the&nbsp;<b>***RIGHT***</b> and press the paste button. Right click on the new object and set its position to -1.7525, 0, 0.35 - it should now appear on the left centred on the left wheel bearing.
+                       <p>The reason for this is because of the way the Engineer plugin builds the wheels - the wheels on the right are the "master" wheels. The ones on the left side are child groups of the right wheels and are not animated.</p></li>
+
+                       <li>Lastly, copy the piston and paste it into the main group. Rename the group PistonLeft. You will need to use the Flip operation (along the X Axis?) on this object to make the reverser connection point outward.<br>&nbsp;</li>
+
+                       <li>Now be merciless and delete every face on all objects that can't be seen from the outside.</li>
+                   </ol>
+
+
+                   </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "link1"</a>
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Q & A</h2>
+			<div class="entry">
+
+                   <h3>Q: Richard Osborne</h3
+
+                   <p>Still trying to keep up!</p>
+
+                   <p>I need, for the footplate &amp; definitely for the cylinders, to be able to accurately place points, dragging with the mouse just isn't accurate enough. I can see the point co-ordinates on the LH side of the screen - how do I alter them? For the H16 I'll need cylinders with piston valves - two cylinders with a box - how do I weld them together? On another project I've got little gaps where sub-parts didn't join exactly; in TSM I'd use 'v' to snap points to the next part, can I do something similar in 3dCanvas? If I have too many polygons how do I rejoin them after deleting the excess?</p>
+
+                   <p>Can I lasso co-incident points in the same way as TSM?</p>
+
+                   <p>I'm also scratching the head about texturing - I can fill a part, I can paint a polygon. How do I paint a part - can't I map a texture face by face? I only seem to be able to wrap a part.</p>
+
+                   <h3>A: Paul Gausden</h3>
+
+                   <p>Hi Richard,</p>
+
+                   <p>I hope I understand what you're asking here... In 3D canvas, it is the group (which can consist of several objects) that is positioned.</p>
+
+                   <p>The group position is relative to the parent group. The group position is shown by the coloured axis arrows when you select an object.</p>
+
+                   <p>When you right click on an object in a group and select "properties" from the menu, you see "Group Position" and "Group Orientation" entries where you can enter values for accurate positioning.</p>
+
+                   <p>If you want to position relative to a group that is not the parent group you would like to end up with. You can use the hierarchy display to drag the group you are working on, to the one you want to measure from, adjust the properties, then use the hierarchy to drag it to the correct parent group again. Using the "shift centre" plugin is useful as it can give you an easier point to work with.</p>
+
+                   <p>An example of all this is the cylinders on Remembrance. I measured the location of the centre of the rear cylinder face on the plan (to give me accurate x,y &amp; z) then shifted the object so the group centre was on the rear face. I dragged the cylinder group into the main group and entered the coordinates.</p>
+
+                   <p>(It turned out in Chapter 5 that I forgot that the Loco is shifted up slightly by MSTS Engineer plugin to stop the wheel sinking into the rails so my Y coordinate was a bit too low).  When building small parts out of multiple primitives, I use a similar method of grouping them in a hierarchy for positioning (if the objects are aligned along the length, then the child group X coordinate should be 0.0) - then with the use of the constraint buttons (to stop x from changing) you can use the mouse for some adjustments, or the arrow keys for fine adjustments.</p>
+
+                   <p>Ones all the small parts are arranged, you can drag all the child <b>objects</b> into the parent group, then drag the parent group onto the loco for final positioning.  Alternatively, you can use the Merge object to combine the parts into a single object in the parent group.</p>
+
+                   <p>This has a small disadvantage in that texturing can be more difficult. However if you want to "weld" points, you can only do this for points in the same object.</p>
+
+                   <p>Using the point selection tool on the right, Right click on a single point and you'll see a "Weld" option which gives Nearest or To nearest as sub options.  If you use CTRL to select more than one point and right click you'll get To First and Midpoint as options for welding.</p>
+
+                   <p>On the whole I tend to work with accurate positioning rather than welding.</p>
+
+                   <p>If you do end up with coincident points in a single object, the optimize operation on the object merges them.</p>
+
+                   <p>Hint for all : You may note when deleting a hidden face that the object goes "smooth" - selecting the object and pressing "optimize" is a quick way of re-creasing the object.</p>
+
+                   <p>Another useful plugin is "Weld to range" which scans a selected object for points that are near and welds them (not quite sure what you mean about deleting excess polygons and re-joining).</p>
+
+                   <p>Texturing is a bit of an art - the oriented modelling tutorial probably explains it better.  The thing to do is use the fill tool when you know what the result will be. Do not use the paintbrush tool on the right to fill faces.  Use the face selection tool to select one (or more with the CTRL key held down), crop the appropriate texture area and then use the fill operation (the small paint pot button in the object operations area on the left menu)</p>
+                   <p>It may also be useful to switch on the grid selection which shows the direction that a texture will be applied in the current orientation mode, I'll try and explain these more in latter lessons.</p
+
+                   <p>Whose bright idea was it to build a loco with outside valve gear and cylinders!</p>
+
+                   <h3>Q: Richard Osborne</h3>
+
+                   <p>I tried holding the ctrl key to grab multiple polygons - as soon as
+I pressed the fill button the polygons were no longer highlighted. Surely you don't have to highlight every polygon of, say, a boiler?</p>
+
+                   <p>I've just lost the multiple screen - I only have one now. Came up with a screen telling me there was a driver conflict then crashed! Went through compatibility checks but won't show multiple screens - can't find any reference in the options menus. The program's always been painfully slow &amp; unreliable.</p>
+
+                   <p>I'm not yet a convert to 3dCanvas.</p>
+
+                   <h3>A: Paul Gausden</h3>
+
+                   <p>Try the "fill selection" object operation, on the left panel where all the operation buttons are (not the paint pot icon on the right which fills the whole object) - it's a sort of mini version of the fill object function.</p>
+
+                   <p>True 3DC does have a few crashes, particularly if you're not using XP.  Again, V6.0 is promising a new graphics engine using more modern technology (good or bad?) which promises to be faster and more reliable. The new interface in V6 also seems to help speed up modelling, it is a matter fo getting used to it now.</p>
+
+
+                   <h3>Q: Mike Simpson</h3>
+
+                   <ol>
+                       <li>I have been plodding thru lesson 4, but when I get to item 21), I drag the new cylinder group into the PistonRight group (my scene hierarchy looks like the one on your picture). Then I right click on Group and alter x,y,z to 0 and I get an unrecoverable error - any ideas?</li>
+
+                       <li>In your response to Richard's message you mention the new interface in 3D canvas v6 - The interface in mine looks about the same as in v5 - am I missing something?</li>
+                   </ol>
+
+                   <h3>A: Paul Gausden</h3>
+
+                   <ol>
+                       <li>I can't help much with this one, the Amabilis forums may be the best option - try creasing everything, that is usually the fix&nbsp; - worked for me yesterday.</li>
+                       <li>The main changes I've seen, are the way you can see the operation while you change the parameters, much nicer than having to change the parameters then apply the operation. Richard has promised other enhancements to help with modelling speed too. Has anyone tried the mirror modelling yet?</li>
+                   </ol>
+
+       			</div>
+			  <p class="meta"><span class="posted"><a href="chap_5.html">Go To Chapter 5</a></span><a href="#" class="permalink">Return to top of page</a></p>
+
+		</div>
+
+	<!-- end #content -->
+
+      </div>
+
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <p><h3>Part 1 - Below the footplate</h3>
+                        <blockquote>
+                          <p><a href="steam3DC.html#start">0 - Beginners and reading</a></p>
+                          <p><a href="chap_1.html">Chapter 1 - Wheels</a></p>
+                          <p><a href="chap_2.html">Chptr 2 - Round Wheels</a></p>
+                          <p><a href="chap_3.html">Chptr 3 - Complex footplate shape</a></p>
+                          <p><a href="#">Chptr 4 - Pistons and Valve gear</a></p>
+                          <p><a href="chap_5.html">Chptr 5 - Complex animations</a></p>
+                        </blockquote>
+
+                        <h3>Part 2 - Above the footplate</h3>
+
+                        <blockquote>
+                          <p><a href="chap_6.html">Chptr 6 - Boiler, Funnel and Dome</a></p>
+                          <p><a href="chap_7.html">Chptr 7 - More Bodywork and Texturing</a></p>
+                          <p><a href="chap_8.html">Chptr 8 - Detailing</a></p>
+                          <p><a href="chap_9.html">Chptr 9 - More Detailing</a></p>
+                          <p>&nbsp;</p>
+                        </blockquote></p>
+
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 2002-2003, 08 May 2010</center></p>
+</div>
+</body>
+</html>

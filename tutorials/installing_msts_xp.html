@@ -1,0 +1,510 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+   
+<title>Installing MSTS under Windows XP - at The Steam4me Site</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen">
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li><a href="../routes/index.html">Routes</a></li>>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="http://www.rstools.info/page8.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width="100%" bgcolor="#333957">
+<tr>
+    <td align="left"><a href="http://steam4me.net"><img src="../images/S4M_Banner_left.png" nosave="" height="60" border="0"></a>
+    </td>
+    <td align="right"><img src="../images/S4M_Banner_Tutorials.png" nosave="" height="60">
+    </td>
+</tr>
+</table>
+</div>
+<hr>
+<div id="page">
+	<div id="content">
+
+    <!--- intro --->
+
+		<div class="post">
+			<font color="blue"><h2 class="title">Installing MSTS On A Windows XP PC</h2></font>
+                        <br>by Yuri Sos
+                        <p></p>
+			<h2 class="title">Introduction</h2>
+ 			   <div class="entry">
+                              <p><img src="images/msts_install_00.jpg" width="419" height="264" alt="" border="0"></p>
+
+                              <h3>Don't you just love this pop-up screen?</h3>
+
+                              <p>Whether you're installing MSTS for the first time or, as many of us seem to, for the umpteenth time, this checklist of the basic "essential" steps will get your MSTS installation "back on the tracks" in a minimum of time with a minimum of frustration.&nbsp; It is not intended to be a full list of available utilities, patches, physics upgrades and fixes, but rather just the basic necessities that you should consider immediately after (re)installing MSTS.&nbsp; Feedback is always welcome: <a href="mailto:steam4me@pobox.com">email me</a>.</p>
+
+                              <p>I'm not suggesting for a moment that whenever you see the screenshot above, you should re-install MSTS, but sometimes there is no other way to correct some of MSTS' weirdnesses that crop up from time to time <i>(for example, my last failure was that MSTS stopped recognising electric locomotives - it didn't matter whether they were default or add-ons, they simply were not recognised by the game).</i></p>
+
+                              <p>I know that theoretically you'll never have to re-install MSTS once installed (yet look at the registry hacks and other fixes that abound on the 'Net) but you sometimes need to consider the amount of time that you can spend time trying to work out which add-on caused the problem: at some point it becomes more time-effective to re-install MSTS than to continue to chase every rabbit down every burrow.</p>
+                              
+                              <p>Ok, let's get started. (By the way, if you're using Internet Explorer 8 or higher, select "Compatibility View" to ensure correct display).</p>
+                              
+                              <p>If you're using Windows 7 (or Vista), read <b><a href="installing_msts_w7.html">Installing MSTS on a Windows 7 PC</a></b>.
+
+
+                            </p></div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a name="uninstall">
+		</a></div>
+
+    <!--- end intro --->
+
+    <!--- Uninstalling your old MSTS --->
+
+		<div class="post">
+			<h2 class="title">Uninstalling your old MSTS</h2>
+			<div class="entry">
+
+                           <p>If you're going to uninstall (I recommend uninstall then re-install) your MSTS, move all your non-default routes away from your MSTS\Routes folder <b>BEFORE</b> uninstalling.>/p>
+                           
+                           <p>Leaving them in the \Routes subfolder and re-installing MSTS seems to corrupt non-default routes (you end up with tracks and objects, but no terrain at least or an unusable route at worst - believe me..... I've been there, done that, torn my hair out!!).</p>
+
+                           <p><b>EDIT/UPDATE</b>:  I used to say here <i>"I also move my TRAINSET folder and CONSISTS folder, but I've not seen them corrupted in a re-install."</i></p>
+
+                           <p>I had occasion to re-install an MSTS on an XP SP3 machine and found that many items of rolling stock no longer functioned properly - missing .S files, textures, etc. I went back to an old XP SP2 machine and performed an experimental re-install and the TRAINS folder survived the re-install.  So on my machines at least, you can get corruption of existing rolling stock folder contents if using XP SP3 or higher.</p>
+
+                           <p>On the basis of that, I've changed my mind:  the advice now is "<b>Move away your TRAINS folder if you want to keep rolling stock intact.</b>".  It's better to be safe than sorry.</p>
+
+                           <p>Uninstall MSTS via "Add/Remove Programs" in Control Panel, then use Explorer to delete any residual MSTS folders (anything you've added to the installation needs to be manually deleted).  These two steps should clear the registry as well as the hard drive.</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a name="desktops">
+		</a></div>
+
+    <!--- end Uninstalling your old MSTS --->
+
+
+    <!--- Installation --->
+
+		<div class="post">
+			<h2 class="title">Installation</h2>
+			<div class="entry">
+
+                           <p>Rather than installing to <b><font color="#009900">C:\Program Files\Microsoft Games\Train Simulator</font></b>, you might like to consider installing MSTS to another folder or even drive, say, <b><font color="#009900">D:\1MSTS</font></b> where D: is your target drive - naming the folder thus will cause it to rise to the top of your folder listing in Explorer and is a lot easier to type into "Save" dialogues.</p>
+
+                           <p>Installing MSTS to a folder OUTSIDE "Program Files" will also lessen the grief of using <b>MSTS with Vista and Windows 7</b> as these OSs "protect" (ie interfere with the modification and installation of) files in the Program Files folder: often leading to errors with batch files running and activities unpacking.</p>
+
+                           <p>The following five images show you the way:
+                           
+                           <p> <img src="images/msts_install_01.jpg" height="480" alt="" border="0">
+
+                           <br><img src="images/msts_install_02.jpg" height="480" alt="" border="0">
+
+                           <br><img src="images/msts_install_03.jpg" height="480" alt="" border="0">
+
+                           <br><img src="images/msts_install_04.jpg" height="480" alt="" border="0">
+
+                           <br><img src="images/msts_install_05.jpg" height="480" alt="" border="0"></p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a name="updates">
+		</a></div>
+
+     <!--- end Installation --->
+
+
+    <!--- updates --->
+
+		<div class="post">
+			<h2 class="title">Install MSTS Updates</h2>
+			<div class="entry">
+
+                        <p>Install the MSTS updates to update MSTS 1.0 to patch v1.4 if you have an early version of MSTS.</p>
+
+                        <p>To see which version of MSTS you have, look in your TRAINSET folder:  if you have the SD402 or Class50 inter alia you already have v1.4:  see image below.</p>
+
+                        <p><img src="images/msts_install_06.jpg" width="642" height="639" alt="" border="0"></p>
+
+                        <p>Alternatively, right-click on <b>train.exe</b> and select "Properties" from the menu:  you should see this:</p>
+
+                        <p><img src="images/msts_install_08.jpg" height="509" alt="MSTS Properties" border="0"></p>
+
+                        <p>From the <a href="../MSTS_Updates/index.html">MSTS Downloads Page</a> site, install the three EXE files to bring your installation up to date.</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a name="no_cd">
+		</a></div>
+
+    <!--- end Updates --->
+
+    <!--- no cd --->
+
+		<div class="post">
+			<h2 class="title">Avoid The Need For A CD In The Drive</h2>
+			<div class="entry">
+
+                        <p>If you've purchased and installed MSTS from CD recently, you will already have v1.4 on the CD: you'll find you are required to "insert CD in drive" for MSTS to work. Run the 1.4 web-based <a href="../MSTS_Updates/index.html">train_exe_update</a> (above) and you'll <b>no longer need to have CD2</b> in the drive.  Simple fix, eh?
+
+       			</p></div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a name="ren_uninstall">
+		</a></div>
+
+    <!--- end no cd --->
+
+
+    <!--- ren uninstall  --->
+
+		<div class="post">
+			<h2 class="title">Rename Uninstal.exe</h2>
+			<div class="entry">
+
+                        <p>Rename <b><font color="#CC33CC">Uninstal.exe</font></b> to <b><font color="#CC33CC">MSTS_Uninstal.exe</font></b>.&nbsp; Do this now BEFORE installing anything else (after the updates). This is because there are several incompetently prepared installers of downloadable models out there:&nbsp; one of the most common errors in these installers is to include an uninstal.exe file and install it into your MSTS folder, overwriting the default <b>uninstal.exe.</b>&nbsp; This step protects you from this eventuality.</p>
+
+                        <p><i>(If you need to uninstall MSTS, delete any rogue Uninstal.exe and rename MSTS_Uninstal.exe back to Uninstal.exe: you can then uninstall by double-clicking on the Uninstal.exe file or via "Add/Remove Programs" in Control Panel).</i></p>
+
+                        <p>Here's an example of an uninstal.exe that appeared on my system (note that the date of uninstal.exe is three and half years newer than the original and renamed MSTS_Uninstal.exe.</p>
+
+                        <p><img src="images/msts_install_10.jpg" height="397" alt="Rogue uninstal.exe" border="0"></p>
+
+                        <p>This uninstaller was placed there by an add-on sound set.</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a name="techdocs">
+		</a></div>
+
+    <!--- end ren uninstall  --->
+
+    <!--- techdocs  --->
+
+		<div class="post">
+			<h2 class="title">Copy The TechDocs</h2>
+			<div class="entry">
+
+                        <p>Now <b>before</b> you put away your MSTS disks, browse to the Techdocs folder on CD1</p>
+
+                        <p><img src="images/msts_install_11.jpg" height="250" alt="" border="0"></p>
+
+                        <p> and <b>run Techdocs.exe</b>,
+
+                        <p><img src="images/msts_install_12.jpg" height="222" alt="" border="0">
+
+                        <p>unzipping all files into a Techdocs folder in your MSTS installation.</p>
+
+                        <p>You now have all of the MSTS reference files close at hand.</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a name="globalcopy">
+		</a></div>
+
+    <!--- end techdocs  --->
+
+
+    <!--- copy global  --->
+
+		<div class="post">
+			<h2 class="title">Make A Copy Of Your Global Folder</h2>
+			<div class="entry">
+
+                        <p>Make a copy of your "Global" folder: click on the folder name and Click <b>Copy</b> then <b>Paste</b>.</p>
+
+                        <p><img src="images/msts_install_13.jpg" height="294" alt="" border="1">
+
+                        <p>Now you have a "Copy of Global" folder: if worst comes to worst, this can be used to bring your Global folder back to an installation default.</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a name="delsound">
+		</a></div>
+
+    <!--- end copy global  --->
+
+
+    <!--- delete start up sound  --->
+
+		<div class="post">
+			<h2 class="title">Delete startup.mpg</h2>
+			<div class="entry">
+
+                        <p>Get rid of the startup sound and image .mpg:  it slows down program loading.</p>
+
+                        <p>In explorer, browse to your <b><font color="#009900">MSTS\Global\folder</font></b>: rename <b><font color="#CC33CC">startup.mpg</font></b> to <b><font color="#CC33CC">startup.mpg.old</font></b>; you can even delete it without any ill-effects on your MSTS installation.  The presence of this start-up video file is responsible for many <b>"Keyboard Stops Responding"</b> errors, so eliminating it from start-up removes another source of error.</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a name="expand">
+		</a></div>
+
+    <!--- end delete start up sound  --->
+
+
+    <!--- expand interface  --->
+
+		<div class="post">
+			<h2 class="title">Expand Your Selection Lists in MSTS</h2>
+			<div class="entry">
+
+                        <p>Picking a train to drive in MSTS can be difficult because the <b>default list of trains</b> is only four lines long and hard to navigate. It's the same for consists, stations, and the time of day.</p>
+
+                        <p>There is a fix for this - see image below: note the long list of locomotives to choose from (right-side image) after installing this modification.</p>
+
+                        <p><img src="images/msts_install_14.jpg">
+
+                        <p>This clever modification was designed by by Jak Fearon of <b><a href="http://www.howintheworld.com/">howintheworld.com</a></b>.<p>
+
+                        <p><b><a href="files/tsintrfc.zip">Click here to download</a></b> the "Train Sim Interface Quick Fix". Open the zip and double-click on the installer (setup.exe) - couldn't be simpler.</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a name="hud">
+		</a></div>
+
+    <!--- end expand interface --->
+
+
+    <!--- transparent interface  --->
+
+		<div class="post">
+			<h2 class="title">Install Semi-transparent Driver Aids</h2>
+			<div class="entry">
+
+                        <p>The driver aids that pop up on your screen when you press F3 (Controls and Gauges), F4 (Track Monitor), F8 (Point Indicator) and F10 (Next station) are opaque by default.</p>
+
+                        <p>Adam Wojcieszyk has taken a leaf out of TV stations' books and created <b>semi-transparent driver aids</b> that allow you to still partially see the image behind.</p>
+
+                        <p><img src="images/msts_install_15.jpg" width="751" height="556" alt="" border="0">
+
+<p>I've created an installer that simplfies the whole installation process:&nbsp; click
+here to download <a href="files/AW_GUI_newDriverAids_MSTS1_Setup.exe">AW_GUI_newDriverAids_MSTS1_Setup.exe</a>.
+
+.&nbsp; Simply run this installer and the DriverAid screens will be changed (the originals are saved in a backup folder).</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a name="tsunpack">
+		</a></div>
+
+    <!--- end transparent interface --->
+
+    <!--- activity unpack fix  --->
+
+		<div class="post">
+			<h2 class="title">Activity Unpack Fix</h2>
+			<div class="entry">
+
+                        <p>When you download a packaged activity from the web and try to install it using TSUnpack, you will see an error "unable to open packaged activity".
+
+                        <p>This is caused by a registry error that is simple to fix.</p>
+
+                        <p>Simply <a href="files/tsunpack-fix.exe">download this installer</a> written by Thomas Tydal and run it once: you can now unpack activities.</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a name="xtramem">
+		</a></div>
+
+    <!--- end activity unpack fix --->
+
+
+    <!--- extramem  --->
+
+		<div class="post">
+			<h2 class="title">Extra Memory For MSTS</h2>
+			<div class="entry">
+
+                        <p>Ok, we're almost there.  Now take a minute or two to read and implement the suggestions contained within the tutorial entitled <a href="xtra_mem.html"><b>Increasing memory that can be used by MSTS</b></a>: it'll make your MSTS operation SO much smoother and you'll have less problems running modern densely-populated routes.</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a name="fixerrors">
+		</a></div>
+
+    <!--- end xtramem --->
+
+
+    <!--- fix errors  --->
+
+		<div class="post">
+			<h2 class="title">Fix Default Errors</h2>
+			<div class="entry">
+
+                        <p>There are several blatant errors in the models as supplied with MSTS. This EXE file will fix the following errors (it will NOT alter friction, braking or physics of these models from the default):</p>
+
+                        <table width="60%" cellpadding="5">
+                        <tr>
+                           <td>380</td>
+                           <td>Missing sound file "a380-powercruise8.wav"</td>
+                        </tr>
+                        <tr>
+                           <td>310</td>
+                           <td>Incorrect AI lighting</td>
+                        </tr>
+                        <tr>
+                           <td>Royal Scotsman:</td>
+                           <td>Incorrect AI lighting</td>
+                        </tr>
+                        <tr>
+                           <td>Dash 9</td>
+                           <td>Error in train brake action<br>
+                               Missing head-out view</td>
+                        </tr>
+                        <tr>
+                           <td>GP38-2:</td>
+                           <td>Error in notches in throttle<br>
+                               Missing dynamic brake sound<br>
+                               Missing head-out view</td>
+                        </tr>
+
+                        <tr>
+                           <td>Pendennis:</td>
+                           <td>Incorrect AI lighting</td>
+                        </tr>
+
+                        <tr>
+                            <td>SD40:</td>
+                            <td>Incorrect AI lighting</td>
+                        </tr>
+
+                        <tr>
+                           <td>SD40-2:</td>
+                           <td>Shape file bracket error</td>
+                        </tr>
+
+                        <tr>
+                           <td>US2BNSFCAR:</td>
+                           <td>Extra bracket error</td>
+                        </tr>
+                        </table>
+
+                        <p><a href="files/Basic_Fixes_MSTS1_Setup.exe">Click here to download</a> Basic_Fixes_MSTS1_Setup.exe (634 KB (649,989 bytes)).</p>
+
+                        <p>Run this file, it will find your MSTS installation and upgrade each of the incorrect files.</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a name="addons">
+		</a></div>
+
+    <!--- end fix errors --->
+
+
+    <!--- add ons  --->
+
+		<div class="post">
+			<h2 class="title">Important Add-Ons You Should Install</h2>
+			<div class="entry">
+
+                        <p>Many freeware downloadable routes require one or more add-ons to make them work properly:  in order of popularity, they are:</p>
+
+                        <ul>
+                           <li><b><a href="../routes/xtracks.html">Xtracks</a></b> - an expanded range of straight, curved, trolley, bridge, tunnel track pieces, as well as switches (turnouts), crossovers and a turntable.  This link takes you to the Xtracks page at Steam4me where the latest version is always available.
+                           <br>&nbsp;</li>
+
+                           <li><b><a href="../routes/newroads.html">Newroads</a></b> - an expanded range of straight, curved, sealed, unsealed, freeway road pieces, as well as junctions and intersections. This link takes you to the Newroads page at Steam4me where the latest version is always available.
+                           <br>&nbsp;</li>
+                        </ul>
+
+                        <p>In my opinion, Xtracks and Newroads are <b>must downloads</b>.</p>
+
+                        <ul>
+                           <b><a href="http://www.3dtrains.com/forums/index.php?s=3b554557211a0971901c11b4cd1463ee&act=SF&f=63">ScaleRail</a></b> - a new track profile and textures means that routes using ScaleRail will demonstrate a greater degree of realism.  This link takes you to the ScaleRail download page at <a href="http://www.3dtrains.com/products/scalerail.shtml">3dTrains.com</a> where the latest download is always available.
+                           <br>&nbsp;
+
+                           <li><b>UK Finescale</b> - UK FineScale (UKFS) is a comprehensive track system based on UK track specifications. Although designed for UK operation, UKFS can be used for routes in other countries where the gauge is 1.435m and the standard double track separation is 3.41m (or similar). This track system brings parallel tracks much closer to together. The <a href="http://www.trainsimfiles.com/products/ukfs/">Trainsimfiles.com</a> website is currently off-line, but you can download the UKFS installer by clicking on this link: <a href="../routes/files/UKFS_v3_1_6_full.exe">UKFS_v3_1_6_full.exe</a>.
+                           <br>&nbsp;</li>
+
+                           <li><b><a href="http://mstsbin.uktrainsim.com ">MSTS Bin</a></b> - MSTSbin is an unofficial patch to the core code in Microsoft Train Simulator; while other add-ons are limited to using what's already there in the basic product MSTSbin actually provides a whole new set of features as well as a number of fixes to some issues in Train Simulator.
+                               <p>Major improvements include operation of dual cabs and improvements to camera viewpoints, train operations and general robustness. There are a number of other mprovementsin how MSTS handles front coupling, an increase in the number of objects it can cope with at one time (which should help robustness especially on big routes), graphical improvements to the train operations screen and a number of other tweaks.  <br><a href="http://forums.uktrainsim.com/viewtopic.php?t=59227&sid=1e1a793f681f10d0fc465f1c0c23041a">The FAQ Page for MSTS-Bin</a> should be your first stop to understand more about this exciting patch to MSTS.</p>
+                               <br>&nbsp;</li>
+                        </ul>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a name="conclusion">
+		</a></div>
+
+    <!--- end aDD-ONS --->
+
+
+    <!--- cinclusion  --->
+
+		<div class="post">
+			<h2 class="title">Conclusion</h2>
+			<div class="entry">
+
+                        <p>Your MSTS is now installed and error-free as far as the original installation goes.</p>
+
+                        <p>Of course, from here you have thousands of locomotives, routes and other add-ons to enhance your simulation experience.</p>
+
+                        <p>Enjoy.</p>
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+                 </div>
+
+    <!--- end conclusion --->
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+              <p> <a href="#intro">Introduction</a>
+              <br><a href="#uninstall">Uninstalling Old Versions</a>
+              <br><a href="#where">Install Location</a>
+              <br><a href="#updates">MSTS Updates</a>
+              <br><a href="#no_cd">No CD In Drive</a>
+              <br><a href="#ren_uninstall">Rename Uninstaller</a>
+              <br><a href="#techdocs">Install TechDocs</a>
+              <br><a href="#globalcopy">Copy Global Folder</a>
+              <br><a href="#delsound">Delete Startup.mpg</a>
+              <br><a href="#expand">Expand Selection Lists</a>
+              <br><a href="#hud">Transparent Driver Aids</a>
+              <br><a href="#tsunpack">Activity Unpack Fix</a>
+              <br><a href="#xtramem">Use Extra Memory</a>
+              <br><a href="#fixerrors">Fix Default Errors</a>
+              <br><a href="#addons">Other Add-Ons</a>
+              <br><a href="#conclusion">Conclusion</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2010 steam4me.net. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 12 April 2005, 26 Nov 2008, 5 Mar 2010</center></p>
+</div>
+</body>
+</html>

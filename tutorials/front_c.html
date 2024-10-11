@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>Front coupler Issues: A Summary - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li ><a href="../vans/index.html">Vans</a></li>		
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png"  height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png"  height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Front coupler Issues: 
+                                              <br>A Summary Of The Current Situation And Some Solutions</font>
+                        <br>by Lukas A Lusser</h2>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                             <p>The front coupler is one of the ongoing problem zones of MSTS although a lot of people have done a lot of research; their combined fixes, tips etc. might help you overcome the issues with the front coupler</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">The Four Elements</h2>
+			<div class="entry">
+
+                        <p>There are four elements:</p>
+                        <ol>
+                            <li><b>The "fix" Microsoft provided</b> solved only the problem of train brakes initially not releasing when the front coupler was in use.&nbsp; Later versions of MSTS (especially the current 1.2) already have the fix implemented by default.
+                                <br>&nbsp;</li>
+                                
+                                <li><b>The coupling process itself is hard-coded into the sim.</b> The logic governing that process is that the couplers will only engage when the engine is rolling backwards towards a car at a speed between ca. 0.5mph and 3mph (these figures can be altered via the file trains/trainset/default/default.wag, see below).
+
+                                    <p>The programmer's logic here was well-intentioned, as this set-up avoids that your coupler accidentally re-engages after you have uncoupled from a car at your tail end and pull away from it, or even worse, that you derail on pulling away if you exceeded the maximum coupling speed of 3mph while still within the "coupling zone".&nbsp; That is all nice and works well when coupling is done by the rear coupler.&nbsp; However, the same logic also applies to the front coupler, where it produces not-so-logical results. Remember, the coupling only works with the engine rolling backwards, so when you want to couple to or uncouple from the front coupler, you need to observe the following steps:</p>
+
+                                    <p>a.&nbsp;&nbsp; To couple to a loose consist with the front coupler, follow this procedure exactly:</p>
+                                    <ol>
+                                        <li>Move slowly forward towards the car(s) all the way until your engine/train gently bumps into it, not exceeding a speed of 2 mph when contact is made;</li>
+                                        <li>Apply the train or engine brakes immediately, before the spring of the couplers presses you back, away from the car(s);</li>
+                                        <li>Put the reverser into reverse and notch up to notch 1;</li>
+                                        <li>Release the brakes, start to back away from the car(s), keep power applied in notch 1 until the speed displayed in your track monitor jumps to 2 mph.&nbsp; Immediately cut power if you reach 2 mph;</li>
+                                    </ol>
+
+                                    <p>In most cases, the coupler should lock when you leave the far end of the coupling zone of the car. If not, repeat from step 1 until couplers lock.</p>
+
+                                    <p>b.&nbsp;&nbsp; To uncouple from cars attached to the front coupler, follow this procedure exactly:</p>
+
+                                    <ol>
+                                        <li>Set the train brakes;</li>
+                                        <li>Uncouple from the car by clicking on the coupler in the F9 display (note: if you have more than five cars on your front hook, the F9 display does not show your engine, but only the six foremost cars. Uncouple in steps of six cars until you see the engine appearing in the F9 monitor);</li>
+                                        <li>Release the brakes and move forward gently, towards the car(s) you want to uncouple from, until your engine won’t go further;</li>
+                                        <li>Notch back to idle and let the pressure of the coupler springs push you away from the cars. Do not notch up until you are well clear of the coupler zone of the cars. As a rule of thumb, I recommend that a distance of five yards or five metres respectively should be a safe distance to avoid re-coupling;</li>
+                                        <li>If you notched up too early and increased your speed too hastily while still in the coupling zone, MSTS thinks that you bumped into the cars and will end the activity with a derail message – regardless of the fact that the opposite were true…</li>
+                                    </ol>
+
+                                    <p>c.&nbsp;&nbsp; Remember: Always save your activity before engaging or releasing the front couplers. Actually, many MSTS users recommend to save your progress along the track at least every 15 – 30 minutes, regardless of what you do.
+                                </li>
+
+<li>An important element in the fix was discovered by Jim "Sniper297" Ward (author of the very popular Port Odgen &amp; Northern route). <b>The physical behaviour of couplers</B> is not only calculated from the settings in the .eng or .wag file of the rolling stock you use. The sim also takes the file default.wag into account which resides in your trains/trainset directory/default. As Jim Ward pointed out, the settings in that file includes the settings for the minimal and maximal speed within which range the couplers engage. See the following three lines:<br>
+
+<br>
+<pre>
+&#09;"30cm # Minimum couple distance"
+&#09;(...)
+&#09;"0.2 # min coupling velocity"
+&#09;"3.0 # max coupling velocity"
+</pre>
+
+The
+30cm define the "coupling zone" within which the couplers engage (with the engine rolling backwards only, as described above in 2), the second and third parameter define the minimum and maximum speed in metres/second for the coupling to work. Staying under the limit allows means couplers will not engage, exceeding the limit results in a collision with the car you want to couple to). If you use the front coupler often, you may want to increase the min coupling velocity to 0.4 or 0.5. That will let you roll away from a car uncoupled from the front without the couplers re-engaging a bit faster than the 0.5 mph the original setting allows.BEBE<br>
+<br>
+<BR></li>
+
+<li>
+James W. Titus found <b>another important piece in the puzzle</b> with regard to the sim freezing when the front coupler is engaged.&nbsp;&nbsp; The solution goes a long way to overcoming this problem and making the front coupler pretty reliable, but it includes manual editing as it involves the modification of the coupler physics for each engine in its respective .ENG file. This may sound like an option for advanced users, but as there is quite a lot of editing to do within these files anyway, most users rather dig into them sooner than later.<br>
+<br>
+Please observe the following safety rules, should you intend to dare jumping into the cold water here: whenever editing .ENG or .WAG files back up the original first.&nbsp; Furthermore, use only WordPad to edit the file as this is the best way to safeguard that the file is properly saved in Unicode format: this is crucial for its functioning.<br>
+<br>
+Now for the coupler physics in there: By default, engine (and wagon) files only feature one set of coupler physics - designed for the rear coupler. As the front coupler looks the other way, a second set of inverted physics needs to be applied otherwise the sim uses the rear coupler physics for the front coupler wherein some values then cause errors.<br>
+<br>
+Typically, the coupler physics for the rear coupler should look something like the following example (taken from some modified file of mine where I have standardised the coupler physics of all engines to the same settings):<br>
+<br>
+
+<pre>
+Coupling (
+&#09;Type ( Automatic )
+&#09;&#09;Spring (
+&#09;&#09;Stiffness ( 1.1e6N/m 4.8e6N/m )
+&#09;&#09;Damping ( 1.2e6N/m/s 3.4e6N/m/s )
+&#09;&#09;Break ( 3.4e7N 3.4e7N )
+&#09;&#09;r0 ( 1 cm 30cm )
+&#09;&#09;)
+Velocity ( 0.1m/s )<br>
+)
+</pre>
+
+<br>
+</b>The front coupler physics need to be inserted immediately after this section. Again, MSTS is a bit illogical here, as the first set of coupler physics always applies to the rear coupler, and an (optional) second set always
+applies to the front coupler (check any steam engine which has an automated coupler on the front, and a bar coupler connecting to the tender in the rear: The first set of parameters in the .eng file will be the ones for the bar coupler).<br>
+<br>
+Using James' method, I have then added the inverted front coupler physics (note also the minus sign for velocity!), this is the complete set of front coupler physics to pair with the above physics for the rear coupler:<br>
+<br>
+
+
+<pre>
+Coupling (
+&#09;Type ( Automatic )
+&#09;&#09;Spring (
+&#09;&#09;Stiffness ( 4.8e6N/m 1.1e6N/m )
+&#09;&#09;Damping ( 3.4e6N/m/s 1.2e6N/m/s )
+&#09;&#09;Break ( 3.4e7N 3.4e7N )
+&#09;&#09;r0 ( 30cm 1cm )
+&#09;&#09;)
+&#09;Velocity ( -0.1m/s )
+)
+</pre>
+
+Note 1: Whenever some passage is added or deleted from the file, it is very important to pay attention not to forget/leave out one of the opening or closing parenthesis, otherwise MSTS will get lost where a specific section ends and the next begins;<br>
+
+<br>Note 2: The individual values can vary, e.g. for a higher or lower break. What is important is that you use the correct unit of measurement N/m/s for the damping or your couplers might break way too often where they should not break (many default and add-on files have an error here!). Avoid a value of 0 (zero) for any one of the values in the line r0 ( ... ) - according to James, any zeroes in there are key suspects for the sim crashing with send/don't send upon coupling.<br>
+
+<br>Note 3: The presence of two sets of coupler values might cause error messages in ConBuilder, especially when using this tool to edit the .ENG or .WAG files directly, e.g. when changing the coupler types or altering the name line (usually with a warning message: "Coupler settings could not be changed").</p>
+
+
+
+
+                        </p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+
+		</div>
+
+    <!--- end cause --->
+
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+               </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 27 March 2004, 19 April 2010</center></p>
+</div>
+</body>
+</html>

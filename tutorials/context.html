@@ -1,0 +1,405 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+<title>Using the ConTEXT Editor in MSTS - at The Steam4me Site</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Using ConTEXT Editor in MSTS</font>
+                        <br>by Yuri Sos</h2>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                              <p>ConTEXT is a useful Unicode-aware freeware editor that is, in my opinion, ideal for editing and debugging MSTS files such as ENG, WAG, SD, CVF and SMS files.  It works on any version of Windows from 98 to Windows 7.</p>
+
+                              <p>ConTEXT was first brought to the MSTS commumity's attention by Pete Willard who designed the first highlighter specifically for use with MSTS files.</p>
+
+                              <p><img src="images/context_01.jpg" height="630" alt="" border="0"></p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "where">
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Where To Get ConTEXT</h2>
+			<div class="entry">
+
+                           <p>ConTEXT's home page may be found at <a href="http://www.contexteditor.org/">http://www.contexteditor.org/</a>.</p>
+
+                           <p>The current version (at 14 August 2009) is 0.98.6.  <p>Click on the "Desktop Version" at the page above, download the Setup file to your PC.
+                           <br>Double-click on the installer to commence installation.</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="modify">
+		</div>
+
+    <!--- end where --->
+
+
+    <!--- preferences --->
+
+		<div class="post">
+			<h2 class="title">Modifying ConTEXT's User Preferences</h2>
+			<div class="entry">
+
+                           <p>Click on <b>Options | Environment Options... </b> then click on the appropriate tabs:
+                              <br>These are the options I use:
+
+                              <p><img src="images/context_02.jpg" height="513" alt="" border="0"></p>
+
+                              <p>The "Editor" tab contains the option to turn on line-numbering: this alone makes the editor worthwhile as it allows you to quickly find the exact location of an MSTS error message.  I also set the tab spaces to 5 as that seems to match Kuju's ENG and WAG files best.</p>
+
+                              <p><img src="images/context_03.jpg" height="513" alt="" border="0"></p>
+
+                              <p>If you don't like the colours I've set within the highlighter, you can change each one by clicking on the "Color" tab, selecting the appropriate component to change, then selecting the foreground and background colours as desired.</p>
+
+                              <p><img src="images/context_04.jpg" height="513" alt="" border="0"></p>
+
+                              <p>I don't recommend setting associations inside ConTEXT as it lumps them all under the "Type" filename of "ConTEXT document".  I'll show you how to set associations shortly.</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="highlighter">
+		</div>
+
+     <!--- end preferences --->
+
+
+    <!--- highlighter --->
+
+		<div class="post">
+			<h2 class="title">Installing The Custom MSTS Highlighter</h2>
+			<div class="entry">
+
+                           <p>A wonderful feature of ConTEXT is the ability to download and/or write custom highlighter files that can be called from within ConTEXT or can be configured to open with a given file.</p>
+
+                           <p>If you've perused the screenshot above, you'll see that various keywords inside the ENG file are highlighted in specific colours; even the matched brackets are clearly visible.</p>
+
+                           <p>Pete Willard wrote a Trainsim Highlighter for ENG and WAG files: I've expanded it to encompass ENG, WAG, SD, CVF, SMS and .CON files as well.</p>
+
+                           <p>Download <b><a href="files/MSTS_CTXTv2_1.ZIP">MSTS_CTXTv2_1.ZIP</a></b>, (a 5k file) - this is version 2.1 (released 2 August 2005) of my highlighter. I do not recommend using the MS Highlighter on the ConTEXT webpage as it contains errors in highlighting the Comments section.</p>
+
+                           <p>Unzip the contents into the <b>/Program Files/ConTEXT/Highlighters</b> folder. Now whenever you open a .ENG, .WAG, .SD, .CVF, .SMS, .CON file using ConTEXT, this highlighter will be utilised.</p>
+
+                           <p>The highlighter is set to show keywords in different colours, based on the "hierarchy" (for want of a better term) that you normally find them in a MSTS file.  The colours are arranged as <font color="#000099">Navy</font>, <font color="#993366">Purple</font>, <font color="#006600">Green</font>, <font color="#3333FF">Blue</font>, <font color="#66FFFF">Teal</font>.</p>
+
+                           <p>In addition, matched brackets are shown in a <b><font color="#FF0000">red on yellow</font></b> colour.  Comment lines are shown <font color="#C0C0C0"><i>greyed out and italicised</i></font>.</p>
+
+                           <p><img src="images/context_05.jpg" width="748" height="525" alt="" border="0"></p>
+
+                           <p>This provides you with a visual aid to check that the most likely correct keywords are in the right place.  A few keywords have been excluded from the highlighter: this is because they appear at different levels in the various MSTS files and the "incorrect" colour" adds to the confusion.  These non-highlighted words include <b>Type Position Style Direction.</b></p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="brack">
+		</div>
+
+     <!--- end highlighter --->
+
+    <!--- highlighter --->
+
+		<div class="post">
+			<h2 class="title">Matching Brackets</h2>
+			<div class="entry">
+
+                           <p>Arguably this will be one of the biggest reasons for using this editor: the <b>match brackets</b> function is one of the quickest ways to check where the other half of a bracket pair is located.</p>
+
+                           <p>It is very simple to use this function: simply place the cursor immediately to the left of the bracket you wish to check: both brackets will then be highlighted: look at the image immediately above to see how this works.
+
+                           <p>This works both in the forwards and the reverse direction.</p>
+
+                           <p>If the matching bracket is not located on the same screen as the first bracket, the first bracket will not highlight, indicating that the matching bracket is off-screen.  You can:
+                              <ol>
+                                 <li>Simply use the scroll bars at right to scroll down (or up as the case may be - this feature works in both directions) until you find the matching bracket (see image above);</li>
+                                 <li>use the "find matching bracket" function <b>(CTRL+M)</b> on an ending bracket and the editor will jump to the matching bracket.</li>
+                              </ol>
+
+                           <p><img src="images/context_06.jpg" width="758" height="540" alt="" border="0">
+
+
+                           </p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="multi">
+		</div>
+
+     <!--- end highlighter --->
+
+    <!--- multi-line comment --->
+
+		<div class="post">
+			<h2 class="title">Highlighting Multi-line Comment Sections</h2>
+			<div class="entry">
+
+                           <p>A limitation of ConTEXT is that you can only have one highlight in operation per character, so if you use keywords <b>Comment</b> and <b>Skip</b> to mark the beginning of a comment line, you'll lose the ability to match brackets on that section.</p>
+
+                           <p>My version 2.0 MSTS highlighter (linked above) attempts to provide a solution to this problem.</p>
+
+                           <ul>
+                              <li>The <b>"#"</b> that marks a comment on a single line is active (see <b>"1"</b> in image below);</li>
+                              <li>Bracket matching will continue to operate for Comment lines (see <b>"2"</b> in image below);</li>
+                              <li>If you add an asterisk (<b>*</b>) immediately inside the opening and closing brackets (see <b>"3"</b> in image below), the complete "Comment" section will be highlighted.  This will work if you do this to comment out a "Passenger section" for example.  Adding the asterisks inside the brackets will not affect the operation of the .ENG or .WAG file. The downside is that you lose bracket-matching for that commented section only.</li>
+                           </ul>
+
+                           <p><img src="images/context_07.jpg" width="704" height="568" alt="" border="0"></p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="associations">
+		</div>
+
+     <!--- end multi-line comment --->
+
+    <!--- associations --->
+
+		<div class="post">
+			<h2 class="title">Associating MSTS files with ConTEXT</h2>
+			<div class="entry">
+
+                           <p><h3>Windows XP</h3>
+
+                           <p>If you've never done this before, double-clicking on any ENG file will bring up the image below.</p>
+
+                           <p><img src="images/context_08.jpg" height="269" alt="" border="0"></p>
+
+                           <p>Click on the button "Select Program from a list" and click "ok".</p>
+
+                           <p>You will then see this window.  Depending on your system, ConTEXT may be found as a "Recommended program", "Other program" or you may need to click on the "Browse" button to "c:\Program Files\ConTEXT". In the blank field under the list of programs, type in "ENGine file MSTS" or whatever you want to appear as "Type" of file when browsing in Explorer, then "ok".</p>
+
+                           <p><img src="images/context_09.jpg" height="472" alt="" border="0">
+
+                           <p>From now on, whenever you double-click on an ENG file, ConTEXT will open it for you.  Repeat the process for WAG, SD, CVF, SMS and CON files.</p>
+
+                           <p>If you've already got these files associated with another program, it's only a little trickier to get ConTEXT to open them for you.</p>
+
+                           <p>In Explorer, click on <b>Tools | Folder Options | File Types</b>.  Scroll down the list till you find and click on the entry for ENG files. It'll probably look like the image below.</p>
+
+                           <p><img src="images/context_10.jpg" height="475" alt="" border="0"></p>
+
+                           <p>Click on "Change" and select ConTEXT from the list as below.</p>
+
+                           <p><img src="images/context_11.jpg" height="472" alt="" border="0"></p>
+
+                           <p>Click on "Ok", then "Close".  Now you can repeat these instructions for your WAG, SD, CVF, SMS and CON files.</p>
+
+                            <p><h3>Windows 7</h3>
+
+                           <p>A similar process exists for associating files under Windows 7; these two images should be self-explanatory:
+
+                           <p><img src="images/context_12.jpg"  height="631" alt="" border="0"></p>
+
+                           <p><img src="images/context_13.jpg"  height="478" alt="" border="0"></p>
+
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="multiple">
+		</div>
+
+     <!--- end end associations --->
+
+    <!--- multiple --->
+
+		<div class="post">
+			<h2 class="title">Opening Multiple Files</h2>
+			<div class="entry">
+
+                           <h3>Method #1</h3>
+
+                           <p>Open Explorer.  Click on the heading marked <b>Type</b> to sort the files by suffix.</p>
+
+                           <p>Select the files you wish to open.</p>
+
+                           <p>Open ConTEXT (see image below).</p>
+
+                           <p><img src="images/context_14.jpg" height="738" alt="" border="0"></p>
+
+                           <p>Now drag and drop the files onto ConTEXT.  All files are opened for you.  You can move from file to file by clicking on the filename tab at the top (see image below)</p>
+
+                           <p><img src="images/context_15.jpg" height="738" alt="" border="0"></p>
+
+                           <p><h3>Method #2</h3>
+
+                           <p>Open ConTEXT and using the File Panel at left, browse to the folder you require.  If the File Panel is not visible, click on <b>View | File Panel</b> or <b>press Ctrl+Shift+E</b> to make it appear.  Use the scroll bar to move horizontally to the <b>Type</b> column and click on the column header.</p>
+
+                           <p>Select the files you wish to edit (see image below)</p>
+
+                           <p><img src="images/context_16.jpg" height="404" alt="" border="0"></p>
+
+                           <p>Drag-and-drop the files onto the workspace thus...........</p>
+
+                           <p><img src="images/context_17.jpg" height="404" alt="" border="0"></p>
+
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="global">
+		</div>
+
+     <!--- end emultiple --->
+
+
+    <!--- global find replace --->
+
+		<div class="post">
+			<h2 class="title">Global Find and Replace</h2>
+			<div class="entry">
+
+                           <p>This is a powerful utility within ConTEXT.  The best way to demonstrate this is by example.</p>
+
+                           <p>Here I opened a large number (139 in fact) of .W files from a route in order to change a StaticDetailLevel from 0 to 2.</p>
+
+                           <p>I went to the Route's World folder, clicked on TYPE to sort all the .w files together.</p>
+
+                           <p>I opened ConTEXT with no file.</p>
+
+                           <p>I selected the 139 .w files and drag/dropped them onto ConTEXT.  See image below.</p>
+
+                           <p><img src="images/context_18.jpg" width="800" height="576" alt="" border="0"></p>
+
+                           <p>It took ConTEXT about 30-40 seconds to digest and open the files.</p>
+
+                           <p>I selected and copied "StaticDetailLevel ( 0 )".</p>
+
+                           <p>I pressed Ctrl-R and filled in the dialogue box as below.</p>
+
+                           <p><img src="images/context_19.jpg" height="255" alt="" border="0"></p>
+
+                           <p>Less than 5 seconds later, I had this message:</p>
+
+                           <p><img src="images/context_20.jpg" height="129" alt="" border="0"></p>
+
+                           <p>Finally I clicked on the "Save All" icon (fourth from left) and saved all my changes.</p>
+
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="compare">
+		</div>
+
+     <!--- end global find replace --->
+
+
+    <!--- compare --->
+
+		<div class="post">
+			<h2 class="title">Comparing Two Files</h2>
+			<div class="entry">
+
+                           <p>This is a another powerful utility within ConTEXT.  I've found it only works successfully with both files loaded into ConTEXT, even though options allow you to check a file from disk.</p>
+
+                           <p>Open both files in ConTEXT.  Click on <b>Tools | Compare</b>.</p>
+
+                           <p>In the top dialogue box, check the current file radio button.</p>
+
+                           <p>In the lower dialogue box, select "editing file" and select the other file in ConTEXT (see image below):</p>
+
+                           <p><img src="images/context_21.jpg" height="680" alt="" border="0"></p>
+
+                           <p>You can alter the colour and line numbering settings by clicking on "Settings" (see image below):</p>
+
+                           <p><img src="images/context_22.jpg" height="423" alt="" border="0">
+
+                           <p>The two files open in a new window: note that line differences are highlighted:</p>
+
+                           <p><img src="images/context_23.jpg" width="751" height="527" alt="" border="0"></p>
+
+                           <p>Even gaps/blank space is highlighted in a different colour:</p>
+
+                           <p><img src="images/context_24.jpg" width="751" height="527" alt="" border="0"></p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+     <!--- end compare --->
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#where">Where To Get ConTEXT</a>
+                 <br><a href="#modify">Preferences</a>
+                 <br><a href="#highlighter">Custom Highlighter</a>
+                 <br><a href="#brack">Matching Brackets</a>
+                 <br><a href="#multi">Multi-Line Comment</a>
+                 <br><a href="#associations">File Associations</a>
+                 <br><a href="#multiple">Multiple Files</a>
+                 <br><a href="#global">Global Find and Replace</a>
+                 <br><a href="#compare">Comparing Two Files</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2010 steam4me.net. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 20 February 2009, 1 March 2010</center></p>
+</div>
+</body>
+</html>

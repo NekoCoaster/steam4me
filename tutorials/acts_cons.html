@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>Activities, Consists - What Goes Where And Who's Dependent On Whom</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li ><a href="../vans/index.html">Vans</a></li>		
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Activities, Consists - What Goes Where And Who's Dependent On Whom</font>
+                        <br>by Jim "sniper297" Ward</h2>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                             <p>If you're having trouble with Activities, <a href = "../Route_Riter/index.html">Route Riter</a> will find and fix problems.</p>
+
+                             <p>Trouble is most likely dependencies:  let's explain each part:</p>
+
+                             <h3>\Trains\Consists\whatever.con</h3>
+
+                             <p>The CON files have the names of different TRAINSETS (whatever.eng and whatever.wag), and if any of the trainsets are missing or in the wrong folders, MSTS has a hissy fit.</p>
+
+                             <h3>\ROUTES\RouteName\ACTIVITIES\whatever.act or whatever.asv (compiled "compute and save" version of the .act)</h3>
+
+                             <p>These are the actual activity files, names of the SERVICES and TRAFFIC files are in these. If the activity has loose consist cars, it reads those directly from the \TRAINS\TRAINSET\WHATEVER\ folders, looking directly for whatever.eng and whatever.wag to load as loose consists. Early reskins in activities and consists can cause problems, "create a folder in TRAINSET and name it whatever you want", with no standardization the path will be different and MSTS has a hissy fit. To fix those type of problems you need to open the whatever.act files and whatever.con files and change the path, or create a new folder in \TRAINS\TRAINSET with the folder name the ACT and CON files are looking for, and copy or move the trainsets into that folder.</p>
+
+                             <h3>\ROUTES\RouteName\SERVICES\whatever.srv</h3>
+
+                             <p>The actual driveable service, the srv files contain the name of the consist from the \Trains\Consists\ folder, plus the path it runs on. If whatever.con is not in the \Trains\Consists\ folder when whatever.srv wants it, MSTS has a hissy fit.</p>
+
+                             <h3>\ROUTES\RouteName\TRAFFIC\whatever.trf</h3>
+
+                             <p>This file lists all the AI traffic services, including each whatever.srv file, and starting times (in seconds after midnight) for each service in the pattern. This one is kinda sticky, the same info is in the whatever.act and whatever.asv files, get those out of synch and MSTS has a hissy fit.</p>
+
+                             <p>If all this sounds complicated, that's why various utilities for troubleshooting were made - I'm an old DOS dinosaur, so I had very little problem reverse engineering the whole mess, and can trace thru dependencies to fix problems manually. All the files except whatever.asv are UNICODE and can be opened, read, and edited with wordpad. Get a corrupted or outdated whatever.asv file (which is compiled into machine language for faster loading), the cure is to delete whatever.asv, open whatever.act in the activity editor, then run "compute and save" to generate a new whatever.asv file. Also keep in mind the whatever.trf file, if that traffic pattern is used in more than one activity, when you edit the pattern in one activity it will be out of synch with the others, so the others also have to be opened and resaved.</p>
+
+                             <p>I didn't mean to ramble on and do a whole tutorial on this, but it's been an FAQ looking for a place to happen for a long time now. Deleting a trainset is the first step toward disaster, since the whatever.con and whatever.act files using that trainset go spastic if it's MIA. Deleting a route is no problem, since the activity, service, and traffic files get deleted along with it, and they're the ones with the dependencies.</p>
+
+                             <p>Proper deletion order to avoid this:</p>
+                             <ol>
+                                 <li>The route, or the activities, services, and traffic patterns in the route that are dependent on the consists and trainsets;</li>;
+                                 <li>The consist files dependent on the trainsets. Once you're sure the consist is no longer used by any service in any route, it's safe to delete the whatever.con file.</li>
+                                 <li>Last thing to go, delete the \TRAINSET\WHATEVER folder once you're sure that folder contains only whatever.eng and whatever.wag files that are no longer used by any installed activity or consist file.</li>
+                             </ol>
+                             </p>
+
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end end overview --->
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 2 November 2007, 12 April 2010</center></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>About the Wire Frame Grid - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li ><a href="../vans/index.html">Vans</a></li>		
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">About the Wire Frame Grid</font>
+                        <br>by Jim Steven, MCSE,
+                        <br>Senior Microsoft Windows Application Developer</h2>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                             <h3>Question:</h3>
+
+                             <p>My wire frame grid has different density when in 'F9'.</p>
+
+                             <p>I'm viewing the wire frame (hitting 'w') in 'F2' mode. Then when I change to 'F9' mode I see more points in the wire frame. This makes the landscape look different when shaping it and when running a train on it and is a big problem for me. As I'm doing a mountain line I'd like to have those extra grid points in the wire frame all the time to model the landscape with more detail. Is it something I do in the geometry extractor or in the route editor? Do I have to decide at the begining of a new route or can I change the level of terrain detail as I go along?</p>
+
+                             <h3>Answer:</h3>
+
+                             <p>I think what's happening is this; When pressing just the 'W', it just shows the standard grid, and 'F9' is the key for altering terrain.&nbsp; I do believe that pressing 'F9' activates the detail level that was entered when you first extracted the new route. And I do believe that this can be changed. Open the Route Geometry Extractor, and load your route, including the Quad Tree. Select edit, and then select Route Values. There will be a setting called 'Terrain detail scaling factor', and that is what I think that you are looking for.  I have mine set at 0.20, and so far I'm pretty satisfied with the way the terrain is looking.</p>
+
+                             <p>{Comment by Jim Ward} That seems correct. I noticed it while I was creating screen shots of the Wire Frame to demonstrate the "Press V to cut out a triangle" process we use to create tunnels. I was trying to explain how setting the tile Error Bias to "0" and setting the terrain detail scaling to a small value would make it easier to cut out smaller terrain patches and saw the differences in the Wire Frame images.</p>
+
+                             <p>{Comment by Okrasa Ghia} When in texturing mode (F7) select a terrain patch and right click to bring up the menu. Select 'Error Bias...' and set the value to 0, now all wire mesh grid points are used all the time. I do this now on every terrain patch where I lay track and leave the others at the default value (1).</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end end overview --->
+
+
+
+
+
+
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+               </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 25 July 2002, 19 April 2010</center></p>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

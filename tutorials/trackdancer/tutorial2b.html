@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created on: 3/29/2007 -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <title>BEGINNERS GUIDE TO RETEXTURING MSTS LOCOMOTIVE MODELS: Page 2</title>
+  <meta name="author" content="Sean Lim aka Trackdancer">
+<link rel="StyleSheet" type="text/css" href="trackdancer.css">
+</head>
+<body>
+<!-- TITLE -->
+<div id="boxtitle">
+BEGINNERS GUIDE TO RETEXTURING MSTS LOCOMOTIVE MODELS: Page 2
+</div>
+<div id="boxmenu">
+Menu<br><br>
+<div id="menuitems">
+<a href="../index.html" style="color: #696969; text-decoration: none;font-weight: bold;">Steam4me Main Tutorial Index</a><br><br>
+<a href="main.html" style="color: #696969; text-decoration: none;font-weight: bold;">SECTION INDEX</a><br><br>
+<a href="tutorial1.html" style="color: #696969; text-decoration: none;">How to weather locomotive textures tutorial.</a><br><br>
+<a href="tutorial2a.html" style="color: #696969; text-decoration: none;">How to re-texture MSTS locomotive models - a Comprehensive Guide</a><br><br>
+<a href="tutorial3.html" style="color: #696969; text-decoration: none;">A Beginner's Guide to avoiding problems building models with TSM</a><br><br>
+<a href="tutorial4.html" style="color: #696969; text-decoration: none;">Building an Arch using TSM.</a><br><br>
+</div>
+</div>
+<!-- Validation -->		
+<img src="resources/fig/valid-html401-blue.gif" border="0" width="88" height="31" alt="Valid HTML 4.01 Transitional" style="position: absolute; left: 10px; top: 280px;">
+<!-- SideBar -->
+<div id="sidebar">
+<b>Quick Links:</b><br><br>
+<a href="tutorial2a.html#part1" class="part">Part 1 - Introduction</a><br>
+<a href="tutorial2a.html#part2" class="part">Part 2 - The project</a><br>
+<a href="tutorial2a.html#part3" class="part">Part 3 - What you will need</a><br>
+<a href="tutorial2b.html#part4" class="part">Part 4 - The subject of the repaint</a><br>
+<a href="tutorial2b.html#part5" class="part">Part 5 - Installing the SD45 model</a><br>
+<a href="tutorial2b.html#part6" class="part">Part 6 - Creating a custom SD45</a><br>
+<a href="tutorial2c.html#part7" class="part">Part 7 - Converting the ACE files</a><br>
+<a href="tutorial2d.html#part8" class="part">Part 8 - Figuring out the mapping</a><br>
+<a href="tutorial2e.html#part9" class="part">Part 9 - Color considerations</a><br>
+<a href="tutorial2e.html#part10" class="part">Part 10 - Entering RGB colors</a><br>
+<a href="tutorial2f.html#part11" class="part">Part 11 - Color sampling from a photo</a><br>
+<a href="tutorial2g.html#part12" class="part">Part 12 - Masks, layers and transparency</a><br>
+<a href="tutorial2h.html#part13" class="part">Part 13 - Painting the main hull</a><br>
+<a href="tutorial2i.html#part14" class="part">Part 14 - Rendering the details</a><br>
+<a href="tutorial2j.html#part15" class="part">Part 15 - Finishing Touches</a><br>
+</div>
+<!-- MAIN CONTENT -->
+<div id="boxcontent">
+<a name="part4"></a><div class="subtitle">PART 4 - The subject of the repaint and a few words on research</div>
+<p>Once you've got the tools, you need something to do with them, so we need to pick a suitable subject. Everyone has their favorite livery. For a locomotive such as the SD45 there are literally thousands of individual locomotives to choose from. For the purposes of this tutorial I have chosen CSX #8903 as the subject. You do not have to base your project on this particular locomotive. It can be any other one of your choosing. The principles remain the same no matter which unit you choose, but if this is your first repaint, I strongly suggest that you pick a simpler designs until you are throughly familiar with the process.</p>
+<div style="text-align: center"><img src="resources/fig/csx8903.jpg" border="0" width="480" height="256" alt=""></div>
+<p>One of the best place to do research is on the Internet. Find <b>color</b> photos of the engine that you like and once you have selected one, also do a search for the correct logo. There are many train fan sites on the Internet, so it should not be difficult to find everything that you will need for your project. Just make sure, as much as possible, to get as many shots as you can of the same locomotive and also that the photos are of relatively good quality.</p>
+
+<a name="part5"></a><div class="subtitle">PART 5 - Installing the SD45 locomotive</div>
+<p>Using WinZip, unpack James' SD45 model following the attached instructions to install the model. Always un-zip MSTS model files to a temporary location and move the needed files into the TRAINSET directory. In this package especially, because it was not packed quite correctly, there are a few additional (empty) folders that were inadvertently packed. Move only the folder named <b>SD45-SF5346</b> into the TRAINSET folder. Once it is installed, go into the CABVIEW folder and delete the file named <b>3dts_gp20_sp.cvf</b> as this is not needed.</p>
+<p>Using ConBuilder, make a consist file for this model and take it for a good spin in the simulator. Look at the model very closely from all angles so that you have a good gauge of what you are about to attempt to do. Look at it under different lighting and weather conditions until you have a through familiarity of the model and it's characteristics. This SD45 is an older model and is a little bit simpler than the more recent versions that are now available. However, it is a faithful and otherwise excellent reproduction of the prototype. It's relative simplicity is why I have chosen this as the subject for this project as it is easy for a beginner to repaint.</p>
+
+<a name="part6"></a><div class="subtitle">PART 6 - Creating a custom version of the SD45</div>
+<p>Copy the entire <b>SD45-SF5346</b> folder and rename it <b>SD45-CSX5309</b>. You will need to rename and edit certain files to create your own version. The files that need to be renamed and edited are:</p>
+
+<table summary="" border="1" width="525"  cellspacing="0" cellpadding="4">
+	<tr>
+		<th width="25%" style="background-color: #DCDCDC;">Original File Name:</th>
+		<th width="25%" style="background-color: #DCDCDC;">New File Name:</th>
+		<th width="50%" style="background-color: #DCDCDC;">Edits Required:</th>
+	</tr>
+	<tr>
+		<td valign="top">SD45_SF5346.s</td>
+		<td valign="top">SD45_CSX8903.s</td>
+		<td valign="top">No edits needed.</td>
+	</tr>
+	<tr>
+		<td valign="top">SD45_SF5346.sd</td>
+		<td valign="top">SD45_CSX8903.sd</td>
+		<td valign="top">Change the line that reads:<br><em class="courier">shape ( SD45_SF5346.s</em><br>to read:<br><em class="courier">shape ( SD45_CSX8903.s</em></td>
+	</tr>
+	<tr>
+		<td valign="top">SD45_SF5346.eng</td>
+		<td valign="top">SD45_CSX8903.eng</td>
+		<td valign="top">
+		Change the line that reads:<br>
+		<em class="courier">WagonShape ( SD45_SF5346.s )</em><br>
+		to read:<br>
+		<em class="courier">WagonShape ( SD45_CSX8903.s )</em>
+		<hr>
+		Change the 2 occurences of:<br>
+		<em class="courier">wagon ( SD45_SF5346 )</em>
+		<br>to read:<br><em class="courier">wagon ( SD45_CSX8903 )</em>
+		<hr>
+		Scroll down until you see:<br>
+		<em class="courier">Name ( "SF SD45 #5346" )</em><br>
+		change this to read:<br>
+		<em class="courier">Name ( "CSX SD45 #8903" )</em></td>
+	</tr>
+</table>
+<p>Use <b>WordPad</b> to do the editing and make sure that you have done the following:</p>
+<ul>
+	<li>To retain the <em>exact</em> same format including spaces
+	<li>To resave the files as an <em>Unicode text document</em>
+</ul>
+<p>Make a new consist using the new version of the locomotive. Make sure it appears in the simulator. Right now it looks identical to SF5346, and that is fine as we have not repainted it yet.</p>
+<p>If you have chosen to repaint a version other than CSX 8903, just use a nomenclature appropriate to your chosen version. Just make sure that you follow the formats given above. So for example, if you have chosen to paint your SD45 as BN #400, substitute SF5346 with BN400 (note no spaces).</p>
+
+
+<br><br>
+[ <a href="#top">Top of Page</a> ]&nbsp;[ <a href="tutorial2a.html">Prev</a> ]&nbsp;[ <a href="tutorial2c.html">Next</a> ]
+<!-- FOOTER -->
+<hr>
+<p class="small">Copyrights © 2004-2007, Sean Lim. All Rights Reserved. Hosted courtesy of steam4me with permission.</p>
+</div>			
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+<title>Error Message - Failed To Initialize Heading Tape - at The Steam4me Site</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Error Message - Failed To Initialize Heading Tape</font>
+                        <br>by Yuri Sos</h2>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                        <p>Ah, you've got to love MSTS's obscure error messages!  Here's another one for you to ponder:</p>
+
+                        <p><img SRC="images/heading_tape_01.jpg" height=126></p>
+
+                        <p>Of course, you look at this message and it instantly points to the source of the error - not!  It appears as you start an activity (or "Explore") a route, sometimes a route that you've run successfully before, but never in winter before.  And therein lies a clue to this error message's cause.</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "cause">
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- cause --->
+
+		<div class="post">
+			<h2 class="title">The Cause of the Error</h2>
+			<div class="entry">
+
+                        <p><p>This error message is caused by a missing or corrupt "ACleanTrack1.ace" and / or "ACleanTrack2.ace". These files provide the texture for the sleepers and ballast for your track in the sim.  These two files are normally found in both the Route_Name\Textures and the Route_Name\Textures\Snow folder: not necessarily exactly the same as the Snow ACE files usually portray a snow-covered track.
+
+                        <p>You will usually see this error message before the one above as the route loads:</p>
+
+                        <p><img SRC="images/heading_tape_02.jpg" height=133></p>
+
+                        <p>If you click "Yes", the "Failed to initialize heading tape" immediately appears.</p>
+
+                        <p><img SRC="images/heading_tape_01.jpg" height=126></p>
+
+                        </p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="solution">
+		</div>
+
+    <!--- end cause --->
+
+
+    <!--- sol hard --->
+
+		<div class="post">
+			<h2 class="title">Solution</h2>
+			<div class="entry">
+
+                        <p>One or both files are missing.  Check both the Route_Name\Textures and the Route_Name\Textures\Snow folders: you will most likely find that either "ACleanTrack1.ace" and/or "ACleanTrack2.ace" are missing.  Replace them and the route will work fine.  Note: if you don't use the season containing the missing ACE files, you won't see the error message: ie</p?
+
+                        <ul>
+                           <li>If I remove "ACleanTrack1.ace" and/or "ACleanTrack2.ace" from the Route_Name\Textures folder (but leave them in the \SNOW folder) and run an activity utilising a snow season, the route runs ok.
+                           </li>
+                           <li>If I remove "ACleanTrack1.ace" and/or "ACleanTrack2.ace" from the Route_Name\Textures\SNOW folder (but leave them in the \Textures folder) and run an activity utilising a non-snow season, the route runs ok.
+                           </li>
+                        </ul>
+
+                        <p>If by some chance, all four files (two in Textures, two in Textures\Snow) are present, they are corrupt. Replace them with ACE files from a known good route.</p>
+
+                        <p>Hope this helps.</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end sol hard --->
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#cause">Cause Of Problem</a>
+                 <br><a href="#solution">Solution</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 22 April 2008, 8 March 2010</center></p>
+</div>
+</body>
+</html>

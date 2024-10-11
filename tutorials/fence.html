@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>A New Method for Fencing Routes - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">A New Method for Fencing Routes</font>
+                        <br>by Joseph Realmuto</h2>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                             <p>Some people here have noted that some of the routes being made lack fences where they should be. In particular, this is a problem for routes made in countries where railroads are fenced off as a matter of course. The reason way routes are not being fenced is obvious - it is too time consuming to line up every piece of fence.</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "link1">
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">A Better Way</h2>
+			<div class="entry">
+
+                        <p>Well, I found a better way.  I thought of treating fences as a gantry, and placed the following lines in my gantry.dat file:</p>
+
+<p><font color="#009900">GantrySet(
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Name ( "ROW Wire Fences" )
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Style ( 00000001 )
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Separation ( 10 )
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GantryTable ( 1
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GantryTableEntry (
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Filename ( "WireFence10m.s" )
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Distance ( 20 )
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</font></p>
+
+<p>I set the distance to 20 so that a right-of-way up to 4 tracks wide could be fenced in. The theory was sound, but in practice I ended up with fences across the tracks because the length of the fences is in the x direction.</p>
+
+<p>No problem. I manually edited the shape and .sd files to get the length in the z-axis(this was the hard part because there are normal vectors in there), and renamed the new shape ROW_WireFence10m.s. I then added the following line to my gantry.dat file:
+
+<p><font color="#009900">GantrySet(
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name ( "ROW Wire Fences" )
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Style ( 00000001 )
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Separation ( 10 )
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GantryTable ( 1
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GantryTableEntry (
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Filename ( "ROW_WireFence10m.s" )
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Distance ( 20 )
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</font></p>
+
+<p>You also need to change the header of the file. The header looks like this:</p>
+
+<p><font color="#009900">SIMISA@@@@@@@@@@JINX0g0t______
+<p>(
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GantrySets ( N</font></p>
+
+<p>N is the number of gantry sets, and you need to increase it by however many different types of fencing you add or the new entry won't show up in the Route Editor.</p>
+<p>When I want to place fences, I just choose autoplace gantries in the RE, and select "ROW Wire Fences" from the drop down box. Here are some results:</p>
+
+<p><img SRC="images/fence_01.jpg"  height=562 width=750></p>
+
+<p>The fences where the arrows point to need to be manually selected and rotated(using the numerical keypad is easier). This only needs to be done in places where the route widens or narrows. Here is what it looks like fixed:</p>
+
+<p><img SRC="images/fence_02.jpg"  height=562 width=750></p>
+
+<p><img SRC="images/fence_03.jpg"  height=562 width=750></p>
+
+<p>This last shot illustrates that you will get fences in some places that need to be manually removed,  but it is better to manually remove a few fences rather than to manually place many.&nbsp;&nbsp; To manually delete fences (where they cross roads for example) just select them, hit the delete key, and bingo, they're gone. I've left them in that screenshot to show that the method is not perfect.
+RE does most of the work, and then you're just left to tidy up a few loose ends, er fences.</p>
+
+<p>Also, there are occasionally spaces of a few meters between tiles that may need to be manually fenced, but this shouldn't be a big deal. There doesn't appear to be any hit on frame rates, either, even on my PII-450. After all, the shape is only four polygons!</p>
+
+<p>Click here for my altered shape file( <a href="files/ModifiedFenceShape.zip">ModifiedFenceShape.zip</a> - it uses the same texture as the standard 10 meter wire fence).</p>
+
+<p>You can even make multiple entries in the gantry.dat file for different types of fences. For example, I enlarged the above shape, made it reference a different texture, and added an entry for "ROW Mesh Fence". You can add wood fences, wrought iron, etc. The only key is that the shape must have its length in the z-axis, and should be fairly short so it looks good on curves.</p>
+
+<p>I hope this gives route builders an incentive now to fence routes in for safety's sake.</p>
+
+<p>This technique is very fast, and I was able to fence about 35 miles of the high speed portion of the LGVMed line in about 8 hours using this technique, and some of that was the learning curve to adjust the fences in the places where they needed to be rotated, or raised. Since the fences are placed on the terrain, they will end up under bridges(or even under water), and will need to be manually
+removed, and in some cases where the terrain near the track is not even, the height may need to be slightly adjusted. The LGVMed route has a lot of bridges, so I imagine this route will take longer than most. I can't emphasize it enough, <b>but use the numerical keypad, NOT the mouse</b> for adjustments. That way, you can adjust one axis at a time, which makes everything go much faster.</p>
+<p>If you're starting a route from scratch, it is probably best to place both gantries and fences before anything else, including placing bridges or adjusting terrain. That way, you simply remove the fences where the bridge will be(or even leave them for a fenced bridge), and they will always be even with the track.</p>
+
+<p>So far I haven't noticed any problems reaching the number of objects per tile limit, but it might be a good idea to have a few fence sets of different lengths in the gantry.dat file so that you can use the longer ones where number of objects might be a problem.</p>
+
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="link2">
+		</div>
+
+    <!--- end cause --->
+
+
+    <!--- sol hard --->
+
+		<div class="post">
+			<h2 class="title">Comment by Wayne Campbell</h2>
+			<div class="entry">
+
+                        <p>I agree with Joseph on this.  Continuous fencing improved my route a great deal. I use a method similar to what Joseph recommends although following the terrain contour is quite tricky.</p>
+
+                        <p>Here are a couple of shots showing the fenced right of way on rural interurban route that I am building.</p>
+
+                        <p><img SRC="images/fence_04.jpg"  BORDER=0 height=512 width=640></p>
+                        <p><img SRC="images/fence_05.jpg"  BORDER=0 height=512 width=640></p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end sol hard --->
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#link1">A Better Way</a>
+                 <br><a href="#link2">Wayne Campbell Comment</a>
+
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 7 Dec 2002, 26 March 2010</center></p>
+</div>
+</body>
+</html>

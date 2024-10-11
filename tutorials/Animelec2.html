@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>How To Animate An Electric Loco (And Make Parts Move Using The P Key): Section 2 - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li ><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png"  height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png"  height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+                        <h2><font color="#3333FF">How To Animate An Electric Loco (And Make Parts Move Using The P Key): Section 2</font>
+                        <br>by Paul DeVerter</h2>
+                        <h3>A Port City Car Co. Project Copyright &copy; 2005</h3
+
+                        <p></p>
+			<h2 class="title">SECTION 2 - The Trolley Pole</h2>
+ 			   <div class="entry">
+
+                   <p>Now that we have completed the Rail Gun let's start on something that is essentially the same, but looks more like a rail locomotive.  In the Rail Gun, we wanted a barrel to point upwardly when the Rail Gun was not powered, and to point horizontally (down) when the Rail Gun was able to move along the tracks.  Here just the opposite - we want the trolley pole down when the locomotive, interurban, or streetcar is not powered, and up adjacent to the wire when the car is powered and running under its own steam.</p>
+
+                   <p>Here is what we are going to build, again using simple shapes and vibrant colors</p>
+
+                   <p><img src="images/pdv_anim_loco_211.jpg" width="364" height="340" alt="" border="0"></p>
+
+                   <p>You know how to make a simple box for the main part or chassis, so proceed to do so. Next put a small box on the top to act as the trolley base.  Finally, make a trolley pole. This time let's raise the main portion up in the air, as though on a single truck or bogie. This will require that we properly set the origin of this main part on the origin.
+
+                   <p>Recall that this is done by selecting the main part and then using the Move tool, raise it up to the desired elevation.  Then holding down the SHIFT key, move the origin of the main part to the origin shown in the heavy white lines of TSM.</p>
+
+                   <p><img src="images/pdv_anim_loco_201.jpg" width="258" height="157" alt="" border="0"></p>
+
+                   <p>Because the trolley pole is going to rotate from down to up, you will likewise need to move the origin of the pole to the end of the pole that is adjacent the trolley base. For this exercise we do not need a wheel or shoe at the wire end.</p>
+
+                   <p><img src="images/pdv_anim_loco_202.jpg" width="274" height="179" alt="" border="0"></p>
+
+                   <p>We need to do some housekeeping.  First we need to name the parts in accordance with the requirements of MSTS, and then we need to set up the animation requirements.</p>
+
+                   <p>The chassis may be named Main.  The trolley base may be named Trolley Base.  But the pole must be named after one of the Train Names pantograph parts, so pick one you like, such as PantographBottom1.  Parent both the Trolley Base and the Pantograph to Main.  Ignore the Animation showing Rotation for the moment, as this photo was taken after the fact.</p>
+
+                   <p><img src="images/pdv_anim_loco_203.jpg" width="471" height="366" alt="" border="0"></p>
+
+                   <p>Go to Project Properties and again choose appropriate names for the project long and short names (Here I chose TrolleyPole for both), check Locomotive, then for Locomotive Type pick Electric, and finally for Animation Frames, this time choose 5.</p>
+
+                   <p><img src="images/pdv_anim_loco_204.jpg" width="654" height="435" alt="" border="0"></p>
+
+                   <p>Now it is time to set up the animation.  Click the "Ani" button and up pops the Animate Part box.  Note since we chose to have 5 Frames, this box shows that the Last Animation Frame is 4 and the initial Frame is 0.  From our experience with the Rail Gun, we now know that the initial frame of animation is unpowered, so we will want the trolley pole to be down, and not up.  Again since we are not doing anything but rotation, simply click the Set Rotation button.  Move the Frame slider to the right, all the way</p>
+
+                   <p><img src="images/pdv_anim_loco_205.jpg" width="458" height="158" alt="" border="0"></p>
+
+                   <p>over to the far right, so that the Frame shown is 4.  Here we must adjust the rotation of the pole, and you should know how to do that task.  Once you have the pole rotated to the desired position, again push the Set Rotation button.</p>
+
+                   <p><img src="images/pdv_anim_loco_206.jpg" width="459" height="200" alt="" border="0"></p>
+
+                   <p>Move the slider back to the left to Frame 0.  The pole should drop down to the lowered position when you get to Frame 3.  And as we learned with the Rail Gun, the animation will slowly lower the pole when in MSTS, interpolating all the intermediate frames.</p>
+
+                   <p>To check on our animation we can go to Part Properties and click on the Animation button which will bring up the Part Animation box.  It shows the positions of the pole in Frames 0 and 4, and they both look good.</p>
+
+                   <p><img src="images/pdv_anim_loco_207.jpg" width="367" height="427" alt="" border="0"></p>
+
+                   <p>Now we need to try out our handiwork.  This requires us to go to the Create Train Simulator Object, and fill out a few items to enable TSM to create the TrolleyPole locomotive in MSTS.  Simply follow the instructions from the Rail Gun and check the appropriate boxes.  Likewise make sure that the Target Locomotive will go to a Folder of your choice, namely TrolleyPole.</p>
+
+                   <p><img src="images/pdv_anim_loco_208.jpg" width="405" height="435" alt="" border="0"></p>
+
+                   <p>After clicking Continue, you will need to go to the Consist Editor and make a new consist for your TrolleyPole locomotive.</p>
+
+                   <p>Then you can take a look at your new loco in MSTS.  Ordinarily, the .eng file will show the trolley pole up, instead of down.  This is because of the numbers in the line toward the bottom, named PantographToggle1, which will read ( 0 1 1 ).  If you would like the initial position to be reversed, then change the line so that it reads:</p>
+
+                   <p><b>        PantographToggle1 ( 0 1 0 )</b></p>
+
+                   <p>This will result in the pole being down, or in the initial animation frame position, in the default startup of the locomotive.</p>
+
+                   <p>Here is what you will see in MSTS when you push the "P" key</p>
+
+                   <p><img src="images/pdv_anim_loco_209.jpg" width="357" height="262" alt="" border="0"></p>
+                   <p><img src="images/pdv_anim_loco_210.jpg" width="343" height="282" alt="" border="0"></p>
+                   <p><img src="images/pdv_anim_loco_211.jpg" width="364" height="340" alt="" border="0"></p>
+
+                   <p>The trolley pole will slowly raise itself up from the down position (Frame 0) to the upper position (Frame 4).  The throttle will work only when the pole is up.  If you were to put both the Rail Gun and this TrolleyPole in the Sim together, you would find that the pole moves about twice as fast as the Rail Gun barrel.  Why?  Because we used half as many frames to animate the pole.</p>
+
+                   <p>Run the loco around a bit and observe the end of the pole adjacent the overhead wire. You have the pole parented to the Main, and so if the pole is up, and if the end is fairly close to the center of Main, lengthwise, the pole should follow the wire pretty well. But problems arise when you move the pole further off the lengthwise center of the Main to which it is parented.  The further it gets from the center of the Main body, the further it will vary from the wire.  We will talk about one way to manage this problem in a later section.</p>
+
+                   <p>If you would like to see a trolley that is complete and has an animated trolley pole, made using the principles you have just learned, then go to the Train-Sim.com library, and obtain a copy of the Claremont Steeple Cab Locomotive #18, 18.zip, and its various fixes.  It is a fine example of a trolley that has a trolley pole that rotates up and down with the  press of the P key.</p>
+
+                   <p><img src="images/pdv_anim_loco_212.jpg" width="463" height="331" alt="" border="0"></p>
+
+                   <p>Now it is time to move on to a more complicated set of animations controlled by the "P" key, as we move to <a href="Animelec3.html">Section 3</a>.</p>
+
+                   </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "link1"</a>
+		</div>
+
+    <!--- end end overview --->
+
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Series Contents</h2>
+                 <p> <a href="Animelec1.html">Section 1</a>
+                 <br><a href="#">Section 2</a>
+                 <br><a href="Animelec3.html">Section 3</a>
+                 <br><a href="Animelec4.html">Section 4</a>
+                 <br><a href="Animelec5.html">Section 5</a>
+                 <br><a href="Animelec6.html">Section 6</a>
+                 <br><a href="Animelec7.html">Section 7</a>
+                 <br><a href="Animelec8.html">Section 8</a>
+                 </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 12 April 2005, 06 May 2010</center></p>
+</div>
+</body>
+</html>

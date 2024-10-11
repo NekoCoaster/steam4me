@@ -1,0 +1,311 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>Animating Walschaerts' Valve Gear - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li ><a href="../vans/index.html">Vans</a></li>		
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png"  height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png"  height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+                        <h2><font color="#3333FF">Animating Walschaerts' Valve Gear</font>
+                        <br>by Richard Osborne</h2>
+
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                   <P>Since writing the earlier valve gear tutorial I've been asked to write something more specific to Walschaerts' gear. If you haven't already done so would you please read/download the <b><a href="joy.html">Animating Valve Gear</a></b> tutorial and <b><a href="TSMLoco/TSMloco_01.html">Constructing A Steam Loco Using Train Sim Modeler</a></b> tutorial; much of the info needed is there.</p>
+
+                   <p>If you haven't already done so download and install the valvegear animation program (valgr10a.zip) available at <b><a href=http://www.alaska.net/~rmorris/als2.html>http://www.alaska.net/~rmorris/als2.html</a></b>.</p>
+
+                   <p><IMG SRC="images/walschaerts_01.jpg" BORDER="1" WIDTH="800" HEIGHT="325" ALT="walschaerts_gear.jpg"></p>
+
+                   <P>As before this tutorial uses Gmax, the techniques used can equally be used for TSM, indeed I learned them when using FSDS & TSM - I know it works. TSM is not as accurate or easy to use but good results are possible with patience. Don't expect animation to be quick, there must be faster ways than this, expert animators will find it crude & clumsy but it works. <P>TSM doesn't have the sophisticated animation tools of Gmax; I want to make this tutorial useful for TSM users - in other words I still don't know Gmax that well; I haven't had any success with bones. In TSM the tools for rotating & moving pivots are under the 'transform' menu. For moving the pivot use 'translate' 'axis only'. I'm also assuming that all TSM users have upgraded to version 1.1, version 1.0 (the boxed version) is useless for animation. I've described TSM animation in the loco tutorial.</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "link1"</a>
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Ok, Let's Get Started</h2>
+			<div class="entry">
+
+                <p>I'm assuming you have a bit of experience with the program, TSM or Gmax, so that most of the modelling tools will have been used; even so I'd suggest reading through this tutorial then open Gmax, draw a few boxes & cylinders then play with 'move', 'scale', 'attach' & 'delete'. Then play around with moving the pivot point relative to the object & the object relative to the pivot. Get into the habit of setting 'Align to World' for EVERY new part - this will avoid the nasty habit that Gmax has of placing locos on their side. Have all your parts drawn so that they don't have to be moved laterally afterwards, TSM especially won't accept changes. If it becomes necessary to move things do it in 'point' mode.</p>
+
+                <P>Please run the animated Walschaerts' program 'wals_in' that you've installed from the web site in the introduction.</p>
+
+                <P>A few starter points:</p>
+                   <ul>
+                       <li>please refer to the diagram of the gear, we'll use the right names for the parts; none of the ridiculous names that the original MSTS designers invented, we may have to change some before exporting to MSTS.<br>&nbsp;</li>
+
+                       <li>The animated program shows the right side gear, TSM uses the right hand side, we'll start with that so we'll mirror the diagram.<br>&nbsp;</li>
+                       <li> I tend to refer to 'port' & 'starboard' - a habit from FSDS, more logical & easier to explain. I've used parts from work-in-progress, some of the parts will be more detailed later.<br>&nbsp;</li>
+
+                       <li>I'm assuming that running gear parts have been made & just require animating. Get used to F3 & F4 to switch from wireframe to solid views. Save the scene frequently, set the autosave to 4 or 5 minutes & set the undo level to about 20. This takes more computer memory but we're only handling a few parts at a time.<br>&nbsp;</li>
+
+                       <li>Know your prototype. If you're modelling a streamliner A4 with its deep valance you won't see most of the valvegear - no point modelling what can't be seen. Most locos built since the 1920s use piston valves as per the diagram; some earlier locos with lower superheat & pressure used slide valves - look at the animation 'wals_out' notice the radius rod links with the combination lever below the valve axis. Some older American locos used bolt-on Walschaerts' or 'Baker' gear to update them. Most of these were slide valve fitted.<br>&nbsp;</li>
+
+                       <li>Especially in TSM make sure your loco runs as it should, is at the right height etc BEFORE animating. TSM seems to link animation to the datum point - if you move a part after animating it will leap back to its original position; there is no quick fix.
+                           <P><IMG SRC="images/walschaerts_02.jpg" BORDER="1" WIDTH="800" HEIGHT="325"  ALT="walsch_gear_rev.jpg"></p></li>
+
+                       <li>I've used the 'merge' facility in Gmax to make a new model. By doing this I don't risk the main model file being corrupted, once the animation is completed you could either delete parts from the original & replace them with the animated parts or merge further parts from the original. I'd be happier with the latter. Don't forget to save with another name. Save often - especially with Gmax. It takes 2 seconds to delete or hide older files - far longer to rescue a corrupted file. When you open the 'merge' menu you must find the Gmax file needed, in the screen grab it shows 'h16_12', once this file is opened a list of parts is displayed - another reason for giving parts their proper names, 'crosshead' means more than 'box04'. It helps if we have only the parts needed for this project adding parts as needed. To start we only need the driven wheel, connecting rod & piston rod. It'll be obvious which parts will be needed as we progress.
+                      <P><IMG SRC="images/walschaerts_03.jpg" BORDER="1" WIDTH="801" HEIGHT="302" ALT="merge2.jpg"></p></li>
+
+                      <li>For TSM start a new model by using 'parts' then 'load' menus. During any work in TSM I'd recommend saving parts regularly.</li>
+                  </ul>
+                  </P>
+
+			 </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "start"</a>
+		</div>
+
+    <!--- end cause --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Technique</h2>
+			<div class="entry">
+
+                   <p>The technique I use makes use of guides & false pins which will be deleted once animation is complete. Please work in sequence.</p>
+
+                   <ol>
+                       <li>First the coupling rods: this is straight forward & has been covered in the <a href="TSMLoco/TSMloco_03.html">earlier tutorial</a>: I'm making no further mention of them in this tutorial.</li>
+                   
+                       <li>The connecting rod is second.</li>
+
+                       <li>The crosshead: animating this is straight forward if your cylinder axis is horizontal. Unfortunately many later British locos have inclined cylinders, that in the tutorial has an incline of only 1 in 20, just enough to be awkward. This was done on the prototype to allow bigger cylinders to clear the station platforms! No program permits you to follow an incline directly; you just have to go along a bit, up a bit, along a bit, up a bit, ad infinitum. As the crosshead drives the union link we must make sure the animation here is spot-on otherwise we'll have to correct it & the link later. You can't, using this method, draw the cylinders horizontal & incline them after animating - tried that, doesn't work.</li>
+                       <li>Next the first fixed item - the expansion link & the return crank.</li>
+                            <li>By the time you've done these items & are used to using pins & arcs you'll be ready for the more floppy bits at the front end.</li>
+                   </ol>
+
+                   <h3>We'll start with the connecting rod</h3>
+
+                   Mp>We'll start with the connecting rod, with a rotary motion at the wheel & a reciprocating motion at the crosshead which we want to move in a straight line along the piston rod. I've described the use of pins before - use a 12 sided cylinder for the smaller pins, clone a dozen or so & store them for future use. The first two are used for the crankpin & big-end, set them at the crankpin position, they could be moved laterally keeping them well clear of the wheel & rod so that they'll be easy to detach later. Attach one of them to the wheel. Make sure the con-rod is in the correct place. Click on the other pin & write down its exact position. Attach the pin to the con-rod - click on the rod first then attach the pin, not the other way round. In this case it won't make any difference - just renaming but it's better to be logical.</p>
+
+                   <P><IMG SRC="images/walschaerts_04.jpg" BORDER="1" WIDTH="800" HEIGHT="407" ALT="crankpin3.jpg"></p>
+
+                   <P>The pivot point for the rod must be moved to be at the crankpin position:- 0, 0.613, 0.898 as we noted. Make the rod active. Click the 'hierarchy' menu; 'affect pivot only' then the 'move' button. Write in the values in the windows, the pivot should move.</p>
+
+                   <P><IMG SRC="images/walschaerts_05.jpg" BORDER="1" WIDTH="800" HEIGHT="521" ALT="crankpin4.jpg"></p>
+
+                   <P>Take one of your cloned pins, take it to the piston rod & scale it to the same diameter. Move it to the end of the con-rod & attach it. Check the length of the con-rod if you have a accurate measurement. If you need to make any adjustments go into 'point' mode.</p>
+
+                   <P><IMG SRC="images/walschaerts_06.jpg" BORDER="1" WIDTH="799" HEIGHT="241" ALT="conrod2.jpg"></p>
+
+                   <P>Now we want to rotate the rod so that the small end covers the piston rod. Moving with the mouse is far too crude, the difference in angle is very small. We need to use the window to write in new values. In this grab the value is -8.9, 0, 0. In Gmax rotation is possible to 1/1000 of a degree, movement to 1mm full size; we won't need this degree of accuracy though it's good to know it's there. TSM is not quite as exact, you'll need to be working in the 'transform', 'rotate' menu.</p>
+
+                   <P><IMG SRC="images/walschaerts_07.jpg" BORDER="1" WIDTH="800" HEIGHT="900" ALT="conrod1.jpg"></p>
+
+                   <P>The rod will be close to, but not over the piston rod.</p>
+
+                   <P><IMG SRC="images/walschaerts_08.jpg" BORDER="1" WIDTH="800" HEIGHT="281" ALT="rotate1.jpg"></p>
+
+                   <P>Using the values in the 'x' window rotate the rod. Notice that in ALL of the valve gear animation only the 'x' value will be affected, if the other values have changed zero them otherwise they'll twist. If the values show other than '0' you need to change the pivot with 'Align to World'.</p>
+
+                   <P><IMG SRC="images/walschaerts_09.jpg" BORDER="1" WIDTH="800" HEIGHT="351" ALT="rotate2.jpg"></p>
+
+                   <P>Enlarge the view as much as possible. You can't go in this close in TSM.</p>
+
+                   <P><IMG SRC="images/walschaerts_10.jpg" BORDER="1" WIDTH="800" HEIGHT="656" ALT="rotate4.jpg""></p>
+
+                   <P>This is as close as you can get in TSM, certainly close enough. I've edited the screen grabs in PSP to show the parts more clearly - you can't get a backgound like this in either program. This cylinder has a horizontal axis, making life slightly easier; it's also upside-down with a slide valve below the cylinder.</p>
+
+                   <P><IMG SRC="images/walschaerts_11.jpg" BORDER="1" WIDTH="800" HEIGHT="362" ALT="tsm1.jpg"></p>
+
+                   <P>Once the rod is aligned we're ready to animate. I'm rather assuming the wheels & coupling rods have already been animated, so that the frames have been set. Obviously the first thing to do is to fix the rod to the wheel; this is just repetition. Zoom in close to the wheel hub. Press the 'Animation' button. Make the rod active, 'move' then  advance the animation one frame. Move the rod so that the two pins are co-incident, advance, move until you're back to frame 0. The rod should move with the wheel. It might help to set the animation rate to 1/2 or 1/4. Untick the 'Active Viewpoint Only' box, this will show the animation in all screen views.</p>
+
+                   <P><IMG SRC="images/walschaerts_12.jpg" BORDER="1" WIDTH="403" HEIGHT="441" ALT="animate2.jpg"></p>
+
+                   <P>Go into 'rotate' mode, track to the small end & rotate the rod to cover the piston rod frame by frame. Bring the crosshead & slide bars into the scene. Take another of the cloned pins, make it the same size & position of the small end, bring the crosshead into position & attach the pin. Again it's just a case of animating the cross head, this time only using 'move'. The example here has the cylinders inclined slightly, movement will be a combination of along & up, we want the pin to coincide with the pin on the con-rod. When the cross head is animated you could hide the piston rod to avoid confusing lines on the screen; just attach it later, you won't have to animate it. As a belt & braces precaution you could also, in point mode, have the crosshead just touch the guides - depends on the prototype.</p>
+
+                   <P><IMG SRC="images/walschaerts_13.jpg" BORDER="1" WIDTH="800"  HEIGHT="452" ALT="crosshead3.jpg"></p>
+
+                   <h3>Animating the Valve Gear</h3>
+
+                   <p>Now the fun starts; it's time to animate the valve gear. Spend a bit more time with the valve gear program. Walschaerts' gear has two distinct inputs, from the eccentric & from the crosshead. Inside Walschaerts' isn't common, the Great Western Castles & Kings used it; the geometry is exactly the same as outside gear.
+The eccentric end is easy to understand, the return crank (eccentric) imparts movement to the return crank rod (eccentric rod) which causes the expansion link to rock about its fixed pivot. The movement of the link is constant & can be easily animated. We'll need more of our pins & a cylinder to aid plotting. Warning - a few mathematics terms from now on. I'll be repeating myself a bit.</p>
+
+                   <P>Import the return crank, make sure it's in the right position; compare it to the diagram. Notice that the return crank trails the crankpin by 90 degrees. Attach the crank to the driven wheel.</p>
+
+                   <P><IMG SRC="images/walschaerts_14.jpg" BORDER="1" WIDTH="800" HEIGHT="332" ALT="ecc2.jpg"></p>
+
+                   <P>Place a pin at the pivot position, clone it, write position & attach it to the wheel. Keep it away from the wheel in order to detach it later.</p>
+
+                   <P><IMG SRC="images/walschaerts_15.jpg" BORDER="1" WIDTH="800" HEIGHT="382" ALT="ecc6.jpg">
+
+                   <P>Import the return crank rod, if it's in the right place just attach the other pin, set the pivot position to the value you're just noted. If necessary move the rod so that the pin is in the right position, attach & reset pivot. You could, of course, attach the pin to the rod then bring that to the crank; whichever is easiest.</p>
+
+                   <P><IMG SRC="images/walschaerts_16.jpg" BORDER="1" WIDTH="800" HEIGHT="348" ALT="eccrod3.jpg"></p>
+
+                   <P>Fix the wheel end of the rod first, press 'Animate', 'move' then frame-by-frame move the rod to follow the pin on the crank.</p>
+
+                   <P>To convert the movement at the link end we need a guide. This isn't a straight line like the piston rod but will be a curved line. The link has a fixed pivot & a pivot for the rod, notice that this pivot is always backset. Fix the pivot for the link. I might be stating the obvious here, certainly repeating myself but rather too much information than too little.</p>
+
+                   <P><IMG SRC="images/walschaerts_17.jpg" BORDER="1" WIDTH="800" HEIGHT="495" ALT="link1.jpg"></p>
+
+                   <P>We need a cylinder centred on the link pivot, the radius will intersect the second pivot. Draw a cylinder, I've used 60 sides here. If I remember TSM will only draw 32 sides; you could, however, rotate points in the area you want to see in order to make the circle less lumpy. The polygon count doesn't matter, none of these guides will be used on the final model. Position the cylinder at the link pivot.</p>
+
+                   <P><IMG SRC="images/walschaerts_18.jpg" BORDER="1" WIDTH="801" HEIGHT="557" ALT="linkarc4.jpg"></p>
+
+                   <P>Use the window on the right to alter the radius until the arc intersects the pivot. Hide the link until the rod is animated.</p>
+
+                   <P><IMG SRC="images/walschaerts_19.jpg" BORDER="1" WIDTH="801" HEIGHT="487" ALT="linkarc3.jpg"></p>
+
+                   <P>Give the cylinder a sensible name. I only want to see an arc so convert to editable mesh & delete all the face polygons. Only the arc is visible, in solid view it won't be seen.</p>
+
+                   <P><IMG SRC="images/walschaerts_20.jpg" BORDER="1" WIDTH="801" HEIGHT="325" ALT="linkarc2.jpg"></p>
+
+                   <P>Hopefully you're anticipating the next step. Rotate the rod until the pin centres on the arc, 'animate' then rotate each frame. When the animation is played the pin should describe an arc.</p>
+
+                   <P><IMG SRC="images/walschaerts_21.jpg" BORDER="1" WIDTH="801" HEIGHT="355" ALT="linkarc1.jpg"></p>
+                   
+                   <P>Unhide the link, rotate it so that the pins are co-incident. 'Animate', 'rotate' & follow the rod. The eccentric end is done.</p>
+
+                   <P><IMG SRC="images/walschaerts_22.jpg" BORDER="1" WIDTH="800" HEIGHT="356" ALT="link7.jpg"></p>
+
+                   <P>The crosshead end is more of a problem. This is an area where a better understanding of Gmax bones would be useful, we'll use the TSM method which is a bit hit & miss reducing errors rather than sticking to applied maths. The result is as good as your patience.</p>
+
+                   <P>Import your union link & combination lever, place pins at the appropriate pivot points. Pivot the combination lever at the valve line. Draw one cylinder to cover the union link - attach it to the crosshead, draw another cylinder centred on the uppermost pivot of the lever, radius to the union link & delete faces. This isn't strictly necessary but there will be fewer confusing lines on the screen.</p>
+
+                   <P>This will give us the 2 loci we need for the first draft. We'll be reducing errors, going through the process a couple of times. With practice you'll be able to skip this first rough draft. Animate the union link first, covering the intersection of the loci.</p>
+
+                   <P><IMG SRC="images/walschaerts_23.jpg" BORDER="1" WIDTH="800" HEIGHT="496" ALT="comb7.jpg"></p>
+
+                   <P>Look again at the animated program & the diagram at the head of this tutorial. In the diagram the radius is at mid-gear - neither forward nor reverse - and will not impart any movement to the combination lever. The valve won't open sufficient to open the steam ports in the cylinder. It would be splendid if the lifting link could raise or lower the radius rod to affect the cut-off but it's just another thing that won't happen in MSTS. How many model railway locos have you seen which move the gear before reversing? I've never seen one. It could happen - I remember seeing an article describing such an action in an 0 gauge loco - another motor & loads of diodes!!</p>
+
+                   <P>It would probably be acceptable to run our animation in mid-gear, in which case we only have to correct the arc in the combination lever movement. If we want to take our animation a stage further we'll put the loco into forward gear. Locos only ever use full gear for starting - it's like 1st gear in a car. Most of the time a loco will be working at about 30% cut-off. The movement of the radius rod will be visible & will influence the action of the combination lever.</p>
+
+                   <P>Place a small pin on the expansion link, check with the animation where it should be. Close the pin before attaching it to place on the radius rod. Import the radius rod, a pin over the combination lever pin, move the pivot to the link end. Animate the radius rod, first with 'move' at the link end then 'rotate' to bring it close to the combination lever; don't be too exact.</p>
+
+                   <P>What we might have to do now is to make sure the valve will move in a straight line. In some cases it won't be necessary, BR Standards for instance have a valve guide which is so big it hides the valve rod; the top of the combination lever is hardly visible.</p>
+
+                   <P><IMG SRC="images/walschaerts_24.jpg" BORDER="1" WIDTH="801" HEIGHT="475" ALT="nudge.jpg"></p>
+
+                   <P>This part is all trial & error, reducing errors. 'Move' & 'rotate' the lever, the rod & link will just be nudged with 'rotate'- this is where the arrows are most useful. It's made easy in this case because the movements at the valve end are quite small. Success at this stage depends on three related movements. The combination lever must align the three pins - put the pivot over the union link pin, rotate until the top pin is as close as possible to the radius rod pin. If you're in luck the valve pin will cover the valve rod. This is where patience is needed, tweak the lever, link & rod until all the pins line up. You'll find it's quite quick - big error - small error - smaller error until the action is smooth. You'll need to move & rotate the lever, just rotate the link & rod. These adjustments will be small - in the tenths of degrees. Gmax alows you to nudge the rotation with the arrows next to the window. Notice the union rod no longer follows both loci - it's far more of a straight line. If you're going wrong undo a step or two. Once you're happy with the animation attach the piston rod to the crosshead; the valve rod will have to be animated, do this before you detach the pin. <P>Console yourself with the thought that it's far better than watching 'Big Brother'. The left side will be far quicker with experience. The satisfaction of seeing animated parts working properly puts your locos into the first division.</p>
+
+                   <P><IMG SRC="images/walschaerts_25.jpg" BORDER="1" WIDTH="800" HEIGHT="510" ALT="perspec1.jpg"></p>
+
+                   <P>Detach the guides & arcs we used - they'll come in useful for the port side. If you haven't quartered the wheels you could mirror every part on the stb side to the port. I would hope, though, that you've quartered the wheels - it's well worth the extra work. In this case don't be tempted to mirror the parts - they'll be 90 degrees out of sync. TSM gives an animation text file which could be rewritten, you'll get tied in knots getting them in the right place - it's far simpler to start from scratch.</p>
+
+                   <P>I've added more detail to the union link. Modify your part IN POINT MODE - come out of point mode. Draw the details needed (clone the parts & send them to the other side; progress the frames until they coincide & attach them at that frame) & attach them, make doubly sure you add them to the link & not vise-versa. This way you won't change the pivot or lose the animation.</p>
+
+                   <P><IMG SRC="images/walschaerts_26.jpg" BORDER="1" WIDTH="801" HEIGHT="355" ALT="union1.jpg"></p>
+
+                   <P>You can also use primitives, cylinders & boxes, as an aid in modelling the rest of the loco - in this screenie I'm using a circle to even out the front of a footplate, the circle is hidden or deleted afterwards.</p>
+
+                   <P><IMG SRC="images/walschaerts_27.jpg" BORDER="1" WIDTH="800" HEIGHT="385" ALT="foot_1.jpg"></p>
+
+                   <P>You could animate the port side as a separate project, importing parts from the original model as well as the arcs & guides from the stb de model.</p>
+
+			 </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "conclusion"</a>
+		</div>
+
+    <!--- end cause --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Conclusion</h2>
+			<div class="entry">
+
+                        <p>Make a final model by merging parts from both animation models and the original model, obviously save this under another name. You'll need to organize the hierarchy. Your original model should have the hierarchy & will carry it on import. Link the parts directly driven by the wheel - coupling rods, connecting rods & return crank rods to the wheel, probably wheels2. All of the other parts can be linked to 'main'. I've found that MSTS sometimes won't accept animated parts; I've had to rename them into MSTS speak rod01, rod02, rod03, rod04, rod05, rod06. You'll appreciate these words are totally meaningless - rod01 could be anything but MSTS will accept that a part named rod01 can be animated. You could just call the stb crosshead rod01 & link the other stb parts to it, MSTS doesn't care about the names of child parts. I've always assumed that MSTS gives a rotary motion to wheels1 - wheels5 & other animation to rod01 - 06. I don't think you can use wiper or pantograph names for a steam loco.</p>
+
+                        <P>As I suggested in the earlier tutorial other valve gears can be animated in the same way, Southern, Baker, Stephenson's etc. All valve gears are derived and follow a logical sequence.</p>
+                        
+                        <P>Good luck.</p>
+
+                        </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+
+		</div>
+
+    <!--- end cause --->
+
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#link1">Before Starting</a>
+                 <br><a href="#start">Technique</a>
+                 <br><a href="#conclusion">Conclusion</a>
+               </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 6 June 2007, 24 August 2007, 28 April 2010</center></p>
+</div>
+</body>
+</html>
+

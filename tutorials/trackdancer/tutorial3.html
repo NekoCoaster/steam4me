@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created on: 3/29/2007 -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <title>TSM TROUBLESHOOTING CHECKLIST</title>
+  <meta name="author" content="Sean Lim aka Trackdancer">
+<link rel="StyleSheet" type="text/css" href="trackdancer.css">
+</head>
+<body>
+<!-- TITLE -->
+<div id="boxtitle">
+A Beginner's Guide to avoiding problems building models with TSM
+</div>
+<div id="boxmenu">
+Menu<br><br>
+<div id="menuitems">
+<a href="../index.html" style="color: #696969; text-decoration: none;font-weight: bold;">Steam4me Main Tutorial Index</a><br><br>
+<a href="main.html" style="color: #696969; text-decoration: none;font-weight: bold;">SECTION INDEX</a><br><br>
+<a href="tutorial1.html" style="color: #696969; text-decoration: none;">How to weather locomotive textures tutorial.</a><br><br>
+<a href="tutorial2a.html" style="color: #696969; text-decoration: none;">How to re-texture MSTS locomotive models - a Comprehensive Guide</a><br><br>
+<a href="tutorial3.html" style="color: #696969; text-decoration: none;">A Beginner's Guide to avoiding problems building models with TSM</a><br><br>
+<a href="tutorial4.html" style="color: #696969; text-decoration: none;">Building an Arch using TSM.</a><br><br>
+</div>
+</div>
+<!-- Validation -->		
+<img src="resources/fig/valid-html401-blue.gif" border="0" width="88" height="31" alt="Valid HTML 4.01 Transitional" style="position: absolute; left: 10px; top: 280px;">
+<!-- MAIN CONTENT -->
+<div id="boxcontent">
+<blockquote>"You are working on building your first locomotive in TSM and it looks fine in the modeling program. You compile it and with pounding excitement you ramp up MSTS and put your creation into your favorite route for its maiden run and BOOM ... MSTS crashes. You then get a message that your locomotive cannot be added to the sim due to an UID issue and an invitation to email  "Uncle Bill" with all the juicy details ..."</blockquote>
+<hr>
+<p class="em">Here are some tips that might help avoid these problems in the first place or help isolate the cause of the problem.</p>
+<hr>
+<p>I very seldom experience the UID error even with higher poly models. The trick is to adopt a rigorous approach when 
+modeling with TSM.</p>
+
+<p class="em">Create MAIN and center this to the origin and check to see that it has the proper alignment.</p>
+<p>For each subsequent part:</p>
+	<ul>
+		<li>Center to object
+		<li>Reset axis orientation
+		<li>Remove ALL hidden polys
+		<li>Remove ALL orphaned points
+		<li>CHECK FOR PARTS GEOMETRY ERROR
+		<li>Link to MAIN (whenever possible)
+		<li>Check your hierachies of parts. 
+	</ul>
+<p><b style="color: #000033;">HANDRAILS AND COMPLEX DETAILED PARTS:</b> Handrails (especially) and other complex detailed parts in TSM can be a real pain. Make one good one, texture it and link this to MAIN. Test this in the sim. If it does not cause a crash just copy this to wherever it is needed and use the same one as a the basis for all others. You can stretch and rotate them as needed. <em>Remember to "center-to-object" and realign the pivot points.</em></p>
+<p><b style="color: #000033;">JOINING AND LINKING PARTS:</b> I seldom join my parts to MAIN for a variety of reasons and just link them. This has worked fine for me. As much as possible I join complex parts to each other such as couplers to coupler pockets to make it easier to keep a track of things. <em>Remember to "center-to-object" and realign the pivot points after joining parts.</em></p>
+<p><b style="color: #000033;">TEXTURE AS YOU BUILD:</b> Always try to texture as you build - don't wait till the end. This makes the texturing process a lot less tedious. Remember also that with similar parts, you can texture the first copy and then just copy and paste the rest.</p>
+<p><b style="color: #000033;">WHEN IN POINT MODE:</b> When altering parts in point mode, as far as possible <em>move vertices in groups</em> rather than individually. This helps keep parts in symmetry and helps avoid geometry errors. If necessary, check the coordinate values to make sure vertices have not been moved out of plane. Sometimes you will need to move individual vertices. Use typed in coordinates rather than trying to move them by eye.</p>
+<p>The biggest cause for UID problems from models I've been sent in the past to fix for others are:</p>
+	<ol>
+		<li><b style="color: #000033;">GEOMETRY ERRORS</b> - a single plane is defined by a polygon with 3 vertices, not 4. It you distort a plane which TSM displays as requiring 4 vertices, it actually needs 2 (or more) polygons to define, not one.
+		<li><b style="color: #000033;">HIDDEN POLYS</b> - I have seen models with 3 copies of MAIN overlaid on top of each other - exercise caution with the "cut and paste" - check your parts list for mysterious new objects that you did not knowingly create.
+		<li><b style="color: #000033;">ESPECIALLY</b> with complex and convex or concave shapes to check for untextured polys. You will be surprised at how much the texturing functions of TSM can miss when dealing with compound objects. <em>If you see blank.ace in your list of needed texture files, you've missed something.</em> Do an untextured polygon check to isolate missed polygons. A well constructed TSM model should not need a blank.ace. If you still need one for whatever reason. Make it 128x128 and use a black blank.ace
+		<li><b style="color: #000033;">BADLY CONSTRUCTED PARTS</b> - keep your constructs simple. Very complex details can be built using primitives as a starting point. <em>When in point mode, move vertices in groups.</em> I've seen numerous examples of models that have failed to load in MSTS due to a single badly constructed detail part. Do not be afraid to construct parts by manually creating polygons in point mode. Sometimes this is the best way to go despite the extra work.
+		<li><b style="color: #000033;">NAME PARTS CAREFULLY</b> - Instead of "Rear Coupler" use "RearCoupler" or "Rear_Coupler" - avoid spaces in part names. It is ok to name parts as "coupler.1" and "coupler.2". Do not have more than one part with the name 	"MAIN".
+		<li><b style="color: #000033;">ALWAYS REMOVE ORPHANED POINTS</b> - just because you have deleted several faces from a cube does not mean that the vertices have been removed. Always do a remove orphaned point check after deleting polygons.
+		<li><b style="color: #000033;">UNTEXTURED POLYGONS</b> - leave a copy of blank.ace in the same folder (TRAINSET folder) as the running version of the model whilst it is underdevelopment. This will prevent unnecessary crashes caused by polygons that were missed during the texturing process. If you have been texturing and checking for untextured polygons during the buiding process, you should find in the TSM (or SVIEW) required texture list, no mention of the blank.ace file. <em>(Remember to remove blank.ace from the completed model's folder after the model has been completed to avoid packing it when you zip your creation for distribution).</em> 
+		<li><b style="color: #000033;">CHECK THAT YOUR PART HIERACHIES ARE PROPERLY LINKED.</b><br>ie. MAIN > Bogie1 > Wheels11 and Wheels12
+		<li><b style="color: #000033;">BE CAREFUL WHEN SPECIFYING MATERIALS.</b> Some materials specifications and combinations, due to bugs in TSM, do not work and will cause the simulator to crash.
+	</ol>
+<p><b style="color: #000033;">SMOOTHING GROUPS:</b> TSM does not have smoothing groups. There are workarounds to smooth almost anything correctly in TSM. Take care with complex shapes as sometimes, unless you make the needed manual corrections, these parts can cause UID issues. Even if you do manage to get it into the sim, if it looks wrong, it is probably built wrong.</p>
+<p><b style="color: #000033;">FINAL CHECK:</b> When the model is finally "complete". Do the following checks to make sure that you have "optimized" the construction of your model:</p>
+		<ul>
+			<li>Geometry Error Check
+			<li>Orphaned Point Check
+			<li>Parts Hierachy Check
+			<li>Untextured Polygon Check
+			<li>Required Texture List Check
+		</ul>
+<p><b style="color: #000033;">FINAL TIPS:</b></p>
+<p>Always keep back-up copies of the last working version(s) of the model. This can save you a lot of grief if things go wrong after making additional changes and adding detailed parts. Finally, it is a good practice to build main structural parts and making sure that there are no problems before adding detailed parts.</p>
+<p>Be aware that it is possible to build a model that will display perfectly in SVIEW but crashes the simulator when you try to load it in MSTS. SVIEW is far more forgiving of 3D construction errors than MSTS, so as much as possible, check that your model does not cause problems in MSTS as you progress.</p>
+
+<br><br>
+[ <a href="#top">Top of Page</a> ]
+<!-- FOOTER -->
+<hr>
+<p class="small">Copyrights © 2004-2007, Sean Lim. All Rights Reserved. Hosted courtesy of steam4me with permission.</p>
+</div>			
+</body>
+</html>

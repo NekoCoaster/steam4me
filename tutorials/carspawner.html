@@ -1,0 +1,584 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+<title>Carspawners - their care and feeding - at The Steam4me Site</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Carspawners - their care and feeding</font>
+                        <br>by Yuri Sos</font>
+                  <br><h3>Contributions by Lukas "Swissie" Lusser and Mike Simpson
+                  <br>Angled level crossing fix by Jeffrey Kraus-Yao</h3>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                             <p>A car spawner is a marker item that can be placed along roads in MSTS to simulate road traffic.</p>
+
+                             <p>Car spawners consist of three components:</p>
+                             <ol>
+                                <li>the characteristic blue pyramids and lines that are placed on roads in the Route Editor (RE),</li>
+                                <li>the various car and truck shapes you wish to appear, and </li>
+                                <li>a file called carspawn.dat located in your route's top folder.</li>
+                             </ol>
+                             <p><img src="images/car_sp_01.jpg" width="500" height="320" alt="" border="0"></p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "place">
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- placement --->
+
+		<div class="post">
+			<h2 class="title">Placement of the Car Spawner</h2>
+			<div class="entry">
+                      <p>To place a car spawner, you must first have laid down your roads.  Assuming you've done this, press <b>[F5] (Placement) | More | </B>scroll down to <b>"Vehicles"</b>, click and select <b>"Car Spawner:</b></p>
+
+                      <p><img src="images/car_sp_04.jpg" width="353" height="417" alt="" border="0"></p>
+
+                      <p>Move the cursor (white cross) onto the road and click: two blue pyramids will appear:</p>
+
+                      <p><img src="images/car_sp_03.jpg" width="646" height="517" alt="" border="0"></p>
+
+                      <p>If you miss and don't click on the road, you will receive this error message and will have to reselect the car spawner from the Object Selector:</p>
+
+                      <p><img src="images/car_sp_05.jpg" width="246" height="107" alt="" border="0"></p>
+
+                      <p>Press [F2] to modify, then mouse over one of the blue pyramids till it turns black,</p>
+
+                      <p><img src="images/car_sp_06.jpg" width="646" height="532" alt="" border="0"></p>
+
+                      <p>then click on it to highlight it,</p>
+
+                      <p><img src="images/car_sp_07.jpg" width="646" height="532" alt="" border="0"></p>
+
+                      <p>press [F3] or the <--> icon, and drag the pyramid along the road as far as you like
+
+                      <p><img src="images/car_sp_08.jpg" width="646" height="532" alt="" border="0"></p>
+
+                      <p>(generally said to be a maximum of 2km, but some people have reported carspawners as long as 3.6km).</p>
+
+                      <p><img src="images/car_sp_09.jpg" width="646" height="532" alt="" border="0"></p>
+
+                      <p>Note that the blue strobe flashes move along the road IN THE OPPOSITE direction to the flow of traffic.  To reverse the flow of traffic, simply drag one pyramid through the other pyramid: the pyramids (and the blue strobe) will reverse and you can then select either pyramid to lengthen your spawner.</p>
+
+                      <p>This is how the finished car spawner looks in the Route Editor (RE):</p>
+
+                      <p><img src="images/car_sp_02.jpg" width="646" height="532" alt="" border="0"></p>
+
+                      <p>One last tip: try to position the start/end pyramids behind a hill, trees or structure as the vehicles just pop up in the World as they are spawned.</p>
+
+                      <p>Now that we've placed the car spawner, it's time to turn our attention to the vehicles that will be used by the spawner.</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="cars">
+		</div>
+
+    <!--- end placement --->
+
+    <!--- vehicles --->
+
+		<div class="post">
+			<h2 class="title">Vehicles Used in Car Spawners</h2>
+			<div class="entry">
+
+                        <p>If you open the carspawn.dat file of any default route you will find a list of shape files within it.</p>
+
+                        <p>These are the default vehicle shapes:</p>
+
+                        <ul>
+                            <li>Europe1 and Europe2:  c_car.s, c_van.s, ukbus.s</li>
+                            <li>Japan1 and Japan2: Jp1Car01.s, Jp1Car2.s, Jp1moped.s, Jp1van.s, Jp1van2.s</li>
+                            <li>USA1 and USA2: car1.s, car2.s, car4.s, policePHIL.S, truck1.s, van_1.s, US2Pickup.s</li>
+                        </ul>
+
+                        <p>In addition, files libraries such as those hosted by www.train-sim.com and www.uktrainsim.com have many more vehicle shapes you can use.</p>
+
+                        <p>To use these vehicles, place the .s and .sd files in the SHAPES folder of your route and the model's ACE files into the TEXTURES folder.  You DON'T need a .REF file entry (unless you want to use the vehicles as static models as well).</p>
+
+                        <p>You then list the model in the carspawn.dat in the form</p>
+
+                        <p>CarSpawnerItem( "shapefilename.s" separation_distance )</b> where</p>
+
+                        <ul>
+                            <li><b>shapefilename.s</B> is the name of the shape file and</li>
+                            <li><b>separation_distance</b> is a numerical value in metres that corresponds to the separation maintained in front of the origin of the model vehicle relative to the vehicle or level crossing in front of it.   This value should be the length of the vehicle (get that by opening the model in Shape Viewer, pressing Ctrl-C and taking the "length" value) plus 2-3 metres.  This value cannot be less than 2 or MSTS crashes as soon as you try to load the route.
+
+                                <p><b>Special Note:</b> whilst most models have their origin at the centre of the model, truck1.s from USA1/USA2 is a special case and most following vehicles will run underneath it.  This is because its origin is 0.8m from the front and 9.6m from the rear (total length 10.5m) so unless every other model has a separation_distance of more than 11m, you will appear to have rear-end accidents invloving truck1 at every level crossing.</p>
+
+                                <p><img src="images/car_sp_16.jpg" width="720" height="244" alt="" border="0">
+                                <br><img src="images/car_sp_17.jpg" width="720" height="200" alt="" border="0"></p>
+
+                                <p>Fortunately, it's really simple to fix this model (tip provided by Jeff Kraus-Yao).  If you look at this model in Shape Viewer with Ian McMillan's Measuring Tool (see the <a href=../utilities/index.html>Utilities Page </a>, you see that the origin (green line) is way off-centre:</p>
+
+                                <p><img src="images/car_sp_30.jpg" border="0"></p>
+
+                                <p>Open Shape File Manager, browse to your USA2/Shapes folder, select, uncompress, then "Shift" the model by -4.39m in the "Z" axis:</p>
+
+                                <p><img src="images/car_sp_31.jpg" border="0"></p>
+
+                                Re-compress the model, the look at it again in Shape Viewer - you'll see that the truck now has its origin at the centre of the model:</p>
+
+                                <p><img src="images/car_sp_32.jpg" border="0"></p>
+
+                                <p>Ok, let's save you the trouble!  <a href="files/Truck1.s">Click here</a> to download the corrected Truck1.s file (8,054 bytes) and drop it into your USA2 folder or whatever route you're using it in.</p>
+
+                                <p>There are many other vehicle shapes available at train-sim.com or uktrainsim.com.</li>
+                        </ul>
+                        </p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="build">
+		</div>
+
+    <!--- end vehicles --->
+
+    <!--- build cars --->
+
+		<div class="post">
+			<h2 class="title">Hints for Building Models for Car Spawners</h2>
+			<div class="entry">
+
+                        <p>When building the model, its axis should be at ground level, and 180 degrees opposite to a locomotive (ie it will face right, not left when opened in Shape Viewer).</p>
+
+                        <p>Lights, animation and alternative textures are not supported, but you can fake lights using alphabright textures: for example, this is USA1's car1.s by day and by night:</b>
+
+                        <p><img src="images/car_sp_15.jpg" width="559" height="180" alt="car_sp_15.jpg - 19kb" border="0"></p>
+
+                        <p>Some models downloaded from the various web libraries may run backwards (this happens if an author occasionally builds them facing the same way as a locomotive). If this occurs, simply use ShapeFileManager to reverse the model.</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="structure">
+		</div>
+
+    <!--- end sol easy --->
+
+
+    <!--- sol hard --->
+
+		<div class="post">
+			<h2 class="title">Structure of the carspawn.dat file</h2>
+			<div class="entry">
+
+                        <p>The typical carspawn.dat looks something like this</p>
+
+                        <table BGCOLOR="#e881f5" width=100%>
+                            <tr>
+                                <td>
+                                    <br>SIMISA@@@@@@@@@@JINX0v1t_
+                                    <br>&nbsp;
+                                    <br>6
+                                    <br>CarSpawnerItem( "Jp1Car01.s" 4 )
+                                    <br>CarSpawnerItem( "Jp1Car2.s" 4 )
+                                    <br>CarSpawnerItem( "Jp1moped.s" 4 )
+                                    <br>CarSpawnerItem( "Jp1van.s" 6 )
+                                    <br>CarSpawnerItem( "Jp1van2.s" 6 )
+                                    <br>CarSpawnerItem( "Jp1van2.s" 6 )
+                                    <br>)
+                                    <br>&nbsp;
+                                </td>
+                                <td bgcolor=#f2f4d2 >
+                                    <br><---Standard Unicode MSTS header
+                                    <br>&nbsp;
+                                    <br><---Total Number of CarSpawnerItems
+                                    <br><---CarSpawnerItem( "shapefilename.s" separation_distance )
+                                    <br><---CarSpawnerItem( "shapefilename.s" separation_distance )
+                                    <br><---CarSpawnerItem( "shapefilename.s" separation_distance )
+                                    <br><---CarSpawnerItem( "shapefilename.s" separation_distance )
+                                    <br><---CarSpawnerItem( "shapefilename.s" separation_distance )
+                                    <br><---Repeat 2nd last CarSpawnerItem here or it won't appear
+                                    <br><---Unmatched single closing bracket
+                                    <br>&nbsp;
+                                </td>
+                            </tr>
+                        </table>
+
+                        <p>You can also place a comment after the separation_distance parameter, thus....</p>
+
+                        <p>CarSpawnerItem( "ES250-2.s" 4 # Triumph motorbike )
+                        <br>CarSpawnerItem( "PG_203P.s" 7  # Peugot 203 )
+                        <br>CarSpawnerItem( "car4.s" 7 )
+                        <br>CarSpawnerItem( "kk_transp.s" 16 # VW Kombi blue )</p>
+                        <p>....without affecting the functionality of the spawner.dat file.</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="morecars">
+		</div>
+
+    <!--- end sol hard --->
+
+    <!--- morecars --->
+
+		<div class="post">
+			<h2 class="title">Increasing Traffic</h2>
+			<div class="entry">
+
+                        <ol>
+                           <li>
+                              <h3>Variety</h3>
+
+                              <p>The number of cars you specify in your carspawner.dat file in the route main folder has nothing to do with how often the vehicles appear, but is a list of what will appear, and if you list some cars more than once, a 'weighting' towards certain vehicles being randomly generated more than others.</p>
+
+                              <p>You can increase or skew the <B>variety</B> of traffic in your car spawner by</p>
+                                  <ul>
+                                      <li>duplicating the shapes you want more of to appear, or</li>
+                                      <li>adding more shapes that you've created, copied from other routes or downloaded from the .Net.</li>
+                                  </ul>
+
+                                  <p>Remember to duplicate the last entry and be sure to increment the number at the top of the .dat file to reflect the total number of CarSpawnerItems.</p>
+                                  <p></p>
+                           </li>
+
+                           <li><h3>Volume</h3>
+                               <p>To adjust the volume of traffic in a car spawner, press [F2] (Modify) and right-click on one of the pyramids: the following dialogue box will appear:</p?
+
+                               <p><img src="images/car_sp_10.jpg" width="344" height="324" alt="" border="0"></p>
+
+                               <p>Make your changes (obviously the shorter the time the more frequently the cars will be spawned) and click "Ok".</p>
+                               <p>Remember that the car spawner is a fairly random generator of vehicles: these images below demonstrate the range of traffic at one location over about a minute:</p>
+
+                               <p><img src="images/car_sp_11.jpg" width="500" height="320" alt="" border="0">
+                               <br><img src="images/car_sp_12.jpg" width="500" height="320" alt="" border="0">
+                               <br><img src="images/car_sp_13.jpg" width="500" height="320" alt="" border="0">
+                               <br><img src="images/car_sp_14.jpg" width="500" height="320" alt="" border="0"></p>
+                           </li>
+
+                           <li><h3>Speed</h3>
+                               <p>The speed is set at the same time as the frequency of spawning: the speed you set is an average and there will be a random speed differential.   Watching the vehicles on the sim, they seem to behave quite well.</p>
+                           </li>
+                       </ol>
+
+     			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="where">
+		</div>
+
+    <!--- end morecars --->
+
+    <!--- can't see --->
+
+		<div class="post">
+			<h2 class="title">Why can't I see my cars in the sim?</h2>
+			<div class="entry">
+
+                        <p>There are several reasons why the carspawner might not show up in MSTS:</P>
+
+                        <ol>
+                           <li>Make sure you have the appropriate graphics sliders fully to the right in the MSTS Options settings: A <b>World Objects Density</b> setting below "8" means the cars do not appear;
+
+                              <p><img src="images/car_spawn_wod.jpg" width="806" alt="" border="0"></p>
+                           </li>
+                           <li>Make sure your carspawn.dat file is in your new Route's root folder;
+                               <br>&nbsp;
+                           </li>
+                           <li>Assuming it is there
+                              <ul>
+                                  <li>It must be in Unicode format;
+                                  </li>
+                                  <li>Each entry line must be in the correct format i.e.
+                                      <br>CarSpawnerItem ( "JaguarEtype.s" 5 );
+                                  </li>
+                                  <li>The number of items must be displayed on the first text line e.g. 25.  This number must be one greater than the number of CarSpawnerItems;
+                                  </li>
+                                  <li>Make sure there is a single closing (and un-matched) bracket ending the carspawn.dat file.
+                                  </li>
+                              </ul>
+                           <li>Make sure your car spawner in your route is placed correctly, with a blue pyramid at each end of a section of road with a blue line connecting them. The cars move in the opposite direction to the apparent movement of the blue strobe marks;<br>&nbsp;
+                           </li>
+                           <li>If you are not sure about your carspawn.dat file, copy one from the default routes as a test and see if that appears in your route. If that works then your .dat file is wrong.<br>&nbsp;
+                           </li>
+                       </ol>
+
+                       </p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="angles">
+		</div>
+
+    <!--- end can't see --->
+
+    <!--- sol easy --->
+
+		<div class="post">
+			<h2 class="title">How can I stop cars driving through the booms at angled level crossings?</h2>
+			<div class="entry">
+
+                        <p>The problem is that the cars stop their separation distance away from the track (or more precisely away from the orange cube on the tracks that marks the presence of a level crossing):  like this.......</p>
+
+                        <p><img src="images/car_sp_18.jpg" width="600" height="450" alt="" border="0">
+                        <br><img src="images/car_sp_19.jpg" width="600" height="450" alt="" border="0"></p>
+
+<p>Jeffrey Kraus-Yao has been studying the structure of the track and road database files and discovered a simple solution to the problem of keeping cars back from an angled level crossing.  This solution replaces the previous way of treating this problem first presented by Bruce Bridges in his Conrail Indy route v.1.  You can find Bruce's solution by reading <a href=carspawner_old_way_xing.html>Carspawners and Angled Level Crossings - The Old Way</a>.
+
+<p>Place your level crossing as you normally do in Route Editor (RE).  In this image, I've placed the level crossing, but have depressed the booms below ground level as this crossing didn't have them:</p>
+
+         <p><img src="images/angled_xing_01.jpg" border="0"></p>
+
+         <p>This is what this crossing looks like in the sim:</p>
+
+         <p><img src="images/angled_xing_02.jpg" border="0"></p>
+
+         <p>However, I want the cars to stop at the level crossing signs.</p>
+
+         <p>When you've placed the level crossing, press [F2], click on the orange box - it turns wireframe, then right-click and record the "x" and "z" dimensions as well as the tile you're on (see arrows in image below):</p>
+
+         <p><img src="images/angled_xing_03.jpg" border="0"></p>
+
+         <p>Do this for both orange boxes. Then save your changes and quit Route Editor.</p>
+
+         <p>Open the route's .RDB file and search for your placed level crossing.  In the following examples, I'll show you only one correction, but you'll obviously have to do it for both "orange boxes".  Here I've searched for and found LevelCrItem located on the correct tile (1391+10352) and at the correct location (x=530.755, z=799.586); you can ignore the slight differences from the locations you've recorded (eg 799.38 in the RE and 799.58 in the RDB is a 20cm/8" variation - hardly significant).</p>
+
+         <p><img src="images/angled_xing_04.jpg" border="0"></p>
+
+         <p>You can alter the distance the cars stop from the track (orange box, actually) by adjusting the first figure in the TrItemSData line: in this example <p><b>TrItemSData ( 1274.39 00000005 )</b>
+
+<p>Open the sim, start an "explore" that takes you to the crossing:  you may want to make a small path that starts at/near the crossing to speed up this process as the changes you make to the RDB are reflected as soon as you restart the activity.  So adjust, start the explore, watch the cars, adjust/save the RDB, quit the explore and immediately restart to see the effect of the changes (it's actually quicker to do than it was for me to type this paragraph).
+
+<p>First, I added 20m to the number, making it 1294.39, thus.....
+<p><img src="images/angled_xing_05.jpg" border="0">
+<p>....saved the RDB, then tried out the crossing.  Oops!  The red car (coming towards the camera) is the lead car and has now stopped over the crossing.
+<p><img src="images/angled_xing_06.jpg" border="0">
+
+<p>Well, let's go the other way.  I subtracted 20m from the original 1274.39, making the value 1254.39, save the RDB and looked at the result in the sim.  Much, much better - we're very close now.
+
+<p><img src="images/angled_xing_07.jpg" border="0">
+
+<p>The final adjustment actually turned out to be 1250m.  I then did a similar series of adjustments to the TrItemSData in the LevelCrItem for the other side and this was the final result:
+
+<p><img src="images/angled_xing_08.jpg" border="0">
+
+<p>This method is <b>so</b> much easier and quicker than placing extra tracks in parallel, plus there are no "issues" with extra bits of track and possible track database problems.  It also means that crossings of up to four tracks wide can be adjusted this way (level crossing items only stretch across a maximum of four tracks). Having performed both methods for these tutorials, this new method is 20-30 minutes faster per crossing than the old extra track method.  Thanks to Jeff Kraus-Yao for discovering this RDB tweak.
+
+                        </p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="speed_up">
+		</div>
+
+    <!--- end sol easy --->
+
+    <!--- sol easy --->
+
+		<div class="post">
+			<h2 class="title">How can I increase the average speed of traffic on my car spawners?</h2>
+			<div class="entry">
+
+                        <p>Let's say you have some areas where there are freeways and you want the cars to move faster than 70km/h (45 mph).</p>
+
+                        <p>The default average speed for car spawners is 70km/h (20m/sec) when you set them up in the Route Editor.  You can set it as high as you like, but the RE drops it back to 25m/sec.</p>
+
+                        <p>To increase the maximum speed, you will need to directly edit and alter the appropriate World file (this tip contributed by Joseph Realmuto).</p>
+
+                        <p>Start by using Route Editor to establish which car spawner you wish to alter.  The position in the World parameter refers to the middle of the car spawner.  It might be easier to change the speed of the Car Spawner (right-click on blue pyramid) to something unique (like 7.99m/sec in this example), save the route, then open the World file and look for 7.99.</p>
+
+                        <p><img src="images/car_sp_29.jpg" width="600" height="552" alt="Altering default speed" border="0"></p>
+
+                        <p>Once you've found your spawner, you can alter the <b>CarAvSpeed ( 7.99 )</b> line to the speed you require: note that the parameter you are altering is in m/sec, so here's a table to help you decide the average speed you require:</p>
+
+                        <table border=1 halign=right >
+                               <tr><td width=70 align=center>m/sec</td>
+                                   <td width=70 align=center>km/hr</td>
+                                   <td width=70 align=center>mph</td>
+                               </tr>
+                               <tr>
+                                   <td align=right>5</td>
+                                   <td align=right>18</td>
+                                   <td align=right>11</td>
+                               </tr>
+                               <tr>
+                                   <td align=right>6.71</td>
+                                   <td align=right>24</td>
+                                   <td align=right>15</td>
+                               </tr>
+                               <tr>
+                                   <td align=right>8.90</td>
+                                   <td align=right>32</td>
+                                   <td align=right>20</td>
+                               </tr>
+                               <tr>
+                                   <td align=right>10</td>
+                                   <td align=right>36</td>
+                                   <td align=right>22</td>
+                               </tr>
+                               <tr>
+                                   <td align=right>11.18</td>
+                                   <td align=right>40</td>
+                                   <td align=right>25</td>
+                               </tr>
+                               <tr>
+                                   <td align=right>13.41</td>
+                                   <td align=right>48</td>
+                                   <td align=right>30</td>
+                               </tr>
+                               <tr>
+                                   <td align=right>15</td>
+                                   <td align=right>54</td>
+                                   <td align=right>33</td>
+                               </tr>
+                               <tr>
+                                   <td align=right>15.65</td>
+                                   <td align=right>56</td>
+                                   <td align=right>35</td>
+                               </tr>
+                               <tr>
+                                   <td align=right>17.88</td>
+                                   <td align=right>65</td>
+                                   <td align=right>40</td>
+                               </tr>
+                               <tr>
+                                   <td align=right>20</td>
+                                   <td align=right>72</td>
+                                   <td align=right>44</td></tr>
+                               <tr>
+                                   <td align=right>20.12</td>
+                                   <td align=right>72.5</td>
+                                   <td align=right>45</td></tr>
+                               <tr>
+                                   <td align=right>22.35</td>
+                                   <td align=right>80</td>
+                                   <td align=right>50</td></tr>
+                               <tr>
+                                   <td align=right>25</td>
+                                   <td align=right>90</td>
+                                   <td align=right>55</td></tr>
+                               <tr>
+                                   <td align=right>30</td>
+                                   <td align=right>108</td>
+                                   <td align=right>67</td></tr>
+                               <tr>
+                                   <td align=right>35</td>
+                                   <td align=right>126</td>
+                                   <td align=right>78</td>
+                                   </tr>
+                               <tr>
+                                   <td align=right>40</td>
+                                   <td align=right>144</td>
+                                   <td align=right>90</td>
+                               </tr>
+                               <tr>
+                                   <td align=right>45</td>
+                                   <td align=right>160</td>
+                                   <td align=right>100</td>
+                               </tr>
+                        </table>
+
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="#">
+		</div>
+
+    <!--- end speedup --->
+
+	<!-- end #content -->
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <p><a href="#place">Placement</a>
+                 <p><a href="#cars">Vehicles used</a>
+                 <p><a href="#build">Building Models</a>
+                 <p><a href="#structure">The carspawn.dat file</a>
+                 <p><a href="#morecars">Increasing Traffic</a>
+                 <p><a href="#where">Why can't I see my cars?</a>
+                 <p><a href="#angles">Angled level crossings?</a>
+                 <p><a href="#speed_up">Increasing the average speed</a>
+
+
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 9 Nov 2005, 9 July 2007, 25 Oct 2008, 10 April 2009, 11 March 2010</center></p>
+</div>
+</body>
+</html>
+
+
+<!---
+<hr SIZE=0 WIDTH="100%">
+<p>This has been discussed before but...
+
+<p>...with a bit of thought and hand editing of .w files you can get carspawner based canal boats..
+<ol>
+<li>you need to have your canal built directly under matching road sections hovering 1000m off the ground - stick a car spawner on the road
+<li>build your canal boat model for the car spawner with it oriented at -1000m below ground and add it to the carpawner.dat file
+<li>hand delete the hovering road sections out of your .w file
+
+<p>the canal boats won't be seen on normal roads as they're buried 1000m below ground
+<br>the cars won't be seen on the canals because they're hovering 1000m high out of view
+<!------>
+
+

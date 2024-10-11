@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>The Case For Crisp, Sharp Lettering - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li ><a href="../vans/index.html">Vans</a></li>		
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png"  height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png"  height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+                        <h2><font color="#3333FF">The Case For Crisp, Sharp Lettering</font>
+                        <br>by Tim Muir</h2>
+
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                             <p>Many 3D modelers have been using this technique for some time, and I have been for several months, although only just this week I tried using an Alpha Channel cut-out to make crisper and sharper numbering and lettering. Some may not know this technique, so I thought I ought to share what I know about it. It may not be exactly how others do it, but it works, and works beautifully, at the cost of just a few extra polys.</P>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "link1"</a>
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">The Technique</h2>
+			<div class="entry">
+
+                   <p><img src="images/tryagain_crisp_01.jpg" width="620" height="534" alt="" border="0"></P>
+
+                   <p>The above image shows how the sharper lettering shames the 512x512 side textures of the streetcar.</P>
+
+                   <p><img src="images/tryagain_crisp_02.jpg" width="640" height="302" alt="" border="0"></P>
+
+                   <p>Step back 20 feet or so, and it jells quite nicely.</P>
+
+                   <p>Now, I am going to show how I do it in TSM. I'm sure 3DC and Gmax users have similar procedures.</P>
+
+                   <p>First, I create a box roughly the size of the number, or lettering. Delete all polys but the "face" poly, that which will be textured, and remove all orphaned points. Now arrange it as close to the body as possible in position.</P>
+
+                   <p><img src="images/tryagain_crisp_03.jpg" width="640" height="459" alt="" border="0"></P>
+
+                   <p>Once you have it in position, open its properties and give it a name and parent, and choose its material : TransNorm. Now texture it, and adjust its dimensions one more time if needed, using the re-sizing function. Once it's satisfactory, make a copy and paste it on the opposite side ( If needs be).</P>
+
+                   <p>Now the texture. This is how my 512x512 map looks:</P>
+
+                   <p><img src="images/tryagain_crisp_04.jpg" width="640" height="524" alt="" border="0"></P>
+
+                   <p>As you can see, in this edited image of TGATool2, the letterboard is cut out using an alpha channel, leaving just the numbering to be "drawn" by the sim. This system seems to be working well so far as I can determine.  I suspect that older slower OS's with older video cards may show some bleed-through. Also note the lettering "Entrance" and "Exit". These were done on separate letterboards also, but not using the alpha cut-out, but using the same color background as the part they are placed against, namely the cantilever beams below the doors:</P>
+
+                   <p><img src="images/tryagain_crisp_05.jpg" width="640" height="480" alt="" border="0"></P>
+
+                   <p>This works well for flat areas, but if you need to place a letterboard against a curved panel, like on the front of this trolley, you're going to need a box with 2 or more sections in its width dimension.</P>
+
+                   <p><img src="images/tryagain_crisp_06.jpg" width="640" height="480" alt="" border="0"></P>
+
+                   <p>I needed to write "PAY AS YOU ENTER" in small lettering here, too small to be legible on the 512 map. So, I made a TransNorm box again, this time with 2 sections in width. After deleteing all unnecessary polys and points, I textured it then placed it against the curved front. Now, in point mode, I adjust the four corners, "bending" it back against the curve of the dash, with the middle points stationary against the bend of the front. Once you have it all adjusted to your satisfaction, click F4 and then OK. This resets the texture to fit after any stretching of the part causes distortion of the image.</P>
+
+                   <p><img src="images/tryagain_crisp_07.jpg" width="640" height="439" alt="" border="0"></P>
+
+                   <p>This  technique demands an alpha texture, though, because the curved panel will be lit differently than the curved front part of the streetcar, and will show its borders. As you can see, the letters are like decals, and none of their backing shows, only the dash of the trolley.</P>
+
+                   <p>Well, I hope I haven't forgotten any points. I also hope I made it clear enough for anyone to try these techniques. A few more steps in the modeling process, and a few more polys, but I think the results are well worth the extra work.</P>
+
+                   <p>I can see how useful it could be for zipping up a fleet of cars too: one original model, one body skin, one secondary skin filled with car numbers, many .s files and many .wag files and you'll have a whole fleet in short order.</P>
+
+                   <p>A testament to what our so-called "chinszy" TSM program is capable of in skilled hands.  TSM is a capable program. It just takes getting to know it. I keep learning new things about it, like being able to assign materials to polys, not just parts.</P>
+
+
+			 </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "conclusion"</a>
+		</div>
+
+    <!--- end cause --->
+
+
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#link1">The Technique</a>
+                 <br><a href="#conclusion">Conclusion</a>
+               </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 20 August 2004, 29 April 2010</center></p>
+</div>
+</body>
+</html>

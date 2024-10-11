@@ -1,0 +1,279 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <title>A Steam Loco for MSTS sing 3DCanvas Chapter 8 - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../../index.html">Home</a></li>
+		<li class="current_page_item"><a href="../index.html">Tutorials</a></li>
+		<li><a href="../../msts_errors.html">Error Messages</a></li>
+		<li><a href="../../steam/index.html">Steam</a></li>
+		<li><a href="../../electric/index.html">Electric</a></li>
+		<li><a href="../../passenger/index.html">Passenger</a></li>
+		<li><a href="../../diesel/index.html">Diesel</a></li>
+		<li><a href="../../freight/index.html">Freight</a></li>
+		<li ><a href="../../vans/index.html">Vans</a></li>
+		<li ><a href="../../routes/index.html">Routes</a></li>
+		<li><a href="../../utilities/index.html">Utilities</a></li>
+		<li><a href="../../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../../images/S4M_Banner_left.png"  height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../../images/S4M_Banner_Tutorials.png"  height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">A Steam Loco for MSTS Using 3DCanvas</font>
+                        <br>by Paul "decapod" Gausden</h2>
+                        <p></p>
+			<h2 class="title">Chapter 8 - Detailing</h2>
+ 			   <div class="entry">
+
+                   <p>Sorry, this one is a bit of a rush job as I've got to get it finished off soon. Most of the operations should be second nature by now anyway :)</p>
+
+
+
+                        </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "check"</a>
+		</div>
+
+    <!--- end cause --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Buffers</h2>
+			<div class="entry">
+
+                        <p>Trust me to write a Buffer building plugin that does not work for this model - the buffer beam attachment points were round on Remembrance. However, it's all good practice...</p>
+
+                        <ol>
+                            <li>Select the buffer beam object - conveniently still separate from the footplate object.<br>&nbsp;</li>
+                            <li> Run the buffer beam plugin and enter the values from the plan...<br>&nbsp;</li>
+                                <p><img SRC="images/l8a1.jpg" height=431 width=408></p></li>
+                            <li>Delete all the base objects.<br>&nbsp;</li>
+                            <li>Build a 12 sided cylinder, scale to the correct size and shift into position by one of the buffers.<br>&nbsp;</li>
+                            <li>If you make this new group a child group of the buffer group, you can enter the offset value for the X position (-0.88 for the front left buffer) and the Z position half of the buffer beam length (plus half the cylinder thickness) then just adjust in the Y plane to make central.<br>&nbsp;</li>
+                            <li>Delete the hidden back faces and any downward pointing faces and optimise each cylinder.<br>&nbsp;</li>
+                            <li>Try building and positioning just one, then copy and paste it back onto itself to create a child cylinder. The just set the positions to x=1.76, y=0, z=0 to position the right front buffer correctly.
+                                <p><img SRC="images/l8a2.jpg" height=205 width=337></p></li>
+                            <li>You can use a similar method to position the rear cylinder objects by adding a 180 degree rotation and entering the negative value of the length of the beam object for the z coordinate.<br>&nbsp;</li>
+                            <li>Finally, once all is correct, drag these objects into the buffer group itself.</li>
+                        </ol>
+
+
+                        </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "check"</a>
+		</div>
+
+    <!--- end cause --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Couplings And Pipes</h2>
+			<div class="entry">
+
+                   <p>Here I make use of objects stored in my library. I recently added the hooked screw coupling and an updated vaccuum pipe. Library objects save a huge amount of time - once you have a reasonably generic part you like, compress its layers and add it to the library for future use.</p>
+
+                   <ol>
+                       <li>For the hooks, drag the hook object out of the library and onto the footplate object, to create the rear facing hook.<br>&nbsp;</li>
+                       <li>This should create a child group in main - set the properties to X=0, y=1.2, z= -half the footplate length (about -7.4).<br>&nbsp;</li>
+                       <li>3) Then with the X axis restricted (Red X button on the menu down) adjust the position of the rear hook to the correct height.<br>&nbsp;</li>
+                       <li>Repeat for the front hook, but add a Y axis rotation of 180 degrees to the group properties. (Delete any hidden faces) Use a similar technique of positioning, to add the screw couplings and pipes front and rear.
+                           <p><img SRC="images/l8a3.jpg" height=460 width=512></p>
+                           <p>The lower pipe (steam heat?) was created by adding another vacc pipe from the library and removing a few of the faces. All these extra part object were then dragged into the "bits" group that contains all small objects on or below the footplate. They were also painted, using the fill tool, from areas of the same texture as the rest of the objects in that group.</p></li>
+                   </ol>
+
+                        </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "check"</a>
+		</div>
+
+    <!--- end cause --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Finishing Off Below - Brakes</h2>
+			<div class="entry">
+
+                   <p>Due to lack of time, I'm probably going to rush through adding the last few details below the footplate (and miss off a couple completely).</p>
+
+                   <ol>
+                       <li>Create a cube and resize to x=1.51, y=0.85, z=0.38, then remove all but the two end faces.</li>
+                       <Li>Copy and paste this into the main group and position them in front of the driving wheels as per the brake shoe positions on the plan.</li>
+                       <li>Fill with the brake shoe texture using the default fill mode (does both sides at once)</li>
+                       <li>Finally drag these objects into the "bits" group with all the other small parts.
+                       <p><img SRC="images/l8a7.jpg" height=241 width=234></p></li>
+                   </ol>
+
+                        </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "check"</a>
+		</div>
+
+    <!--- end cause --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Finishing Off Below - Track Clearers</h2>
+			<div class="entry">
+
+                   <ol>
+                       <li>Start with a cube the same width as the inside frames (1.4m), with Y and Z sizes set to about 17cm (vertical part below the frames);<br>&nbsp;</li>
+                       <li>Extrude the lower face by 0.22m;<br>&nbsp;</li>
+                       <li>When looking from the side, with default edit mode and the X axis restricted, use the Edit control on the lower left to adjust the width of the lower face to 1.51m.
+                          <p><img SRC="images/l8a4.jpg" height=348 width=261></p></li>
+                       <li>Extrude the lower face again by 0.38m<br>&nbsp;</li>
+                       <li>Adjust the horizontal edges on the front face with the Z axis restricted (if you are building the rear clearer first) to make the shape taper slightly towards the bottom.<br>&nbsp;</li>
+                       <li>Chamfer the lower edge <p><img SRC="images/l8a5.jpg" height=263 width=245></p></li>
+                       <li>Finally delete all faces except the ends and run the "double side" plugin on the whole object.<br>&nbsp;</li>
+                       <li>Drag the group into the main group, position correctly.<p><img SRC="images/l8a6.jpg" height=261 width=238></p>>/li>
+                       <li>Copy, paste, position and rotate Y by 180 to add the one at the opposite end.<br>&nbsp;</li>
+                       <li>Finally drag these objects into the "bits" group and texture as before (with a section from the frames so they look similar)</li>
+                   </ol>
+
+                        </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "check"</a>
+		</div>
+
+    <!--- end cause --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Finishing Off Below -  Steps on front of footplate</h2>
+			<div class="entry">
+
+                   <p>
+                   <ol>
+                       <li>Build from two resized cubes, positioned on the main object and added to the bits group.<br>&nbsp;</li>
+                       <li>Selecting and deleting the front lower edge (and all hidden faces) gives a triangular lower support. The lowest point then needs a small adjustment with the mouse to stop it appearing too far below the foot plate.<br>&nbsp;</li>
+                       <li>Texturing was done via the fill tool on each object, using the screen coordinates mode, when viewed from square above (like the cab roof)<br>&nbsp;</li>
+                   </ol>
+                   </p>
+
+                        </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "check"</a>
+		</div>
+
+    <!--- end cause --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Finishing Off Below - Front of frames above the footplate</h2>
+			<div class="entry">
+
+                   <p>
+                   <ol>
+                       <li>These were built using the extrude tool again (using a small section chopped out of the plan as a backdrop) 
+                       <p><img SRC="images/l8a8.jpg" height=448 width=480></p></li>
+
+                       <li>The object was rotated with the shift object operation to the correct orientation and rescaled to the plan size, the width (X) dimension set to 0.03 (about 1").<br>&nbsp;</li>
+
+                       <li>Faces that are likely to be hidden were removed and the object optimised and centred with the Centre Object Operation.<br>&nbsp;</li>
+
+                       <li>4) The object was then made a child of the main group and positioned (which highlighted a slight discrepancy in my footplate size, so I had to resize the object vertically with the edit control)<br>&nbsp;</li>
+
+                       <li>Once in position, the object was copied and pasted back onto itself and positioned so that X was the frame width and Y,Z were both 0.0, making the two objects exactly the same position across the footplate.<br>&nbsp;</li>
+
+                       <li>Both objects were then dragged into the "bits" group and filled with part of the frame texture. I have been trying hard to remove as many hidden faces as possible, the model so far stands at just over 4100 polys which I think is not bad for the size and detail we have so far.<br>&nbsp;</li>
+                   </ol>
+
+                   <p>Not much more to do now. I'll probably just do the smoke box and bogie details and call it a day. If you've got this far, then any extra detailing is up to you.</p>
+
+                   </div>
+		   <p class="meta"><span class="posted"><a href="chap_9.html">Go To Chapter 9</a></span><a href="#" class="permalink">Return to top of page</a></p>
+
+		</div>
+
+    <!--- end cause --->
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <p><h3>Part 1 - Below the footplate</h3>
+                        <blockquote>
+                          <p><a href="steam3DC.html#start">0 - Beginners and reading</a></p>
+                          <p><a href="chap_1.html">Chapter 1 - Wheels</a></p>
+                          <p><a href="chap_2.html">Chptr 2 - Round Wheels</a></p>
+                          <p><a href="chap_3.html">Chptr 3 - Complex footplate shape</a></p>
+                          <p><a href="chap_4.html">Chptr 4 - Pistons and Valve gear</a></p>
+                          <p><a href="chap_5.html">Chptr 5 - Complex animations</a></p>
+                        </blockquote>
+
+                        <h3>Part 2 - Above the footplate</h3>
+
+                        <blockquote>
+                          <p><a href="chap_6.html">Chptr 6 - Boiler, Funnel and Dome</a></p>
+                          <p><a href="chap_7.html">Chptr 7 - More Bodywork and Texturing</a></p>
+                          <p><a href="#">Chptr 8 - Detailing</a></p>
+                          <p><a href="chap_9.html">Chptr 9 - More Detailing</a></p>
+                          <p>&nbsp;</p>
+                        </blockquote></p>
+
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 2002-2003, 22 April 2010</center></p>
+</div>
+</body>
+</html>
+
+

@@ -1,0 +1,218 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content=".">
+   <meta name="GENERATOR" content="1st page 2000">
+   <title>Using the Rod Animator Plug-in in 3D Canvas Pro</title>
+</head>
+<!--banner --->
+<body text="#000000" bgcolor="#FFFFFF" link="#0000EE" vlink="#333957" alink="#ff0000">
+
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="../index.html"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><a href="index.html"><img SRC="../images/S4M_Banner_Tutorials.png" height=60 border=0></a>
+    </td>
+</tr>
+</table>
+
+<center><table BORDER=2 CELLSPACING=0 CELLPADDING=5 WIDTH="100%" BGCOLOR="#FFFF00" frame="below" >
+<!--->
+
+<tr>
+<td><font face="Verdana"><font size=-1><b>
+<a href="../index.html">Australian MSTS @ steam4me</a></b>
+<img SRC="../images/arrow_yellow.gif" HSPACE=10 NOSAVE BORDER=0 height=9 width=13>
+<a href="index.html">Tutorials</a>
+<img SRC="../images/arrow_yellow.gif" HSPACE=10 NOSAVE BORDER=0 height=9 width=13>
+Using the Rod Animator Plug-in in 3D Canvas Pro</font></font></td>
+</tr>
+</table></center>
+<blockquote>
+<h2>
+<font face="Verdana"><font color="#3333FF">Using the Rod Animator Plug-in in 3D Canvas Pro</font></font></h2>
+
+<h3>
+<font face="Verdana">by Scott Brunner</font></h3>
+<font face="Verdana"><font size=-2>Public Domain 2004</font></font>
+<br>
+<hr SIZE=0 WIDTH="100%">
+<font face="Verdana">
+
+<h3>PREFACE</h3>
+This document was created from information I gathered from Paul Gausden's Steam Engine 
+Tutorial and from Paul Gausden in the 3DC forum.
+
+<p>This is not meant as a substitute for the Steam Engine Tutorial however while creating my first model I found 
+myself continually referring to the parts regarding animations.  
+<p>This should be a nice reference if you are trying to create your own model based on the 
+tutorial series.
+
+<h3>REFERENCES</h3>
+<ul>
+<li><a href="Steam3DC/steam3DC.htm">Steam Engine Tutorial</a> by Paul Gausden
+</li>
+<li>
+<li><a href="http://www.amabilis.com/mediadownloads.htm#Scripts">3D Canvas Plug-In Page</a> by Paul Gausden
+</ul> 
+
+<h3>3DC SKILLS</h3>
+
+<ul>
+<li>All the basic object creation and manipulation</li>
+<li>Shift center points on an object</li>
+</ul>
+
+<h3>3DC PLUG-INS</h3>
+
+<ul>
+<li><a href="http://www.highworth.freeuk.com/mstsmisc.htm">3D Canvas Plug-In Page</a> for 
+Paul Gausden' Engineer Plug-In and Rod Animator Plug-In</li>
+</ul>
+
+<h3>PREREQUISITES</h3>
+
+<ul>
+<li>Motion is being created for only two parts contained in the following two groups;</li>
+<li><font color="blue">PISTON ROD</font> - connected to wheel - circular motion around wheel;</li>
+<li><font color="green">PISTON</font> - connects the <font color="green">PISTON</font>'s shaft and <font color="blue">PISTON ROD</font> - back and forth motion;</li>
+<li><font color="blue">PISTON ROD</font> Group - must be a child group of wheel it connects to;</li>
+<li><font color="green">PISTON</font> Group - must be child group of your <font color="810000">MAIN</font> group and not part of the <font color="810000">WHEEL</font> group;</li>
+<li><font color="810000">PISTON CYLINDER</font> Group - Non-Moving - this is the actual cylinder on a steam locomotive 
+that houses the piston head;</li>
+<li><font color="810000">WHEEL</font> Group - This is the set of wheels that the <font color="blue">PISTON ROD</font> connects to;</li>
+<li>ENGINEER Plug-In was used and all motion and is referenced to the starboard (right) 
+side wheels. This also automatically animates all the <font color="810000">WHEELS</font> and <font color="810000">CONNECTING RODS</font>;</li>
+<li>For simplicity each group will contain only one part: once the motion of the 
+group is correct I found it fairly easy to add additional parts as necessary;</li>
+<li>The "Length" of the <font color="blue">PISTON ROD</font> is from the wheel connection point to the piston 
+connection point. This is usually the rod length without bearings attached.
+</li>
+</ul>
+<h3>REFERENCE IMAGE</h3>
+
+<ul><li><font color="blue">PISTON ROD</font> is Blue</li>
+<li><font color="green">PISTON</font> is Green</li></ul>
+
+<img src="images/RodAnimatio.jpg" width="800" height="600" alt="" border="0">
+<p>
+<hr SIZE=0 WIDTH="100%">
+
+<h2>LET's START</h2>
+
+I start with the starboard side:
+
+<h3><font color="810000">PISTON CYLINDER</font></h3>
+
+<ul>
+<li>Create the <font color="810000">PISTON CYLINDER</font> (Non Moving Part) and place it in proper position;</li> 
+<li>Ensure "pivot point" is center of cylinder;</li>
+<li>Move it into your locomotive's <font color="810000">MAIN</font> Group.</li>
+</ul>
+
+<h3><font color="blue">PISTON ROD</font></h3>
+<ul>
+<li>Create the <font color="blue">PISTON ROD</font> and record its length;</li>
+<li>Run SHIFT CENTER (now also an operation) with the aft face of the <font color="blue">PISTON ROD</font> selected;</li> 
+<li>Drag the <font color="blue">PISTON ROD</font> and drop it in the <font color="810000">WHEELS</font> group it connects to. It 
+needs to be a child group of the desired <font color="810000">WHEELS</font> group; </li>
+<li>The "pivot point" of the <font color="blue">PISTON ROD</font> must be the same as the point of attachment
+on the desired wheel - usually aft end of the <font color="blue">PISTON ROD</font>.</li>
+</ul>
+
+<h3><font color="green">PISTON</font></h3>
+<ul>
+<li>Create the <font color="green">PISTON</font> (actually the part that connects the <font color="green">PISTON</font>'s shaft to the <font color="blue">PISTON ROD</font>).
+Once complete this group usually contains the piston shaft, some sort of piston guide, 
+and the bearing that connects the piston shaft to the <font color="blue">PISTON ROD</font>;</li>
+<li>Move the <font color="green">PISTON</font> into the <font color="810000">MAIN</font> Group for your locomotive;</li>
+<li>The "pivot point" of the <font color="green">PISTON</font> must be centered on the <font color="810000">PISTON CYLINDER</font> 
+x axis. All other axis changed by Rod Animator Plug-In.</li>
+</ul>
+<h3>RUNNING ROD ANIMATOR</h3>
+<ul>
+<li>At this point you should be able to run the Rod Animator Plug-In:<br>&nbsp;
+<ul><li>First select the starboard wheel that the <font color="blue">PISTON ROD</font> is connected to.  Again, 
+<font color="blue">PISTON ROD</font> needs to be child of this group;</li>
+<li>Now run the Rod Animator Plug-In: you should see the name of your <font color="blue">PISTON ROD</font> 
+group displayed in the first field.  Select it;</li>
+<li>In the bottom field you need to scroll through you hierarchy to find the <font color="green">PISTON</font> 
+group associated with the <font color="blue">PISTON ROD</font> you are trying to animate: select this as well;</li>
+<li>Input the length of the <font color="blue">PISTON ROD</font> you recorded earlier. Note the KEY FRAMES set 
+to 16;</li>
+<li>Just hit the START button.</li></ul> 
+<br> &nbsp;
+</li>
+<li>Your first <font color="blue">PISTON ROD</font> and <font color="green">PISTON</font> should now be animated.</li>
+</ul>
+
+<h3>REPEAT PROCESS FOR OTHER SIDE</h3>
+<ul>
+<li>Copy all the necessary parts and procedures to the port side following the 
+procedures above.</li>
+<li>The only real difference is that you still select the <b>starboard side wheel</b> 
+to animate the port side <font color="blue">PISTON ROD</font> and <font color="green">PISTON</font>.</li>
+<li>The pivot points must be centered to the port side of the locomotive as well.</li></ul>
+
+<h3>REDO ALL ANIMATIONS TO 16 KEY FRAMES</h3>
+<ul>
+<li>The ENGINEER PLUG-IN sets all KEY FRAME animations to 8: we need to change them all 
+to match 16 otherwise it will not work properly.  Again the Rod Animator Plug-In does 
+this for you:
+<br>&nbsp;
+<ul><li>Select the desired <font color="810000">WHEELS</font> group that the <font color="810000">CONNECTING RODS</font> built by the 
+ENGINEER Plug-In are attached to;</li>
+<li>Run the ROD ANIMATOR Plug-In once again;</li>
+<li>Select the <font color="810000">CONNECTING ROD</font> group displayed in the top field: select 
+the "WHEEL ANIMATION" check box: the bottom field should disappear;</li>
+<li>Press the start button and the wheel should be animated;</li>
+<br>&nbsp;
+</li></ul>
+<li>Repeat for other side.
+</li>
+</ul>
+<h3>RE-ANIMATING WHEELS THAT DO NOT HAVE RODS ATTACHED</h3>
+<ul>
+<li>Just select the starboard wheel. Run the Rod Animation Plug-In, but do not press
+anything except the OK button;</li>
+<li>The Rod Animator Plug-In will give an error, but it has finished the process correctly.</li>
+</ul>
+
+<h3>CLEARING ALL ANIMATIONS ON AN OBJECT</h3>
+<ul>
+<li>Clearing: on the animation toolbar at the bottom, there is a button to 
+remove animations for an entire group (next to the remove all animations button!).
+</li></ul> 
+<h3>FINAL NOTES</h3>
+
+<ul><li>Save Save Save - I like saving a copy of my work prior to animating anything;</li>
+<li>Always do a final check of the animation in MSTS - there is no substitute.</li></ul>
+
+<hr SIZE=0 WIDTH="100%">
+<h3>
+<font face="Verdana">Author:</font></h3>
+<font face="Verdana">Scott Brunner (aka scottb13)
+<br>Email: 
+<a href="mailto:scottb613@yahoo.com">scottb613@yahoo.com</a></font>
+<p>
+<hr SIZE=0 WIDTH="100%">
+<ul>
+<li>
+<font face="Verdana"><font color="#000000"><a href="#top">Return to top
+of this page</a></font></font></li>
+
+<li>
+<font face="Verdana, helvetica, arial"><font color="#000000"><a href="index.html">Other
+tutorials (complete list)</a></font></font></li>
+
+<li>
+<font face="Verdana"><font color="#000000"><a href="../index.html">Return
+to the <b>Australian MSTS @ steam4me</b> start page</a></font></font></li>
+</ul>
+<font face="Verdana"><font size=-2>30 October 2004</font></font>
+<hr SIZE=0 WIDTH="100%">
+</body>
+</html>
+

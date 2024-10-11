@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <meta name="Author" content="Jeff Krausyao">
+   <meta name="GENERATOR" content="ConTEXT  v0.98">
+   <meta name="Description" content="Creating a Diamond Crossover complete with Track Node">
+<title>Fixing Double Slips For Correct Signal Protection - at The Steam4me Site</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Fixing Double Slips For Correct Signal Protection</font>
+                        <br>by Yuri Sos</h2>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                             <p>In his tutorial on <a href="make_xover.html">Creating a Diamond Crossover complete with Track Node </a>, Jeff Kraus-Yao demonstrated how to add nodes to protect diamond crossings to avoid collisions between Player and AI trains on the opposing tracks.</p>
+
+                             <p>I took that a step further and demonstrated the <a href=gantlet.html>use of nodes to protect gantlet track</a>.</p>
+
+                             <p>What some route-builders don't realise, double slips are basically a combination of diamond crossing and short gantlet track.  You will need to add extra nodes to protect against side-swipe accidents.</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "problem">
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">The Problem</h2>
+			<div class="entry">
+
+                        <p>You normally create a double slip using a diamond crossover and four sets of points (switches).</p>
+
+                        <p>Here's a typical double-slip as seen in the Activity Editor: you will note that there is a node protecting the central cross-over.  However the diverging routes on either side don't intersect and therefore have no nodes:  no nodes = no protection:</p>
+
+                        <p><img src="images/dbl_slip_08.jpg" border="0"></p>
+
+                        <p>The central node protects the crossing and, as long as either train uses the diamond crossing, signalling works correctly and trains are protected from collision, as in image below (<i>player train is passenger tram at left, AI train is the freight tram consist at right</i>) where the player tram has the road over the diamond:</p>
+
+                        <p><img src="images/dbl_slip_01.jpg" border="0"></p>
+
+                        <p>However if both paths are set to use the diverging route through the double-slip, the paths do not intersect and the trains do not recognise the presence of each other - with predictable results! (see next three images):
+
+                        <p><img src="images/dbl_slip_02.jpg" border="0">
+                        <br /><img src="images/dbl_slip_03.jpg" border="0">
+                        <br /><img src="images/dbl_slip_04.jpg" border="0"></p>
+
+                        <p>Ouch!</p>
+
+                        <p>So that's the problem - the solution is quite easy.</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="solution">
+		</div>
+
+    <!--- end cause --->
+
+
+    <!--- sol hard --->
+
+		<div class="post">
+			<h2 class="title">The Solution</h2>
+			<div class="entry">
+
+			      <p>These two non-intersecting tracks are like a short piece of gantlet track and you will need to place two pairs of nodes and link them in order to protect the diverging routes.  I assume you will have read and understood the <a href=gantlet.html>gantlet track tutorial</a> because I won't repeat the detail here.</p>
+
+			      <p>In RE, place two deer hazards on one of the through tracks just outside the red line marking the points. Save and quit RE.  Using a text editor (eg <a href=context.html>ConTEXT</a>), convert them from HazzardItems to CrossOverItems and link them.</p>
+
+                        <p><img src="images/dbl_slip_11.jpg" border="0"></p>
+
+                        <p>Repeat for the other through track.  I now do these in pairs (as opposed to all four at once as in the gantlet tutorial to minimise the risk of error).</P
+
+                        <p>When you've finished, you should have four nodes outside the nodes for the points.......</P>
+
+                        <p><img src="images/dbl_slip_09.jpg" border="0"></p>
+
+                        <p>.... and they should be linked as indicated below.</p>
+
+                        <p><img src="images/dbl_slip_10.jpg" border="0"></p>
+
+                      	</div>
+          			<a Name="test">
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+
+		</div>
+
+    <!--- end sol hard --->
+
+    <!--- sol hard --->
+
+		<div class="post">
+			<h2 class="title">Time To Test Your Work</h2>
+			<div class="entry">
+
+                        <p>Now let's try this activity again.  The AI trams are now held at their signal, the player tram's route is proceed and set to diverge:</p>
+
+                        <p><img src="images/dbl_slip_05.jpg" border="0"></p>
+
+                        <p>The player tram has now passed through the diverging route on the double slip and the signal now clears for the AI consist at right, which is also set for its diverging route:</p>
+
+                        <p><img src="images/dbl_slip_06.jpg" border="0"></p>
+
+                        <p>No collisions as both trains proceed on their way.</p>
+
+                        <p><img src="images/dbl_slip_07.jpg" border="0"></p>
+
+                        <p>A simple fix, but one which should enable the route-builder to correctly protect and signal all routes through a double-slip.</p>
+       			</div>
+
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+
+		</div>
+
+    <!--- end sol hard --->
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#problem">The Problem</a>
+                 <br><a href="#solution">The Solution</a>
+                 <br><a href="#test">Testing Your Work</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 28 May 2011</center></p>
+</div>
+</body>
+</html>

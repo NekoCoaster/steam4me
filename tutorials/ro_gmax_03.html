@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>A Coach made with Gmax Chapter 3 - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <meta name="Author" content="Richard Osborne">
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+        <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">A Coach Made With GMax</font>
+                        <br>by Richard Osborne</h2>
+                        <p></p>
+			<h2 class="title">Chapter 3: First Texturing</h2>
+ 			   <div class="entry">
+                   
+                   <p><IMG SRC="images/ro_gmax_03_01.jpg" BORDER="0" WIDTH="600" HEIGHT="459" ALIGN="bottom" ALT=""></p>
+
+                   <P>The first texture we need is for the calibration box. I'm assuming you have a decent plan, probably a .gif or .jpg. Carefully isolate the side as measured, then the end. Save both as .tif files in your project directory. Gmax handles .tif & .ace files - other file types are problematical. You need to convert .tga files to .ace files before applying textures. This gives one more step than TSM but it is necessary.</p>
+                   
+                   <P><IMG SRC="images/ro_gmax_03_02.jpg" BORDER="0" WIDTH="201" HEIGHT="284" ALIGN="bottom" ALT=""></p>
+
+                   <P><IMG SRC="images/ro_gmax_03_03.jpg" BORDER="0" WIDTH="600" HEIGHT="134" ALIGN="bottom" ALT=""></p>
+
+                   <P>I don't like to have programs running in the background so I'd have exited Gmax before opening the graphics program. In Gmax open the project. Make the box active & go into "polygon" mode. Drag the mouse over the ends to highlight them. We'll only make limited use of the calibration box; it isn't necessary to have both sides & both ends.</p>
+
+                   <P>On the top toolbar find the "Trainsim Materials Editor" button, it's the one which looks like a red ball with acne. A description of this is in the readme file in the gamepack, sadly I found this confusing. Obviously we're starting with "New", change the name to "End", then "Open". You'll see that it opens in the project directory - you could specify another directory but why make life hard? You'll also see that it lists .ace files; press the button by "Files of Type"...It lists .jpg, .tga & .bmp but will refuse to use them, you'll need to use nothing but .tif & .ace files. Gmax has a bad habit of completely mangling files if you give the slightest excuse. Specify .tif & highlight "End", make sure "Preview" is ticked, you'll see your texture file. Click "Open".</p>
+
+                   <P><IMG SRC="images/ro_gmax_03_04.jpg" BORDER="0" WIDTH="443" HEIGHT="466" ALIGN="bottom" ALT=""></p>
+
+                   <P>The file image now appears in the preview image of the material editor - note that it's square. Don't worry it's only square in the window. Don't bother about the settings. Make sure the end polygons are still highlighted & press "Put!". Notice you have "Put!" & "Put..."; "Get!" & "Get..." You'll use the ones with the exclamation marks. Press the Display icon on the side panel which looks like a TV set, make sure wireframe & shaded are both ticked as "Material Color". Switching from material to object colour is very useful later when the texture might prove confusing.</p>
+
+                   <P>Something should have changed - the polygons should show white. On the side panel go into "modify". Under the name & colour boxes is "Modifier List" - press the arrow. A daunting list will show. The only two we actually need are "UV Coordinate Modifiers" "UVW Map" "Unwrap UVW" If you're feeling brave you could modify the menu so that all the rest are hidden.</p>
+
+                   <P>Press "UVW Map". You'll see that the texture can be applied in X, Y or Z plane by pressing the X, Y, Z buttons under "Alignment". Only one will make sense. On this occasion the texture will cover the whole face; press "Fit". The texture will fit the polygon BUT... it might be at 90 degrees. I'm not completely sure why the texture appears at right angles, it has to do with the axis orientation, but we might as well deal with it, it'll crop up again in future..</p>
+
+                   <P><IMG SRC="images/ro_gmax_03_05.jpg" BORDER="0" WIDTH="422" HEIGHT="306" ALIGN="bottom" ALT=""></p>
+
+                   <P>Press "Unwrap UVW" then "Edit". a screen will appear  with the texture file showing; the file will appear upright. The 4 corners will be highlighted. Press the "Rotate" button & pull the points round 90 degrees. You'll see the image changed on the main screen. If the image is now showing left-to-right either rotate it 90 degrees the other way or press the "Flip" icon which is the one with 2 triangles.</p>
+
+                   <P><IMG SRC="images/ro_gmax_03_06.jpg" BORDER="0" WIDTH="575" HEIGHT="549" ALIGN="bottom" ALT=""></p>
+
+                   <P>When the image is in the right place we need to lock it so that it can't be overwritten. This is the bit which really confused me at first. On the side panel you'll still have the polygon option showing with a box next to the words "Editable Mesh" showing a negative symbol; put the mouse over this box & click. The list will collapse & the sign turn positive. Now right click, a small screen will appear with the words "Collapse All" highlighted - everything else to the top of the screen will be greyed-out. Press "Collapse All", the references to UVW editing will have gone. Regard this "Collapse All" as "Lock Everything" it is the key to texturing. Notice that in Gmax you can't clear textures you can only replace them.</p>
+
+                   <P>Repeat for the sides which obviously uses a new texture.</P>
+
+                   <P>Highlight the "Perspective View"; press the icon with 2 squares, bottom right. This will show just the Perspective View, press the "Zoom Extents" to show the box maximum size. Press the "Rotate" icon, a circle with 4 boxes will appear. It's very easy to get lost using this - dragging the side boxes rotates the image sideways, the top boxes rotate up & down. Dragging outside the circle rocks the horizon. Right click to lose the rotate
+tool. Only move the image a little at a time. Don't worry about the distortion on the perspective view. You can only see polygons which faces the viewer, you'll see through those facing away.</P>
+
+                   <P><IMG SRC="images/ro_gmax_03_07.jpg" BORDER="0" WIDTH="600" HEIGHT="436" ALIGN="bottom" ALT=""></P>
+
+                   <P>It's about time to save the project. You can set Gmax to save incrementally if you wish.</P>
+
+                </div>
+			 	<p class="meta"><span class="posted"><a href="#">Return to top of page</a></span><a href="ro_gmax_04.html" class="permalink">Go On To Chapter 4</a></p>
+
+		</div>
+
+    <!--- end end overview --->
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+<ol>
+<li><a href="ro_gmax_00.html">Overview</a></li>
+<li><a href="ro_gmax_02.html">Getting started</a></li>
+<li><a href="#">First Texturing</a></li>
+<li><a href="ro_gmax_04.html">Modelling For Real</a></h3></li>
+<li><a href="ro_gmax_05.html">Texturing The Body</a></h3></li>
+<li><a href="ro_gmax_06.html">Alpha Channels</a></h3></li>
+<li><a href="ro_gmax_07.html">Wheels and Bogies</a></h3></li>
+<li><a href="ro_gmax_08.html">Interiors</a></h3></li>
+<li><a href="ro_gmax_09.html">Export to MSTS</a></h3></li>
+<li><a href="ro_gmax_10.html">Texturing tricks and losing polygons</a></h3></li>
+<li><a href="ro_gmax_11.html">More Tricks and Tips</a></h3>
+<li><a href="ro_gmax_12.html">More about hierarchies</a></h3>
+</ol>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 24 August 2004, 19 March 2010</center></p>
+</div>
+</body>
+</html>
+
+

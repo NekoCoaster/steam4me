@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>Adding Freight Loads To Gondolas And Flat Wagons (using FreightAnimation) - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+	</font>
+        
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Adding Freight Loads To Gondolas And Flat Wagons (using Freight Animation)</font>
+                        <br>by Tim Muir &amp; Chuck Zeiler</h2>
+                        <p></p>
+ 			   <div class="entry">
+
+                        <p>You will need one additional tool to use the <b>FreightAnim</b> line to add a load to a freight car (or to add a person to a passenger car): Shape File Manager (SFM) is required to adjust the load upward, and possibly in other directions, depending on where you want the load to appear in the car (wagon). <a href="../utilities/shape_file_manager.html"><b>You can get SFM here</b></a>.</p>
+
+                        <p>Add the xxx.s, xxx.sd, and xxx.ace files to the wagon’s folder. In this case, I will add Paul DeVerter's SP phone booth to a CLE flat car.</p>
+
+                        <p>The line to add the phone booth to the flat car looks like this:</p>
+
+<font color=blue>
+<pre>Wagon ( CLEflat
+&#09;Type
+&#09;&#09;( Freight )
+&#09;&#09;&#09;WagonShape ( CLEflat.s )
+&#09;&#09;&#09;FreightAnim ( TelephSP.s 1 1 )&#09;<font color="#FF0000">&lt;------ goes here</font>
+&#09;&#09;&#09;Size ( 2.9635m 1.26332m 12.649200m )
+&#09;&#09;&#09;Mass ( "27.396t" )
+&#09;&#09;&#09;WheelRadius ( 33in/2 )</tt></b>
+&#09;&#09;&#09;InertiaTensor ( Box (2.9635m 1.26332m 11.984183m) )
+</pre></font>
+
+                        <p>The <b>1 1</b> adjusts the load during operation: the original design was to make the coal load get smaller (move down) in a steam locomotive tender while the train used it up. For our purposes, the load stays put, so use 1 1 (see notes below for more information on this).</p>
+
+                        <p>When it first appears in the sim, the load will be on the ground, in the center of the wagon, just the way it was designed to appear in MSTS.</p>
+
+                        <p><img SRC="images/fr_an_01.jpeg" NOSAVE height=540 width=720></p>
+
+                        <p>You will need to raise it up to the deck of the flat car. Launch SFM, and locate the TelephSP.s file. I’ve not had any luck uncompressing an .s file in SFM, so I use <a href="../Route_Riter/index.html"><b>Route Riter </b>(available here)</a> to uncompress the file. The file has to be uncompressed to manipulate it with SFM.</p>
+
+                        <p>To uncompress the .s file in Route Riter, make certain that the file appears selected in both the left and right panes, and select MSTS File Utils tab, and click on the Uncompress .s button.</p>
+
+                        <p><img SRC="images/fr_an_02.jpeg" NOSAVE height=610 width=750></p>
+
+                        <p>Once the file is uncompressed, select its Options in SFM, and click on Shift.</p>
+
+                        <p><img SRC="images/fr_an_03.jpeg" NOSAVE height=328 width=740></p>
+
+                        <p>This will bring up a window, allowing you to shift the object in any (or all) of three planes.</p>
+
+                        <p>The X axis shifts the object left for negative values and right for positive values.
+                        <br>The Y axis shifts the object down for negative values and up for positive values.
+                        <br>The Z axis shifts the object backwards for negative values and forwards for positive values.</p>
+
+                        <p>For instance, a –1.0 on the X axis would place the phone booth on the left side of the freight car one meter from the centre point, looking at it from behind the flat car. A 1.0 would move it to the right of centre.</p>
+
+                        <p>Right now, we are interested in raising the phone booth, I guessed about a meter, so I entered 1.0 into the Y axis, leaving the others at zero.</p>
+
+                        <p><img SRC="images/fr_an_04.jpeg" NOSAVE height=323 width=725></p>
+
+                        <p><img SRC="images/fr_an_05.jpeg" NOSAVE height=540 width=720></p>
+
+                        <p>This did not quite do the trick, so I went back to SFM, and moved the Y axis a little more, 0.3, and it’s pretty close. You get the idea. You can tweak the numbers until you are satisfied.</p>
+
+                        <p><img SRC="images/fr_an_06.jpeg" NOSAVE height=540 width=720></p>
+
+                        <p>As another example, here I’ve placed a motorman in the cab of the line car, by shifting both the Y axis and the Z axis, until he was where I wanted him. If the controls were on the right side of the car, instead of the middle, I would also have adjusted the X axis, probably 1.0.</P>
+
+                        <p><img SRC="images/fr_an_07.jpeg" NOSAVE height=560 width=720>
+
+                        <p>Other points:
+                        <ul>
+                            <li>The object does not add any mass or weight to the wagon, so you would need to adjust the weight, and possibly the friction, to simulate the load;</li>
+                            <li>The added load is unique to the wagon to which it is added. You could, however, copy the three files for the load to the depressed center flat car, then using SFM, adjust the Y axis with negative numbers, lowering it onto the deck;</li>
+                            <li>I place the FreightAnim line near the top of the xxx.wag file, for easy access.&nbsp; I have not tried placing it anywhere else, so I cannot say if it would work if it were placed, for example, in the middle of the brake section;</li>
+                            <li>The wagon will only accept one FreightAnim line, and that line will only accept one shape (xxx.s) file. If I wanted three telephone booths to appear on the flat car, I would have to make one shape file that had three telephone booths in it.</li>
+                            <li>The design of the FreightAnim line provides for declining coal loads in the tender, the first figure being the "full" coal height, the second the "empty" coal height.&nbsp; Thus
+                            <br><b>FreightAnim ( Coal.s 2.75 1.0 )</b>
+                            <br>will cause the load to lower by 1.75 metres from full to empty during game play.  It might take some time for the effect to play out;</li>
+                            <li>You can also use FreightAnim () to add parts to an engine (one shape file only per engine). In the example above, the motorman was added to the line car. FreightAnim has been used to change the numbers on the locomotives and to add details such as headlights (like the Southern Pacific headlight setup) to an existing model.</li>
+                        </ul>
+                        </p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "adjust">
+		</div>
+
+    <!--- end end overview --->
+
+
+<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 14 Feb 2004, 13 April 2010</center></p>
+</div>
+</body>
+</html>

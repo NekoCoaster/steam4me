@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <meta name="Author" content="Jeff Krausyao">
+   <meta name="GENERATOR" content="ConTEXT  v0.98">
+   <meta name="Description" content="Creating a Diamond Crossover complete with Track Node">
+<title>Creating a Diamond Crossover complete with Track Node - at The Steam4me Site</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Creating a Diamond Crossover complete with Track Node</font>
+                        <br>by Jeffrey Kraus-Yao</h2>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                             <p>In his tutorial on <a href="diamond_X.html">creating diamond crossings</a>, Vince Cockeram demonstrated that one track simply laid over another might be an expedient way to create a diamond crossing, but that it would not be recognised in the sim as such and thus trains would collide on the opposing tracks.  A crossing node is required at the junction and up till now, only diamond crossings specially created and registered in the global tsection.dat, could be correctly signalled.</p>
+
+                             <p>If it is not possible to change the track to include this type of diamond crossover track shape, it is now possible to add a crossing node by
+direct editing of the track database files.</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "procedure">
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">The Procedure</h2>
+			<div class="entry">
+
+                        <p>Here we have two tracks crossing at grade - in fact they are two a1t1000r10d.s shapes laid one over the other.  If left as such, there will be no protection of this crossing and approaching trains may well collide.</p>
+
+                        <p><img src="images/make_xo_node_11.jpg" border="0"></p>
+
+                        <p>Start by <a href="../Route_Riter/route_backup.html">backing up your route</a>.</p>
+
+                        <p>In Route Editor, start by placing a speed post where the two tracks cross. This will create two SpeedPostItem elements and link each TrVectorNode to the speed post by a TrItemRef element.</p>
+
+                        <p><img src="images/make_xo_node_01.jpg" border="0"></p>
+
+                        <p>Save changes and quit Route Editor.</p>
+
+                        <p>Using your favourite unicode-aware editor (<a href="context.html">ConTEXT</a> is used in these screenshots), open the two track database files, route.tdb and route.tit and scroll to the bottom, thus: as they are the last added items, you'll find them at the bottom of the file: here we have the .TDB and the .TIT files:</p>
+
+                        <p><img src="images/make_xo_node_02.jpg" border="0">
+                        <br><img src="images/make_xo_node_03.jpg" border="0"></p>
+
+                        <p>We're going to make a few changes to both nodes in both files.</p>
+
+                        <ul>
+                           <li>Change <b>SpeedPostItem</b> to <b>CrossoverItem </b>: in two places in the two files;</li>
+                           <li>Change the "6" in the TrItemSData to a "2". If this is not done the signals will not be enabled by the dispatcher;</li>
+                           <li>Delete the complete line containing <b>TrItemPData</b>;</li>
+                           <li>Change <b>SpeedpostTrItemData</b> to <b>CrossoverTrItemData</b>: in two places in the two files; if this is not done then the crossing will not be protected by the signals;</li>
+                           <li>The first parameter of the <b>CrossoverTrItemData</b> element is the TrItemId of the other pair of the crossing. The second parameter is a track shape. Choose the number of a crossing track and it will use the ClearanceDist defined for that track shape in the global tsection.dat file. Also place this track shape somewhere on your route so that Route Riter will produce a correct list of track shapes used by your route.</li>
+                        </ul>
+
+                        <p>Save your changes.  You should have both the .tdb and .tit files looking something like this:</p>
+
+                        <p><img src="images/make_xo_node_04.jpg" border="0">
+                        <br><img src="images/make_xo_node_05.jpg" border="0"></p>
+
+                        <p>Now let's have a look at this diamond crossing in Activity Editor.  Crossing nodes are visible, protecting this diamond.</p>
+
+                        <p><img src="images/make_xo_node_06.jpg" border="0"></p>
+
+                        <p>Now if you want to be <b>really</b> fussy, you can adjust the position of the nodes by altering the first parameter of the TrItemSData element, eg  TrItemSData ( 155.18 00000002 ), where 155.18 is the distance in meters from the start of the trackvector. This number could be changed for both entries so the two nodes are on top of each other and then appear as one.  In this instance, moving the first node from 155.18 to 155.30, the second from 160.405 to 160.90 has the nodes one on top of the other (the distance moved, 12cm and 49cm respectively indicates that the nodes were still within the track gauge and moving them was a waste of time). </p>
+
+                        <p><img src="images/make_xo_node_06a.jpg" border="0"></p>
+
+                        <p>Ok, now let's open Route Editor.  As you open it, you may see an error message like this:
+
+                        <p><img src="images/make_xo_node_07.jpg" border="0"></p>
+
+                        <p>If you do, simply answer "yes" and continue.  The Speedpost entries will be deleted in the World files.  This will make changes irreversible.  Answer "No" if you may want to convert the crossing node back to a speedpost for deletion with Route Editor.</p>
+
+                        <p>Now place your signals, save and quit Route Editor.</p>
+                        
+
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="test">
+		</div>
+
+    <!--- end cause --->
+
+
+    <!--- sol hard --->
+
+		<div class="post">
+			<h2 class="title">Test Your Installation</h2>
+			<div class="entry">
+
+                        <p>It's time to create an activity and test.</p>
+
+                        <p>Here we have a team-ALCO X class locomotive as the player engine and the default GP38-2 as the traffic (AI) engine.  Upper quadrant semaphores have been placed so that you can see the aspect clearly.  The loco has a green signal whilst the diseasel is held behind a red signal on the crossing track.</p>
+
+                        <p><img src="images/make_xo_node_08.jpg" border="0">
+
+                        <p><img src="images/make_xo_node_09.jpg" border="0">
+
+                        <p>As soon as the train clears the crossing, the signal for the traffic train is set to green and the GP38 begins to move off.</p>
+
+                        <p><img src="images/make_xo_node_10.jpg" border="0"></p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end sol hard --->
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#procedure">The Procedure</a>
+                 <br><a href="#test">Test Your Work</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 7 April 2008, 8 March 2010</center></p>
+</div>
+</body>
+</html>

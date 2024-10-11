@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <meta name="Author" content="MSTS-Bin George, Otto Wipfel, Yuri Sos">
+   <meta name="GENERATOR" content="ConTEXT  v0.98">
+   <meta name="Description" content="Improving MSTS: Increasing memory that can be used by MSTS">
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+
+   <title>Better Lighting for Locomotives and Wagons - at the steam4me site</title>
+
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title"><title>Better Lighting for Locomotives and Wagons</title></font>
+                        <br>by Yuri Sos<br>(utilising research and development by Robert Fontaine)</h2>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+                           <p>One of the most obvious parts of a locomotive are the lights. While the lighting as designed by Kuju is satisfactory for the simplest lighting schemes, you'll run into problems as soon as you try to enhance your model with multiple lights or lights side-by-side.</p>
+                           </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "default">
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- default light --->
+
+		<div class="post">
+			<h2 class="title">The Default Light -  And Its Limitations</h2>
+			<div class="entry">
+
+                        <p>The light is actually a 2-polygon square, the appearance of which is controlled by a combination of parameters in the Lights ( Light (State())) section:</p>
+                        <ul>
+                            <li>Radius: the size of the light</li>
+                            <li>Colour (in transparency | red | green | blue);</li>
+                        </ul>
+
+                        <p>and a texture file called <b>liteglow.ace</b> located in the MSTS/Global/Textures folder: this texture file looks like this:</p>
+
+                        <p><img src="images/liteglow_ace_default.jpg" height="64" alt="" border="0">
+
+                        <h3>So what's wrong with this setup?</h3>
+
+                        <p>Mostly nothing, if you're only interested in simple and single lights.</p>
+
+                        <p>It's when you try to do more complicated things that issues arise.  The amount of "transparency" (the black section in the image above that's supposed to be transparent) around the visible light can interfere with other lights and become visible (see image below).  This is especially noticeable when you try to place two lights side-by-side (there are other techniques you can use to stop this happening with vertically-arranged lights).</p>
+
+                        <p><img src="images/liteglow_01.jpg" height="320" alt="" border="0"></p>
+
+                        <p>Even if you have simple lighting, problems occur when you try to size the light to cover the light shown on the model - you end up with an unacceptable glow extending beyond the limits of the light (even on marker lights), thus......</p>
+
+                        <p><img src="images/liteglow_03.jpg" height="360" alt="" border="0"></p>
+
+                        <p>.......or even poking through parts of the model like this......</p>
+
+                        <p><img src="images/liteglow_02.jpg" height="345" alt="" border="0"></p>
+
+                        <p>There is a solution.</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="fix">
+		</div>
+
+    <!--- end default light --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">So what can be done?</h2>
+			<div class="entry">
+
+                            <p>Many people have been experimenting with different settings and so on for some time.</p>
+
+                            <p><b><a href="mailto:the_genesis_man@cgocable.ca">Robert Fontaine</a></b> went straight to the source of the lights and modified the .ACE file that controls the physical appearance of the light.  His version of the <b>liteglow.ace</b> looks like this:</p>
+
+                            <p><img src="images/new_liteglow_ace.jpg" width="64" height="64" alt="" border="0"></p>
+                            
+                            <p>You'll need to reduce the radius in ENG files to accommodate the new lite_glow.ace (typically 50% of the original figures), but the results are certainly worth it.</p>
+
+                            <p>Compare these next three images with those above: the notes beneath each image may guide you:</p>
+
+                            <p><img src="images/liteglow_04.jpg" width="640" height="320" alt="" border="0"></p>
+
+                            <p>Note the light fills the texture light fitting below it with no glow spilling over the sides</p>
+
+                            <p><img src="images/liteglow_05.jpg" width="620" height="300" alt="" border="0"></p>
+
+                            <p>The lights now fill the texture light fitting beneath them - the overlap has disappeared leaving a small line that is almost unnoticeable (and could be further reduced by reducing the radius even further).</p>
+
+                            <p><img src="images/liteglow_06.jpg" width="300" height="345" alt="" border="0"></p>
+
+                            <p>(This is the default SD40-2) Note the lights now fill the textured lighting fitting with no bits poking through the light surround: a spectacular improvement over the default and one that could not have been accomplished without the new liteglow.ace.</p></p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="alter">
+		</div>
+
+    <!--- end cause --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Altering Default And Previously Installed Locomotives?</h2>
+			<div class="entry">
+
+                            <p>You will need to edit the radius in the lighting section in .ENG files you wish to use in the sim. Make a Backup of the ENG file you're about to open, then open the file of choice in Wordpad or a Unicode-aware editor such as <a href="http://www.railpage.org.au/steam4me/trainsim/tutorials/context.html">ConTEXT</a>, my favourite.</p>
+
+                            <p>Scroll down to the Lights section and find the light section you wish to modify: you will need to modify the Radius parameter (in the example image below, I've marked the line with asterisks).  Typically, you'll need to reduce the radius to 40-50% of the original.</p>
+
+                            <p><img src="images/liteglow_07.jpg" width="725" height="530" alt="" border="0"></p>
+
+                            <p>Save and quit and try out your altered lights in MSTS.</p></p>
+
+
+                            <p>Let's look at the default GP38 and observe the effects of changes to the ENG file when we use the new liteglow.ace: comments are under each image.  The headlights are set to "bright" for the screenshots.</p>
+
+                            <p><img src="images/liteglow_gp38_01.jpg" width="400" height="500" alt="" border="0"></p>
+
+                            <p>Totally default: liteglow.ace, radius of 0.5.  Notice the glow extending beyond the lights and the ditch light disappears into the front footwalk.</p>
+
+                            <p><img src="images/liteglow_gp38_02.jpg" width="400" height="499" alt="" border="0"></p>
+
+                            <p>The new liteglow.ace has been installed but the radii of the lights are unaltered in the ENG file: the lights are now much too big.</p>
+
+                            <p><img src="images/liteglow_gp38_03.jpg" width="400" height="500" alt="" border="0"></p>
+
+                            <p>This time the radius of the headlights have been reduced from the default 0.5 to 0.25 and the ditchlights even more from 0.5 to 0.2.  You'll now notice that the lights "fit" the textured light fittings far better, the ditchlight glow no longer dips into the footwalk and the overspill of glow has disappeared. This also shows that the light positions weren't really correct in the default locomotive. </p>
+
+                            <p><img src="images/liteglow_gp38_04.jpg" width="400" height="500" alt="" border="0"></p>
+
+                            <p>Finally, I've moved the lights closer together, changing the position of the top light <br>from <b>Position ( -0.00365 4.3885 6.90297 )</b>
+                            <br>to <b>Position ( 0.00 4.39 6.90 )</b> and the lower light is now
+                            <br> <b>Position ( 0.00 4.185 6.85 )</b> instead of <b>Position ( 0.00344 4.12601 6.84792 )</b>.</p>
+
+                            <p>This is now looking much better; I'd also change the colour from "ffffffff" to something like "ffF7EDC5", but that's beyond the scope of this article.</p>
+
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="summary">
+		</div>
+
+    <!--- end cause --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Summary</h2>
+			<div class="entry">
+
+                            <p>How can you identify locomotives that are <br>set up for the modified liteglow.ace?</p>
+
+                            <p>Robert has created an image that you will usually see on the loco description, in the ZIP file or on the installer that contains the locomotive.  It looks like this:</p>
+
+                            <p><img src="images/LightFx.gif" width="150" height="56" alt="" border="0"></p>
+
+                            <h3>Where do you get the new liteglow.ace?</h3>
+
+                            <p>Right here!</p>
+
+                            <p><a href="files/lightfx.zip">Click on this link</a> to download LightFx.zip, a small (31.7k) .ZIP file that contains the new liteglow.ace as well as the original (named default_liteglow.ace).  Unzip the file into your MSTS folder with "Use Folder Names" turned on.</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end cause --->
+
+    <!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#default">The Default Light</a>
+                 <br><a href="#fix">Improvement</a>
+                 <br><a href="#alter">Updating Existing Stock</a>
+                 <br><a href="#summary">Summary</a>                 
+
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 7 April 2008, 8 March 2010</center></p>
+</div>
+</body>
+</html>

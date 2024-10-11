@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>Increasing Route Editor Window Size - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li ><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Increasing Route Editor Window Size</font>
+                        <br>by Jim Steven, MCSE,&nbsp;<br>
+                            Senior Microsoft Windows Application Developer</h2>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                             <p><b>This tutorial contains information about editing the Windows Registry.  It is recommended for advanced users only.</b>  Always make a backup of the registry or at least the keys that you are modifying so you can restore them if needed.</p>
+
+                             <p>Does your current Route Editor window look like this:</p>
+                             <p><img SRC="images/rew01.jpeg"  height=751 width=839></p>
+
+                             <p>Would you prefer to see it look more like this:</p>
+                             <p><img SRC="images/rew02.jpeg"  height=775 width=1033></p>
+
+                             <p>The solution is in the Windows Registry.</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			  <a name="process">
+		</div>
+
+    <!--- end end overview --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">The Procedure</h2>
+			<div class="entry">
+
+                        <h3><font color=red>This tutorial contains information about editing the Windows Registry.  It is recommended for advanced users only.</font></h3>
+                        <p>Always make a backup of the registry or at least the keys that you are modifying so you can restore them if needed.</p>
+
+                        <p>The default editor window size (646 x 524) comes from two settings in the registry. Increasing these values will increase the "Editors and Tools" window with the menu on it.</p>
+
+                        <p>A third setting determines if the Route Editor will leave the window size alone.</p>
+
+                        <p><b>Note:</b> <br>When increasing the window size, don't forget those small windows that we use in the Route Editor.</p>
+
+                        <p>After you enlarge the main window, it will overlap and hide the smaller windows. You can move thebig window out of the way to reposition those small ones.</p>
+
+                        <p>One more thing about performance - There IS a logical reason that the Route Editor window is sized small.  Since the screen real estate is being increased, the video system has more to draw than before. You'll notice this with Carspawn objects or when you scroll your screen.</p>
+
+                        <p>I recommend making small increases until you find the values that work best on your system.</p>
+
+                        <p>In this example, I used Windows 98. The basic concept works with all Windows releases. <i>{Editor's Note: Jim wrote this tutorial in 2002 when processors and memory were at a much greater premium in both cost and resources than they are now.}</i>  </p>
+
+                        <ol>
+                            <li>Close Train Simulator or the Route Editor if they're running.
+                                <br>&nbsp;</li>
+
+                            <li>Start REGEDIT.
+
+                                <p>Open the key: <b>\HKLM\Software\Microsoft\Microsoft Games\Train Simulator\1.0\HWRenderer</b>.
+                                <p><img SRC="images/rew03.jpeg" NOSAVE height=67 width=160></p>
+                                </li>
+
+                            <li>Locate these keys:
+                                <br>Editor main window width
+                                <br>Editor main window height
+                                <br>&nbsp;</li>
+
+                            <li>Change the values to a preferred width / height. For a 1280x1024 Windows display, use 800x600 or 1024x768.  That leaves room for the little dialog windows too.
+                                <br>&nbsp;</li>
+
+                            <li>Locate the key:
+                                <br>Editor main window max
+                                <p>Change the value from <b>00 00 00 00</b> to <b>00 00 00 01</b>
+                                <br>(The last entry will be a one)</p>
+
+                                <p>This tells the Route Editor to maximize itself, but the Width and Height settings determine the overall size.</p>
+
+                                <p>Example: Changing a 1280x1024 capable system so the Route Editor uses 1024x768 requires these three edits.
+                                <p><img SRC="images/rew04.jpeg" NOSAVE height=52 width=428></p>
+
+                                <p>And, yes you <b>DO</b> see 01 00 00 00 here and not 00 00 00 01 as it was entered in the RegEdit dialog interface.  It relates to the Intel memory addressing architecture which stores things LOW BYTE then HIGH BYTE. When Windows grew up and started speaking two-byte WORD storage, Intel maintained the logic. They're stored LOW WORD then HIGH WORD.</p>
+
+                                <p>So a decimal 1 in double-words ends up looking reversed. It's still a 1.</p>
+                            </li>
+                        </ol>
+
+                        <p>Here's what my current route's train yard looks like from overhead using the larger settings:</p>
+
+                        <p><img SRC="images/rew05.jpeg" NOSAVE height=768 width=1023></p>
+
+                        <p>For the techies out there - The images are essentially stretched to fit the larger viewport. If you modify the camera config file settings for the editor camera (move it back and change the clipping size) then you'll increase what is seen in the new window rather than seeing a larger copy of it.  The compass at the top is also much easier to read.</p>
+
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+
+		</div>
+
+    <!--- end cause --->
+
+
+
+
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#process">The Procedure</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 12 May 2002, 19 April 2010</center></p>
+</div>
+</body>
+</html>

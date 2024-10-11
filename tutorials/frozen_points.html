@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>The Mystery Of The Frozen Points (Switches) Solved! - at The Steam4me Site</title>
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">The Mystery Of The Frozen Points (Switches) Solved!</font>
+                        <br>by Stephen Masters (images by Otto Wipfel)</h2>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                        <p>I have noticed that some switches/points in various routes don't animate when you press the "G" key.  Whether it has the line or not, the train will follow the indicated path but it doesn't look right.  The image below shows the points aligned for the straight line, but the points indicator is showing diverge:  the train will correctly diverge at these points.</p>
+
+                        <p><img SRC="images/stuck_points_01.jpg" width=593 height=613></p>
+
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "cause">
+		</div>
+
+    <!--- end end overview --->
+
+
+    <!--- cause --->
+
+		<div class="post">
+			<h2 class="title">Cause Of The Problem</h2>
+			<div class="entry">
+
+                        <p>Points that do not move are missing the <b>JNodePosn</b> line in the world file definition for that section.</p>
+
+                        <p><b>Here's an example of a Bad definition:</b></p>
+
+                        <p><table BGCOLOR="#FFFFCC" >
+                        <tr>
+                        <td>TrackObj (
+                        <blockquote>	UiD ( 85 )<br>
+                        	SectionIdx ( 29054 )<br>
+                         	Elevation ( 0 )<br>
+                          	CollideFlags ( 551 )<br>
+                           	FileName ( A1tPnt10d150rLftMnl.s )<br>
+                            StaticFlags ( 00200180 )<br>
+                            Position ( -157.209 10.3635 -554.669 )<br>
+                            QDirection ( 0 -0.411933 0 0.911214 )<br>
+                            VDbId ( 4294967294 )
+                                </blockquote>
+                            )</tr></td></table>
+
+                            <p>Editing and replacing the missing line fixes the errant problem.</p>
+
+                            <p><b>Proper definition:</b></p>
+
+                            <p><table BGCOLOR="#FFFFCC" >
+                            <tr>
+                            <td><font face="Verdana">TrackObj (
+                            <blockquote>
+                            	UiD ( 85 )<br>
+                                SectionIdx ( 29054 )<br>
+                                	Elevation ( 0 )<br>
+                                 <font color="blue">	JNodePosn ( -12034 14800 -157.209 10.3635 -554.669 )</font><br>
+                                 CollideFlags ( 551 )<br>
+                                 FileName ( A1tPnt10d150rLftMnl.s )<br>
+                                 StaticFlags ( 00200180 )<br>
+                                 Position ( -157.209 10.3635 -554.669 )<br>
+                                 QDirection ( 0 -0.411933 0 0.911214 )<br>
+                                 VDbId ( 4294967294 )
+                             </blockquote>
+                             )</tr></td></table>
+
+                             <p><b>JNodePosn definition:</b><br>
+
+                             JNodePosn ( <font color="blue">-12034 14800</font> <font color="red">-157.209 10.3635 -554.669</font> )
+                             <br>where
+                             <ul>
+                                 <li><font color="blue">-12034 14800</font> - this is the world file it is located in (its the world filename you are editing).</li>
+                                 <li><font color="red">-157.209 10.3635 -554.669</font> - notice that this matches the Position () of the shape.</li>
+                             </ul>
+                        </p>
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "hard">
+		</div>
+
+    <!--- end cause --->
+
+
+    <!--- hard --->
+
+		<div class="post">
+			<h2 class="title">Repair Method #1 - The Hard Way</h2>
+			<div class="entry">
+
+                 <p>To repair all the points/switches in a route involves working your way through all the route's WORLD files and inserting the JNodePosn ( .... ) line wherever it is missing. This could involve many points/switches. </p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "easy">
+		</div>
+
+    <!--- end hard --->
+
+
+    <!--- easy --->
+
+		<div class="post">
+			<h2 class="title">Repair Method #2 - The Easy Way</h2>
+			<div class="entry">
+
+                 <p>Open your donation-ware version of <a href="../Route_Riter/index.html">Route Riter</a>, version 7.0.62 or higher.</p>
+
+                 <ol>
+                     <li>Select your route and double-click; </li>
+                     <li>Click on "Confirm Route";</li>
+                     <li>Click on the MSTS File Utils Tab;
+                     
+                     <p><img SRC="images/stuck_points_04.jpg" width=837 height=647></p></li>
+                     <li>Click on the "Correct Stuck Points" button:
+                     <p><img SRC="images/stuck_points_05.jpg" width=837 height=647></p></li>
+
+                     <li>Route Riter commences checking all the World Files, uncompressing them and examining them.  This may take a while in the case of large routes, so go get a cup of coffeee while it works trough the .W files (as a guide, on my Pentium 3MHz, 2G memory, SATA hard-drive equipped machine, RR can check about 120 W files per minute).
+                     
+                     <p><img SRC="images/stuck_points_06.jpg" width=666 height=204></p></li>
+                     
+                     <li>When Route Riter has finished checking the files, it presents a report, detailing the points it has "unstuck":
+                     
+                     <p><img SRC="images/stuck_points_07.jpg" width=675 height=343></p></li>
+                 </ol>
+                 </p>
+              </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "desc">
+		</div>
+    <!--- end easy --->
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#cause">Cause Of Problem</a>
+                 <br><a href="#hard">Hard Repair</a>
+                 <br><a href="#easy">Easy Repair</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br>Updated: 7 Apr 2008, 07 April 2010</p>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

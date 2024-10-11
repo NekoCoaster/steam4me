@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>Removing Catenary From A Spur Line - at The Steam4me Site</title>
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Removing Catenary From A Spur Line</font>
+                        <br>by Lukas Lusser</h2>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                             <p><b>A simple question by way of an introduction</b>:  Has anyone had bad experiences by "tricking" the sim into removing catenary locally, for example above a spur that is supposed to be non electrified?</p>
+
+                             <p><img SRC="images/no_cat_01.jpg" height=540 width=720></p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "remove">
+		</div>
+
+    <!--- end end overview --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Removing Catenary</h2>
+			<div class="entry">
+
+                 <p>This is normally achieved by manually editing all the affected track sections of the said spur (no points, just simple straights or curves) in the .W file into static objects instead of a trackobj, while leaving the .tdb and .tit files untouched (assuming of course no interactive objects whatsoever are located on or past the edited spur, which could possibly cause erroneous .tdb and .tit entries for interactive objects no longer sitting on the track).</p>
+
+                 <p>This "ghost track" approach results in the catenary disappearing over that spur, while it can still be fully run by trains (including electric motors sticking their pans into the air). Spurs where prototypically a catenary would be either too dangerous (fuel dock) or plain non-sense (spurs under intermodal cranes, saw hoppers, coal shutes etc).   In order to improve realism, I alter all those spurs via the above mentioned way, as the very last thing before "closing the RE" on the route (in order to avoid messing up the .tdb or .tit by accidentally selecting one of the edited track pieces).</p>
+
+                 <p>No problems have emerged when testing the method under different conditions (no snow / snow etc). Switches into said spur worked fine: the track sections edited into scenery objects begin one or two sections past the point so no problem with missing junction nodes should occur (switches are referenced in the .TDB to the UID the switch has within the .w file, whereas the end node UID is irrelevant).</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "test">
+		</div>
+
+    <!--- end end overview --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Testing And Results</h2>
+			<div class="entry">
+
+                <p>Images show the spurs appearing normally in the AE: these are from a test activity which includes dropping the tankers exactly in said spur. I saved and exited thereafter, loaded again, did some more shunting, drove on a few tiles, saved &amp; exited, loaded, reversed, came back, still no problem.</p>
+
+                <p><img SRC="images/no_cat_02.jpg" NOSAVE height=540 width=720></p>
+                
+                <p>The result:  trains rolled in and over the edited sections without fault, stayed put after uncoupling, stayed put after saving and re-loading the activity, could be picked up again. Everything looked normal, as with any "ghost" track edited out of the tile but left in the .TDB.</p>
+
+                <p>I carefully tried the same on a siding which still had the SidingItem markers, a speed limit at its end, a CollideObject (the nastelbuff) and SoundRegions placed on it - and it all still worked nicely, without error messages either in the RE or the Sim itself - at least as long as I didn't try to select any of the interactive items mentioned (which I didn't want to risk at that time). So I'm actually investigating how far I can stretch this trick, yet I'm still skeptical about leaving interactive items in, even if it surprisingly seemed to work in the first place.</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "advanced">
+		</div>
+
+    <!--- end end overview --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Advanced Application Of This Concept</h2>
+			<div class="entry">
+
+                   <p>Wayne Campbell has taken this idea one step further:  read <a href="hidewire.html">Using Hidewire to Remove Catenary Over Part Of Your Route</a></b> by Wayne Campbell for more information and a utility to help you switch between operating and editing your route.</p>
+
+       			</div>
+               <a NAME = "download">
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end cause --->
+
+
+
+<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#remove">Removing Catenary</a>
+                 <br><a href="#test">Testing And Results</a>
+                 <br><a href="#advanced">Advanced Application</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 27 Mar 2004, 02 April 2010</center></p>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>How Route Editor Uses Memory - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li ><a href="../vans/index.html">Vans</a></li>		
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">How Route Editor Uses Memory</font>
+                        <br>by Jim Steven, MCSE,
+                        <br>Senior Microsoft Windows Application Developer</h2>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                             <p>The Route Editor uses Object Linking and Embedding (OLE32) to place objects in the map. This is the same interface you would use to drop an Excel table into MS Word or an Excel Chart into an Excel spreadsheet.  The OLE concept was designed to work with a small number of embedded items within a single master document.</p>
+
+                             <p>The route editor takes this to the extreme. I have some tiles that show the item counts above 3000, so there are more than that many embedded items on my map.</p>
+
+                             <p>Each time you click an item's properties page, you use a bit of memory to call OLE32AUTH.DLL and in time, that heap memory is used up. The editor starts acting funny. You'll see the whole screen flash when you do things in the editor, or the object list will suddenly stop dropping down.</p>
+
+                             <p>If you scroll the screen around and jump from tile to tile, the OLE system loads the new tile objects. (That's the delay you experience in a large map when trying to scroll around and it seems to hang for a bit).</p>
+
+                             <p>If you run out of heap memory but still have program memory, the information being saved may corrupt.</p>
+
+                             <p>The biggest problem with the Route Editor is that it relies on Object Linking and Embedding and most home users don't have proper hardware to support it.  The OLE technology was designed to allow a word processor to display a pie chart in the document. So it was never intended to handle a complex list of items.  A route map is a single document with thousands of embedded items. So it's like opening a word processor and pasting in several dozen documents from each program on your computer.</p>
+
+                             <p>I've not experienced most of the issues our users have had with the program because as a developer I understand the technology know it takes a lot of RAM.  I would not run the editor with less than 512 MB of system RAM and I would not run the game on a system with less than 300 MB of system RAM after Windows has started up.  I've completed 200+ routes in nine months and lost only one.</p>
+
+                             <p>My current route shows 1500+ objects per tile (320 tiles total) so that map has over 300,000 shapes on it. I'm maintaining a 12-18 FPS rate in the dense areas and typically see 40-50 FPS elsewhere.</p>
+
+                             <p>I have many programs on my home systems that cost more than $1,000 each. Using things like AutoCAD and Adobe Photoshop made Train Simulator a simple product to master.  Product marketing should have positioned the software differently. At $50 you attract people who may not understand spending fifteen grand for a home computer and need more guidance than users who are familiar with high-end systems.</p></p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end end overview --->
+
+
+
+
+
+
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+               </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 12 May 2002, 19 April 2010</center></p>
+</div>
+</body>
+</html>

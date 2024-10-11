@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>Creating Transparent Windows in a Locomotive (using TSM) - at The Steam4me Site</title>
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Creating Transparent Windows in a Locomotive (using TSM)</font>
+                        <br>by Brian Piotrowski</h2>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                        <p>In this tutorial, we will learn how to create MSTS models that have transparent windows. As most of you know, MSTS has the ability to make the windows on a model transparent by just changing the properties of the part. However, that is only half the solution, since you still have to make MSTS aware of which parts are transparent, and which parts are to remain opaque.</p>
+
+                        <p>For this tutorial, I will be using a simple locomotive from scratch. Let's assume that you've come this far. You have built your locomotive, and now you want to add transparent windows. Let's get at it!</p>
+
+                        <p>This tutorial will be broken down into two parts. The first part will be the creation/modifcations required in Paint Shop Pro to bring transparencies into the model. The second half will be the modification of the model itself in Train Sim Modeler.</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "psp">
+		</div>
+
+    <!--- end end overview --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Part One - Paint Shop Pro Functions</h2>
+			<div class="entry">
+
+                        <p>Let's start by firing up Paint Shop Pro. The same principles will apply to any paint program you use, but I would highly recommend Paintshop Pro 7.x, for it is an extremely easy program with which to work, and it is fairly inexpensive compared to products such as Photoshop.</p>
+
+                        <p>To make life easier, I would highly recommend changing your transparent background to something other than white and grey. You can do this by selecting FILE -> PREFERENCES -> GENERAL. Select the TRANSPARENCY tab and change the colours.</p>
+
+                        <p>Load your textures that contain your exterior windows. When you load it, you will likely not have an alpha channel in the texture file. If you do, keep in mind that you can only save one alpha channel. So if there are any other transparencies, you'll need to add them as well.</p>
+
+                        <p>Once you have the texture loaded, click on MASKS -> NEW -> SHOW ALL. Nothing will appear to have happened. This is good - the only change you should see is that the texture file will show as unsaved (An asterisk beside the name). Next, click on MASKS -> EDIT. You will see the palette on the right change from the rainbow palette to varying shades of grey, from black to white.</p>
+
+                        <p><img src="images/tran_window1.jpg" border="0"></p>
+
+                        <p>We are now in edit mode for the alpha channel. Select the paint tool (or any other tool you would like to use to remove the colours from the windows), and then select a shade of grey. Note - as you move towards the darker end of the spectrum on the palette, it will make the windows more transparent. Conversely, moving towards the lighter end will make the windows darker. Thus, solid black would represent an empty pane, while solid white is completely opaque.</p>
+
+                        <p>For this example, let's assume you want a window with some glass to it. Select the grey with the RGB value of 162,162,162. Then, begin by removing the colour from the areas where you would like glass to appear.</p>
+
+                        <p>You will notice that the colour you selected does not actually appear on the screen. Rather, it will be a lighter shade of the transparent background you selected. Although it is not obvious, it is actually creating the transparencies for your model. In this image, I have taken a lighter and darker shade to show you the difference.</p>
+
+                        <p>As you can see, the lighter shade on the left is closer to white [glass], while the darker shade represents a colour closer to black [empty glass].</p>
+
+                        <p><img src="images/tran_window2.jpg" border="0"></p>
+
+                        <p>Continue removing the glass until you have finished all of the windows. Once you are done, you should have a texture file similar to the one shown:</p>
+
+                        <p><img src="images/tran_window3.jpg" border="0"></p>
+
+                        <p>Next, we need to save the windows to an alpha channel. From the menu, select MASKS -> SAVE TO ALPHA CHANNEL. Once you do this, you should see a screen that shows a representation of the windows. The image will appear black and white. This is the alpha channel of the image, and will be the final location of the windows on the model.</p>
+
+                        <p>On the alpha channel dialog box, select OK, then give the alpha channel a name. For my models, I just give it the name "ALPHA CHANNEL", but you are welcome to give it whatever you want. Finally, save this image as a .TGA file. You must save it as a .TGA file because it must be a 32bit texture file - 24bits are assigned to the texture and 8bits are assigned to the alpha channel (hence the reason there are only 256 levels available for window colours)</p>
+
+                        <p>The next thing you might want to do is make a copy of this file. You will need to create an interior for your locomotive, and if you use the external texture it might look strange. The easiest thing to do in Paintshop is to simply select all (CTRL-A), copy (CTRL-C), and then finally paste as a new image (CTRL-V). Then, take a lighter colour (mint green seems to be the norm for cab interiors), and repaint the exterior portions of the cab. When complete, you should have a new cab interior along with the cab exterior:</p>
+
+                        <p><img src="images/tran_window4.jpg" border="0"></p>
+
+                        <p>The advantage to doing this is that you don't need to reassign the alpha channel to the image, since it is copied over from the original. Save this texture, and you're done!</p>
+
+                        <p>We have now completed the Paintshop Pro phase of this project. Next, we will move on to creating the windows in Train Sim Modeler.</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "tsm">
+		</div>
+
+    <!--- end end overview --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Part Two - Train Sim Modeler Modifications</h2>
+			<div class="entry">
+
+                 <p>Here we have the finished locomotive, sans transparent windows. As mentioned previously, the windows are nothing more than a white tint to conceal in interior.</p>
+
+                 <p>We now have to modify the cab to allow us to see through it. Start by pulling up the project, and selecting the cab.</p>
+
+                 <p><img src="images/tran_window5.jpg" border="0"></p>
+
+                 <p>We need to make an exact copy of the cab. Why? When we assign a material to the model, we can really only assign one material at once. If we were to assign a transparency to the cab without creating a cab interior, when we looked through the cab, you would notice that the opposite sides would be transparent too.</p>
+
+                 <p>Once we have the cab selected, hit CTRL-C on the keyboard to copy the cab. Then hit CTRL-V to paste a new copy of the cab. Then hit F2 to get to the cab's properties. You will see the cab has been assigned the name CAB.1 (or whatever your cab was originally named). It is suggested that you rename the cab to something more meaningful, such as CAB INTERIOR. Once you have done that, click OK to return to the edit screen.</p>
+
+                 <p><img src="images/tran_window6.jpg" border="0"></p>
+
+                 <p>The next thing we need to do is to make the cab interior slightly smaller than the exterior cab. We do this so that the textures do not interfere with one another. Hit S on the keyboard to start the scale mode. Next, drag the mouse so that the cab will begin to shrink. Shrink it so that it is only a few pixels smaller than the exterior cab. In this image, we have shrunk the cab slightly:</p>
+
+                 <p><img src="images/tran_window7.jpg" border="0"></p>
+
+                 <p>Now that the cab has been reduced, we now need to flip all of the polygon faces so that they are pointing inward. This needs to be done because the material is not double-sided, and you wouldn't see the opposite side of the cab if you left the faces pointing outward. With the cab selected, click on the FACES icon on the toolbar. It is the icon that is shaped like a triangle.</p>
+
+                 <p>If you are in a single view mode, it might be a good idea to go back to the quad-window view. It makes it easier to keep track of where you are in the part, and which way the face is flipped.</p>
+
+                 <p><img src="images/tran_window8.jpg" border="0"></p>
+
+                 <p>Looking at the front view, you will see that this face is flipped outwards. You can tell which way the face is facing based on the white line leading out from the face itself:</p>
+
+                 <p>Flip each face by hitting F on the keyboard, and then either N for the next face or the arrow keys. Do this until all of the faces have been flipped inward. When complete, go back into part mode (the 3d cube on the toolbar).</p>
+
+                 <p>Once all of the faces have been flipped, we have to re-apply the textures. Remember when I recommended to copy the texture and just change the colours? There is another reason why this should be done. When you go to map the faces (by hitting F4), all you need to do is change the name of the file to obtain the map. Copying makes it easier, because the co-ordinates are already mapped.</p>
+
+                 <p>I pulled out the cab interior to show something important. Take a look at this picture:</p>
+
+                 <p><img src="images/tran_window9.jpg" border="0"></p>
+
+                 <p>Notice anything strange in the picture? If you look closely, you'll see that the front windows are actually in the back of the cab. This happened because when you flipped the faces, it also flips the orientation! This is important to note because if you where to run the locomotive in MSTS with the orientation in this position, your outside and inside windows would not line up properly!</p>
+
+                 <p>There is an easy way to fix this. While you are in Part mode (the 3d square on the toolbar), select TRANSFORM -> FLIP -> Flip Z. This will reverse the textures, and should orient everything properly.</p>
+
+                 <p>We are in the home stretch for the transparent windows! The final step is to assign a transparency level to the interior and exterior cab. Since we have the interior cab selected, let's fix this one first. With the cab selected, hit F2. This will bring up the part properties. On this dialog box is a button marked MATERIAL. This is how you control your translucency on the model. Click this button, and a whole host of options will appear.</p>
+
+                 <p>The materials you should use for the interior all have the minus sign (-) at the end of them. If you wish to have the cab lit up at night (it looks pretty neat), select ALPHAHLFBRT-. You could select ALPHABRT-, but that would make the cab too lit up. Click OK to select this material, then click OK to close the parts dialog box. You have just assigned tranlucency to the interior!</p>
+
+                 <p>Finally, let's change the exterior cab to match. Select the exterior cab, hit F2 and select the Material button again. Because this is the external texture, we need to assign a positive alpha to it (any property with a plus sign (+) beside it). For this example, we will select ALPHANORM+. There isn't much point to selecting anything with a light to it, since it would cause your cab to glow (unless its a radioactive train, then be my guest!). Click OK to close the material window, and OK again to close the Part dialog box.</p>
+
+                 <p>WE'RE DONE! That's all there is to creating windows! Build this locomotive, then run it in MSTS - you'll be happily rewarded with transparent windows on your locomotive!</p>
+
+                 <p><img src="images/tran_window10.jpg" border="0"></p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "issues">
+		</div>
+
+    <!--- end end overview --->
+
+
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#psp">Paintshop Pro Functions</a>
+                 <br><a href="#tsm">TSM Functions</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 31 March 2004, 02 April 2010</center></p>
+</div>
+</body>
+</html>
+

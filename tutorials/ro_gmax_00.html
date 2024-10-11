@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>A Coach made with Gmax Chapter 1 - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <meta name="Author" content="Richard Osborne">
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+        <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">A Coach Made With GMax</font>
+                        <br>by Richard Osborne</h2>
+                        <p></p>
+			<h2 class="title">Chapter 1: Overview</h2>
+			<h2 class="title">Introduction</h2>
+ 			   <div class="entry">
+
+
+<p>I don't even have a decent photo of the coach we're going to build, this is one of the plans I'll be using. It's a fairly typical coach from the late 19th century.</p>
+
+<p><center><IMG SRC="images/ro_gmax_00_01.jpg" BORDER="0" ></center></p>
+
+<p>It's 2 years since I uploaded the TSM loco tutorial. I hope that it's been of use in this fascinating hobby of ours; I should have updated it by now, shouldn't I? Many thanks to those people who have sent emails to me. I know I made the point to start with something simple then make things more complicated - the same applies to Gmax.</p>
+
+<p>Sadly Abacus still haven't upgraded TSM so that it lags behind the other 3d programs. 3dCanvas just won't work on my computer so I've learned Gmax; notice I say learned, I haven't mastered the program or really more than scratched the surface.  I'm going to describe a way of building similar to TSM - it won't be the best method or will it use the program as the authors really intended but it works! Gmax has a reputation as being extremely difficult to learn & use; I'm going to show that it's really quite a kitten of a program. It only bites back if you scratch the wrong parts!<.p>
+
+<p>Gmax is a very powerful tool & is used by flightsim & games designers. It does have a very steep learning curve, however our needs are really quite simple; 95% of the program can be ignored & we still have the texturing & animation  tools which make Gmax so much better than TSM. If we build in the same manner as with TSM, largely using primitives, very few new techniques have to be learnt. My interest is still with steam railways where the stock tends to have regular shapes. If you want to build newer, more bulbous stock then learn spline building techniques from the flightsim sites & Gmax wins hands-down.</p>
+
+<p>There are still very few tutorials specifically for MSTS; there are many on the flightsim & car simulator sites. The flightsim tutorials are for Gmax, the  car sites tend to be for high-end programs but much of what they contain gives useful hints & ideas. Note that texturing for regular Gmax & trainsim Gmax are very different. Gmax is very powerful in its graphics handling but you must take precautions which aren't quite logical. Certainly it was getting to grips with texturing which gave me my initial headaches. Please read as many tutorials as you can find, especially Volker Bollig's diesel loco & the .doc file in the gamepack. As usual tutorials make more sense when you've tried something for yourself.</p>
+
+<p>Loading Gmax isn't straightforward - I don't know why; the program's free but you can't just load it & away. For MSTS you need to download Gmax itself, version 1.2, and the gamepack from Microsoft. URLs for these have been published at train-sim.com & uktrainsim.com. Load Gmax onto your computer, decide which drive you'll use - transferring it to another drive will mean re-registration! Load the gamepack; it's a self-extracting file. Now - the strange bit. The first time you try to use it it'll ask you to go online & register. Some people have trouble getting a reply - try again, perhaps the site shuts down out of office hours. You'll get an email within a short time with the longest code imaginable. Transfer it to the clipboard & then to the registration screen. For MSTS you need to start from the gamepack - it's easiest to bring the icon to the desktop. The screen should have 'Train Simulator' on the top toolbar.</p>
+
+<p>For the TSM loco tutorial I used an 0-4-0 which doesn't have bogies & the associated hierarchy. For this tutorial I'll be building a bogie coach, I'll also be making much more use of transparent parts to cut down the polygon count as much as possible. The 0-4-0 could probably be trimmed by about 1000 polys without any visual difference by using transparent parts.</p>
+<p>
+Gmax handles transparent & semi-transparent parts far better than TSM, although a partial fix is now available. Using Gmax you can see scenery the other side of a coach - with TSM you can only see the background. This is quite simple in Gmax; I've found it's only necessary to specify 3 texture states to achieve this. Gmax also allows carriages to appear lit at night & allows specular lighting - surfaces appear clean & shiny. Even using these textures I've only used 5 states - I have no idea how many could be used. There are other areas where Gmax is better; textures can be at any angle on the file - possibly more useful for aircraft but it makes for more efficient use of space. 1024 * 1024 texture files can be used; for this tutorial I'll use a file which will have textures for 2 coaches. As the coaches would run together in the same train this actually saves computer power. Levels of Detail are easy to achieve; this is having a composite where a less detailed model is shown when the image is small on the screen, this again saves computer power & allows faster frame rates.</p>
+
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "before">
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- first --->
+
+		<div class="post">
+			<h2 class="title">BEFORE WE START</h2>
+			<div class="entry">
+
+                <p>It's always easiest if we have a plan of action. Assuming you're new to Gmax a few hints & necessities, plans for our project, software I find indispensable.</p>
+                <ol>
+                    <li><h3>GMAX</h3>
+                        <p>On the top toolbar find 'Customize' then 'Preferences'. On the 'general' dropdown; fix the unit scale to 'meters' - you can tell already it's an American program. Set 'Scene Undo' high - I use 80!! You never know when it'll be used. To increase your working area it's worth switching off 'Use Large Toolbar Buttons'.</p>
+
+                        <p>On the 'Files' menu set 'Auto Backup' to 9 & to 3 minutes - in the event of a lock-up or lost file you'll have your last 30 minutes work. Other settings are more personal. You'll find 'Customize User Interface' where you can change the size & colour of just about everything. Get the feel of the program before you change these too much, those referring to Viewport are the ones you'll want first.</p>
+
+                        <p>I have to admit I still don't know what many of the icons refer to - I promise I'll restrict myself to those most needed. Gmax has some tricks up its sleeve which are very, very weird - I'll explain them as we come to them. It helps to print the pages with the keyboard short-cuts - tape them to the wall where they're easily visible. Spend a rainy afternoon playing with the program just making silly shapes & pressing buttons; just try to get the first principles.</p>
+                    </li>
+                    <li><h3>PLANS</h3>
+                        <p>Plans for railway stock can be found in railway books & magazines, model railway magazines & some on the web. By far the best source is model railway magazines, on the web you'll find catalogues & indexes but few plans. There are some but the chance of finding the prototype you want is remote. An appeal on the trainsim or model railway sites might bear fruit. Those of you who live near public libraries could look there; sometimes books of plans can be found on Ebay. I've been surprised how many people wanted plans for the TSM loco; the idea then was to build a typical loco, the idea now is to build a typical bogie vehicle.<.p>
+                    </li>
+                    <li><h3>OTHER SOFTWARE</h3>
+                        <p>Gmax has a major failing; the texture showing on the screen is next best to useless - even worse than TSM. <p>(<i>Editor's note:  Richard has changed his mind on GMAX's texture handling: if you read <b><a href="ro_gmax_11.html">Page 11</a></b> of this tutorial, he'll explain how to
+use textures in great detail.</i>)</p>
+
+                        <p>Fortunately there's an answer - Shape File Viewer; this is a free viewer which can be downloaded from this site, uktrainsim or train-sim.com. I use it all the time & can't imagine not using it now.</p>
+
+                        <p>The next is a program to extend the clipboard; I use Clip-Mate which is the best $25 you'll ever spend. There are others, even some freeware programs. You need a program which can handle graphics. I can't use any computer which doesn't have a clipboard manager. I use a converter, a simple calculator. The one I use has 4mm - 1 foot so it must have come from a British model railway site. Thanks to whoever published it but it doesn't have the author's name. You'll also need a decent graphics program which can handle .jpg, .gif & .tif files.</p>
+                        
+                        <p>I use Paint Shop Pro, any decent program will be good. Some programs don't handle .tif files; download IrfanView which is freeware & can convert files.</p>
+                    </li>
+                    <li><h3>LOTS OF PAPER</h3>
+                        <p>Make sure you have paper & pens to hand. You could almost use another computer for notes.</p>
+                    </li>
+                </ol>
+
+                            </div>
+			  <p class="meta"><span class="posted"><a href="#">Return to top of page</a></span><a href="ro_gmax_02.html" class="permalink">Go On To Chapter 2</a></p>
+		</div>
+
+    <!--- end end overview --->
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+<ol>
+<li><a href="#">Overview</a>
+<ul><li><a href="#">Introduction</a></li>
+    <li><a href="#before">Before We Start</a>
+    <ol>
+        <li>GMax</li>
+        <li>Plans</li>
+        <li>Other Software</li>
+    </ol></li>
+</ul>
+</li>
+<li><a href="ro_gmax_02.html">Getting started</a></li>
+<li><a href="ro_gmax_03.html">First Texturing</a></li>
+<li><a href="ro_gmax_04.html">Modelling For Real</a></h3></li>
+<li><a href="ro_gmax_05.html">Texturing The Body</a></h3></li>
+<li><a href="ro_gmax_06.html">Alpha Channels</a></h3></li>
+<li><a href="ro_gmax_07.html">Wheels and Bogies</a></h3></li>
+<li><a href="ro_gmax_08.html">Interiors</a></h3></li>
+<li><a href="ro_gmax_09.html">Export to MSTS</a></h3></li>
+<li><a href="ro_gmax_10.html">Texturing tricks and losing polygons</a></h3></li>
+<li><a href="ro_gmax_11.html">More Tricks and Tips</a></h3>
+<li><a href="ro_gmax_12.html">More about hierarchies</a></h3>
+
+</ol>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 20 October 2004, 19 March 2010</center></p>
+</div>
+</body>
+</html>

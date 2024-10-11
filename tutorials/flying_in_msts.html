@@ -1,0 +1,360 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+<title>How To Make Your TSM-built Aircraft fly in MSTS - at The Steam4me Site</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">How To Make Your TSM-built Aircraft fly in MSTS</font>
+                        <br>by Frank Carver (aka "Emu Farmer")</font> </h2>
+
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                             <p>I'm going to show you the principles involved in preparing your TSM-built aircraft for flight inside MSTS.</p>
+
+                                     <p><img src="images/Fly_in_MSTS_02.jpg" alt="" border="0"></p>
+                                     
+                             <p>This tutorial is for aircraft created with in TSM that have their cockpit facing to the left side of the TSM desktop as in image above.</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "prep">
+		</div>
+
+    <!--- end end overview --->
+
+
+    <!--- prep --->
+
+		<div class="post">
+			<h2 class="title">Preparing Your Model</h2>
+			<div class="entry">
+
+                        <ol>
+                            <li>Once you have made your aircraft in TSM, make a copy of your model and rename the copy xxxlanding.
+
+                            <br /><font color = red><b>Please back up your "S" files before doing any Editing</b></font>
+                            <br />&nbsp;</li>
+
+                            <li>Load the model in TSM and make sure that in "Parts" you have clicked <b>Center Axis to Origin</b>.
+                            <br />&nbsp;</li>
+
+                            <li>Click <b>Edit | Select all</b> and press the "J" key on the keyboard to join all the parts (this is easier than writing the hierarchy of 100s of pieces).
+                            <br />&nbsp;</li>
+
+                            <li>Go into <b>"Current Items Properties"</b>, rename <b>"Part name"</b> to <b>"Aircraft"</b>.
+                            <br />&nbsp;</li>
+
+                            <li>Click <b>"New Box"</b> and make a plain box of your size removing the bottom and the 4 sides, and colour the top to your choice (I make this box into an arrow shape in the direction the aircraft is to fly by closing the 2 front points).
+                            <br />&nbsp;</li>
+
+                            <li>Click <b>Parts | Remove Orphaned Parts | All Parts</b>.  Now lower this box about two meters below your base line or Terrain line or Grid Axis and <b>Center Axis</b> again in "Parts".
+                            <br />&nbsp;</li>
+
+                            <li>Click <b>Current Item Properties</b> again and rename this to <b>"Base"</b>.
+                            <br />&nbsp;</li>
+
+                            <li>Open <b>"Parent Part"</b> and marry this Base name to the Aircraft name.  Highlight your aircraft again making sure the Axis is at origin and click <b>Project Properties | Anim Scenery</b>.  In <b>"Animation Frames"</b>, insert a number anywhere from 901 to 2001 frames ( here you must always have an odd number): see below.
+
+                            <br /><img src="images/Fly_in_MSTS_01.jpg" alt="" border="0">
+
+                            <br /><br />Check that your Short name is what you want and click <b>Save As</b>.
+                            <br />&nbsp;</li>
+
+                            <li>The "901 to 2001" is the number of frames the aircraft will travel in its flight.
+
+                            <br /><br />In TSM this number will be divided into two parts for an "aircraft taking off" or "aircraft landing".  With the fly over" aircraft this number must not be divided.
+
+                            <br /><br />These frames also can control the speed of the aircraft travel; the 300 to 400 meters height is dependant on the aircraft size; a small aircraft like a Cessna might only be about 60 to 70 meters high.  You can check the speed or height above track level in the Route Editor. Adjusting these values will be explained later in the tutorial.
+                            <br />&nbsp;</li>
+                        </ol>
+
+                        <h3>Approximate Conversion from Meters to Feet</h3>
+
+                            <p>2000 meters = 6561 feet
+                            <br />1700 meters = 5577 feet
+                            <br />1000 meters = 3280 feet
+                            <br />400 meters =  1312 feet
+                            <br />300 meters =  984 feet</p>
+
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="land">
+		</div>
+
+    <!--- end end overview --->
+
+
+    <!--- prep --->
+
+		<div class="post">
+			<h2 class="title">Making Your Aircraft Land</h2>
+			<div class="entry">
+
+                        <p>We are now going to make your aircraft land.</p>
+
+                        <ol>
+                            <li>Look at your plane side-on in TSM.  Make sure the aircraft is highlighted, right-click "Zoom Out" repeatedly until the aircraft has nearly disappeared.
+                            <br />&nbsp;</li>
+
+                            <li>Click on the <b>Anim</b> button at the top of the page and a box called <b>"Animate Part"</b> should open with your frame number at 2000 in the "Last Anim Frame".
+                            <br />&nbsp;</li>
+
+                            <li> leaving the frame button on "0" move your aircraft to approx -2000 meters by 300 to 400 meters high, reading this from the bottom of the TSM page.
+                            <br />&nbsp;</li>
+
+                            <li>When you're satisfied, press <b>"Set Motion"</b> in <b>"Animate Part"</b>, then move your <b>"Frame button"</b> to approx 1700 meters (this will give you 300 meters of runway).  
+                            <br />You must move this Frame button before moving the aircraft.  Move your aircraft down to your base-line and to approximately -300 meters from the centre axis.
+                            <br /><br />You might have to zoom in to make sure the aircraft is sitting on the centre axis line.
+                            <br />&nbsp;</li>
+
+                            <li>When you are satisfied, press "Set Motion".  In <b>"Animate Part"</b> move the frame button to 2000 and then move your Aircraft to the end of the Runway usually at Centre Axis and then Set Motion again in "Animate Part".
+                            <br />&nbsp;</li>
+
+                            <li>That's it, now save it and then <b>"Create TS Object File"</b>. View it in Shape Viewer and test it by clicking Animation.</li>
+                        </ol>
+
+                        <p>The model might disappear in MSTS before you want it to. To fix this,  open your "S" file and at fourth line down called Vector are a lot of numbers (xxxxx xxxxx xxxx) XXXX.  These last numbers will want a 1 or 2 or up to perhaps a 7 put in front of the original number.  I usually find that a 5 there is OK, but it does depend on the length of the Flight Path for the best number.  You will have to test this yourself only in MSTS( it can be checked whilst in the Route Editor as well).
+
+                        <p>Please Back up your "S" files before doing any Editing to them.</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="takeoff">
+		</div>
+
+    <!--- end land --->
+
+
+    <!--- takeoff --->
+
+		<div class="post">
+			<h2 class="title">Making Your Aircraft Take Off</h2>
+			<div class="entry">
+
+                        <ol>
+                            <li>Create  your aircraft as above tutorial, but renamed as (xxxxtakingoff or what ever).
+                            <br />&nbsp;</li>
+
+                            <li>Reverse the above procedure by placing your aircraft at the <b>"Centre Axis"</b> first.
+                            <br />&nbsp;</li>
+
+                            <li>In <b>"Animate Part"</b> click <b>"Set Motion"</b> then move the <b>"Frame Button"</b> to 420. Move the aircraft about 420 meters along the grid axis and press <b>"Set Motion"</b>.
+                            <br />&nbsp;</li>
+
+                            <li>Move the "Frame Button" to 2000, then move your aircraft up to about 300 to 400 meters and along to about 2000 meters.  Finally press <b>"Set Motion"</b>.
+                            <br />&nbsp;</li>
+
+                            <li>Make sure everything is working as planned by moving the Frame Button from 0 to 2000 and back and watching the Aircraft.
+                            <br />&nbsp;</li>
+
+                            <li>If everything is to plan,  make sure your "Short Name" is what you want it to be in Project Properties then Save out and <b>Create TS Object File</b>.
+                            </li>
+                        </ol>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="flyover">
+		</div>
+
+		<div class="post">
+			<h2 class="title">Making An Aircraft Fly From A To B At A Specific Height</h2>
+			<div class="entry">
+
+
+                        <p>Making your aircraft fly over (from  A to B) is very simple.</p>
+
+                        <ol>
+                            <li>Prepare your aircraft to the flying stage, making sure your aircraft is named (xxxFlyover or what ever).
+                            <br />&nbsp;</li>
+
+                            <li>Open <b>"Animate Part"</b> and place the <b>"Frame button"</b> at "0" moving your aircraft to about -1000 meters by 300 to 400 high; press the <b>"Set Motion"</b> when you're satisfied.
+                            <br />&nbsp;</li>
+
+                            <li>Move the <b>"Frame Button"</b> to 2000 and then move your aircraft to 1000 meters by 300 to 400 meters, then press the <b>"Set Motion"</b> button.
+                            <br />&nbsp;</li>
+
+                            <li>Save out, <b>Create TS Object</b> File and view it in Shape Viewer.  Test it by clicking <b>Animation</b>: with the flyover, your Base Arrow will be in the middle of the Flight Path.
+                            </li>
+                        </ol>
+
+                        <p>You will very likely have to change a few of the numbers in the animation in the bottom of the "S" file to get the correct speeds: be careful here as you can ruin all your work so back up your "S" file first.</p>
+
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="anim_land">
+		</div>
+
+		<div class="post">
+			<h2 class="title">Animations For An Aircraft Landing In The "S" File</h2>
+			<div class="entry">
+
+                            <p><img src="images/Fly_in_MSTS_03.jpg" alt="" border="0">
+
+                            <p><b><font color="red">Red</font></b> indicates the number of frames that you inserted in your animations: this can be edited by increasing or decreasing the number, the larger the number the longer the aircraft is in flight and the smaller the number the quicker the flight.  If the 2000 in animations is changed also the 2000 in the Linear_key must be changed.</p>
+
+                            <p><b><font color="brown">Brown</font></b> indicates the height of the aircraft; the two low numbers indicate that the aircraft is on the runway, the 408.828 is the height at the start of the aircraft's descent:  this can be edited to change the angle of approach.</p>
+
+                            <p>The highlighted colours are the distances.  The <b><font color="yellow">yellow</font></b> is the distance in meters the aircraft will travel; the <b><font color="green">green</font></b> is where the aircraft touches down on the runway; the <b><font color="blue">blue</font></b> is the final stop.  All these values can be edited.</p>
+
+                            <p>If the aircraft is moving too fast on the runway after landing, edit the green highlight by increasing the number say to 400.</p>
+
+                            <p>Finally, the <b>black</b> 30 in animation: reducing the number slows the aircraft and increasing the number speeds the aircraft up; this is handy for final adjustments.</p>
+
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="anim_toff">
+		</div>
+
+
+		<div class="post">
+			<h2 class="title">Animations For An Aircraft Taking off in the "S" file</h2>
+			<div class="entry">
+
+
+                            <p><img src="images/Fly_in_MSTS_04.jpg" alt="" border="0">
+
+                            <p>It's basically the same as the landing animation, except in reverse and the editing is the same with the same colours.</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="anim_flyover">
+		</div>
+
+		<div class="post">
+			<h2 class="title">Animations For An Aircraft Flyover In the "S" File</h2>
+			<div class="entry">
+
+
+                            <p><img src="images/Fly_in_MSTS_05.jpg" alt="" border="0">
+
+                            <p>The height at <b><font color="brown">brown</font></b> is the same throughout the flight.  The flight height is usually lower for the flyover: it can be even lower than shown.</p>
+                            
+                            <p><b><font color="yellow">yellow</font></b> is the distance in meters either side of the Centre Axis: this can be edited for height and distance.  Speed can be altered with the red frames or the black 30.</p>
+
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="end">
+		</div>
+
+		<div class="post">
+			<h2 class="title">Summary And Conclusion</h2>
+			<div class="entry">
+                            <p>I have given you a rough idea of how to animate an aircraft so that it can be seen flying in the MSTS whilst you are driving a train.  All these numbers are approximate as the 2000 frames can be 1000 or even 500: it's how far or fast you want your aircraft to fly.  I have given you the near specifications for a Boeing 747; smaller aircraft would have less frames, lower height and lower speed.</p>
+
+                            <p>I have seen an acrobatic Cessna in MSTS that would make a FA-18 red with shame for speed.</p>
+
+                            <p>Final adjustments must be performed in the Route Editor.  Right-click the RE workspace whilst the aircraft is in Wire frame mode (W key on the Keyboard and in the Properties General(cont), tick the "Animate this Object"; then you can adjust animations' values.  It's then a process of exiting the Route Editor,  adjusting and then saving the "S" file, and then drop back into the RE to note your aircraft's animation.</p>
+
+                            <p>I will admit you might think it's all a bit hit and miss as the aircraft can only do as you direct it to do, but once you have studied the Animations in the "S" file against this tutorial you should have a reasonable flying aircraft of your own.</p>
+
+                            <p>One "feature" in MSTS that I must warn you about is that all animations start at the same time, so that if you have a number of aircraft leaving a runway, they will all leave at the same time when MSTS is reloaded.  You can vary this by making one animation slower than the other so that it gets left behind but it will eventually catch up.</p>
+
+                            <p>Don't forget that the maximum distance seen in MSTS is 2000 meters.</p>
+
+                            <p>You can download any of my animated aircraft from <a href=http://www.uktrainsim.com>www.uktrainsim.com</a> or <a href=http://tinyurl.com/8xyzx>my download page at ukts</a> and use their animations if you wish.</p>
+
+                            <p>Finally, building and flying your aircraft is your responsibility and no blame will be accepted by the author if it flies off into the blue yonder!</p>
+
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="#">
+		</div>
+
+    <!--- end notes --->
+
+
+
+	<!-- end #content -->
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p><a href="#">Overview</a>
+                 <br /><a href="#prep">Preparing Model</a>
+                 <br /><a href="#land">Making Aircraft Land</a>
+                 <br /><a href="#takeoff">Making Aircraft Take Off</a>
+                 <br /><a href="#flyover">Making Aircraft Fly Over</a>
+                 <br /><a href="#anim_land">Animation For Landing</a>
+                 <br /><a href="#anim_toff">Animation For Take Off</a>
+                 <br /><a href="#anim_flyover">Animation For Fly Over</a>
+                 <br /><a href="#end">Summary & Conclusion</a></p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 8 October 2010, 15 February 2011</center></p>
+</div>
+</body>
+</html>
+

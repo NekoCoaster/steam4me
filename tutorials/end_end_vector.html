@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>Correcting Track Database Errors in Route Editor - at The Steam4me Site</title>
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<a href="index.html">Tutorials</a></li>
+		<li class="current_page_item"><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>		
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Correcting Track Database Errors in Route Editor</font>
+                        <br><br>compiled by Yuri Sos
+                        <br>based on lots of work by Jim Ward
+                        <br>also contributions by Vince Cockeram, Charlie Leveritt, Chris Markle, Phil Voxland</h2>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                        <p>"Track database error: 'remove_end_end' one non-vector, one vector"</p>
+
+                        <p>This is a common and dreaded message when you're trying to do a track database rebuild.</p>
+
+                        <p>It often shows up after RE crashed whilst trying to save: and THAT often occurs because you've been working in RE too long without saving, exiting to the desktop and rebooting your system to free up memory.</p>
+
+                        <p>There is simply no reason to not have back-ups of your work in progress: Route_Riter makes it easy: <a href="../Route_Riter/route_backup.html">click here for a tutorial on using Route_Riter to back up your files</a>.</p>
+
+                        <p><b>The value of backups</b></p>
+
+                        <p>People often ask "How often should I backup?"</p>
+
+                        <p>The answer to that question is another simple question:</p>
+
+                        <p>How much work are you willing to lose and do over?</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "problem">
+		</div>
+
+    <!--- end end overview --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">The Problem</h2>
+			<div class="entry">
+
+                        <p>You're doing a tdb rebuild and you come across this dreaded pop-up:</p>
+
+                        <p><img src="images/tdb_01.jpg" width="823" height="679" alt="" border="0"></p>
+
+                        <p>The easiest way to fix this problem is to step back to the last known good backup.  But you say "nooooo, I've done SO MUCH work since then and it will make five days of work go away - don't want that! oh, and the backup is on a CD I put somewhere so what do I do next?".</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="correction">
+		</div>
+
+    <!--- end cause --->
+
+    <!--- sol hard --->
+
+		<div class="post">
+			<h2 class="title">Correction</h2>
+			<div class="entry">
+
+                        <ol>
+                            <li>The screen may have stopped but it's given you the exact location of the error:  latitude/longitude, tile, co-ordinates within the tile.
+
+                            <br>Write down the figures in the "Camera" window.
+                            <br>&nbsp;</li>
+
+                            <li>It's usually a piece of track that exhibits one of the following characteristics:
+                                <ul>
+                                    <li>long (250m+ straights or 2000r10d curves) track sections crossing one or more tile boundaries;</li>
+                                    <li>reverse curves along or near a tile boundary (eg a snaking piece of track);</li>
+                                    <li>track crossing tile boundaries on a shallow angle; and </li>
+                                    <li>track crossing tile boundary intersections too closely (the cross where four tiles meet seems to be the biggest culprit).</li>
+                                    <li>an errant piece of track (often buries underground (press "W" to go into wireframe mode and "/" to drop beneath the terrain to look for these tracks).</li>
+                                </ul>
+                                </li>
+
+                            <li>If you find the "track piece crossing a boundary" that is the problem, replace the offending section(s) with much smaller pieces of track, making sure NO single track section crosses more than one tile boundary.
+                                <p>To find the "errant track piece" in a large route, it may be easier to go into Activity Editor, select the route, click ok, ok again (you won't be saving anything), and scan the track looking for an errant piece of track.</p>
+                                
+                                <p>When you find it, place the cursor on it and note the latitude and longitude in the top left hand corner.</p>
+
+                                <p><img src="images/tdb_02.jpg" width="646" height="532" alt="" border="0"></p>
+                                <p>Quit Activity Editor without saving.</p>
+
+
+                                <li>Go into Route Editor WITHOUT DOING A TDB Rebuild) and jump to the location of the error.
+                                    <ul>
+                                        <li>Find and delete the offending piece of track.</li>
+                                        <li>Save and exit.</li>
+                                        <li>Delete the tdb, tdb`bak, rdb, rdb`bak files from within the route's folder.</li>
+                                        <li>Go back into Route Editor, select route/do a tdb rebuild;
+                                            <p>The advanced rebuild takes the info from the numbers in the .w file and uses it to make the tdb files, so;
+                                            <ul>
+                                                <li>if you run the rebuild when the orphans are still in the W files it attempts to construct the track database from the faulty info;</li>
+                                                <li>if you delete the orphans from the W file and don't run the TDB rebuild, the track database (invisible line that the trains actually run on, what you see in the activity editor) is still the way it was;</li>
+                                                <li>if you don't delete all the backup files (*.bk), the TDB rebuild attempts to shortcut the process by copying info from the .bk files;</li>
+                                                <li>if you don't delete the .tdb and .tit files before running the rebuild, the TDB rebuild subroutine attempts to repair the existing .tdb and .tit files instead of building new ones from scratch (using the numbers from the .w files). That usually causes errors</li>
+                                            </ul>
+                                    <br>Therefore, the only good way to rebuild the TDB is to delete all .bk files, delete the .tdb and .tit (plus .rdb and .rit if they exist), then run the TDB rebuild. It's still an imperfect subroutine in an imperfect editor, so the TDB rebuild is a crapshoot anyway, and sometimes (watch it, incoming pun) you roll boxcars no matter what. Following the proper procedures before running the TDB rebuild at least assures that the dice ain't loaded.
+                                    </li>
+                                </ul>
+                                </li>
+                            <li>Keep doing the above until you get the message "All Tiles Visited".
+                            <br>&nbsp;</li>
+                            <li>Check the route again. NOW do a backup before anything else goes wrong - it will!
+                            <br>&nbsp;</li>
+                        </ol>
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="notes">
+		</div>
+
+    <!--- end sol hard --->
+
+    <!--- sol hard --->
+
+		<div class="post">
+			<h2 class="title">Notes & Comments</h2>
+			<div class="entry">
+
+                        <ul>
+                            <li>One user has reported the experience of a TDB failure popping up in an area where he had not been working for a long time, even though several good rebuilds have happened since he was last was there. This seems to be related to the structure of the data base as it is being put together by during the rebuild.  He finally set the start tile to a new location and no errors were reported.
+                            <br>&nbsp;
+                            </li>
+                            <li>There is one area in another user's route where blue poles show up after a rebuild (even after replacing the track with shorter pieces). However, removing a track section that touches one of the blue poles, then do the rebuild, a succesful data base is created. Then he puts the section back in, and everything works fine (until he needs to do another rebuild!).
+                            <br>&nbsp;
+                            </li>
+                            <li>Finally, some words of advice from Vince Cockram:
+                                <br><i>"you are doomed to failure if you are modifying a route's track while signals (and for that matter, ANY interactive objects) exist anywhere on the route. Ignoring this little requirement has trashed many many routes where the builders didn't understand or who decided they could get away with it.
+                                <p>If you want to modify a route with interactives installed you must get rid of them. . .ALL of them.
+                                When you finish stripping out all the objects the track item table and the road item table should be empty, with the ONLY exception being entries in the track item table (routname.tit) being crossover entries."</i>
+                                <br>&nbsp;
+                                </li>
+                            </ul>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="link3">
+		</div>
+
+    <!--- end sol hard --->
+
+    <!--- sol easy --->
+
+		<div class="post">
+			<h2 class="title">Matrix 3x3 Errors</h2>
+			<div class="entry">
+
+                        <p>Another error you're likely to run into is the "matrix 3x3" error, <b><a href="matrix3x3.html"> click here</a></b> for information on solving this problem.</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name="#">
+		</div>
+
+    <!--- end sol easy --->
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#problem">The Problem</a>
+                 <br><a href="#correction">Correction</a>
+                 <br><a href="#notes">Notes & Comments</a>
+                 <br><a href="matrix3x3.html">Matrix 3x3 Errors</a>
+
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 5 January 2007, 12 August 2007, 5 September 2008, 22 March 2010</center></p>
+</div>
+</body>
+</html>

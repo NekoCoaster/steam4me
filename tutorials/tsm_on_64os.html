@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+
+   <meta name="Author" content="Gerlad Saudres">
+   <meta name="GENERATOR" content="ConTEXT  v0.98">
+   <meta name="Description" content="Installing Train Sim Modeler into 64-bit OS ">
+<title>Installing Train Sim Modeler into 64-bit OS  - at The Steam4me Site</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen">
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width="100%" bgcolor="#333957">
+<tr>
+    <td align="left"><a href="http://steam4me.net"><img src="../images/S4M_Banner_left.png" nosave="" height="60" border="0"></a>
+    </td>
+    <td align="right"><img src="../images/S4M_Banner_Tutorials.png" nosave="" height="60">
+    </td>
+</tr>
+</table>
+</div>
+<hr>
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color="blue"><h2 class="title">Installing Train Sim Modeler into 64-bit OS </h2></font>
+                        <br>by Gerald "Ged" Saunders
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                             <p>Installing TSM into 64-bit OS has always been a troublesome operation.  However, the previously accepted mode of installing into a 32-bit OS before transferring into a 64-bit OS and then "fiddling" with the Registry is no longer necessary.</p>
+
+                             <p>I came across the <a href="http://www.reactos.org/forum/viewtopic.php?f=22&t=10988">ReactOS site</a>  which provided the essential component to complete this task.</p>
+
+			     <p>The following procedure has been tested on Windows 7 Home Premium 64-Bit, but will probably also apply to XP, Vista and Win 8.</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a name="dl">
+		</a></div>
+
+    <!--- end end overview --->
+
+    <!--- download version --->
+
+		<div class="post">
+			<h2 class="title">1. The Procedure If You Have the Download Version</h2>
+			<div class="entry">
+
+			<p>The download version <b>AbacusTSM.exe</b> (which will probably be v1.1), or the Help Update (<b>AbacusTSMHelp.exe</b>), or the Library (<b>AbacusTSMLibrary.exe</b>), all use a 16-bit installer.</p>
+			<p>The following procedure may be used to install them:</p>
+			<ol>
+			    <li>Run the .exe file:
+                            <br><img src="images/tsm_16bit_01.jpg" alt="" border="0"></li>
+
+                            <li>and when you get the message box <b>"Unsupported 16-Bit Application"</b> displayed, <b>DO NOT click OK!</b>;
+                            <br><img src="images/tsm_16bit_02a.jpg" alt="" border="0"></li>
+
+                            
+			    <li>Go to <b>C:\Users\your username\AppData\Local\Temp</b>;
+			    <br>Find the tempoary folder ~EXB0000 folder that's just been created:
+                            <br><img src="images/tsm_16bit_03.jpg" alt="" border="0"></li>
+
+                            <li>In it you'll find a folder called DISK1
+                            <br><img src="images/tsm_16bit_04.jpg" alt="" border="0"></li>
+
+                            <li>Copy/move DISK1 to a safe place; if you have more than one .exe file to be installed, I suggest you rename it to reflect its contents; here I've copied it to <b>c:\_temp</b>:
+                            <br><img src="images/tsm_16bit_05.jpg" alt="" border="0"></li>
+
+                            <li>Now click OK on the <b>"Unsupported 16-Bit Application...."</b> window.......
+                            <br><img src="images/tsm_16bit_02.jpg" alt="" border="0"></li>
+                            
+                            <li>..... and click OK on the resultant window:
+                              <br><img src="images/tsm_16bit_06.jpg" alt="" border="0"></li>
+
+                            <li>When this window appears, click <b>Cancel</b>:
+                            <br><img src="images/tsm_16bit_07.jpg" alt="" border="0"></li>
+
+ 			    <li>The <b>Reactos website</b> provided a link to download the Setup Engine executable directly from Nathan Lineback's web page at <b><a href="../files/Is3Engine.zip">toastytech.com</a></b>;</li>
+
+                            <br><img src="images/tsm_16bit_08.jpg" alt="" border="0">
+                            <br>&nbsp;
+
+                            <li> Open <b>Is3Engine.zip</b> and "drag-n-drop" <b>setup32.exe</b> into your DISK1 folder you've saved above:
+
+                            <br><img src="images/tsm_16bit_09.jpg" alt="" border="0"></li>
+
+                            <li>Right-click on <b>setup32.exe</b> and <b>Run As Administrator</b> and your TSM install will proceed as normal:
+                            <br><br><img src="images/tsm_16bit_10.jpg" alt="" border="0"></li>
+			</ol>
+
+                      	</div>
+          			<a name="cd">
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+
+		</a></div>
+
+    <!--- end sol hard --->
+
+    <!--- cd version  --->
+
+		<div class="post">
+			<h2 class="title">2. The Procedure If You Have the Install CDs</h2>
+			<div class="entry">
+
+			   <ol>
+			       <li>Create a temporary folder on your hard drive called TSM;</li>
+			       <li>Create a folder within TSM called TSM-CD - ensure it is NOT read-only;</li>
+			       <li>Copy all the files off the TSM CD into folder TSM-CD;</li>
+ 			    <li>The <b>Reactos website</b> provided a link to download the Setup Engine executable directly from Nathan Lineback's web page at <b><a href="../files/Is3Engine.zip">toastytech.com</a></b>;</li>
+
+                            <br><img src="images/tsm_16bit_08.jpg" alt="" border="0">
+                            <br>&nbsp;
+
+                            <li> Open <b>Is3Engine.zip</b> and "drag-n-drop" <b>setup32.exe</b> into your TSM-CD folder you've saved above:
+
+                            <br><img src="images/tsm_16bit_09a.jpg" alt="" border="0"></li>
+
+                            <li>Right-click on <b>setup32.exe</b> and <b>Run As Administrator</b> and your TSM install will proceed as normal:
+                            <br><br><img src="images/tsm_16bit_10a.jpg" alt="" border="0"></li>
+			</ol>
+
+			   
+
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a name="issues">
+		</a></div>
+
+    <!--- end disk version --->
+
+
+    <!--- issues --->
+
+		<div class="post">
+			<h2 class="title">Issues to be Aware Of</h2>
+			<div class="entry">
+
+			<p>There are two, relatively small, things which don't work:</p>
+			<ol>
+			    <li>when the installation is progressing, the message "Setup is creating icons" is displayed, but they aren't!;</li>
+			    <li>if you try to uninstall TSM or a part of TSM, it may not always work.</li>
+			</ol>
+
+                      	</div>
+          			<a name="test">
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+
+		</a></div>
+
+    <!--- end sol hard --->
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#dl">Download Version</a>
+                 <br><a href="#cd">CD Version</a>
+                 <br><a href="#issues">Issues</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2014 <a href="http://steam4me.net">http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 17 January 2014</center></p>
+</div>
+</body>
+</html>
+

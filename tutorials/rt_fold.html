@@ -1,0 +1,328 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>Explaining MSTS' Route Folder Structure - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li ><a href="../vans/index.html">Vans</a></li>		
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png"  height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png"  height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Explaining MSTS' Route Folder Structure</font>
+                        <br>by Jim "sniper297" Ward</h2>
+                        <p></p>
+			<h2 class="title">Route Folder Structure</h2>
+ 			   <div class="entry">
+
+                             <h3>or .... How it's all put together.</h3>
+
+                             <p><img SRC="images/rt_fold01.jpg" ></p>
+
+                             <h2>\Activities</h2>
+
+                             <p>The info for each activity, contained in the .act files. Contains paths, services, traffic, and the location of each loose consist. Also has all the dope on action events and schedules.</p>
+
+                             <h2>\Envfiles</h2>
+
+                             <p>*.env files, the animation of skies and water, and in \Envfiles\Textures the sky &amp; water textures. "Train World Initilization Failed" means one of these files is missing or corrupt.</p>
+
+                             <h2>\Lo_tiles</h2>
+
+                             <p>Low-resolution terrain textures for distant viewing, rarely used.</p>
+
+                             <h2>\Paths</h2>
+
+                             <p>The actual path each train takes over the route. These .pat files are what gets outdated by alterations to the track in the route editor, causing "broken path" errors since the path no longer matches the track configuration.</p>
+
+                             <h2>\Services</h2>
+
+                             <p>Trains with engines that move on the route. This includes the player train and any AI traffic trains. Each .srv file contains the info on the consist and the path file for that service.</p>
+
+                             <h2>\Shapes</h2>
+
+                             <p>Contains the .s and .sd files for the 3D objects. The object.s file has the shape data and the name of the .ace file it gets textured with. The matching object.sd file is the extended shape data, which contains info on alternative texture for night, snow covered, or seasonal.</p>
+
+                             <h2>\Sound</h2>
+
+                             <p>Do I really need to explain that one?</p>
+
+                             <h2>\TD</h2>
+
+                             <p>The actual "quad tree", geographical location and tile boundaries for the route. "Invisible" ground means a problem in here.</p>
+
+                             <h2>\Terrtex</h2>
+
+                             <p>The terrain texture files. This is the "painting" on the ground, when you apply a tile texture to the little black bordered square on the ground it comes from here. The subfolder \snow needs to have the corresponding ace file for each texture actually used on the route, otherwise there will be missing file errors when driving in winter.</p>
+
+                             <h2>\Textures</h2>
+
+                             <p>The skins for all the 3D objects in the \Shapes folder. Contains subfolders \Autumn, \AUTUMNSNOW, \Night, \Snow, \Spring, \SPRINGSNOW, \Winter, and \WINTERSNOW. Vegetation frequently has 8 different textures, showing up in the base \textures folder, plus all the other folders except night. Some objects have only the base texture, others have snow textures, and if it lights up at night it will also have a night texture. This folder contains all the ace files except environment (\Envfiles, sky and water) and ground textures (\Terrtex).</p>
+
+                             <h2>\Tiles</h2>
+
+                             <p>Either the .t, or y.raw, or both, contain the terrain elevation information, hills and valleys and so forth, plus the information on which \terrtex\ ground texture is applied to each tile. The f.raw files are generated when siding and platform markers are placed. The e.raw and n.raw are "lighting and geometry", and are automatically generated by the sim if they are missing, which is why it takes longer to load a newly installed route, as these are usually deleted to save space in the zip file.</p>
+
+                             <h2>\Traffic</h2>
+
+                             <p>Just what it sounds like, the .trf files contain the services and starting times for AI traffic trains. </p>
+
+                             <h2>\Tutor</h2>
+
+                             <p>Generated in add-on routes from the template folder, the only route that actually has anything in here is the tutorial route. I usually forget to delete this folder.</p>
+
+                             <h2>\world</h2>
+
+                             <p>All the info on location and viewing angles for all the placed objects are in the .w files, and the .ws files have all the placed sound sources. If a .w file is missing, the terrain texture and elevations are still visible, but all objects including the track textures are gone. The train can still be driven on the invisible track, the invisible signals still work, and the invisible switches can still be thrown. The track database is generated from the location references in the .w files, along with the tsection.dat file in the root of the routewhich addresses dynamic track.</p>
+
+</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">The Route's Root Files</h2>
+			<div class="entry">
+
+                        <p><img SRC="images/rt_fold02.jpg" </p>
+
+                        <h2>deer.haz, spotter.haz</h2>
+
+                        <p>The "hazards", critters that jump in front of moving trains.</p>
+
+                        <h2>Details.ace, load.ace,routename.ace.</h2>
+
+                        <p>Pictures that load in various screens for the route.</p>
+
+                        <h2>The .dat files</h2>
+
+                        <p>give access to interactive and other special non-static objects, adding entries for these to the ref file disables most of them. Copying the shapes and textures for Japanese signals into your route won't work unless the proper sigscr.dat and sigcfg.dat files are in the root.</p>
+
+                        <h2>carspawn.dat</h2>
+
+                        <p>All the different cars that will appear moving out of a carspawn. Adding entries for different cars to this file cures the "nothing but red cars moving" syndrome, but the matching shape and texture files must also be in the route.</p>
+
+                        <h2>forests.dat</h2>
+
+                        <p>All the forest regions available in the route. Again, the matching shapes and textures for each tree type must be in the route.</p>
+
+                        <h2>sigcfg.dat, sigscr.dat</h2>
+
+                        <p>Data for the signal types.</p>
+
+                        <h2>Speedpost.dat</h2>
+
+                        <p>Speedposts, obviously.</p>
+
+                        <h2>ssource.dat</h2>
+
+                        <p>Access to the static sound regions in the \sound folder.</p>
+
+                        <h2>telepole.dat</h2>
+
+                        <p>For telephone poles, which I've had some problems with. Theoretically you place a telephone pole at one end, another at the other end, and the ones between are filled in along with the connecting wires. Makes it hard to delete them once placed.</p>
+
+                        <h2>tsection.dat</h2>
+
+                        <p>Contains the info for all the dynamic track in the route. The tsection.dat file in the \global folder has all the "snap track" sections in it.</p>
+
+                        <h2>ttype.dat</h2>
+
+                        <p>All the track sounds.</p>
+
+                        <h2>routename.mkr, routename.ref</h2>
+
+                        <p>Used only for the route editor, the ref file accesses static objects, the mkr is the markers.</p>
+
+                        <h2>routename.rdb</h2>
+
+                        <p>Similar to the track database, this is the road database.</p>
+
+                        <h2>routename.rit</h2>
+
+                        <p>Carspawners and level crossings.</p>
+
+                        <h2>routename.tdb</h2>
+
+                        <p>The track database. This tells the sim where the trains can drive.</p>
+
+                        <h2>routename.tit</h2>
+
+                        <p>Like the rit, except for track instead of roads. Platform and siding markers, signals, speedposts, hazards, track sound regions, level crossing trips.</p>
+
+                        <h2>routename.trk</h2>
+
+                        <p>All the filename info that makes that route unique from other routes. Contains the references to the environment (skies) and the properties like speed limits, electrified/wire height, etc. This is the file that has to be hacked to "clone" a route, since the activity editor, for example, doesn't pay any attention to the route folder name, and saves the activity into the first folder it finds with the .trk file matching the activity.</p>
+
+                        <h2>\Shapes\ .thm</h2>
+
+                        <p>THM files are generated in the \Shapes folder if you have thumbnails enabled in the Route Editor object menu. These don't do anything useful so they should be deleted before zipping, since they're generated the first time you look at the object class in the object menu, they'll have a date after May 2001.</p>
+
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+
+		</div>
+
+    <!--- end cause --->
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Packaging A Route For Distribution</h2>
+			<div class="entry">
+
+                        <h3>Editor's Note: included here for historical purposes to demonstrate how far ahead of the pack Jim was in 2002 when he wrote this.  Of course, Route_Riter will do all this, and more, for you nowadays.</h3>
+
+                        <p>If no custom objects are used, the only things necessary to include are:</p>
+                        <ul>
+                            <li>All the root files</li>
+                            <li>\Activities folder</li>
+                            <li>\Paths folder</li>
+                            <li>\Services folder</li>
+                            <li>\TD folder</li>
+                            <li>\Tiles folder</li>
+                            <li>\Traffic folder</li>
+                            <li>\World folder.</li>
+                        </ul>
+
+                        <p>For user friendly installation, a batch file to copy all the files and folders the end user already has.</p>
+
+                        <p>We have new discussions going on with this, and some people are still confused, so I'm gonna see if I can try to clarify the mud a little.</p>
+
+                        <p>If you're looking for absolute perfection, look no further than the Timesaver route.
+                        
+                        <p>Ron (StationMaster) only had a 1 tile route there, but by writing a batch file that copied all the root files that were not unique to that route, he got the zip size down to 60 kilobytes, a new record for add on routes. He also put a lot of time and effort into copying individual files, and the final install size of the route is only 22 megabytes, also a new record for a fully scenicked route. (Mike's Cliffhanger had a bigger zip, but we didn't know about the e.raw and n.raw back then, and Cliffhanger has no scenery, so the final install size was smaller.)</p>
+
+                        <p>Personally, I'd go nutzoid trying to do like Ron did on a bigger route, but there are a lot of things you can eliminate to reduce the size of the zip, and by doing individual or single region copying on \Sound and \Terrtex files, you can save the end user 150 megs or so of unnecessary installation space on each route, with very little effort.</p>
+
+                        <p>I'm a lazy SOB, so rather than trying to sort them out, I still include all the files in the root of the route folder. That isn't a big deal, it's usually only 1 meg or so, and zips down a lot smaller. Even the O&amp;WV with it's monster 3 megabyte track database, with an overall root file size of nearly 5 megabytes, that 5 megs zips down to 550 kilobytes, since all the root files except the ace files compress very well.</p>
+
+                        <p>So the quick and easy way to package a route is to leave all the root files in place, do a tools, find in explorer for *.bk *e.raw *n.raw *.thm , select all delete all. Then delete \Envfiles \Shapes \Sound \Terrtex and \Textures folders. Zip up what's left and test the extraction and installation before uploading.</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+
+		</div>
+
+    <!--- end cause --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Additional Notes</h2>
+			<div class="entry">
+
+                        <h3>Editor's Note: included here for historical purposes to demonstrate how far ahead of the pack Jim was in 2002 when he wrote this.  Of course, Route_Riter will do all this, and more, for you nowadays.</h3>
+
+                        <p>If no custom objects are used, the only things necessary to include are:</p>
+                        <ul>
+                            <li>All the root files</li>
+                            <li>\Activities folder</li>
+                            <li>\Paths folder</li>
+                            <li>\Services folder</li>
+                            <li>\TD folder</li>
+                            <li>\Tiles folder</li>
+                            <li>\Traffic folder</li>
+                            <li>\World folder.</li>
+                        </ul>
+
+                        <p>For user friendly installation, a batch file to copy all the files and folders the end user already has.</p>
+
+                        <p>We have new discussions going on with this, and some people are still confused, so I'm gonna see if I can try to clarify the mud a little.</p>
+
+                        <p>If you're looking for absolute perfection, look no further than the Timesaver route.
+                        
+                        <p>Ron (StationMaster) only had a 1 tile route there, but by writing a batch file that copied all the root files that were not unique to that route, he got the zip size down to 60 kilobytes, a new record for add on routes. He also put a lot of time and effort into copying individual files, and the final install size of the route is only 22 megabytes, also a new record for a fully scenicked route. (Mike's Cliffhanger had a bigger zip, but we didn't know about the e.raw and n.raw back then, and Cliffhanger has no scenery, so the final install size was smaller.)</p>
+
+                        <p>Personally, I'd go nutzoid trying to do like Ron did on a bigger route, but there are a lot of things you can eliminate to reduce the size of the zip, and by doing individual or single region copying on \Sound and \Terrtex files, you can save the end user 150 megs or so of unnecessary installation space on each route, with very little effort.</p>
+
+                        <p>I'm a lazy SOB, so rather than trying to sort them out, I still include all the files in the root of the route folder. That isn't a big deal, it's usually only 1 meg or so, and zips down a lot smaller. Even the O&amp;WV with it's monster 3 megabyte track database, with an overall root file size of nearly 5 megabytes, that 5 megs zips down to 550 kilobytes, since all the root files except the ace files compress very well.</p>
+
+                        <p>So the quick and easy way to package a route is to leave all the root files in place, do a tools, find in explorer for *.bk *e.raw *n.raw *.thm , select all delete all. Then delete \Envfiles \Shapes \Sound \Terrtex and \Textures folders. Zip up what's left and test the extraction and installation before uploading.</p>
+                        
+                        <p>But as has been said, just use <a href="../Route_Riter/index.html">Route_Riter</a> to compact and package your route.</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+
+		</div>
+
+    <!--- end cause --->
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+               </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 22 Apr 2002, 19 April 2010</center></p>
+</div>
+</body>
+</html>

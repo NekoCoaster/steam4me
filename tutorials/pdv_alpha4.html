@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>Alpha Channel Generation Using the TGATool Alpha Channel Template Option - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li ><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png"  height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png"  height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+                        <h2><font color="#3333FF">Alpha Channel Generation Using the TGATool Alpha Channel Template Option</font>
+                        <br>by Paul DeVerter</h2>
+                        <h3>A Port City Car Co. Project Copyright &copy; 2004</h3
+
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                   <p>This is a short tutorial on how to generate an alpha channel using the TGATool.  My prior 3 tutorials on making the Alpha Channel have used a selection tool.  And that works fine if you have a drawing or other artwork that has clearly distinguished colors.  Then the selection tool can easily find the borders so that the Alpha Channel is sharply defined.</p>
+
+                   <p>But look at this bitmap photo which shows 2 sets of buildings:</p>
+
+                   <p><img src="images/pdv_alpha4_image01.jpg" width="400" height="400" alt="" border="2"></p>
+
+                   <p>Let's suppose you want to make a building like the upper pair that has columns, which stick up above the roofline, as in the upper portion of the photo.  One way to do so would be to make individual rectangular columns - seven in number.  This would add quite a bit of un-necessary polys to the count for a background building.</p>
+
+                   <p>A better way to handle it would be to use an Alpha Channel to make the area between the columns invisible.  But notice the green trees sticking up behind the top of the pink building.  When I tried to use the selection tool to run a marquee around the upper photograph, I could not get the marquee to stay next to the building.  Instead, this is what I got:</p>
+
+                   <p><img src="images/pdv_alpha4_image02.jpg" width="268" height="140" alt="" border="2"></p>
+
+                   <p>Notice that the Magic Wand was unable to distinguish between the gray and pink buildings and the green tree background.  So I decided to try a different approach.  And that was to use the TGATool to help generate a suitable photo file with an Alpha Channel.</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "link1"</a>
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">The Process</h2>
+			<div class="entry">
+
+                   <p>While I used PaintShopPro7, this same technique can be used with MS Paint, which has no native ability to make an alpha channel.  The paint program you use for this technique does not have to be able to generate an alpha anything.  Instead, TGATool does it for you.</p>
+
+                   <p>First, <b>File | Open</b> the TGATool and find and load the bmp file (here it was BCFillerStr1.bmp).</p>
+
+                   <p><img src="images/pdv_alpha4_image03.jpg" width="438" height="321" alt="" border="2"></p>
+
+                   <p>As you can see in the next photo, it has no Alpha Channel texture showing in the box on the upper right. And you will notice two buttons below the blank Alpha area.  These are <b>"Create Alpha Channel"</b> and <b>"Create Alpha Template"</b>.  Click the one for the Template.</p>
+
+                   <p><img src="images/pdv_alpha4_image04.jpg" width="469" height="412" alt="" border="2"></p>
+
+                   <p>What this does is create a grayscale Alpha Template, which looks like this:</p>
+
+                   <p><img src="images/pdv_alpha4_image05.jpg" width="467" height="321" alt="" border="2"></p>
+
+                   <p>Now you need to operate on the Template and create a black and white Alpha Channel.  This will be done in your paint program, so you need to send the Template to that program.  You may either click on the menu item <b>Image</b>, and send the Template to the drawing program, or you may right click on the <b>Template</b>, and from the box which appears, do the same thing.  This opens your painting program (in my case PSP7) and you will see that the Template is there for you to manipulate, and further that the color palette is not color at all, but shades of gray.  So, chose the Styles to be dead black and dead white.</p>
+
+                   <p><img src="images/pdv_alpha4_image06.jpg" width="369" height="313" alt="" border="2"></p>
+
+                   <p>What you are going to do is paint the black where you wish the Alpha Channel to cause the photo to become transparent or invisible, and white where you wish the Alpha Channel to allow the underlying colors to show through.  So, fire up your paintbrush, enlarge the artwork, and begin painting some black along the top edge and between the upright column tops.</p>
+
+                   <p><img src="images/pdv_alpha4_image07.jpg" width="298" height="135" alt="" border="2"></p>
+
+                   <p>The object is to make the trees and sky invisible along the top edge of the buildings.  And while you are doing it, run some black vertically along both edges of the building.  Pretty soon you will have something that looks like this:</p>
+
+                   <p><img src="images/pdv_alpha4_image08.jpg" width="278" height="140" alt="" border="2"></p>
+
+                   <p>Now, the next step is to paint with white where you wish the building to show through.  This means paint white over everything that is not dead black.</p>
+
+                   <p><img src="images/pdv_alpha4_image09.jpg" width="357" height="195" alt="" border="2"></p>
+
+                   <p>And that includes the three paint samples below the building, as well.  You can carefully use the paintbrush to get into the nooks and crannies, or you might try simply using the Color Replacer tool to change the grays to white.  If you make a mistake, simply "undo" and try again, perhaps with a different tolerance.  Soon you will have converted your grayscale Template into a regular black and white Alpha looking piece of artwork.</p>
+
+                   <p><img src="images/pdv_alpha4_image10.jpg" width="352" height="201" alt="" border="0"></p>
+
+                   <p>The next step is to "Save" (not "Save As") the modified artwork.  This will send it back to TGATool.  Then, close out of PSP7 and you will be back at TGATool, and it will look like this:</p>
+
+                   <p><img src="images/pdv_alpha4_image11.jpg" width="470" height="320" alt="" border="0"></p>
+
+                   <p>Now you need to save this artwork with its Alpha Channel, as a tga file.  Do this by clicking on the menu item File, and Save As a tga file, with whatever name you choose, and probably in the same location as your dst file.  If you wish, you may also make an ace file by exporting the file with an appropriate ace name to perhaps the same location.</p>
+
+                   <p><img src="images/pdv_alpha4_image12.jpg" width="557" height="296" alt="" border="0"></p>
+
+                   <p>This process does bring up one little problem, and that is that the file name may have more than the DOS moniker of 8.3.  If it does not, you can use the TSM program to change the name of the texture file references to the new tga file.  Otherwise, you will need to either rename the new tga file to the 8.3 format so that TSM can do its thing, or you will need to manually go through all the texture references and change them from the original bmp name (which was BCFilleStr1.bmp) to the new name, which in my case is BCFillerStr1.tga.  Of course, if you have not yet made the 3D model, you can use the tga file you just generated to texture the model in the first place, or even retexture it completely with the new tga file.</p>
+
+                   <p>So, now you have created a tga file with an Alpha Channel by using TGATool.  You may use this same technique to create Alpha Channels for truck sideframes, building windows, or whatever else strikes your fancy.</p>
+
+                   <p>The next step is to create the 3D structure using an Alpha capable material such as TransNorm, s and sd files, and take a look at your handiwork in the Route Editor, or by using Shape File Viewer.</p>
+
+                   <p>So that you might see a finished project, I am including a photo of the dst file that I used to make the buildings.  You will see that the front wall sticks up higher than the roof, a sort of false front.  I did not add a second poly behind the front wall, so that when you look at the structure from the rear, the little columns are not visible.  However, it is perfectly possible to add a poly facing backwardly behind the false front, and texture it as well.</p>
+
+                   <p><img src="images/pdv_alpha4_image13.jpg" width="210" height="107" alt="" border="2">
+                   <img src="images/pdv_alpha4_image14.jpg" width="300" height="145" alt="" border="2"></p>
+
+			 </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+			<a Name = "link2"</a>
+		</div>
+
+    <!--- end cause --->
+
+
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Conclusion</h2>
+			<div class="entry">
+
+                   <h3>Credits and Thanks to:</h3>
+
+                   <p>This technique was taught to me by Tim Muir several years ago.  At that time he was using MS Paint which has no Alpha Channel capabilities.  I was so inexperienced in using Paint and later PaintShopPro, that it took several years for the advice to sink in.</p>
+
+                   <p>This tutorial has been reviewed as a Beta project by Ed Hawkins, Ted Ahner, Tim Muir, Larry Mullett, JW Titus, and Frank Thomas to whom I offer my thanks for their advice and comments.</p>
+
+                        </div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+
+		</div>
+
+    <!--- end cause --->
+
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#link1">The Process</a>
+                 <br><a href="#conclusion">Conclusion</a>
+               </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 15 June 2006, 30 April 2010</center></p>
+</div>
+</body>
+</html>
+

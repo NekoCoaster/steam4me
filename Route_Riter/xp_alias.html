@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <title>Route-Riter - Setting up Common Shapes/Textures for MSTS</title>
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li><a href="../tutorials/index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li><a href="../routes/index.html">Routes</a></li>
+  		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li class="current_page_item"><a href="index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Route_Riter_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Route-Riter - Setting up Common Shapes/Textures for MSTS</font>
+                        <br>by Mike Simpson</h2>
+		</div>
+
+    <!--- end end overview --->
+
+
+    <!--- overview --->
+
+		<div class="post">
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                    <p><p>The 'Holy-Grail' of MSTS users has always been to have a "Global Folder" for Shapes and Textures. Up to now, this has always been considered virtually impossible to achieve.</p>
+
+		    <p>However following some work done by 'Mdanie' on uktrainsim.com and suggestions from other users, it has been discovered that at least for users who use Windows XP with the NTFS file system that this is possible.</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "start">
+		</div>
+
+    <!--- end end overview --->
+
+   <!--- sol hard --->
+
+		<div class="post">
+                  <h2 class="title">Let's Get Started</h2>
+			<div class="entry">
+
+        `         <p><p>XP includes a command 'Fsutil Hardlink Create file-A file-B' this in effect places a directory link for file-A pointing to the position of file-B on the hard-drive. Deleting either A or B has no effect on the other, the file is only removed from the drive when both A and B are deleted. These files appear in Windows Explorer with exactly the same entries as before, so folder size etc remains the same. The difference is in the free space on the drive.</P>
+
+		  <p>In my case, I had two versions of the London South-East route on my E: drive one in my main MSTS installation, one as a mini-route. The saving by using a common folder was 740 mb for a single route.</P>
+
+		  <p>In RR v6.2.63 or higher, I have implemented this to some extent using a new tab 'Link Shapes/Textures' - The procedure is as follows:-</p>
+
+		  <ol>
+		      <li>Set up a Common Folder (use the button 'Set up Common Files' under Misc Options) - You may if you wish then click the Copy Default Files to Common so that all the default files are now in the common folder.
+		          <br /><br />Note: The Common folder MUST be on the same hard-drive as your MSTS folder, usually in your Routes folder. The hard-drive MUST run under XP with the NFTS file system.
+		          <br>&nbsp;
+		      </li>
+
+		      <li> Select the Common folder from the Files menu (once you do this once, it is saved for future use and should not need to be selected again).
+ 		          <br>&nbsp;
+		      </li>
+
+		      <li> For any route you wish to use this option with, you should now copy the Shapes/Textures/Terrtex/Envfiles/Sound folders into the Common folder (use the 'Copy Route Files to Common Folder' button).
+		          <br>&nbsp;
+		      </li>
+
+		      <li>Select the Route as usual by clicking the Confirm Route button 
+		      <br>&nbsp;
+		      </li>
+
+		      <li>Click the 'Link all Files to Common Files' button and the hard links are set up.
+		          <br>&nbsp;
+		      </li>
+
+		      <li>Check your hard-drive free space before/after.
+		          <br>&nbsp;
+		      </li>
+		  </ol>
+
+<p>Note: In some cases, files in the Common folder might have the same name but be different to the one used by a particular route. A crc check is made, and if different, then the file is not replaced by a hardlink.</p>
+
+<p>The above is somewhat experimental, so I would only suggest experimenting with routes which you have backups for in the early stages.</p>
+
+<p>In v6.2.63, I have added two further buttons:-
+
+      <ol>
+          <li>'List Hard Links in Common Files' shows you a list of all the files in the Common files folder and how many links each file has. A reading of '1' link means that the file is not linked to any route, so may be removed to reduce space.  There is a button on this screen which will delete all unlinked files.
+	  <br>&nbsp;
+	  </li>
+
+	  <li>'List Linked Files in Selected Route' shows which files in the route are linked (once again, those showing 1 link are unlinked - the single link
+is the link from the file name to the file on the hard-drive).
+br>&nbsp;
+</li>
+</ol>
+<p>Please send any comments as usual..
+       		</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+                 	<A Name="define">
+		</div>
+
+    <!--- end sol hard --->
+
+
+
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 8-19 August 2007, 27 May 2010</center></p>
+</div>
+</body>
+</html>

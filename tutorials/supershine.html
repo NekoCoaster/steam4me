@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>Adding Shine to MSTS models - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Adding Shine to MSTS models</font>
+                        <br>by by Paul Gausden</h2>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                             <p>I have long believed that there was far more functionality available in the MSTS graphics engine than was being used by modellers.</p>
+
+                             <p>I had spent many hours looking at the app.fbk and default.fbk files as well as the S file format. All of these pointed towards the fact that bump maps and environment maps should work. But how ?</p>
+
+                             <p>I made many experimental S files, none of which worked.</p>
+
+                             <p>However, thanks to a posting by "Vital" from trainsim.ru on the 3Dtrains.com forums I found out someone had enabled environment maps.</p>
+
+                             <p><img src="images/decapod_shine_01.jpg" width="750" height="500" alt="" border="1"></p>
+
+                             <p><i>Converting one of my models (3D canvas model) - even transparent textures got environment maps added.</i></p>
+
+                             <p>I spotted the information I was missing from my S files and suddenly I had access to 27 named shaders (31 if I used the unreleased fbk files from MSTS2) - with the possibility to add more.</p>
+
+                             <p>In reality not many of them are useful, but some have a big impact.</p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "link1">
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">The first one to try is "GlossMap".</h2>
+			<div class="entry">
+
+                        <p>This is environment mapping (behaves a bit like a reflection) on flat textures.</p>
+
+                        <h3>Prerequisites:</h3>
+
+                        <p>*********************************************************************************
+                        <br>*** To enable this, app.fbk in the main trainsim folder needs a small patch ***
+                        <ol><li>open the file with wordpad;</li>
+                        <li>look for:
+                            <br>&nbsp;&nbsp;&nbsp;shader_cfgs (
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22</li>
+                        <li>change to:
+                        <br>&nbsp;&nbsp;&nbsp;shader_cfgs (
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;23
+                        </li></ol>
+
+                        <p>*********************************************************************************</p>
+
+                        <p>We need an environment map texture - this is just a normal ACE file of a scene as if viewed through a fisheye lens, but chopped into quarters and each quarter then swapped diagonally - this'll sort the men from the boys :)</p>
+
+                        <p>It does not need to be big - 64x64 will do, less detail is better.</p></p>
+
+                        <p>We need an uncompressed S file and a good understanding of which parts are linked to which matrix node. This depends on the author of the model.</p>
+
+                        <p>The shape viewer hierarchy view option may help here.</p>
+
+                        <h3>The Process:</h3>
+                        
+                        <p>Now open up the uncompressed S file with a unicode editor (Wordpad, notepad, Context etc).</p>
+
+                        <ol>
+                            <Li>look for the "shader_names" section near the top and add an extra line for GlossMap and add one to the shader_names count.
+
+                            <p><img src="images/decapod_shine_02.jpg" width="750" height="90" alt="" border="1"></p>
+                            <br>&nbsp;</li>
+
+                            <li>make a note of the shader number you added starting from zero - in the case above, the shader is 2;
+                            <br>&nbsp;</li>
+
+                            <li>Search for the "images" section, add a line for the new env map ace (and increment the images count)
+
+                            <p><img src="images/decapod_shine_03.jpg" width="750" height="130" alt="" border="1"></p>
+                            <br>&nbsp;</li>
+
+                            <li>again, note the sequence number from 0 and add a texture line in the next section where the first parameter is the new image number. The 3rd parameter doesn't need to be -3 as this just sharpens the texture - not necessary for the env map (and increment the textures count)</p>
+
+                            <p><img src="images/decapod_shine_04.jpg" width="750" height="140" alt="" border="1"></p>
+                            <br>&nbsp;</li>
+
+                            <li>change the light_model_cfgs section to add a new config (sequence number 1) (and increment the light_model_cfgs count to 2)
+
+                            <p><img src="images/decapod_shine_05.jpg" width="750" height="230" alt="" border="1"></p>
+                            <br>&nbsp;</li>
+
+                            <li>Alter the vtx_states section:
+
+                            <p>The number after the first 00000000 is the matrix sequence number - if the modeller has been kind, these will give a clue as to which parts are going to be changed.</p>
+
+                            <br>In my example below, these correspond to buffers, boiler, cab and "bits".
+
+                            <p>The 3rd number is usually -5 to -12 where -5 is normal, -6 is low specualar shine and -7 is high specular shine.
+
+                            <p>For the ones you want to convert, change -5, -6 or -7 to -1 and change the 4th parameter to the new light_model_cfg (1)</p>
+
+                            <p><img src="images/decapod_shine_06.jpg" width="750" height="250" alt="" border="1"></p>
+                            <br>&nbsp;</li>
+
+                            <li>Now scan through the prim_states section to find the ones where the vtx_state sequence (6,7,8 and 9 from above) is the second parameter after the tex_idxs() - they may appear more than once.
+
+                            <p>For each of these, change the tex_idx first parameter to 2 and add a 3rd parameter of the env map texture sequence number (4)</p>
+                            <br>Change the second to last parameter to the new light_model_cfg (1) and change the second parameter after prim_state to the new named shader (2)
+
+                            <p><img src="images/decapod_shine_07.jpg" width="750" height="320" alt="" border="1"></p>
+                            <br>&nbsp;</li>
+
+                            <li>change the last parameter of every sub-object header for every distance level in the S file (could be several) to 000002c4:
+
+                            <p>	sub_object_header ( 00000000 -1 -1 000001d2 000002c4</p>
+                            <br>&nbsp;</li>
+
+                            <li>Also just below this for each distance level, add one to the first parameter of the following lines and add the new shader sequence and new light model cfg sequence as the last parameter.
+
+                            <p>		subobject_shaders ( 3 0 1 2 )
+                            <br>		subobject_light_cfgs ( 2 0 1 ) 0
+                            <br>&nbsp;</li>
+                        </ol>
+
+                        <p>This shader is additive to the current texture - this means when the texture is dark at night, it still adds. Consequently it glows in the dark.</p>
+
+                        <p>The only way around this at the moment is to use a very dark env map. This makes the reflective effect more subtle which probably looks better anyway.</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end cause --->
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#link1">Glossmap</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 20 June 2006, 15 July 2006, 20 March 2010</center></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Collaboration
+Description: A two-column, fixed-width design suitable for small websites and blogs.
+Version    : 1.0
+Released   : 20080102
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <title>Changing the Route Start Tile Position - at The Steam4me Site</title>
+
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="menu">
+    <font face="Helvetica, Arial">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
+		<li><a href="../msts_errors.html">Error Messages</a></li>
+		<li><a href="../steam/index.html">Steam</a></li>
+		<li><a href="../electric/index.html">Electric</a></li>
+		<li><a href="../passenger/index.html">Passenger</a></li>
+		<li><a href="../diesel/index.html">Diesel</a></li>
+		<li><a href="../freight/index.html">Freight</a></li>
+		<li ><a href="../vans/index.html">Vans</a></li>
+		<li ><a href="../routes/index.html">Routes</a></li>
+		<li><a href="../utilities/index.html">Utilities</a></li>
+		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+	</ul>
+        </font>
+</div>
+<div id="splash">
+<table width = 100% bgcolor = #333957>
+<tr>
+    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" NOSAVE height=60 border=0></a>
+    </td>
+    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" NOSAVE height=60>
+    </td>
+</tr>
+</table>
+</div>
+<hr />
+<div id="page">
+	<div id="content">
+
+    <!--- overview --->
+
+		<div class="post">
+			<font color=blue><h2 class="title">Changing the Route Start Tile Position</font>
+                        <br>by Yuri Sos
+                        <br>additonal information by J W Titus, Okrasa Ghia and Mark DiVecchio</h2>
+                        <p></p>
+			<h2 class="title">Overview</h2>
+ 			   <div class="entry">
+
+                        <p>Isn't it a pain when you are working on a route and the Route Editor (RE) opens miles away from the place you are working?  You then have to scroll to the spot you want or enter the latitude/longitude into the Camera window and jump to the location you are working on.</p>
+
+                        <p>You could go into the Route Gegraphy Editor (RGE) and alter the start tile but that's inefficient, inaccurate and time-consuming.</p>
+
+                        <p>A more accurate and quicker way involves altering the RouteStart line in the .TRK file of the Route you are using.</p>
+
+                        <p>Quick reference summary of values to be changed:</p>
+                             <ul>
+                                <li>Use the parameters in the "Camera" window of Route Editor to alter the appropriate line in the .TRK file of your route:
+                                <b>RouteStart ( {tile x}&nbsp;&nbsp;&nbsp;{tile z}&nbsp;&nbsp;&nbsp;x&nbsp;&nbsp;&nbsp;z&nbsp;)</b></li>
+                                </ul>
+                                </p>
+
+                            </div>
+			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		          <a NAME = "link1">
+		</div>
+
+    <!--- end end overview --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">How To Change The Start Tile</h2>
+			<div class="entry">
+
+                        <p>Let's look at an example.</p>
+
+                        <p>When you open RE, the window jumps to the location you originally set when you picked the Start Tile in RGE.  The camera lands there, pointing north.  See image below.</p>
+
+                        <p><img src="images/route_start.jpg" width="825" height="680" alt="" border="1"></p>
+
+                        <p>In the image above, I've got the .TRK file open in <a href="context.html">ConTEXT</a> as well as the Route Editor.  Note the line that starts with "RouteStart": the parameters are the tile identification (tile x) and (tile z) followed by the x and z co-ordinates for the location within that world tile (<i>Note: negative numbers are significant in relation to MSTS origin info and the tile itself which is 2048 meters square, 0,0 being the exact center of the tile</i>).  These parameters are visible in the Camera window at left.</p>
+
+                        <p>Now jump to the area you're working on.  See image below.</p>
+
+                        <p><img src="images/route_start2.jpg" width="825" height="680" alt="" border="1"></p>
+
+                        <p>In the image above, I've highlighted the four parameters we're interested in.  I drop back into my .TRK file and change the RouteStart line so that it reads</p>
+
+                        <p><b>RouteStart ( -11268 14313 52 -454 )</b></p>
+
+                        <p>Save the .TRK file.</p>
+
+                        <p>Now go back to your Route Editor window.  Click <strong><font color="#ff66ff">File | Save</font></strong> and save your work.  You don't need to exit the Route Editor.  Click <strong><font color="#ff66ff">File | Load</font></strong> and select your route. Your route is loaded and the camera jumps to the new start position.  See image below.</p>
+
+                        <p><img src="images/route_start3.jpg" width="825" height="680" alt="" border="1">
+
+                        <p>Interestingly, this doesn't work on all PCs (so what else is new with MSTS?).  On one of my PCs, the one I wrote this tutorial on, the procedure above works as described.</p>
+
+                        <p>On my home system, I have to exit <b>MSTS Editors and Tools</b> to the desktop before the changes take effect.  Go figure.</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end cause --->
+
+    <!--- where --->
+
+		<div class="post">
+			<h2 class="title">Additional information</h2>
+			<div class="entry">
+
+                        <p>If you need to identify the location of the RouteStart co-ordinates, you can add the location after the co-ordinates thus</p>
+
+                        <p><b>RouteStart ( -11268 14313 52 -454 Mt Ephraim )</b></p>
+
+                        <p>No # character is required before the words as above.</p>
+
+                        <p>Other users such as J W Titus, Mark DiVecchio and Okrasa Ghia have shown techniques to have more than one RouteStart line in the TRK file, though some users have found these don't work on their systems.</p>
+
+                        <p>It does appear that a list of RouteStart lines such as</p>
+
+                        RouteStart ( -11268 14313 52 -454 Mt Ephraim )
+                        <br>RouteStart ( -11281 14290 44 -21 Marietta West Yard )
+                        <br>RouteStart ( -11281 14289 -568 336 Tessmocker )
+                        <br>RouteStart ( -11280 14290 -6 414 Marietta Station )
+                        <br>RouteStart ( -11276 14297 10 950 Swik )
+
+                        <p>will work satisfactorily, RE using only the first RouteStart line.  If you wish to use another RouteStart location, simply cut/paste the required RouteStart line to the top of the list before entering RE.</p><p>Okrasa Ghia demonstrated a technique that works on his system:  I am unable to emulate this on my systems: the route simply doesn't appear on the RE drop-down box nor in MSTS itself.  Make a backup and try it: it may work for you.</p>
+
+                        <p>RouteStart ( -12668 14052 -815 -718 #"Drake" )
+                        <br>_RouteStart ( -12719 14037 37 -288 #"Essex+2" )
+                        <br>_RouteStart ( -12716 14040 717 793 #"Goffs+3" )
+                        <br>_RouteStart ( -12710 14045 446 -878 #"Goffs" )
+                        <br>_RouteStart ( -12709 14044 969 1022 #"Goffs-1" )
+                        </p>
+
+                        <p>Okrasa says "The leading underscore makes MSTS regard the token as a comment thus ignoring it (same as in eng/wag-files).  When wanting to change starting position I simply prefix the current one with an underscore and remove it on the one I want to switch to."</p>
+
+                        <p><b>NOTE:</b> These modifications will be lost and you will have to restore them from a backup file if you alter the route in "Route Geometry Extractor" or in the "Route Editor - Properties" window. The simulator creates a new file without your modifications under these conditions. When adding new locations, remember to TEST FIRST and then make a new backup file.</p>
+
+       			</div>
+			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+		</div>
+
+    <!--- end cause --->
+
+
+	<!-- end #content -->
+
+	</div>
+
+	<!-- start left sidebar -->
+	<div id="sidebar">
+           <h2>Contents</h2>
+                 <p> <a href="#">Overview</a>
+                 <br><a href="#link1">Changing Start Tile</a>
+              </p>
+	</div>
+	<!-- end #sidebar -->
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+        <br><center>Updated: 3 December 2004, 23 May 2005, 2 April 2010</center></p>
+</div>
+</body>
+</html>
