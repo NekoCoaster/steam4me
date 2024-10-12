@@ -11,201 +11,232 @@ Released   : 20080102
 
 -->
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
-   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
 
-   <title>Constructing Wagons With Hideable Loads - at The Steam4me Site</title>
+  <title>Constructing Wagons With Hideable Loads - at The Steam4me Site</title>
 
-   <meta name="keywords" content="" />
-   <meta name="description" content="" />
-   <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
-   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
-   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
 </head>
+
 <body>
-<div id="menu">
+  <div id="menu">
     <font face="Helvetica, Arial">
-	<ul>
-		<li><a href="../index.html">Home</a></li>
-		<li class="current_page_item"><a href="index.html">Tutorials</a></li>
-		<li><a href="../msts_errors.html">Error Messages</a></li>
-		<li><a href="../steam/index.html">Steam</a></li>
-		<li><a href="../electric/index.html">Electric</a></li>
-		<li><a href="../passenger/index.html">Passenger</a></li>
-		<li><a href="../diesel/index.html">Diesel</a></li>
-		<li><a href="../freight/index.html">Freight</a></li>
-		<li ><a href="../vans/index.html">Vans</a></li>		
-		<li ><a href="../routes/index.html">Routes</a></li>
-		<li><a href="../utilities/index.html">Utilities</a></li>
-		<li><a href="../Route_Riter/index.html">Route_Riter</a></li>
-	</ul>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li class="current_page_item"><a href="index.html">Tutorials</a></li>
+        <li><a href="../msts_errors.html">Error Messages</a></li>
+        <li><a href="../steam/index.html">Steam</a></li>
+        <li><a href="../electric/index.html">Electric</a></li>
+        <li><a href="../passenger/index.html">Passenger</a></li>
+        <li><a href="../diesel/index.html">Diesel</a></li>
+        <li><a href="../freight/index.html">Freight</a></li>
+        <li><a href="../vans/index.html">Vans</a></li>
+        <li><a href="../routes/index.html">Routes</a></li>
+        <li><a href="../utilities/index.html">Utilities</a></li>
+        <li><a href="../Route_Riter/index.html">Route_Riter</a></li>
+      </ul>
+    </font>
+  </div>
+  <div id="splash">
+    <table width=100% bgcolor=#333957>
+      <tr>
+        <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png" height=60 border=0></a>
+        </td>
+        <td align=right><img SRC="../images/S4M_Banner_Tutorials.png" height=60>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <hr />
+  <div id="page">
+    <div id="content">
+
+      <!--- overview --->
+
+      <div class="post">
+        <font color=blue>
+          <h2 class="title">Constructing Wagons With Hideable Loads
         </font>
-</div>
-<div id="splash">
-<table width = 100% bgcolor = #333957>
-<tr>
-    <td align=left><a href="http://steam4me.net"><img SRC="../images/S4M_Banner_left.png"  height=60 border=0></a>
-    </td>
-    <td align=right><img SRC="../images/S4M_Banner_Tutorials.png"  height=60>
-    </td>
-</tr>
-</table>
-</div>
-<hr />
-<div id="page">
-	<div id="content">
+        <br>by Ian McMillan</h2>
+        <p></p>
+        <h2 class="title">Overview</h2>
+        <div class="entry">
 
-    <!--- overview --->
+          <p>Imagine this activity:</p>
+          <ul>
+            <li>You pick up some empty wagons and take them to the Colliery;</li>
+            <li>You uncouple them under the screens and run round;</li>
+            <li>You re-attach the now loaded wagons and take them to the power station tippler;</li>
+            <li>Then you draw out the emptied wagons ready for their next trip.</li>
+          </ul>
 
-		<div class="post">
-			<font color=blue><h2 class="title">Constructing Wagons With Hideable Loads</font>
-                        <br>by Ian McMillan</h2>
-                        <p></p>
-			<h2 class="title">Overview</h2>
- 			   <div class="entry">
+          <p>Can't be done?</p>
 
-                             <p>Imagine this activity:</p>
-                             <ul>
-                                 <li>You pick up some empty wagons and take them to the Colliery;</li>
-                                 <li>You uncouple them under the screens and run round;</li>
-                                 <li>You re-attach the now loaded wagons and take them to the power station tippler;</li>
-                                 <li>Then you draw out the emptied wagons ready for their next trip.</li>
-                             </ul>
+          <p>Yes it can, thanks to <a href="https://nekocoaster.github.io/msts-bin/eng/eng.html">MSTS-Bin</a>.</p>
 
-                             <p>Can't be done?</p>
+          <p>Look at the time in the "Next Station" display.....</p>
 
-                             <p>Yes it can, thanks to <a href="http://mstsbin.uktrainsim.com/eng/eng.html">MSTS-Bin</a>.</p>
+          <p><img SRC="images/imcm_MineEmpty.jpg" HSPACE=10 NOSAVE BORDER=0 height=388 width=586></p>
 
-                             <p>Look at the time in the "Next Station" display.....</p>
+          <p>.........Press <b>Ctrl</b> + <b>Numpad 7</b>.........</p>
 
-                             <p><img SRC="images/imcm_MineEmpty.jpg" HSPACE=10 NOSAVE BORDER=0 height=388 width=586></p>
+          <p><img SRC="images/imcm_MineLoad.jpg" HSPACE=10 NOSAVE BORDER=0 height=410 width=584></p>
 
-                             <p>.........Press <b>Ctrl</b> + <b>Numpad 7</b>.........</p>
+          <p>.....and the wagon is loaded.</p>
 
-                             <p><img SRC="images/imcm_MineLoad.jpg" HSPACE=10 NOSAVE BORDER=0 height=410 width=584></p>
+          <p>I used the door animation to rotate the load so that the polys faced inside the wagon making them
+            invisible. You can do this with any load that will fit inside the wagon when inverted.</p>
 
-                             <p>.....and the wagon is loaded.</p>
+          <p>I have not tried it yet but this trick should also work with containers and similar simple shapes by making
+            the sides, end and top as seperate parts and rotating them on their appropriate axis.</p>
 
-                             <p>I used the door animation to rotate the load so that the polys faced inside the wagon making them invisible.    You can do this with any load that will fit inside the wagon when inverted.</p>
-
-                             <p>I have not tried it yet but this trick should also work with containers and similar simple shapes by making the sides, end and top as seperate parts and rotating them on their appropriate axis.</p>
-
-                             <p>The only snag is that the wagon mass cannot be changed and the wag file will have to show the loaded weight.</p>
+          <p>The only snag is that the wagon mass cannot be changed and the wag file will have to show the loaded
+            weight.</p>
 
 
-                            </div>
-			  <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
-			<a NAME = "construct"</a>			  
-		</div>
+        </div>
+        <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+        <a NAME="construct" </a>
+      </div>
 
-    <!--- end end overview --->
+      <!--- end end overview --->
 
-    <!--- where --->
+      <!--- where --->
 
-		<div class="post">
-			<h2 class="title">Construction of Wagon</h2>
-			<div class="entry">
+      <div class="post">
+        <h2 class="title">Construction of Wagon</h2>
+        <div class="entry">
 
-                        <p>This tutorial demonstrates the construction in Abacus TrainSim Modeler, but the same principles will apply no matter which program you use.</p>
+          <p>This tutorial demonstrates the construction in Abacus TrainSim Modeler, but the same principles will apply
+            no matter which program you use.</p>
 
-                        <p>Build your wagon as normal and position the load.
-                        <br>Centre the load part axis to origin and then hold down Shift and drag the axis up to the middle of the wagon body.
-                        <br>Goto <b>Transform/Rotate</b>, enter 180 into the Z box and OK.</p>
+          <p>Build your wagon as normal and position the load.
+            <br>Centre the load part axis to origin and then hold down Shift and drag the axis up to the middle of the
+            wagon body.
+            <br>Goto <b>Transform/Rotate</b>, enter 180 into the Z box and OK.
+          </p>
 
-                        <p>Make sure no part of the load shows below the frames. Undo and move the axis up a little if it does and try again:</p>
+          <p>Make sure no part of the load shows below the frames. Undo and move the axis up a little if it does and try
+            again:</p>
 
-                        <p><img SRC="images/imcm_TSM_01.jpg" HSPACE=10 NOSAVE BORDER=0 height=372 width=512></p>
+          <p><img SRC="images/imcm_TSM_01.jpg" HSPACE=10 NOSAVE BORDER=0 height=372 width=512></p>
 
-                        <p>Go to File/Project properties and set the Animation frames to 2:</p>
+          <p>Go to File/Project properties and set the Animation frames to 2:</p>
 
-                        <p><img SRC="images/imcm_TSM_02.jpg" HSPACE=10 NOSAVE BORDER=0 width=672 height=474></p>
+          <p><img SRC="images/imcm_TSM_02.jpg" HSPACE=10 NOSAVE BORDER=0 width=672 height=474></p>
 
-                        <p>Now press F2 and name the part DOOR_D.
-                        <br>Parent it to Main.</p>
+          <p>Now press F2 and name the part DOOR_D.
+            <br>Parent it to Main.
+          </p>
 
-                        <p><img SRC="images/imcm_TSM_05.jpg" HSPACE=10 NOSAVE BORDER=0 width=496 height=412></p>
+          <p><img SRC="images/imcm_TSM_05.jpg" HSPACE=10 NOSAVE BORDER=0 width=496 height=412></p>
 
-                        <p>Press the Animation button and open the Animation window.</p>
+          <p>Press the Animation button and open the Animation window.</p>
 
-                        <p>In the Rotation Keys box, click Add Rotation, make sure all the numbers are Zero and OK.
-                        <br>Click Add Rotation again and this time set the frame to 1 and Axis Z to 180.</p>
+          <p>In the Rotation Keys box, click Add Rotation, make sure all the numbers are Zero and OK.
+            <br>Click Add Rotation again and this time set the frame to 1 and Axis Z to 180.
+          </p>
 
-                        <p><img SRC="images/imcm_TSM_06.jpg" HSPACE=10 NOSAVE BORDER=0 width=594 height=469></p>
+          <p><img SRC="images/imcm_TSM_06.jpg" HSPACE=10 NOSAVE BORDER=0 width=594 height=469></p>
 
-                        <p>And that's it done.</p>
+          <p>And that's it done.</p>
 
-                        <p>Click OK on the the windows, create the TS object file and test it in the sim.
-                        <br>Press Ctrl and Numpad 7 to load the wagon and Ctrl 7 again to unload.
-                        <br>There is sometimes a slight delay before the change happens.</p>
+          <p>Click OK on the the windows, create the TS object file and test it in the sim.
+            <br>Press Ctrl and Numpad 7 to load the wagon and Ctrl 7 again to unload.
+            <br>There is sometimes a slight delay before the change happens.
+          </p>
 
-                        <p>The wagon will appear with the load in the position you created it. This will be with the load invisible side up (Empty).</p>
+          <p>The wagon will appear with the load in the position you created it. This will be with the load invisible
+            side up (Empty).</p>
 
-                        <p>Make a second model with the load the right way up. You don't have to change the animation this time -  simply rotate it 180 degrees.   This will let activity writers start the train in the desired condition and also given non-MSTSbin users empty and loaded versions.</p>
+          <p>Make a second model with the load the right way up. You don't have to change the animation this time -
+            simply rotate it 180 degrees. This will let activity writers start the train in the desired condition and
+            also given non-MSTSbin users empty and loaded versions.</p>
 
-                        <p>You can save the part for use with other wagons. The animation will be saved as well.</p>
-
-
-       			</div>
-			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
-			<a NAME = "Notes"</a>
-
-		</div>
-
-    <!--- end cause --->
-
-    <!--- where --->
-
-		<div class="post">
-			<h2 class="title">Other Points To Note</h2>
-			<div class="entry">
-
-                        <p><ul>
-                               <li>The part can be named
-                                   <ul>
-                                       <li>DOOR_A, DOOR_B or DOOR_C and these will work with the Ctrl + 9 key;</li>
-                                       <li>DOOR_D, DOOR_E and DOOR_F work with the Ctrl + 7 key.</li>
-                                   </ul>
-                                   You can also parent additional parts to the DOOR part and these will move along with it.
-                                   <br>&nbsp;</li>
-                               </li>
-
-                               <li>The animation will work on all wagons attached to the player loco: this includes any wagons with working doors using the same key.
-                               <br>&nbsp;</li>
-
-                               <li>Loads will remain in the condition you left them when you uncouple.
-                               <br>&nbsp;</li>
-
-                               <li>There can be a problem with sloping sided hoppers where the upturned load cannot be set low without breaking through the sides;  in the example shown above, the inside slope of the domed load can be seen at low angles if it is mounted too high. If this happens you will have to restrict yourself to a single dome or make the valley between them shallower.
-                               <br>&nbsp;</li>
-                           </ul></p>
-
-       			</div>
-			<p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
-
-		</div>
-
-    <!--- end cause --->
+          <p>You can save the part for use with other wagons. The animation will be saved as well.</p>
 
 
-	<!-- end #content -->
+        </div>
+        <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+        <a NAME="Notes" </a>
 
-	</div>
+      </div>
 
-	<!-- start left sidebar -->
-	<div id="sidebar">
-           <h2>Contents</h2>
-                 <p> <a href="#">Overview</a>
-                 <br> <a href="#construct">Construction</a>
-                 <br> <a href="#Notes">Notes</a>
-               </p>
-	</div>
-	<!-- end #sidebar -->
-</div>
-<!-- end #page -->
-<div id="footer">
-	<p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
-        <br><center>Updated: 26 July 2007, 19 April 2010</center></p>
-</div>
+      <!--- end cause --->
+
+      <!--- where --->
+
+      <div class="post">
+        <h2 class="title">Other Points To Note</h2>
+        <div class="entry">
+
+          <p>
+          <ul>
+            <li>The part can be named
+              <ul>
+                <li>DOOR_A, DOOR_B or DOOR_C and these will work with the Ctrl + 9 key;</li>
+                <li>DOOR_D, DOOR_E and DOOR_F work with the Ctrl + 7 key.</li>
+              </ul>
+              You can also parent additional parts to the DOOR part and these will move along with it.
+              <br>&nbsp;
+            </li>
+            </li>
+
+            <li>The animation will work on all wagons attached to the player loco: this includes any wagons with working
+              doors using the same key.
+              <br>&nbsp;
+            </li>
+
+            <li>Loads will remain in the condition you left them when you uncouple.
+              <br>&nbsp;
+            </li>
+
+            <li>There can be a problem with sloping sided hoppers where the upturned load cannot be set low without
+              breaking through the sides; in the example shown above, the inside slope of the domed load can be seen at
+              low angles if it is mounted too high. If this happens you will have to restrict yourself to a single dome
+              or make the valley between them shallower.
+              <br>&nbsp;
+            </li>
+          </ul>
+          </p>
+
+        </div>
+        <p class="meta"><span class="posted">&nbsp;</span><a href="#" class="permalink">Return to top of page</a></p>
+
+      </div>
+
+      <!--- end cause --->
+
+
+      <!-- end #content -->
+
+    </div>
+
+    <!-- start left sidebar -->
+    <div id="sidebar">
+      <h2>Contents</h2>
+      <p> <a href="#">Overview</a>
+        <br> <a href="#construct">Construction</a>
+        <br> <a href="#Notes">Notes</a>
+      </p>
+    </div>
+    <!-- end #sidebar -->
+  </div>
+  <!-- end #page -->
+  <div id="footer">
+    <p>(c) 2009-2010 <a href=http://steam4me.net>http://steam4me.net</a>. CSS Design based on "Collaboration" by <a
+        href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+      <br>
+      <center>Updated: 26 July 2007, 19 April 2010</center>
+    </p>
+  </div>
 </body>
+
 </html>
